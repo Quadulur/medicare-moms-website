@@ -1,0 +1,7 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://medicaremoms.com/sitemap.xml
+
+# Disallow admin or non-public paths
+Disallow: /brand-preview.html
