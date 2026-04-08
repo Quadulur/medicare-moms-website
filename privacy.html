@@ -153,11 +153,20 @@
         }
 
         .logo {
+            display: flex;
+            align-items: center;
+            gap: 10px;
             font-family: 'DM Serif Display', serif;
             font-size: 22px;
             font-weight: 700;
             color: #5B8C6B;
             text-decoration: none;
+        }
+
+        .logo img {
+            height: 50px;
+            width: auto;
+            border-radius: 6px;
         }
 
         .nav-links {
@@ -529,7 +538,7 @@
     <nav>
         <div class="container">
             <div class="nav-container">
-                <a href="index.html" class="logo">Medicare Moms</a>
+                <a href="index.html" class="logo"><img src="logo.svg" alt="Medicare Moms Logo">Medicare Moms</a>
                 <ul class="nav-links" id="navLinks">
                     <li><a href="services.html">Services</a></li>
                     <li><a href="resources.html">Resources</a></li>
@@ -789,6 +798,8 @@
                 <p style="margin-top: 8px;"><a href="terms.html" style="color: #999; text-decoration: none;">Terms of Service</a> · <a href="privacy.html" style="color: #999; text-decoration: none;">Privacy Policy</a></p>
                 <div class="legal-disclaimer">
                     Medicare Moms is a licensed insurance agency. We are not affiliated with or endorsed by any government agency. Medicare has neither reviewed nor endorsed this information. Not all plans or benefits described are available in all areas. Plan availability, premiums, benefits, and costs vary by location and may change annually. The examples provided are illustrative only and do not represent actual plan pricing. By using this website, you agree to our Terms of Service and Privacy Policy.
+                    <br><br>
+                    We do not offer every plan available in your area. Any information we provide is limited to those plans we do offer in your area. Please contact Medicare.gov or 1-800-MEDICARE to get information on all of your options.
                 </div>
             </div>
         </div>

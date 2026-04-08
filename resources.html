@@ -154,11 +154,20 @@
         }
 
         .logo {
+            display: flex;
+            align-items: center;
+            gap: 10px;
             font-family: 'DM Serif Display', serif;
             font-size: 22px;
             font-weight: 700;
             color: #5B8C6B;
             text-decoration: none;
+        }
+
+        .logo img {
+            height: 50px;
+            width: auto;
+            border-radius: 6px;
         }
 
         .nav-links {
@@ -835,7 +844,7 @@
     <nav>
         <div class="container">
             <div class="nav-container">
-                <a href="index.html" class="logo">Medicare Moms</a>
+                <a href="index.html" class="logo"><img src="logo.svg" alt="Medicare Moms Logo">Medicare Moms</a>
                 <ul class="nav-links" id="navLinks">
                     <li><a href="services.html">Services</a></li>
                     <li><a href="resources.html" class="active-link">Resources</a></li>
@@ -937,7 +946,7 @@
                         <li>Durable medical equipment (wheelchairs, walkers)</li>
                         <li>Mental health services</li>
                     </ul>
-                    <p><strong>Cost:</strong> The standard Part B premium is approximately $185/month in 2026 (income-dependent). After meeting your deductible, Medicare typically pays 80% and you pay 20%.</p>
+                    <p><strong>Cost:</strong> The standard Part B premium is approximately $202.90/month in 2026 (income-dependent). After meeting your deductible, Medicare typically pays 80% and you pay 20%.</p>
                 </div>
             </div>
 
@@ -1014,8 +1023,8 @@
 
             <div class="example-box" style="margin-top: 40px;">
                 <div class="example-label">Real-World Example</div>
-                <p><strong>Linda, age 67, Portland, OR:</strong> Linda chose a Plan G supplement. Her monthly costs: $185 (Part B premium) + $165 (Plan G premium) + $25 (Part D drug plan) = <strong>$375/month total</strong>. She can see any doctor in the country and has virtually no surprise bills.</p>
-                <p><strong>Compare to Advantage:</strong> Her neighbor chose a $0-premium Medicare Advantage plan. She pays $185 (Part B premium) + $0 (Advantage premium) = <strong>$185/month</strong> — but has copays for doctor visits, a $5,000 out-of-pocket max, and must stay in-network.</p>
+                <p><strong>Linda, age 67, Portland, OR:</strong> Linda chose a Plan G supplement. Her monthly costs: $202.90 (Part B premium) + $165 (Plan G premium) + $25 (Part D drug plan) = <strong>$392.90/month total</strong>. She can see any doctor in the country and has virtually no surprise bills.</p>
+                <p><strong>Compare to Advantage:</strong> Her neighbor chose a $0-premium Medicare Advantage plan. She pays $202.90 (Part B premium) + $0 (Advantage premium) = <strong>$202.90/month</strong> — but has copays for doctor visits, a $5,000 out-of-pocket max, and must stay in-network.</p>
                 <p>Neither choice is "wrong" — it depends on your priorities. That's why we're here to help you decide.</p>
             </div>
         </div>
@@ -1343,6 +1352,8 @@
                 <p style="margin-top: 8px;"><a href="terms.html" style="color: #999; text-decoration: none; transition: color 0.3s ease;" onmouseover="this.style.color='#A8C5A0'" onmouseout="this.style.color='#999'">Terms of Service</a> &middot; <a href="privacy.html" style="color: #999; text-decoration: none; transition: color 0.3s ease;" onmouseover="this.style.color='#A8C5A0'" onmouseout="this.style.color='#999'">Privacy Policy</a></p>
                 <div class="legal-disclaimer">
                     Medicare Moms is a licensed insurance agency. We are not affiliated with or endorsed by any government agency. Medicare has neither reviewed nor endorsed this information. Not all plans or benefits described are available in all areas. Plan availability, premiums, benefits, and costs vary by location and may change annually. The examples provided are illustrative only and do not represent actual plan pricing. By using this website, you agree to our Terms of Service and Privacy Policy.
+                    <br><br>
+                    We do not offer every plan available in your area. Any information we provide is limited to those plans we do offer in your area. Please contact Medicare.gov or 1-800-MEDICARE to get information on all of your options.
                 </div>
             </div>
         </div>

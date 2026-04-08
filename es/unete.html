@@ -85,10 +85,19 @@
         }
 
         .nav-logo {
+            display: flex;
+            align-items: center;
+            gap: 10px;
             font-family: 'DM Serif Display', serif;
             font-size: 1.5rem;
             font-weight: 700;
             color: var(--sage-primary);
+        }
+
+        .nav-logo img {
+            height: 50px;
+            width: auto;
+            border-radius: 6px;
         }
 
         .nav-logo span {
@@ -880,7 +889,7 @@
 <body>
     <!-- Navigation -->
     <nav>
-        <div class="nav-logo">Medicare<span>Moms</span></div>
+        <div class="nav-logo"><img src="../logo.svg" alt="Medicare Moms Logo">Medicare<span>Moms</span></div>
         <ul class="nav-links">
             <li><a href="../servicios.html">Servicios</a></li>
             <li><a href="../recursos.html">Recursos</a></li>
