@@ -780,6 +780,64 @@
                 gap: 12px;
             }
         }
+    
+        /* Services Dropdown */
+        .services-parent {
+            position: relative;
+        }
+        .services-dropdown {
+            display: none;
+            position: absolute;
+            top: 100%;
+            left: 50%;
+            transform: translateX(-50%);
+            background: white;
+            border-radius: 10px;
+            box-shadow: 0 10px 40px rgba(44, 44, 44, 0.15);
+            padding: 16px 0;
+            min-width: 240px;
+            z-index: 1000;
+            margin-top: 10px;
+        }
+        .services-dropdown::before {
+            content: '';
+            position: absolute;
+            top: -10px;
+            left: 0;
+            right: 0;
+            height: 10px;
+        }
+        .services-parent:hover .services-dropdown {
+            display: block;
+        }
+        .services-dropdown a {
+            display: block;
+            padding: 10px 24px;
+            color: #2C2C2C;
+            font-size: 13px;
+            font-weight: 500;
+            text-decoration: none;
+            white-space: nowrap;
+            transition: background 0.2s, color 0.2s;
+        }
+        .services-dropdown a:hover {
+            background: #F7F3ED;
+            color: #5B8C6B;
+        }
+        @media (max-width: 768px) {
+            .services-dropdown {
+                position: static;
+                transform: none;
+                box-shadow: none;
+                margin-top: 0;
+                padding: 0 0 0 20px;
+                border-radius: 0;
+            }
+            .services-parent:hover .services-dropdown {
+                display: block;
+            }
+        }
+
     </style>
 
     <script type="application/ld+json">
@@ -876,7 +934,6 @@
                     <a href="#medicare-basics">Medicare Basics</a>
                     <a href="#advantage-vs-supplement">Advantage vs. Supplement</a>
                     <a href="#part-d-dsnp">Part D & D-SNP</a>
-                    <a href="#aca-individual">ACA & Individual</a>
                     <a href="#ancillary">Ancillary Benefits</a>
                 </div>
             </div>
@@ -1086,90 +1143,21 @@
     </section>
 
 
-    <!-- ===================================================
-         SECTION 4: ACA / INDIVIDUAL INSURANCE
+        <!-- ===================================================
+         ACA CALLOUT (links to separate ACA page)
          =================================================== -->
-    <section class="section-white section-padding" id="aca-individual">
+    <section class="section-white section-padding" id="aca-callout">
         <div class="container">
-            <h2 class="text-center">ACA & Individual Health Insurance</h2>
-            <div class="section-intro text-center">
-                <p>Not yet 65? Don't have employer coverage? The Affordable Care Act (ACA) marketplace and private individual plans give you options. Here's how they work and what they might cost.</p>
-            </div>
-
-            <!-- ACA/Marketplace -->
-            <div class="narrow-container">
-                <h3>ACA Marketplace Plans</h3>
-                <p>ACA marketplace plans are available to most U.S. citizens and legal residents who don't have access to affordable employer coverage and aren't eligible for Medicare. Financial assistance (premium tax credits) makes these plans significantly more affordable for many families.</p>
-
-                <h4 style="margin-top: 25px;">How Subsidies Work</h4>
-                <p>The government offers premium tax credits based on your household income. The lower your income relative to the Federal Poverty Level (FPL), the more help you get. Many families are surprised to find they qualify for hundreds of dollars in monthly savings.</p>
-
-                <div class="example-box">
-                    <div class="example-label">Example: ACA with a Subsidy</div>
-                    <p><strong>Sarah, age 40, single, earning $35,000/year:</strong></p>
-                    <p>Full price for a Silver plan in her area: <strong>$450/month</strong></p>
-                    <p>Tax credit/subsidy she qualifies for: <strong>−$310/month</strong></p>
-                    <p>What Sarah actually pays: <strong>$140/month</strong> for comprehensive health coverage including doctor visits, prescriptions, hospital stays, and preventive care.</p>
-                </div>
-
-                <div class="example-box">
-                    <div class="example-label">Example: Family Coverage</div>
-                    <p><strong>The Martinez family — 2 adults (both 38), 2 kids, household income $65,000/year:</strong></p>
-                    <p>Full price for a family Silver plan: <strong>$1,400/month</strong></p>
-                    <p>Tax credit/subsidy: <strong>−$980/month</strong></p>
-                    <p>What the family actually pays: <strong>$420/month</strong> for the whole family. Kids get dental and vision included, and preventive care is $0.</p>
-                </div>
-
-                <p style="margin-top: 25px;">ACA plans come in tiers — Bronze (lowest premium, highest out-of-pocket), Silver, Gold, and Platinum (highest premium, lowest out-of-pocket). There's no "best" tier — it depends on how often you use healthcare.</p>
-
-                <h4 style="margin-top: 35px;">What ACA Plans Must Cover</h4>
-                <p>Every marketplace plan covers 10 essential health benefits:</p>
-                <ul class="feature-list-standalone">
-                    <li>Hospitalization and emergency services</li>
-                    <li>Doctor visits and outpatient care</li>
-                    <li>Prescription drugs</li>
-                    <li>Maternity and newborn care</li>
-                    <li>Mental health and substance abuse services</li>
-                    <li>Preventive and wellness services (free)</li>
-                    <li>Pediatric services including dental and vision</li>
-                    <li>Lab services, rehabilitative services, and more</li>
-                </ul>
-            </div>
-
-            <!-- Private / No Subsidy -->
-            <div class="narrow-container" style="margin-top: 60px;">
-                <h3>Private Options When You Don't Qualify for a Tax Credit</h3>
-                <p>If your income is above the subsidy threshold — or you want options outside the marketplace — private individual health insurance plans are available. These can sometimes offer better networks, lower deductibles, or more flexibility.</p>
-
-                <div class="info-grid" style="margin-top: 25px;">
-                    <div class="info-card">
-                        <h4>Off-Marketplace ACA Plans</h4>
-                        <p>Same essential benefits as marketplace plans but purchased directly from an insurance carrier. You won't get a tax credit, but you may find better provider networks or pricing. Ideal if your income is too high for subsidies.</p>
-                        <p><strong>Typical cost:</strong> $350–$700/month for an individual depending on age and plan tier.</p>
-                    </div>
-
-                    <div class="info-card">
-                        <h4>Short-Term Health Plans</h4>
-                        <p>Temporary coverage for gaps between jobs or while waiting for other coverage. Lower premiums but limited benefits — not ACA-compliant and may not cover pre-existing conditions. Good as a bridge, not a long-term solution.</p>
-                        <p><strong>Typical cost:</strong> $100–$300/month for limited coverage.</p>
-                    </div>
-
-                    <div class="info-card">
-                        <h4>Health Share Plans</h4>
-                        <p>Membership-based programs where members share medical costs. Not technically insurance, but can be a lower-cost alternative for healthy individuals. May have sharing limits and aren't regulated like insurance.</p>
-                        <p><strong>Typical cost:</strong> $150–$400/month depending on the program and share level.</p>
-                    </div>
-                </div>
-
-                <div class="callout" style="margin-top: 30px;">
-                    <p><strong>Not sure if you qualify for a subsidy?</strong> Let us run the numbers — it takes about 5 minutes. Many people earning $50,000–$80,000+ still qualify for meaningful help. It never hurts to check.</p>
-                </div>
+            <div class="narrow-container" style="text-align: center;">
+                <h2>Not 65 Yet? Have a Spouse Who Won't Be on Medicare?</h2>
+                <p style="font-size: 18px; color: #4A5568; max-width: 650px; margin: 0 auto 25px;">You still have options. The ACA marketplace and individual health plans offer affordable coverage for you and your family &mdash; and you might qualify for more help than you think.</p>
+                <a href="aca-resources.html" class="btn btn-primary" style="font-size: 16px; padding: 14px 35px;">Explore ACA & Individual Plans &rarr;</a>
             </div>
         </div>
     </section>
 
 
-    <!-- ===================================================
+<!-- ===================================================
          SECTION 5: ANCILLARY BENEFITS
          =================================================== -->
     <section class="section-gray section-padding" id="ancillary">

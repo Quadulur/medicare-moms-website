@@ -964,6 +964,64 @@
                 grid-template-columns: 1fr;
             }
         }
+    
+        /* Services Dropdown */
+        .services-parent {
+            position: relative;
+        }
+        .services-dropdown {
+            display: none;
+            position: absolute;
+            top: 100%;
+            left: 50%;
+            transform: translateX(-50%);
+            background: white;
+            border-radius: 10px;
+            box-shadow: 0 10px 40px rgba(44, 44, 44, 0.15);
+            padding: 16px 0;
+            min-width: 240px;
+            z-index: 1000;
+            margin-top: 10px;
+        }
+        .services-dropdown::before {
+            content: '';
+            position: absolute;
+            top: -10px;
+            left: 0;
+            right: 0;
+            height: 10px;
+        }
+        .services-parent:hover .services-dropdown {
+            display: block;
+        }
+        .services-dropdown a {
+            display: block;
+            padding: 10px 24px;
+            color: #2C2C2C;
+            font-size: 13px;
+            font-weight: 500;
+            text-decoration: none;
+            white-space: nowrap;
+            transition: background 0.2s, color 0.2s;
+        }
+        .services-dropdown a:hover {
+            background: #F7F3ED;
+            color: #5B8C6B;
+        }
+        @media (max-width: 768px) {
+            .services-dropdown {
+                position: static;
+                transform: none;
+                box-shadow: none;
+                margin-top: 0;
+                padding: 0 0 0 20px;
+                border-radius: 0;
+            }
+            .services-parent:hover .services-dropdown {
+                display: block;
+            }
+        }
+
     </style>
 </head>
 <body>
@@ -998,7 +1056,7 @@
                 <button class="btn btn-primary" onclick="document.getElementById('application').scrollIntoView({ behavior: 'smooth' })">Start Your Journey</button>
                 <button class="btn btn-secondary" onclick="document.getElementById('opportunity').scrollIntoView({ behavior: 'smooth' })">Learn More</button>
             </div>
-            <p class="secondary-text">✓ No experience needed — we'll teach you everything</p>
+            <p class="secondary-text">✓ No experience needed. We'll teach you everything</p>
         </div>
     </section>
 
@@ -1006,7 +1064,7 @@
     <section id="opportunity" class="opportunity">
         <h2>The Opportunity</h2>
         <div class="opportunity-content">
-            <p>Medicare Moms is a community of women building thriving insurance businesses. We're not just another agency — we're a movement of moms, career-changers, and entrepreneurs who are taking control of their futures.</p>
+            <p>Medicare Moms is a community of women building thriving insurance businesses. We're not just another agency, we're a movement of moms, career-changers, and entrepreneurs who are taking control of their futures.</p>
 
             <p>The insurance industry is booming. The aging population means Medicare enrollment is at an all-time high. The Affordable Care Act continues to open doors. Ancillary products (dental, vision, life insurance) are in constant demand. This is one of the best times ever to enter the insurance business.</p>
 
@@ -1037,7 +1095,7 @@
             <div class="benefit-card">
                 <div class="benefit-icon"><svg width="42" height="42" viewBox="0 0 48 48" fill="none" stroke="#5B8C6B" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><line x1="24" y1="4" x2="24" y2="44"/><path d="M34 14c0-4.4-4.5-8-10-8s-10 3.6-10 8 4.5 8 10 8 10 3.6 10 8-4.5 8-10 8-10-3.6-10-8"/></svg></div>
                 <h3>Additional Income</h3>
-                <p>Add a flexible income stream that works around your life. Your commissions are yours to keep, and you set your own pace.</p>
+                <p>Most insurance products pay residual commissions, meaning your income is stable and consistent. As your book of business grows, so does your recurring revenue, even on days you're not actively selling.</p>
             </div>
 
             <div class="benefit-card">
@@ -1054,8 +1112,8 @@
 
             <div class="benefit-card">
                 <div class="benefit-icon"><svg width="42" height="42" viewBox="0 0 48 48" fill="none" stroke="#5B8C6B" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><polygon points="4,36 8,12 18,24 24,8 30,24 40,12 44,36"/><line x1="4" y1="36" x2="44" y2="36"/></svg></div>
-                <h3>Be Your Own Boss</h3>
-                <p>Build YOUR business, not someone else's. Make your own decisions. Set your own hours. Keep what you earn. True entrepreneurship, backed by our support system.</p>
+                <h3>Supported Growth</h3>
+                <p>We also have opportunities to bring agents on where we support you with paid leads, help source stable business, and provide the structure you need to succeed. You get the best of both worlds: real support and real opportunity.</p>
             </div>
 
             <div class="benefit-card">
@@ -1087,7 +1145,7 @@
             <div class="product-item">
                 <div class="product-icon"><svg width="42" height="42" viewBox="0 0 48 48" fill="none" stroke="#5B8C6B" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M24 4L8 12v10c0 12 6.8 22 16 26 9.2-4 16-14 16-26V12L24 4z"/><polyline points="17,24 22,29 31,20"/></svg></div>
                 <h3>Medicare Supplements</h3>
-                <p>Medigap plans that cover what Original Medicare doesn't. Great for clients who want to see any doctor nationwide. Sells year-round — no enrollment window needed.</p>
+                <p>Medigap plans that cover what Original Medicare doesn't. Great for clients who want to see any doctor nationwide. Sells year-round, no enrollment window needed.</p>
             </div>
 
             <div class="product-item">
@@ -1127,7 +1185,7 @@
             <div class="story-card">
                 <div class="story-avatar"><svg width="32" height="32" viewBox="0 0 48 48" fill="none" stroke="#5B8C6B" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="24" cy="14" r="8"/><path d="M8 44c0-8.8 7.2-16 16-16s16 7.2 16 16"/></svg></div>
                 <div class="story-content">
-                    <p class="story-quote">"I was a stay-at-home mom for five years, and I thought my career was on hold forever. Medicare Moms gave me back my independence and my purpose — all while being there for my kids every single day."</p>
+                    <p class="story-quote">"I was a stay-at-home mom for five years, and I thought my career was on hold forever. Medicare Moms gave me back my independence and my purpose, all while being there for my kids every single day."</p>
                     <div class="story-name">Sarah M.</div>
                     <div class="story-info">Agent since 2021</div>
                     <span class="story-milestone">Full-Time Agent</span>
@@ -1147,7 +1205,7 @@
             <div class="story-card">
                 <div class="story-avatar"><svg width="32" height="32" viewBox="0 0 48 48" fill="none" stroke="#5B8C6B" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="24" cy="14" r="8"/><path d="M8 44c0-8.8 7.2-16 16-16s16 7.2 16 16"/></svg></div>
                 <div class="story-content">
-                    <p class="story-quote">"I taught high school for 12 years. I loved connecting with people, but the job was burning me out. Insurance lets me help people make important decisions — it's just with better hours and better pay."</p>
+                    <p class="story-quote">"I taught high school for 12 years. I loved connecting with people, but the job was burning me out. Insurance lets me help people make important decisions, it's just with better hours and better pay."</p>
                     <div class="story-name">Michelle K.</div>
                     <div class="story-info">Agent since 2022</div>
                     <span class="story-milestone">Career Changer</span>
@@ -1214,7 +1272,7 @@
                     <span class="faq-toggle">▼</span>
                 </div>
                 <div class="faq-answer">
-                    <p>Absolutely. Many of our agents start part-time and build at their own pace. This is a great way to add additional income to your household with a schedule that flexes around your family. You decide how much time to put in — there's no minimum hours requirement.</p>
+                    <p>Absolutely. Many of our agents start part-time and build at their own pace. This is a great way to add additional income to your household with a schedule that flexes around your family. You decide how much time to put in, there's no minimum hours requirement.</p>
                 </div>
             </div>
 
@@ -1234,7 +1292,7 @@
                     <span class="faq-toggle">▼</span>
                 </div>
                 <div class="faq-answer">
-                    <p>Absolutely. This is why Medicare Moms exists. Most of our agents are moms who work around their family's schedule. You control your hours — work during school hours, early mornings, evenings, or weekends. Work part-time to start, and scale up as your kids get older. The flexibility is built into the model.</p>
+                    <p>Absolutely. This is why Medicare Moms exists. Most of our agents are moms who work around their family's schedule. You control your hours. Work during school hours, early mornings, evenings, or weekends. Work part-time to start, and scale up as your kids get older. The flexibility is built into the model.</p>
                 </div>
             </div>
 
