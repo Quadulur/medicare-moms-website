@@ -169,11 +169,20 @@
         }
 
         .logo {
+            display: flex;
+            align-items: center;
+            gap: 10px;
             font-family: 'DM Serif Display', serif;
             font-size: 22px;
             font-weight: 700;
             color: #5B8C6B;
             text-decoration: none;
+        }
+
+        .logo img {
+            height: 50px;
+            width: auto;
+            border-radius: 6px;
         }
 
         .nav-links {
@@ -588,7 +597,7 @@
     <!-- Navigation -->
     <nav>
         <div class="nav-container">
-            <a href="../index.html" class="logo">Medicare Moms</a>
+            <a href="../index.html" class="logo"><img src="../logo.svg" alt="Medicare Moms Logo">Medicare Moms</a>
             <ul class="nav-links">
                 <li><a href="../services.html">Services</a></li>
                 <li><a href="../resources.html">Resources</a></li>

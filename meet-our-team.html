@@ -59,11 +59,20 @@
         }
 
         .logo {
+            display: flex;
+            align-items: center;
+            gap: 10px;
             font-family: 'DM Serif Display', serif;
             font-size: 24px;
             font-weight: 700;
             color: #5B8C6B;
             text-decoration: none;
+        }
+
+        .logo img {
+            height: 50px;
+            width: auto;
+            border-radius: 6px;
         }
 
         nav {
@@ -359,12 +368,17 @@
             gap: 8px;
             color: #4A5568;
             text-decoration: none;
-            font-size: 13px;
+            font-size: 12px;
             font-weight: 500;
-            padding: 6px 12px;
+            padding: 6px 10px;
             border-radius: 8px;
             background: #F7F3ED;
             transition: all 0.2s ease;
+            overflow: hidden;
+            text-overflow: ellipsis;
+            white-space: nowrap;
+            max-width: 100%;
+            box-sizing: border-box;
         }
 
         .team-contact-link:hover {
@@ -750,7 +764,7 @@
          ============================================ -->
     <header id="header">
         <div class="header-container">
-            <a href="index.html" class="logo">Medicare Moms</a>
+            <a href="index.html" class="logo"><img src="logo.svg" alt="Medicare Moms Logo">Medicare Moms</a>
             <nav>
                 <ul class="nav-links" id="navLinks">
                     <li><a href="services.html">Services</a></li>
@@ -775,54 +789,6 @@
     <section class="hero">
         <h1>Meet the Medicare Moms</h1>
         <p>Real women. Real expertise. Here to help you and your family find the right coverage.</p>
-    </section>
-
-    <!-- ============================================
-         WHAT OUR AGENTS HELP WITH
-         ============================================ -->
-    <section class="agents-help-section">
-        <div class="section-header">
-            <h2>What Our Agents Help With</h2>
-            <p>Every Medicare Moms agent is trained across our full range of products. Here's what they can help you with:</p>
-        </div>
-
-        <div class="help-grid">
-            <div class="help-item">
-                <span class="help-icon"><svg width="28" height="28" viewBox="0 0 48 48" fill="none" stroke="#5B8C6B" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><rect x="8" y="8" width="32" height="32" rx="4"/><line x1="24" y1="16" x2="24" y2="32"/><line x1="16" y1="24" x2="32" y2="24"/></svg></span>
-                <div>
-                    <strong>Medicare Advantage & Supplements</strong>
-                    <p>Choosing the right Medicare plan based on your doctors, prescriptions, and budget.</p>
-                </div>
-            </div>
-            <div class="help-item">
-                <span class="help-icon"><svg width="28" height="28" viewBox="0 0 48 48" fill="none" stroke="#5B8C6B" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="24" cy="12" r="5"/><path d="M14 40v-4a10 10 0 0 1 20 0v4"/><circle cx="10" cy="18" r="4"/><path d="M4 40v-3a7 7 0 0 1 9-6.7"/><circle cx="38" cy="18" r="4"/><path d="M44 40v-3a7 7 0 0 0-9-6.7"/></svg></span>
-                <div>
-                    <strong>ACA / Marketplace Plans</strong>
-                    <p>Finding affordable family coverage with income-based financial assistance.</p>
-                </div>
-            </div>
-            <div class="help-item">
-                <span class="help-icon"><svg width="28" height="28" viewBox="0 0 48 48" fill="none" stroke="#5B8C6B" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M18 6c-3 0-5.5 1.5-7 4s-2 5-2 8c0 4 1.5 7 3 10.5s3 7 4 11.5c.4 1.5 2 1.5 2.4 0 .8-2 1.8-4.5 2.8-6.5.6-1 1.8-1 2.4 0 1 2 2 4.5 2.8 6.5.4 1.5 2 1.5 2.4 0 1-4.5 2.5-8 4-11.5s3-6.5 3-10.5c0-3-.5-5.5-2-8s-4-4-7-4c-2 0-3.5 1-6 3.5C21.5 7 20 6 18 6z"/></svg></span>
-                <div>
-                    <strong>Dental & Vision</strong>
-                    <p>Standalone or add-on coverage for the whole family's smile and sight.</p>
-                </div>
-            </div>
-            <div class="help-item">
-                <span class="help-icon"><svg width="28" height="28" viewBox="0 0 48 48" fill="none" stroke="#5B8C6B" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M24 42s-18-10-18-22a9.5 9.5 0 0 1 18-4 9.5 9.5 0 0 1 18 4c0 12-18 22-18 22z"/></svg></span>
-                <div>
-                    <strong>Life Insurance</strong>
-                    <p>Protecting your family's future with term, whole life, or final expense plans.</p>
-                </div>
-            </div>
-            <div class="help-item">
-                <span class="help-icon"><svg width="28" height="28" viewBox="0 0 48 48" fill="none" stroke="#5B8C6B" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><polygon points="26,4 10,28 22,28 20,44 38,18 26,18"/></svg></span>
-                <div>
-                    <strong>Accident & Critical Illness</strong>
-                    <p>Extra peace of mind with cash-benefit supplemental coverage.</p>
-                </div>
-            </div>
-        </div>
     </section>
 
     <!-- ============================================
@@ -1279,6 +1245,54 @@
 
         =============================================
         -->
+    </section>
+
+    <!-- ============================================
+         WHAT OUR AGENTS HELP WITH
+         ============================================ -->
+    <section class="agents-help-section">
+        <div class="section-header">
+            <h2>What Our Agents Help With</h2>
+            <p>Every Medicare Moms agent is trained across our full range of products. Here's what they can help you with:</p>
+        </div>
+
+        <div class="help-grid">
+            <div class="help-item">
+                <span class="help-icon"><svg width="28" height="28" viewBox="0 0 48 48" fill="none" stroke="#5B8C6B" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><rect x="8" y="8" width="32" height="32" rx="4"/><line x1="24" y1="16" x2="24" y2="32"/><line x1="16" y1="24" x2="32" y2="24"/></svg></span>
+                <div>
+                    <strong>Medicare Advantage & Supplements</strong>
+                    <p>Choosing the right Medicare plan based on your doctors, prescriptions, and budget.</p>
+                </div>
+            </div>
+            <div class="help-item">
+                <span class="help-icon"><svg width="28" height="28" viewBox="0 0 48 48" fill="none" stroke="#5B8C6B" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="24" cy="12" r="5"/><path d="M14 40v-4a10 10 0 0 1 20 0v4"/><circle cx="10" cy="18" r="4"/><path d="M4 40v-3a7 7 0 0 1 9-6.7"/><circle cx="38" cy="18" r="4"/><path d="M44 40v-3a7 7 0 0 0-9-6.7"/></svg></span>
+                <div>
+                    <strong>ACA / Marketplace Plans</strong>
+                    <p>Finding affordable family coverage with income-based financial assistance.</p>
+                </div>
+            </div>
+            <div class="help-item">
+                <span class="help-icon"><svg width="28" height="28" viewBox="0 0 48 48" fill="none" stroke="#5B8C6B" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M18 6c-3 0-5.5 1.5-7 4s-2 5-2 8c0 4 1.5 7 3 10.5s3 7 4 11.5c.4 1.5 2 1.5 2.4 0 .8-2 1.8-4.5 2.8-6.5.6-1 1.8-1 2.4 0 1 2 2 4.5 2.8 6.5.4 1.5 2 1.5 2.4 0 1-4.5 2.5-8 4-11.5s3-6.5 3-10.5c0-3-.5-5.5-2-8s-4-4-7-4c-2 0-3.5 1-6 3.5C21.5 7 20 6 18 6z"/></svg></span>
+                <div>
+                    <strong>Dental & Vision</strong>
+                    <p>Standalone or add-on coverage for the whole family's smile and sight.</p>
+                </div>
+            </div>
+            <div class="help-item">
+                <span class="help-icon"><svg width="28" height="28" viewBox="0 0 48 48" fill="none" stroke="#5B8C6B" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M24 42s-18-10-18-22a9.5 9.5 0 0 1 18-4 9.5 9.5 0 0 1 18 4c0 12-18 22-18 22z"/></svg></span>
+                <div>
+                    <strong>Life Insurance</strong>
+                    <p>Protecting your family's future with term, whole life, or final expense plans.</p>
+                </div>
+            </div>
+            <div class="help-item">
+                <span class="help-icon"><svg width="28" height="28" viewBox="0 0 48 48" fill="none" stroke="#5B8C6B" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><polygon points="26,4 10,28 22,28 20,44 38,18 26,18"/></svg></span>
+                <div>
+                    <strong>Accident & Critical Illness</strong>
+                    <p>Extra peace of mind with cash-benefit supplemental coverage.</p>
+                </div>
+            </div>
+        </div>
     </section>
 
     <!-- ============================================

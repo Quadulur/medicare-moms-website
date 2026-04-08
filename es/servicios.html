@@ -146,11 +146,20 @@
         }
 
         .logo {
+            display: flex;
+            align-items: center;
+            gap: 10px;
             font-family: 'DM Serif Display', serif;
             font-size: 22px;
             font-weight: 700;
             color: #5B8C6B;
             text-decoration: none;
+        }
+
+        .logo img {
+            height: 50px;
+            width: auto;
+            border-radius: 6px;
         }
 
         .nav-links {
@@ -561,7 +570,7 @@
     <nav>
         <div class="container">
             <div class="nav-container">
-                <a href="index.html" class="logo">Medicare Moms</a>
+                <a href="index.html" class="logo"><img src="../logo.svg" alt="Medicare Moms Logo">Medicare Moms</a>
                 <ul class="nav-links" id="navLinks">
                     <li><a href="servicios.html" class="active-link">Servicios</a></li>
                     <li><a href="recursos.html">Recursos</a></li>
@@ -813,6 +822,8 @@
                 <p style="margin-top: 8px;"><a href="../terms.html" style="color: #999; text-decoration: none; transition: color 0.3s ease;" onmouseover="this.style.color='#A8C5A0'" onmouseout="this.style.color='#999'">Términos de Servicio</a> &middot; <a href="../privacy.html" style="color: #999; text-decoration: none; transition: color 0.3s ease;" onmouseover="this.style.color='#A8C5A0'" onmouseout="this.style.color='#999'">Política de Privacidad</a></p>
                 <div class="legal-disclaimer">
                     Medicare Moms es una agencia de seguros licenciada. No estamos afiliados ni respaldados por ninguna agencia gubernamental. Medicare no ha revisado ni respaldado esta información. Al usar este sitio web, aceptas nuestros Términos de Servicio y Política de Privacidad.
+                    <br><br>
+                    No ofrecemos todos los planes disponibles en su área. Cualquier información que proporcionemos se limita a los planes que ofrecemos en su área. Comuníquese con Medicare.gov o 1-800-MEDICARE para obtener información sobre todas sus opciones.
                 </div>
             </div>
         </div>
