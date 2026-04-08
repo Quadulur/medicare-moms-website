@@ -1,0 +1,1362 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>How to Enroll in Medicare - Medicare Moms</title>
+    <meta name="description" content="Learn how to enroll in Medicare. Step-by-step guide to signing up for Medicare Part A and Part B, including Initial Enrollment Period, Special Enrollment Period, and what to do after enrollment.">
+    <meta name="keywords" content="how to enroll Medicare, Medicare enrollment, Part A enrollment, Part B enrollment, Initial Enrollment Period, Medicare sign up">
+    <meta property="og:title" content="How to Enroll in Medicare - Medicare Moms">
+    <meta property="og:description" content="Learn how to enroll in Medicare. Step-by-step guide to signing up for Medicare Part A and Part B, including Initial Enrollment Period, Special Enrollment Period, and what to do after enrollment.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://medicaremoms.com/enroll-medicare.html">
+    <meta property="og:site_name" content="Medicare Moms">
+    <link rel="canonical" href="https://medicaremoms.com/enroll-medicare.html">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display&family=Nunito:wght@400;600;700;800&display=swap" rel="stylesheet">
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family: 'Nunito', sans-serif;
+            color: #2C2C2C;
+            background-color: #FFFFFF;
+            line-height: 1.6;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        .narrow-container {
+            max-width: 900px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        .section-padding {
+            padding: 80px 0;
+        }
+
+        .text-center {
+            text-align: center;
+        }
+
+        h1, h2, h3, h4, h5, h6 {
+            font-family: 'DM Serif Display', serif;
+            font-weight: 700;
+            line-height: 1.3;
+            color: #2C2C2C;
+        }
+
+        h1 {
+            font-size: clamp(32px, 5vw, 56px);
+            font-weight: 800;
+            margin-bottom: 20px;
+        }
+
+        h2 {
+            font-size: clamp(28px, 4vw, 44px);
+            margin-bottom: 30px;
+        }
+
+        h3 {
+            font-size: clamp(20px, 3vw, 28px);
+            margin-bottom: 15px;
+        }
+
+        h4 {
+            font-size: 20px;
+            margin-bottom: 12px;
+        }
+
+        p {
+            font-size: 16px;
+            color: #4A5568;
+            margin-bottom: 15px;
+        }
+
+        .lead {
+            font-size: 18px;
+            color: #4A5568;
+            margin-bottom: 20px;
+        }
+
+        .btn {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            padding: 12px 28px;
+            border-radius: 8px;
+            font-family: 'Nunito', sans-serif;
+            font-size: 15px;
+            font-weight: 600;
+            cursor: pointer;
+            text-decoration: none;
+            border: 2px solid transparent;
+            transition: all 0.3s ease;
+            text-align: center;
+        }
+
+        .btn-primary {
+            background: linear-gradient(135deg, #5B8C6B 0%, #3D6B4A 100%);
+            color: white;
+        }
+
+        .btn-primary:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 10px 30px rgba(91, 140, 107, 0.3);
+        }
+
+        .btn-secondary {
+            background-color: transparent;
+            color: #5B8C6B;
+            border-color: #5B8C6B;
+        }
+
+        .btn-secondary:hover {
+            background-color: #F7F3ED;
+            transform: translateY(-2px);
+        }
+
+        .btn-sm {
+            padding: 10px 20px;
+            font-size: 14px;
+        }
+
+        /* ============ Navigation ============ */
+        nav {
+            position: sticky;
+            top: 0;
+            background-color: white;
+            box-shadow: 0 4px 12px rgba(44, 44, 44, 0.08);
+            z-index: 1000;
+        }
+
+        .nav-container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 15px 20px;
+        }
+
+        .logo {
+            font-family: 'DM Serif Display', serif;
+            font-size: 22px;
+            font-weight: 700;
+            color: #5B8C6B;
+            text-decoration: none;
+        }
+
+        .nav-links {
+            display: flex;
+            gap: 35px;
+            list-style: none;
+            align-items: center;
+        }
+
+        .nav-links a {
+            color: #2C2C2C;
+            text-decoration: none;
+            font-weight: 500;
+            transition: color 0.3s ease;
+            font-size: 15px;
+        }
+
+        .nav-links a:hover {
+            color: #5B8C6B;
+        }
+
+        .nav-links a.active-link {
+            color: #5B8C6B;
+        }
+
+        .hamburger {
+            display: none;
+            flex-direction: column;
+            cursor: pointer;
+            gap: 6px;
+        }
+
+        .hamburger span {
+            width: 25px;
+            height: 3px;
+            background-color: #2C2C2C;
+            border-radius: 2px;
+            transition: all 0.3s ease;
+        }
+
+        @media (max-width: 768px) {
+            .hamburger {
+                display: flex;
+            }
+
+            .nav-links {
+                position: absolute;
+                top: 70px;
+                left: 0;
+                right: 0;
+                background-color: white;
+                flex-direction: column;
+                gap: 15px;
+                padding: 30px 20px;
+                display: none;
+            }
+
+            .nav-links.active {
+                display: flex;
+            }
+        }
+
+        .lang-toggle {
+            margin-left: 8px;
+        }
+        .lang-link {
+            text-decoration: none;
+            font-size: 13px;
+            font-weight: 600;
+            color: #4A5568;
+            padding: 4px 12px;
+            border-radius: 20px;
+            background: #E8F0E5;
+            transition: all 0.3s ease;
+            display: inline-flex;
+            align-items: center;
+            gap: 2px;
+        }
+        .lang-link:hover {
+            background: #5B8C6B;
+            color: white;
+        }
+        .lang-active {
+            color: #5B8C6B;
+            font-weight: 700;
+        }
+        .lang-inactive {
+            color: #999;
+            font-weight: 400;
+        }
+        .lang-link:hover .lang-active,
+        .lang-link:hover .lang-inactive {
+            color: white;
+        }
+
+        /* ============ Hero ============ */
+        .hero {
+            background: linear-gradient(160deg, #F7F3ED 0%, #EDE8DF 40%, #E8F0E5 100%);
+            padding: 100px 0 60px 0;
+            text-align: center;
+        }
+
+        .hero-content .lead {
+            font-size: 20px;
+            color: #3A4A63;
+            margin-bottom: 30px;
+            max-width: 700px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        @media (max-width: 768px) {
+            .hero {
+                padding: 60px 0 40px 0;
+            }
+        }
+
+        /* ============ Content Sections ============ */
+        .section-white {
+            background-color: white;
+        }
+
+        .section-gray {
+            background-color: #F7F3ED;
+        }
+
+        .section-intro {
+            max-width: 750px;
+            margin: 0 auto 40px;
+        }
+
+        .section-intro p {
+            font-size: 17px;
+            line-height: 1.8;
+        }
+
+        /* ============ Info Cards ============ */
+        .info-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 25px;
+            margin-top: 40px;
+        }
+
+        .info-card {
+            background-color: white;
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0 4px 12px rgba(44, 44, 44, 0.08);
+            border-top: 4px solid #5B8C6B;
+        }
+
+        .section-gray .info-card {
+            background-color: white;
+        }
+
+        .section-white .info-card {
+            background-color: #F7F3ED;
+            border-top-color: #5B8C6B;
+            box-shadow: none;
+        }
+
+        .info-card h3 {
+            font-size: 20px;
+            margin-bottom: 12px;
+        }
+
+        .info-card h4 {
+            font-size: 18px;
+            margin-bottom: 10px;
+        }
+
+        .info-card p {
+            font-size: 15px;
+            color: #4A5568;
+            line-height: 1.7;
+        }
+
+        .info-card .card-icon {
+            font-size: 40px;
+            margin-bottom: 12px;
+        }
+
+        /* ============ Example Boxes ============ */
+        .example-box {
+            background-color: #F7F3ED;
+            border-left: 4px solid #5B8C6B;
+            padding: 25px 30px;
+            border-radius: 0 10px 10px 0;
+            margin: 25px 0;
+        }
+
+        .section-gray .example-box {
+            background-color: white;
+        }
+
+        .example-box .example-label {
+            font-family: 'DM Serif Display', serif;
+            font-weight: 600;
+            font-size: 14px;
+            color: #5B8C6B;
+            margin-bottom: 8px;
+        }
+
+        .example-box p {
+            font-size: 15px;
+            margin-bottom: 8px;
+            line-height: 1.7;
+        }
+
+        .example-box p:last-child {
+            margin-bottom: 0;
+        }
+
+        .example-box strong {
+            color: #2C2C2C;
+        }
+
+        /* ============ Highlight Callout ============ */
+        .callout {
+            background: linear-gradient(135deg, #3D6B4A 0%, #2C5038 100%);
+            color: white;
+            padding: 25px 30px;
+            border-radius: 10px;
+            margin: 30px 0;
+            text-align: center;
+        }
+
+        .callout p {
+            color: white;
+            font-size: 16px;
+            font-weight: 500;
+            margin-bottom: 0;
+        }
+
+        .callout strong {
+            font-weight: 700;
+        }
+
+        /* ============ Feature List (standalone) ============ */
+        .feature-list-standalone {
+            list-style: none;
+            margin: 20px 0;
+        }
+
+        .feature-list-standalone li {
+            padding: 8px 0;
+            font-size: 15px;
+            color: #4A5568;
+            display: flex;
+            align-items: flex-start;
+            gap: 10px;
+        }
+
+        .feature-list-standalone li::before {
+            content: "✓";
+            color: #5B8C6B;
+            font-weight: 700;
+            flex-shrink: 0;
+            margin-top: 1px;
+        }
+
+        /* ============ CTA Section ============ */
+        .cta-section {
+            background: linear-gradient(135deg, #3D6B4A 0%, #2C5038 100%);
+            color: white;
+            padding: 80px 0;
+            text-align: center;
+        }
+
+        .cta-section h2 {
+            color: white;
+            margin-bottom: 20px;
+        }
+
+        .cta-section p {
+            color: rgba(255, 255, 255, 0.85);
+            font-size: 18px;
+            margin-bottom: 35px;
+            max-width: 600px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .cta-buttons {
+            display: flex;
+            gap: 20px;
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+
+        .cta-section .btn-secondary {
+            color: white;
+            border-color: rgba(255, 255, 255, 0.5);
+        }
+
+        .cta-section .btn-secondary:hover {
+            background-color: rgba(255, 255, 255, 0.1);
+        }
+
+        .cta-note {
+            margin-top: 25px;
+            font-size: 14px;
+            color: rgba(255, 255, 255, 0.6);
+        }
+
+        /* ============ Footer ============ */
+        footer {
+            background-color: #2C2C2C;
+            color: rgba(255, 255, 255, 0.8);
+            padding: 50px 0 20px 0;
+        }
+
+        .footer-content {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 40px;
+            margin-bottom: 40px;
+        }
+
+        .footer-section h4 {
+            color: white;
+            margin-bottom: 20px;
+            font-family: 'DM Serif Display', serif;
+            font-weight: 600;
+            font-size: 16px;
+        }
+
+        .footer-section ul {
+            list-style: none;
+        }
+
+        .footer-section ul li {
+            margin-bottom: 12px;
+        }
+
+        .footer-section a {
+            color: rgba(255, 255, 255, 0.7);
+            text-decoration: none;
+            font-size: 14px;
+            transition: color 0.3s ease;
+        }
+
+        .footer-section a:hover {
+            color: #FFFFFF;
+        }
+
+        .footer-brand {
+            margin-bottom: 15px;
+        }
+
+        .footer-brand h4 {
+            color: white;
+            margin-bottom: 8px;
+            font-size: 18px;
+        }
+
+        .footer-brand p {
+            color: rgba(255, 255, 255, 0.6);
+            font-size: 13px;
+            margin: 8px 0;
+        }
+
+        .social-links {
+            display: flex;
+            gap: 16px;
+            margin-top: 12px;
+        }
+
+        .social-links a {
+            width: 36px;
+            height: 36px;
+            border-radius: 50%;
+            background-color: rgba(255, 255, 255, 0.1);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: rgba(255, 255, 255, 0.8);
+            transition: all 0.3s ease;
+            font-size: 18px;
+        }
+
+        .social-links a:hover {
+            background-color: #5B8C6B;
+            color: white;
+        }
+
+        .footer-bottom {
+            border-top: 1px solid rgba(255, 255, 255, 0.1);
+            padding-top: 20px;
+            text-align: center;
+            font-size: 13px;
+            color: rgba(255, 255, 255, 0.5);
+        }
+
+        .legal-disclaimer {
+            margin-top: 15px;
+            font-size: 12px;
+            color: rgba(255, 255, 255, 0.4);
+            line-height: 1.6;
+        }
+
+        @media (max-width: 768px) {
+            .footer-content {
+                gap: 30px;
+            }
+
+            .cta-section {
+                padding: 60px 0;
+            }
+
+            .cta-buttons {
+                flex-direction: column;
+                align-items: center;
+            }
+
+            .cta-buttons .btn {
+                width: 100%;
+                max-width: 300px;
+            }
+        }
+
+        /* ============ Chat Widget ============ */
+        #chatButton {
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+            width: 60px;
+            height: 60px;
+            border-radius: 50%;
+            background: linear-gradient(135deg, #5B8C6B 0%, #3D6B4A 100%);
+            border: none;
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            box-shadow: 0 4px 12px rgba(91, 140, 107, 0.3);
+            z-index: 9999;
+            transition: all 0.3s ease;
+            animation: chatButtonPulse 1.2s ease-in-out 3;
+        }
+
+        #chatButton:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 6px 16px rgba(91, 140, 107, 0.4);
+        }
+
+        #chatButton svg {
+            width: 28px;
+            height: 28px;
+            fill: white;
+        }
+
+        @keyframes chatButtonPulse {
+            0%, 100% {
+                transform: scale(1);
+            }
+            50% {
+                transform: scale(1.1);
+            }
+        }
+
+        #chatPanel {
+            position: fixed;
+            bottom: 90px;
+            right: 20px;
+            width: 350px;
+            height: 450px;
+            background: white;
+            border-radius: 12px;
+            box-shadow: 0 5px 40px rgba(0, 0, 0, 0.16);
+            display: none;
+            flex-direction: column;
+            z-index: 9998;
+            animation: slideUp 0.3s ease;
+            font-family: 'Nunito', sans-serif;
+        }
+
+        #chatPanel.active {
+            display: flex;
+        }
+
+        @keyframes slideUp {
+            from {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        .chat-header {
+            background: linear-gradient(135deg, #5B8C6B 0%, #3D6B4A 100%);
+            color: white;
+            padding: 18px;
+            border-radius: 12px 12px 0 0;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-shrink: 0;
+        }
+
+        .chat-header h3 {
+            font-family: 'DM Serif Display', serif;
+            font-size: 18px;
+            font-weight: 600;
+            color: white;
+            margin: 0;
+        }
+
+        .chat-close-btn {
+            background: none;
+            border: none;
+            color: white;
+            font-size: 24px;
+            cursor: pointer;
+            padding: 0;
+            width: 30px;
+            height: 30px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            transition: transform 0.2s ease;
+        }
+
+        .chat-close-btn:hover {
+            transform: rotate(90deg);
+        }
+
+        #chatMessages {
+            flex: 1;
+            overflow-y: auto;
+            padding: 16px;
+            display: flex;
+            flex-direction: column;
+            gap: 12px;
+            background-color: #FAFAFA;
+        }
+
+        .message {
+            display: flex;
+            margin-bottom: 8px;
+            animation: fadeIn 0.3s ease;
+        }
+
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+                transform: translateY(10px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        .message.received {
+            justify-content: flex-start;
+        }
+
+        .message.sent {
+            justify-content: flex-end;
+        }
+
+        .message-bubble {
+            max-width: 80%;
+            padding: 12px 16px;
+            border-radius: 16px;
+            word-wrap: break-word;
+            font-size: 14px;
+            line-height: 1.4;
+        }
+
+        .message.received .message-bubble {
+            background-color: #A8C5A0;
+            color: white;
+            border-radius: 16px 16px 16px 4px;
+        }
+
+        .message.sent .message-bubble {
+            background: linear-gradient(135deg, #5B8C6B 0%, #3D6B4A 100%);
+            color: white;
+            border-radius: 16px 16px 4px 16px;
+        }
+
+        .quick-replies {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 8px;
+            padding: 12px 0;
+        }
+
+        .quick-reply-btn {
+            display: inline-block;
+            padding: 8px 14px;
+            background-color: #E8F0E6;
+            border: 1.5px solid #A8C5A0;
+            border-radius: 20px;
+            cursor: pointer;
+            font-size: 12px;
+            color: #3D6B4A;
+            font-weight: 500;
+            transition: all 0.2s ease;
+            font-family: 'Nunito', sans-serif;
+            white-space: nowrap;
+        }
+
+        .quick-reply-btn:hover {
+            background-color: #A8C5A0;
+            color: white;
+            border-color: #5B8C6B;
+        }
+
+        #chatInput {
+            display: flex;
+            gap: 8px;
+            padding: 12px;
+            border-top: 1px solid #E0E0E0;
+            background-color: white;
+            border-radius: 0 0 12px 12px;
+            flex-shrink: 0;
+        }
+
+        #messageInput {
+            flex: 1;
+            border: 1px solid #D0D0D0;
+            border-radius: 20px;
+            padding: 10px 16px;
+            font-size: 14px;
+            font-family: 'Nunito', sans-serif;
+            transition: border-color 0.2s ease;
+        }
+
+        #messageInput:focus {
+            outline: none;
+            border-color: #5B8C6B;
+            box-shadow: 0 0 0 2px rgba(91, 140, 107, 0.1);
+        }
+
+        #sendBtn {
+            background: linear-gradient(135deg, #5B8C6B 0%, #3D6B4A 100%);
+            color: white;
+            border: none;
+            border-radius: 50%;
+            width: 38px;
+            height: 38px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            cursor: pointer;
+            transition: all 0.2s ease;
+            font-size: 18px;
+        }
+
+        #sendBtn:hover {
+            box-shadow: 0 2px 8px rgba(91, 140, 107, 0.3);
+        }
+
+        #sendBtn:active {
+            transform: scale(0.95);
+        }
+
+        /* Mobile responsiveness */
+        @media (max-width: 480px) {
+            #chatPanel {
+                position: fixed;
+                bottom: 0;
+                right: 0;
+                left: 0;
+                width: 100%;
+                height: calc(100vh - 60px);
+                border-radius: 0;
+                animation: slideUpMobile 0.3s ease;
+            }
+
+            @keyframes slideUpMobile {
+                from {
+                    transform: translateY(100%);
+                }
+                to {
+                    transform: translateY(0);
+                }
+            }
+
+            .message-bubble {
+                max-width: 85%;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Navigation -->
+    <nav>
+        <div class="nav-container container">
+            <a href="index.html" class="logo">Medicare Moms</a>
+            <div class="hamburger" id="hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+            <ul class="nav-links" id="navLinks">
+                <li><a href="services.html">Services</a></li>
+                <li><a href="resources.html">Resources</a></li>
+                <li><a href="blog.html">Blog</a></li>
+                <li><a href="meet-our-team.html">Meet Our Team</a></li>
+                <li><a href="index.html#contact">Contact</a></li>
+                <li><a href="join-our-team.html">Join Our Team</a></li>
+                <li class="lang-toggle">
+                    <a href="#" class="lang-link">
+                        <span class="lang-active">EN</span>
+                        <span>/</span>
+                        <span class="lang-inactive">ES</span>
+                    </a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="container">
+            <div class="hero-content">
+                <h1>How to Enroll in Medicare</h1>
+                <p class="lead">Enrolling in Medicare doesn't have to be complicated. We'll walk you through the steps to get Part A and Part B so you can focus on your health.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Eligibility Section -->
+    <section class="section-white section-padding">
+        <div class="container narrow-container">
+            <h2 class="text-center">Who is Eligible for Medicare?</h2>
+            <div class="section-intro text-center">
+                <p>Medicare is available to people who meet certain eligibility requirements. Most people think of Medicare as being for seniors, but eligibility extends beyond just age.</p>
+            </div>
+        </div>
+        <div class="container">
+            <div class="info-grid">
+                <div class="info-card">
+                    <div class="card-icon">👴</div>
+                    <h4>Age 65 or Older</h4>
+                    <p>You become eligible for Medicare on the first day of the month you turn 65, as long as you are a U.S. citizen or permanent resident who has lived in the U.S. for at least 5 years.</p>
+                </div>
+                <div class="info-card">
+                    <div class="card-icon">♿</div>
+                    <h4>Under 65 with a Disability</h4>
+                    <p>You can qualify for Medicare if you are under 65 and have been receiving Social Security Disability Benefits (SSDI) for 24 consecutive months.</p>
+                </div>
+                <div class="info-card">
+                    <div class="card-icon">💙</div>
+                    <h4>ESRD (End-Stage Renal Disease)</h4>
+                    <p>If you have permanent kidney failure and need dialysis or a transplant, you can qualify for Medicare regardless of age or work history.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Initial Enrollment Period Section -->
+    <section class="section-gray section-padding">
+        <div class="container narrow-container">
+            <h2 class="text-center">Understanding Your Enrollment Windows</h2>
+            <p class="text-center lead">Medicare has specific windows when you can enroll without penalties. Missing these deadlines can result in lifelong premium increases.</p>
+        </div>
+        <div class="container">
+            <div class="info-card" style="max-width: 800px; margin: 40px auto;">
+                <h3>Initial Enrollment Period (IEP)</h3>
+                <p><strong>The most important enrollment window for most people.</strong></p>
+                <p>Your Initial Enrollment Period is a 7-month window centered around your 65th birthday:</p>
+                <ul class="feature-list-standalone">
+                    <li>3 months BEFORE the month you turn 65</li>
+                    <li>The month you turn 65</li>
+                    <li>3 months AFTER the month you turn 65</li>
+                </ul>
+                <p><strong>Example:</strong> If your birthday is June 15th, your IEP runs from March 1st through September 30th.</p>
+                <div class="callout" style="margin-top: 25px;">
+                    <p>Enrolling during your IEP means your coverage starts the month you turn 65 (or shortly after). Waiting until after this window could mean gaps in coverage and permanent penalties on your premiums.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Part A Enrollment Section -->
+    <section class="section-white section-padding">
+        <div class="container narrow-container">
+            <h2 class="text-center">How to Sign Up for Medicare Part A</h2>
+            <div class="section-intro text-center">
+                <p>Medicare Part A covers hospital insurance, including inpatient hospital care, skilled nursing facility care, hospice, and home health services.</p>
+            </div>
+        </div>
+        <div class="container">
+            <div class="info-grid">
+                <div class="info-card">
+                    <h4>If You're Receiving Social Security</h4>
+                    <p>Good news: <strong>You're automatically enrolled!</strong> Most people who are receiving Social Security retirement benefits will be automatically enrolled in Part A when they reach 65. You'll receive a Medicare card in the mail 3 months before your 65th birthday.</p>
+                    <p>You don't need to do anything—it happens automatically.</p>
+                </div>
+                <div class="info-card">
+                    <h4>If You're NOT Receiving Social Security</h4>
+                    <p>You'll need to apply manually. You have two options:</p>
+                    <ul class="feature-list-standalone">
+                        <li><strong>Online:</strong> Visit <a href="https://www.ssa.gov/medicare" style="color: #5B8C6B; text-decoration: underline;">ssa.gov/medicare</a> and apply for Medicare</li>
+                        <li><strong>In Person:</strong> Visit your local Social Security office</li>
+                    </ul>
+                    <p>Apply during your Initial Enrollment Period to avoid delays or penalties.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Part B Enrollment Section -->
+    <section class="section-gray section-padding">
+        <div class="container narrow-container">
+            <h2 class="text-center">How to Sign Up for Medicare Part B</h2>
+            <div class="section-intro text-center">
+                <p>Medicare Part B covers doctor services, outpatient care, medical equipment, and preventive services. Unlike Part A, Part B requires active enrollment and has a monthly premium.</p>
+            </div>
+        </div>
+        <div class="container">
+            <div class="info-card" style="max-width: 800px; margin: 40px auto;">
+                <h4>What You Need to Know About Part B</h4>
+                <p><strong>Part B is optional but highly recommended.</strong> The standard monthly premium is $202.90 (2026), though higher-income earners may pay more due to IRMAA (see below). Part B covers essential outpatient services you'll use regularly.</p>
+
+                <h4 style="margin-top: 25px;">How to Enroll</h4>
+                <p>You can enroll in Part B when you enroll in Part A:</p>
+                <ul class="feature-list-standalone">
+                    <li><strong>Online:</strong> Visit <a href="https://www.ssa.gov/medicare" style="color: #5B8C6B; text-decoration: underline;">ssa.gov/medicare</a></li>
+                    <li><strong>Phone:</strong> Call Social Security at 1-800-772-1213</li>
+                    <li><strong>In Person:</strong> Visit your local Social Security office</li>
+                </ul>
+
+                <div class="callout" style="margin-top: 30px; text-align: left;">
+                    <h4 style="color: white; margin-bottom: 10px;">What is IRMAA?</h4>
+                    <p style="color: rgba(255,255,255,0.9); margin-bottom: 8px;">IRMAA stands for <strong>Income-Related Monthly Adjustment Amount</strong>. If your modified adjusted gross income from two years ago exceeds a certain threshold (currently $109,000 for individuals or $218,000 for married couples filing jointly), you'll pay a surcharge on top of the standard Part B premium.</p>
+                    <p style="color: rgba(255,255,255,0.9); margin-bottom: 0;">IRMAA can also apply to Part D premiums. The extra amount ranges from about $70 to $400+ per month depending on your income bracket. If your income has dropped since then (due to retirement, for example), you can appeal the surcharge with Social Security.</p>
+                </div>
+
+                <h4 style="margin-top: 25px;">The Late Enrollment Penalty</h4>
+                <p>If you delay enrolling in Part B without creditable health coverage, you may face a permanent penalty of 10% per year for every 12 months you were eligible but not enrolled.</p>
+                <p><strong>Exceptions:</strong> You can delay Part B without penalty if you're still working and covered by employer-sponsored health insurance, or if you meet other special circumstances.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Special Enrollment Periods Section -->
+    <section class="section-white section-padding">
+        <div class="container narrow-container">
+            <h2 class="text-center">Special Enrollment Periods (SEP)</h2>
+            <div class="section-intro text-center">
+                <p>If you missed your Initial Enrollment Period, you may still have another opportunity to enroll without penalties through a Special Enrollment Period.</p>
+            </div>
+        </div>
+        <div class="container">
+            <div class="info-card" style="max-width: 800px; margin: 40px auto;">
+                <h4>Who Qualifies for SEP?</h4>
+                <p>You may be eligible for a Special Enrollment Period if you:</p>
+                <ul class="feature-list-standalone">
+                    <li>Lost employer coverage after age 65</li>
+                    <li>Retired and lost coverage</li>
+                    <li>Moved out of your plan's service area</li>
+                    <li>Experienced other qualifying life events</li>
+                </ul>
+
+                <p style="margin-top: 20px;"><strong>Important:</strong> You must enroll within 2 months (sometimes 3 months) of the event that triggers your SEP. Act quickly if you qualify!</p>
+
+                <p style="margin-top: 20px;">If you delayed Part B because you had employer coverage, you won't face a late enrollment penalty as long as you enroll within 8 months of losing that coverage.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Yearly Enrollment Periods Section -->
+    <section class="section-gray section-padding">
+        <div class="container narrow-container">
+            <h2 class="text-center">Yearly Enrollment Periods</h2>
+            <div class="section-intro text-center">
+                <p>Once you're enrolled in Medicare, there are specific windows each year when you can make changes to your coverage.</p>
+            </div>
+        </div>
+        <div class="container">
+            <div class="info-grid" style="max-width: 900px; margin: 0 auto;">
+                <div class="info-card">
+                    <h4>Annual Enrollment Period (AEP)</h4>
+                    <p><strong>October 15 through December 7 each year.</strong> Changes take effect January 1.</p>
+                    <p>During AEP, you can:</p>
+                    <ul class="feature-list-standalone">
+                        <li>Switch from Original Medicare to a Medicare Advantage plan</li>
+                        <li>Switch from Medicare Advantage back to Original Medicare</li>
+                        <li>Change from one Medicare Advantage plan to another</li>
+                        <li>Join, switch, or drop a Part D prescription drug plan</li>
+                    </ul>
+                    <p style="margin-top: 10px;">This is the main window most people use to review and update their coverage each year.</p>
+                </div>
+
+                <div class="info-card">
+                    <h4>Open Enrollment Period (OEP)</h4>
+                    <p><strong>January 1 through March 31 each year.</strong> Changes take effect the first of the following month.</p>
+                    <p>The OEP is specifically for people who are <strong>already enrolled in a Medicare Advantage plan</strong>. During this window, you can:</p>
+                    <ul class="feature-list-standalone">
+                        <li>Switch to a different Medicare Advantage plan</li>
+                        <li>Drop your Medicare Advantage plan and return to Original Medicare (and add a Medigap supplement and Part D plan)</li>
+                    </ul>
+                    <p style="margin-top: 10px;">You cannot use the OEP to go from Original Medicare to a Medicare Advantage plan, that can only be done during AEP.</p>
+                </div>
+            </div>
+
+            <div class="info-card" style="max-width: 900px; margin: 30px auto 0;">
+                <h4>General Enrollment Period (GEP)</h4>
+                <p><strong>January 1 through March 31 each year.</strong> Coverage begins July 1 of that year.</p>
+                <p>The GEP is <strong>not for changing plans</strong>. It's a safety net for people who missed their Initial Enrollment Period and need to sign up for Part A or Part B for the first time. Enrolling during GEP typically comes with a permanent late enrollment penalty of 10% per year for every 12 months you were eligible but didn't enroll.</p>
+                <div class="example-box" style="margin-top: 20px;">
+                    <div class="example-label">Example</div>
+                    <p>You turned 65 in January 2024 but didn't enroll until January 2026 (2 years late). You'd owe a 20% increase to your Part B premium for the rest of your life.</p>
+                </div>
+                <p style="margin-top: 15px;"><strong>Bottom line:</strong> It's much better to enroll during your IEP or SEP if possible to avoid permanent penalties.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- After Enrollment Section -->
+    <section class="section-white section-padding">
+        <div class="container narrow-container">
+            <h2 class="text-center">What to Do After You Enroll in Part A & Part B</h2>
+            <div class="section-intro text-center">
+                <p>Congratulations on getting Part A and Part B! But your enrollment journey isn't over. Now you need to decide what type of coverage best fits your needs.</p>
+            </div>
+        </div>
+        <div class="container">
+            <div class="info-grid">
+                <div class="info-card">
+                    <h4>Original Medicare + Supplement + Part D</h4>
+                    <p>This option gives you maximum flexibility. You keep Original Medicare (Part A & B), add a Medigap supplement to cover costs, and add a standalone Part D prescription drug plan.</p>
+                    <p><strong>Best for:</strong> People who like flexibility and want to see any doctor.</p>
+                </div>
+                <div class="info-card">
+                    <h4>Medicare Advantage</h4>
+                    <p>Also called Part C, Medicare Advantage is an all-in-one alternative to Original Medicare. It includes Part A, Part B, and usually prescription drug coverage in one plan.</p>
+                    <p><strong>Best for:</strong> People who want simplicity and lower premiums (often $0).</p>
+                </div>
+                <div class="info-card">
+                    <h4>Get Expert Guidance</h4>
+                    <p>The decision between Original Medicare and Medicare Advantage is complex and personal. That's where we come in. We'll help you understand your options and choose the right coverage for your situation.</p>
+                    <p><a href="resources.html" style="color: #5B8C6B; text-decoration: underline; font-weight: 600;">Explore our resources</a> to learn more about each option.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="cta-section">
+        <div class="container">
+            <h2>Need Help Enrolling?</h2>
+            <p>We'll walk you through the enrollment process step by step. Getting Medicare doesn't have to be confusing—we're here to make it simple.</p>
+            <div class="cta-buttons">
+                <a href="index.html#contact" class="btn btn-primary">Schedule a Consultation</a>
+                <a href="tel:+14352461548" class="btn btn-secondary">Call (435) 246-1548</a>
+            </div>
+            <p class="cta-note">Free consultations, always. No obligation, no pressure.</p>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <div class="footer-brand">
+                        <h4>Medicare Moms</h4>
+                        <p>A Wildcat Insurance Company</p>
+                        <p>Helping families find health coverage that works.</p>
+                    </div>
+                    <div class="social-links">
+                        <a href="#" title="Instagram">📷</a>
+                        <a href="#" title="Facebook">f</a>
+                        <a href="#" title="TikTok">♪</a>
+                    </div>
+                </div>
+
+                <div class="footer-section">
+                    <h4>Quick Links</h4>
+                    <ul>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="services.html">Services</a></li>
+                        <li><a href="resources.html">Resources</a></li>
+                        <li><a href="blog.html">Blog</a></li>
+                        <li><a href="index.html#contact">Contact</a></li>
+                        <li><a href="meet-our-team.html">Meet Our Team</a></li>
+                        <li><a href="join-our-team.html">Join Our Team</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-section">
+                    <h4>Coverage Types</h4>
+                    <ul>
+                        <li><a href="services.html">Medicare Advantage</a></li>
+                        <li><a href="services.html">Medigap / Supplements</a></li>
+                        <li><a href="services.html">ACA Marketplace</a></li>
+                        <li><a href="services.html">Dental & Vision</a></li>
+                        <li><a href="services.html">Life Insurance</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-section">
+                    <h4>Contact Info</h4>
+                    <ul>
+                        <li><a href="tel:+14352461548">(435) 246-1548</a></li>
+                        <li><a href="mailto:info@medicaremoms.com">info@medicaremoms.com</a></li>
+                        <li>Monday–Friday, 9am–5pm MT</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="footer-bottom">
+                <p>&copy; 2026 Medicare Moms. All rights reserved.</p>
+                <p style="margin-top: 8px;">Medicare is a registered trademark of the U.S. Department of Health and Human Services.</p>
+                <p style="margin-top: 8px;"><a href="terms.html" style="color: #999; text-decoration: none; transition: color 0.3s ease;" onmouseover="this.style.color='#FFFFFF'" onmouseout="this.style.color='#999'">Terms of Service</a> &middot; <a href="privacy.html" style="color: #999; text-decoration: none; transition: color 0.3s ease;" onmouseover="this.style.color='#FFFFFF'" onmouseout="this.style.color='#999'">Privacy Policy</a></p>
+                <div class="legal-disclaimer">
+                    Medicare Moms is a licensed insurance agency. We are not affiliated with or endorsed by any government agency. Medicare has neither reviewed nor endorsed this information. Not all plans or benefits described are available in all areas. Plan availability, premiums, benefits, and costs vary by location and may change annually. The examples provided are illustrative only and do not represent actual plan pricing. By using this website, you agree to our Terms of Service and Privacy Policy.
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Mobile Menu Toggle
+        const hamburger = document.getElementById('hamburger');
+        const navLinks = document.getElementById('navLinks');
+
+        hamburger.addEventListener('click', () => {
+            hamburger.classList.toggle('active');
+            navLinks.classList.toggle('active');
+        });
+
+        document.querySelectorAll('.nav-links a').forEach(link => {
+            link.addEventListener('click', () => {
+                hamburger.classList.remove('active');
+                navLinks.classList.remove('active');
+            });
+        });
+
+        // Fade-in animation on scroll
+        const observerOptions = {
+            threshold: 0.1,
+            rootMargin: '0px 0px -50px 0px'
+        };
+
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('fade-in');
+                    observer.unobserve(entry.target);
+                }
+            });
+        }, observerOptions);
+
+        document.querySelectorAll('.info-card').forEach(el => {
+            observer.observe(el);
+        });
+    </script>
+
+    <!-- CHAT WIDGET -->
+    <div id="chatWidgetContainer">
+        <style>
+            /* Chat Widget Fade-in */
+            .fade-in {
+                animation: fadeInElement 0.6s ease-out forwards;
+            }
+
+            @keyframes fadeInElement {
+                from {
+                    opacity: 0;
+                    transform: translateY(20px);
+                }
+                to {
+                    opacity: 1;
+                    transform: translateY(0);
+                }
+            }
+        </style>
+
+        <button id="chatButton" aria-label="Open chat">
+            <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                <path d="M20 2H4c-1.1 0-2 .9-2 2v18l4-4h14c1.1 0 2-.9 2-2V4c0-1.1-.9-2-2-2z"/>
+            </svg>
+        </button>
+
+        <div id="chatPanel">
+            <div class="chat-header">
+                <h3>Chat with Us</h3>
+                <button class="chat-close-btn" aria-label="Close chat">&times;</button>
+            </div>
+
+            <div id="chatMessages">
+                <div class="message received">
+                    <div class="message-bubble">Hi there! 👋 We're the Medicare Moms team. How can we help you today?</div>
+                </div>
+                <div class="quick-replies">
+                    <button class="quick-reply-btn">Medicare Questions</button>
+                    <button class="quick-reply-btn">Get a Free Quote</button>
+                    <button class="quick-reply-btn">Talk to an Agent</button>
+                    <button class="quick-reply-btn">Habla Español?</button>
+                </div>
+            </div>
+
+            <div id="chatInput">
+                <input type="text" id="messageInput" placeholder="Type your message...">
+                <button id="sendBtn" aria-label="Send message">➤</button>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        // Chat Widget JavaScript
+        (function() {
+            const chatButton = document.getElementById('chatButton');
+            const chatPanel = document.getElementById('chatPanel');
+            const closeBtn = document.querySelector('.chat-close-btn');
+            const messageInput = document.getElementById('messageInput');
+            const sendBtn = document.getElementById('sendBtn');
+            const chatMessages = document.getElementById('chatMessages');
+            const quickReplyButtons = document.querySelectorAll('.quick-reply-btn');
+
+            // Toggle chat panel
+            chatButton.addEventListener('click', () => {
+                chatPanel.classList.toggle('active');
+                if (chatPanel.classList.contains('active')) {
+                    messageInput.focus();
+                }
+            });
+
+            // Close chat panel
+            closeBtn.addEventListener('click', () => {
+                chatPanel.classList.remove('active');
+            });
+
+            // Handle quick reply buttons
+            quickReplyButtons.forEach(btn => {
+                btn.addEventListener('click', () => {
+                    messageInput.value = btn.textContent;
+                    messageInput.focus();
+                });
+            });
+
+            // Send message function
+            function sendMessage() {
+                const message = messageInput.value.trim();
+                if (!message) return;
+
+                // Remove quick replies if they exist
+                const quickRepliesDiv = document.querySelector('.quick-replies');
+                if (quickRepliesDiv) {
+                    quickRepliesDiv.remove();
+                }
+
+                // Add user message
+                const userMessageDiv = document.createElement('div');
+                userMessageDiv.className = 'message sent';
+                userMessageDiv.innerHTML = `<div class="message-bubble">${escapeHtml(message)}</div>`;
+                chatMessages.appendChild(userMessageDiv);
+
+                // Clear input
+                messageInput.value = '';
+
+                // Scroll to bottom
+                chatMessages.scrollTop = chatMessages.scrollHeight;
+
+                // Show response after a brief delay
+                setTimeout(() => {
+                    const responseDiv = document.createElement('div');
+                    responseDiv.className = 'message received';
+                    responseDiv.innerHTML = `<div class="message-bubble">Thanks for reaching out! One of our agents will be in touch shortly. In the meantime, feel free to call us at (435) 246-1548 or email info@medicaremoms.com</div>`;
+                    chatMessages.appendChild(responseDiv);
+
+                    // Scroll to bottom
+                    chatMessages.scrollTop = chatMessages.scrollHeight;
+                }, 800);
+            }
+
+            // Send button click
+            sendBtn.addEventListener('click', sendMessage);
+
+            // Send on Enter key
+            messageInput.addEventListener('keypress', (e) => {
+                if (e.key === 'Enter') {
+                    e.preventDefault();
+                    sendMessage();
+                }
+            });
+
+            // Utility function to escape HTML
+            function escapeHtml(text) {
+                const div = document.createElement('div');
+                div.textContent = text;
+                return div.innerHTML;
+            }
+        })();
+    </script>
+    <!-- /CHAT WIDGET -->
+
+</body>
+</html>
