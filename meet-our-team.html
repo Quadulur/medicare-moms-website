@@ -59,11 +59,20 @@
         }
 
         .logo {
+            display: flex;
+            align-items: center;
+            gap: 10px;
             font-family: 'DM Serif Display', serif;
             font-size: 24px;
             font-weight: 700;
             color: #5B8C6B;
             text-decoration: none;
+        }
+
+        .logo img {
+            height: 50px;
+            width: auto;
+            border-radius: 6px;
         }
 
         nav {
@@ -359,12 +368,17 @@
             gap: 8px;
             color: #4A5568;
             text-decoration: none;
-            font-size: 13px;
+            font-size: 12px;
             font-weight: 500;
-            padding: 6px 12px;
+            padding: 6px 10px;
             border-radius: 8px;
             background: #F7F3ED;
             transition: all 0.2s ease;
+            overflow: hidden;
+            text-overflow: ellipsis;
+            white-space: nowrap;
+            max-width: 100%;
+            box-sizing: border-box;
         }
 
         .team-contact-link:hover {
@@ -750,7 +764,7 @@
          ============================================ -->
     <header id="header">
         <div class="header-container">
-            <a href="index.html" class="logo">Medicare Moms</a>
+            <a href="index.html" class="logo"><img src="logo.svg" alt="Medicare Moms Logo">Medicare Moms</a>
             <nav>
                 <ul class="nav-links" id="navLinks">
                     <li><a href="services.html">Services</a></li>
@@ -775,54 +789,6 @@
     <section class="hero">
         <h1>Meet the Medicare Moms</h1>
         <p>Real women. Real expertise. Here to help you and your family find the right coverage.</p>
-    </section>
-
-    <!-- ============================================
-         WHAT OUR AGENTS HELP WITH
-         ============================================ -->
-    <section class="agents-help-section">
-        <div class="section-header">
-            <h2>What Our Agents Help With</h2>
-            <p>Every Medicare Moms agent is trained across our full range of products. Here's what they can help you with:</p>
-        </div>
-
-        <div class="help-grid">
-            <div class="help-item">
-                <span class="help-icon"><svg width="28" height="28" viewBox="0 0 48 48" fill="none" stroke="#5B8C6B" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><rect x="8" y="8" width="32" height="32" rx="4"/><line x1="24" y1="16" x2="24" y2="32"/><line x1="16" y1="24" x2="32" y2="24"/></svg></span>
-                <div>
-                    <strong>Medicare Advantage & Supplements</strong>
-                    <p>Choosing the right Medicare plan based on your doctors, prescriptions, and budget.</p>
-                </div>
-            </div>
-            <div class="help-item">
-                <span class="help-icon"><svg width="28" height="28" viewBox="0 0 48 48" fill="none" stroke="#5B8C6B" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="24" cy="12" r="5"/><path d="M14 40v-4a10 10 0 0 1 20 0v4"/><circle cx="10" cy="18" r="4"/><path d="M4 40v-3a7 7 0 0 1 9-6.7"/><circle cx="38" cy="18" r="4"/><path d="M44 40v-3a7 7 0 0 0-9-6.7"/></svg></span>
-                <div>
-                    <strong>ACA / Marketplace Plans</strong>
-                    <p>Finding affordable family coverage with income-based financial assistance.</p>
-                </div>
-            </div>
-            <div class="help-item">
-                <span class="help-icon"><svg width="28" height="28" viewBox="0 0 48 48" fill="none" stroke="#5B8C6B" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M18 6c-3 0-5.5 1.5-7 4s-2 5-2 8c0 4 1.5 7 3 10.5s3 7 4 11.5c.4 1.5 2 1.5 2.4 0 .8-2 1.8-4.5 2.8-6.5.6-1 1.8-1 2.4 0 1 2 2 4.5 2.8 6.5.4 1.5 2 1.5 2.4 0 1-4.5 2.5-8 4-11.5s3-6.5 3-10.5c0-3-.5-5.5-2-8s-4-4-7-4c-2 0-3.5 1-6 3.5C21.5 7 20 6 18 6z"/></svg></span>
-                <div>
-                    <strong>Dental & Vision</strong>
-                    <p>Standalone or add-on coverage for the whole family's smile and sight.</p>
-                </div>
-            </div>
-            <div class="help-item">
-                <span class="help-icon"><svg width="28" height="28" viewBox="0 0 48 48" fill="none" stroke="#5B8C6B" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M24 42s-18-10-18-22a9.5 9.5 0 0 1 18-4 9.5 9.5 0 0 1 18 4c0 12-18 22-18 22z"/></svg></span>
-                <div>
-                    <strong>Life Insurance</strong>
-                    <p>Protecting your family's future with term, whole life, or final expense plans.</p>
-                </div>
-            </div>
-            <div class="help-item">
-                <span class="help-icon"><svg width="28" height="28" viewBox="0 0 48 48" fill="none" stroke="#5B8C6B" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><polygon points="26,4 10,28 22,28 20,44 38,18 26,18"/></svg></span>
-                <div>
-                    <strong>Accident & Critical Illness</strong>
-                    <p>Extra peace of mind with cash-benefit supplemental coverage.</p>
-                </div>
-            </div>
-        </div>
     </section>
 
     <!-- ============================================
@@ -852,9 +818,9 @@
                                 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect width="20" height="16" x="2" y="4" rx="2"/><path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"/></svg>
                                 michelle@medicaremoms.com
                             </a>
-                            <a href="tel:+10000000000" class="team-contact-link" onclick="event.stopPropagation()">
+                            <a href="tel:+13854813683" class="team-contact-link" onclick="event.stopPropagation()">
                                 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
-                                (000) 000-0000
+                                (385) 481-3683
                             </a>
                         </div>
                         <span class="flip-hint">Click to learn more</span>
@@ -889,16 +855,16 @@
                                 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect width="20" height="16" x="2" y="4" rx="2"/><path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"/></svg>
                                 aidyl@medicaremoms.com
                             </a>
-                            <a href="tel:+10000000000" class="team-contact-link" onclick="event.stopPropagation()">
+                            <a href="tel:+18018953327" class="team-contact-link" onclick="event.stopPropagation()">
                                 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
-                                (000) 000-0000
+                                (801) 895-3327
                             </a>
                         </div>
                         <span class="flip-hint">Click to learn more</span>
                     </div>
                     <div class="card-back">
                         <h3 class="back-name">Aidyl Semidey</h3>
-                        <p class="team-bio">Mom of 2 daughters based in Murray, UT. Aidyl is passionate about making insurance accessible for everyone, especially in the Spanish-speaking community. She takes the time to make sure every client truly understands their options. Fluent in Spanish.</p>
+                        <p class="team-bio">Mom of 2 daughters based in Murray, UT. Aidyl is passionate about making insurance accessible for everyone, especially in the Spanish-speaking community. She takes the time to make sure every client truly understands their options.</p>
                         <div class="team-specialties">
                             <span class="specialty-tag">Medicare</span>
                             <span class="specialty-tag">ACA</span>
@@ -925,9 +891,9 @@
                                 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect width="20" height="16" x="2" y="4" rx="2"/><path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"/></svg>
                                 tamara@medicaremoms.com
                             </a>
-                            <a href="tel:+10000000000" class="team-contact-link" onclick="event.stopPropagation()">
+                            <a href="tel:+13853601512" class="team-contact-link" onclick="event.stopPropagation()">
                                 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
-                                (000) 000-0000
+                                (385) 360-1512
                             </a>
                         </div>
                         <span class="flip-hint">Click to learn more</span>
@@ -962,9 +928,9 @@
                                 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect width="20" height="16" x="2" y="4" rx="2"/><path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"/></svg>
                                 elizabeth@medicaremoms.com
                             </a>
-                            <a href="tel:+10000000000" class="team-contact-link" onclick="event.stopPropagation()">
+                            <a href="tel:+18019017070" class="team-contact-link" onclick="event.stopPropagation()">
                                 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
-                                (000) 000-0000
+                                (801) 901-7070
                             </a>
                         </div>
                         <span class="flip-hint">Click to learn more</span>
@@ -999,16 +965,16 @@
                                 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect width="20" height="16" x="2" y="4" rx="2"/><path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"/></svg>
                                 saya@medicaremoms.com
                             </a>
-                            <a href="tel:+10000000000" class="team-contact-link" onclick="event.stopPropagation()">
+                            <a href="tel:+18013168113" class="team-contact-link" onclick="event.stopPropagation()">
                                 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
-                                (000) 000-0000
+                                (801) 316-8113
                             </a>
                         </div>
                         <span class="flip-hint">Click to learn more</span>
                     </div>
                     <div class="card-back">
                         <h3 class="back-name">Saya Murton</h3>
-                        <p class="team-bio">Mom of 3 boys based in Herriman, UT. Originally from Japan, Saya brings over 10 years of insurance experience to the team. When she's not helping clients find the perfect plan, you'll probably find her at Disney with her family. Fluent in Japanese.</p>
+                        <p class="team-bio">Mom of 3 boys based in Herriman, UT. Originally from Japan, Saya brings almost 15 years of insurance experience to the team. When she's not helping clients find the perfect plan, you'll probably find her at Disney with her family.</p>
                         <div class="team-specialties">
                             <span class="specialty-tag">Medicare</span>
                             <span class="specialty-tag">ACA</span>
@@ -1035,9 +1001,9 @@
                                 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect width="20" height="16" x="2" y="4" rx="2"/><path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"/></svg>
                                 ally@medicaremoms.com
                             </a>
-                            <a href="tel:+10000000000" class="team-contact-link" onclick="event.stopPropagation()">
+                            <a href="tel:+14352461548" class="team-contact-link" onclick="event.stopPropagation()">
                                 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
-                                (000) 000-0000
+                                (435) 246-1548
                             </a>
                         </div>
                         <span class="flip-hint">Click to learn more</span>
@@ -1071,9 +1037,9 @@
                                 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect width="20" height="16" x="2" y="4" rx="2"/><path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"/></svg>
                                 erica@medicaremoms.com
                             </a>
-                            <a href="tel:+10000000000" class="team-contact-link" onclick="event.stopPropagation()">
+                            <a href="tel:+18328505726" class="team-contact-link" onclick="event.stopPropagation()">
                                 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
-                                (000) 000-0000
+                                (832) 850-5726
                             </a>
                         </div>
                         <span class="flip-hint">Click to learn more</span>
@@ -1107,9 +1073,9 @@
                                 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect width="20" height="16" x="2" y="4" rx="2"/><path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"/></svg>
                                 michelleb@medicaremoms.com
                             </a>
-                            <a href="tel:+10000000000" class="team-contact-link" onclick="event.stopPropagation()">
+                            <a href="tel:+18019058691" class="team-contact-link" onclick="event.stopPropagation()">
                                 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
-                                (000) 000-0000
+                                (801) 905-8691
                             </a>
                         </div>
                         <span class="flip-hint">Click to learn more</span>
@@ -1144,9 +1110,9 @@
                                 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect width="20" height="16" x="2" y="4" rx="2"/><path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"/></svg>
                                 edmi@medicaremoms.com
                             </a>
-                            <a href="tel:+10000000000" class="team-contact-link" onclick="event.stopPropagation()">
+                            <a href="tel:+18014480443" class="team-contact-link" onclick="event.stopPropagation()">
                                 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
-                                (000) 000-0000
+                                (801) 448-0443
                             </a>
                         </div>
                         <span class="flip-hint">Click to learn more</span>
@@ -1180,16 +1146,16 @@
                                 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect width="20" height="16" x="2" y="4" rx="2"/><path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"/></svg>
                                 lissette@medicaremoms.com
                             </a>
-                            <a href="tel:+10000000000" class="team-contact-link" onclick="event.stopPropagation()">
+                            <a href="tel:+18014480858" class="team-contact-link" onclick="event.stopPropagation()">
                                 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
-                                (000) 000-0000
+                                (801) 448-0858
                             </a>
                         </div>
                         <span class="flip-hint">Click to learn more</span>
                     </div>
                     <div class="card-back">
                         <h3 class="back-name">Lissette Wong</h3>
-                        <p class="team-bio">Lissette is passionate about helping families navigate their insurance options with clarity and care. Fluent in Spanish, she's committed to making sure every client feels supported and confident in their coverage choices.</p>
+                        <p class="team-bio">Lissette is passionate about helping families navigate their insurance options with clarity and care. She's committed to making sure every client feels supported and confident in their coverage choices.</p>
                         <div class="team-specialties">
                             <span class="specialty-tag">Medicare</span>
                             <span class="specialty-tag">ACA</span>
@@ -1216,16 +1182,16 @@
                                 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect width="20" height="16" x="2" y="4" rx="2"/><path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"/></svg>
                                 magarely@medicaremoms.com
                             </a>
-                            <a href="tel:+10000000000" class="team-contact-link" onclick="event.stopPropagation()">
+                            <a href="tel:+18018892428" class="team-contact-link" onclick="event.stopPropagation()">
                                 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
-                                (000) 000-0000
+                                (801) 889-2428
                             </a>
                         </div>
                         <span class="flip-hint">Click to learn more</span>
                     </div>
                     <div class="card-back">
                         <h3 class="back-name">Magarely Sanchez</h3>
-                        <p class="team-bio">Magarely brings warmth and dedication to every client interaction. Fluent in Spanish, she loves helping families in her community find the right coverage and feel confident about their health insurance decisions.</p>
+                        <p class="team-bio">Magarely brings warmth and dedication to every client interaction. She loves helping families in her community find the right coverage and feel confident about their health insurance decisions.</p>
                         <div class="team-specialties">
                             <span class="specialty-tag">Medicare</span>
                             <span class="specialty-tag">ACA</span>
@@ -1279,6 +1245,54 @@
 
         =============================================
         -->
+    </section>
+
+    <!-- ============================================
+         WHAT OUR AGENTS HELP WITH
+         ============================================ -->
+    <section class="agents-help-section">
+        <div class="section-header">
+            <h2>What Our Agents Help With</h2>
+            <p>Every Medicare Moms agent is trained across our full range of products. Here's what they can help you with:</p>
+        </div>
+
+        <div class="help-grid">
+            <div class="help-item">
+                <span class="help-icon"><svg width="28" height="28" viewBox="0 0 48 48" fill="none" stroke="#5B8C6B" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><rect x="8" y="8" width="32" height="32" rx="4"/><line x1="24" y1="16" x2="24" y2="32"/><line x1="16" y1="24" x2="32" y2="24"/></svg></span>
+                <div>
+                    <strong>Medicare Advantage & Supplements</strong>
+                    <p>Choosing the right Medicare plan based on your doctors, prescriptions, and budget.</p>
+                </div>
+            </div>
+            <div class="help-item">
+                <span class="help-icon"><svg width="28" height="28" viewBox="0 0 48 48" fill="none" stroke="#5B8C6B" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="24" cy="12" r="5"/><path d="M14 40v-4a10 10 0 0 1 20 0v4"/><circle cx="10" cy="18" r="4"/><path d="M4 40v-3a7 7 0 0 1 9-6.7"/><circle cx="38" cy="18" r="4"/><path d="M44 40v-3a7 7 0 0 0-9-6.7"/></svg></span>
+                <div>
+                    <strong>ACA / Marketplace Plans</strong>
+                    <p>Finding affordable family coverage with income-based financial assistance.</p>
+                </div>
+            </div>
+            <div class="help-item">
+                <span class="help-icon"><svg width="28" height="28" viewBox="0 0 48 48" fill="none" stroke="#5B8C6B" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M18 6c-3 0-5.5 1.5-7 4s-2 5-2 8c0 4 1.5 7 3 10.5s3 7 4 11.5c.4 1.5 2 1.5 2.4 0 .8-2 1.8-4.5 2.8-6.5.6-1 1.8-1 2.4 0 1 2 2 4.5 2.8 6.5.4 1.5 2 1.5 2.4 0 1-4.5 2.5-8 4-11.5s3-6.5 3-10.5c0-3-.5-5.5-2-8s-4-4-7-4c-2 0-3.5 1-6 3.5C21.5 7 20 6 18 6z"/></svg></span>
+                <div>
+                    <strong>Dental & Vision</strong>
+                    <p>Standalone or add-on coverage for the whole family's smile and sight.</p>
+                </div>
+            </div>
+            <div class="help-item">
+                <span class="help-icon"><svg width="28" height="28" viewBox="0 0 48 48" fill="none" stroke="#5B8C6B" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M24 42s-18-10-18-22a9.5 9.5 0 0 1 18-4 9.5 9.5 0 0 1 18 4c0 12-18 22-18 22z"/></svg></span>
+                <div>
+                    <strong>Life Insurance</strong>
+                    <p>Protecting your family's future with term, whole life, or final expense plans.</p>
+                </div>
+            </div>
+            <div class="help-item">
+                <span class="help-icon"><svg width="28" height="28" viewBox="0 0 48 48" fill="none" stroke="#5B8C6B" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><polygon points="26,4 10,28 22,28 20,44 38,18 26,18"/></svg></span>
+                <div>
+                    <strong>Accident & Critical Illness</strong>
+                    <p>Extra peace of mind with cash-benefit supplemental coverage.</p>
+                </div>
+            </div>
+        </div>
     </section>
 
     <!-- ============================================
