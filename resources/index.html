@@ -1,0 +1,1801 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!-- Favicon (auto-inserted by add-favicon.py) -->
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg">
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+    <link rel="shortcut icon" href="/favicon.ico">
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+    <link rel="manifest" href="/site.webmanifest">
+    <meta name="theme-color" content="#5b8c6b">
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Resources & Learn - Medicare Moms</title>
+    <meta name="description" content="Free Medicare and health insurance educational resources. Learn about Medicare Parts A, B, C, D, Medicare Advantage vs. Medigap, ACA plans, and ancillary benefits.">
+    <meta name="keywords" content="Medicare guide, Medicare education, Medicare Parts explained, Medicare Advantage vs Medigap, ACA plans guide, health insurance resources">
+    <meta property="og:title" content="Resources & Learn - Medicare Moms">
+    <meta property="og:description" content="Free Medicare and health insurance educational resources. Learn about Medicare Parts A, B, C, D, Medicare Advantage vs. Medigap, ACA plans, and ancillary benefits.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://medicaremoms.com/resources/">
+    <meta property="og:site_name" content="Medicare Moms">
+    <link rel="canonical" href="https://medicaremoms.com/resources/">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display&family=Nunito:wght@400;600;700;800&display=swap" rel="stylesheet">
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family: 'Nunito', sans-serif;
+            color: #2C2C2C;
+            background-color: #FFFFFF;
+            line-height: 1.6;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        .narrow-container {
+            max-width: 900px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        .section-padding {
+            padding: 80px 0;
+        }
+
+        .text-center {
+            text-align: center;
+        }
+
+        h1, h2, h3, h4, h5, h6 {
+            font-family: 'DM Serif Display', serif;
+            font-weight: 700;
+            line-height: 1.3;
+            color: #2C2C2C;
+        }
+
+        h1 {
+            font-size: clamp(32px, 5vw, 56px);
+            font-weight: 800;
+            margin-bottom: 20px;
+        }
+
+        h2 {
+            font-size: clamp(28px, 4vw, 44px);
+            margin-bottom: 30px;
+        }
+
+        h3 {
+            font-size: clamp(20px, 3vw, 28px);
+            margin-bottom: 15px;
+        }
+
+        h4 {
+            font-size: 20px;
+            margin-bottom: 12px;
+        }
+
+        p {
+            font-size: 16px;
+            color: #4A5568;
+            margin-bottom: 15px;
+        }
+
+        .lead {
+            font-size: 18px;
+            color: #4A5568;
+            margin-bottom: 20px;
+        }
+
+        .btn {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            padding: 12px 28px;
+            border-radius: 8px;
+            font-family: 'Nunito', sans-serif;
+            font-size: 15px;
+            font-weight: 600;
+            cursor: pointer;
+            text-decoration: none;
+            border: 2px solid transparent;
+            transition: all 0.3s ease;
+            text-align: center;
+        }
+
+        .btn-primary {
+            background: linear-gradient(135deg, #5B8C6B 0%, #3D6B4A 100%);
+            color: white;
+        }
+
+        .btn-primary:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 10px 30px rgba(91, 140, 107, 0.3);
+        }
+
+        .btn-secondary {
+            background-color: transparent;
+            color: #5B8C6B;
+            border-color: #5B8C6B;
+        }
+
+        .btn-secondary:hover {
+            background-color: #F7F3ED;
+            transform: translateY(-2px);
+        }
+
+        .btn-sm {
+            padding: 10px 20px;
+            font-size: 14px;
+        }
+
+        /* ============ Navigation ============ */
+        nav {
+            position: sticky;
+            top: 0;
+            background-color: white;
+            box-shadow: 0 4px 12px rgba(44, 44, 44, 0.08);
+            z-index: 1000;
+        }
+
+        .nav-container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 15px 20px;
+        }
+
+        .logo {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            font-family: 'DM Serif Display', serif;
+            font-size: 22px;
+            font-weight: 700;
+            color: #5B8C6B;
+            text-decoration: none;
+        }
+
+        .logo img {
+            height: 60px;
+            width: auto;
+            border-radius: 0;
+        }
+
+        .nav-links {
+            display: flex;
+            gap: 35px;
+            list-style: none;
+            align-items: center;
+        }
+
+        .nav-links a {
+            color: #2C2C2C;
+            text-decoration: none;
+            font-weight: 500;
+            transition: color 0.3s ease;
+            font-size: 15px;
+        }
+
+        .nav-links a:hover {
+            color: #5B8C6B;
+        }
+
+        .nav-links a.active-link {
+            color: #5B8C6B;
+        }
+
+        .hamburger {
+            display: none;
+            flex-direction: column;
+            cursor: pointer;
+            gap: 6px;
+        }
+
+        .hamburger span {
+            width: 25px;
+            height: 3px;
+            background-color: #2C2C2C;
+            border-radius: 2px;
+            transition: all 0.3s ease;
+        }
+
+        @media (max-width: 768px) {
+            .hamburger {
+                display: flex;
+            }
+
+            .nav-links {
+                position: absolute;
+                top: 70px;
+                left: 0;
+                right: 0;
+                background-color: white;
+                flex-direction: column;
+                gap: 15px;
+                padding: 30px 20px;
+                display: none;
+            }
+
+            .nav-links.active {
+                display: flex;
+            }
+        }
+
+        .lang-toggle {
+            margin-left: 8px;
+        }
+        .lang-link {
+            text-decoration: none;
+            font-size: 13px;
+            font-weight: 600;
+            color: #4A5568;
+            padding: 4px 12px;
+            border-radius: 20px;
+            background: #E8F0E5;
+            transition: all 0.3s ease;
+            display: inline-flex;
+            align-items: center;
+            gap: 2px;
+        }
+        .lang-link:hover {
+            background: #5B8C6B;
+            color: white;
+        }
+        .lang-active {
+            color: #5B8C6B;
+            font-weight: 700;
+        }
+        .lang-inactive {
+            color: #999;
+            font-weight: 400;
+        }
+        .lang-link:hover .lang-active,
+        .lang-link:hover .lang-inactive {
+            color: white;
+        }
+
+        /* ============ Hero ============ */
+        .hero {
+            background: linear-gradient(160deg, #F7F3ED 0%, #EDE8DF 40%, #E8F0E5 100%);
+            padding: 100px 0 60px 0;
+            text-align: center;
+        }
+
+        .hero-content .lead {
+            font-size: 20px;
+            color: #3A4A63;
+            margin-bottom: 30px;
+            max-width: 700px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .page-nav {
+            display: flex;
+            gap: 12px;
+            justify-content: center;
+            flex-wrap: wrap;
+            margin-top: 30px;
+        }
+
+        .page-nav a {
+            padding: 10px 22px;
+            border-radius: 30px;
+            border: 2px solid #5B8C6B;
+            background: transparent;
+            color: #5B8C6B;
+            font-family: 'DM Serif Display', serif;
+            font-size: 14px;
+            font-weight: 600;
+            text-decoration: none;
+            transition: all 0.3s ease;
+        }
+
+        .page-nav a:hover {
+            background: linear-gradient(135deg, #5B8C6B 0%, #3D6B4A 100%);
+            color: white;
+            border-color: #5B8C6B;
+        }
+
+        @media (max-width: 768px) {
+            .hero {
+                padding: 60px 0 40px 0;
+            }
+        }
+
+        /* ============ Content Sections ============ */
+        .section-white {
+            background-color: white;
+        }
+
+        .section-gray {
+            background-color: #F7F3ED;
+        }
+
+        .section-intro {
+            max-width: 750px;
+            margin: 0 auto 40px;
+        }
+
+        .section-intro p {
+            font-size: 17px;
+            line-height: 1.8;
+        }
+
+        /* ============ Info Cards ============ */
+        .info-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 25px;
+            margin-top: 40px;
+        }
+
+        .info-card {
+            background-color: white;
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0 4px 12px rgba(44, 44, 44, 0.08);
+            border-top: 4px solid #5B8C6B;
+        }
+
+        .section-gray .info-card {
+            background-color: white;
+        }
+
+        .section-white .info-card {
+            background-color: #F7F3ED;
+            border-top-color: #5B8C6B;
+            box-shadow: none;
+        }
+
+        .info-card h3 {
+            font-size: 20px;
+            margin-bottom: 12px;
+        }
+
+        .info-card h4 {
+            font-size: 18px;
+            margin-bottom: 10px;
+        }
+
+        .info-card p {
+            font-size: 15px;
+            color: #4A5568;
+            line-height: 1.7;
+        }
+
+        .info-card .card-icon {
+            font-size: 40px;
+            margin-bottom: 12px;
+        }
+
+        /* ============ Comparison Layout ============ */
+        .comparison-wrapper {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 30px;
+            margin-top: 40px;
+        }
+
+        .comparison-box {
+            padding: 35px;
+            border-radius: 12px;
+            position: relative;
+        }
+
+        .comparison-box.box-coral {
+            background: linear-gradient(135deg, #F0F7F2 0%, #E8F0E5 100%);
+            border: 2px solid rgba(91, 140, 107, 0.3);
+        }
+
+        .comparison-box.box-blue {
+            background: linear-gradient(135deg, #F7F3ED 0%, #EDE8DF 100%);
+            border: 2px solid rgba(44, 44, 44, 0.15);
+        }
+
+        .comparison-box h3 {
+            font-size: 22px;
+            margin-bottom: 15px;
+        }
+
+        .comparison-box p {
+            font-size: 15px;
+            line-height: 1.7;
+            margin-bottom: 15px;
+        }
+
+        .comparison-box .feature-list {
+            list-style: none;
+            margin: 15px 0;
+        }
+
+        .comparison-box .feature-list li {
+            padding: 6px 0;
+            font-size: 14px;
+            color: #4A5568;
+            display: flex;
+            align-items: flex-start;
+            gap: 8px;
+        }
+
+        .comparison-box .feature-list li::before {
+            content: "✓";
+            color: #5B8C6B;
+            font-weight: 700;
+            flex-shrink: 0;
+        }
+
+        .box-label {
+            font-family: 'DM Serif Display', serif;
+            font-weight: 600;
+            font-size: 13px;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            margin-bottom: 10px;
+            color: #5B8C6B;
+        }
+
+        @media (max-width: 768px) {
+            .comparison-wrapper {
+                grid-template-columns: 1fr;
+            }
+        }
+
+        /* ============ Quote / Example Boxes ============ */
+        .example-box {
+            background-color: #F7F3ED;
+            border-left: 4px solid #5B8C6B;
+            padding: 25px 30px;
+            border-radius: 0 10px 10px 0;
+            margin: 25px 0;
+        }
+
+        .section-gray .example-box {
+            background-color: white;
+        }
+
+        .example-box .example-label {
+            font-family: 'DM Serif Display', serif;
+            font-weight: 600;
+            font-size: 14px;
+            color: #5B8C6B;
+            margin-bottom: 8px;
+        }
+
+        .example-box p {
+            font-size: 15px;
+            margin-bottom: 8px;
+            line-height: 1.7;
+        }
+
+        .example-box p:last-child {
+            margin-bottom: 0;
+        }
+
+        .example-box strong {
+            color: #2C2C2C;
+        }
+
+        /* ============ Highlight Callout ============ */
+        .callout {
+            background: linear-gradient(135deg, #3D6B4A 0%, #2C5038 100%);
+            color: white;
+            padding: 25px 30px;
+            border-radius: 10px;
+            margin: 30px 0;
+            text-align: center;
+        }
+
+        .callout p {
+            color: white;
+            font-size: 16px;
+            font-weight: 500;
+            margin-bottom: 0;
+        }
+
+        .callout strong {
+            font-weight: 700;
+        }
+
+        /* ============ Feature List (standalone) ============ */
+        .feature-list-standalone {
+            list-style: none;
+            margin: 20px 0;
+        }
+
+        .feature-list-standalone li {
+            padding: 8px 0;
+            font-size: 15px;
+            color: #4A5568;
+            display: flex;
+            align-items: flex-start;
+            gap: 10px;
+        }
+
+        .feature-list-standalone li::before {
+            content: "✓";
+            color: #5B8C6B;
+            font-weight: 700;
+            flex-shrink: 0;
+            margin-top: 1px;
+        }
+
+        /* ============ Ancillary Grid ============ */
+        .ancillary-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 25px;
+            margin-top: 40px;
+        }
+
+        .ancillary-card {
+            background-color: white;
+            border-radius: 12px;
+            overflow: hidden;
+            box-shadow: 0 4px 12px rgba(44, 44, 44, 0.08);
+            transition: all 0.3s ease;
+        }
+
+        .ancillary-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 30px rgba(44, 44, 44, 0.12);
+        }
+
+        .ancillary-header {
+            background: linear-gradient(135deg, #2C2C2C 0%, #4A5568 100%);
+            padding: 20px 25px;
+            color: white;
+            display: flex;
+            align-items: center;
+            gap: 12px;
+        }
+
+        .ancillary-header .icon {
+            font-size: 28px;
+        }
+
+        .ancillary-header h3 {
+            color: white;
+            margin-bottom: 0;
+            font-size: 18px;
+        }
+
+        .ancillary-body {
+            padding: 25px;
+        }
+
+        .ancillary-body p {
+            font-size: 15px;
+            color: #4A5568;
+            margin-bottom: 15px;
+            line-height: 1.7;
+        }
+
+        .ancillary-body .price-note {
+            font-family: 'DM Serif Display', serif;
+            font-weight: 600;
+            color: #5B8C6B;
+            font-size: 14px;
+            margin-bottom: 15px;
+        }
+
+        .ancillary-body .feature-list {
+            list-style: none;
+            margin: 10px 0;
+        }
+
+        .ancillary-body .feature-list li {
+            padding: 5px 0;
+            font-size: 14px;
+            color: #4A5568;
+            display: flex;
+            align-items: flex-start;
+            gap: 8px;
+        }
+
+        .ancillary-body .feature-list li::before {
+            content: "✓";
+            color: #5B8C6B;
+            font-weight: 700;
+            flex-shrink: 0;
+        }
+
+        /* ============ CTA Section ============ */
+        .cta-section {
+            background: linear-gradient(135deg, #3D6B4A 0%, #2C5038 100%);
+            color: white;
+            padding: 80px 0;
+            text-align: center;
+        }
+
+        .cta-section h2 {
+            color: white;
+            margin-bottom: 20px;
+        }
+
+        .cta-section p {
+            color: rgba(255, 255, 255, 0.85);
+            font-size: 18px;
+            margin-bottom: 35px;
+            max-width: 600px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .cta-buttons {
+            display: flex;
+            gap: 20px;
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+
+        .cta-section .btn-secondary {
+            color: white;
+            border-color: rgba(255, 255, 255, 0.5);
+        }
+
+        .cta-section .btn-secondary:hover {
+            background-color: rgba(255, 255, 255, 0.1);
+        }
+
+        .cta-note {
+            margin-top: 25px;
+            font-size: 14px;
+            color: rgba(255, 255, 255, 0.6);
+        }
+
+        /* ============ Footer ============ */
+        footer {
+            background-color: #2C2C2C;
+            color: rgba(255, 255, 255, 0.8);
+            padding: 50px 0 20px 0;
+        }
+
+        .footer-content {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 40px;
+            margin-bottom: 40px;
+        }
+
+        .footer-section h4 {
+            color: white;
+            margin-bottom: 20px;
+            font-family: 'DM Serif Display', serif;
+            font-weight: 600;
+            font-size: 16px;
+        }
+
+        .footer-section ul {
+            list-style: none;
+        }
+
+        .footer-section ul li {
+            margin-bottom: 12px;
+        }
+
+        .footer-section a {
+            color: rgba(255, 255, 255, 0.7);
+            text-decoration: none;
+            font-size: 14px;
+            transition: color 0.3s ease;
+        }
+
+        .footer-section a:hover {
+            color: #5B8C6B;
+        }
+
+        .footer-brand {
+            margin-bottom: 15px;
+        }
+
+        .footer-brand p {
+            color: rgba(255, 255, 255, 0.6);
+            font-size: 13px;
+            margin: 8px 0;
+        }
+
+        .social-links {
+            display: flex;
+            gap: 15px;
+            margin-top: 15px;
+        }
+
+        .social-links a {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            width: 35px;
+            height: 35px;
+            background-color: rgba(91, 140, 107, 0.2);
+            color: #5B8C6B;
+            border-radius: 50%;
+            text-decoration: none;
+            transition: all 0.3s ease;
+            font-size: 18px;
+        }
+
+        .social-links a:hover {
+            background-color: #5B8C6B;
+            color: white;
+        }
+
+        .footer-bottom {
+            border-top: 1px solid rgba(255, 255, 255, 0.1);
+            padding-top: 30px;
+            text-align: center;
+            font-size: 13px;
+            color: rgba(255, 255, 255, 0.6);
+        }
+
+        .legal-disclaimer {
+            font-size: 12px;
+            margin-top: 20px;
+            line-height: 1.6;
+            color: rgba(255, 255, 255, 0.5);
+        }
+
+        /* ============ Animations ============ */
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        .fade-in {
+            animation: fadeInUp 0.6s ease-out forwards;
+        }
+
+        @media (max-width: 768px) {
+            .section-padding {
+                padding: 50px 0;
+            }
+
+            h1 { font-size: 32px; }
+            h2 { font-size: 28px; }
+
+            .btn { width: 100%; }
+
+            .info-grid,
+            .ancillary-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .cta-buttons {
+                flex-direction: column;
+                gap: 12px;
+            }
+        }
+    
+        /* Services Dropdown */
+        .services-parent {
+            position: relative;
+        }
+        .services-dropdown {
+            display: none;
+            position: absolute;
+            top: 100%;
+            left: 50%;
+            transform: translateX(-50%);
+            background: white;
+            border-radius: 10px;
+            box-shadow: 0 10px 40px rgba(44, 44, 44, 0.15);
+            padding: 16px 0;
+            min-width: 240px;
+            z-index: 1000;
+            margin-top: 10px;
+        }
+        .services-dropdown::before {
+            content: '';
+            position: absolute;
+            top: -10px;
+            left: 0;
+            right: 0;
+            height: 10px;
+        }
+        .services-parent:hover .services-dropdown {
+            display: block;
+        }
+        .services-dropdown a {
+            display: block;
+            padding: 10px 24px;
+            color: #2C2C2C;
+            font-size: 13px;
+            font-weight: 500;
+            text-decoration: none;
+            white-space: nowrap;
+            transition: background 0.2s, color 0.2s;
+        }
+        .services-dropdown a:hover {
+            background: #F7F3ED;
+            color: #5B8C6B;
+        }
+        @media (max-width: 768px) {
+            .services-dropdown {
+                position: static;
+                transform: none;
+                box-shadow: none;
+                margin-top: 0;
+                padding: 0 0 0 20px;
+                border-radius: 0;
+            }
+            .services-parent:hover .services-dropdown {
+                display: block;
+            }
+        }
+
+            .footer-logo { display: block; max-width: 180px; height: auto; margin-bottom: 15px; }
+    </style>
+
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "FAQPage",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "What is the difference between Medicare Advantage and Medigap?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Medicare Advantage (Part C) is an alternative to Original Medicare that typically includes medical, prescription drug, and often dental/vision coverage from private insurers. Medigap is a supplement to Original Medicare that helps cover costs like copayments, coinsurance, and deductibles."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "What are the different parts of Medicare?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Medicare has four main parts: Part A covers hospital insurance, Part B covers medical insurance, Part C (Medicare Advantage) is an alternative to Original Medicare, and Part D covers prescription drugs."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "What is the ACA marketplace and who can use it?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "The ACA marketplace (healthcare.gov) is where individuals can shop for and enroll in health insurance plans if they don't have coverage through an employer or government program. You may qualify for subsidies based on income."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "When can I enroll in Medicare?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "You can typically enroll in Medicare starting 3 months before your 65th birthday through 3 months after the month you turn 65. Outside this window, you may face late enrollment penalties unless you qualify for a Special Enrollment Period."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Can I switch Medicare plans after I've enrolled?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Yes, you can change Medicare Advantage, Medigap, or prescription drug plans during the Annual Enrollment Period (October 15 - December 7) or during Open Enrollment Period for ACA plans."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Does Medicare cover dental and vision?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Original Medicare does not include dental and vision coverage, but many Medicare Advantage plans do include some dental and vision benefits. You can also purchase standalone dental and vision plans."
+          }
+        }
+      ]
+    }
+    </script>
+</head>
+<body>
+    <!-- Navigation -->
+    <nav>
+        <div class="container">
+            <div class="nav-container">
+                <a href="/" class="logo"><img src="/logo-mark.svg" alt="Medicare Moms Logo">Medicare Moms</a>
+                <ul class="nav-links" id="navLinks">
+                    <li><a href="/services/">Services</a></li>
+                    <li><a href="/resources/" class="active-link">Resources</a></li>
+                    <li><a href="/blog/">Blog</a></li>
+                    <li><a href="/meet-our-team/">Meet Our Team</a></li>
+                    <li><a href="/#contact">Contact</a></li>
+                    <li class="lang-toggle">
+                        <a href="/es/recursos/" class="lang-link" title="Ver en Español">
+                            <span class="lang-active">EN</span> / <span class="lang-inactive">ES</span>
+                        </a>
+                    </li>
+                </ul>
+                <div class="hamburger" id="hamburger">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero -->
+    <section class="hero">
+        <div class="container">
+            <div class="hero-content">
+                <h1>Understanding Your Health Coverage</h1>
+                <p class="lead">Insurance is confusing — it doesn't have to be. We've put together everything you need to know about Medicare, individual health plans, and more, all in plain English. No jargon, no fine print headaches.</p>
+                <div class="page-nav">
+                    <a href="#medicare-basics">Medicare Basics</a>
+                    <a href="#advantage-vs-supplement">Advantage vs. Supplement</a>
+                    <a href="#part-d-dsnp">Part D & D-SNP</a>
+                    <a href="#ancillary">Ancillary Benefits</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    <!-- ===================================================
+         SECTION 1: WHAT IS MEDICARE
+         =================================================== -->
+    <section class="section-gray section-padding" id="medicare-basics">
+        <div class="container">
+            <h2 class="text-center">What Is Medicare?</h2>
+            <div class="section-intro text-center">
+                <p>Medicare is the federal health insurance program for people 65 and older, and for some younger people with disabilities or specific conditions like End-Stage Renal Disease (ESRD). It's been around since 1965, and today it covers over 65 million Americans.</p>
+            </div>
+
+            <h3 class="text-center" style="margin-bottom: 10px;">Who Is Entitled to Medicare?</h3>
+            <p class="text-center" style="max-width: 700px; margin: 0 auto 30px; color: #3A4A63;">You qualify for Medicare if you meet any of these criteria:</p>
+
+            <div class="info-grid">
+                <div class="info-card">
+                    <div class="card-icon">🎂</div>
+                    <h4>Age 65+</h4>
+                    <p>If you or your spouse paid Medicare taxes for at least 10 years (40 quarters), you're entitled to premium-free Part A when you turn 65. Part B is available for a monthly premium.</p>
+                </div>
+
+                <div class="info-card">
+                    <div class="card-icon">♿</div>
+                    <h4>Under 65 with a Disability</h4>
+                    <p>If you've been receiving Social Security Disability Insurance (SSDI) for 24 months, you're automatically enrolled in Medicare Parts A & B — regardless of your age.</p>
+                </div>
+
+                <div class="info-card">
+                    <div class="card-icon">🏥</div>
+                    <h4>ESRD or ALS</h4>
+                    <p>People with End-Stage Renal Disease (permanent kidney failure) or ALS (Lou Gehrig's disease) qualify for Medicare at any age, often with no waiting period for ALS.</p>
+                </div>
+            </div>
+
+            <!-- Parts A & B -->
+            <h3 class="text-center" style="margin-top: 60px; margin-bottom: 10px;">The Building Blocks: Part A & Part B</h3>
+            <p class="text-center" style="max-width: 700px; margin: 0 auto 30px; color: #3A4A63;">Together, Parts A and B make up "Original Medicare" — the foundation everything else builds on.</p>
+
+            <div class="comparison-wrapper">
+                <div class="comparison-box box-coral">
+                    <div class="box-label">Part A — Hospital Insurance</div>
+                    <h3>What Part A Covers</h3>
+                    <p>Part A covers inpatient care — the things that happen when you're admitted to a facility.</p>
+                    <ul class="feature-list">
+                        <li>Inpatient hospital stays</li>
+                        <li>Skilled nursing facility care (up to 100 days)</li>
+                        <li>Home health services</li>
+                        <li>Hospice care</li>
+                    </ul>
+                    <p><strong>Cost:</strong> Most people pay $0 for Part A if they (or their spouse) worked and paid Medicare taxes for 10+ years. If you don't qualify for premium-free Part A, you can buy it.</p>
+                </div>
+
+                <div class="comparison-box box-blue">
+                    <div class="box-label">Part B — Medical Insurance</div>
+                    <h3>What Part B Covers</h3>
+                    <p>Part B covers outpatient care — doctor visits and preventive services you get outside the hospital.</p>
+                    <ul class="feature-list">
+                        <li>Doctor and specialist visits</li>
+                        <li>Outpatient procedures and surgeries</li>
+                        <li>Preventive care (annual wellness visits, screenings)</li>
+                        <li>Durable medical equipment (wheelchairs, walkers)</li>
+                        <li>Mental health services</li>
+                    </ul>
+                    <p><strong>Cost:</strong> The standard Part B premium is approximately $202.90/month in 2026 (income-dependent). After meeting your deductible, Medicare typically pays 80% and you pay 20%.</p>
+                </div>
+            </div>
+
+            <div class="callout" style="margin-top: 40px;">
+                <p><strong>Important:</strong> Original Medicare (A + B) does NOT cover dental, vision, hearing aids, or long-term custodial care. That's where additional coverage comes in — read on.</p>
+            </div>
+        </div>
+    </section>
+
+
+    <!-- ===================================================
+         SECTION 2: ADVANTAGE VS. SUPPLEMENT
+         =================================================== -->
+    <section class="section-white section-padding" id="advantage-vs-supplement">
+        <div class="container">
+            <h2 class="text-center">Medicare Advantage vs. Medicare Supplement</h2>
+            <div class="section-intro text-center">
+                <p>Once you have Original Medicare (Parts A & B), you have two main paths to build out your coverage. Understanding the difference is one of the most important decisions you'll make.</p>
+            </div>
+
+            <div class="comparison-wrapper">
+                <div class="comparison-box box-coral">
+                    <div class="box-label">Path 1</div>
+                    <h3>Medicare Advantage (Part C)</h3>
+                    <p>Medicare Advantage plans are offered by private insurance companies approved by Medicare. They replace Original Medicare — you get all your A & B coverage through the plan, plus usually extra benefits.</p>
+                    <ul class="feature-list">
+                        <li>Bundles Part A + B + usually Part D (prescriptions)</li>
+                        <li>Often includes dental, vision, hearing, and fitness</li>
+                        <li>Many plans available at $0 monthly premium</li>
+                        <li>Has an out-of-pocket maximum (Original Medicare doesn't)</li>
+                        <li>Uses a network (HMO, PPO) — stay in-network for lower costs</li>
+                        <li>May require referrals for specialists (HMO plans)</li>
+                    </ul>
+                    <p><strong>Best for:</strong> People who want all-in-one coverage, are comfortable using a network of doctors, and want extra benefits like dental and vision included.</p>
+                </div>
+
+                <div class="comparison-box box-blue">
+                    <div class="box-label">Path 2</div>
+                    <h3>Medicare Supplement (Medigap)</h3>
+                    <p>Medigap plans work alongside Original Medicare. They help pay the "gaps" — copays, coinsurance, and deductibles that A & B don't cover. You keep Original Medicare and add the supplement on top.</p>
+                    <ul class="feature-list">
+                        <li>Covers what Original Medicare doesn't pay (copays, coinsurance)</li>
+                        <li>See any doctor in the country who accepts Medicare</li>
+                        <li>No networks, no referrals needed</li>
+                        <li>Predictable costs — fewer surprise bills</li>
+                        <li>Monthly premium varies by plan letter and location</li>
+                        <li>Does NOT include drug coverage (need separate Part D)</li>
+                    </ul>
+                    <p><strong>Best for:</strong> People who want maximum flexibility to see any doctor, travel frequently, or want the most predictable out-of-pocket costs.</p>
+                </div>
+            </div>
+
+            <h3 class="text-center" style="margin-top: 50px; margin-bottom: 15px;">Understanding Medigap Plan Letters</h3>
+            <p class="text-center" style="max-width: 700px; margin: 0 auto 30px; color: #3A4A63;">Medigap plans are standardized by the government and labeled by letter. Each letter covers the same benefits no matter which company sells it — only the price differs.</p>
+
+            <div class="info-grid">
+                <div class="info-card">
+                    <h4>Plan G — Most Popular</h4>
+                    <p>Covers nearly everything: Part A coinsurance, hospital costs, Part B coinsurance, first 3 pints of blood, skilled nursing coinsurance, Part A & B deductibles (except Part B deductible), and foreign travel emergency. You only pay the Part B deductible out of pocket.</p>
+                    <p><strong>Typical premium:</strong> $120–$250/month depending on age and location.</p>
+                </div>
+
+                <div class="info-card">
+                    <h4>Plan N — Budget-Friendly</h4>
+                    <p>Similar to Plan G but with lower premiums. The trade-off: you pay small copays for office visits (up to $20) and ER visits ($50 if not admitted). Doesn't cover Part B excess charges.</p>
+                    <p><strong>Typical premium:</strong> $80–$180/month depending on age and location.</p>
+                </div>
+
+                <div class="info-card">
+                    <h4>Other Plans (A, B, C, D, F, K, L, M)</h4>
+                    <p>Less commonly sold but available in many states. They offer different combinations of coverage at different price points. Plans C and F are available only to those who became Medicare-eligible before January 1, 2020.</p>
+                </div>
+            </div>
+
+            <div class="example-box" style="margin-top: 40px;">
+                <div class="example-label">Real-World Example</div>
+                <p><strong>Linda, age 67, Portland, OR:</strong> Linda chose a Plan G supplement. Her monthly costs: $202.90 (Part B premium) + $165 (Plan G premium) + $25 (Part D drug plan) = <strong>$392.90/month total</strong>. She can see any doctor in the country and has virtually no surprise bills.</p>
+                <p><strong>Compare to Advantage:</strong> Her neighbor chose a $0-premium Medicare Advantage plan. She pays $202.90 (Part B premium) + $0 (Advantage premium) = <strong>$202.90/month</strong> — but has copays for doctor visits, a $5,000 out-of-pocket max, and must stay in-network.</p>
+                <p>Neither choice is "wrong" — it depends on your priorities. That's why we're here to help you decide.</p>
+            </div>
+        </div>
+    </section>
+
+
+    <!-- ===================================================
+         SECTION 3: PART D & D-SNP
+         =================================================== -->
+    <section class="section-gray section-padding" id="part-d-dsnp">
+        <div class="container">
+            <h2 class="text-center">Part D, Plan G, and D-SNP Plans</h2>
+
+            <!-- Part D -->
+            <div class="narrow-container" style="margin-bottom: 60px;">
+                <h3>Medicare Part D — Prescription Drug Coverage</h3>
+                <p>Part D covers prescription medications. If you have Original Medicare + a Medigap supplement, you'll need a standalone Part D plan for drug coverage. If you have a Medicare Advantage plan, Part D is usually built in.</p>
+                <p>Each Part D plan has its own formulary (list of covered drugs) and pharmacy network. Costs depend on the drugs you take and the plan you choose.</p>
+
+                <div class="example-box">
+                    <div class="example-label">How Part D Costs Work</div>
+                    <p><strong>Monthly premium:</strong> Ranges from $0 to $100+/month depending on the plan.</p>
+                    <p><strong>Deductible:</strong> Up to $590 (2026) before your plan starts paying — some plans waive this.</p>
+                    <p><strong>Copays/Coinsurance:</strong> You pay a share of each prescription. Generic drugs cost far less than brand-name.</p>
+                    <p><strong>Coverage Gap ("Donut Hole"):</strong> After total drug costs reach a certain amount, you pay a capped amount for prescriptions until catastrophic coverage kicks in.</p>
+                </div>
+
+                <div class="callout">
+                    <p><strong>Pro tip:</strong> Don't just pick the cheapest Part D premium. Enter your specific medications and pharmacy into a plan comparison tool — or let us do it for you. The cheapest premium often isn't the cheapest total cost.</p>
+                </div>
+            </div>
+
+            <!-- D-SNP -->
+            <div class="narrow-container">
+                <h3>What Is a D-SNP Plan?</h3>
+                <p>A <strong>Dual Eligible Special Needs Plan (D-SNP)</strong> is a special type of Medicare Advantage plan designed for people who qualify for both Medicare and Medicaid (called "dual eligibles"). These plans combine the benefits of Medicare and Medicaid into one plan with extra coordination of care.</p>
+
+                <h4 style="margin-top: 25px;">Who Qualifies?</h4>
+                <p>You may be eligible for a D-SNP if you have both Medicare (Part A and/or B) and your state's Medicaid program. This includes people with low income who receive Extra Help, QMB, SLMB, or full Medicaid benefits.</p>
+
+                <h4 style="margin-top: 25px;">How D-SNP Works with Medicare</h4>
+                <p>A D-SNP plan acts as your Medicare Advantage plan. It replaces Original Medicare for your day-to-day coverage and coordinates with your Medicaid benefits. Here's what that looks like in practice:</p>
+
+                <ul class="feature-list-standalone">
+                    <li>All Medicare Advantage benefits (doctor visits, hospital stays, Part D drugs)</li>
+                    <li>Extra benefits often included: dental, vision, hearing, transportation to appointments</li>
+                    <li>Lower or $0 copays on most services</li>
+                    <li>A care coordinator to help manage your health</li>
+                    <li>Medicaid benefits continue separately (long-term care, home services, etc.)</li>
+                    <li>One ID card for most of your healthcare needs</li>
+                </ul>
+
+                <div class="example-box">
+                    <div class="example-label">D-SNP in Action</div>
+                    <p><strong>Maria, age 72, Denver, CO:</strong> Maria qualifies for both Medicare and Medicaid. Through her D-SNP plan, she gets $0-premium Medicare Advantage coverage with $0 copays for primary care, $0 generic prescriptions, free dental cleanings, free rides to her doctor, and an over-the-counter health allowance. Her Medicaid continues to cover her in-home aide services.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+        <!-- ===================================================
+         ACA CALLOUT (links to separate ACA page)
+         =================================================== -->
+    <section class="section-white section-padding" id="aca-callout">
+        <div class="container">
+            <div class="narrow-container" style="text-align: center;">
+                <h2>Not 65 Yet? Have a Spouse Who Won't Be on Medicare?</h2>
+                <p style="font-size: 18px; color: #4A5568; max-width: 650px; margin: 0 auto 25px;">You still have options. The ACA marketplace and individual health plans offer affordable coverage for you and your family &mdash; and you might qualify for more help than you think.</p>
+                <a href="/aca-resources/" class="btn btn-primary" style="font-size: 16px; padding: 14px 35px;">Explore ACA & Individual Plans &rarr;</a>
+            </div>
+        </div>
+    </section>
+
+
+<!-- ===================================================
+         SECTION 5: ANCILLARY BENEFITS
+         =================================================== -->
+    <section class="section-gray section-padding" id="ancillary">
+        <div class="container">
+            <h2 class="text-center">Ancillary Benefits That Save You Money</h2>
+            <div class="section-intro text-center">
+                <p>Health insurance covers the big things — but life has a way of throwing smaller (and not-so-small) curveballs. Ancillary plans fill in the gaps with affordable protection that pays cash directly to you.</p>
+            </div>
+
+            <div class="ancillary-grid">
+
+                <!-- Hospital Indemnity -->
+                <div class="ancillary-card">
+                    <div class="ancillary-header">
+                        <span class="icon">🏥</span>
+                        <h3>Hospital Indemnity</h3>
+                    </div>
+                    <div class="ancillary-body">
+                        <p>If you end up in the hospital, your health insurance covers the medical bills — but who covers the mortgage, groceries, or gas while you're recovering? Hospital indemnity plans pay a <strong>lump sum directly to you</strong> for each day you're admitted.</p>
+                        <div class="price-note">Plans starting around $15–$50/month</div>
+                        <ul class="feature-list">
+                            <li>Flat daily benefit ($100–$500+/day in the hospital)</li>
+                            <li>Cash paid directly to you — spend it on anything</li>
+                            <li>Covers hospital admission, ICU stays, and observation</li>
+                            <li>Works alongside Medicare, Advantage, or ACA plans</li>
+                            <li>No network restrictions — works at any hospital</li>
+                        </ul>
+                        <div class="example-box" style="margin-top: 15px;">
+                            <div class="example-label">Example</div>
+                            <p>Janet, age 68, has a Medicare Advantage plan. She has hip replacement surgery and spends 3 days in the hospital. Her hospital indemnity plan pays her <strong>$250/day × 3 = $750 cash</strong>, plus a $500 admission benefit = <strong>$1,250 total</strong>. She uses it for groceries and help around the house while recovering.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Dental & Vision -->
+                <div class="ancillary-card">
+                    <div class="ancillary-header">
+                        <span class="icon">😁</span>
+                        <h3>Dental & Vision</h3>
+                    </div>
+                    <div class="ancillary-body">
+                        <p>Original Medicare doesn't cover dental or routine vision. Even many Advantage plans have limited dental benefits. Standalone dental and vision plans keep your teeth and eyes healthy without breaking the bank.</p>
+                        <div class="price-note">Dental: $20–$50/month | Vision: $10–$25/month</div>
+                        <ul class="feature-list">
+                            <li>Preventive care: cleanings, exams, X-rays (often 100% covered)</li>
+                            <li>Basic services: fillings, extractions, root canals</li>
+                            <li>Major services: crowns, bridges, dentures</li>
+                            <li>Vision exams, glasses, and contact lens allowance</li>
+                            <li>Many plans with no waiting period for preventive care</li>
+                        </ul>
+                        <div class="example-box" style="margin-top: 15px;">
+                            <div class="example-label">Example</div>
+                            <p>Tom, age 70, pays <strong>$35/month for dental</strong>. He gets 2 free cleanings per year, and when he needed a crown ($1,200 retail), his plan covered 50% after a short waiting period. He paid <strong>$600 instead of $1,200</strong> — the plan paid for itself in one visit.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Accident Plans -->
+                <div class="ancillary-card">
+                    <div class="ancillary-header">
+                        <span class="icon">⚡</span>
+                        <h3>Accident Plans</h3>
+                    </div>
+                    <div class="ancillary-body">
+                        <p>Accidents don't come with a warning. Accident insurance pays cash benefits for injuries from covered accidents — falls, car accidents, sports injuries, and more. The money goes directly to you, not the hospital.</p>
+                        <div class="price-note">Plans starting around $10–$30/month</div>
+                        <ul class="feature-list">
+                            <li>Cash benefits for fractures, dislocations, burns, lacerations</li>
+                            <li>Emergency room and ambulance benefits</li>
+                            <li>Follow-up care: physical therapy, medical devices</li>
+                            <li>Accidental death and dismemberment coverage</li>
+                            <li>No deductibles — benefits paid on top of health insurance</li>
+                        </ul>
+                        <div class="example-box" style="margin-top: 15px;">
+                            <div class="example-label">Example</div>
+                            <p>David, age 55, falls off a ladder and breaks his wrist. His accident plan pays: <strong>$250 ER visit + $500 fracture benefit + $100 follow-up visit = $850 cash</strong>. He uses it to cover his deductible on his ACA plan and pay for a few days off work.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Critical Illness -->
+                <div class="ancillary-card">
+                    <div class="ancillary-header">
+                        <span class="icon">❤️</span>
+                        <h3>Critical Illness</h3>
+                    </div>
+                    <div class="ancillary-body">
+                        <p>A critical illness diagnosis can mean months of treatment, missed work, and mounting bills. Critical illness insurance pays a <strong>one-time lump sum</strong> when you're diagnosed with a covered condition — no questions asked about how you use it.</p>
+                        <div class="price-note">Plans starting around $20–$60/month</div>
+                        <ul class="feature-list">
+                            <li>Lump-sum benefit ($5,000–$50,000+) upon diagnosis</li>
+                            <li>Covers heart attack, stroke, cancer, organ transplant, and more</li>
+                            <li>Use the money for anything: bills, travel, childcare, lost wages</li>
+                            <li>Works alongside any health insurance plan</li>
+                            <li>Some plans include wellness benefits for health screenings</li>
+                        </ul>
+                        <div class="example-box" style="margin-top: 15px;">
+                            <div class="example-label">Example</div>
+                            <p>Patricia, age 62, is diagnosed with early-stage breast cancer. Her critical illness plan pays a <strong>$15,000 lump sum</strong>. She uses it to cover her out-of-pocket maximum on her health plan, pay for wigs and comfort items during chemo, and take time off work without financial stress.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="callout" style="margin-top: 40px;">
+                <p><strong>Stacking ancillary plans is one of the smartest moves you can make.</strong> For $50–$100/month total, you can add hospital indemnity + dental + accident coverage and protect yourself from the costs your main health plan doesn't cover.</p>
+            </div>
+        </div>
+    </section>
+
+
+    <!-- CTA Section -->
+    <section class="cta-section">
+        <div class="container">
+            <h2>Let's Figure This Out Together</h2>
+            <p>Now that you know the basics, let us help you put the pieces together. We'll find the right combination of coverage for your situation — and it won't cost you a thing.</p>
+            <div class="cta-buttons">
+                <a href="/#contact" class="btn btn-primary">Get a Free Consultation</a>
+                <a href="tel:+18005551234" class="btn btn-secondary">Call (800) 555-1234</a>
+            </div>
+            <p class="cta-note">Free consultations, always. No obligation, no pressure.</p>
+        </div>
+    </section>
+
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <div class="footer-brand">
+                        <img src="/logo.svg" alt="Medicare Moms - Coverage Made Simple" class="footer-logo">
+                        <p>A Wildcat Insurance Company</p>
+                        <p>Helping families find health coverage that works.</p>
+                    </div>
+                    <div class="social-links">
+                        <a href="#" title="Instagram">📷</a>
+                        <a href="#" title="Facebook">f</a>
+                        <a href="#" title="TikTok">♪</a>
+                    </div>
+                </div>
+
+                <div class="footer-section">
+                    <h4>Quick Links</h4>
+                    <ul>
+                        <li><a href="/">Home</a></li>
+                        <li><a href="/services/">Services</a></li>
+                        <li><a href="/resources/">Resources</a></li>
+                        <li><a href="/blog/">Blog</a></li>
+                        <li><a href="/#contact">Contact</a></li>
+                        <li><a href="/meet-our-team/">Meet Our Team</a></li>
+                        <li><a href="/join-our-team/">Join Our Team</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-section">
+                    <h4>Coverage Types</h4>
+                    <ul>
+                        <li><a href="/services/">Medicare Advantage</a></li>
+                        <li><a href="/services/">Medigap / Supplements</a></li>
+                        <li><a href="/services/">ACA Marketplace</a></li>
+                        <li><a href="/services/">Dental & Vision</a></li>
+                        <li><a href="/services/">Life Insurance</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-section">
+                    <h4>Contact Info</h4>
+                    <ul>
+                        <li><a href="tel:+18005551234">(800) 555-1234</a></li>
+                        <li><a href="mailto:info@medicaremoms.com">info@medicaremoms.com</a></li>
+                        <li>Monday–Friday, 9am–5pm MT</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="footer-bottom">
+                <p>&copy; 2026 Medicare Moms. All rights reserved.</p>
+                <p style="margin-top: 8px;">Medicare is a registered trademark of the U.S. Department of Health and Human Services.</p>
+                <p style="margin-top: 8px;"><a href="/terms/" style="color: #999; text-decoration: none; transition: color 0.3s ease;" onmouseover="this.style.color='#A8C5A0'" onmouseout="this.style.color='#999'">Terms of Service</a> &middot; <a href="/privacy/" style="color: #999; text-decoration: none; transition: color 0.3s ease;" onmouseover="this.style.color='#A8C5A0'" onmouseout="this.style.color='#999'">Privacy Policy</a></p>
+                <div class="legal-disclaimer">
+                    Medicare Moms is a licensed insurance agency. We are not affiliated with or endorsed by any government agency. Medicare has neither reviewed nor endorsed this information. Not all plans or benefits described are available in all areas. Plan availability, premiums, benefits, and costs vary by location and may change annually. The examples provided are illustrative only and do not represent actual plan pricing. By using this website, you agree to our Terms of Service and Privacy Policy.
+                    <br><br>
+                    We do not offer every plan available in your area. Any information we provide is limited to those plans we do offer in your area. Please contact Medicare.gov or 1-800-MEDICARE to get information on all of your options.
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Mobile Menu Toggle
+        const hamburger = document.getElementById('hamburger');
+        const navLinks = document.getElementById('navLinks');
+
+        hamburger.addEventListener('click', () => {
+            hamburger.classList.toggle('active');
+            navLinks.classList.toggle('active');
+        });
+
+        document.querySelectorAll('.nav-links a').forEach(link => {
+            link.addEventListener('click', () => {
+                hamburger.classList.remove('active');
+                navLinks.classList.remove('active');
+            });
+        });
+
+        // Fade-in animation on scroll
+        const observerOptions = {
+            threshold: 0.1,
+            rootMargin: '0px 0px -50px 0px'
+        };
+
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('fade-in');
+                    observer.unobserve(entry.target);
+                }
+            });
+        }, observerOptions);
+
+        document.querySelectorAll('.info-card, .ancillary-card, .comparison-box').forEach(el => {
+            observer.observe(el);
+        });
+
+        // Smooth scroll for page-nav links
+        document.querySelectorAll('.page-nav a').forEach(link => {
+            link.addEventListener('click', (e) => {
+                e.preventDefault();
+                const target = document.querySelector(link.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+                }
+            });
+        });
+    </script>
+    <!-- CHAT WIDGET -->
+    <div id="chatWidgetContainer">
+        <style>
+            /* Chat Widget Styles */
+            #chatButton {
+                position: fixed;
+                bottom: 20px;
+                right: 20px;
+                width: 60px;
+                height: 60px;
+                border-radius: 50%;
+                background: linear-gradient(135deg, #5B8C6B 0%, #3D6B4A 100%);
+                border: none;
+                cursor: pointer;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                box-shadow: 0 4px 12px rgba(91, 140, 107, 0.3);
+                z-index: 9999;
+                transition: all 0.3s ease;
+                animation: chatButtonPulse 1.2s ease-in-out 3;
+            }
+
+            #chatButton:hover {
+                transform: translateY(-3px);
+                box-shadow: 0 6px 16px rgba(91, 140, 107, 0.4);
+            }
+
+            #chatButton svg {
+                width: 28px;
+                height: 28px;
+                fill: white;
+            }
+
+            @keyframes chatButtonPulse {
+                0%, 100% {
+                    transform: scale(1);
+                }
+                50% {
+                    transform: scale(1.1);
+                }
+            }
+
+            #chatPanel {
+                position: fixed;
+                bottom: 90px;
+                right: 20px;
+                width: 350px;
+                height: 450px;
+                background: white;
+                border-radius: 12px;
+                box-shadow: 0 5px 40px rgba(0, 0, 0, 0.16);
+                display: none;
+                flex-direction: column;
+                z-index: 9998;
+                animation: slideUp 0.3s ease;
+                font-family: 'Nunito', sans-serif;
+            }
+
+            #chatPanel.active {
+                display: flex;
+            }
+
+            @keyframes slideUp {
+                from {
+                    opacity: 0;
+                    transform: translateY(20px);
+                }
+                to {
+                    opacity: 1;
+                    transform: translateY(0);
+                }
+            }
+
+            .chat-header {
+                background: linear-gradient(135deg, #5B8C6B 0%, #3D6B4A 100%);
+                color: white;
+                padding: 18px;
+                border-radius: 12px 12px 0 0;
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+                flex-shrink: 0;
+            }
+
+            .chat-header h3 {
+                font-family: 'DM Serif Display', serif;
+                font-size: 18px;
+                font-weight: 600;
+                color: white;
+                margin: 0;
+            }
+
+            .chat-close-btn {
+                background: none;
+                border: none;
+                color: white;
+                font-size: 24px;
+                cursor: pointer;
+                padding: 0;
+                width: 30px;
+                height: 30px;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                transition: transform 0.2s ease;
+            }
+
+            .chat-close-btn:hover {
+                transform: rotate(90deg);
+            }
+
+            #chatMessages {
+                flex: 1;
+                overflow-y: auto;
+                padding: 16px;
+                display: flex;
+                flex-direction: column;
+                gap: 12px;
+                background-color: #FAFAFA;
+            }
+
+            .message {
+                display: flex;
+                margin-bottom: 8px;
+                animation: fadeIn 0.3s ease;
+            }
+
+            @keyframes fadeIn {
+                from {
+                    opacity: 0;
+                    transform: translateY(10px);
+                }
+                to {
+                    opacity: 1;
+                    transform: translateY(0);
+                }
+            }
+
+            .message.received {
+                justify-content: flex-start;
+            }
+
+            .message.sent {
+                justify-content: flex-end;
+            }
+
+            .message-bubble {
+                max-width: 80%;
+                padding: 12px 16px;
+                border-radius: 16px;
+                word-wrap: break-word;
+                font-size: 14px;
+                line-height: 1.4;
+            }
+
+            .message.received .message-bubble {
+                background-color: #A8C5A0;
+                color: white;
+                border-radius: 16px 16px 16px 4px;
+            }
+
+            .message.sent .message-bubble {
+                background: linear-gradient(135deg, #5B8C6B 0%, #3D6B4A 100%);
+                color: white;
+                border-radius: 16px 16px 4px 16px;
+            }
+
+            .quick-replies {
+                display: flex;
+                flex-wrap: wrap;
+                gap: 8px;
+                padding: 12px 0;
+            }
+
+            .quick-reply-btn {
+                display: inline-block;
+                padding: 8px 14px;
+                background-color: #E8F0E6;
+                border: 1.5px solid #A8C5A0;
+                border-radius: 20px;
+                cursor: pointer;
+                font-size: 12px;
+                color: #3D6B4A;
+                font-weight: 500;
+                transition: all 0.2s ease;
+                font-family: 'Nunito', sans-serif;
+                white-space: nowrap;
+            }
+
+            .quick-reply-btn:hover {
+                background-color: #A8C5A0;
+                color: white;
+                border-color: #5B8C6B;
+            }
+
+            #chatInput {
+                display: flex;
+                gap: 8px;
+                padding: 12px;
+                border-top: 1px solid #E0E0E0;
+                background-color: white;
+                border-radius: 0 0 12px 12px;
+                flex-shrink: 0;
+            }
+
+            #messageInput {
+                flex: 1;
+                border: 1px solid #D0D0D0;
+                border-radius: 20px;
+                padding: 10px 16px;
+                font-size: 14px;
+                font-family: 'Nunito', sans-serif;
+                transition: border-color 0.2s ease;
+            }
+
+            #messageInput:focus {
+                outline: none;
+                border-color: #5B8C6B;
+                box-shadow: 0 0 0 2px rgba(91, 140, 107, 0.1);
+            }
+
+            #sendBtn {
+                background: linear-gradient(135deg, #5B8C6B 0%, #3D6B4A 100%);
+                color: white;
+                border: none;
+                border-radius: 50%;
+                width: 38px;
+                height: 38px;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                cursor: pointer;
+                transition: all 0.2s ease;
+                font-size: 18px;
+            }
+
+            #sendBtn:hover {
+                box-shadow: 0 2px 8px rgba(91, 140, 107, 0.3);
+            }
+
+            #sendBtn:active {
+                transform: scale(0.95);
+            }
+
+            /* Mobile responsiveness */
+            @media (max-width: 480px) {
+                #chatPanel {
+                    position: fixed;
+                    bottom: 0;
+                    right: 0;
+                    left: 0;
+                    width: 100%;
+                    height: calc(100vh - 60px);
+                    border-radius: 0;
+                    bottom: 0;
+                    animation: slideUpMobile 0.3s ease;
+                }
+
+                @keyframes slideUpMobile {
+                    from {
+                        transform: translateY(100%);
+                    }
+                    to {
+                        transform: translateY(0);
+                    }
+                }
+
+                .message-bubble {
+                    max-width: 85%;
+                }
+            }
+        </style>
+
+        <button id="chatButton" aria-label="Open chat">
+            <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                <path d="M20 2H4c-1.1 0-2 .9-2 2v18l4-4h14c1.1 0 2-.9 2-2V4c0-1.1-.9-2-2-2z"/>
+            </svg>
+        </button>
+
+        <div id="chatPanel">
+            <div class="chat-header">
+                <h3>Chat with Us</h3>
+                <button class="chat-close-btn" aria-label="Close chat">&times;</button>
+            </div>
+
+            <div id="chatMessages">
+                <div class="message received">
+                    <div class="message-bubble">Hi there! 👋 We're the Medicare Moms team. How can we help you today?</div>
+                </div>
+                <div class="quick-replies">
+                    <button class="quick-reply-btn">Medicare Questions</button>
+                    <button class="quick-reply-btn">Get a Free Quote</button>
+                    <button class="quick-reply-btn">Talk to an Agent</button>
+                    <button class="quick-reply-btn">Habla Español?</button>
+                </div>
+            </div>
+
+            <div id="chatInput">
+                <input type="text" id="messageInput" placeholder="Type your message...">
+                <button id="sendBtn" aria-label="Send message">➤</button>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        // Chat Widget JavaScript
+        (function() {
+            const chatButton = document.getElementById('chatButton');
+            const chatPanel = document.getElementById('chatPanel');
+            const closeBtn = document.querySelector('.chat-close-btn');
+            const messageInput = document.getElementById('messageInput');
+            const sendBtn = document.getElementById('sendBtn');
+            const chatMessages = document.getElementById('chatMessages');
+            const quickReplyButtons = document.querySelectorAll('.quick-reply-btn');
+
+            // Toggle chat panel
+            chatButton.addEventListener('click', () => {
+                chatPanel.classList.toggle('active');
+                if (chatPanel.classList.contains('active')) {
+                    messageInput.focus();
+                }
+            });
+
+            // Close chat panel
+            closeBtn.addEventListener('click', () => {
+                chatPanel.classList.remove('active');
+            });
+
+            // Handle quick reply buttons
+            quickReplyButtons.forEach(btn => {
+                btn.addEventListener('click', () => {
+                    messageInput.value = btn.textContent;
+                    messageInput.focus();
+                });
+            });
+
+            // Send message function
+            function sendMessage() {
+                const message = messageInput.value.trim();
+                if (!message) return;
+
+                // Remove quick replies if they exist
+                const quickRepliesDiv = document.querySelector('.quick-replies');
+                if (quickRepliesDiv) {
+                    quickRepliesDiv.remove();
+                }
+
+                // Add user message
+                const userMessageDiv = document.createElement('div');
+                userMessageDiv.className = 'message sent';
+                userMessageDiv.innerHTML = `<div class="message-bubble">${escapeHtml(message)}</div>`;
+                chatMessages.appendChild(userMessageDiv);
+
+                // Clear input
+                messageInput.value = '';
+
+                // Scroll to bottom
+                chatMessages.scrollTop = chatMessages.scrollHeight;
+
+                // Show response after a brief delay
+                setTimeout(() => {
+                    const responseDiv = document.createElement('div');
+                    responseDiv.className = 'message received';
+                    responseDiv.innerHTML = `<div class="message-bubble">Thanks for reaching out! One of our agents will be in touch shortly. In the meantime, feel free to call us at (800) 555-1234 or email info@medicaremoms.com</div>`;
+                    chatMessages.appendChild(responseDiv);
+
+                    // Scroll to bottom
+                    chatMessages.scrollTop = chatMessages.scrollHeight;
+                }, 800);
+            }
+
+            // Send button click
+            sendBtn.addEventListener('click', sendMessage);
+
+            // Send on Enter key
+            messageInput.addEventListener('keypress', (e) => {
+                if (e.key === 'Enter') {
+                    e.preventDefault();
+                    sendMessage();
+                }
+            });
+
+            // Utility function to escape HTML
+            function escapeHtml(text) {
+                const div = document.createElement('div');
+                div.textContent = text;
+                return div.innerHTML;
+            }
+        })();
+    </script>
+    <!-- /CHAT WIDGET -->
+
+</body>
+</html>

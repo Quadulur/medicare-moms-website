@@ -12,15 +12,15 @@
 
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Medicare Moms - Cobertura de Salud Simplificada</title>
-    <meta name="description" content="Medicare Moms ayuda a familias a encontrar planes de Medicare, Medigap, ACA y seguros de salud adecuados. Agentes licenciados que hablan inglés, español y japonés. Una empresa de Wildcat Insurance.">
-    <meta name="keywords" content="Medicare, Medicare Advantage, Medigap, seguro de salud ACA, Medicare Moms, Wildcat Insurance, agentes de seguros de salud, agentes bilingües de seguros">
-    <meta property="og:title" content="Medicare Moms - Encontrando la Cobertura Correcta para tu Familia">
-    <meta property="og:description" content="Medicare Moms ayuda a familias a encontrar planes de Medicare, Medigap, ACA y seguros de salud adecuados. Agentes bilingües listos para ayudar.">
+    <title>Nuestros Servicios - Medicare Moms</title>
+    <meta name="description" content="Explora nuestro rango completo de servicios de seguros: Medicare Advantage, suplementos Medigap, planes del mercado ACA, dental y visión, seguros de vida y más.">
+    <meta name="keywords" content="planes Medicare Advantage, seguro suplementario Medigap, mercado ACA, seguro dental visión, seguro de vida, accidente enfermedad crítica">
+    <meta property="og:title" content="Nuestros Servicios - Medicare Moms">
+    <meta property="og:description" content="Explora nuestro rango completo de servicios de seguros: Medicare Advantage, suplementos Medigap, planes del mercado ACA, dental y visión, seguros de vida y más.">
     <meta property="og:type" content="website">
-    <meta property="og:url" content="https://medicaremoms.com/es/">
+    <meta property="og:url" content="https://medicaremoms.com/es/servicios/">
     <meta property="og:site_name" content="Medicare Moms">
-    <link rel="canonical" href="https://medicaremoms.com/es/">
+    <link rel="canonical" href="https://medicaremoms.com/es/servicios/">
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -102,7 +102,7 @@
             justify-content: center;
             padding: 12px 28px;
             border-radius: 8px;
-            font-family: 'DM Serif Display', serif;
+            font-family: 'Nunito', sans-serif;
             font-size: 15px;
             font-weight: 600;
             cursor: pointer;
@@ -190,6 +190,10 @@
             color: #5B8C6B;
         }
 
+        .nav-links a.active-link {
+            color: #5B8C6B;
+        }
+
         .hamburger {
             display: none;
             flex-direction: column;
@@ -203,18 +207,6 @@
             background-color: #2C2C2C;
             border-radius: 2px;
             transition: all 0.3s ease;
-        }
-
-        .hamburger.active span:nth-child(1) {
-            transform: rotate(45deg) translate(10px, 10px);
-        }
-
-        .hamburger.active span:nth-child(2) {
-            opacity: 0;
-        }
-
-        .hamburger.active span:nth-child(3) {
-            transform: rotate(-45deg) translate(7px, -7px);
         }
 
         @media (max-width: 768px) {
@@ -280,413 +272,175 @@
             text-align: center;
         }
 
-        .hero-content h1 {
-            color: #2C2C2C;
-            margin-bottom: 20px;
-            font-weight: 800;
-        }
-
         .hero-content .lead {
             font-size: 20px;
             color: #4A5568;
             margin-bottom: 40px;
+            max-width: 650px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        /* ============ Service Detail Sections ============ */
+        .service-detail {
+            padding: 80px 0;
+        }
+
+        .service-detail:nth-child(even) {
+            background-color: #F7F3ED;
+        }
+
+        .service-detail:nth-child(odd) {
+            background-color: white;
+        }
+
+        .service-layout {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 60px;
+            align-items: center;
+        }
+
+        .service-layout.reverse {
+            direction: rtl;
+        }
+
+        .service-layout.reverse > * {
+            direction: ltr;
+        }
+
+        .service-text h2 {
+            margin-bottom: 20px;
+            font-size: clamp(24px, 3.5vw, 36px);
+        }
+
+        .service-text p {
+            font-size: 16px;
+            color: #4A5568;
+            margin-bottom: 15px;
+            line-height: 1.7;
+        }
+
+        .service-features {
+            list-style: none;
+            margin: 20px 0 30px;
+        }
+
+        .service-features li {
+            padding: 8px 0;
+            font-size: 15px;
+            color: #4A5568;
+            display: flex;
+            align-items: flex-start;
+            gap: 10px;
+        }
+
+        .service-features li::before {
+            content: "✓";
+            color: #5B8C6B;
+            font-weight: 700;
+            flex-shrink: 0;
+            margin-top: 1px;
+        }
+
+        .service-visual {
+            background: linear-gradient(135deg, #F7F3ED 0%, #EDE8DF 100%);
+            border-radius: 16px;
+            padding: 50px 40px;
+            text-align: center;
+            min-height: 320px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .service-detail:nth-child(even) .service-visual {
+            background: linear-gradient(135deg, #FFFFFF 0%, #F7F3ED 100%);
+        }
+
+        .service-icon {
+            font-size: 72px;
+            margin-bottom: 20px;
+        }
+
+        .service-highlight {
+            font-family: 'DM Serif Display', serif;
+            font-weight: 700;
+            font-size: 18px;
+            color: #2C2C2C;
+        }
+
+        .service-highlight-sub {
+            font-size: 14px;
+            color: #4A5568;
+            margin-top: 5px;
+        }
+
+        @media (max-width: 768px) {
+            .service-layout,
+            .service-layout.reverse {
+                grid-template-columns: 1fr;
+                gap: 30px;
+                direction: ltr;
+            }
+
+            .service-visual {
+                min-height: 200px;
+                padding: 30px 20px;
+            }
+
+            .hero {
+                padding: 60px 0 50px 0;
+            }
+        }
+
+        /* ============ CTA Section ============ */
+        .cta-section {
+            background: linear-gradient(135deg, #3D6B4A 0%, #2C5038 100%);
+            color: white;
+            padding: 80px 0;
+            text-align: center;
+        }
+
+        .cta-section h2 {
+            color: white;
+            margin-bottom: 20px;
+        }
+
+        .cta-section p {
+            color: rgba(255, 255, 255, 0.85);
+            font-size: 18px;
+            margin-bottom: 35px;
             max-width: 600px;
             margin-left: auto;
             margin-right: auto;
         }
 
-        .hero-buttons {
+        .cta-buttons {
             display: flex;
             gap: 20px;
             justify-content: center;
             flex-wrap: wrap;
-            margin-bottom: 60px;
         }
 
-        .trust-badges {
-            display: flex;
-            justify-content: center;
-            gap: 40px;
-            flex-wrap: wrap;
-            padding-top: 30px;
-            border-top: 1px solid rgba(44, 44, 44, 0.1);
-            max-width: 800px;
-            margin: 0 auto;
-        }
-
-        .trust-badge {
-            text-align: center;
-        }
-
-        .trust-badge-value {
-            font-family: 'DM Serif Display', serif;
-            font-size: 24px;
-            font-weight: 700;
-            color: #5B8C6B;
-        }
-
-        .trust-badge-label {
-            font-size: 14px;
-            color: #4A5568;
-            margin-top: 5px;
-        }
-
-        /* ============ Stats Section ============ */
-        .stats-section {
-            background-color: white;
-            padding: 60px 0;
-            border-top: 1px solid rgba(91, 140, 107, 0.1);
-            border-bottom: 1px solid rgba(91, 140, 107, 0.1);
-        }
-
-        .stats-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-            gap: 40px;
-            max-width: 1000px;
-            margin: 0 auto;
-        }
-
-        .stat-item {
-            text-align: center;
-        }
-
-        .stat-number {
-            font-family: 'DM Serif Display', serif;
-            font-size: 48px;
-            font-weight: 700;
-            color: #5B8C6B;
-            line-height: 1;
-            margin-bottom: 10px;
-        }
-
-        .stat-label {
-            font-family: 'Nunito', sans-serif;
-            font-size: 14px;
-            color: #4A5568;
-            font-weight: 600;
-            text-transform: uppercase;
-            letter-spacing: 0.5px;
-        }
-
-        @media (max-width: 768px) {
-            .hero {
-                padding: 60px 0 50px 0;
-            }
-
-            .hero-buttons {
-                flex-direction: column;
-                gap: 12px;
-            }
-
-            .btn {
-                width: 100%;
-            }
-
-            .trust-badges {
-                gap: 25px;
-            }
-
-            .stats-grid {
-                gap: 30px;
-            }
-
-            .stat-number {
-                font-size: 36px;
-            }
-        }
-
-        /* ============ Plans Section ============ */
-        .plans-section {
-            background-color: #F7F3ED;
-        }
-
-        .plans-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-            gap: 25px;
-            margin-top: 50px;
-        }
-
-        .plan-card {
-            background-color: white;
-            padding: 30px;
-            border-radius: 10px;
-            box-shadow: 0 10px 30px rgba(44, 44, 44, 0.1);
-            transition: all 0.3s ease;
-            text-align: center;
-        }
-
-        .plan-card:hover {
-            transform: translateY(-8px);
-            box-shadow: 0 15px 40px rgba(44, 44, 44, 0.15);
-        }
-
-        .plan-icon {
-            font-size: 48px;
-            margin-bottom: 15px;
-        }
-
-        .plan-card h3 {
-            color: #2C2C2C;
-            margin-bottom: 12px;
-            font-size: 22px;
-        }
-
-        .plan-card p {
-            font-size: 15px;
-            color: #4A5568;
-            margin-bottom: 20px;
-            line-height: 1.6;
-        }
-
-        .plan-card .btn {
-            width: 100%;
-        }
-
-        /* ============ How We Help Section ============ */
-        .process-section {
-            background-color: white;
-        }
-
-        .process-steps {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
-            gap: 30px;
-            margin-top: 60px;
-        }
-
-        .step {
-            text-align: center;
-            position: relative;
-        }
-
-        .step-number {
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            width: 60px;
-            height: 60px;
+        .cta-section .btn-primary {
             background: linear-gradient(135deg, #5B8C6B 0%, #3D6B4A 100%);
+        }
+
+        .cta-section .btn-secondary {
             color: white;
-            font-family: 'DM Serif Display', serif;
-            font-size: 28px;
-            font-weight: 700;
-            border-radius: 50%;
-            margin: 0 auto 20px;
+            border-color: rgba(255, 255, 255, 0.5);
         }
 
-        .step h3 {
-            color: #2C2C2C;
-            margin-bottom: 12px;
+        .cta-section .btn-secondary:hover {
+            background-color: rgba(255, 255, 255, 0.1);
         }
 
-        .step p {
-            color: #4A5568;
-            font-size: 15px;
-        }
-
-        .step-connector {
-            display: none;
-            position: absolute;
-            top: 30px;
-            right: -15px;
-            width: 30px;
-            height: 3px;
-            background-color: #5B8C6B;
-        }
-
-        @media (min-width: 900px) {
-            .step-connector {
-                display: block;
-            }
-
-            .step:last-child .step-connector {
-                display: none;
-            }
-        }
-
-        .process-note {
-            background-color: #A8C5A0;
-            color: white;
-            padding: 20px;
-            border-radius: 10px;
-            margin-top: 40px;
-            text-align: center;
-            font-weight: 500;
-        }
-
-        /* ============ Why Choose Us Section ============ */
-        .why-section {
-            background-color: #F7F3ED;
-        }
-
-        .why-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
-            gap: 25px;
-            margin-top: 50px;
-        }
-
-        .why-card {
-            background-color: white;
-            padding: 30px;
-            border-radius: 10px;
-            box-shadow: 0 4px 12px rgba(44, 44, 44, 0.08);
-            text-align: center;
-        }
-
-        .why-card h3 {
-            color: #2C2C2C;
-            margin-bottom: 12px;
-            font-size: 20px;
-        }
-
-        .why-card p {
-            color: #4A5568;
-            font-size: 15px;
-        }
-
-        /* ============ Testimonials Section ============ */
-        .testimonials-section {
-            background-color: white;
-        }
-
-        .testimonials-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-            gap: 25px;
-            margin-top: 50px;
-        }
-
-        .testimonial-card {
-            background-color: #F7F3ED;
-            padding: 30px;
-            border-radius: 10px;
-            border-left: 4px solid #5B8C6B;
-        }
-
-        .stars {
-            color: #5B8C6B;
-            margin-bottom: 15px;
+        .cta-note {
+            margin-top: 25px;
             font-size: 14px;
-        }
-
-        .testimonial-text {
-            font-style: italic;
-            color: #4A5568;
-            margin-bottom: 15px;
-            font-size: 15px;
-            line-height: 1.6;
-        }
-
-        .testimonial-author {
-            font-family: 'DM Serif Display', serif;
-            font-weight: 600;
-            color: #2C2C2C;
-            font-size: 15px;
-        }
-
-        .testimonial-location {
-            font-size: 13px;
-            color: #4A5568;
-            margin-top: 5px;
-        }
-
-        /* ============ Contact Section ============ */
-        .contact-section {
-            background: linear-gradient(135deg, #3D6B4A 0%, #2C5038 100%);
-            color: white;
-        }
-
-        .contact-content {
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: 50px;
-            align-items: center;
-        }
-
-        .contact-section h2 {
-            color: white;
-            margin-bottom: 30px;
-        }
-
-        .contact-form {
-            display: flex;
-            flex-direction: column;
-            gap: 15px;
-        }
-
-        .form-group {
-            display: flex;
-            flex-direction: column;
-        }
-
-        .form-group label {
-            font-family: 'DM Serif Display', serif;
-            font-weight: 500;
-            margin-bottom: 8px;
-            font-size: 14px;
-        }
-
-        .form-group input,
-        .form-group select,
-        .form-group textarea {
-            padding: 12px 15px;
-            border: 2px solid rgba(255, 255, 255, 0.2);
-            border-radius: 8px;
-            background-color: rgba(255, 255, 255, 0.95);
-            color: #2C2C2C;
-            font-family: 'Nunito', sans-serif;
-            font-size: 14px;
-            transition: all 0.3s ease;
-        }
-
-        .form-group input:focus,
-        .form-group select:focus,
-        .form-group textarea:focus {
-            outline: none;
-            border-color: #5B8C6B;
-            background-color: white;
-        }
-
-        .contact-info {
-            color: rgba(255, 255, 255, 0.9);
-        }
-
-        .contact-info h3 {
-            color: white;
-            margin-bottom: 30px;
-        }
-
-        .contact-method {
-            margin-bottom: 25px;
-        }
-
-        .contact-method label {
-            font-family: 'DM Serif Display', serif;
-            font-weight: 600;
-            display: block;
-            margin-bottom: 8px;
-        }
-
-        .contact-method p {
-            color: rgba(255, 255, 255, 0.8);
-            margin: 0;
-        }
-
-        .contact-disclaimer {
-            margin-top: 30px;
-            font-size: 13px;
-            color: rgba(255, 255, 255, 0.7);
-            line-height: 1.5;
-        }
-
-        @media (max-width: 768px) {
-            .contact-content {
-                grid-template-columns: 1fr;
-                gap: 30px;
-            }
+            color: rgba(255, 255, 255, 0.6);
         }
 
         /* ============ Footer ============ */
@@ -796,7 +550,6 @@
             animation: fadeInUp 0.6s ease-out forwards;
         }
 
-        /* ============ Responsive ============ */
         @media (max-width: 768px) {
             .section-padding {
                 padding: 50px 0;
@@ -810,33 +563,16 @@
                 font-size: 28px;
             }
 
-            .plans-grid,
-            .why-grid,
-            .testimonials-grid,
-            .process-steps {
-                grid-template-columns: 1fr;
+            .btn {
+                width: 100%;
+            }
+
+            .cta-buttons {
+                flex-direction: column;
+                gap: 12px;
             }
         }
     </style>
-
-    <script type="application/ld+json">
-    {
-      "@context": "https://schema.org",
-      "@type": "InsuranceAgency",
-      "name": "Medicare Moms",
-      "description": "Agentes de seguros licenciados ayudando a familias a encontrar planes de Medicare, Medigap, ACA y seguros de salud adecuados.",
-      "url": "https://medicaremoms.com/es",
-      "telephone": "(800) 555-1234",
-      "email": "info@medicaremoms.com",
-      "parentOrganization": {
-        "@type": "Organization",
-        "name": "Wildcat Insurance"
-      },
-      "areaServed": "US",
-      "knowsLanguage": ["English", "Spanish", "Japanese"],
-      "serviceType": ["Medicare Advantage", "Medigap", "ACA Marketplace", "Life Insurance", "Dental Insurance", "Vision Insurance"]
-    }
-    </script>
 </head>
 <body>
     <!-- Navigation -->
@@ -845,13 +581,13 @@
             <div class="nav-container">
                 <a href="/" class="logo"><img src="/logo.svg" alt="Medicare Moms Logo">Medicare Moms</a>
                 <ul class="nav-links" id="navLinks">
-                    <li><a href="/es/servicios/">Servicios</a></li>
+                    <li><a href="/es/servicios/" class="active-link">Servicios</a></li>
                     <li><a href="/es/recursos/">Recursos</a></li>
                     <li><a href="/blog/">Blog</a></li>
                     <li><a href="/es/equipo/">Nuestro Equipo</a></li>
-                    <li><a href="#contact">Contacto</a></li>
+                    <li><a href="/#contact">Contacto</a></li>
                     <li class="lang-toggle">
-                        <a href="/" class="lang-link" title="View in English">
+                        <a href="/services/" class="lang-link" title="View in English">
                             <span class="lang-inactive">EN</span> / <span class="lang-active">ES</span>
                         </a>
                     </li>
@@ -869,258 +605,172 @@
     <section class="hero">
         <div class="container">
             <div class="hero-content">
-                <h1>Cobertura de Salud Simplificada. Por Mamás que se Importan.</h1>
-                <p class="lead">Más de 1,000 jubilados y familias asistidos en los últimos 20 años. Licenciados en más de 40 estados incluyendo Puerto Rico. Te guiaremos a través de cada opción, responderemos tus preguntas y te ayudaremos a elegir una cobertura que se adapte a tu vida.</p>
-                <div class="hero-buttons">
-                    <button class="btn btn-primary" onclick="document.getElementById('contact').scrollIntoView({behavior: 'smooth'})">Encuentra tu Plan</button>
-                    <a href="tel:+18005551234" class="btn btn-secondary">Llámanos Hoy</a>
+                <h1>Cobertura para Cada Etapa de la Vida</h1>
+                <p class="lead">Desde Medicare hasta planes del mercado, dental hasta seguros de vida — ayudamos a las familias a encontrar la protección correcta sin la confusión. Y nuestros servicios siempre son gratis para ti.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Medicare Advantage -->
+    <section class="service-detail">
+        <div class="container">
+            <div class="service-layout">
+                <div class="service-text">
+                    <h2>Medicare Advantage (Parte C)</h2>
+                    <p>Los planes Medicare Advantage agrupan tu cobertura de hospital, médica y a menudo de medicamentos recetados en un plan simple. Muchos también incluyen extras como dental, visión, audición e incluso membresías de gimnasio — a menudo a prima $0.</p>
+                    <p>Si estás cumpliendo 65 años o eres nuevamente elegible para Medicare, este es un gran punto de partida. Compararemos los aseguradores en tu área y encontraremos el plan que cubre tus doctores y medicamentos.</p>
+                    <ul class="service-features">
+                        <li>Cobertura integral: hospital, médica y generalmente medicamentos</li>
+                        <li>A menudo incluye beneficios de dental, visión y audición</li>
+                        <li>Muchos planes disponibles a prima mensual $0</li>
+                        <li>Planes basados en red con costos de bolsillo más bajos</li>
+                    </ul>
+                    <a href="/#contact" class="btn btn-primary btn-sm">Obtén una Consulta Gratis</a>
+                </div>
+                <div class="service-visual">
+                    <div class="service-icon">🏥</div>
+                    <div class="service-highlight">Cobertura Integral</div>
+                    <div class="service-highlight-sub">Hospital + Médica + Rx + Extras</div>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Stats Section -->
-    <section class="stats-section">
+    <!-- Medicare Supplements -->
+    <section class="service-detail">
         <div class="container">
-            <div class="stats-grid">
-                <div class="stat-item">
-                    <div class="stat-number">1,000+</div>
-                    <div class="stat-label">Jubilados y Familias Asistidos</div>
+            <div class="service-layout reverse">
+                <div class="service-text">
+                    <h2>Suplementos de Medicare (Medigap)</h2>
+                    <p>Medicare Original cubre mucho — pero no todo. Los planes Medigap cierran las brechas como copagos, coaseguros y deductibles para que no enfrentes facturas inesperadas.</p>
+                    <p>La mayor ventaja? Puedes ver a cualquier médico o especialista en todo el país que acepte Medicare. Sin referencias, sin restricciones de red. Es la tranquilidad definitiva.</p>
+                    <ul class="service-features">
+                        <li>Cubre costos que Medicare Original no cubre — copagos, coaseguros, deductibles</li>
+                        <li>Ve a cualquier médico en todo el país que acepte Medicare</li>
+                        <li>No se necesitan referencias para especialistas</li>
+                        <li>Costos mensuales predecibles con menos sorpresas</li>
+                    </ul>
+                    <a href="/#contact" class="btn btn-primary btn-sm">Encuentra el Suplemento Correcto</a>
                 </div>
-                <div class="stat-item">
-                    <div class="stat-number">20</div>
-                    <div class="stat-label">Años de Experiencia</div>
-                </div>
-                <div class="stat-item">
-                    <div class="stat-number">40+</div>
-                    <div class="stat-label">Estados Cubiertos</div>
-                </div>
-                <div class="stat-item">
-                    <div class="stat-number">100%</div>
-                    <div class="stat-label">Consultas Gratuitas</div>
+                <div class="service-visual">
+                    <div class="service-icon">🛡️</div>
+                    <div class="service-highlight">Cubre las Brechas</div>
+                    <div class="service-highlight-sub">Ve a Cualquier Médico, En Cualquier Lugar</div>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Plans Section -->
-    <section class="plans-section section-padding" id="plans">
+    <!-- ACA / Marketplace -->
+    <section class="service-detail">
         <div class="container">
-            <h2 class="text-center">Opciones de Cobertura para Cada Etapa de la Vida</h2>
-            <p class="text-center" style="max-width: 600px; margin: 0 auto 30px; color: #4A5568;">Ya sea que estés cumpliendo 65 años o buscando cambiar de planes, tenemos opciones que tienen sentido para las necesidades únicas de tu familia.</p>
-
-            <div class="plans-grid">
-                <div class="plan-card fade-in">
-                    <div class="plan-icon">🏥</div>
-                    <h3>Medicare Advantage</h3>
-                    <p>Cobertura integral para quienes cumplen 65 años o son nuevamente elegibles. A menudo incluye dental y visión sin costo adicional.</p>
-                    <a href="#contact" class="btn btn-primary btn-sm">Más Información</a>
+            <div class="service-layout">
+                <div class="service-text">
+                    <h2>Planes ACA / Marketplace</h2>
+                    <p>¿Aún no tienes 65 años? ¿Necesitas cobertura para ti o tu familia? Los planes del mercado ACA ofrecen seguro de salud integral con asistencia financiera basada en tus ingresos.</p>
+                    <p>Ya sea que seas trabajador independiente, estés entre empleos o simplemente necesites mejor cobertura, te ayudaremos a navegar el mercado y encontrar un plan que realmente puedas pagar.</p>
+                    <ul class="service-features">
+                        <li>Cobertura para individuos y familias menores de 65 años</li>
+                        <li>Asistencia financiera y subsidios basados en ingresos</li>
+                        <li>Beneficios de salud esencial incluyendo maternidad y salud mental</li>
+                        <li>Inscripción especial disponible para eventos de vida calificados</li>
+                    </ul>
+                    <a href="/#contact" class="btn btn-primary btn-sm">Explora tus Opciones</a>
                 </div>
-
-                <div class="plan-card fade-in" style="animation-delay: 0.1s;">
-                    <div class="plan-icon">🛡️</div>
-                    <h3>Suplementos de Medicare (Medigap)</h3>
-                    <p>Cubre las brechas que Medicare Original no cubre. Perfecto si deseas mantener tus doctores actuales.</p>
-                    <a href="#contact" class="btn btn-primary btn-sm">Más Información</a>
-                </div>
-
-                <div class="plan-card fade-in" style="animation-delay: 0.2s;">
-                    <div class="plan-icon">🤝</div>
-                    <h3>Planes ACA / Marketplace</h3>
-                    <p>Cobertura asequible para individuos y familias. Disponible durante todo el año con opciones de asistencia financiera.</p>
-                    <a href="#contact" class="btn btn-primary btn-sm">Más Información</a>
-                </div>
-
-                <div class="plan-card fade-in" style="animation-delay: 0.3s;">
-                    <div class="plan-icon">😁</div>
-                    <h3>Dental y Visión</h3>
-                    <p>Mantén la sonrisa de toda tu familia brillante y los ojos saludables. Cobertura individual o combinada con Medicare.</p>
-                    <a href="#contact" class="btn btn-primary btn-sm">Más Información</a>
-                </div>
-
-                <div class="plan-card fade-in" style="animation-delay: 0.4s;">
-                    <div class="plan-icon">❤️</div>
-                    <h3>Seguro de Vida</h3>
-                    <p>Protege lo que más importa. Planes simples para ayudar a cubrir gastos finales o dejar un legado para tus seres queridos.</p>
-                    <a href="#contact" class="btn btn-primary btn-sm">Más Información</a>
-                </div>
-
-                <div class="plan-card fade-in" style="animation-delay: 0.5s;">
-                    <div class="plan-icon">⚡</div>
-                    <h3>Accidentes e Enfermedades Críticas</h3>
-                    <p>Tranquilidad adicional. Cobertura de indemnización hospitalaria y enfermedades críticas cuando la vida te sorprende.</p>
-                    <a href="#contact" class="btn btn-primary btn-sm">Más Información</a>
+                <div class="service-visual">
+                    <div class="service-icon">🤝</div>
+                    <div class="service-highlight">Cobertura Familiar Asequible</div>
+                    <div class="service-highlight-sub">Subsidios y Asistencia Financiera Disponibles</div>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- How We Help Section -->
-    <section class="process-section section-padding" id="how">
+    <!-- Dental & Vision -->
+    <section class="service-detail">
         <div class="container">
-            <h2 class="text-center">Simple. Sin Presión. Sin Complicaciones.</h2>
-            <p class="text-center" style="max-width: 600px; margin: 0 auto 50px; color: #4A5568;">Así es como hacemos que encontrar cobertura sea fácil.</p>
-
-            <div class="process-steps">
-                <div class="step">
-                    <div class="step-number">1</div>
-                    <h3>Cuéntanos tus Necesidades</h3>
-                    <p>Llámanos o completa un formulario rápido. ¿Qué te importa? ¿Costo? ¿Doctores específicos? ¿Cobertura dental?</p>
-                    <div class="step-connector"></div>
+            <div class="service-layout reverse">
+                <div class="service-text">
+                    <h2>Dental y Visión</h2>
+                    <p>Tu sonrisa y tu vista importan. Ya sea que necesites cobertura dental y de visión individual o quieras agregarla a tu plan Medicare existente, tenemos opciones que mantienen a toda la familia saludable.</p>
+                    <p>Los planes cubren todo desde limpiezas y exámenes de rutina hasta coronas, dentaduras y gafas — todo a precios que no te quebrantarán.</p>
+                    <ul class="service-features">
+                        <li>Planes individuales o combinados con cobertura Medicare</li>
+                        <li>Limpiezas, empastes, coronas y dentaduras de rutina</li>
+                        <li>Exámenes oculares, gafas y cobertura de lentes de contacto</li>
+                        <li>Primas mensuales asequibles para individuos y familias</li>
+                    </ul>
+                    <a href="/#contact" class="btn btn-primary btn-sm">Obtén Cotizaciones de Dental y Visión</a>
                 </div>
-
-                <div class="step">
-                    <div class="step-number">2</div>
-                    <h3>Comparamos Planes Para Ti</h3>
-                    <p>No tienes que navegar cientos de opciones. Encontramos los mejores ajustes y los explicamos claramente.</p>
-                    <div class="step-connector"></div>
-                </div>
-
-                <div class="step">
-                    <div class="step-number">3</div>
-                    <h3>Elige el Plan que se Ajuste</h3>
-                    <p>Tú estás en control. Sin presión. Elige lo que tiene sentido para ti y tu familia.</p>
-                    <div class="step-connector"></div>
-                </div>
-
-                <div class="step">
-                    <div class="step-number">4</div>
-                    <h3>Apoyo Todo el Año</h3>
-                    <p>¿Preguntas sobre inscripción abierta? ¿Cambios en la vida? Estamos aquí para ayudarte cuando nos necesites.</p>
-                </div>
-            </div>
-
-            <div class="process-note">
-                ✓ Nuestros servicios son completamente gratis para ti — los aseguradores nos pagan
-            </div>
-        </div>
-    </section>
-
-    <!-- Why Choose Us Section -->
-    <section class="why-section section-padding" id="why">
-        <div class="container">
-            <h2 class="text-center">Por Qué Medicare Moms se Destaca</h2>
-            <p class="text-center" style="max-width: 600px; margin: 0 auto 50px; color: #4A5568;">No somos un centro de llamadas. Somos mamás, hermanas y vecinas que nos importa genuinamente la salud de tu familia. Más de 1,000 jubilados y familias asistidos en 20 años en más de 40 estados.</p>
-
-            <div class="why-grid">
-                <div class="why-card fade-in">
-                    <h3>👩 Liderado por Mujeres y Orientado a la Comunidad</h3>
-                    <p>Construido por mujeres que entienden las necesidades únicas de salud de las familias. Somos parte de tu comunidad, no una corporación lejana.</p>
-                </div>
-
-                <div class="why-card fade-in" style="animation-delay: 0.1s;">
-                    <h3>💬 Como Hablar con una Amiga</h3>
-                    <p>Sin jerga corporativa. Explicamos las cosas claramente, respondemos preguntas sin importancia y nunca te hacemos sentir apresurado.</p>
-                </div>
-
-                <div class="why-card fade-in" style="animation-delay: 0.2s;">
-                    <h3>✅ Licenciados y Certificados</h3>
-                    <p>Licenciados en más de 40 estados incluyendo Puerto Rico. Somos profesionales reales con años de experiencia en seguros, respaldados por la experiencia confiable de Wildcat Insurance.</p>
-                </div>
-
-                <div class="why-card fade-in" style="animation-delay: 0.3s;">
-                    <h3>🎯 Personalizado, no Genérico</h3>
-                    <p>Tu situación es única. Nos tomamos el tiempo para entender las necesidades de tu familia y encontrar planes que realmente funcionen para ti. Hemos ayudado a miles a tener éxito.</p>
+                <div class="service-visual">
+                    <div class="service-icon">😁</div>
+                    <div class="service-highlight">Mantén la Sonrisa</div>
+                    <div class="service-highlight-sub">Dental + Visión para Toda la Familia</div>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Testimonials Section -->
-    <section class="testimonials-section section-padding">
+    <!-- Life Insurance -->
+    <section class="service-detail">
         <div class="container">
-            <h2 class="text-center">Gente Real, Historias Reales</h2>
-            <p class="text-center" style="max-width: 600px; margin: 0 auto 50px; color: #4A5568;">No confíes solo en nuestra palabra. Aquí está lo que las familias están diciendo.</p>
-
-            <div class="testimonials-grid">
-                <div class="testimonial-card fade-in">
-                    <div class="stars">★★★★★</div>
-                    <p class="testimonial-text">"Estaba tan confundida sobre las opciones de Medicare, pero Sarah me guió a través de todo y lo hizo simple. Es como una amiga, no una vendedora. ¡Encontré un plan que me ahorra cientos de dólares al mes!"</p>
-                    <p class="testimonial-author">— Margaret L.</p>
-                    <p class="testimonial-location">Portland, Oregon</p>
+            <div class="service-layout">
+                <div class="service-text">
+                    <h2>Seguro de Vida</h2>
+                    <p>El seguro de vida no se trata solo de lo inesperado — se trata de proteger a quienes amas. Desde cubrir gastos finales hasta dejar un colchón financiero para tu familia, hacemos simple encontrar la cantidad correcta de cobertura.</p>
+                    <p>Ofrecemos opciones de vida a término, vida entera y gastos finales. No se requiere examen médico para muchos planes, con aprobación en tan solo 24 horas.</p>
+                    <ul class="service-features">
+                        <li>Opciones de vida a término, vida entera y gastos finales</li>
+                        <li>Muchos planes sin examen médico requerido</li>
+                        <li>Montos de cobertura desde $5,000 a $500,000+</li>
+                        <li>Aprobaciones rápidas — a menudo dentro de 24 horas</li>
+                    </ul>
+                    <a href="/#contact" class="btn btn-primary btn-sm">Obtén una Cotización de Seguro de Vida</a>
                 </div>
-
-                <div class="testimonial-card fade-in" style="animation-delay: 0.1s;">
-                    <div class="stars">★★★★★</div>
-                    <p class="testimonial-text">"Con tres hijos y las necesidades médicas de mi esposo, necesitábamos cobertura que funcionara para todos nosotros. Medicare Moms nos encontró un plan ACA que realmente podemos pagar. Fue un cambio revolucionario."</p>
-                    <p class="testimonial-author">— Jennifer M.</p>
-                    <p class="testimonial-location">Austin, Texas</p>
-                </div>
-
-                <div class="testimonial-card fade-in" style="animation-delay: 0.2s;">
-                    <div class="stars">★★★★★</div>
-                    <p class="testimonial-text">"¿La mejor parte? Me llamaron al día siguiente con respuestas. Seres humanos reales que se importan. ¡Mi Medicare está arreglado y también tengo dental!"</p>
-                    <p class="testimonial-author">— Diana T.</p>
-                    <p class="testimonial-location">Denver, Colorado</p>
+                <div class="service-visual">
+                    <div class="service-icon">❤️</div>
+                    <div class="service-highlight">Protege lo que Importa</div>
+                    <div class="service-highlight-sub">Planes Simples, Aprobaciones Rápidas</div>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Contact Section -->
-    <section class="contact-section section-padding" id="contact">
+    <!-- Accident & Critical Illness -->
+    <section class="service-detail">
         <div class="container">
-            <div class="contact-content">
-                <div>
-                    <h2>¿Listo para Encontrar el Plan Correcto?</h2>
-                    <p>Hablemos. Ya sea que tengas preguntas o estés listo para comenzar, estamos aquí para ayudarte.</p>
-
-                    <div class="contact-info">
-                        <h3>Ponte en Contacto</h3>
-
-                        <div class="contact-method">
-                            <label>📞 Llámanos</label>
-                            <p><a href="tel:+18005551234" style="color: #A8C5A0; text-decoration: none;">(800) 555-1234</a></p>
-                        </div>
-
-                        <div class="contact-method">
-                            <label>📧 Email</label>
-                            <p><a href="mailto:info@medicaremoms.com" style="color: #A8C5A0; text-decoration: none;">info@medicaremoms.com</a></p>
-                        </div>
-
-                        <div class="contact-method">
-                            <label>🕐 Horario</label>
-                            <p>Lunes–Viernes, 9am–5pm MT</p>
-                        </div>
-
-                        <div class="contact-disclaimer">
-                            Nuestros servicios son completamente gratis para ti — los aseguradores nos pagan cuando te inscribes.
-                        </div>
-                    </div>
+            <div class="service-layout reverse">
+                <div class="service-text">
+                    <h2>Accidentes y Enfermedades Críticas</h2>
+                    <p>La vida te sorprende. Los planes de accidente y enfermedad crítica te dan una capa extra de protección pagando beneficios en efectivo directamente a ti — no al hospital — cuando más lo necesitas.</p>
+                    <p>Usa el dinero para facturas médicas, pagos de hipoteca, comestibles o cualquier otra cosa. Es tu red de seguridad cuando lo inesperado sucede.</p>
+                    <ul class="service-features">
+                        <li>Beneficios en efectivo pagados directamente a ti</li>
+                        <li>Cubre accidentes, ataques cardíacos, accidentes cerebrovasculares, cáncer y más</li>
+                        <li>Funciona junto con tu seguro de salud existente</li>
+                        <li>Primas asequibles para una valiosa tranquilidad</li>
+                    </ul>
+                    <a href="/#contact" class="btn btn-primary btn-sm">Aprende Sobre Protección Extra</a>
                 </div>
-
-                <form class="contact-form" onsubmit="handleFormSubmit(event)">
-                    <div class="form-group">
-                        <label for="name">Nombre Completo</label>
-                        <input type="text" id="name" name="name" required>
-                    </div>
-
-                    <div class="form-group">
-                        <label for="email">Email</label>
-                        <input type="email" id="email" name="email" required>
-                    </div>
-
-                    <div class="form-group">
-                        <label for="phone">Teléfono</label>
-                        <input type="tel" id="phone" name="phone" required>
-                    </div>
-
-                    <div class="form-group">
-                        <label for="interested">¿Qué estás buscando?</label>
-                        <select id="interested" name="interested" required>
-                            <option value="">— Selecciona una opción —</option>
-                            <option value="Medicare Advantage">Medicare Advantage</option>
-                            <option value="Medicare Supplement">Suplemento de Medicare (Medigap)</option>
-                            <option value="ACA/Marketplace">Planes ACA / Marketplace</option>
-                            <option value="Dental & Vision">Dental y Visión</option>
-                            <option value="Life Insurance">Seguro de Vida</option>
-                            <option value="Not Sure">No Estoy Seguro — Ayúdame a Decidir</option>
-                        </select>
-                    </div>
-
-                    <button type="submit" class="btn btn-primary" style="margin-top: 10px;">Obtén una Consulta Gratis</button>
-                </form>
+                <div class="service-visual">
+                    <div class="service-icon">⚡</div>
+                    <div class="service-highlight">Tranquilidad Extra</div>
+                    <div class="service-highlight-sub">Beneficios en Efectivo Cuando los Necesitas</div>
+                </div>
             </div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="cta-section">
+        <div class="container">
+            <h2>¿No Estás Seguro de Qué Plan es Correcto para Ti?</h2>
+            <p>Eso es exactamente por lo que estamos aquí. Hablemos a través de tus opciones — sin presión, sin jerga, solo respuestas reales.</p>
+            <div class="cta-buttons">
+                <a href="/#contact" class="btn btn-primary">Obtén una Consulta Gratis</a>
+                <a href="tel:+18005551234" class="btn btn-secondary">Llama (800) 555-1234</a>
+            </div>
+            <p class="cta-note">Nuestros servicios siempre son gratis para ti — los aseguradores nos pagan.</p>
         </div>
     </section>
 
@@ -1157,11 +807,11 @@
                 <div class="footer-section">
                     <h4>Tipos de Cobertura</h4>
                     <ul>
-                        <li><a href="#plans">Medicare Advantage</a></li>
-                        <li><a href="#plans">Medigap / Suplementos</a></li>
-                        <li><a href="#plans">ACA Marketplace</a></li>
-                        <li><a href="#plans">Dental y Visión</a></li>
-                        <li><a href="#plans">Seguro de Vida</a></li>
+                        <li><a href="/es/servicios/">Medicare Advantage</a></li>
+                        <li><a href="/es/servicios/">Medigap / Suplementos</a></li>
+                        <li><a href="/es/servicios/">ACA Marketplace</a></li>
+                        <li><a href="/es/servicios/">Dental y Visión</a></li>
+                        <li><a href="/es/servicios/">Seguro de Vida</a></li>
                     </ul>
                 </div>
 
@@ -1189,7 +839,6 @@
     </footer>
 
     <script>
-        // Mobile Menu Toggle
         const hamburger = document.getElementById('hamburger');
         const navLinks = document.getElementById('navLinks');
 
@@ -1198,7 +847,6 @@
             navLinks.classList.toggle('active');
         });
 
-        // Close menu when a link is clicked
         document.querySelectorAll('.nav-links a').forEach(link => {
             link.addEventListener('click', () => {
                 hamburger.classList.remove('active');
@@ -1206,7 +854,6 @@
             });
         });
 
-        // Fade-in animation on scroll
         const observerOptions = {
             threshold: 0.1,
             rootMargin: '0px 0px -50px 0px'
@@ -1221,25 +868,9 @@
             });
         }, observerOptions);
 
-        document.querySelectorAll('.plan-card, .why-card, .testimonial-card, .step').forEach(el => {
+        document.querySelectorAll('.service-text, .service-visual').forEach(el => {
             observer.observe(el);
         });
-
-        // Form submission handler
-        function handleFormSubmit(event) {
-            event.preventDefault();
-            const name = document.getElementById('name').value;
-            const email = document.getElementById('email').value;
-            const phone = document.getElementById('phone').value;
-            const interested = document.getElementById('interested').value;
-
-            // In production, this would send data to your backend
-            console.log('Form submitted:', { name, email, phone, interested });
-
-            // Show success message
-            alert('¡Gracias! Nos comunicaremos contigo dentro de 24 horas. ¡Espera una llamada de nuestro equipo!');
-            event.target.reset();
-        }
     </script>
     <!-- CHAT WIDGET -->
     <div id="chatWidgetContainer">
