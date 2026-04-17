@@ -174,9 +174,9 @@
         }
 
         .logo img {
-            height: 50px;
+            height: 60px;
             width: auto;
-            border-radius: 6px;
+            border-radius: 0;
         }
 
         .nav-links {
@@ -783,6 +783,7 @@
                 gap: 12px;
             }
         }
+            .footer-logo { display: block; max-width: 180px; height: auto; margin-bottom: 15px; }
     </style>
 
     <script type="application/ld+json">
@@ -814,7 +815,7 @@
     <!-- ============ Navigation ============ -->
     <nav>
         <div class="nav-container">
-            <a href="/" class="logo"><img src="/logo.svg" alt="Medicare Moms Logo">Medicare Moms</a>
+            <a href="/" class="logo"><img src="/logo-mark.svg" alt="Medicare Moms Logo">Medicare Moms</a>
             <div class="hamburger" id="hamburger">
                 <span></span>
                 <span></span>
@@ -892,7 +893,7 @@
 
             <div class="comparison-wrapper">
                 <div class="comparison-box box-coral">
-                    <div class="box-label">Parte A — Seguro Hospitalario</div>
+                    <div class="box-label">Parte A, Seguro Hospitalario</div>
                     <h3>Qué Cubre la Parte A</h3>
                     <p>La Parte A cubre la atención hospitalaria, las cosas que suceden cuando estás ingresado en una instalación.</p>
                     <ul class="feature-list">
@@ -905,7 +906,7 @@
                 </div>
 
                 <div class="comparison-box box-blue">
-                    <div class="box-label">Parte B — Seguro Médico</div>
+                    <div class="box-label">Parte B, Seguro Médico</div>
                     <h3>Qué Cubre la Parte B</h3>
                     <p>La Parte B cubre la atención ambulatoria: visitas al médico y servicios preventivos que recibes fuera del hospital.</p>
                     <ul class="feature-list">
@@ -946,7 +947,7 @@
                         <li>A menudo incluye dental, visión, audición y fitness</li>
                         <li>Muchos planes disponibles a $0 de prima mensual</li>
                         <li>Tiene un máximo de desembolso personal (Original Medicare no lo tiene)</li>
-                        <li>Usa una red (HMO, PPO) — mantente en la red para costos menores</li>
+                        <li>Usa una red (HMO, PPO), mantente en la red para costos menores</li>
                         <li>Puede requerir referencias para especialistas (planes HMO)</li>
                     </ul>
                     <p><strong>Mejor para:</strong> Personas que quieren cobertura todo en uno, que se sienten cómodas usando una red de médicos y quieren beneficios adicionales como dental y visión incluidos.</p>
@@ -1073,7 +1074,7 @@
             <div class="footer-content">
                 <div class="footer-section">
                     <div class="footer-brand">
-                        <h4>Medicare Moms</h4>
+                        <img src="/logo.svg" alt="Medicare Moms - Cobertura Simplificada" class="footer-logo">
                         <p>Una Compañía de Wildcat Insurance</p>
                         <p>Ayudando a familias a encontrar cobertura de salud que funciona.</p>
                     </div>
@@ -1110,7 +1111,7 @@
                 <div class="footer-section">
                     <h4>Información de Contacto</h4>
                     <ul>
-                        <li><a href="tel:+18005551234">(800) 555-1234</a></li>
+                        <li><a href="tel:+14352461548">(435) 246-1548</a></li>
                         <li><a href="mailto:info@medicaremoms.com">info@medicaremoms.com</a></li>
                         <li>Lunes–Viernes, 9am–5pm MT</li>
                     </ul>
@@ -1541,7 +1542,7 @@
                 setTimeout(() => {
                     const responseDiv = document.createElement('div');
                     responseDiv.className = 'message received';
-                    responseDiv.innerHTML = `<div class="message-bubble">¡Gracias por comunicarte! Uno de nuestros agentes se pondrá en contacto pronto. Mientras tanto, siéntete libre de llamarnos al (800) 555-1234 o enviarnos un correo a info@medicaremoms.com</div>`;
+                    responseDiv.innerHTML = `<div class="message-bubble">¡Gracias por comunicarte! Uno de nuestros agentes se pondrá en contacto pronto. Mientras tanto, siéntete libre de llamarnos al (435) 246-1548 o enviarnos un correo a info@medicaremoms.com</div>`;
                     chatMessages.appendChild(responseDiv);
 
                     // Scroll to bottom
