@@ -958,19 +958,26 @@
         });
 
         // Form submission handler
-        function handleFormSubmit(event) {
+        const GHL_WEBHOOK_URL = 'https://services.leadconnectorhq.com/hooks/LSuIvEciA8JlCaL35rzM/webhook-trigger/6fc689bc-2f88-4e22-b866-8a1b3d8ee7cc';
+
+        async function handleFormSubmit(event) {
             event.preventDefault();
-            const fullName = document.getElementById('fullName').value;
-            const email = document.getElementById('email').value;
-            const phone = document.getElementById('phone').value;
+            const fullName = document.getElementById('fullName').value.trim();
+            const email = document.getElementById('email').value.trim();
+            const phone = document.getElementById('phone').value.trim();
             const dateOfBirth = document.getElementById('dateOfBirth').value;
             const onMedicare = document.getElementById('onMedicare').value;
             const employerCoverage = document.getElementById('employerCoverage').value;
             const lookingFor = document.getElementById('lookingFor').value;
             const additionalInfo = document.getElementById('additionalInfo').value;
 
-            // In production, this would send data to your backend
-            console.log('Needs Analysis Form submitted:', {
+            const parts = fullName.split(/\s+/);
+            const firstName = parts[0] || '';
+            const lastName = parts.slice(1).join(' ') || '';
+
+            const payload = {
+                firstName,
+                lastName,
                 fullName,
                 email,
                 phone,
@@ -978,12 +985,32 @@
                 onMedicare,
                 employerCoverage,
                 lookingFor,
-                additionalInfo
-            });
+                additionalInfo,
+                source: 'needs_analysis_en',
+                page: window.location.href,
+                language: 'en',
+                submittedAt: new Date().toISOString()
+            };
 
-            // Show success message
-            alert('Thank you! We\'ve received your information. One of our agents will call you within 24 hours to discuss your coverage options. We look forward to helping you find the right plan!');
-            event.target.reset();
+            const submitBtn = event.target.querySelector('button[type="submit"]');
+            const originalText = submitBtn ? submitBtn.textContent : '';
+            if (submitBtn) { submitBtn.disabled = true; submitBtn.textContent = 'Sending...'; }
+
+            try {
+                const response = await fetch(GHL_WEBHOOK_URL, {
+                    method: 'POST',
+                    headers: { 'Content-Type': 'application/json' },
+                    body: JSON.stringify(payload)
+                });
+                if (!response.ok) throw new Error('HTTP ' + response.status);
+                alert("Thank you! We've received your information. One of our agents will call you within 24 hours to discuss your coverage options. We look forward to helping you find the right plan!");
+                event.target.reset();
+            } catch (err) {
+                console.error('Form submit error:', err);
+                alert("Sorry, there was a problem sending your information. Please call us at (435) 246-1548 or email info@medicaremoms.com.");
+            } finally {
+                if (submitBtn) { submitBtn.disabled = false; submitBtn.textContent = originalText; }
+            }
         }
     </script>
 

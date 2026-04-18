@@ -1450,19 +1450,51 @@
         });
 
         // Form submission handler
-        function handleFormSubmit(event) {
+        const GHL_WEBHOOK_URL = 'https://services.leadconnectorhq.com/hooks/LSuIvEciA8JlCaL35rzM/webhook-trigger/6fc689bc-2f88-4e22-b866-8a1b3d8ee7cc';
+
+        async function handleFormSubmit(event) {
             event.preventDefault();
-            const name = document.getElementById('name').value;
-            const email = document.getElementById('email').value;
-            const phone = document.getElementById('phone').value;
+            const name = document.getElementById('name').value.trim();
+            const email = document.getElementById('email').value.trim();
+            const phone = document.getElementById('phone').value.trim();
             const interested = document.getElementById('interested').value;
 
-            // In production, this would send data to your backend
-            console.log('Form submitted:', { name, email, phone, interested });
+            const parts = name.split(/\s+/);
+            const firstName = parts[0] || '';
+            const lastName = parts.slice(1).join(' ') || '';
 
-            // Show success message
-            alert('Thank you! We\'ll be in touch within 24 hours. Look for a call from our team!');
-            event.target.reset();
+            const payload = {
+                firstName,
+                lastName,
+                fullName: name,
+                email,
+                phone,
+                interested,
+                source: 'homepage_contact_en',
+                page: window.location.href,
+                language: 'en',
+                submittedAt: new Date().toISOString()
+            };
+
+            const submitBtn = event.target.querySelector('button[type="submit"]');
+            const originalText = submitBtn ? submitBtn.textContent : '';
+            if (submitBtn) { submitBtn.disabled = true; submitBtn.textContent = 'Sending...'; }
+
+            try {
+                const response = await fetch(GHL_WEBHOOK_URL, {
+                    method: 'POST',
+                    headers: { 'Content-Type': 'application/json' },
+                    body: JSON.stringify(payload)
+                });
+                if (!response.ok) throw new Error('HTTP ' + response.status);
+                alert("Thank you! We'll be in touch within 24 hours. Look for a call from our team!");
+                event.target.reset();
+            } catch (err) {
+                console.error('Form submit error:', err);
+                alert("Sorry, there was a problem sending your message. Please call us at (435) 246-1548 or email info@medicaremoms.com.");
+            } finally {
+                if (submitBtn) { submitBtn.disabled = false; submitBtn.textContent = originalText; }
+            }
         }
     </script>
     <!-- CHAT WIDGET -->
