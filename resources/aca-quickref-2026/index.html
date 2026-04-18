@@ -371,8 +371,9 @@
             table.fpl-table td[data-label="300% FPL"]::before { content: "300%"; }
             table.fpl-table td[data-label^="400%"]::before { content: "400%"; }
 
-            /* First cell becomes the card header */
-            table.fpl-table td:first-child {
+            /* First cell becomes the card header (all rows, odd + even) */
+            table.fpl-table tbody tr td:first-child,
+            table.fpl-table tbody tr:nth-child(even) td:first-child {
                 display: block;
                 background: linear-gradient(135deg, #5B8C6B 0%, #3D6B4A 100%) !important;
                 color: white !important;
@@ -385,13 +386,14 @@
                 white-space: nowrap;
             }
             table.fpl-table td:first-child::before { display: none; }
-            table.fpl-table tbody tr:nth-child(even) td { background: white !important; }
             /* Tint indicators for 138% Medicaid and 400% cliff */
-            table.fpl-table td[data-label^="138%"] {
+            table.fpl-table tbody tr td[data-label^="138%"],
+            table.fpl-table tbody tr:nth-child(even) td[data-label^="138%"] {
                 background: #E8F0E5 !important;
             }
             table.fpl-table td[data-label^="138%"]::before { color: #3D6B4A; font-weight: 700; }
-            table.fpl-table td[data-label^="400%"] {
+            table.fpl-table tbody tr td[data-label^="400%"],
+            table.fpl-table tbody tr:nth-child(even) td[data-label^="400%"] {
                 background: #FDF6E3 !important;
             }
             table.fpl-table td[data-label^="400%"]::before { color: #B56B3D; font-weight: 700; }
