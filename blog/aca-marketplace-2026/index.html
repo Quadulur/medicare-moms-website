@@ -124,6 +124,101 @@
         .footer-section a:hover { color: #A8C5A0; }
         .footer-brand { background-color: #1F1F1F; padding: 30px 20px; border-top: 1px solid #404040; text-align: center; }
         .footer-brand p { color: #7A8FA4; font-size: 14px; }
+
+        /* ============ FPL Chart ============ */
+        .fpl-chart-wrapper {
+            background: #FFFFFF;
+            border: 1px solid #E0D9CE;
+            border-radius: 12px;
+            box-shadow: 0 6px 20px rgba(44, 44, 44, 0.06);
+            margin: 40px 0;
+            overflow: hidden;
+        }
+        .fpl-chart-header {
+            background: linear-gradient(135deg, #5B8C6B 0%, #3D6B4A 100%);
+            color: white;
+            padding: 22px 24px;
+        }
+        .fpl-chart-header h3 {
+            color: white;
+            font-family: 'DM Serif Display', serif;
+            font-size: 22px;
+            margin: 0 0 4px 0;
+        }
+        .fpl-chart-header p {
+            color: rgba(255, 255, 255, 0.92);
+            font-size: 13px;
+            margin: 0;
+            line-height: 1.5;
+        }
+        .fpl-chart-scroll {
+            overflow-x: auto;
+            -webkit-overflow-scrolling: touch;
+        }
+        .fpl-chart-table {
+            width: 100%;
+            border-collapse: collapse;
+            font-size: 14px;
+            min-width: 700px;
+        }
+        .fpl-chart-table thead th {
+            background-color: #F7F3ED;
+            color: #3D6B4A;
+            font-family: 'Nunito', sans-serif;
+            font-weight: 700;
+            padding: 14px 10px;
+            text-align: center;
+            border-bottom: 2px solid #5B8C6B;
+            font-size: 13px;
+            letter-spacing: 0.2px;
+        }
+        .fpl-chart-table thead th:first-child {
+            text-align: left;
+            padding-left: 22px;
+            background-color: #EDE8DF;
+        }
+        .fpl-chart-table tbody td {
+            padding: 12px 10px;
+            text-align: center;
+            color: #4A5568;
+            font-variant-numeric: tabular-nums;
+            border-bottom: 1px solid #F0EAE0;
+        }
+        .fpl-chart-table tbody td:first-child {
+            text-align: left;
+            padding-left: 22px;
+            font-weight: 700;
+            color: #2C2C2C;
+            background-color: #FBF8F2;
+        }
+        .fpl-chart-table tbody tr:nth-child(even) td {
+            background-color: #FAFAF7;
+        }
+        .fpl-chart-table tbody tr:nth-child(even) td:first-child {
+            background-color: #F7F3ED;
+        }
+        .fpl-chart-table tbody tr:hover td {
+            background-color: #E8F0E5;
+        }
+        .fpl-chart-table tbody tr:hover td:first-child {
+            background-color: #D7E7CC;
+        }
+        .fpl-chart-footer {
+            padding: 16px 24px 20px;
+            font-size: 12px;
+            color: #7A8FA4;
+            border-top: 1px solid #F0EAE0;
+            background-color: #FDFCF9;
+            line-height: 1.6;
+        }
+        .fpl-chart-footer strong { color: #3D6B4A; }
+        .fpl-chart-footer a { color: #5B8C6B; font-weight: 600; }
+
+        @media (max-width: 600px) {
+            .fpl-chart-header { padding: 18px 18px; }
+            .fpl-chart-header h3 { font-size: 18px; }
+            .fpl-chart-footer { padding: 14px 18px 18px; }
+        }
     </style>
 </head>
 <body>
@@ -224,7 +319,7 @@
 
         <div class="callout">
             <h4>What This Looks Like in Practice</h4>
-            <p>A 55-year-old couple earning $82,000 (about 405% of FPL in 2025) might have paid roughly $580/month for a benchmark silver plan under the enhanced subsidies. Without them, that same plan could cost $1,200+/month at full price. Actual amounts vary significantly by state and plan.</p>
+            <p>A single 60-year-old earning $65,000 (about 104% of the 400% FPL threshold for 2026, which is $62,600) might have paid around 8.5% of income — roughly $460/month — for a benchmark Silver plan under the enhanced subsidies. Without them, that same plan could cost $900+/month at full price because income above 400% FPL receives no premium tax credit. Actual amounts vary significantly by state, age, and plan.</p>
         </div>
 
         <h2>What the One Big Beautiful Bill Did and Did Not Do</h2>
@@ -240,13 +335,55 @@
 
         <h2>2026 ACA Key Numbers Cheat Sheet</h2>
 
-        <h3>Federal Poverty Level thresholds (2025, used for 2026 subsidies)</h3>
-        <p>Eligibility for premium tax credits is based on household income as a percentage of the Federal Poverty Level:</p>
+        <h3>Federal Poverty Level thresholds (2025 guidelines, used for 2026 subsidies)</h3>
+        <p>Eligibility for premium tax credits is based on your household income as a percentage of the Federal Poverty Level (FPL). Because the ACA uses the prior year's FPL to calculate subsidies, your 2026 Marketplace subsidy eligibility is measured against the 2025 poverty guidelines published by the U.S. Department of Health and Human Services.</p>
+
+        <p>Here are the 2025 FPL thresholds for the 48 contiguous states and Washington, D.C., at the income levels that matter most for ACA subsidies, Medicaid expansion, and cost-sharing reductions:</p>
+
+        <div class="fpl-chart-wrapper">
+            <div class="fpl-chart-header">
+                <h3>2025 Federal Poverty Guidelines</h3>
+                <p>Used to determine subsidy eligibility for Coverage Year 2026. Amounts shown are annual household income.</p>
+            </div>
+            <div class="fpl-chart-scroll">
+                <table class="fpl-chart-table">
+                    <thead>
+                        <tr>
+                            <th>Household Size</th>
+                            <th>100% FPL</th>
+                            <th>138% FPL</th>
+                            <th>150% FPL</th>
+                            <th>200% FPL</th>
+                            <th>250% FPL</th>
+                            <th>300% FPL</th>
+                            <th>400% FPL</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr><td>1 person</td><td>$15,650</td><td>$21,597</td><td>$23,475</td><td>$31,300</td><td>$39,125</td><td>$46,950</td><td>$62,600</td></tr>
+                        <tr><td>2 people</td><td>$21,150</td><td>$29,187</td><td>$31,725</td><td>$42,300</td><td>$52,875</td><td>$63,450</td><td>$84,600</td></tr>
+                        <tr><td>3 people</td><td>$26,650</td><td>$36,777</td><td>$39,975</td><td>$53,300</td><td>$66,625</td><td>$79,950</td><td>$106,600</td></tr>
+                        <tr><td>4 people</td><td>$32,150</td><td>$44,367</td><td>$48,225</td><td>$64,300</td><td>$80,375</td><td>$96,450</td><td>$128,600</td></tr>
+                        <tr><td>5 people</td><td>$37,650</td><td>$51,957</td><td>$56,475</td><td>$75,300</td><td>$94,125</td><td>$112,950</td><td>$150,600</td></tr>
+                        <tr><td>6 people</td><td>$43,150</td><td>$59,547</td><td>$64,725</td><td>$86,300</td><td>$107,875</td><td>$129,450</td><td>$172,600</td></tr>
+                        <tr><td>7 people</td><td>$48,650</td><td>$67,137</td><td>$72,975</td><td>$97,300</td><td>$121,625</td><td>$145,950</td><td>$194,600</td></tr>
+                        <tr><td>8 people</td><td>$54,150</td><td>$74,727</td><td>$81,225</td><td>$108,300</td><td>$135,375</td><td>$162,450</td><td>$216,600</td></tr>
+                    </tbody>
+                </table>
+            </div>
+            <div class="fpl-chart-footer">
+                <strong>Larger households:</strong> For households with more than 8 people, add $5,500 per additional person to reach 100% FPL, then multiply by the relevant percentage. <strong>Alaska &amp; Hawai'i:</strong> These states use separate, higher poverty guidelines.<br>
+                Source: U.S. Department of Health &amp; Human Services, 2025 Poverty Guidelines, published by ASPE at <a href="https://aspe.hhs.gov/poverty-guidelines" target="_blank" rel="noopener">aspe.hhs.gov/poverty-guidelines</a>. Figures are in U.S. dollars, annual household income.
+            </div>
+        </div>
+
+        <h4>Key thresholds at a glance</h4>
         <ul>
-            <li><strong>100% FPL (household of 1):</strong> $15,060</li>
-            <li><strong>138% FPL (Medicaid threshold in expansion states):</strong> $20,783</li>
-            <li><strong>150% FPL (maximum cost-sharing reduction):</strong> $22,590</li>
-            <li><strong>400% FPL (subsidy cliff returns):</strong> $60,240 (single), $124,800 (family of 4)</li>
+            <li><strong>138% FPL</strong> is the Medicaid eligibility line in states that expanded Medicaid under the ACA. Below this level, most adults qualify for Medicaid in expansion states rather than Marketplace subsidies.</li>
+            <li><strong>150% FPL</strong> is the maximum for the richest cost-sharing reduction (94% actuarial value) on Silver plans, as well as the upper end of the $0-premium benchmark Silver plan under the pre-ARPA subsidy formula.</li>
+            <li><strong>200% FPL</strong> is the cutoff for the 87% AV Silver cost-sharing reduction tier.</li>
+            <li><strong>250% FPL</strong> is the upper limit for any Silver cost-sharing reduction (73% AV tier).</li>
+            <li><strong>400% FPL</strong> is the subsidy cliff that returned in 2026. Under the enhanced IRA subsidies (2021–2025), income above 400% FPL still received a premium cap at 8.5% of income. Starting with Coverage Year 2026, income above 400% FPL is ineligible for premium tax credits entirely.</li>
         </ul>
 
         <h3>Open Enrollment dates</h3>
