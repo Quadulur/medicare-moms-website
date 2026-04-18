@@ -310,10 +310,16 @@
             top: 70px;
             background-color: #F7F3ED;
             padding: 16px 0;
-            overflow-x: auto;
             z-index: 100;
             box-shadow: 0 2px 8px rgba(44, 44, 44, 0.1);
         }
+
+        .category-filter .container {
+            overflow-x: auto;
+            -webkit-overflow-scrolling: touch;
+            scrollbar-width: none;
+        }
+        .category-filter .container::-webkit-scrollbar { display: none; }
 
         .category-filters {
             display: flex;
@@ -335,7 +341,7 @@
             transition: all 0.3s ease;
             white-space: nowrap;
             font-family: 'Nunito', sans-serif;
-            display: flex;
+            display: inline-flex;
             align-items: center;
             gap: 8px;
             position: relative;
@@ -360,13 +366,39 @@
             width: 22px;
             height: 22px;
             border-radius: 50%;
-            background-color: rgba(255, 255, 255, 0.3);
+            background-color: rgba(91, 140, 107, 0.15);
             font-size: 12px;
             font-weight: 700;
         }
 
         .category-btn.active .category-count {
-            background-color: rgba(255, 255, 255, 0.4);
+            background-color: rgba(255, 255, 255, 0.3);
+        }
+
+        /* Mobile: compact single-row scrolling filter bar */
+        @media (max-width: 768px) {
+            .category-filter {
+                padding: 8px 0;
+                top: 60px;
+            }
+            .category-filters {
+                flex-wrap: nowrap;
+                justify-content: flex-start;
+                gap: 6px;
+                padding: 0 4px;
+            }
+            .category-btn {
+                padding: 6px 12px;
+                font-size: 12px;
+                gap: 5px;
+                border-width: 1.5px;
+                flex-shrink: 0;
+            }
+            .category-count {
+                width: 18px;
+                height: 18px;
+                font-size: 10px;
+            }
         }
 
         /* ============ Featured Post Card ============ */
@@ -848,14 +880,10 @@
     <section class="category-filter">
         <div class="container">
             <div class="category-filters">
-                <button class="category-btn active" data-category="all">All <span class="category-count">9</span></button>
-                <button class="category-btn" data-category="Medicare 101">Medicare 101 <span class="category-count">2</span></button>
-                <button class="category-btn" data-category="ACA & Marketplace">ACA & Marketplace <span class="category-count">2</span></button>
-                <button class="category-btn" data-category="Tips & Advice">Tips & Advice <span class="category-count">2</span></button>
-                <button class="category-btn" data-category="Spanish Resources">Spanish Resources <span class="category-count">1</span></button>
-                <button class="category-btn" data-category="Life & Family">Life & Family <span class="category-count">1</span></button>
-                <button class="category-btn" data-category="ancillary">Ancillary Benefits <span class="category-count">2</span></button>
-                <button class="category-btn" data-category="News & Updates">News & Updates <span class="category-count">1</span></button>
+                <button class="category-btn active" data-category="all">All <span class="category-count">3</span></button>
+                <button class="category-btn" data-category="Medicare Data">Medicare Data <span class="category-count">1</span></button>
+                <button class="category-btn" data-category="ACA &amp; Marketplace">ACA &amp; Marketplace <span class="category-count">1</span></button>
+                <button class="category-btn" data-category="Medicare 101">Medicare 101 <span class="category-count">1</span></button>
             </div>
         </div>
     </section>

@@ -162,6 +162,14 @@
         <priority>0.7</priority>
     </url>
 
+    <!-- Medicare FAQ hub -->
+    <url>
+        <loc>https://medicaremoms.com/resources/medicare-faq/</loc>
+        <lastmod>2026-04-18</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.9</priority>
+    </url>
+
     <!-- Individual blog posts -->
     <url>
         <loc>https://medicaremoms.com/blog/medicare-guide-2026/</loc>
