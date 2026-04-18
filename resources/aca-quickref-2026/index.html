@@ -318,6 +318,66 @@
             .sheet-footer { grid-template-columns: 1fr; }
             .sheet-footer .contact-block { text-align: left; }
         }
+
+        /* Phone: transform the wide FPL table into stacked household cards */
+        @media (max-width: 600px) {
+            table.fpl-table { display: block; min-width: 0; width: 100%; }
+            table.fpl-table thead { display: none; }
+            table.fpl-table tbody { display: block; padding: 10px; background: #F7F3ED; }
+            table.fpl-table tr {
+                display: block;
+                background: #FFFFFF;
+                border: 1px solid #D7DCD3;
+                border-radius: 8px;
+                margin-bottom: 10px;
+                padding: 0;
+                overflow: hidden;
+                box-shadow: 0 1px 3px rgba(44, 44, 44, 0.04);
+            }
+            table.fpl-table tr:last-child { margin-bottom: 0; }
+            table.fpl-table td {
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+                padding: 8px 14px;
+                border: none;
+                border-bottom: 1px solid #F0EAE0;
+                font-size: 13px;
+                background: white !important;
+                color: #2C2C2C !important;
+                font-style: normal !important;
+            }
+            table.fpl-table td:last-child { border-bottom: none; }
+            table.fpl-table td::before {
+                content: attr(data-label);
+                font-weight: 600;
+                color: #5B8C6B;
+                font-size: 12px;
+                flex: 1;
+                padding-right: 12px;
+            }
+            /* First cell becomes the card header */
+            table.fpl-table td:first-child {
+                display: block;
+                background: linear-gradient(135deg, #5B8C6B 0%, #3D6B4A 100%) !important;
+                color: white !important;
+                font-family: 'DM Serif Display', serif;
+                font-size: 15px;
+                padding: 10px 14px;
+                text-align: center;
+                font-weight: 700;
+                border-bottom: 2px solid #3D6B4A;
+            }
+            table.fpl-table td:first-child::before { display: none; }
+            table.fpl-table tbody tr:nth-child(even) td { background: white !important; }
+            /* Highlighted rows inside the cards keep their tint on the value side only */
+            table.fpl-table td[data-label^="138%"] {
+                background: linear-gradient(to right, white 55%, #E8F0E5 55%) !important;
+            }
+            table.fpl-table td[data-label^="400%"] {
+                background: linear-gradient(to right, white 55%, #FDF6E3 55%) !important;
+            }
+        }
     </style>
 </head>
 <body>
@@ -353,7 +413,7 @@
                 <section class="panel">
                     <div class="panel-head">1. 2025 Federal Poverty Level &middot; Annual Household Income</div>
                     <div class="panel-body" style="padding: 0;">
-                        <table class="ctable">
+                        <table class="ctable fpl-table">
                             <thead>
                                 <tr>
                                     <th>Household</th>
@@ -367,14 +427,86 @@
                                 </tr>
                             </thead>
                             <tbody>
-                                <tr><td>1</td><td>$15,650</td><td>$21,597</td><td>$23,475</td><td>$31,300</td><td>$39,125</td><td>$46,950</td><td>$62,600</td></tr>
-                                <tr><td>2</td><td>$21,150</td><td>$29,187</td><td>$31,725</td><td>$42,300</td><td>$52,875</td><td>$63,450</td><td>$84,600</td></tr>
-                                <tr><td>3</td><td>$26,650</td><td>$36,777</td><td>$39,975</td><td>$53,300</td><td>$66,625</td><td>$79,950</td><td>$106,600</td></tr>
-                                <tr><td>4</td><td>$32,150</td><td>$44,367</td><td>$48,225</td><td>$64,300</td><td>$80,375</td><td>$96,450</td><td>$128,600</td></tr>
-                                <tr><td>5</td><td>$37,650</td><td>$51,957</td><td>$56,475</td><td>$75,300</td><td>$94,125</td><td>$112,950</td><td>$150,600</td></tr>
-                                <tr><td>6</td><td>$43,150</td><td>$59,547</td><td>$64,725</td><td>$86,300</td><td>$107,875</td><td>$129,450</td><td>$172,600</td></tr>
-                                <tr><td>7</td><td>$48,650</td><td>$67,137</td><td>$72,975</td><td>$97,300</td><td>$121,625</td><td>$145,950</td><td>$194,600</td></tr>
-                                <tr><td>8</td><td>$54,150</td><td>$74,727</td><td>$81,225</td><td>$108,300</td><td>$135,375</td><td>$162,450</td><td>$216,600</td></tr>
+                                <tr>
+                                    <td data-label="Household Size">1 person</td>
+                                    <td data-label="100% FPL">$15,650</td>
+                                    <td data-label="138% FPL (Medicaid expansion)">$21,597</td>
+                                    <td data-label="150% FPL">$23,475</td>
+                                    <td data-label="200% FPL">$31,300</td>
+                                    <td data-label="250% FPL">$39,125</td>
+                                    <td data-label="300% FPL">$46,950</td>
+                                    <td data-label="400% FPL (Subsidy cliff)">$62,600</td>
+                                </tr>
+                                <tr>
+                                    <td data-label="Household Size">2 people</td>
+                                    <td data-label="100% FPL">$21,150</td>
+                                    <td data-label="138% FPL (Medicaid expansion)">$29,187</td>
+                                    <td data-label="150% FPL">$31,725</td>
+                                    <td data-label="200% FPL">$42,300</td>
+                                    <td data-label="250% FPL">$52,875</td>
+                                    <td data-label="300% FPL">$63,450</td>
+                                    <td data-label="400% FPL (Subsidy cliff)">$84,600</td>
+                                </tr>
+                                <tr>
+                                    <td data-label="Household Size">3 people</td>
+                                    <td data-label="100% FPL">$26,650</td>
+                                    <td data-label="138% FPL (Medicaid expansion)">$36,777</td>
+                                    <td data-label="150% FPL">$39,975</td>
+                                    <td data-label="200% FPL">$53,300</td>
+                                    <td data-label="250% FPL">$66,625</td>
+                                    <td data-label="300% FPL">$79,950</td>
+                                    <td data-label="400% FPL (Subsidy cliff)">$106,600</td>
+                                </tr>
+                                <tr>
+                                    <td data-label="Household Size">4 people</td>
+                                    <td data-label="100% FPL">$32,150</td>
+                                    <td data-label="138% FPL (Medicaid expansion)">$44,367</td>
+                                    <td data-label="150% FPL">$48,225</td>
+                                    <td data-label="200% FPL">$64,300</td>
+                                    <td data-label="250% FPL">$80,375</td>
+                                    <td data-label="300% FPL">$96,450</td>
+                                    <td data-label="400% FPL (Subsidy cliff)">$128,600</td>
+                                </tr>
+                                <tr>
+                                    <td data-label="Household Size">5 people</td>
+                                    <td data-label="100% FPL">$37,650</td>
+                                    <td data-label="138% FPL (Medicaid expansion)">$51,957</td>
+                                    <td data-label="150% FPL">$56,475</td>
+                                    <td data-label="200% FPL">$75,300</td>
+                                    <td data-label="250% FPL">$94,125</td>
+                                    <td data-label="300% FPL">$112,950</td>
+                                    <td data-label="400% FPL (Subsidy cliff)">$150,600</td>
+                                </tr>
+                                <tr>
+                                    <td data-label="Household Size">6 people</td>
+                                    <td data-label="100% FPL">$43,150</td>
+                                    <td data-label="138% FPL (Medicaid expansion)">$59,547</td>
+                                    <td data-label="150% FPL">$64,725</td>
+                                    <td data-label="200% FPL">$86,300</td>
+                                    <td data-label="250% FPL">$107,875</td>
+                                    <td data-label="300% FPL">$129,450</td>
+                                    <td data-label="400% FPL (Subsidy cliff)">$172,600</td>
+                                </tr>
+                                <tr>
+                                    <td data-label="Household Size">7 people</td>
+                                    <td data-label="100% FPL">$48,650</td>
+                                    <td data-label="138% FPL (Medicaid expansion)">$67,137</td>
+                                    <td data-label="150% FPL">$72,975</td>
+                                    <td data-label="200% FPL">$97,300</td>
+                                    <td data-label="250% FPL">$121,625</td>
+                                    <td data-label="300% FPL">$145,950</td>
+                                    <td data-label="400% FPL (Subsidy cliff)">$194,600</td>
+                                </tr>
+                                <tr>
+                                    <td data-label="Household Size">8 people</td>
+                                    <td data-label="100% FPL">$54,150</td>
+                                    <td data-label="138% FPL (Medicaid expansion)">$74,727</td>
+                                    <td data-label="150% FPL">$81,225</td>
+                                    <td data-label="200% FPL">$108,300</td>
+                                    <td data-label="250% FPL">$135,375</td>
+                                    <td data-label="300% FPL">$162,450</td>
+                                    <td data-label="400% FPL (Subsidy cliff)">$216,600</td>
+                                </tr>
                             </tbody>
                         </table>
                     </div>
