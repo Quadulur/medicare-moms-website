@@ -1,0 +1,242 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg">
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+    <link rel="shortcut icon" href="/favicon.ico">
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+    <link rel="manifest" href="/site.webmanifest">
+    <meta name="theme-color" content="#5b8c6b">
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Consentimiento y Aviso TPMO - Medicare Moms</title>
+    <meta name="description" content="Texto completo del consentimiento TCPA, aviso TPMO e instrucciones para darte de baja del contacto de Medicare Moms y sus agentes licenciados.">
+    <meta name="robots" content="index, follow">
+    <link rel="canonical" href="https://medicaremoms.com/es/consentimiento/">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display&family=Nunito:wght@400;600;700;800&display=swap" rel="stylesheet">
+
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        html { scroll-behavior: smooth; }
+        body { font-family: 'Nunito', sans-serif; color: #2C2C2C; background-color: #FFFFFF; line-height: 1.6; }
+        .container { max-width: 1200px; margin: 0 auto; padding: 0 20px; }
+        .narrow-container { max-width: 900px; margin: 0 auto; padding: 0 20px; }
+        .section-padding { padding: 80px 0; }
+
+        h1, h2, h3, h4 { font-family: 'DM Serif Display', serif; font-weight: 700; line-height: 1.3; color: #2C2C2C; }
+        h1 { font-size: clamp(32px, 5vw, 56px); font-weight: 800; margin-bottom: 20px; }
+        h2 { font-size: clamp(24px, 3.5vw, 32px); margin-bottom: 20px; margin-top: 40px; color: #3D6B4A; }
+        h3 { font-size: 18px; color: #3D6B4A; margin-top: 24px; margin-bottom: 12px; }
+        p { font-size: 16px; color: #4A5568; margin-bottom: 16px; line-height: 1.8; }
+        ul { margin: 15px 0 15px 25px; padding: 0; }
+        ul li { margin-bottom: 10px; color: #4A5568; }
+        a { color: #5B8C6B; font-weight: 600; text-decoration: none; }
+        a:hover { text-decoration: underline; }
+
+        nav { position: sticky; top: 0; background-color: white; box-shadow: 0 4px 12px rgba(44, 44, 44, 0.08); z-index: 1000; }
+        .nav-container { display: flex; justify-content: space-between; align-items: center; padding: 15px 20px; }
+        .logo { display: flex; align-items: center; gap: 10px; font-family: 'DM Serif Display', serif; font-size: 22px; font-weight: 700; color: #5B8C6B; text-decoration: none; }
+        .logo img { height: 60px; width: auto; }
+        .nav-links { display: flex; gap: 35px; list-style: none; align-items: center; }
+        .nav-links a { color: #2C2C2C; text-decoration: none; font-weight: 500; font-size: 15px; }
+        .nav-links a:hover { color: #5B8C6B; }
+        .hamburger { display: none; flex-direction: column; cursor: pointer; gap: 6px; }
+        .hamburger span { width: 25px; height: 3px; background-color: #2C2C2C; border-radius: 2px; }
+        @media (max-width: 768px) {
+            .hamburger { display: flex; }
+            .nav-links { position: absolute; top: 70px; left: 0; right: 0; background-color: white; flex-direction: column; gap: 15px; padding: 30px 20px; display: none; }
+            .nav-links.active { display: flex; }
+        }
+
+        .lang-toggle { margin-left: 8px; }
+        .lang-link { text-decoration: none; font-size: 13px; font-weight: 600; color: #4A5568; padding: 4px 12px; border-radius: 20px; background: #E8F0E5; display: inline-flex; align-items: center; gap: 2px; }
+        .lang-link:hover { background: #5B8C6B; color: white; }
+        .lang-active { color: #5B8C6B; font-weight: 700; }
+        .lang-inactive { color: #999; font-weight: 400; }
+        .lang-link:hover .lang-active, .lang-link:hover .lang-inactive { color: white; }
+
+        .hero { background: linear-gradient(160deg, #F7F3ED 0%, #EDE8DF 40%, #E8F0E5 100%); padding: 80px 0 50px 0; text-align: center; }
+        .hero .lead { font-size: 18px; color: #3A4A63; margin: 0 auto; max-width: 700px; }
+
+        .legal-notice { background-color: #F7F3ED; border-left: 4px solid #5B8C6B; padding: 20px; margin: 30px 0; border-radius: 4px; font-size: 14px; color: #3D6B4A; }
+
+        .contact-box { background-color: #F7F3ED; padding: 25px; border-radius: 8px; margin-top: 40px; text-align: center; }
+        .contact-box h3 { margin-top: 0; color: #2C2C2C; }
+
+        footer { background-color: #2C2C2C; color: rgba(255, 255, 255, 0.8); padding: 50px 0 20px 0; }
+        .footer-content { display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 40px; margin-bottom: 40px; }
+        .footer-section h4 { color: white; margin-bottom: 20px; font-family: 'DM Serif Display', serif; font-size: 16px; }
+        .footer-section ul { list-style: none; margin: 0; }
+        .footer-section ul li { margin-bottom: 12px; }
+        .footer-section a { color: rgba(255, 255, 255, 0.7); text-decoration: none; font-size: 14px; font-weight: 400; }
+        .footer-section a:hover { color: #5B8C6B; }
+        .footer-logo { display: block; max-width: 180px; height: auto; margin-bottom: 15px; }
+        .footer-brand p { color: rgba(255, 255, 255, 0.6); font-size: 13px; margin: 8px 0; }
+        .footer-bottom { border-top: 1px solid rgba(255, 255, 255, 0.1); padding-top: 30px; text-align: center; font-size: 13px; color: rgba(255, 255, 255, 0.6); }
+        .legal-disclaimer { font-size: 12px; margin-top: 20px; line-height: 1.6; color: rgba(255, 255, 255, 0.5); }
+    </style>
+</head>
+<body>
+    <nav>
+        <div class="container">
+            <div class="nav-container">
+                <a href="/es/" class="logo"><img src="/logo-mark.svg" alt="Medicare Moms Logo">Medicare Moms</a>
+                <ul class="nav-links" id="navLinks">
+                    <li><a href="/es/servicios/">Servicios</a></li>
+                    <li><a href="/es/recursos/">Recursos</a></li>
+                    <li><a href="/es/blog/">Blog</a></li>
+                    <li><a href="/es/equipo/">Nuestro Equipo</a></li>
+                    <li><a href="/es/#contact">Contacto</a></li>
+                    <li class="lang-toggle">
+                        <a href="/consent-disclosure/" class="lang-link" title="View in English">
+                            <span class="lang-inactive">EN</span> / <span class="lang-active">ES</span>
+                        </a>
+                    </li>
+                </ul>
+                <div class="hamburger" id="hamburger">
+                    <span></span><span></span><span></span>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <section class="hero">
+        <div class="container">
+            <h1>Consentimiento y Aviso TPMO</h1>
+            <p class="lead">El acuerdo completo de consentimiento de contacto y el aviso de la Organización de Marketing Tercero (TPMO) de CMS.</p>
+        </div>
+    </section>
+
+    <section class="section-padding" style="background-color: white;">
+        <div class="narrow-container">
+            <div class="legal-notice">
+                <strong>Última actualización:</strong> abril de 2026. Cuando marcas la casilla de consentimiento en un formulario de contacto de Medicare Moms, este es el acuerdo completo que estás aceptando.
+            </div>
+
+            <h2>1. Consentimiento TCPA de Contacto</h2>
+            <p>Al marcar la casilla de consentimiento en cualquier formulario de contacto de Medicare Moms y proporcionar tu número de teléfono y dirección de correo electrónico, autorizas a Medicare Moms, a sus agentes de seguros licenciados y a sus afiliados a contactarte en los números de teléfono y direcciones de correo electrónico que proporcionaste.</p>
+
+            <h3>Cómo podemos contactarte</h3>
+            <ul>
+                <li>Llamadas telefónicas, incluso aquellas realizadas utilizando un sistema de marcación telefónica automática (ATDS) o voz artificial o pregrabada</li>
+                <li>Mensajes de texto (SMS/MMS), incluso aquellos enviados usando tecnología automatizada</li>
+                <li>Mensajes de correo electrónico</li>
+            </ul>
+
+            <h3>Sobre qué podemos contactarte</h3>
+            <ul>
+                <li>Planes Medicare Advantage</li>
+                <li>Planes Suplemento de Medicare (Medigap)</li>
+                <li>Planes de medicamentos recetados (Parte D)</li>
+                <li>Planes ACA / Marketplace</li>
+                <li>Seguros dental, visión, vida, accidente y enfermedad crítica</li>
+                <li>Períodos de inscripción, revisiones de planes y comunicaciones de marketing relacionadas</li>
+            </ul>
+
+            <h3>Tus derechos</h3>
+            <ul>
+                <li><strong>El consentimiento no es una condición de compra.</strong> No estás obligado a dar este consentimiento para comprar ningún producto de seguro con nosotros.</li>
+                <li><strong>Pueden aplicar tarifas de mensajes y datos</strong> a los mensajes de texto. La frecuencia de mensajes puede variar.</li>
+                <li><strong>Responde STOP</strong> a cualquier mensaje de texto para dejar de recibir mensajes SMS de nosotros en cualquier momento. Responde HELP para obtener ayuda.</li>
+                <li><strong>Puedes retirar tu consentimiento en cualquier momento</strong> enviando un correo a <a href="mailto:info@medicaremoms.com">info@medicaremoms.com</a>, llamando al <a href="tel:+14352461548">(435) 246-1548</a> o respondiendo STOP a un mensaje de texto.</li>
+            </ul>
+
+            <h2>2. Aviso TPMO (Medicare Advantage y Parte D)</h2>
+            <p>Los Centros de Servicios de Medicare y Medicaid (CMS) requieren que todas las Organizaciones de Marketing Terceras (TPMO) que vendan planes Medicare Advantage y Parte D proporcionen el siguiente aviso a cada consumidor:</p>
+
+            <div class="legal-notice" style="background-color: #EDF4E8; border-left-color: #3D6B4A;">
+                <p style="margin: 0; color: #3D6B4A; font-size: 15px; line-height: 1.7;"><strong>No ofrecemos todos los planes disponibles en tu área.</strong> Cualquier información que proporcionemos se limita a los planes que ofrecemos en tu área. Por favor contacta a Medicare.gov o al 1-800-MEDICARE para obtener información sobre todas tus opciones.</p>
+            </div>
+
+            <p>Medicare Moms es una agencia de seguros licenciada que representa a múltiples aseguradoras. Las aseguradoras y planes específicos que ofrecemos en tu área están disponibles a pedido. Siempre puedes comparar todos los planes disponibles para ti a través de Medicare.gov, tu Programa Estatal de Asistencia sobre Seguros de Salud (SHIP), o llamando al 1-800-MEDICARE (1-800-633-4227), 24 horas al día, 7 días a la semana. Usuarios TTY deben llamar al 1-877-486-2048.</p>
+
+            <h2>3. Sin Afiliación Gubernamental</h2>
+            <p>Medicare Moms no está conectada, afiliada ni respaldada por el gobierno de los EE. UU., el programa federal de Medicare ni ninguna agencia gubernamental. Medicare no ha revisado ni respaldado la información en este sitio web.</p>
+
+            <h2>4. Aviso de Grabación</h2>
+            <p>Para fines de aseguramiento de calidad, capacitación y cumplimiento, las llamadas hacia y desde Medicare Moms pueden ser grabadas. Al continuar una llamada con uno de nuestros agentes licenciados, consientes la grabación de esa llamada.</p>
+
+            <h2>5. Privacidad</h2>
+            <p>La información que proporcionas a Medicare Moms se maneja de acuerdo con nuestra <a href="/privacy/">Política de Privacidad</a>. No vendemos tu información personal. Compartimos información limitada solo con agentes licenciados de nuestro equipo, las aseguradoras a cuyos planes aplicas, y proveedores de servicios que nos ayudan a operar (como nuestro CRM y plataformas de comunicación), todos los cuales están obligados a proteger tu información.</p>
+
+            <h2>6. Cómo Darte de Baja</h2>
+            <p>Para detener todo contacto de Medicare Moms en cualquier momento:</p>
+            <ul>
+                <li>Responde <strong>STOP</strong> a cualquier mensaje de texto de nosotros</li>
+                <li>Haz clic en el enlace para <strong>darte de baja</strong> en cualquier correo electrónico de nosotros</li>
+                <li>Envía un correo a <a href="mailto:info@medicaremoms.com">info@medicaremoms.com</a> con "Unsubscribe" o "Darme de baja" en el asunto</li>
+                <li>Llama al <a href="tel:+14352461548">(435) 246-1548</a> durante horario de oficina (lunes a viernes, 9am–5pm MT)</li>
+            </ul>
+            <p>Las solicitudes de baja se procesan con rapidez. Aún podrías recibir mensajes directamente relacionados con una solicitud activa o una póliza que tengas.</p>
+
+            <div class="contact-box">
+                <h3>¿Preguntas?</h3>
+                <p><strong>Email:</strong> <a href="mailto:info@medicaremoms.com">info@medicaremoms.com</a></p>
+                <p><strong>Teléfono:</strong> <a href="tel:+14352461548">(435) 246-1548</a></p>
+                <p><strong>Horario:</strong> Lunes a viernes, 9am–5pm MT</p>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <div class="footer-brand">
+                        <img src="/logo.svg" alt="Medicare Moms - Cobertura Simplificada" class="footer-logo">
+                        <p>Una Empresa de Wildcat Insurance</p>
+                        <p>Ayudando a las familias a encontrar cobertura de salud que funciona.</p>
+                    </div>
+                </div>
+                <div class="footer-section">
+                    <h4>Enlaces Rápidos</h4>
+                    <ul>
+                        <li><a href="/es/">Inicio</a></li>
+                        <li><a href="/es/servicios/">Servicios</a></li>
+                        <li><a href="/es/recursos/">Recursos</a></li>
+                        <li><a href="/es/equipo/">Nuestro Equipo</a></li>
+                        <li><a href="/es/#contact">Contacto</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Legal</h4>
+                    <ul>
+                        <li><a href="/terms/">Términos de Servicio</a></li>
+                        <li><a href="/privacy/">Política de Privacidad</a></li>
+                        <li><a href="/es/consentimiento/">Consentimiento y Aviso TPMO</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Información de Contacto</h4>
+                    <ul>
+                        <li><a href="tel:+14352461548">(435) 246-1548</a></li>
+                        <li><a href="mailto:info@medicaremoms.com">info@medicaremoms.com</a></li>
+                        <li>Lunes a viernes, 9am–5pm MT</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2026 Medicare Moms. Todos los derechos reservados.</p>
+                <p style="margin-top: 8px;"><a href="/terms/" style="color: #999;">Términos de Servicio</a> · <a href="/privacy/" style="color: #999;">Política de Privacidad</a> · <a href="/es/consentimiento/" style="color: #999;">Consentimiento y TPMO</a></p>
+                <div class="legal-disclaimer">
+                    No ofrecemos todos los planes disponibles en tu área. Cualquier información que proporcionemos se limita a los planes que ofrecemos en tu área. Por favor contacta a Medicare.gov o al 1-800-MEDICARE para obtener información sobre todas tus opciones.
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        const hamburger = document.getElementById('hamburger');
+        const navLinks = document.getElementById('navLinks');
+        hamburger.addEventListener('click', () => {
+            hamburger.classList.toggle('active');
+            navLinks.classList.toggle('active');
+        });
+    </script>
+</body>
+</html>

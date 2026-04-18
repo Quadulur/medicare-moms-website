@@ -1349,12 +1349,10 @@
                     </div>
 
                     <div class="form-group" style="margin-top: 10px;">
-                        <label for="consent" style="display: flex; align-items: flex-start; gap: 10px; font-family: 'Nunito', sans-serif; font-weight: 400; font-size: 12px; line-height: 1.5; color: rgba(255, 255, 255, 0.9); cursor: pointer;">
+                        <label for="consent" style="display: flex; align-items: flex-start; gap: 10px; font-family: 'Nunito', sans-serif; font-weight: 400; font-size: 13px; line-height: 1.5; color: rgba(255, 255, 255, 0.9); cursor: pointer;">
                             <input type="checkbox" id="consent" name="consent" required style="margin-top: 3px; flex-shrink: 0; width: 16px; height: 16px; accent-color: #A8C5A0; cursor: pointer;">
                             <span>
-                                By checking this box and submitting this form, I authorize Medicare Moms and its licensed agents to contact me by phone call, text message (SMS), or email at the number and email address provided, including via automated technology and prerecorded messages, regarding Medicare Advantage, Medicare Supplement, prescription drug, and other insurance plans. I understand consent is not a condition of purchase, message and data rates may apply, and I can reply STOP to unsubscribe at any time.
-                                <br><br>
-                                <strong>TPMO Disclosure:</strong> We do not offer every plan available in your area. Any information we provide is limited to those plans we do offer in your area. Please contact Medicare.gov or 1-800-MEDICARE to get information on all of your options.
+                                I agree to be contacted by Medicare Moms and its licensed agents by phone, text, and email about insurance options, including via automated messages. Consent is not required to purchase. <a href="/consent-disclosure/" target="_blank" rel="noopener" style="color: #A8C5A0; text-decoration: underline;">View full terms &amp; TPMO disclosure</a>.
                             </span>
                         </label>
                     </div>
@@ -1482,7 +1480,7 @@
                 return;
             }
 
-            const consentText = 'By checking this box and submitting this form, I authorize Medicare Moms and its licensed agents to contact me by phone call, text message (SMS), or email at the number and email address provided, including via automated technology and prerecorded messages, regarding Medicare Advantage, Medicare Supplement, prescription drug, and other insurance plans. I understand consent is not a condition of purchase, message and data rates may apply, and I can reply STOP to unsubscribe at any time. TPMO Disclosure: We do not offer every plan available in your area. Any information we provide is limited to those plans we do offer in your area. Please contact Medicare.gov or 1-800-MEDICARE to get information on all of your options.';
+            const consentText = 'I agree to be contacted by Medicare Moms and its licensed agents by phone, text, and email about insurance options, including via automated messages. Consent is not required to purchase. Full terms & TPMO disclosure at https://medicaremoms.com/consent-disclosure/';
 
             const payload = {
                 firstName,
