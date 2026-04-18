@@ -975,7 +975,7 @@
       "name": "Medicare Moms",
       "description": "Licensed insurance agents helping families find the right Medicare, Medigap, ACA, and health insurance plans.",
       "url": "https://medicaremoms.com",
-      "telephone": "(800) 555-1234",
+      "telephone": "(435) 246-1548",
       "email": "info@medicaremoms.com",
       "parentOrganization": {
         "@type": "Organization",
@@ -1022,7 +1022,7 @@
                 <p class="lead">Over 5,000 happy seniors and families assisted in the last 20 years. Licensed in 40+ states including Puerto Rico. We'll walk you through every option, answer your questions, and help you choose coverage that fits your life.</p>
                 <div class="hero-buttons">
                     <button class="btn btn-primary" onclick="document.getElementById('contact').scrollIntoView({behavior: 'smooth'})">Find Your Plan</button>
-                    <a href="tel:+18005551234" class="btn btn-secondary">Call Us Today</a>
+                    <a href="tel:+14352461548" class="btn btn-secondary">Call Us Today</a>
                 </div>
             </div>
         </div>
@@ -1314,9 +1314,15 @@
                 </div>
 
                 <form class="contact-form" onsubmit="handleFormSubmit(event)">
-                    <div class="form-group">
-                        <label for="name">Full Name</label>
-                        <input type="text" id="name" name="name" required>
+                    <div class="form-row" style="display: grid; grid-template-columns: 1fr 1fr; gap: 12px;">
+                        <div class="form-group">
+                            <label for="firstName">First Name</label>
+                            <input type="text" id="firstName" name="firstName" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="lastName">Last Name</label>
+                            <input type="text" id="lastName" name="lastName" required>
+                        </div>
                     </div>
 
                     <div class="form-group">
@@ -1340,6 +1346,17 @@
                             <option value="Life Insurance">Life Insurance</option>
                             <option value="Not Sure">Not Sure, Help Me Decide</option>
                         </select>
+                    </div>
+
+                    <div class="form-group" style="margin-top: 10px;">
+                        <label for="consent" style="display: flex; align-items: flex-start; gap: 10px; font-family: 'Nunito', sans-serif; font-weight: 400; font-size: 12px; line-height: 1.5; color: rgba(255, 255, 255, 0.9); cursor: pointer;">
+                            <input type="checkbox" id="consent" name="consent" required style="margin-top: 3px; flex-shrink: 0; width: 16px; height: 16px; accent-color: #A8C5A0; cursor: pointer;">
+                            <span>
+                                By checking this box and submitting this form, I authorize Medicare Moms and its licensed agents to contact me by phone call, text message (SMS), or email at the number and email address provided, including via automated technology and prerecorded messages, regarding Medicare Advantage, Medicare Supplement, prescription drug, and other insurance plans. I understand consent is not a condition of purchase, message and data rates may apply, and I can reply STOP to unsubscribe at any time.
+                                <br><br>
+                                <strong>TPMO Disclosure:</strong> We do not offer every plan available in your area. Any information we provide is limited to those plans we do offer in your area. Please contact Medicare.gov or 1-800-MEDICARE to get information on all of your options.
+                            </span>
+                        </label>
                     </div>
 
                     <button type="submit" class="btn btn-primary" style="margin-top: 10px;">Get a Free Consultation</button>
@@ -1392,7 +1409,7 @@
                 <div class="footer-section">
                     <h4>Contact Info</h4>
                     <ul>
-                        <li><a href="tel:+18005551234">(800) 555-1234</a></li>
+                        <li><a href="tel:+14352461548">(435) 246-1548</a></li>
                         <li><a href="mailto:info@medicaremoms.com">info@medicaremoms.com</a></li>
                         <li>Monday–Friday, 9am–5pm MT</li>
                     </ul>
@@ -1454,22 +1471,30 @@
 
         async function handleFormSubmit(event) {
             event.preventDefault();
-            const name = document.getElementById('name').value.trim();
+            const firstName = document.getElementById('firstName').value.trim();
+            const lastName = document.getElementById('lastName').value.trim();
             const email = document.getElementById('email').value.trim();
             const phone = document.getElementById('phone').value.trim();
             const interested = document.getElementById('interested').value;
+            const consentEl = document.getElementById('consent');
+            if (!consentEl || !consentEl.checked) {
+                alert('Please check the consent box to continue.');
+                return;
+            }
 
-            const parts = name.split(/\s+/);
-            const firstName = parts[0] || '';
-            const lastName = parts.slice(1).join(' ') || '';
+            const consentText = 'By checking this box and submitting this form, I authorize Medicare Moms and its licensed agents to contact me by phone call, text message (SMS), or email at the number and email address provided, including via automated technology and prerecorded messages, regarding Medicare Advantage, Medicare Supplement, prescription drug, and other insurance plans. I understand consent is not a condition of purchase, message and data rates may apply, and I can reply STOP to unsubscribe at any time. TPMO Disclosure: We do not offer every plan available in your area. Any information we provide is limited to those plans we do offer in your area. Please contact Medicare.gov or 1-800-MEDICARE to get information on all of your options.';
 
             const payload = {
                 firstName,
                 lastName,
-                fullName: name,
+                fullName: (firstName + ' ' + lastName).trim(),
                 email,
                 phone,
                 interested,
+                consentGiven: true,
+                consentTimestamp: new Date().toISOString(),
+                consentText,
+                consentUserAgent: navigator.userAgent,
                 source: 'homepage_contact_en',
                 page: window.location.href,
                 language: 'en',
@@ -1861,7 +1886,7 @@
                 setTimeout(() => {
                     const responseDiv = document.createElement('div');
                     responseDiv.className = 'message received';
-                    responseDiv.innerHTML = `<div class="message-bubble">Thanks for reaching out! One of our agents will be in touch shortly. In the meantime, feel free to call us at (800) 555-1234 or email info@medicaremoms.com</div>`;
+                    responseDiv.innerHTML = `<div class="message-bubble">Thanks for reaching out! One of our agents will be in touch shortly. In the meantime, feel free to call us at (435) 246-1548 or email info@medicaremoms.com</div>`;
                     chatMessages.appendChild(responseDiv);
 
                     // Scroll to bottom

@@ -930,7 +930,7 @@
       "name": "Medicare Moms",
       "description": "Agentes de seguros licenciados ayudando a familias a encontrar planes de Medicare, Medigap, ACA y seguros de salud adecuados.",
       "url": "https://medicaremoms.com/es",
-      "telephone": "(800) 555-1234",
+      "telephone": "(435) 246-1548",
       "email": "info@medicaremoms.com",
       "parentOrganization": {
         "@type": "Organization",
@@ -1269,9 +1269,15 @@
                 </div>
 
                 <form class="contact-form" onsubmit="handleFormSubmit(event)">
-                    <div class="form-group">
-                        <label for="name">Nombre Completo</label>
-                        <input type="text" id="name" name="name" required>
+                    <div class="form-row" style="display: grid; grid-template-columns: 1fr 1fr; gap: 12px;">
+                        <div class="form-group">
+                            <label for="firstName">Nombre</label>
+                            <input type="text" id="firstName" name="firstName" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="lastName">Apellido</label>
+                            <input type="text" id="lastName" name="lastName" required>
+                        </div>
                     </div>
 
                     <div class="form-group">
@@ -1295,6 +1301,17 @@
                             <option value="Life Insurance">Seguro de Vida</option>
                             <option value="Not Sure">No Estoy Seguro, Ayúdame a Decidir</option>
                         </select>
+                    </div>
+
+                    <div class="form-group" style="margin-top: 10px;">
+                        <label for="consent" style="display: flex; align-items: flex-start; gap: 10px; font-family: 'Nunito', sans-serif; font-weight: 400; font-size: 12px; line-height: 1.5; color: rgba(255, 255, 255, 0.9); cursor: pointer;">
+                            <input type="checkbox" id="consent" name="consent" required style="margin-top: 3px; flex-shrink: 0; width: 16px; height: 16px; accent-color: #A8C5A0; cursor: pointer;">
+                            <span>
+                                Al marcar esta casilla y enviar este formulario, autorizo a Medicare Moms y a sus agentes licenciados a contactarme por llamada telefónica, mensaje de texto (SMS) o correo electrónico al número y dirección de correo proporcionados, incluyendo mediante tecnología automatizada y mensajes pregrabados, con respecto a planes de Medicare Advantage, Suplemento de Medicare, medicamentos recetados y otros seguros. Entiendo que el consentimiento no es una condición de compra, que pueden aplicar tarifas de mensajes y datos, y que puedo responder STOP para darme de baja en cualquier momento.
+                                <br><br>
+                                <strong>Aviso TPMO:</strong> No ofrecemos todos los planes disponibles en su área. Cualquier información que proporcionamos se limita a los planes que ofrecemos en su área. Comuníquese con Medicare.gov o 1-800-MEDICARE para obtener información sobre todas sus opciones.
+                            </span>
+                        </label>
                     </div>
 
                     <button type="submit" class="btn btn-primary" style="margin-top: 10px;">Obtén una Consulta Gratis</button>
@@ -1409,22 +1426,30 @@
 
         async function handleFormSubmit(event) {
             event.preventDefault();
-            const name = document.getElementById('name').value.trim();
+            const firstName = document.getElementById('firstName').value.trim();
+            const lastName = document.getElementById('lastName').value.trim();
             const email = document.getElementById('email').value.trim();
             const phone = document.getElementById('phone').value.trim();
             const interested = document.getElementById('interested').value;
+            const consentEl = document.getElementById('consent');
+            if (!consentEl || !consentEl.checked) {
+                alert('Por favor marca la casilla de consentimiento para continuar.');
+                return;
+            }
 
-            const parts = name.split(/\s+/);
-            const firstName = parts[0] || '';
-            const lastName = parts.slice(1).join(' ') || '';
+            const consentText = 'Al marcar esta casilla y enviar este formulario, autorizo a Medicare Moms y a sus agentes licenciados a contactarme por llamada telefónica, mensaje de texto (SMS) o correo electrónico al número y dirección de correo proporcionados, incluyendo mediante tecnología automatizada y mensajes pregrabados, con respecto a planes de Medicare Advantage, Suplemento de Medicare, medicamentos recetados y otros seguros. Entiendo que el consentimiento no es una condición de compra, que pueden aplicar tarifas de mensajes y datos, y que puedo responder STOP para darme de baja en cualquier momento. Aviso TPMO: No ofrecemos todos los planes disponibles en su área. Cualquier información que proporcionamos se limita a los planes que ofrecemos en su área. Comuníquese con Medicare.gov o 1-800-MEDICARE para obtener información sobre todas sus opciones.';
 
             const payload = {
                 firstName,
                 lastName,
-                fullName: name,
+                fullName: (firstName + ' ' + lastName).trim(),
                 email,
                 phone,
                 interested,
+                consentGiven: true,
+                consentTimestamp: new Date().toISOString(),
+                consentText,
+                consentUserAgent: navigator.userAgent,
                 source: 'homepage_contact_es',
                 page: window.location.href,
                 language: 'es',
