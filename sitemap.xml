@@ -148,6 +148,14 @@
         <priority>0.8</priority>
     </url>
 
+    <!-- ACA cheat sheet (agent/consumer reference) -->
+    <url>
+        <loc>https://medicaremoms.com/resources/aca-cheat-sheet-2026/</loc>
+        <lastmod>2026-04-18</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.8</priority>
+    </url>
+
     <!-- Individual blog posts -->
     <url>
         <loc>https://medicaremoms.com/blog/medicare-guide-2026/</loc>
