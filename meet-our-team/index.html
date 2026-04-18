@@ -109,6 +109,26 @@
             color: #5B8C6B;
         }
 
+        .lang-toggle { margin-left: 8px; }
+        .lang-link {
+            text-decoration: none;
+            font-size: 13px;
+            font-weight: 600;
+            color: #4A5568;
+            padding: 4px 12px;
+            border-radius: 20px;
+            background: #E8F0E5;
+            transition: all 0.3s ease;
+            display: inline-flex;
+            align-items: center;
+            gap: 2px;
+        }
+        .lang-link:hover { background: #5B8C6B; color: white; }
+        .lang-active { color: #5B8C6B; font-weight: 700; }
+        .lang-inactive { color: #999; font-weight: 400; }
+        .lang-link:hover .lang-active,
+        .lang-link:hover .lang-inactive { color: white; }
+
         /* Buttons */
         .btn {
             padding: 10px 20px;
@@ -840,6 +860,11 @@
                     <li><a href="/meet-our-team/">Meet Our Team</a></li>
                     <li><a href="/#contact">Contact</a></li>
                     <li><a href="/join-our-team/">Join Our Team</a></li>
+                    <li class="lang-toggle">
+                        <a href="/es/equipo/" class="lang-link" title="Ver en Español">
+                            <span class="lang-active">EN</span> / <span class="lang-inactive">ES</span>
+                        </a>
+                    </li>
                 </ul>
                 <div class="hamburger" id="hamburger">
                     <span></span>

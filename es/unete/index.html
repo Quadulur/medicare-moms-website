@@ -113,6 +113,42 @@
             color: var(--navy-dark);
         }
 
+        .logo {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            font-family: 'DM Serif Display', serif;
+            font-size: 22px;
+            font-weight: 700;
+            color: var(--sage-primary);
+            text-decoration: none;
+        }
+
+        .logo img {
+            height: 60px;
+            width: auto;
+        }
+
+        .lang-toggle { margin-left: 8px; }
+        .lang-link {
+            text-decoration: none;
+            font-size: 13px;
+            font-weight: 600;
+            color: #4A5568;
+            padding: 4px 12px;
+            border-radius: 20px;
+            background: #E8F0E5;
+            transition: all 0.3s ease;
+            display: inline-flex;
+            align-items: center;
+            gap: 2px;
+        }
+        .lang-link:hover { background: var(--sage-primary); color: var(--white); }
+        .lang-active { color: var(--sage-primary); font-weight: 700; }
+        .lang-inactive { color: #999; font-weight: 400; }
+        .lang-link:hover .lang-active,
+        .lang-link:hover .lang-inactive { color: var(--white); }
+
         .nav-links {
             display: flex;
             list-style: none;
@@ -900,19 +936,16 @@
 <body>
     <!-- Navigation -->
     <nav>
-        <div class="nav-logo"><img src="/logo-mark.svg" alt="Medicare Moms Logo">Medicare<span>Moms</span></div>
+        <a href="/es/" class="logo"><img src="/logo-mark.svg" alt="Medicare Moms Logo">Medicare Moms</a>
         <ul class="nav-links">
-            <li><a href="/es/servicios/">Servicios</a></li>
-            <li><a href="/es/recursos/">Recursos</a></li>
-            <li><a href="/blog/">Blog</a></li>
+            <li><a href="/es/">Inicio</a></li>
             <li><a href="/es/equipo/">Conoce Nuestro Equipo</a></li>
-            <li><a href="/#contact">Contacto</a></li>
-                            <li class="lang-toggle">
-                        <a href="/join-our-team/" class="lang-link" title="View in English">
-                            <span class="lang-inactive">EN</span> / <span class="lang-active">ES</span>
-                        </a>
-                    </li>
-                </ul>
+            <li class="lang-toggle">
+                <a href="/join-our-team/" class="lang-link" title="View in English">
+                    <span class="lang-inactive">EN</span> / <span class="lang-active">ES</span>
+                </a>
+            </li>
+        </ul>
         <div class="hamburger">
             <span></span>
             <span></span>
