@@ -319,64 +319,87 @@
             .sheet-footer .contact-block { text-align: left; }
         }
 
-        /* Phone: transform the wide FPL table into stacked household cards */
+        /* Phone: transform the wide FPL table into compact 2-column household cards */
         @media (max-width: 600px) {
             table.fpl-table { display: block; min-width: 0; width: 100%; }
             table.fpl-table thead { display: none; }
-            table.fpl-table tbody { display: block; padding: 10px; background: #F7F3ED; }
+            table.fpl-table tbody {
+                display: grid;
+                grid-template-columns: 1fr 1fr;
+                gap: 6px;
+                padding: 8px;
+                background: #F7F3ED;
+            }
             table.fpl-table tr {
                 display: block;
                 background: #FFFFFF;
                 border: 1px solid #D7DCD3;
-                border-radius: 8px;
-                margin-bottom: 10px;
+                border-radius: 6px;
+                margin: 0;
                 padding: 0;
                 overflow: hidden;
-                box-shadow: 0 1px 3px rgba(44, 44, 44, 0.04);
+                box-shadow: 0 1px 2px rgba(44, 44, 44, 0.04);
             }
-            table.fpl-table tr:last-child { margin-bottom: 0; }
             table.fpl-table td {
                 display: flex;
                 justify-content: space-between;
                 align-items: center;
-                padding: 8px 14px;
+                padding: 3px 7px;
                 border: none;
-                border-bottom: 1px solid #F0EAE0;
-                font-size: 13px;
+                font-size: 10.5px;
+                line-height: 1.25;
                 background: white !important;
                 color: #2C2C2C !important;
                 font-style: normal !important;
+                font-weight: 600;
+                white-space: nowrap;
             }
-            table.fpl-table td:last-child { border-bottom: none; }
             table.fpl-table td::before {
                 content: attr(data-label);
-                font-weight: 600;
+                font-weight: 500;
                 color: #5B8C6B;
-                font-size: 12px;
-                flex: 1;
-                padding-right: 12px;
+                font-size: 9.5px;
+                flex: 0 0 auto;
+                padding-right: 6px;
             }
+            /* Shorter labels on mobile via ::before content override */
+            table.fpl-table td[data-label="100% FPL"]::before { content: "100%"; }
+            table.fpl-table td[data-label^="138%"]::before { content: "138%"; }
+            table.fpl-table td[data-label="150% FPL"]::before { content: "150%"; }
+            table.fpl-table td[data-label="200% FPL"]::before { content: "200%"; }
+            table.fpl-table td[data-label="250% FPL"]::before { content: "250%"; }
+            table.fpl-table td[data-label="300% FPL"]::before { content: "300%"; }
+            table.fpl-table td[data-label^="400%"]::before { content: "400%"; }
+
             /* First cell becomes the card header */
             table.fpl-table td:first-child {
                 display: block;
                 background: linear-gradient(135deg, #5B8C6B 0%, #3D6B4A 100%) !important;
                 color: white !important;
                 font-family: 'DM Serif Display', serif;
-                font-size: 15px;
-                padding: 10px 14px;
+                font-size: 12px;
+                padding: 4px 7px;
                 text-align: center;
                 font-weight: 700;
-                border-bottom: 2px solid #3D6B4A;
+                line-height: 1.2;
+                white-space: nowrap;
             }
             table.fpl-table td:first-child::before { display: none; }
             table.fpl-table tbody tr:nth-child(even) td { background: white !important; }
-            /* Highlighted rows inside the cards keep their tint on the value side only */
+            /* Tint indicators for 138% Medicaid and 400% cliff */
             table.fpl-table td[data-label^="138%"] {
-                background: linear-gradient(to right, white 55%, #E8F0E5 55%) !important;
+                background: #E8F0E5 !important;
             }
+            table.fpl-table td[data-label^="138%"]::before { color: #3D6B4A; font-weight: 700; }
             table.fpl-table td[data-label^="400%"] {
-                background: linear-gradient(to right, white 55%, #FDF6E3 55%) !important;
+                background: #FDF6E3 !important;
             }
+            table.fpl-table td[data-label^="400%"]::before { color: #B56B3D; font-weight: 700; }
+        }
+
+        /* Very narrow phones (< 360px): single column fallback */
+        @media (max-width: 359px) {
+            table.fpl-table tbody { grid-template-columns: 1fr; }
         }
     </style>
 </head>
