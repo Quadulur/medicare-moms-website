@@ -403,6 +403,66 @@
         @media (max-width: 359px) {
             table.fpl-table tbody { grid-template-columns: 1fr; }
         }
+
+        /* Print override: force FPL table back to full-width tabular layout
+           even when printing from a phone (where mobile card CSS is active) */
+        @media print {
+            table.fpl-table { display: table !important; width: 100% !important; min-width: 0 !important; }
+            table.fpl-table thead { display: table-header-group !important; }
+            table.fpl-table tbody {
+                display: table-row-group !important;
+                grid-template-columns: none !important;
+                gap: 0 !important;
+                padding: 0 !important;
+                background: transparent !important;
+            }
+            table.fpl-table tr {
+                display: table-row !important;
+                background: transparent !important;
+                border: none !important;
+                border-radius: 0 !important;
+                margin: 0 !important;
+                box-shadow: none !important;
+                overflow: visible !important;
+            }
+            table.fpl-table td {
+                display: table-cell !important;
+                padding: 3px 5px !important;
+                border: none !important;
+                border-bottom: 1px solid #F0EAE0 !important;
+                font-size: 9.5px !important;
+                font-weight: 400 !important;
+                background: white !important;
+                color: #2C2C2C !important;
+                text-align: center !important;
+                white-space: normal !important;
+                line-height: 1.3 !important;
+            }
+            table.fpl-table td::before {
+                display: none !important;
+                content: none !important;
+            }
+            table.fpl-table td:first-child {
+                display: table-cell !important;
+                background: #FBF8F2 !important;
+                color: #2C2C2C !important;
+                font-family: 'Nunito', sans-serif !important;
+                font-size: 9.5px !important;
+                text-align: left !important;
+                padding: 3px 6px !important;
+                padding-left: 8px !important;
+                font-weight: 700 !important;
+                border-radius: 0 !important;
+                line-height: 1.3 !important;
+            }
+            table.fpl-table tbody tr:nth-child(even) td { background: #FAFAF7 !important; }
+            table.fpl-table tbody tr:nth-child(even) td:first-child { background: #F7F3ED !important; }
+            /* Remove mobile highlight tints on print (cleaner table look) */
+            table.fpl-table td[data-label^="138%"] { background: white !important; }
+            table.fpl-table tbody tr:nth-child(even) td[data-label^="138%"] { background: #FAFAF7 !important; }
+            table.fpl-table td[data-label^="400%"] { background: white !important; }
+            table.fpl-table tbody tr:nth-child(even) td[data-label^="400%"] { background: #FAFAF7 !important; }
+        }
     </style>
 </head>
 <body>
