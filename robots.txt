@@ -1,7 +1,24 @@
+# robots.txt for medicaremoms.com
+# Allow all well-behaved crawlers
+
 User-agent: *
 Allow: /
 
-Sitemap: https://medicaremoms.com/sitemap.xml
-
-# Disallow admin or non-public paths
+# Internal scratch / preview pages - not for indexing
+Disallow: /brand-preview/
 Disallow: /brand-preview.html
+
+# Old .html redirects (already redirect, but nudge crawlers to the clean URLs)
+Disallow: /services.html
+Disallow: /resources.html
+Disallow: /aca-resources.html
+Disallow: /meet-our-team.html
+Disallow: /join-our-team.html
+Disallow: /enroll-medicare.html
+Disallow: /needs-analysis.html
+Disallow: /privacy.html
+Disallow: /terms.html
+Disallow: /blog.html
+
+# Location of sitemap
+Sitemap: https://medicaremoms.com/sitemap.xml
