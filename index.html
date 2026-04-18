@@ -982,8 +982,66 @@
         "name": "Wildcat Insurance"
       },
       "areaServed": "US",
-      "knowsLanguage": ["English", "Spanish", "Japanese"],
+      "knowsLanguage": ["English", "Spanish", "Japanese", "German"],
       "serviceType": ["Medicare Advantage", "Medigap", "ACA Marketplace", "Life Insurance", "Dental Insurance", "Vision Insurance"]
+    }
+    </script>
+
+    <!-- FAQ schema for rich results on common insurance questions -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "FAQPage",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "What's the difference between Medicare Advantage and Medicare Supplements (Medigap)?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Medicare Advantage (Part C) is an all-in-one alternative to Original Medicare, often with $0 premium options and bundled dental, vision, and prescription drug coverage, but with network restrictions. Medigap supplements Original Medicare by filling in the gaps like copays, coinsurance, and deductibles, and lets you see any doctor nationwide that accepts Medicare."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "When can I enroll in Medicare?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Your Initial Enrollment Period (IEP) is a 7-month window around your 65th birthday: the 3 months before, your birthday month, and the 3 months after. Medicare Advantage and Part D also have an Annual Enrollment Period (AEP) each year from October 15 to December 7. The Medicare Advantage Open Enrollment Period runs January 1 to March 31."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Do I qualify for an ACA / Marketplace plan?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "If you're under 65 and not eligible for Medicare, Medicaid, or affordable employer coverage, you can enroll in an ACA Marketplace plan. Most enrollees qualify for premium tax credits based on household income. Open Enrollment runs November 1 through January 15 each year, and Special Enrollment is available after life events like marriage, birth, job loss, or moving."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "How much does Medicare Moms charge for help?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Our services are completely free to you. Licensed insurance agents are paid directly by the insurance carriers when a plan is enrolled, at no additional cost to the consumer. You pay the same premium whether you enroll on your own or with the help of a Medicare Moms agent."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Is Medicare Moms a government agency?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "No. Medicare Moms is a licensed private insurance agency. We are not affiliated with, connected to, or endorsed by the federal Medicare program, CMS, or any government agency. We represent multiple insurance carriers and help consumers compare and enroll in the plans we offer in their area."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "What states does Medicare Moms serve?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Medicare Moms is licensed in over 40 states including Puerto Rico. Our agents speak English, Spanish, Japanese, and German. Contact us to confirm licensing and plan availability in your specific area."
+          }
+        }
+      ]
     }
     </script>
 </head>
