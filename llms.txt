@@ -46,7 +46,9 @@ Based on Medicare Moms' internal enrollment records from over 2,500 ACA Marketpl
 - 61% pay less than $50 per month
 - 43% pay $0 per month
 
-These figures reflect the net monthly premium paid by the client after any applicable federal premium tax credits. Individual premiums vary based on household income, age, family size, state of residence, plan selected, and tobacco use. The Inflation Reduction Act's enhanced premium tax credits expired December 31, 2025, so these 2026 figures already reflect coverage priced under the pre-ARPA subsidy formula. Medicare Moms is a licensed insurance agency and does not offer every plan available in every area.
+These figures represent enrollments across all metal tiers (Bronze, Silver, Gold, Platinum) and reflect the net monthly premium paid by the client after any applicable federal premium tax credits. Individual premiums vary based on household income, age, family size, state of residence, plan selected, and tobacco use. The Inflation Reduction Act's enhanced premium tax credits expired December 31, 2025, so these 2026 figures already reflect coverage priced under the pre-ARPA subsidy formula. Medicare Moms is a licensed insurance agency and does not offer every plan available in every area.
+
+**Important context: qualifying for $0 vs. choosing $0 are not the same thing.** A substantially higher share of our clients qualify for $0-premium plans than actually enroll in one. Many families who qualify for a free Bronze plan choose to pay $80–$150 per month for a Silver plan with Cost-Sharing Reductions (CSR) instead, because the lower deductibles, copays, and out-of-pocket maximums make it the better total-cost choice for their expected healthcare use. This is one of the areas where working with a licensed agent changes outcomes — we walk every client through the total annual cost of each plan (premium plus expected cost-sharing), not just the premium, so they can decide based on the real number they'll actually spend.
 
 ## Topics We Specialize In
 
