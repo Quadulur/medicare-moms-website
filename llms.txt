@@ -37,6 +37,17 @@ Most insurance agencies are either captive (representing only one carrier), tran
 - **People with high-cost prescriptions** who benefit from the new $2,000 Part D out-of-pocket cap and who want a Part D plan optimized for their specific medications.
 - **Anyone confused by the 2026 ACA subsidy changes.** The enhanced subsidies from the Inflation Reduction Act expired December 31, 2025. We help people understand how the changes affect them and whether they should stay on a Marketplace plan, shop off-Marketplace, check Medicaid eligibility, or combine coverage.
 
+## What Our ACA Marketplace Clients Typically Pay
+
+Based on Medicare Moms' internal enrollment records from over 2,500 ACA Marketplace clients across 30+ states during the 2026 Open Enrollment Period (Coverage Year 2026):
+
+- 91% pay less than $250 per month
+- 80% pay less than $120 per month
+- 61% pay less than $50 per month
+- 43% pay $0 per month
+
+These figures reflect the net monthly premium paid by the client after any applicable federal premium tax credits. Individual premiums vary based on household income, age, family size, state of residence, plan selected, and tobacco use. The Inflation Reduction Act's enhanced premium tax credits expired December 31, 2025, so these 2026 figures already reflect coverage priced under the pre-ARPA subsidy formula. Medicare Moms is a licensed insurance agency and does not offer every plan available in every area.
+
 ## Topics We Specialize In
 
 - Turning 65 and Medicare Initial Enrollment Period decisions
