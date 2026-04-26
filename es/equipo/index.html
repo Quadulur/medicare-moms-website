@@ -642,6 +642,121 @@
                 font-size: 14px;
             }
         }
+
+        /* Agents Help Section */
+        .agents-help-section {
+            padding: 80px 20px 40px;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .help-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 20px;
+            margin-top: 30px;
+        }
+
+        .help-item {
+            display: flex;
+            align-items: flex-start;
+            gap: 15px;
+            background: #F7F3ED;
+            padding: 20px;
+            border-radius: 10px;
+            transition: all 0.3s ease;
+        }
+
+        .help-item:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 8px 20px rgba(44, 44, 44, 0.08);
+        }
+
+        .help-icon {
+            display: flex;
+            align-items: center;
+            flex-shrink: 0;
+            margin-top: 2px;
+        }
+
+        .help-item strong {
+            font-family: 'DM Serif Display', serif;
+            font-size: 16px;
+            color: #2C2C2C;
+            display: block;
+            margin-bottom: 5px;
+        }
+
+        .help-item p {
+            font-size: 14px;
+            color: #4A5568;
+            margin: 0;
+            line-height: 1.5;
+        }
+
+        @media (max-width: 768px) {
+            .help-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+
+        /* Services Dropdown */
+        .services-parent {
+            position: relative;
+        }
+        .services-dropdown {
+            display: none;
+            position: absolute;
+            top: 100%;
+            left: 50%;
+            transform: translateX(-50%);
+            background: white;
+            border-radius: 10px;
+            box-shadow: 0 10px 40px rgba(44, 44, 44, 0.15);
+            padding: 16px 0;
+            min-width: 240px;
+            z-index: 1000;
+            margin-top: 10px;
+        }
+        .services-dropdown::before {
+            content: '';
+            position: absolute;
+            top: -10px;
+            left: 0;
+            right: 0;
+            height: 10px;
+        }
+        .services-parent:hover .services-dropdown {
+            display: block;
+        }
+        .services-dropdown a {
+            display: block;
+            padding: 10px 24px;
+            color: #2C2C2C;
+            font-size: 13px;
+            font-weight: 500;
+            text-decoration: none;
+            white-space: nowrap;
+            transition: background 0.2s, color 0.2s;
+        }
+        .services-dropdown a:hover {
+            background: #F7F3ED;
+            color: #5B8C6B;
+        }
+        @media (max-width: 768px) {
+            .services-dropdown {
+                position: static;
+                transform: none;
+                box-shadow: none;
+                margin-top: 0;
+                padding: 0 0 0 20px;
+                border-radius: 0;
+            }
+            .services-parent:hover .services-dropdown {
+                display: block;
+            }
+        }
+
             .footer-logo { display: block; max-width: 180px; height: auto; margin-bottom: 15px; }
     </style>
 </head>
@@ -689,7 +804,7 @@
     <section class="team-section" id="team">
         <div class="section-header">
             <h2>Nuestros Agentes de Confianza</h2>
-            <p>Conoce a los profesionales dedicados que se comprometieron a encontrarte la solución de Medicare perfecta.</p>
+            <p>Conoce a los profesionales dedicados que se comprometieron a encontrarte la opción de seguro perfecta.</p>
         </div>
 
         <div class="team-grid">
@@ -1156,15 +1271,62 @@
     </section>
 
     <!-- ============================================
+         WHAT OUR AGENTS HELP WITH (SPANISH)
+         ============================================ -->
+    <section class="agents-help-section">
+        <div class="section-header">
+            <h2>Lo Que Nuestros Agentes Pueden Ayudarte</h2>
+            <p>Cada agente de Medicare Moms está capacitado en nuestro rango completo de productos. Aquí está lo que pueden ayudarte:</p>
+        </div>
+
+        <div class="help-grid">
+            <div class="help-item">
+                <span class="help-icon"><svg width="28" height="28" viewBox="0 0 48 48" fill="none" stroke="#5B8C6B" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><rect x="8" y="8" width="32" height="32" rx="4"/><line x1="24" y1="16" x2="24" y2="32"/><line x1="16" y1="24" x2="32" y2="24"/></svg></span>
+                <div>
+                    <strong>Medicare Advantage y Suplementos</strong>
+                    <p>Elegir el plan de Medicare correcto basado en tus médicos, medicamentos y presupuesto.</p>
+                </div>
+            </div>
+            <div class="help-item">
+                <span class="help-icon"><svg width="28" height="28" viewBox="0 0 48 48" fill="none" stroke="#5B8C6B" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="24" cy="12" r="5"/><path d="M14 40v-4a10 10 0 0 1 20 0v4"/><circle cx="10" cy="18" r="4"/><path d="M4 40v-3a7 7 0 0 1 9-6.7"/><circle cx="38" cy="18" r="4"/><path d="M44 40v-3a7 7 0 0 0-9-6.7"/></svg></span>
+                <div>
+                    <strong>Planes ACA/Marketplace</strong>
+                    <p>Encontrar cobertura familiar asequible con asistencia financiera basada en ingresos.</p>
+                </div>
+            </div>
+            <div class="help-item">
+                <span class="help-icon"><svg width="28" height="28" viewBox="0 0 48 48" fill="none" stroke="#5B8C6B" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M18 6c-3 0-5.5 1.5-7 4s-2 5-2 8c0 4 1.5 7 3 10.5s3 7 4 11.5c.4 1.5 2 1.5 2.4 0 .8-2 1.8-4.5 2.8-6.5.6-1 1.8-1 2.4 0 1 2 2 4.5 2.8 6.5.4 1.5 2 1.5 2.4 0 1-4.5 2.5-8 4-11.5s3-6.5 3-10.5c0-3-.5-5.5-2-8s-4-4-7-4c-2 0-3.5 1-6 3.5C21.5 7 20 6 18 6z"/></svg></span>
+                <div>
+                    <strong>Dental y Visión</strong>
+                    <p>Cobertura independiente o complementaria para la sonrisa y visión de toda la familia.</p>
+                </div>
+            </div>
+            <div class="help-item">
+                <span class="help-icon"><svg width="28" height="28" viewBox="0 0 48 48" fill="none" stroke="#5B8C6B" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M24 42s-18-10-18-22a9.5 9.5 0 0 1 18-4 9.5 9.5 0 0 1 18 4c0 12-18 22-18 22z"/></svg></span>
+                <div>
+                    <strong>Seguro de Vida</strong>
+                    <p>Protegiendo el futuro de tu familia con opciones de cobertura para cada presupuesto y necesidad.</p>
+                </div>
+            </div>
+            <div class="help-item">
+                <span class="help-icon"><svg width="28" height="28" viewBox="0 0 48 48" fill="none" stroke="#5B8C6B" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><polygon points="26,4 10,28 22,28 20,44 38,18 26,18"/></svg></span>
+                <div>
+                    <strong>Accidentes y Enfermedades Críticas</strong>
+                    <p>Tranquilidad adicional con cobertura complementaria de beneficio en efectivo.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ============================================
          CTA SECTION
          ============================================ -->
     <section class="cta-section">
         <div class="container">
-            <h2>Listo para Conectar con Uno de Nuestros Agentes?</h2>
-            <p>Nuestro equipo está aquí para brindarte orientación experta y apoyo personalizado en tu viaje de cobertura de seguros.</p>
+            <h2>¿Quieres Unirte a Nuestro Equipo?</h2>
+            <p>Siempre estamos buscando personas apasionadas y atentas que quieran ayudar a las familias a encontrar la cobertura correcta. Conviértete en parte de la familia Medicare Moms.</p>
             <div class="cta-buttons">
-                <a href="/#contacto" class="btn btn-primary">Agendar una Cita</a>
-                <a href="/es/servicios/" class="btn btn-secondary">Explorar Servicios</a>
+                <a href="/es/unete/" class="btn btn-primary">Conoce Más Sobre Carreras</a>
             </div>
         </div>
     </section>

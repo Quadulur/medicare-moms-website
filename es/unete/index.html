@@ -930,6 +930,96 @@
         .success-message.show {
             display: block;
         }
+
+        /* Products Section */
+        .products-section {
+            padding: 5rem 2rem;
+            background-color: var(--white);
+            max-width: 1200px;
+            margin: 0 auto;
+            text-align: center;
+        }
+
+        .products-section h2 {
+            font-family: 'DM Serif Display', serif;
+            font-size: 2.2rem;
+            color: var(--navy-dark);
+            margin-bottom: 1rem;
+        }
+
+        .section-subtitle {
+            color: var(--text-gray);
+            font-size: 1.1rem;
+            max-width: 650px;
+            margin: 0 auto 2.5rem;
+            line-height: 1.6;
+        }
+
+        .products-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 25px;
+            margin-bottom: 2rem;
+        }
+
+        .product-item {
+            background-color: var(--gray-light-bg);
+            padding: 30px 25px;
+            border-radius: 12px;
+            text-align: center;
+            transition: all 0.3s ease;
+            border: 2px solid transparent;
+        }
+
+        .product-item:hover {
+            border-color: var(--sage-primary);
+            transform: translateY(-5px);
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+        }
+
+        .product-icon {
+            margin-bottom: 12px;
+            display: flex;
+            justify-content: center;
+        }
+
+        .product-item h3 {
+            font-family: 'DM Serif Display', serif;
+            font-size: 1.2rem;
+            color: var(--navy-dark);
+            margin-bottom: 10px;
+        }
+
+        .product-item p {
+            font-size: 0.9rem;
+            color: var(--text-gray);
+            line-height: 1.6;
+            text-align: left;
+        }
+
+        .products-note {
+            background-color: #E8F0E5;
+            border-left: 4px solid var(--sage-primary);
+            padding: 20px 25px;
+            border-radius: 0 10px 10px 0;
+            text-align: left;
+            font-size: 0.95rem;
+            color: var(--navy-dark);
+            line-height: 1.6;
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        .products-note strong {
+            color: var(--sage-dark);
+        }
+
+        @media (max-width: 768px) {
+            .products-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+
             .footer-logo { display: block; max-width: 180px; height: auto; margin-bottom: 15px; }
     </style>
 </head>
@@ -970,7 +1060,7 @@
     <section id="opportunity" class="opportunity">
         <h2>La Oportunidad</h2>
         <div class="opportunity-content">
-            <p>Medicare Moms es una comunidad de mujeres construyendo negocios de seguros exitosos. No somos solo otra agencia, somos un movimiento de mamás, personas en transición de carrera y emprendedoras que están tomando control de sus futuros.</p>
+            <p>Medicare Moms es una comunidad de personas construyendo algo significativo — negocios de seguros exitosos que ayudan a familias. No somos solo otra agencia, somos un movimiento de padres, personas en transición de carrera y emprendedores que están tomando control de sus futuros.</p>
 
             <p>La industria de seguros está en auge. Una población envejecida significa que la inscripción en Medicare está en un máximo histórico. La Ley de Cuidado de Salud Asequible continúa abriendo puertas. Los productos complementarios (dental, visión, seguros de vida) están en demanda constante. Este es uno de los mejores momentos para entrar en el negocio de seguros.</p>
 
@@ -1033,6 +1123,73 @@
                 <h3>Múltiples Líneas de Productos</h3>
                 <p>Medicare. ACA. Medigap. Dental. Visión. Seguro de Vida. Diversifica tus corrientes de ingresos y ayuda a los clientes con todas sus necesidades de seguros en un lugar.</p>
             </div>
+        </div>
+    </section>
+
+    <!-- What You'll Be Offering (SPANISH) -->
+    <section id="products" class="products-section">
+        <h2>Lo Que Puedes Ofrecer</h2>
+        <p class="section-subtitle">Aquí está el menú completo. La palabra clave es <em>puedes</em>. Nunca estás atrapado con nosotros, así que vende lo que se ajuste a tu vida, sáltate lo que no, y mantén cualquier cartera de negocios que ya tengas en otro lugar.</p>
+
+        <div class="products-grid">
+            <div class="product-item">
+                <div class="product-icon"><svg width="42" height="42" viewBox="0 0 48 48" fill="none" stroke="#5B8C6B" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><rect x="8" y="8" width="32" height="32" rx="4"/><line x1="24" y1="16" x2="24" y2="32"/><line x1="16" y1="24" x2="32" y2="24"/></svg></div>
+                <h3>Medicare Advantage</h3>
+                <p>Planes todo-en-uno para personas mayores de 65 años. Agrupa hospital, médico, Rx, y frecuentemente dental/visión a $0 de prima. Este es tu producto principal durante la Inscripción Anual (15 Oct – 7 Dic).</p>
+            </div>
+
+            <div class="product-item">
+                <div class="product-icon"><svg width="42" height="42" viewBox="0 0 48 48" fill="none" stroke="#5B8C6B" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M24 4L8 12v10c0 12 6.8 22 16 26 9.2-4 16-14 16-26V12L24 4z"/><polyline points="17,24 22,29 31,20"/></svg></div>
+                <h3>Suplementos de Medicare</h3>
+                <p>Planes Medigap que cubren lo que Medicare Original no. Excelente para clientes que quieren ver cualquier médico en todo el país. Se vende todo el año, no necesita ventana de inscripción.</p>
+            </div>
+
+            <div class="product-item">
+                <div class="product-icon"><svg width="42" height="42" viewBox="0 0 48 48" fill="none" stroke="#5B8C6B" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="24" cy="12" r="5"/><path d="M14 40v-4a10 10 0 0 1 20 0v4"/><circle cx="10" cy="18" r="4"/><path d="M4 40v-3a7 7 0 0 1 9-6.7"/><circle cx="38" cy="18" r="4"/><path d="M44 40v-3a7 7 0 0 0-9-6.7"/></svg></div>
+                <h3>Salud Individual y Familiar</h3>
+                <p>Planes del Mercado ACA más seguros de salud privados y suscritos para individuos y familias menores de 65. La Inscripción Abierta va del 1 Nov – 15 Dic, más Inscripción Especial durante todo el año.</p>
+            </div>
+
+            <div class="product-item">
+                <div class="product-icon"><svg width="42" height="42" viewBox="0 0 48 48" fill="none" stroke="#5B8C6B" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M18 6c-3 0-5.5 1.5-7 4s-2 5-2 8c0 4 1.5 7 3 10.5s3 7 4 11.5c.4 1.5 2 1.5 2.4 0 .8-2 1.8-4.5 2.8-6.5.6-1 1.8-1 2.4 0 1 2 2 4.5 2.8 6.5.4 1.5 2 1.5 2.4 0 1-4.5 2.5-8 4-11.5s3-6.5 3-10.5c0-3-.5-5.5-2-8s-4-4-7-4c-2 0-3.5 1-6 3.5C21.5 7 20 6 18 6z"/></svg></div>
+                <h3>Dental, Visión y Complementario</h3>
+                <p>Cobertura para dientes y ojos, más planes de accidentes y enfermedades críticas que pagan efectivo directamente a los clientes. Ventas cruzadas fáciles que se emparejan con cualquier plan de salud.</p>
+            </div>
+
+            <div class="product-item">
+                <div class="product-icon"><svg width="42" height="42" viewBox="0 0 48 48" fill="none" stroke="#5B8C6B" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M24 42s-18-10-18-22a9.5 9.5 0 0 1 18-4 9.5 9.5 0 0 1 18 4c0 12-18 22-18 22z"/></svg></div>
+                <h3>Seguro de Vida y Cuidado a Largo Plazo</h3>
+                <p>Cobertura de vida a plazo, gastos finales y cuidado a largo plazo para proteger familias y planificar el futuro. Muchos planes no requieren examen médico.</p>
+            </div>
+
+            <div class="product-item">
+                <div class="product-icon"><svg width="42" height="42" viewBox="0 0 48 48" fill="none" stroke="#5B8C6B" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><rect x="6" y="16" width="36" height="26" rx="2"/><path d="M18 16v-4a2 2 0 0 1 2-2h8a2 2 0 0 1 2 2v4"/><line x1="6" y1="26" x2="42" y2="26"/></svg></div>
+                <h3>Grupos Pequeños y Grandes</h3>
+                <p>Planes de salud patrocinados por empleadores para negocios locales. Ingresos recurrentes y relaciones con clientes a largo plazo.</p>
+            </div>
+        </div>
+
+        <div class="products-note">
+            <p><strong>No somos una agencia cautiva.</strong> Eres libre de enfocarte solo en Medicare, solo en ACA/individual, o en cualquier mezcla que tenga sentido. ¿Ya vendes seguros de vida en otro lugar? Mantenlo allí, sin problema. Puedes hacer tanto o tan poco negocio como se ajuste a tu vida.</p>
+
+            <p style="margin-top: 16px;"><strong>Compensación flexible, opciones reales.</strong> Tenemos varios caminos dependiendo de lo que quieras de esto:</p>
+            <ul style="margin: 10px 0 16px 20px; line-height: 1.7;">
+                <li><strong>Solo comisión</strong> — quédate con más de lo que ganes</li>
+                <li><strong>Base + comisión</strong> — ingresos predecibles mientras construyes</li>
+                <li><strong>División de comisión</strong> donde proporcionamos los clientes potenciales y el negocio cálido</li>
+                <li><strong>Posiciones asalariadas</strong> para quienes quieren un salario fijo sin variabilidad de comisión</li>
+            </ul>
+            <p>Hablaremos sobre qué camino se ajusta a donde estás ahora, y siempre puedes cambiar de carril después.</p>
+
+            <p style="margin-top: 16px;"><strong>La mejor manera de comenzar es a tiempo parcial.</strong> Construye lentamente, aprende a tu propio ritmo, y acelera cuando estés listo. No hay cuotas que cumplir. Sin llamadas en frío. Sin perder el día en actividades que realmente no hagan crecer tu negocio.</p>
+
+            <p style="margin-top: 16px;"><strong>Herramientas que cubrimos para ti:</strong></p>
+            <ul style="margin: 10px 0 0 20px; line-height: 1.7;">
+                <li>Un CRM totalmente pagado para manejar tus clientes</li>
+                <li>Un número de teléfono de negocio dedicado</li>
+                <li>Software de seguimiento de negocios para que siempre sepas dónde te paras</li>
+                <li>Herramientas fáciles para dividir negocios y construir asociaciones de referencia</li>
+            </ul>
         </div>
     </section>
 
