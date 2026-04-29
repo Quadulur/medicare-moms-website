@@ -153,6 +153,97 @@
             margin-right: auto;
         }
 
+        /* ============ Experience Highlight Section ============ */
+        .experience-section {
+            max-width: 900px;
+            margin: 0 auto;
+            padding: 60px 20px 0;
+            text-align: center;
+        }
+
+        .experience-section h2 {
+            font-family: 'DM Serif Display', serif;
+            font-size: 32px;
+            font-weight: 700;
+            color: #2C2C2C;
+            margin-bottom: 12px;
+        }
+
+        .experience-section .experience-subtitle {
+            font-size: 16px;
+            color: #4A5568;
+            max-width: 600px;
+            margin: 0 auto 36px;
+            line-height: 1.7;
+        }
+
+        .experience-stats {
+            display: flex;
+            justify-content: center;
+            gap: 48px;
+            margin-bottom: 36px;
+            flex-wrap: wrap;
+        }
+
+        .experience-stat {
+            text-align: center;
+        }
+
+        .experience-stat .stat-number {
+            font-family: 'DM Serif Display', serif;
+            font-size: 48px;
+            color: #5B8C6B;
+            line-height: 1.1;
+        }
+
+        .experience-stat .stat-label {
+            font-size: 14px;
+            color: #4A5568;
+            font-weight: 600;
+            margin-top: 4px;
+        }
+
+        .experience-highlights {
+            display: flex;
+            justify-content: center;
+            gap: 24px;
+            flex-wrap: wrap;
+        }
+
+        .experience-highlight {
+            background: white;
+            border-radius: 12px;
+            padding: 24px 28px;
+            box-shadow: 0 2px 12px rgba(44,44,44,0.06);
+            max-width: 380px;
+            text-align: left;
+        }
+
+        .experience-highlight .highlight-name {
+            font-weight: 700;
+            color: #5B8C6B;
+            font-size: 16px;
+            margin-bottom: 6px;
+        }
+
+        .experience-highlight .highlight-detail {
+            font-size: 14px;
+            color: #4A5568;
+            line-height: 1.6;
+        }
+
+        @media (max-width: 600px) {
+            .experience-stats {
+                gap: 32px;
+            }
+            .experience-stat .stat-number {
+                font-size: 36px;
+            }
+            .experience-highlight {
+                max-width: 100%;
+            }
+        }
+
         /* ============ Team Section ============ */
         .team-section {
             padding: 80px 20px;
@@ -796,6 +887,36 @@
     <section class="hero">
         <h1>Conoce a las Medicare Moms</h1>
         <p>Mujeres reales. Experiencia real. Aquí para ayudarte a ti y a tu familia a encontrar la cobertura correcta.</p>
+    </section>
+
+    <!-- ============================================
+         EXPERIENCE HIGHLIGHT SECTION
+         ============================================ -->
+    <section class="experience-section">
+        <h2>Décadas de Experiencia en Seguros</h2>
+        <p class="experience-subtitle">Nuestro equipo no solo conoce Medicare — muchas de nuestras agentes construyeron sus carreras en múltiples áreas de seguros antes de especializarse en la cobertura que más te importa.</p>
+
+        <div class="experience-stats">
+            <div class="experience-stat">
+                <div class="stat-number">49+</div>
+                <div class="stat-label">Años Combinados en Seguros</div>
+            </div>
+            <div class="experience-stat">
+                <div class="stat-number">3+</div>
+                <div class="stat-label">Líneas de Experiencia en Seguros</div>
+            </div>
+        </div>
+
+        <div class="experience-highlights">
+            <div class="experience-highlight">
+                <div class="highlight-name">Michelle Bodin</div>
+                <div class="highlight-detail">Licenciada desde agosto de 1990 — más de 35 años en la industria. Michelle comenzó en seguros de Vida y Salud y luego obtuvo su licencia de Propiedad y Accidentes, aportando amplia experiencia en múltiples líneas de cobertura.</div>
+            </div>
+            <div class="experience-highlight">
+                <div class="highlight-name">Elizabeth Perez</div>
+                <div class="highlight-detail">Ayudando a familias a navegar Medicare desde 2013 — más de 13 años de experiencia dedicada guiando a personas mayores y sus seres queridos hacia los planes correctos.</div>
+            </div>
+        </div>
     </section>
 
     <!-- ============================================
