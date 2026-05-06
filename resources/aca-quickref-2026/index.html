@@ -1,0 +1,764 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg">
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+    <link rel="shortcut icon" href="/favicon.ico">
+    <meta name="theme-color" content="#5b8c6b">
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>2026 ACA Quick Reference (1-Page Cheat Sheet) | Medicare Moms</title>
+    <meta name="description" content="One-page agent cheat sheet: 2025 FPL chart for household sizes 1-8, expected premium contributions, Marketplace out-of-pocket maximums, Medicaid and CHIP lines, employer affordability, and APTC repayment limits for 2026 coverage year. Print-friendly.">
+    <link rel="canonical" href="https://medicaremoms.com/resources/aca-quickref-2026/">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display&family=Nunito:wght@400;600;700;800&display=swap" rel="stylesheet">
+
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        html { background: #EDE8DF; }
+        body {
+            font-family: 'Nunito', sans-serif;
+            color: #2C2C2C;
+            line-height: 1.4;
+            font-size: 13px;
+        }
+
+        /* ===== Screen layout: simulate a letter-size page ===== */
+        .page-wrap {
+            max-width: 940px;
+            margin: 24px auto 40px;
+            padding: 0 12px;
+        }
+        .page-toolbar {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 10px 16px;
+            background: white;
+            border-radius: 8px 8px 0 0;
+            box-shadow: 0 -2px 0 #5B8C6B inset;
+        }
+        .page-toolbar .back-link {
+            font-size: 13px;
+            color: #5B8C6B;
+            font-weight: 700;
+            text-decoration: none;
+        }
+        .page-toolbar .back-link:hover { text-decoration: underline; }
+        .page-toolbar .print-btn {
+            background: #5B8C6B;
+            color: white;
+            border: none;
+            padding: 8px 16px;
+            border-radius: 6px;
+            font-family: 'Nunito', sans-serif;
+            font-weight: 700;
+            font-size: 13px;
+            cursor: pointer;
+        }
+        .page-toolbar .print-btn:hover { background: #3D6B4A; }
+
+        .sheet {
+            width: 100%;
+            background: white;
+            box-shadow: 0 8px 30px rgba(0,0,0,0.08);
+            border-radius: 0 0 8px 8px;
+            padding: 22px 28px;
+            color: #2C2C2C;
+        }
+
+        /* ===== Header strip ===== */
+        .sheet-header {
+            display: grid;
+            grid-template-columns: auto 1fr auto;
+            align-items: center;
+            gap: 16px;
+            padding-bottom: 12px;
+            border-bottom: 3px solid #5B8C6B;
+            margin-bottom: 14px;
+        }
+        .sheet-header .brand { display: flex; align-items: center; gap: 10px; }
+        .sheet-header .brand img { height: 44px; width: auto; }
+        .sheet-header .brand-name {
+            font-family: 'DM Serif Display', serif;
+            font-size: 18px;
+            color: #3D6B4A;
+            line-height: 1;
+        }
+        .sheet-header .brand-name small {
+            display: block;
+            font-family: 'Nunito', sans-serif;
+            font-size: 10px;
+            color: #7A8FA4;
+            font-weight: 600;
+            letter-spacing: 0.5px;
+            margin-top: 3px;
+            text-transform: uppercase;
+        }
+        .sheet-header .title-block {
+            text-align: center;
+        }
+        .sheet-header h1 {
+            font-family: 'DM Serif Display', serif;
+            font-size: 22px;
+            color: #2C2C2C;
+            line-height: 1.1;
+            margin: 0;
+        }
+        .sheet-header .subtitle {
+            font-size: 11px;
+            color: #4A5568;
+            font-weight: 600;
+            letter-spacing: 0.3px;
+            text-transform: uppercase;
+            margin-top: 3px;
+        }
+        .sheet-header .meta-block {
+            text-align: right;
+            font-size: 10px;
+            color: #7A8FA4;
+            font-weight: 600;
+            letter-spacing: 0.3px;
+            line-height: 1.4;
+        }
+
+        /* ===== Grid layout ===== */
+        .grid-row {
+            display: grid;
+            gap: 10px;
+            margin-bottom: 10px;
+        }
+        .row-2 { grid-template-columns: 1fr 1fr; }
+        .row-3 { grid-template-columns: 1fr 1fr 1fr; }
+        .row-22 { grid-template-columns: 2fr 1fr; }
+
+        /* ===== Panels ===== */
+        .panel {
+            border: 1px solid #D7DCD3;
+            border-radius: 6px;
+            overflow: hidden;
+            display: flex;
+            flex-direction: column;
+        }
+        .panel-head {
+            background: #5B8C6B;
+            color: white;
+            padding: 6px 10px;
+            font-size: 11px;
+            font-weight: 800;
+            letter-spacing: 0.4px;
+            text-transform: uppercase;
+            font-family: 'Nunito', sans-serif;
+        }
+        .panel-head.accent { background: #3D6B4A; }
+        .panel-head.amber { background: #B56B3D; }
+        .panel-body { padding: 8px 10px; flex: 1; }
+        .panel-note {
+            background: #F7F3ED;
+            padding: 5px 10px;
+            font-size: 9.5px;
+            color: #6B7A8A;
+            border-top: 1px solid #E0D9CE;
+            line-height: 1.4;
+        }
+        .panel-note a { color: #5B8C6B; word-break: break-all; }
+
+        /* ===== Compact tables ===== */
+        table.ctable {
+            width: 100%;
+            border-collapse: collapse;
+            font-size: 11px;
+        }
+        table.ctable th {
+            background: #F7F3ED;
+            color: #3D6B4A;
+            font-weight: 700;
+            padding: 5px 6px;
+            text-align: center;
+            border-bottom: 1.5px solid #5B8C6B;
+            font-size: 10px;
+            letter-spacing: 0.2px;
+        }
+        table.ctable th:first-child {
+            text-align: left;
+            padding-left: 8px;
+        }
+        table.ctable td {
+            padding: 5px 6px;
+            text-align: center;
+            color: #2C2C2C;
+            font-variant-numeric: tabular-nums;
+            border-bottom: 1px solid #F0EAE0;
+            font-size: 11px;
+        }
+        table.ctable td:first-child {
+            text-align: left;
+            padding-left: 8px;
+            font-weight: 700;
+            background: #FBF8F2;
+            color: #2C2C2C;
+            white-space: nowrap;
+        }
+        table.ctable tbody tr:nth-child(even) td { background: #FAFAF7; }
+        table.ctable tbody tr:nth-child(even) td:first-child { background: #F7F3ED; }
+
+        /* Highlight row */
+        table.ctable tr.row-medicaid td { background: #E8F0E5 !important; color: #3D6B4A; font-style: italic; }
+        table.ctable tr.row-medicaid td:first-child { background: #D7E7CC !important; font-style: italic; }
+        table.ctable tr.row-cliff td { background: #FDF6E3 !important; color: #8A5A1B; }
+        table.ctable tr.row-cliff td:first-child { background: #F5E4CB !important; color: #8A5A1B; }
+
+        /* ===== Big stat blocks ===== */
+        .stat-card {
+            text-align: center;
+            padding: 10px 8px 12px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            height: 100%;
+        }
+        .stat-card .stat-num {
+            font-family: 'DM Serif Display', serif;
+            font-size: 32px;
+            color: #3D6B4A;
+            line-height: 1;
+        }
+        .stat-card .stat-num.sm { font-size: 24px; }
+        .stat-card .stat-label {
+            font-size: 10.5px;
+            color: #4A5568;
+            font-weight: 700;
+            margin-top: 4px;
+            text-transform: uppercase;
+            letter-spacing: 0.3px;
+        }
+        .stat-card .stat-desc {
+            font-size: 10px;
+            color: #6B7A8A;
+            margin-top: 4px;
+            line-height: 1.4;
+        }
+
+        /* ===== Small list ===== */
+        .mini-list {
+            font-size: 11px;
+            line-height: 1.55;
+        }
+        .mini-list li {
+            list-style: none;
+            padding-left: 14px;
+            position: relative;
+            margin-bottom: 3px;
+            color: #2C2C2C;
+        }
+        .mini-list li::before {
+            content: "▸";
+            position: absolute;
+            left: 0;
+            color: #5B8C6B;
+            font-weight: 700;
+        }
+        .mini-list li strong { color: #3D6B4A; }
+        .mini-list li small { color: #7A8FA4; font-size: 9.5px; display: block; margin-top: 1px; }
+
+        /* ===== Footer ===== */
+        .sheet-footer {
+            margin-top: 10px;
+            padding-top: 8px;
+            border-top: 2px solid #5B8C6B;
+            display: grid;
+            grid-template-columns: 2fr 1fr;
+            gap: 14px;
+            font-size: 9.5px;
+            color: #7A8FA4;
+            line-height: 1.5;
+        }
+        .sheet-footer strong { color: #3D6B4A; }
+        .sheet-footer a { color: #5B8C6B; word-break: break-all; }
+        .sheet-footer .contact-block {
+            text-align: right;
+            font-weight: 600;
+            color: #4A5568;
+        }
+        .sheet-footer .contact-block strong {
+            font-family: 'DM Serif Display', serif;
+            font-size: 13px;
+            display: block;
+            margin-bottom: 1px;
+            color: #3D6B4A;
+        }
+
+        /* ===== Print optimization ===== */
+        @media print {
+            @page {
+                size: letter;
+                margin: 0.35in;
+            }
+            html, body { background: white; font-size: 11px; }
+            .page-wrap { margin: 0; padding: 0; max-width: none; }
+            .page-toolbar { display: none; }
+            .sheet { box-shadow: none; border-radius: 0; padding: 0; }
+            .sheet-header { page-break-after: avoid; }
+            .panel { break-inside: avoid; page-break-inside: avoid; }
+            table.ctable { font-size: 10px; }
+            table.ctable td, table.ctable th { padding: 4px 5px; }
+            .stat-card .stat-num { font-size: 28px; }
+            .sheet-footer { font-size: 9px; }
+        }
+
+        /* ===== Responsive ===== */
+        @media (max-width: 720px) {
+            .sheet { padding: 16px 12px; }
+            .sheet-header { grid-template-columns: 1fr; text-align: center; }
+            .sheet-header .brand, .sheet-header .meta-block { justify-content: center; text-align: center; }
+            .row-2, .row-3, .row-22 { grid-template-columns: 1fr; }
+            .sheet-footer { grid-template-columns: 1fr; }
+            .sheet-footer .contact-block { text-align: left; }
+        }
+
+        /* Phone: transform the wide FPL table into compact 2-column household cards */
+        @media (max-width: 600px) {
+            table.fpl-table { display: block; min-width: 0; width: 100%; }
+            table.fpl-table thead { display: none; }
+            table.fpl-table tbody {
+                display: grid;
+                grid-template-columns: 1fr 1fr;
+                gap: 6px;
+                padding: 8px;
+                background: #F7F3ED;
+            }
+            table.fpl-table tr {
+                display: block;
+                background: #FFFFFF;
+                border: 1px solid #D7DCD3;
+                border-radius: 6px;
+                margin: 0;
+                padding: 0;
+                overflow: hidden;
+                box-shadow: 0 1px 2px rgba(44, 44, 44, 0.04);
+            }
+            table.fpl-table td {
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+                padding: 3px 7px;
+                border: none;
+                font-size: 10.5px;
+                line-height: 1.25;
+                background: white !important;
+                color: #2C2C2C !important;
+                font-style: normal !important;
+                font-weight: 600;
+                white-space: nowrap;
+            }
+            table.fpl-table td::before {
+                content: attr(data-label);
+                font-weight: 500;
+                color: #5B8C6B;
+                font-size: 9.5px;
+                flex: 0 0 auto;
+                padding-right: 6px;
+            }
+            /* Shorter labels on mobile via ::before content override */
+            table.fpl-table td[data-label="100% FPL"]::before { content: "100%"; }
+            table.fpl-table td[data-label^="138%"]::before { content: "138%"; }
+            table.fpl-table td[data-label="150% FPL"]::before { content: "150%"; }
+            table.fpl-table td[data-label="200% FPL"]::before { content: "200%"; }
+            table.fpl-table td[data-label="250% FPL"]::before { content: "250%"; }
+            table.fpl-table td[data-label="300% FPL"]::before { content: "300%"; }
+            table.fpl-table td[data-label^="400%"]::before { content: "400%"; }
+
+            /* First cell becomes the card header (all rows, odd + even) */
+            table.fpl-table tbody tr td:first-child,
+            table.fpl-table tbody tr:nth-child(even) td:first-child {
+                display: block;
+                background: linear-gradient(135deg, #5B8C6B 0%, #3D6B4A 100%) !important;
+                color: white !important;
+                font-family: 'DM Serif Display', serif;
+                font-size: 12px;
+                padding: 4px 7px;
+                text-align: center;
+                font-weight: 700;
+                line-height: 1.2;
+                white-space: nowrap;
+            }
+            table.fpl-table td:first-child::before { display: none; }
+            /* Tint indicators for 138% Medicaid and 400% cliff */
+            table.fpl-table tbody tr td[data-label^="138%"],
+            table.fpl-table tbody tr:nth-child(even) td[data-label^="138%"] {
+                background: #E8F0E5 !important;
+            }
+            table.fpl-table td[data-label^="138%"]::before { color: #3D6B4A; font-weight: 700; }
+            table.fpl-table tbody tr td[data-label^="400%"],
+            table.fpl-table tbody tr:nth-child(even) td[data-label^="400%"] {
+                background: #FDF6E3 !important;
+            }
+            table.fpl-table td[data-label^="400%"]::before { color: #B56B3D; font-weight: 700; }
+        }
+
+        /* Very narrow phones (< 360px): single column fallback */
+        @media (max-width: 359px) {
+            table.fpl-table tbody { grid-template-columns: 1fr; }
+        }
+
+        /* Print override: force FPL table back to full-width tabular layout
+           even when printing from a phone (where mobile card CSS is active) */
+        @media print {
+            table.fpl-table { display: table !important; width: 100% !important; min-width: 0 !important; }
+            table.fpl-table thead { display: table-header-group !important; }
+            table.fpl-table tbody {
+                display: table-row-group !important;
+                grid-template-columns: none !important;
+                gap: 0 !important;
+                padding: 0 !important;
+                background: transparent !important;
+            }
+            table.fpl-table tr {
+                display: table-row !important;
+                background: transparent !important;
+                border: none !important;
+                border-radius: 0 !important;
+                margin: 0 !important;
+                box-shadow: none !important;
+                overflow: visible !important;
+            }
+            table.fpl-table td {
+                display: table-cell !important;
+                padding: 3px 5px !important;
+                border: none !important;
+                border-bottom: 1px solid #F0EAE0 !important;
+                font-size: 9.5px !important;
+                font-weight: 400 !important;
+                background: white !important;
+                color: #2C2C2C !important;
+                text-align: center !important;
+                white-space: normal !important;
+                line-height: 1.3 !important;
+            }
+            table.fpl-table td::before {
+                display: none !important;
+                content: none !important;
+            }
+            table.fpl-table td:first-child {
+                display: table-cell !important;
+                background: #FBF8F2 !important;
+                color: #2C2C2C !important;
+                font-family: 'Nunito', sans-serif !important;
+                font-size: 9.5px !important;
+                text-align: left !important;
+                padding: 3px 6px !important;
+                padding-left: 8px !important;
+                font-weight: 700 !important;
+                border-radius: 0 !important;
+                line-height: 1.3 !important;
+            }
+            table.fpl-table tbody tr:nth-child(even) td { background: #FAFAF7 !important; }
+            table.fpl-table tbody tr:nth-child(even) td:first-child { background: #F7F3ED !important; }
+            /* Remove mobile highlight tints on print (cleaner table look) */
+            table.fpl-table td[data-label^="138%"] { background: white !important; }
+            table.fpl-table tbody tr:nth-child(even) td[data-label^="138%"] { background: #FAFAF7 !important; }
+            table.fpl-table td[data-label^="400%"] { background: white !important; }
+            table.fpl-table tbody tr:nth-child(even) td[data-label^="400%"] { background: #FAFAF7 !important; }
+        }
+    </style>
+</head>
+<body>
+    <div class="page-wrap">
+        <div class="page-toolbar">
+            <a href="/resources/aca-cheat-sheet-2026/" class="back-link">&larr; Full cheat sheet with explanations</a>
+            <button class="print-btn" onclick="window.print()">Print / Save as PDF</button>
+        </div>
+
+        <div class="sheet">
+            <!-- HEADER -->
+            <header class="sheet-header">
+                <div class="brand">
+                    <img src="/logo-mark.svg" alt="Medicare Moms">
+                    <div class="brand-name">
+                        Medicare Moms
+                        <small>Licensed Insurance Agency</small>
+                    </div>
+                </div>
+                <div class="title-block">
+                    <h1>2026 ACA Quick Reference</h1>
+                    <div class="subtitle">Coverage Year 2026 &middot; Agent Cheat Sheet</div>
+                </div>
+                <div class="meta-block">
+                    Uses 2025 FPL<br>
+                    Updated Apr 2026<br>
+                    48 states + DC
+                </div>
+            </header>
+
+            <!-- ROW: FPL TABLE (full width) -->
+            <div class="grid-row">
+                <section class="panel">
+                    <div class="panel-head">1. 2025 Federal Poverty Level &middot; Annual Household Income</div>
+                    <div class="panel-body" style="padding: 0;">
+                        <table class="ctable fpl-table">
+                            <thead>
+                                <tr>
+                                    <th>Household</th>
+                                    <th>100%</th>
+                                    <th>138%<br><span style="font-weight:400;font-size:8px;">Medicaid exp.</span></th>
+                                    <th>150%</th>
+                                    <th>200%</th>
+                                    <th>250%</th>
+                                    <th>300%</th>
+                                    <th>400%<br><span style="font-weight:400;font-size:8px;">Subsidy cliff</span></th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td data-label="Household Size">1 person</td>
+                                    <td data-label="100% FPL">$15,650</td>
+                                    <td data-label="138% FPL (Medicaid expansion)">$21,597</td>
+                                    <td data-label="150% FPL">$23,475</td>
+                                    <td data-label="200% FPL">$31,300</td>
+                                    <td data-label="250% FPL">$39,125</td>
+                                    <td data-label="300% FPL">$46,950</td>
+                                    <td data-label="400% FPL (Subsidy cliff)">$62,600</td>
+                                </tr>
+                                <tr>
+                                    <td data-label="Household Size">2 people</td>
+                                    <td data-label="100% FPL">$21,150</td>
+                                    <td data-label="138% FPL (Medicaid expansion)">$29,187</td>
+                                    <td data-label="150% FPL">$31,725</td>
+                                    <td data-label="200% FPL">$42,300</td>
+                                    <td data-label="250% FPL">$52,875</td>
+                                    <td data-label="300% FPL">$63,450</td>
+                                    <td data-label="400% FPL (Subsidy cliff)">$84,600</td>
+                                </tr>
+                                <tr>
+                                    <td data-label="Household Size">3 people</td>
+                                    <td data-label="100% FPL">$26,650</td>
+                                    <td data-label="138% FPL (Medicaid expansion)">$36,777</td>
+                                    <td data-label="150% FPL">$39,975</td>
+                                    <td data-label="200% FPL">$53,300</td>
+                                    <td data-label="250% FPL">$66,625</td>
+                                    <td data-label="300% FPL">$79,950</td>
+                                    <td data-label="400% FPL (Subsidy cliff)">$106,600</td>
+                                </tr>
+                                <tr>
+                                    <td data-label="Household Size">4 people</td>
+                                    <td data-label="100% FPL">$32,150</td>
+                                    <td data-label="138% FPL (Medicaid expansion)">$44,367</td>
+                                    <td data-label="150% FPL">$48,225</td>
+                                    <td data-label="200% FPL">$64,300</td>
+                                    <td data-label="250% FPL">$80,375</td>
+                                    <td data-label="300% FPL">$96,450</td>
+                                    <td data-label="400% FPL (Subsidy cliff)">$128,600</td>
+                                </tr>
+                                <tr>
+                                    <td data-label="Household Size">5 people</td>
+                                    <td data-label="100% FPL">$37,650</td>
+                                    <td data-label="138% FPL (Medicaid expansion)">$51,957</td>
+                                    <td data-label="150% FPL">$56,475</td>
+                                    <td data-label="200% FPL">$75,300</td>
+                                    <td data-label="250% FPL">$94,125</td>
+                                    <td data-label="300% FPL">$112,950</td>
+                                    <td data-label="400% FPL (Subsidy cliff)">$150,600</td>
+                                </tr>
+                                <tr>
+                                    <td data-label="Household Size">6 people</td>
+                                    <td data-label="100% FPL">$43,150</td>
+                                    <td data-label="138% FPL (Medicaid expansion)">$59,547</td>
+                                    <td data-label="150% FPL">$64,725</td>
+                                    <td data-label="200% FPL">$86,300</td>
+                                    <td data-label="250% FPL">$107,875</td>
+                                    <td data-label="300% FPL">$129,450</td>
+                                    <td data-label="400% FPL (Subsidy cliff)">$172,600</td>
+                                </tr>
+                                <tr>
+                                    <td data-label="Household Size">7 people</td>
+                                    <td data-label="100% FPL">$48,650</td>
+                                    <td data-label="138% FPL (Medicaid expansion)">$67,137</td>
+                                    <td data-label="150% FPL">$72,975</td>
+                                    <td data-label="200% FPL">$97,300</td>
+                                    <td data-label="250% FPL">$121,625</td>
+                                    <td data-label="300% FPL">$145,950</td>
+                                    <td data-label="400% FPL (Subsidy cliff)">$194,600</td>
+                                </tr>
+                                <tr>
+                                    <td data-label="Household Size">8 people</td>
+                                    <td data-label="100% FPL">$54,150</td>
+                                    <td data-label="138% FPL (Medicaid expansion)">$74,727</td>
+                                    <td data-label="150% FPL">$81,225</td>
+                                    <td data-label="200% FPL">$108,300</td>
+                                    <td data-label="250% FPL">$135,375</td>
+                                    <td data-label="300% FPL">$162,450</td>
+                                    <td data-label="400% FPL (Subsidy cliff)">$216,600</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <div class="panel-note">
+                        Households &gt; 8: add <strong>$5,500</strong> per additional person to 100% FPL. Alaska &amp; Hawai'i use separate guidelines. Source: <a href="https://aspe.hhs.gov/poverty-guidelines">HHS / ASPE</a>.
+                    </div>
+                </section>
+            </div>
+
+            <!-- ROW: Premium Contribution + MOOP side by side -->
+            <div class="grid-row row-2">
+                <!-- Premium Contribution -->
+                <section class="panel">
+                    <div class="panel-head">2. Expected Premium Contribution (% of Income)</div>
+                    <div class="panel-body" style="padding: 0;">
+                        <table class="ctable">
+                            <thead>
+                                <tr>
+                                    <th>Income</th>
+                                    <th>Contribution</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr><td>&lt; 133% FPL</td><td>2.10%</td></tr>
+                                <tr><td>133% FPL</td><td>3.14%</td></tr>
+                                <tr class="row-medicaid"><td>138% FPL</td><td>3.45%</td></tr>
+                                <tr><td>150% FPL</td><td>4.19%</td></tr>
+                                <tr><td>200% FPL</td><td>6.60%</td></tr>
+                                <tr><td>250% FPL</td><td>8.44%</td></tr>
+                                <tr><td>300&ndash;400% FPL</td><td>9.96%</td></tr>
+                                <tr class="row-cliff"><td>&gt; 400% FPL</td><td>Ineligible</td></tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <div class="panel-note">
+                        Reflects pre-ARPA formula (enhanced subsidies expired Dec 31, 2025). Source: <a href="https://www.irs.gov/pub/irs-drop/rp-25-25.pdf">IRS Rev Proc 2025-25</a>.
+                    </div>
+                </section>
+
+                <!-- MOOP -->
+                <section class="panel">
+                    <div class="panel-head">3. Out-of-Pocket Maximum (2026)</div>
+                    <div class="panel-body" style="padding: 0;">
+                        <table class="ctable">
+                            <thead>
+                                <tr>
+                                    <th>Plan</th>
+                                    <th>Income</th>
+                                    <th>Indiv.</th>
+                                    <th>Family</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr><td>Standard</td><td>Any</td><td>$10,600</td><td>$21,200</td></tr>
+                                <tr><td>CSR 73%</td><td>201&ndash;250%</td><td>$8,450</td><td>$16,900</td></tr>
+                                <tr><td>CSR 87%</td><td>151&ndash;200%</td><td>$3,500</td><td>$7,000</td></tr>
+                                <tr><td>CSR 94%</td><td>&le; 150%</td><td>$3,500</td><td>$7,000</td></tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <div class="panel-note">
+                        CSR Silver plans only. Bronze/Gold lose the benefit. Source: <a href="https://www.federalregister.gov/documents/2025/06/25/2025-11606/patient-protection-and-affordable-care-act-marketplace-integrity-and-affordability">Federal Register 2025-11606</a>.
+                    </div>
+                </section>
+            </div>
+
+            <!-- ROW: Medicaid/CHIP + Employer + Catastrophic -->
+            <div class="grid-row row-3">
+                <section class="panel">
+                    <div class="panel-head accent">4. Medicaid &amp; CHIP Eligibility</div>
+                    <div class="panel-body">
+                        <ul class="mini-list">
+                            <li><strong>Adults (expansion):</strong> up to 138% FPL<small>41 states + DC as of 2026</small></li>
+                            <li><strong>Adults (non-expansion):</strong> well below 100% FPL; childless adults often ineligible</li>
+                            <li><strong>Pregnant women:</strong> 138&ndash;200% FPL typical; up to 300% in some states</li>
+                            <li><strong>Children (Medicaid):</strong> 138% FPL min; many states higher</li>
+                            <li><strong>CHIP (children):</strong> 170&ndash;400% FPL depending on state (median ~255%)</li>
+                        </ul>
+                    </div>
+                    <div class="panel-note">
+                        State eligibility varies. Source: <a href="https://www.medicaid.gov/chip/eligibility-standards">Medicaid.gov</a>, <a href="https://www.kff.org">KFF</a>.
+                    </div>
+                </section>
+
+                <section class="panel">
+                    <div class="panel-head accent">5. Employer Coverage Affordability</div>
+                    <div class="panel-body">
+                        <div class="stat-card">
+                            <div class="stat-num">9.96%</div>
+                            <div class="stat-label">Unaffordability threshold</div>
+                            <div class="stat-desc">ESI unaffordable if employee share exceeds this % of household income. Family affordability based on cost of <em>family</em> coverage (not self-only).</div>
+                        </div>
+                    </div>
+                    <div class="panel-note">
+                        Source: <a href="https://www.irs.gov/pub/irs-drop/rp-25-25.pdf">IRS Rev Proc 2025-25</a>.
+                    </div>
+                </section>
+
+                <section class="panel">
+                    <div class="panel-head accent">6. Catastrophic (Age 30+)</div>
+                    <div class="panel-body">
+                        <div class="stat-card">
+                            <div class="stat-num">8.05%</div>
+                            <div class="stat-label">Affordability exemption</div>
+                            <div class="stat-desc">Enrollees 30+ may purchase a catastrophic plan if lowest-cost Marketplace or employer coverage exceeds this % of household income.</div>
+                        </div>
+                    </div>
+                    <div class="panel-note">
+                        Source: <a href="https://www.federalregister.gov/documents/2025/06/25/2025-11606/patient-protection-and-affordable-care-act-marketplace-integrity-and-affordability">Federal Register 2025-11606</a>.
+                    </div>
+                </section>
+            </div>
+
+            <!-- ROW: APTC repayment + Tax Filing -->
+            <div class="grid-row row-22">
+                <section class="panel">
+                    <div class="panel-head amber">7. APTC Repayment Limits &middot; Tax Year 2025</div>
+                    <div class="panel-body" style="padding: 0;">
+                        <table class="ctable">
+                            <thead>
+                                <tr>
+                                    <th>Income</th>
+                                    <th>Single</th>
+                                    <th>All Other</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr><td>&lt; 200% FPL</td><td>$375</td><td>$750</td></tr>
+                                <tr><td>200&ndash;299% FPL</td><td>$975</td><td>$1,950</td></tr>
+                                <tr><td>300&ndash;399% FPL</td><td>$1,625</td><td>$3,250</td></tr>
+                                <tr class="row-cliff"><td>&ge; 400% FPL</td><td>No cap</td><td>No cap</td></tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <div class="panel-note">
+                        <strong>TY 2026 warning:</strong> P.L. 119-21 eliminates repayment caps entirely starting tax year 2026. Source: <a href="https://www.irs.gov/pub/irs-drop/rp-24-40.pdf">IRS Rev Proc 2024-40</a>.
+                    </div>
+                </section>
+
+                <section class="panel">
+                    <div class="panel-head amber">8. Tax Filing Thresholds &middot; TY 2025</div>
+                    <div class="panel-body">
+                        <ul class="mini-list">
+                            <li><strong>Single:</strong> $15,750</li>
+                            <li><strong>Head of Household:</strong> $23,625</li>
+                            <li><strong>MFJ (both &lt; 65):</strong> $31,500</li>
+                            <li><strong>Qualifying Surviving Spouse:</strong> $31,500</li>
+                            <li><strong>Married Filing Separately:</strong> any gross income</li>
+                            <li style="margin-top:4px;color:#B56B3D;"><strong>APTC note:</strong> Must file + Form 8962 regardless of thresholds.</li>
+                        </ul>
+                    </div>
+                </section>
+            </div>
+
+            <!-- FOOTER -->
+            <div class="sheet-footer">
+                <div>
+                    <strong>Sources:</strong> HHS/ASPE 2025 Poverty Guidelines &middot; IRS Rev Proc 2025-25 (<a href="https://www.irs.gov/pub/irs-drop/rp-25-25.pdf">CY2026 ACA</a>) &middot; IRS Rev Proc 2024-40 (<a href="https://www.irs.gov/pub/irs-drop/rp-24-40.pdf">TY2025 inflation</a>) &middot; 2026 Marketplace Integrity &amp; Affordability Rule (<a href="https://www.federalregister.gov/documents/2025/06/25/2025-11606/patient-protection-and-affordable-care-act-marketplace-integrity-and-affordability">Fed Reg 2025-11606</a>) &middot; Public Law 119-21 (One Big Beautiful Bill Act) &middot; Medicaid.gov &middot; KFF. &nbsp; <strong>Disclaimer:</strong> Figures accurate as of April 2026 for 48 contiguous states and D.C. State-level Medicaid/CHIP rules vary; verify with primary source before any enrollment or tax filing decision. Medicare Moms is a licensed insurance agency, not affiliated with any government agency.
+                </div>
+                <div class="contact-block">
+                    <strong>Medicare Moms</strong>
+                    (435) 246-1548<br>
+                    info@medicaremoms.com<br>
+                    medicaremoms.com
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

@@ -1,0 +1,1967 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!-- Favicon (auto-inserted by add-favicon.py) -->
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg">
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+    <link rel="shortcut icon" href="/favicon.ico">
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+    <link rel="manifest" href="/site.webmanifest">
+    <meta name="theme-color" content="#5b8c6b">
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Join Our Team - Medicare Moms</title>
+    <meta name="description" content="Join the Medicare Moms team. We're looking for passionate licensed insurance agents who want to help families find the right coverage. Flexible schedule, competitive commissions.">
+    <meta name="keywords" content="insurance agent jobs, Medicare agent careers, insurance career opportunities, join Medicare Moms, insurance agent recruitment">
+    <meta property="og:title" content="Join Our Team - Medicare Moms">
+    <meta property="og:description" content="Join the Medicare Moms team. We're looking for passionate licensed insurance agents who want to help families find the right coverage. Flexible schedule, competitive commissions.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://medicaremoms.com/join-our-team/">
+    <meta property="og:site_name" content="Medicare Moms">
+    <link rel="canonical" href="https://medicaremoms.com/join-our-team/">
+    <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display&family=Nunito:wght@400;600;700;800&display=swap" rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        :root {
+            --sage-primary: #5B8C6B;
+            --sage-dark: #3D6B4A;
+            --sage-light: #A8C5A0;
+            --terracotta: #D4956B;
+            --navy-dark: #2C2C2C;
+            --navy-gray: #4A5568;
+            --gray-light-bg: #F7F3ED;
+            --white: #FFFFFF;
+            --text-dark: #2C2C2C;
+            --text-gray: #5A6B7A;
+            --shadow-lg: 0 10px 30px rgba(44, 44, 44, 0.1);
+            --shadow-md: 0 4px 12px rgba(44, 44, 44, 0.08);
+            --border-radius: 8px;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family: 'Nunito', sans-serif;
+            color: var(--text-dark);
+            background-color: var(--white);
+            line-height: 1.6;
+        }
+
+        h1, h2, h3, h4, h5, h6 {
+            font-family: 'DM Serif Display', serif;
+            font-weight: 600;
+            color: var(--navy-dark);
+        }
+
+        h1 {
+            font-weight: 800;
+            font-size: 3.5rem;
+            line-height: 1.2;
+        }
+
+        h2 {
+            font-size: 2.5rem;
+            margin-bottom: 1.5rem;
+        }
+
+        h3 {
+            font-size: 1.5rem;
+            margin-bottom: 1rem;
+        }
+
+        /* Navigation */
+        nav {
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            background-color: var(--white);
+            z-index: 1000;
+            box-shadow: var(--shadow-md);
+            padding: 1rem 2rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .nav-logo {
+            font-family: 'DM Serif Display', serif;
+            font-size: 1.5rem;
+            font-weight: 700;
+            color: var(--sage-primary);
+        }
+
+        .nav-logo span {
+            color: var(--navy-dark);
+        }
+
+        .logo {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            font-family: 'DM Serif Display', serif;
+            font-size: 22px;
+            font-weight: 700;
+            color: var(--sage-primary);
+            text-decoration: none;
+        }
+
+        .logo img {
+            height: 60px;
+            width: auto;
+        }
+
+        .lang-toggle { margin-left: 8px; }
+        .lang-link {
+            text-decoration: none;
+            font-size: 13px;
+            font-weight: 600;
+            color: #4A5568;
+            padding: 4px 12px;
+            border-radius: 20px;
+            background: #E8F0E5;
+            transition: all 0.3s ease;
+            display: inline-flex;
+            align-items: center;
+            gap: 2px;
+        }
+        .lang-link:hover { background: var(--sage-primary); color: var(--white); }
+        .lang-active { color: var(--sage-primary); font-weight: 700; }
+        .lang-inactive { color: #999; font-weight: 400; }
+        .lang-link:hover .lang-active,
+        .lang-link:hover .lang-inactive { color: var(--white); }
+
+        .nav-links {
+            display: flex;
+            list-style: none;
+            gap: 2rem;
+            align-items: center;
+        }
+
+        .nav-links a {
+            text-decoration: none;
+            color: var(--text-dark);
+            font-weight: 500;
+            font-size: 0.95rem;
+            transition: color 0.3s ease;
+        }
+
+        .nav-links a:hover {
+            color: var(--sage-primary);
+        }
+
+        .nav-links .cta-button {
+            background: linear-gradient(135deg, var(--sage-primary), var(--sage-dark));
+            color: var(--white);
+            padding: 0.75rem 1.5rem;
+            border-radius: 6px;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .nav-links .cta-button:hover {
+            transform: translateY(-2px);
+            box-shadow: var(--shadow-md);
+        }
+
+        .hamburger {
+            display: none;
+            flex-direction: column;
+            cursor: pointer;
+            gap: 5px;
+        }
+
+        .hamburger span {
+            width: 25px;
+            height: 3px;
+            background-color: var(--navy-dark);
+            border-radius: 2px;
+            transition: 0.3s;
+        }
+
+        .hamburger.active span:nth-child(1) {
+            transform: rotate(45deg) translate(8px, 8px);
+        }
+
+        .hamburger.active span:nth-child(2) {
+            opacity: 0;
+        }
+
+        .hamburger.active span:nth-child(3) {
+            transform: rotate(-45deg) translate(7px, -7px);
+        }
+
+        /* Hero Section */
+        .hero {
+            margin-top: 70px;
+            background: linear-gradient(160deg, #F7F3ED 0%, #EDE8DF 40%, #E8F0E5 100%);
+            padding: 5rem 2rem;
+            text-align: center;
+            animation: fadeIn 0.8s ease;
+        }
+
+        .hero-content {
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        .hero h1 {
+            color: var(--navy-dark);
+            margin-bottom: 1rem;
+            animation: slideUp 0.8s ease 0.2s backwards;
+        }
+
+        .hero .subheadline {
+            font-size: 1.3rem;
+            color: var(--text-gray);
+            margin-bottom: 2rem;
+            animation: slideUp 0.8s ease 0.4s backwards;
+        }
+
+        .hero .secondary-text {
+            font-size: 1rem;
+            color: var(--sage-primary);
+            font-weight: 600;
+            margin-top: 1.5rem;
+            animation: slideUp 0.8s ease 0.6s backwards;
+        }
+
+        .hero-buttons {
+            display: flex;
+            gap: 1rem;
+            justify-content: center;
+            flex-wrap: wrap;
+            margin-top: 2rem;
+            animation: slideUp 0.8s ease 0.5s backwards;
+        }
+
+        /* Buttons */
+        .btn {
+            padding: 1rem 2rem;
+            border: none;
+            border-radius: 8px;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            font-family: 'Nunito', sans-serif;
+            font-size: 1rem;
+        }
+
+        .btn-primary {
+            background: linear-gradient(135deg, var(--sage-primary), var(--sage-dark));
+            color: var(--white);
+        }
+
+        .btn-primary:hover {
+            transform: translateY(-3px);
+            box-shadow: var(--shadow-lg);
+        }
+
+        .btn-secondary {
+            background-color: var(--white);
+            color: var(--sage-primary);
+            border: 2px solid var(--sage-primary);
+        }
+
+        .btn-secondary:hover {
+            background-color: var(--gray-light-bg);
+            transform: translateY(-3px);
+        }
+
+        /* Sections */
+        section {
+            padding: 5rem 2rem;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        section h2 {
+            text-align: center;
+            margin-bottom: 3rem;
+            position: relative;
+            padding-bottom: 1.5rem;
+        }
+
+        section h2::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 80px;
+            height: 4px;
+            background: linear-gradient(90deg, var(--sage-primary), var(--sage-dark));
+            border-radius: 2px;
+        }
+
+        /* Opportunity Section */
+        .opportunity {
+            background-color: var(--white);
+        }
+
+        .opportunity-content {
+            max-width: 900px;
+            margin: 0 auto;
+            text-align: center;
+        }
+
+        .opportunity p {
+            font-size: 1.1rem;
+            color: var(--text-gray);
+            margin-bottom: 1.5rem;
+            line-height: 1.8;
+        }
+
+        .opportunity-highlight {
+            background-color: var(--gray-light-bg);
+            padding: 2rem;
+            border-radius: 12px;
+            margin-top: 2rem;
+            border-left: 5px solid var(--sage-primary);
+        }
+
+        /* Benefits Grid */
+        .benefits-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+            margin-top: 3rem;
+        }
+
+        .benefit-card {
+            background-color: var(--white);
+            border: 1px solid #E8EDF5;
+            border-radius: 12px;
+            padding: 2rem;
+            text-align: center;
+            transition: all 0.3s ease;
+            animation: fadeInUp 0.6s ease forwards;
+            opacity: 0;
+        }
+
+        .benefit-card:nth-child(1) { animation-delay: 0.1s; }
+        .benefit-card:nth-child(2) { animation-delay: 0.2s; }
+        .benefit-card:nth-child(3) { animation-delay: 0.3s; }
+        .benefit-card:nth-child(4) { animation-delay: 0.4s; }
+        .benefit-card:nth-child(5) { animation-delay: 0.5s; }
+        .benefit-card:nth-child(6) { animation-delay: 0.6s; }
+        .benefit-card:nth-child(7) { animation-delay: 0.7s; }
+        .benefit-card:nth-child(8) { animation-delay: 0.8s; }
+
+        .benefit-card:hover {
+            box-shadow: var(--shadow-lg);
+            transform: translateY(-8px);
+            border-color: var(--sage-primary);
+        }
+
+        .benefit-icon {
+            margin-bottom: 1rem;
+            display: flex;
+            justify-content: center;
+        }
+
+        .benefit-card h3 {
+            color: var(--navy-dark);
+            margin-bottom: 1rem;
+            font-size: 1.3rem;
+        }
+
+        .benefit-card p {
+            color: var(--text-gray);
+            font-size: 0.95rem;
+            line-height: 1.6;
+        }
+
+        /* Benefits Section */
+        .benefits {
+            background-color: var(--gray-light-bg);
+        }
+
+        /* Success Stories */
+        .success-stories {
+            background-color: var(--white);
+        }
+
+        .stories-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+            gap: 2rem;
+            margin-top: 3rem;
+        }
+
+        .story-card {
+            background-color: var(--white);
+            border-radius: 12px;
+            overflow: hidden;
+            box-shadow: var(--shadow-md);
+            transition: all 0.3s ease;
+            animation: fadeInUp 0.6s ease;
+        }
+
+        .story-card:hover {
+            box-shadow: var(--shadow-lg);
+            transform: translateY(-5px);
+        }
+
+        .story-avatar {
+            width: 100%;
+            height: 200px;
+            background: linear-gradient(135deg, var(--sage-light), var(--sage-primary));
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .story-content {
+            padding: 2rem;
+        }
+
+        .story-quote {
+            font-style: italic;
+            color: var(--text-gray);
+            margin-bottom: 1.5rem;
+            font-size: 0.95rem;
+            line-height: 1.6;
+        }
+
+        .story-name {
+            font-weight: 700;
+            color: var(--navy-dark);
+            margin-bottom: 0.5rem;
+        }
+
+        .story-info {
+            font-size: 0.85rem;
+            color: var(--text-gray);
+            margin-bottom: 1rem;
+        }
+
+        .story-milestone {
+            background-color: var(--gray-light-bg);
+            color: var(--sage-primary);
+            padding: 0.5rem 1rem;
+            border-radius: 6px;
+            display: inline-block;
+            font-weight: 600;
+            font-size: 0.9rem;
+        }
+
+        /* How It Works */
+        .how-it-works {
+            background-color: var(--gray-light-bg);
+        }
+
+        .steps-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 2rem;
+            margin-top: 3rem;
+        }
+
+        .step {
+            text-align: center;
+            animation: fadeInUp 0.6s ease forwards;
+            opacity: 0;
+        }
+
+        .step:nth-child(1) { animation-delay: 0.1s; }
+        .step:nth-child(2) { animation-delay: 0.2s; }
+        .step:nth-child(3) { animation-delay: 0.3s; }
+        .step:nth-child(4) { animation-delay: 0.4s; }
+        .step:nth-child(5) { animation-delay: 0.5s; }
+
+        .step-number {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            width: 60px;
+            height: 60px;
+            border-radius: 50%;
+            background: linear-gradient(135deg, var(--sage-primary), var(--sage-dark));
+            color: var(--white);
+            font-size: 1.8rem;
+            font-weight: 700;
+            font-family: 'DM Serif Display', serif;
+            margin-bottom: 1rem;
+        }
+
+        .step h3 {
+            margin-bottom: 0.5rem;
+        }
+
+        .step p {
+            color: var(--text-gray);
+            font-size: 0.95rem;
+        }
+
+        .step-connector {
+            display: none;
+        }
+
+        @media (min-width: 768px) {
+            .steps-grid {
+                grid-template-columns: repeat(5, 1fr);
+                position: relative;
+            }
+
+            .step-connector {
+                display: block;
+                position: absolute;
+                top: 30px;
+                left: 0;
+                right: 0;
+                height: 3px;
+                background: linear-gradient(90deg, var(--sage-primary), transparent);
+                z-index: -1;
+            }
+        }
+
+        .how-it-works-note {
+            text-align: center;
+            margin-top: 3rem;
+            font-size: 1.1rem;
+            color: var(--sage-primary);
+            font-weight: 600;
+        }
+
+        /* FAQ Section */
+        .faq {
+            background-color: var(--white);
+        }
+
+        .faq-container {
+            max-width: 800px;
+            margin: 3rem auto 0;
+        }
+
+        .faq-item {
+            border-bottom: 1px solid #E8EDF5;
+            margin-bottom: 1rem;
+            animation: fadeInUp 0.6s ease;
+        }
+
+        .faq-item:last-child {
+            border-bottom: none;
+        }
+
+        .faq-question {
+            background-color: var(--gray-light-bg);
+            padding: 1.5rem;
+            cursor: pointer;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            border-radius: 8px;
+            transition: all 0.3s ease;
+            user-select: none;
+        }
+
+        .faq-question:hover {
+            background-color: #EEF3FB;
+        }
+
+        .faq-question.active {
+            background-color: var(--sage-light);
+            color: var(--white);
+        }
+
+        .faq-question h4 {
+            margin: 0;
+            font-size: 1rem;
+            color: inherit;
+        }
+
+        .faq-toggle {
+            font-size: 1.5rem;
+            transition: transform 0.3s ease;
+            color: var(--sage-primary);
+        }
+
+        .faq-question.active .faq-toggle {
+            transform: rotate(180deg);
+            color: var(--white);
+        }
+
+        .faq-answer {
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height 0.3s ease, padding 0.3s ease;
+            background-color: var(--white);
+        }
+
+        .faq-answer.show {
+            max-height: 500px;
+            padding: 1.5rem;
+            border-left: 4px solid var(--sage-primary);
+        }
+
+        .faq-answer p {
+            color: var(--text-gray);
+            margin: 0;
+            line-height: 1.6;
+        }
+
+        /* Application Form */
+        .application {
+            background-color: var(--gray-light-bg);
+        }
+
+        .form-container {
+            max-width: 600px;
+            margin: 3rem auto;
+        }
+
+        .form-group {
+            margin-bottom: 1.5rem;
+        }
+
+        .form-group label {
+            display: block;
+            margin-bottom: 0.5rem;
+            font-weight: 500;
+            color: var(--navy-dark);
+        }
+
+        .form-group input,
+        .form-group textarea,
+        .form-group select {
+            width: 100%;
+            padding: 0.75rem;
+            border: 1px solid #D0D8E8;
+            border-radius: 8px;
+            font-family: 'Nunito', sans-serif;
+            font-size: 0.95rem;
+            transition: border-color 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .form-group input:focus,
+        .form-group textarea:focus,
+        .form-group select:focus {
+            outline: none;
+            border-color: var(--sage-primary);
+            box-shadow: 0 0 0 3px rgba(91, 140, 107, 0.1);
+        }
+
+        .form-group textarea {
+            resize: vertical;
+            min-height: 120px;
+        }
+
+        .form-row {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 1rem;
+        }
+
+        .form-submit {
+            width: 100%;
+            background: linear-gradient(135deg, var(--sage-primary), var(--sage-dark));
+            color: var(--white);
+            padding: 1rem;
+            border: none;
+            border-radius: 8px;
+            font-weight: 600;
+            font-size: 1.1rem;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            font-family: 'DM Serif Display', serif;
+        }
+
+        .form-submit:hover {
+            transform: translateY(-2px);
+            box-shadow: var(--shadow-lg);
+        }
+
+        .form-submit:active {
+            transform: translateY(0);
+        }
+
+        .form-contact {
+            text-align: center;
+            margin-top: 2rem;
+            color: var(--text-gray);
+            font-size: 0.95rem;
+        }
+
+        .form-contact a {
+            color: var(--sage-primary);
+            text-decoration: none;
+            font-weight: 600;
+        }
+
+        .form-contact a:hover {
+            text-decoration: underline;
+        }
+
+        /* Footer */
+        footer {
+            background-color: var(--navy-dark);
+            color: var(--white);
+            padding: 3rem 2rem;
+            text-align: center;
+        }
+
+        .footer-content {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 2rem;
+            text-align: left;
+            margin-bottom: 2rem;
+        }
+
+        .footer-section h4 {
+            color: var(--sage-primary);
+            margin-bottom: 1rem;
+            font-size: 1rem;
+        }
+
+        .footer-section ul {
+            list-style: none;
+        }
+
+        .footer-section ul li {
+            margin-bottom: 0.5rem;
+        }
+
+        .footer-section a {
+            color: #A0ACBE;
+            text-decoration: none;
+            font-size: 0.9rem;
+            transition: color 0.3s ease;
+        }
+
+        .footer-section a:hover {
+            color: var(--sage-primary);
+        }
+
+        .footer-social {
+            display: flex;
+            gap: 1rem;
+            justify-content: center;
+            margin-top: 1rem;
+        }
+
+        .footer-social a {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            width: 40px;
+            height: 40px;
+            background-color: var(--navy-gray);
+            border-radius: 50%;
+            color: var(--white);
+            transition: background-color 0.3s ease;
+        }
+
+        .footer-social a:hover {
+            background-color: var(--sage-primary);
+        }
+
+        .footer-bottom {
+            border-top: 1px solid var(--navy-gray);
+            padding-top: 2rem;
+            text-align: center;
+            color: #A0ACBE;
+            font-size: 0.9rem;
+        }
+
+        .footer-disclaimer {
+            font-size: 0.8rem;
+            margin-top: 1rem;
+        }
+
+        /* Animations */
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+            }
+            to {
+                opacity: 1;
+            }
+        }
+
+        @keyframes slideUp {
+            from {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            h1 {
+                font-size: 2.5rem;
+            }
+
+            h2 {
+                font-size: 1.8rem;
+            }
+
+            .nav-links {
+                display: none;
+            }
+
+            .hamburger {
+                display: flex;
+            }
+
+            .nav-links.active {
+                display: flex;
+                position: absolute;
+                top: 70px;
+                left: 0;
+                right: 0;
+                flex-direction: column;
+                background-color: var(--white);
+                padding: 2rem;
+                gap: 1rem;
+                box-shadow: var(--shadow-md);
+                z-index: 999;
+            }
+
+            .nav-links.active a {
+                display: block;
+                padding: 0.5rem 0;
+            }
+
+            section {
+                padding: 3rem 1.5rem;
+            }
+
+            .benefits-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .form-row {
+                grid-template-columns: 1fr;
+            }
+
+            .hero {
+                padding: 3rem 1.5rem;
+            }
+
+            .hero h1 {
+                font-size: 2rem;
+            }
+
+            .hero .subheadline {
+                font-size: 1.1rem;
+            }
+
+            .hero-buttons {
+                flex-direction: column;
+                gap: 1rem;
+            }
+
+            .hero-buttons .btn {
+                width: 100%;
+            }
+
+            .steps-grid {
+                grid-template-columns: 1fr;
+                gap: 1.5rem;
+            }
+
+            .step-connector {
+                display: none !important;
+            }
+
+            .footer-content {
+                grid-template-columns: 1fr;
+                text-align: center;
+            }
+
+            .footer-section a {
+                color: #A0ACBE;
+            }
+
+            .footer-social {
+                justify-content: center;
+            }
+        }
+
+        /* Success Message */
+        .success-message {
+            display: none;
+            background-color: #E8F5E9;
+            color: #2E7D32;
+            padding: 1.5rem;
+            border-radius: 8px;
+            margin-top: 1rem;
+            text-align: center;
+            animation: slideUp 0.3s ease;
+        }
+
+        .success-message.show {
+            display: block;
+        }
+
+        /* Products Section */
+        .products-section {
+            padding: 5rem 2rem;
+            background-color: var(--white);
+            max-width: 1200px;
+            margin: 0 auto;
+            text-align: center;
+        }
+
+        .products-section h2 {
+            font-family: 'DM Serif Display', serif;
+            font-size: 2.2rem;
+            color: var(--navy-dark);
+            margin-bottom: 1rem;
+        }
+
+        .section-subtitle {
+            color: var(--text-gray);
+            font-size: 1.1rem;
+            max-width: 650px;
+            margin: 0 auto 2.5rem;
+            line-height: 1.6;
+        }
+
+        .products-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 25px;
+            margin-bottom: 2rem;
+        }
+
+        .product-item {
+            background-color: var(--gray-light-bg);
+            padding: 30px 25px;
+            border-radius: 12px;
+            text-align: center;
+            transition: all 0.3s ease;
+            border: 2px solid transparent;
+        }
+
+        .product-item:hover {
+            border-color: var(--sage-primary);
+            transform: translateY(-5px);
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+        }
+
+        .product-icon {
+            margin-bottom: 12px;
+            display: flex;
+            justify-content: center;
+        }
+
+        .product-item h3 {
+            font-family: 'DM Serif Display', serif;
+            font-size: 1.2rem;
+            color: var(--navy-dark);
+            margin-bottom: 10px;
+        }
+
+        .product-item p {
+            font-size: 0.9rem;
+            color: var(--text-gray);
+            line-height: 1.6;
+            text-align: left;
+        }
+
+        .products-note {
+            background-color: #E8F0E5;
+            border-left: 4px solid var(--sage-primary);
+            padding: 20px 25px;
+            border-radius: 0 10px 10px 0;
+            text-align: left;
+            font-size: 0.95rem;
+            color: var(--navy-dark);
+            line-height: 1.6;
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        .products-note strong {
+            color: var(--sage-dark);
+        }
+
+        @media (max-width: 768px) {
+            .products-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+    
+        /* Services Dropdown */
+        .services-parent {
+            position: relative;
+        }
+        .services-dropdown {
+            display: none;
+            position: absolute;
+            top: 100%;
+            left: 50%;
+            transform: translateX(-50%);
+            background: white;
+            border-radius: 10px;
+            box-shadow: 0 10px 40px rgba(44, 44, 44, 0.15);
+            padding: 16px 0;
+            min-width: 240px;
+            z-index: 1000;
+            margin-top: 10px;
+        }
+        .services-dropdown::before {
+            content: '';
+            position: absolute;
+            top: -10px;
+            left: 0;
+            right: 0;
+            height: 10px;
+        }
+        .services-parent:hover .services-dropdown {
+            display: block;
+        }
+        .services-dropdown a {
+            display: block;
+            padding: 10px 24px;
+            color: #2C2C2C;
+            font-size: 13px;
+            font-weight: 500;
+            text-decoration: none;
+            white-space: nowrap;
+            transition: background 0.2s, color 0.2s;
+        }
+        .services-dropdown a:hover {
+            background: #F7F3ED;
+            color: #5B8C6B;
+        }
+        @media (max-width: 768px) {
+            .services-dropdown {
+                position: static;
+                transform: none;
+                box-shadow: none;
+                margin-top: 0;
+                padding: 0 0 0 20px;
+                border-radius: 0;
+            }
+            .services-parent:hover .services-dropdown {
+                display: block;
+            }
+        }
+
+    </style>
+</head>
+<body>
+    <!-- Navigation -->
+    <nav>
+        <a href="/" class="logo"><img src="/logo-mark.svg" alt="Medicare Moms Logo">Medicare Moms</a>
+        <ul class="nav-links">
+            <li><a href="/">Home</a></li>
+            <li><a href="/meet-our-team/">Meet Our Team</a></li>
+            <li class="lang-toggle">
+                <a href="/es/unete/" class="lang-link" title="Ver en Español">
+                    <span class="lang-active">EN</span> / <span class="lang-inactive">ES</span>
+                </a>
+            </li>
+        </ul>
+        <div class="hamburger">
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="hero-content">
+            <h1>Your Family Comes First. Your Career Can Too.</h1>
+            <p class="subheadline">Build a flexible insurance business on your own terms. Work around your family's schedule, not the other way around.</p>
+            <div class="hero-buttons">
+                <button class="btn btn-primary" onclick="document.getElementById('application').scrollIntoView({ behavior: 'smooth' })">Start Your Journey</button>
+                <button class="btn btn-secondary" onclick="document.getElementById('opportunity').scrollIntoView({ behavior: 'smooth' })">Learn More</button>
+            </div>
+            <p class="secondary-text">✓ No experience needed. We'll teach you everything</p>
+        </div>
+    </section>
+
+    <!-- The Opportunity -->
+    <section id="opportunity" class="opportunity">
+        <h2>The Opportunity</h2>
+        <div class="opportunity-content">
+            <p>Medicare Moms is a community of people building something meaningful — thriving insurance businesses that help families. We're not just another agency, we're a movement of parents, career-changers, and entrepreneurs who are taking control of their futures.</p>
+
+            <p>The insurance industry is booming. The aging population means Medicare enrollment is at an all-time high. The Affordable Care Act continues to open doors. Ancillary products (dental, vision, life insurance) are in constant demand. This is one of the best times ever to enter the insurance business.</p>
+
+            <p>And here's the thing: moms are uniquely positioned to excel in this field. You understand relationships. You know how to juggle multiple priorities. You can connect with clients on a personal level. You *get* what it means to balance everything.</p>
+
+            <div class="opportunity-highlight">
+                <strong>Medicare Moms is backed by Wildcat Insurance,</strong> a trusted, established insurance company with decades of experience. You're not going it alone. You're joining a proven system with real support and real training.
+            </div>
+        </div>
+    </section>
+
+    <!-- Benefits -->
+    <section id="benefits" class="benefits">
+        <h2>Why Join Medicare Moms?</h2>
+        <div class="benefits-grid">
+            <div class="benefit-card">
+                <div class="benefit-icon"><svg width="42" height="42" viewBox="0 0 48 48" fill="none" stroke="#5B8C6B" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="24" cy="24" r="20"/><polyline points="24,12 24,24 32,28"/></svg></div>
+                <h3>Flexible Schedule</h3>
+                <p>Work around school drop-offs, nap time, and soccer practice. Take mornings off if you need to. Your business adapts to your life, not the other way around.</p>
+            </div>
+
+            <div class="benefit-card">
+                <div class="benefit-icon"><svg width="42" height="42" viewBox="0 0 48 48" fill="none" stroke="#5B8C6B" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="24" cy="24" r="20"/><path d="M4 24h40"/><path d="M24 4a28 28 0 0 1 8 20 28 28 0 0 1-8 20"/><path d="M24 4a28 28 0 0 0-8 20 28 28 0 0 0 8 20"/></svg></div>
+                <h3>Work From Anywhere</h3>
+                <p>Your kitchen table. A coffee shop. The carpool line. All you need is a laptop and internet. Build your business from wherever you're most comfortable.</p>
+            </div>
+
+            <div class="benefit-card">
+                <div class="benefit-icon"><svg width="42" height="42" viewBox="0 0 48 48" fill="none" stroke="#5B8C6B" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><line x1="24" y1="4" x2="24" y2="44"/><path d="M34 14c0-4.4-4.5-8-10-8s-10 3.6-10 8 4.5 8 10 8 10 3.6 10 8-4.5 8-10 8-10-3.6-10-8"/></svg></div>
+                <h3>Additional Income</h3>
+                <p>Most insurance products pay residual commissions, meaning your income is stable and consistent. As your book of business grows, so does your recurring revenue, even on days you're not actively selling.</p>
+            </div>
+
+            <div class="benefit-card">
+                <div class="benefit-icon"><svg width="42" height="42" viewBox="0 0 48 48" fill="none" stroke="#5B8C6B" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M24 4L2 16l22 12 22-12L24 4z"/><path d="M10 22v12c0 4 6.3 8 14 8s14-4 14-8V22"/><line x1="44" y1="16" x2="44" y2="36"/></svg></div>
+                <h3>No Experience Needed</h3>
+                <p>Switching careers? First-time business owner? That's fine. We provide comprehensive training, licensing support, and ongoing education to help you succeed.</p>
+            </div>
+
+            <div class="benefit-card">
+                <div class="benefit-icon"><svg width="42" height="42" viewBox="0 0 48 48" fill="none" stroke="#5B8C6B" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="24" cy="12" r="6"/><path d="M12 40v-4a12 12 0 0 1 24 0v4"/><path d="M24 28v8"/><circle cx="16" cy="34" r="3"/><circle cx="32" cy="34" r="3"/></svg></div>
+                <h3>Community & Mentorship</h3>
+                <p>You're never alone. You'll have a team of experienced agents who've been where you are. Regular training, group coaching, and a network of women who truly understand your journey.</p>
+            </div>
+
+            <div class="benefit-card">
+                <div class="benefit-icon"><svg width="42" height="42" viewBox="0 0 48 48" fill="none" stroke="#5B8C6B" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><polygon points="4,36 8,12 18,24 24,8 30,24 40,12 44,36"/><line x1="4" y1="36" x2="44" y2="36"/></svg></div>
+                <h3>Supported Growth</h3>
+                <p>We also have opportunities to bring agents on where we support you with paid leads, help source stable business, and provide the structure you need to succeed. You get the best of both worlds: real support and real opportunity.</p>
+            </div>
+
+            <div class="benefit-card">
+                <div class="benefit-icon"><svg width="42" height="42" viewBox="0 0 48 48" fill="none" stroke="#5B8C6B" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M36 12A16 16 0 0 0 10 14"/><polyline points="36,4 36,12 28,12"/><path d="M12 36A16 16 0 0 0 38 34"/><polyline points="12,44 12,36 20,36"/></svg></div>
+                <h3>Residual Income</h3>
+                <p>Earn renewals year after year on every policy you write. Clients renew their insurance annually, which means recurring income even while you're building new business.</p>
+            </div>
+
+            <div class="benefit-card">
+                <div class="benefit-icon"><svg width="42" height="42" viewBox="0 0 48 48" fill="none" stroke="#5B8C6B" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="24" cy="24" r="20"/><circle cx="24" cy="24" r="13"/><circle cx="24" cy="24" r="6"/><circle cx="24" cy="24" r="1.5" fill="#5B8C6B"/></svg></div>
+                <h3>Multiple Product Lines</h3>
+                <p>Medicare. ACA. Medigap. Dental. Vision. Life insurance. Diversify your income streams and help clients with all their insurance needs in one place.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- What You'll Be Offering -->
+    <section id="products" class="products-section">
+        <h2>What You Can Offer</h2>
+        <p class="section-subtitle">Here's the full menu. The key word is <em>can</em>. You're never captive with us, so sell what fits your life, skip what doesn't, and keep any books of business you already have somewhere else.</p>
+
+        <div class="products-grid">
+            <div class="product-item">
+                <div class="product-icon"><svg width="42" height="42" viewBox="0 0 48 48" fill="none" stroke="#5B8C6B" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><rect x="8" y="8" width="32" height="32" rx="4"/><line x1="24" y1="16" x2="24" y2="32"/><line x1="16" y1="24" x2="32" y2="24"/></svg></div>
+                <h3>Medicare Advantage</h3>
+                <p>All-in-one plans for seniors 65+. Bundles hospital, medical, Rx, and often dental/vision at $0 premium. This is your bread-and-butter product during Annual Enrollment (Oct 15 – Dec 7).</p>
+            </div>
+
+            <div class="product-item">
+                <div class="product-icon"><svg width="42" height="42" viewBox="0 0 48 48" fill="none" stroke="#5B8C6B" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M24 4L8 12v10c0 12 6.8 22 16 26 9.2-4 16-14 16-26V12L24 4z"/><polyline points="17,24 22,29 31,20"/></svg></div>
+                <h3>Medicare Supplements</h3>
+                <p>Medigap plans that cover what Original Medicare doesn't. Great for clients who want to see any doctor nationwide. Sells year-round, no enrollment window needed.</p>
+            </div>
+
+            <div class="product-item">
+                <div class="product-icon"><svg width="42" height="42" viewBox="0 0 48 48" fill="none" stroke="#5B8C6B" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="24" cy="12" r="5"/><path d="M14 40v-4a10 10 0 0 1 20 0v4"/><circle cx="10" cy="18" r="4"/><path d="M4 40v-3a7 7 0 0 1 9-6.7"/><circle cx="38" cy="18" r="4"/><path d="M44 40v-3a7 7 0 0 0-9-6.7"/></svg></div>
+                <h3>Individual &amp; Family Health</h3>
+                <p>ACA Marketplace plans plus private and underwritten health insurance for individuals and families under 65. Open Enrollment runs Nov 1 – Dec 15, plus Special Enrollment throughout the year.</p>
+            </div>
+
+            <div class="product-item">
+                <div class="product-icon"><svg width="42" height="42" viewBox="0 0 48 48" fill="none" stroke="#5B8C6B" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M18 6c-3 0-5.5 1.5-7 4s-2 5-2 8c0 4 1.5 7 3 10.5s3 7 4 11.5c.4 1.5 2 1.5 2.4 0 .8-2 1.8-4.5 2.8-6.5.6-1 1.8-1 2.4 0 1 2 2 4.5 2.8 6.5.4 1.5 2 1.5 2.4 0 1-4.5 2.5-8 4-11.5s3-6.5 3-10.5c0-3-.5-5.5-2-8s-4-4-7-4c-2 0-3.5 1-6 3.5C21.5 7 20 6 18 6z"/></svg></div>
+                <h3>Dental, Vision &amp; Supplemental</h3>
+                <p>Coverage for teeth and eyes, plus accident and critical illness plans that pay cash directly to clients. Easy cross-sells that pair with any health plan.</p>
+            </div>
+
+            <div class="product-item">
+                <div class="product-icon"><svg width="42" height="42" viewBox="0 0 48 48" fill="none" stroke="#5B8C6B" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M24 42s-18-10-18-22a9.5 9.5 0 0 1 18-4 9.5 9.5 0 0 1 18 4c0 12-18 22-18 22z"/></svg></div>
+                <h3>Life Insurance &amp; Long-Term Care</h3>
+                <p>Term life, final expense, and long-term care coverage to protect families and plan for the future. Many plans don't require a medical exam.</p>
+            </div>
+
+            <div class="product-item">
+                <div class="product-icon"><svg width="42" height="42" viewBox="0 0 48 48" fill="none" stroke="#5B8C6B" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><rect x="6" y="16" width="36" height="26" rx="2"/><path d="M18 16v-4a2 2 0 0 1 2-2h8a2 2 0 0 1 2 2v4"/><line x1="6" y1="26" x2="42" y2="26"/></svg></div>
+                <h3>Small &amp; Large Group</h3>
+                <p>Employer-sponsored health plans for local businesses. Recurring revenue and long-term client relationships.</p>
+            </div>
+        </div>
+
+        <div class="products-note">
+            <p><strong>We're not a captive agency.</strong> You're free to focus on just Medicare, just individual/ACA, or any mix that makes sense for you. Already sell life insurance somewhere else? Keep it there, no problem. You can do as much or as little business as fits your life.</p>
+
+            <p style="margin-top: 16px;"><strong>Flexible compensation, real choices.</strong> We have several paths depending on what you want out of this:</p>
+            <ul style="margin: 10px 0 16px 20px; line-height: 1.7;">
+                <li><strong>Commission only</strong> — keep more of what you make</li>
+                <li><strong>Base + commission</strong> — predictable income while you build</li>
+                <li><strong>Commission split</strong> where we provide the leads and warm business</li>
+                <li><strong>Salaried positions</strong> for those who want a steady paycheck without commission variability</li>
+            </ul>
+            <p>We'll talk through which path fits where you are right now, and you can always change lanes later.</p>
+
+            <p style="margin-top: 16px;"><strong>The best way to start is part-time.</strong> Build slowly, learn at your own pace, and lean in when you're ready. There are no quotas to hit. No cold calling. No wasting your day on activities that don't actually grow your business.</p>
+
+            <p style="margin-top: 16px;"><strong>Tools we cover for you:</strong></p>
+            <ul style="margin: 10px 0 0 20px; line-height: 1.7;">
+                <li>A fully paid CRM to manage your clients</li>
+                <li>A dedicated business phone number</li>
+                <li>Business tracking software so you always know where you stand</li>
+                <li>Easy tools to split business and build referral partnerships</li>
+            </ul>
+        </div>
+    </section>
+
+    <!-- Success Stories -->
+    <section id="stories" class="success-stories">
+        <h2>Real Stories. Real Results.</h2>
+        <div class="stories-grid">
+            <div class="story-card">
+                <div class="story-avatar"><svg width="32" height="32" viewBox="0 0 48 48" fill="none" stroke="#5B8C6B" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="24" cy="14" r="8"/><path d="M8 44c0-8.8 7.2-16 16-16s16 7.2 16 16"/></svg></div>
+                <div class="story-content">
+                    <p class="story-quote">"I was a stay-at-home mom for five years, and I thought my career was on hold forever. Medicare Moms gave me back my independence and my purpose, all while being there for my kids every single day."</p>
+                    <div class="story-name">Sarah M.</div>
+                    <div class="story-info">Agent since 2021</div>
+                    <span class="story-milestone">Full-Time Agent</span>
+                </div>
+            </div>
+
+            <div class="story-card">
+                <div class="story-avatar"><svg width="32" height="32" viewBox="0 0 48 48" fill="none" stroke="#5B8C6B" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="24" cy="14" r="8"/><path d="M8 44c0-8.8 7.2-16 16-16s16 7.2 16 16"/></svg></div>
+                <div class="story-content">
+                    <p class="story-quote">"As a single mom, I needed flexibility and a way to provide for my family on my own terms. This opportunity gave me both. The training was thorough, the support is real, and it's changed our lives."</p>
+                    <div class="story-name">Jessica T.</div>
+                    <div class="story-info">Agent since 2020</div>
+                    <span class="story-milestone">Part-Time Agent</span>
+                </div>
+            </div>
+
+            <div class="story-card">
+                <div class="story-avatar"><svg width="32" height="32" viewBox="0 0 48 48" fill="none" stroke="#5B8C6B" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="24" cy="14" r="8"/><path d="M8 44c0-8.8 7.2-16 16-16s16 7.2 16 16"/></svg></div>
+                <div class="story-content">
+                    <p class="story-quote">"I taught high school for 12 years. I loved connecting with people, but the job was burning me out. Insurance lets me help people make important decisions, it's just with better hours and better pay."</p>
+                    <div class="story-name">Michelle K.</div>
+                    <div class="story-info">Agent since 2022</div>
+                    <span class="story-milestone">Career Changer</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- How It Works -->
+    <section id="how-it-works" class="how-it-works">
+        <h2>Your Path to Success</h2>
+        <div class="step-connector"></div>
+        <div class="steps-grid">
+            <div class="step">
+                <div class="step-number">1</div>
+                <h3>Apply</h3>
+                <p>Tell us about yourself. Takes just 2 minutes.</p>
+            </div>
+
+            <div class="step">
+                <div class="step-number">2</div>
+                <h3>Interview</h3>
+                <p>Quick call with our team to see if we're the right fit.</p>
+            </div>
+
+            <div class="step">
+                <div class="step-number">3</div>
+                <h3>Get Licensed</h3>
+                <p>We guide you through the licensing process step-by-step.</p>
+            </div>
+
+            <div class="step">
+                <div class="step-number">4</div>
+                <h3>Train</h3>
+                <p>Comprehensive product and sales training to set you up for success.</p>
+            </div>
+
+            <div class="step">
+                <div class="step-number">5</div>
+                <h3>Launch</h3>
+                <p>Start helping clients and building your book of business.</p>
+            </div>
+        </div>
+        <p class="how-it-works-note"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#5B8C6B" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="vertical-align: middle; margin-right: 6px;"><path d="M9 18h6"/><path d="M10 22h4"/><path d="M15.09 14c.18-.98.65-1.74 1.41-2.5A4.65 4.65 0 0 0 18 8 6 6 0 0 0 6 8c0 1 .23 2.23 1.5 3.5C8.26 12.26 8.72 13.02 8.91 14"/></svg>We invest in you from day one. Your success is our success.</p>
+    </section>
+
+    <!-- FAQ -->
+    <section id="faq" class="faq">
+        <h2>Frequently Asked Questions</h2>
+        <div class="faq-container">
+            <div class="faq-item">
+                <div class="faq-question" onclick="toggleFAQ(this)">
+                    <h4>Do I need insurance experience?</h4>
+                    <span class="faq-toggle">▼</span>
+                </div>
+                <div class="faq-answer">
+                    <p>No, you don't need any experience at all. We provide full training covering Medicare, ACA, Medigap, and all our product lines. Many of our top agents started with zero insurance background. We teach you everything you need to know.</p>
+                </div>
+            </div>
+
+            <div class="faq-item">
+                <div class="faq-question" onclick="toggleFAQ(this)">
+                    <h4>Can I do this part-time?</h4>
+                    <span class="faq-toggle">▼</span>
+                </div>
+                <div class="faq-answer">
+                    <p>Absolutely. Many of our agents start part-time and build at their own pace. This is a great way to add additional income to your household with a schedule that flexes around your family. You decide how much time to put in, there's no minimum hours requirement.</p>
+                </div>
+            </div>
+
+            <div class="faq-item">
+                <div class="faq-question" onclick="toggleFAQ(this)">
+                    <h4>What does it cost to get started?</h4>
+                    <span class="faq-toggle">▼</span>
+                </div>
+                <div class="faq-answer">
+                    <p>We have programs in place to reimburse all of your licensing costs, so there's no real out-of-pocket barrier to getting started. We don't charge franchise fees, buy-in fees, or monthly software costs. We invest in you because we believe in you.</p>
+                </div>
+            </div>
+
+            <div class="faq-item">
+                <div class="faq-question" onclick="toggleFAQ(this)">
+                    <h4>Can I really do this while raising kids?</h4>
+                    <span class="faq-toggle">▼</span>
+                </div>
+                <div class="faq-answer">
+                    <p>Absolutely. This is why Medicare Moms exists. Most of our agents are moms who work around their family's schedule. You control your hours. Work during school hours, early mornings, evenings, or weekends. Work part-time to start, and scale up as your kids get older. The flexibility is built into the model.</p>
+                </div>
+            </div>
+
+            <div class="faq-item">
+                <div class="faq-question" onclick="toggleFAQ(this)">
+                    <h4>What support do I get?</h4>
+                    <span class="faq-toggle">▼</span>
+                </div>
+                <div class="faq-answer">
+                    <p>You get mentorship from experienced agents, comprehensive initial training plus ongoing education, professionally designed marketing materials, lead support to help you build your client base, and access to a community of women who understand the challenges of balancing motherhood and entrepreneurship. You're never alone in this.</p>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- Application -->
+    <section id="application" class="application">
+        <h2>Ready to Build Something Amazing?</h2>
+        <div class="form-container">
+            <form id="applicationForm" onsubmit="handleFormSubmit(event)">
+                <div class="form-row">
+                    <div class="form-group">
+                        <label for="firstName">First Name *</label>
+                        <input type="text" id="firstName" name="firstName" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="lastName">Last Name *</label>
+                        <input type="text" id="lastName" name="lastName" required>
+                    </div>
+                </div>
+
+                <div class="form-row">
+                    <div class="form-group">
+                        <label for="email">Email *</label>
+                        <input type="email" id="email" name="email" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="phone">Phone *</label>
+                        <input type="tel" id="phone" name="phone" required>
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label for="location">City/State *</label>
+                    <input type="text" id="location" name="location" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="background">Tell us about yourself *</label>
+                    <textarea id="background" name="background" placeholder="What's your current situation? Why are you interested in Medicare Moms?" required></textarea>
+                </div>
+
+                <div class="form-group">
+                    <label for="referral">How did you hear about us? *</label>
+                    <select id="referral" name="referral" required>
+                        <option value="">-- Select an option --</option>
+                        <option value="social">Social Media</option>
+                        <option value="friend">A Friend/Agent</option>
+                        <option value="google">Google Search</option>
+                        <option value="other">Other</option>
+                    </select>
+                </div>
+
+                <button type="submit" class="form-submit">Apply Now</button>
+                <div id="successMessage" class="success-message">
+                    ✓ Thank you! We'll be in touch within 24 hours.
+                </div>
+            </form>
+
+            <div class="form-contact">
+                <p>Questions? <a href="mailto:info@medicaremoms.com">Email us at info@medicaremoms.com</a> or call <a href="tel:+14352461548">(435) 246-1548</a></p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="footer-content">
+            <div class="footer-section">
+                <h4>Medicare Moms</h4>
+                <p>A Wildcat Insurance Company</p>
+                <p style="font-size: 0.85rem; margin-top: 1rem; color: #A0ACBE;">Building careers. Supporting families. Changing lives.</p>
+            </div>
+
+            <div class="footer-section">
+                <h4>Quick Links</h4>
+                <ul>
+                    <li><a href="/">Home</a></li>
+                    <li><a href="/services/">Services</a></li>
+                    <li><a href="/resources/">Resources</a></li>
+                    <li><a href="/blog/">Blog</a></li>
+                    <li><a href="/meet-our-team/">Meet Our Team</a></li>
+                    <li><a href="/join-our-team/">Join Our Team</a></li>
+                    <li><a href="/#contact">Contact</a></li>
+                                    <li class="lang-toggle">
+                        <a href="/es/unete/" class="lang-link" title="Ver en Español">
+                            <span class="lang-active">EN</span> / <span class="lang-inactive">ES</span>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+
+            <div class="footer-section">
+                <h4>Get in Touch</h4>
+                <ul>
+                    <li><a href="tel:+14352461548">(435) 246-1548</a></li>
+                    <li><a href="mailto:info@medicaremoms.com">info@medicaremoms.com</a></li>
+                    <li>Monday–Friday, 9am–5pm MT</li>
+                </ul>
+            </div>
+
+            <div class="footer-section">
+                <h4>Follow Us</h4>
+                <div class="footer-social">
+                    <a href="#" title="Facebook">f</a>
+                    <a href="#" title="Instagram">📷</a>
+                    <a href="#" title="LinkedIn">in</a>
+                    <a href="#" title="TikTok">♪</a>
+                </div>
+            </div>
+        </div>
+
+        <div class="footer-bottom">
+            <p>&copy; 2026 Medicare Moms. All rights reserved.</p>
+            <p style="margin-top: 8px;">Medicare is a registered trademark of the U.S. Department of Health and Human Services.</p>
+            <p style="margin-top: 8px;"><a href="/terms/" style="color: #999; text-decoration: none; transition: color 0.3s ease;" onmouseover="this.style.color='#A8C5A0'" onmouseout="this.style.color='#999'">Terms of Service</a> &middot; <a href="/privacy/" style="color: #999; text-decoration: none; transition: color 0.3s ease;" onmouseover="this.style.color='#A8C5A0'" onmouseout="this.style.color='#999'">Privacy Policy</a></p>
+            <p class="footer-disclaimer">medicaremoms.com and Medicare Moms is a DBA of Wildcat Insurance LLC, a licensed health insurance agency. The purpose of this site is the solicitation of insurance. Contact may be made by an insurance agent/producer or insurance company. Medicare Moms and the insurance plans presented on this site are not connected with or endorsed by the U.S. government or the federal Medicare program. We do not offer every plan available in your area. Any information we provide is limited to those plans we do offer in your area. Please contact Medicare.gov or 1-800-MEDICARE to get information on all of your options.</p>
+        </div>
+    </footer>
+
+    <script>
+        // Mobile Menu Toggle
+        const hamburger = document.querySelector('.hamburger');
+        const navLinks = document.querySelector('.nav-links');
+
+        hamburger.addEventListener('click', () => {
+            hamburger.classList.toggle('active');
+            navLinks.classList.toggle('active');
+        });
+
+        // Close mobile menu when a link is clicked
+        document.querySelectorAll('.nav-links a').forEach(link => {
+            link.addEventListener('click', () => {
+                hamburger.classList.remove('active');
+                navLinks.classList.remove('active');
+            });
+        });
+
+        // FAQ Toggle
+        function toggleFAQ(element) {
+            const question = element;
+            const answer = element.nextElementSibling;
+
+            // Close other open FAQs
+            document.querySelectorAll('.faq-question.active').forEach(activeQuestion => {
+                if (activeQuestion !== question) {
+                    activeQuestion.classList.remove('active');
+                    activeQuestion.nextElementSibling.classList.remove('show');
+                }
+            });
+
+            // Toggle current FAQ
+            question.classList.toggle('active');
+            answer.classList.toggle('show');
+        }
+
+        // Form Submission
+        function handleFormSubmit(event) {
+            event.preventDefault();
+
+            // In a real implementation, you would send this data to a server
+            const formData = {
+                firstName: document.getElementById('firstName').value,
+                lastName: document.getElementById('lastName').value,
+                email: document.getElementById('email').value,
+                phone: document.getElementById('phone').value,
+                location: document.getElementById('location').value,
+                background: document.getElementById('background').value,
+                referral: document.getElementById('referral').value,
+                timestamp: new Date().toISOString()
+            };
+
+            // Log to console (replace with API call in production)
+            console.log('Application submitted:', formData);
+
+            // Show success message
+            const successMessage = document.getElementById('successMessage');
+            successMessage.classList.add('show');
+
+            // Reset form
+            document.getElementById('applicationForm').reset();
+
+            // Hide success message after 5 seconds
+            setTimeout(() => {
+                successMessage.classList.remove('show');
+            }, 5000);
+        }
+
+        // Smooth scroll for internal links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                const href = this.getAttribute('href');
+                if (href !== '#' && document.querySelector(href)) {
+                    e.preventDefault();
+                    const target = document.querySelector(href);
+                    target.scrollIntoView({ behavior: 'smooth' });
+                }
+            });
+        });
+
+        // Add fade-in animation on page load
+        window.addEventListener('load', () => {
+            document.body.style.opacity = '1';
+        });
+    </script>
+    <!-- CHAT WIDGET -->
+    <div id="chatWidgetContainer">
+        <style>
+            /* Chat Widget Styles */
+            #chatButton {
+                position: fixed;
+                bottom: 20px;
+                right: 20px;
+                width: 60px;
+                height: 60px;
+                border-radius: 50%;
+                background: linear-gradient(135deg, #5B8C6B 0%, #3D6B4A 100%);
+                border: none;
+                cursor: pointer;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                box-shadow: 0 4px 12px rgba(91, 140, 107, 0.3);
+                z-index: 9999;
+                transition: all 0.3s ease;
+                animation: chatButtonPulse 1.2s ease-in-out 3;
+            }
+
+            #chatButton:hover {
+                transform: translateY(-3px);
+                box-shadow: 0 6px 16px rgba(91, 140, 107, 0.4);
+            }
+
+            #chatButton svg {
+                width: 28px;
+                height: 28px;
+                fill: white;
+            }
+
+            @keyframes chatButtonPulse {
+                0%, 100% {
+                    transform: scale(1);
+                }
+                50% {
+                    transform: scale(1.1);
+                }
+            }
+
+            #chatPanel {
+                position: fixed;
+                bottom: 90px;
+                right: 20px;
+                width: 350px;
+                height: 450px;
+                background: white;
+                border-radius: 12px;
+                box-shadow: 0 5px 40px rgba(0, 0, 0, 0.16);
+                display: none;
+                flex-direction: column;
+                z-index: 9998;
+                animation: slideUp 0.3s ease;
+                font-family: 'Nunito', sans-serif;
+            }
+
+            #chatPanel.active {
+                display: flex;
+            }
+
+            @keyframes slideUp {
+                from {
+                    opacity: 0;
+                    transform: translateY(20px);
+                }
+                to {
+                    opacity: 1;
+                    transform: translateY(0);
+                }
+            }
+
+            .chat-header {
+                background: linear-gradient(135deg, #5B8C6B 0%, #3D6B4A 100%);
+                color: white;
+                padding: 18px;
+                border-radius: 12px 12px 0 0;
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+                flex-shrink: 0;
+            }
+
+            .chat-header h3 {
+                font-family: 'DM Serif Display', serif;
+                font-size: 18px;
+                font-weight: 600;
+                color: white;
+                margin: 0;
+            }
+
+            .chat-close-btn {
+                background: none;
+                border: none;
+                color: white;
+                font-size: 24px;
+                cursor: pointer;
+                padding: 0;
+                width: 30px;
+                height: 30px;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                transition: transform 0.2s ease;
+            }
+
+            .chat-close-btn:hover {
+                transform: rotate(90deg);
+            }
+
+            #chatMessages {
+                flex: 1;
+                overflow-y: auto;
+                padding: 16px;
+                display: flex;
+                flex-direction: column;
+                gap: 12px;
+                background-color: #FAFAFA;
+            }
+
+            .message {
+                display: flex;
+                margin-bottom: 8px;
+                animation: fadeIn 0.3s ease;
+            }
+
+            @keyframes fadeIn {
+                from {
+                    opacity: 0;
+                    transform: translateY(10px);
+                }
+                to {
+                    opacity: 1;
+                    transform: translateY(0);
+                }
+            }
+
+            .message.received {
+                justify-content: flex-start;
+            }
+
+            .message.sent {
+                justify-content: flex-end;
+            }
+
+            .message-bubble {
+                max-width: 80%;
+                padding: 12px 16px;
+                border-radius: 16px;
+                word-wrap: break-word;
+                font-size: 14px;
+                line-height: 1.4;
+            }
+
+            .message.received .message-bubble {
+                background-color: #A8C5A0;
+                color: white;
+                border-radius: 16px 16px 16px 4px;
+            }
+
+            .message.sent .message-bubble {
+                background: linear-gradient(135deg, #5B8C6B 0%, #3D6B4A 100%);
+                color: white;
+                border-radius: 16px 16px 4px 16px;
+            }
+
+            .quick-replies {
+                display: flex;
+                flex-wrap: wrap;
+                gap: 8px;
+                padding: 12px 0;
+            }
+
+            .quick-reply-btn {
+                display: inline-block;
+                padding: 8px 14px;
+                background-color: #E8F0E6;
+                border: 1.5px solid #A8C5A0;
+                border-radius: 20px;
+                cursor: pointer;
+                font-size: 12px;
+                color: #3D6B4A;
+                font-weight: 500;
+                transition: all 0.2s ease;
+                font-family: 'Nunito', sans-serif;
+                white-space: nowrap;
+            }
+
+            .quick-reply-btn:hover {
+                background-color: #A8C5A0;
+                color: white;
+                border-color: #5B8C6B;
+            }
+
+            #chatInput {
+                display: flex;
+                gap: 8px;
+                padding: 12px;
+                border-top: 1px solid #E0E0E0;
+                background-color: white;
+                border-radius: 0 0 12px 12px;
+                flex-shrink: 0;
+            }
+
+            #messageInput {
+                flex: 1;
+                border: 1px solid #D0D0D0;
+                border-radius: 20px;
+                padding: 10px 16px;
+                font-size: 14px;
+                font-family: 'Nunito', sans-serif;
+                transition: border-color 0.2s ease;
+            }
+
+            #messageInput:focus {
+                outline: none;
+                border-color: #5B8C6B;
+                box-shadow: 0 0 0 2px rgba(91, 140, 107, 0.1);
+            }
+
+            #sendBtn {
+                background: linear-gradient(135deg, #5B8C6B 0%, #3D6B4A 100%);
+                color: white;
+                border: none;
+                border-radius: 50%;
+                width: 38px;
+                height: 38px;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                cursor: pointer;
+                transition: all 0.2s ease;
+                font-size: 18px;
+            }
+
+            #sendBtn:hover {
+                box-shadow: 0 2px 8px rgba(91, 140, 107, 0.3);
+            }
+
+            #sendBtn:active {
+                transform: scale(0.95);
+            }
+
+            /* Mobile responsiveness */
+            @media (max-width: 480px) {
+                #chatPanel {
+                    position: fixed;
+                    bottom: 0;
+                    right: 0;
+                    left: 0;
+                    width: 100%;
+                    height: calc(100vh - 60px);
+                    border-radius: 0;
+                    bottom: 0;
+                    animation: slideUpMobile 0.3s ease;
+                }
+
+                @keyframes slideUpMobile {
+                    from {
+                        transform: translateY(100%);
+                    }
+                    to {
+                        transform: translateY(0);
+                    }
+                }
+
+                .message-bubble {
+                    max-width: 85%;
+                }
+            }
+        </style>
+
+        <button id="chatButton" aria-label="Open chat">
+            <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                <path d="M20 2H4c-1.1 0-2 .9-2 2v18l4-4h14c1.1 0 2-.9 2-2V4c0-1.1-.9-2-2-2z"/>
+            </svg>
+        </button>
+
+        <div id="chatPanel">
+            <div class="chat-header">
+                <h3>Chat with Us</h3>
+                <button class="chat-close-btn" aria-label="Close chat">&times;</button>
+            </div>
+
+            <div id="chatMessages">
+                <div class="message received">
+                    <div class="message-bubble">Hi there! 👋 We're the Medicare Moms team. How can we help you today?</div>
+                </div>
+                <div class="quick-replies">
+                    <button class="quick-reply-btn">Medicare Questions</button>
+                    <button class="quick-reply-btn">Get a Free Quote</button>
+                    <button class="quick-reply-btn">Talk to an Agent</button>
+                    <button class="quick-reply-btn">Habla Español?</button>
+                </div>
+            </div>
+
+            <div id="chatInput">
+                <input type="text" id="messageInput" placeholder="Type your message...">
+                <button id="sendBtn" aria-label="Send message">➤</button>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        // Chat Widget JavaScript
+        (function() {
+            const chatButton = document.getElementById('chatButton');
+            const chatPanel = document.getElementById('chatPanel');
+            const closeBtn = document.querySelector('.chat-close-btn');
+            const messageInput = document.getElementById('messageInput');
+            const sendBtn = document.getElementById('sendBtn');
+            const chatMessages = document.getElementById('chatMessages');
+            const quickReplyButtons = document.querySelectorAll('.quick-reply-btn');
+
+            // Toggle chat panel
+            chatButton.addEventListener('click', () => {
+                chatPanel.classList.toggle('active');
+                if (chatPanel.classList.contains('active')) {
+                    messageInput.focus();
+                }
+            });
+
+            // Close chat panel
+            closeBtn.addEventListener('click', () => {
+                chatPanel.classList.remove('active');
+            });
+
+            // Handle quick reply buttons
+            quickReplyButtons.forEach(btn => {
+                btn.addEventListener('click', () => {
+                    messageInput.value = btn.textContent;
+                    messageInput.focus();
+                });
+            });
+
+            // Send message function
+            function sendMessage() {
+                const message = messageInput.value.trim();
+                if (!message) return;
+
+                // Remove quick replies if they exist
+                const quickRepliesDiv = document.querySelector('.quick-replies');
+                if (quickRepliesDiv) {
+                    quickRepliesDiv.remove();
+                }
+
+                // Add user message
+                const userMessageDiv = document.createElement('div');
+                userMessageDiv.className = 'message sent';
+                userMessageDiv.innerHTML = `<div class="message-bubble">${escapeHtml(message)}</div>`;
+                chatMessages.appendChild(userMessageDiv);
+
+                // Clear input
+                messageInput.value = '';
+
+                // Scroll to bottom
+                chatMessages.scrollTop = chatMessages.scrollHeight;
+
+                // Show response after a brief delay
+                setTimeout(() => {
+                    const responseDiv = document.createElement('div');
+                    responseDiv.className = 'message received';
+                    responseDiv.innerHTML = `<div class="message-bubble">Thanks for reaching out! One of our agents will be in touch shortly. In the meantime, feel free to call us at (435) 246-1548 or email info@medicaremoms.com</div>`;
+                    chatMessages.appendChild(responseDiv);
+
+                    // Scroll to bottom
+                    chatMessages.scrollTop = chatMessages.scrollHeight;
+                }, 800);
+            }
+
+            // Send button click
+            sendBtn.addEventListener('click', sendMessage);
+
+            // Send on Enter key
+            messageInput.addEventListener('keypress', (e) => {
+                if (e.key === 'Enter') {
+                    e.preventDefault();
+                    sendMessage();
+                }
+            });
+
+            // Utility function to escape HTML
+            function escapeHtml(text) {
+                const div = document.createElement('div');
+                div.textContent = text;
+                return div.innerHTML;
+            }
+        })();
+    </script>
+    <!-- /CHAT WIDGET -->
+
+</body>
+</html>
