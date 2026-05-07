@@ -1,0 +1,1577 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <!-- Favicon (auto-inserted by add-favicon.py) -->
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg">
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+    <link rel="shortcut icon" href="/favicon.ico">
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+    <link rel="manifest" href="/site.webmanifest">
+    <meta name="theme-color" content="#5b8c6b">
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Conoce a Nuestro Equipo - Medicare Moms</title>
+    <meta name="description" content="Conoce a los agentes de seguros de Medicare Moms. Mujeres dedicadas y expertas listas para ayudarte a encontrar la cobertura perfecta.">
+    <meta property="og:title" content="Conoce a Nuestro Equipo - Medicare Moms">
+    <meta property="og:description" content="Conoce a los agentes de seguros de Medicare Moms. Mujeres dedicadas y expertas listas para ayudarte a encontrar la cobertura perfecta.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://medicaremoms.com/es/equipo/">
+    <meta property="og:site_name" content="Medicare Moms">
+    <link rel="canonical" href="https://medicaremoms.com/es/equipo/">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display&family=Nunito:wght@400;600;700;800&display=swap" rel="stylesheet">
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family: 'Nunito', sans-serif;
+            color: #2C2C2C;
+            background-color: #FFFFFF;
+            line-height: 1.6;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        /* ============ Navigation ============ */
+        header {
+            position: sticky;
+            top: 0;
+            background-color: white;
+            box-shadow: 0 4px 12px rgba(44, 44, 44, 0.08);
+            z-index: 1000;
+        }
+
+        .header-container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 15px 20px;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .logo {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            font-family: 'DM Serif Display', serif;
+            font-size: 22px;
+            font-weight: 700;
+            color: #5B8C6B;
+            text-decoration: none;
+        }
+
+        .logo img {
+            height: 60px;
+            width: auto;
+            border-radius: 0;
+        }
+
+        nav {
+            display: flex;
+            width: 100%;
+            justify-content: flex-end;
+        }
+
+        .nav-links {
+            display: flex;
+            gap: 35px;
+            list-style: none;
+            align-items: center;
+        }
+
+        .nav-links a {
+            color: #2C2C2C;
+            text-decoration: none;
+            font-weight: 500;
+            transition: color 0.3s ease;
+            font-size: 15px;
+        }
+
+        .nav-links a:hover {
+            color: #5B8C6B;
+        }
+
+        .nav-links a.active-link {
+            color: #5B8C6B;
+        }
+
+        .hamburger {
+            display: none;
+            flex-direction: column;
+            cursor: pointer;
+            gap: 6px;
+        }
+
+        .hamburger span {
+            width: 25px;
+            height: 3px;
+            background-color: #2C2C2C;
+            border-radius: 2px;
+            transition: all 0.3s ease;
+        }
+
+        /* ============ Hero Section ============ */
+        .hero {
+            background: linear-gradient(160deg, #F7F3ED 0%, #EDE8DF 40%, #E8F0E5 100%);
+            padding: 100px 20px 60px;
+            text-align: center;
+        }
+
+        .hero h1 {
+            font-family: 'DM Serif Display', serif;
+            font-size: clamp(32px, 5vw, 56px);
+            font-weight: 800;
+            margin-bottom: 20px;
+            color: #2C2C2C;
+            line-height: 1.3;
+        }
+
+        .hero p {
+            font-size: 18px;
+            color: #3A4A63;
+            margin-bottom: 30px;
+            max-width: 700px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        /* ============ Experience Highlight Section ============ */
+        .experience-section {
+            max-width: 900px;
+            margin: 0 auto;
+            padding: 60px 20px 0;
+            text-align: center;
+        }
+
+        .experience-section h2 {
+            font-family: 'DM Serif Display', serif;
+            font-size: 32px;
+            font-weight: 700;
+            color: #2C2C2C;
+            margin-bottom: 12px;
+        }
+
+        .experience-section .experience-subtitle {
+            font-size: 16px;
+            color: #4A5568;
+            max-width: 600px;
+            margin: 0 auto 36px;
+            line-height: 1.7;
+        }
+
+        .experience-stats {
+            display: flex;
+            justify-content: center;
+            gap: 48px;
+            margin-bottom: 36px;
+            flex-wrap: wrap;
+        }
+
+        .experience-stat {
+            text-align: center;
+        }
+
+        .experience-stat .stat-number {
+            font-family: 'DM Serif Display', serif;
+            font-size: 48px;
+            color: #5B8C6B;
+            line-height: 1.1;
+        }
+
+        .experience-stat .stat-label {
+            font-size: 14px;
+            color: #4A5568;
+            font-weight: 600;
+            margin-top: 4px;
+        }
+
+        .experience-highlights {
+            display: flex;
+            justify-content: center;
+            gap: 24px;
+            flex-wrap: wrap;
+        }
+
+        .experience-highlight {
+            background: white;
+            border-radius: 12px;
+            padding: 24px 28px;
+            box-shadow: 0 2px 12px rgba(44,44,44,0.06);
+            max-width: 380px;
+            text-align: left;
+        }
+
+        .experience-highlight .highlight-name {
+            font-weight: 700;
+            color: #5B8C6B;
+            font-size: 16px;
+            margin-bottom: 6px;
+        }
+
+        .experience-highlight .highlight-detail {
+            font-size: 14px;
+            color: #4A5568;
+            line-height: 1.6;
+        }
+
+        @media (max-width: 600px) {
+            .experience-stats {
+                gap: 32px;
+            }
+            .experience-stat .stat-number {
+                font-size: 36px;
+            }
+            .experience-highlight {
+                max-width: 100%;
+            }
+        }
+
+        /* ============ Team Section ============ */
+        .team-section {
+            padding: 80px 20px;
+        }
+
+        .section-header {
+            text-align: center;
+            margin-bottom: 60px;
+        }
+
+        .section-header h2 {
+            font-family: 'DM Serif Display', serif;
+            font-size: clamp(28px, 4vw, 44px);
+            font-weight: 700;
+            margin-bottom: 15px;
+            color: #2C2C2C;
+        }
+
+        .section-header p {
+            font-size: 16px;
+            color: #4A5568;
+            max-width: 600px;
+            margin: 0 auto;
+        }
+
+        .team-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 40px;
+            margin-bottom: 60px;
+        }
+
+        /* ============ Team Cards ============ */
+        .team-card-wrapper {
+            perspective: 1000px;
+            cursor: pointer;
+            height: 400px;
+        }
+
+        .team-card {
+            position: relative;
+            width: 100%;
+            height: 100%;
+            transition: transform 0.6s;
+            transform-style: preserve-3d;
+        }
+
+        .team-card-wrapper.flipped .team-card {
+            transform: rotateY(180deg);
+        }
+
+        .card-front,
+        .card-back {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            backface-visibility: hidden;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            padding: 30px;
+            border-radius: 12px;
+            box-shadow: 0 4px 12px rgba(44, 44, 44, 0.08);
+        }
+
+        .card-front {
+            background: white;
+            justify-content: center;
+            text-align: center;
+        }
+
+        .card-back {
+            background: linear-gradient(135deg, #F0F7F2 0%, #E8F0E5 100%);
+            transform: rotateY(180deg);
+            text-align: center;
+            justify-content: flex-start;
+        }
+
+        .team-photo {
+            width: 100px;
+            height: 100px;
+            border-radius: 50%;
+            background: linear-gradient(135deg, #5B8C6B 0%, #3D6B4A 100%);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-bottom: 20px;
+        }
+
+        .team-initials {
+            font-family: 'DM Serif Display', serif;
+            font-size: 40px;
+            font-weight: 700;
+            color: white;
+        }
+
+        .team-name {
+            font-family: 'DM Serif Display', serif;
+            font-size: 22px;
+            font-weight: 700;
+            margin-bottom: 8px;
+            color: #2C2C2C;
+        }
+
+        .back-name {
+            font-family: 'DM Serif Display', serif;
+            font-size: 20px;
+            font-weight: 700;
+            margin-bottom: 12px;
+            color: #2C2C2C;
+        }
+
+        .team-role {
+            font-size: 14px;
+            color: #5B8C6B;
+            font-weight: 600;
+            margin-bottom: 15px;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+        }
+
+        .team-meta {
+            display: flex;
+            flex-direction: column;
+            gap: 8px;
+            margin: 15px 0;
+            font-size: 14px;
+            color: #4A5568;
+        }
+
+        .team-location,
+        .team-language {
+            font-size: 13px;
+        }
+
+        .team-contact-info {
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+            margin: 15px 0;
+            width: 100%;
+        }
+
+        .team-contact-link {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            color: #5B8C6B;
+            text-decoration: none;
+            font-size: 13px;
+            transition: color 0.3s ease;
+        }
+
+        .team-contact-link:hover {
+            color: #3D6B4A;
+        }
+
+        .team-contact-link svg {
+            width: 16px;
+            height: 16px;
+        }
+
+        .flip-hint,
+        .back-flip-hint {
+            font-family: 'DM Serif Display', serif;
+            font-size: 12px;
+            color: #5B8C6B;
+            margin-top: auto;
+            font-weight: 600;
+        }
+
+        .team-bio {
+            font-size: 14px;
+            color: #4A5568;
+            line-height: 1.6;
+            margin-bottom: 15px;
+        }
+
+        .team-specialties {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 8px;
+            justify-content: center;
+            margin: 15px 0;
+        }
+
+        .specialty-tag {
+            display: inline-block;
+            padding: 6px 12px;
+            background-color: white;
+            border: 1px solid #5B8C6B;
+            border-radius: 20px;
+            font-size: 12px;
+            color: #5B8C6B;
+            font-weight: 500;
+        }
+
+        .fade-in {
+            animation: fadeInUp 0.6s ease-out forwards;
+        }
+
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        /* ============ CTA Section ============ */
+        .cta-section {
+            background: linear-gradient(135deg, #3D6B4A 0%, #2C5038 100%);
+            color: white;
+            padding: 80px 20px;
+            text-align: center;
+            margin-top: 60px;
+        }
+
+        .cta-section h2 {
+            font-family: 'DM Serif Display', serif;
+            font-size: clamp(28px, 4vw, 44px);
+            font-weight: 700;
+            margin-bottom: 20px;
+            color: white;
+        }
+
+        .cta-section p {
+            color: rgba(255, 255, 255, 0.85);
+            font-size: 18px;
+            margin-bottom: 35px;
+            max-width: 600px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .cta-buttons {
+            display: flex;
+            gap: 20px;
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+
+        .btn {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            padding: 12px 28px;
+            border-radius: 8px;
+            font-family: 'Nunito', sans-serif;
+            font-size: 15px;
+            font-weight: 600;
+            cursor: pointer;
+            text-decoration: none;
+            border: 2px solid transparent;
+            transition: all 0.3s ease;
+        }
+
+        .btn-primary {
+            background: linear-gradient(135deg, #5B8C6B 0%, #3D6B4A 100%);
+            color: white;
+        }
+
+        .btn-primary:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 10px 30px rgba(91, 140, 107, 0.3);
+        }
+
+        .btn-secondary {
+            background-color: transparent;
+            color: white;
+            border-color: white;
+        }
+
+        .btn-secondary:hover {
+            background-color: rgba(255, 255, 255, 0.1);
+        }
+
+        /* ============ Footer ============ */
+        footer {
+            background: linear-gradient(135deg, #3D6B4A 0%, #2C5038 100%);
+            color: white;
+            padding: 50px 20px 30px;
+        }
+
+        .footer-content {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 40px;
+            max-width: 1200px;
+            margin: 0 auto 30px;
+        }
+
+        .footer-section h4 {
+            color: white;
+            font-size: 16px;
+            margin-bottom: 15px;
+        }
+
+        .footer-section ul {
+            list-style: none;
+        }
+
+        .footer-section ul li {
+            margin-bottom: 10px;
+        }
+
+        .footer-section a {
+            color: rgba(255, 255, 255, 0.7);
+            text-decoration: none;
+            transition: color 0.3s ease;
+            font-size: 14px;
+        }
+
+        .footer-section a:hover {
+            color: white;
+        }
+
+        .footer-brand {
+            margin-bottom: 15px;
+        }
+
+        .footer-brand p {
+            color: rgba(255, 255, 255, 0.6);
+            font-size: 13px;
+            margin: 8px 0;
+        }
+
+        .social-links {
+            display: flex;
+            gap: 15px;
+            margin-top: 15px;
+        }
+
+        .social-links a {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            width: 35px;
+            height: 35px;
+            background-color: rgba(91, 140, 107, 0.2);
+            color: #5B8C6B;
+            border-radius: 50%;
+            text-decoration: none;
+            transition: all 0.3s ease;
+            font-size: 18px;
+        }
+
+        .social-links a:hover {
+            background-color: #5B8C6B;
+            color: white;
+        }
+
+        .footer-bottom {
+            border-top: 1px solid rgba(255, 255, 255, 0.1);
+            padding-top: 30px;
+            text-align: center;
+            font-size: 13px;
+            color: rgba(255, 255, 255, 0.6);
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .legal-disclaimer {
+            font-size: 12px;
+            margin-top: 20px;
+            line-height: 1.6;
+            color: rgba(255, 255, 255, 0.5);
+        }
+
+        /* ============ Responsive Design ============ */
+        @media (max-width: 768px) {
+            .hamburger {
+                display: flex;
+            }
+
+            .nav-links {
+                position: absolute;
+                top: 70px;
+                left: 0;
+                right: 0;
+                background-color: white;
+                flex-direction: column;
+                gap: 15px;
+                padding: 30px 20px;
+                display: none;
+                box-shadow: 0 4px 12px rgba(44, 44, 44, 0.08);
+            }
+
+            .nav-links.active {
+                display: flex;
+            }
+
+            .hero {
+                padding: 60px 20px 40px;
+            }
+
+            .hero h1 {
+                font-size: 28px;
+            }
+
+            .team-section {
+                padding: 50px 20px;
+            }
+
+            .team-grid {
+                grid-template-columns: 1fr;
+                gap: 30px;
+            }
+
+            .team-card-wrapper {
+                height: 340px;
+            }
+
+            .card-front,
+            .card-back {
+                padding: 20px;
+            }
+
+            .team-photo {
+                width: 80px;
+                height: 80px;
+            }
+
+            .team-initials {
+                font-size: 30px;
+            }
+
+            .cta-section {
+                padding: 50px 20px;
+            }
+
+            .cta-buttons {
+                flex-direction: column;
+                gap: 12px;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .header-container {
+                padding: 12px 16px;
+            }
+
+            .logo {
+                font-size: 20px;
+            }
+
+            .hero {
+                padding: 60px 16px 40px;
+            }
+
+            .hero h1 {
+                font-size: 24px;
+            }
+
+            .hero p {
+                font-size: 14px;
+            }
+
+            .team-section {
+                padding: 40px 16px;
+            }
+
+            .section-header h2 {
+                font-size: 24px;
+            }
+
+            .team-card-wrapper {
+                height: 340px;
+            }
+
+            .team-name {
+                font-size: 18px;
+            }
+
+            .cta-section {
+                padding: 40px 16px;
+            }
+
+            .cta-section h2 {
+                font-size: 22px;
+            }
+
+            .cta-section p {
+                font-size: 14px;
+            }
+        }
+
+        /* Agents Help Section */
+        .agents-help-section {
+            padding: 80px 20px 40px;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .help-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 20px;
+            margin-top: 30px;
+        }
+
+        .help-item {
+            display: flex;
+            align-items: flex-start;
+            gap: 15px;
+            background: #F7F3ED;
+            padding: 20px;
+            border-radius: 10px;
+            transition: all 0.3s ease;
+        }
+
+        .help-item:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 8px 20px rgba(44, 44, 44, 0.08);
+        }
+
+        .help-icon {
+            display: flex;
+            align-items: center;
+            flex-shrink: 0;
+            margin-top: 2px;
+        }
+
+        .help-item strong {
+            font-family: 'DM Serif Display', serif;
+            font-size: 16px;
+            color: #2C2C2C;
+            display: block;
+            margin-bottom: 5px;
+        }
+
+        .help-item p {
+            font-size: 14px;
+            color: #4A5568;
+            margin: 0;
+            line-height: 1.5;
+        }
+
+        @media (max-width: 768px) {
+            .help-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+
+        /* Services Dropdown */
+        .services-parent {
+            position: relative;
+        }
+        .services-dropdown {
+            display: none;
+            position: absolute;
+            top: 100%;
+            left: 50%;
+            transform: translateX(-50%);
+            background: white;
+            border-radius: 10px;
+            box-shadow: 0 10px 40px rgba(44, 44, 44, 0.15);
+            padding: 16px 0;
+            min-width: 240px;
+            z-index: 1000;
+            margin-top: 10px;
+        }
+        .services-dropdown::before {
+            content: '';
+            position: absolute;
+            top: -10px;
+            left: 0;
+            right: 0;
+            height: 10px;
+        }
+        .services-parent:hover .services-dropdown {
+            display: block;
+        }
+        .services-dropdown a {
+            display: block;
+            padding: 10px 24px;
+            color: #2C2C2C;
+            font-size: 13px;
+            font-weight: 500;
+            text-decoration: none;
+            white-space: nowrap;
+            transition: background 0.2s, color 0.2s;
+        }
+        .services-dropdown a:hover {
+            background: #F7F3ED;
+            color: #5B8C6B;
+        }
+        @media (max-width: 768px) {
+            .services-dropdown {
+                position: static;
+                transform: none;
+                box-shadow: none;
+                margin-top: 0;
+                padding: 0 0 0 20px;
+                border-radius: 0;
+            }
+            .services-parent:hover .services-dropdown {
+                display: block;
+            }
+        }
+
+            .footer-logo { display: block; max-width: 180px; height: auto; margin-bottom: 15px; }
+    </style>
+</head>
+<body>
+    <!-- ============================================
+         HEADER & NAVIGATION
+         ============================================ -->
+    <header id="header">
+        <div class="header-container">
+            <a href="/" class="logo"><img src="/logo-mark.svg" alt="Medicare Moms Logo">Medicare Moms</a>
+            <nav>
+                <ul class="nav-links" id="navLinks">
+                    <li><a href="/es/servicios/">Servicios</a></li>
+                    <li><a href="/es/recursos/">Recursos</a></li>
+                    <li><a href="/blog/">Blog</a></li>
+                    <li><a href="/es/equipo/" class="active-link">Nuestro Equipo</a></li>
+                    <li><a href="/#contacto">Contacto</a></li>
+                    <li><a href="/es/unete/">Únete al Equipo</a></li>
+                    <li class="lang-toggle">
+                        <a href="/meet-our-team/" class="lang-link" title="View in English">
+                            <span class="lang-inactive">EN</span> / <span class="lang-active">ES</span>
+                        </a>
+                    </li>
+                </ul>
+                <div class="hamburger" id="hamburger">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
+            </nav>
+        </div>
+    </header>
+
+    <!-- ============================================
+         HERO SECTION
+         ============================================ -->
+    <section class="hero">
+        <h1>Conoce a las Medicare Moms</h1>
+        <p>Mujeres reales. Experiencia real. Aquí para ayudarte a ti y a tu familia a encontrar la cobertura correcta.</p>
+    </section>
+
+    <!-- ============================================
+         EXPERIENCE HIGHLIGHT SECTION
+         ============================================ -->
+    <section class="experience-section">
+        <h2>Décadas de Experiencia en Seguros</h2>
+        <p class="experience-subtitle">Nuestro equipo no solo conoce Medicare. Muchas de nuestras agentes construyeron sus carreras en múltiples áreas de seguros antes de especializarse en la cobertura que más te importa.</p>
+
+        <div class="experience-highlights">
+            <div class="experience-highlight">
+                <div class="highlight-name">Michelle Bodin</div>
+                <div class="highlight-detail">Licenciada desde agosto de 1990, con más de 35 años en la industria. Michelle comenzó en seguros de Vida y Salud y luego obtuvo su licencia de Propiedad y Accidentes, aportando amplia experiencia en múltiples líneas de cobertura.</div>
+            </div>
+            <div class="experience-highlight">
+                <div class="highlight-name">Elizabeth Perez</div>
+                <div class="highlight-detail">Agente de Medicare desde 2013 con formación en Ciencias de la Computación y Administración de Empresas. Para Elizabeth, esta carrera es un verdadero servicio: ayudando a personas mayores a navegar su atención médica mientras aprende de su sabiduría y experiencia de vida.</div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ============================================
+         TEAM SECTION
+         ============================================ -->
+    <section class="team-section" id="team">
+        <div class="section-header">
+            <h2>Nuestros Agentes de Confianza</h2>
+            <p>Conoce a los profesionales dedicados que se comprometieron a encontrarte la opción de seguro perfecta.</p>
+        </div>
+
+        <div class="team-grid">
+            <!-- Aidyl Semidey (ES) -->
+            <div class="team-card-wrapper fade-in" onclick="this.classList.toggle('flipped')">
+                <div class="team-card">
+                    <div class="card-front">
+                        <div class="team-photo"><img src="/aidyl.jpg" alt="Aidyl Semidey" style="width:100%;height:100%;object-fit:cover;object-position:center 25%;border-radius:50%;"></div>
+                        <h3 class="team-name">Aidyl Semidey</h3>
+                        <p class="team-role">Agente de Seguros Licenciada</p>
+                        <div class="team-meta">
+                            <span class="team-location">📍 Murray, UT</span>
+                            <span class="team-language">🌐 Inglés / Español</span>
+                        </div>
+                        <div class="team-contact-info">
+                            <a href="mailto:aidyl@medicaremoms.com" class="team-contact-link" onclick="event.stopPropagation()">
+                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect width="20" height="16" x="2" y="4" rx="2"/><path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"/></svg>
+                                aidyl@medicaremoms.com
+                            </a>
+                            <a href="tel:+18018953327" class="team-contact-link" onclick="event.stopPropagation()">
+                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+                                (801) 895-3327
+                            </a>
+                        </div>
+                        <span class="flip-hint">Conoce más sobre Aidyl</span>
+                    </div>
+                    <div class="card-back">
+                        <h3 class="back-name">Aidyl Semidey</h3>
+                        <p class="team-bio">Mamá de 2 hijas basada en Murray, UT. Aidyl es apasionada por hacer que los seguros sean accesibles para todos, especialmente en la comunidad hispanohablante. Se toma el tiempo para asegurarse de que cada cliente entienda realmente sus opciones.</p>
+                        <div class="team-specialties">
+                            <span class="specialty-tag">Medicare Advantage</span>
+                            <span class="specialty-tag">Medigap</span>
+                            <span class="specialty-tag">ACA</span>
+                        </div>
+                        <span class="back-flip-hint">Haz clic para volver</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Elizabeth Perez (ES) -->
+            <div class="team-card-wrapper fade-in" onclick="this.classList.toggle('flipped')">
+                <div class="team-card">
+                    <div class="card-front">
+                        <div class="team-photo"><img src="/elizabeth.jpg" alt="Elizabeth Perez" style="width:100%;height:100%;object-fit:cover;object-position:center 25%;border-radius:50%;"></div>
+                        <h3 class="team-name">Elizabeth Perez</h3>
+                        <p class="team-role">Agente de Seguros Licenciada</p>
+                        <div class="team-meta">
+                            <span class="team-location">📍 Puerto Rico</span>
+                            <span class="team-language">🌐 Inglés / Español</span>
+                        </div>
+                        <div class="team-contact-info">
+                            <a href="mailto:elizabeth@medicaremoms.com" class="team-contact-link" onclick="event.stopPropagation()">
+                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect width="20" height="16" x="2" y="4" rx="2"/><path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"/></svg>
+                                elizabeth@medicaremoms.com
+                            </a>
+                            <a href="tel:+18019017070" class="team-contact-link" onclick="event.stopPropagation()">
+                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+                                (801) 901-7070
+                            </a>
+                        </div>
+                        <span class="flip-hint">Conoce más sobre Elizabeth</span>
+                    </div>
+                    <div class="card-back">
+                        <h3 class="back-name">Elizabeth Perez</h3>
+                        <p class="team-bio">Mamá de 2 hijos basada en Puerto Rico. Agente de Medicare desde 2013 con formación en Ciencias de la Computación y Administración de Empresas, Elizabeth ve su trabajo como un verdadero servicio, no solo una venta. Esta carrera le dio la flexibilidad de ser una mamá presente mientras mantiene a su familia. Dato curioso: le encanta el boxeo y dice que la constancia lo es todo.</p>
+                        <div class="team-specialties">
+                            <span class="specialty-tag">Medicare Advantage</span>
+                            <span class="specialty-tag">Medigap</span>
+                            <span class="specialty-tag">ACA</span>
+                        </div>
+                        <span class="back-flip-hint">Haz clic para volver</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Edmi Dominguez (ES) -->
+            <div class="team-card-wrapper fade-in" onclick="this.classList.toggle('flipped')">
+                <div class="team-card">
+                    <div class="card-front">
+                        <div class="team-photo"><img src="/edmi.jpg" alt="Edmi Dominguez" style="width:100%;height:100%;object-fit:cover;object-position:center 25%;border-radius:50%;"></div>
+                        <h3 class="team-name">Edmi Dominguez</h3>
+                        <p class="team-role">Agente de Seguros Licenciada</p>
+                        <div class="team-meta">
+                            <span class="team-location">📍 West Jordan, UT</span>
+                            <span class="team-language">🌐 Inglés / Español</span>
+                        </div>
+                        <div class="team-contact-info">
+                            <a href="mailto:edmi@medicaremoms.com" class="team-contact-link" onclick="event.stopPropagation()">
+                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect width="20" height="16" x="2" y="4" rx="2"/><path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"/></svg>
+                                edmi@medicaremoms.com
+                            </a>
+                            <a href="tel:+18014480443" class="team-contact-link" onclick="event.stopPropagation()">
+                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+                                (801) 448-0443
+                            </a>
+                        </div>
+                        <span class="flip-hint">Conoce más sobre Edmi</span>
+                    </div>
+                    <div class="card-back">
+                        <h3 class="back-name">Edmi Dominguez</h3>
+                        <p class="team-bio">Mamá de 2 basada en West Jordan, UT. Edmi se dedica a asegurarse de que cada cliente se sienta escuchado y comprendido. Se toma el tiempo para guiarte a través de tus opciones para que puedas sentirte segura en tus decisiones de cobertura.</p>
+                        <div class="team-specialties">
+                            <span class="specialty-tag">Medicare Advantage</span>
+                            <span class="specialty-tag">Medigap</span>
+                            <span class="specialty-tag">ACA</span>
+                        </div>
+                        <span class="back-flip-hint">Haz clic para volver</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Lissette Wong (ES) - HIDDEN until profile photo is available
+            <div class="team-card-wrapper fade-in" onclick="this.classList.toggle('flipped')">
+                <div class="team-card">
+                    <div class="card-front">
+                        <div class="team-photo">
+                            <span class="team-initials">LW</span>
+                        </div>
+                        <h3 class="team-name">Lissette Wong</h3>
+                        <p class="team-role">Agente de Seguros Licenciada</p>
+                        <div class="team-meta">
+                            <span class="team-language">🌐 Inglés / Español</span>
+                        </div>
+                        <div class="team-contact-info">
+                            <a href="mailto:lissette@medicaremoms.com" class="team-contact-link" onclick="event.stopPropagation()">
+                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect width="20" height="16" x="2" y="4" rx="2"/><path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"/></svg>
+                                lissette@medicaremoms.com
+                            </a>
+                            <a href="tel:+18014480858" class="team-contact-link" onclick="event.stopPropagation()">
+                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+                                (801) 448-0858
+                            </a>
+                        </div>
+                        <span class="flip-hint">Conoce más sobre Lissette</span>
+                    </div>
+                    <div class="card-back">
+                        <h3 class="back-name">Lissette Wong</h3>
+                        <p class="team-bio">Lissette es apasionada por ayudar a las familias a navegar sus opciones de seguro con claridad y cuidado. Se compromete a que cada cliente se sienta apoyada y segura en sus decisiones de cobertura.</p>
+                        <div class="team-specialties">
+                            <span class="specialty-tag">Medicare Advantage</span>
+                            <span class="specialty-tag">Medigap</span>
+                            <span class="specialty-tag">ACA</span>
+                        </div>
+                        <span class="back-flip-hint">Haz clic para volver</span>
+                    </div>
+                </div>
+            </div>
+            -->
+
+            <!-- Magarely Sanchez (ES) -->
+            <div class="team-card-wrapper fade-in" onclick="this.classList.toggle('flipped')">
+                <div class="team-card">
+                    <div class="card-front">
+                        <div class="team-photo"><img src="/Magarely.jpg" alt="Magarely Sanchez" style="width:100%;height:100%;object-fit:cover;object-position:center 25%;border-radius:50%;"></div>
+                        <h3 class="team-name">Magarely Sanchez</h3>
+                        <p class="team-role">Agente de Seguros Licenciada</p>
+                        <div class="team-meta">
+                            <span class="team-language">🌐 Inglés / Español</span>
+                        </div>
+                        <div class="team-contact-info">
+                            <a href="mailto:magarely@medicaremoms.com" class="team-contact-link" onclick="event.stopPropagation()">
+                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect width="20" height="16" x="2" y="4" rx="2"/><path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"/></svg>
+                                magarely@medicaremoms.com
+                            </a>
+                            <a href="tel:+18018892428" class="team-contact-link" onclick="event.stopPropagation()">
+                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+                                (801) 889-2428
+                            </a>
+                        </div>
+                        <span class="flip-hint">Conoce más sobre Magarely</span>
+                    </div>
+                    <div class="card-back">
+                        <h3 class="back-name">Magarely Sanchez</h3>
+                        <p class="team-bio">Magarely aporta calidez y dedicación a cada interacción con sus clientes. Le encanta ayudar a las familias de su comunidad a encontrar la cobertura correcta y sentirse seguras en sus decisiones de seguro de salud.</p>
+                        <div class="team-specialties">
+                            <span class="specialty-tag">Medicare Advantage</span>
+                            <span class="specialty-tag">Medigap</span>
+                            <span class="specialty-tag">ACA</span>
+                        </div>
+                        <span class="back-flip-hint">Haz clic para volver</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Michelle Dennison -->
+            <div class="team-card-wrapper fade-in" onclick="this.classList.toggle('flipped')">
+                <div class="team-card">
+                    <div class="card-front">
+                        <div class="team-photo"><img src="/michelled.jpg" alt="Michelle Dennison" style="width:100%;height:100%;object-fit:cover;object-position:center 30%;border-radius:50%;"></div>
+                        <h3 class="team-name">Michelle Dennison</h3>
+                        <p class="team-role">Agente de Seguros Licenciada</p>
+                        <div class="team-meta">
+                            <span class="team-location">📍 Orem, UT</span>
+                        </div>
+                        <div class="team-contact-info">
+                            <a href="mailto:michelle@medicaremoms.com" class="team-contact-link" onclick="event.stopPropagation()">
+                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect width="20" height="16" x="2" y="4" rx="2"/><path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"/></svg>
+                                michelle@medicaremoms.com
+                            </a>
+                            <a href="tel:+13854813683" class="team-contact-link" onclick="event.stopPropagation()">
+                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+                                (385) 481-3683
+                            </a>
+                        </div>
+                        <span class="flip-hint">Conoce más sobre Michelle</span>
+                    </div>
+                    <div class="card-back">
+                        <h3 class="back-name">Michelle Dennison</h3>
+                        <p class="team-bio">Mamá de 3 y orgullosa abuela basada en Orem, UT. A Michelle le encanta viajar y pasar tiempo de calidad con sus nietos. Su calidez y experiencia de vida la hacen una natural para ayudar a los clientes a sentirse cómodos y seguros en sus opciones de cobertura.</p>
+                        <div class="team-specialties">
+                            <span class="specialty-tag">Medicare Advantage</span>
+                            <span class="specialty-tag">Medigap</span>
+                            <span class="specialty-tag">ACA</span>
+                        </div>
+                        <span class="back-flip-hint">Haz clic para volver</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Tamara Redd -->
+            <div class="team-card-wrapper fade-in" onclick="this.classList.toggle('flipped')">
+                <div class="team-card">
+                    <div class="card-front">
+                        <div class="team-photo"><img src="/tamara.jpg" alt="Tamara Redd" style="width:100%;height:100%;object-fit:cover;object-position:center 25%;border-radius:50%;"></div>
+                        <h3 class="team-name">Tamara Redd</h3>
+                        <p class="team-role">Agente de Seguros Licenciada</p>
+                        <div class="team-meta">
+                            <span class="team-location">📍 Lehi, UT</span>
+                        </div>
+                        <div class="team-contact-info">
+                            <a href="mailto:tamara@medicaremoms.com" class="team-contact-link" onclick="event.stopPropagation()">
+                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect width="20" height="16" x="2" y="4" rx="2"/><path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"/></svg>
+                                tamara@medicaremoms.com
+                            </a>
+                            <a href="tel:+13853601512" class="team-contact-link" onclick="event.stopPropagation()">
+                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+                                (385) 360-1512
+                            </a>
+                        </div>
+                        <span class="flip-hint">Conoce más sobre Tamara</span>
+                    </div>
+                    <div class="card-back">
+                        <h3 class="back-name">Tamara Redd</h3>
+                        <p class="team-bio">Mamá de 5 basada en Lehi, UT. Tamara conoce de primera mano lo que significa administrar un hogar ocupado, y trae esa misma atención al detalle y cuidado a cada cliente con el que trabaja. Está aquí para simplificar el proceso y encontrar el ajuste correcto para tu familia.</p>
+                        <div class="team-specialties">
+                            <span class="specialty-tag">Medicare Advantage</span>
+                            <span class="specialty-tag">ACA</span>
+                        </div>
+                        <span class="back-flip-hint">Haz clic para volver</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Saya Murton -->
+            <div class="team-card-wrapper fade-in" onclick="this.classList.toggle('flipped')">
+                <div class="team-card">
+                    <div class="card-front">
+                        <div class="team-photo"><img src="/saya.jpg" alt="Saya Murton" style="width:100%;height:100%;object-fit:cover;object-position:center 25%;border-radius:50%;"></div>
+                        <h3 class="team-name">Saya Murton</h3>
+                        <p class="team-role">Agente de Seguros Licenciada</p>
+                        <div class="team-meta">
+                            <span class="team-location">📍 Herriman, UT</span>
+                            <span class="team-language">🌐 Inglés / Japonés</span>
+                        </div>
+                        <div class="team-contact-info">
+                            <a href="mailto:saya@medicaremoms.com" class="team-contact-link" onclick="event.stopPropagation()">
+                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect width="20" height="16" x="2" y="4" rx="2"/><path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"/></svg>
+                                saya@medicaremoms.com
+                            </a>
+                            <a href="tel:+18013168113" class="team-contact-link" onclick="event.stopPropagation()">
+                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+                                (801) 316-8113
+                            </a>
+                        </div>
+                        <span class="flip-hint">Conoce más sobre Saya</span>
+                    </div>
+                    <div class="card-back">
+                        <h3 class="back-name">Saya Murton</h3>
+                        <p class="team-bio">Mamá de 3 varones basada en Herriman, UT. Originaria de Japón, Saya aporta casi 15 años de experiencia en seguros al equipo. Cuando no está ayudando a los clientes a encontrar el plan perfecto, probablemente la encontrarás en Disney con su familia.</p>
+                        <div class="team-specialties">
+                            <span class="specialty-tag">Medicare Advantage</span>
+                            <span class="specialty-tag">Medigap</span>
+                            <span class="specialty-tag">ACA</span>
+                            <span class="specialty-tag">Life</span>
+                            <span class="specialty-tag">Group</span>
+                        </div>
+                        <span class="back-flip-hint">Haz clic para volver</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Ally Valdez -->
+            <div class="team-card-wrapper fade-in" onclick="this.classList.toggle('flipped')">
+                <div class="team-card">
+                    <div class="card-front">
+                        <div class="team-photo"><img src="/ally.jpg" alt="Ally Valdez" style="width:100%;height:100%;object-fit:cover;object-position:center 25%;border-radius:50%;"></div>
+                        <h3 class="team-name">Ally Valdez</h3>
+                        <p class="team-role">Agente de Seguros Licenciada</p>
+                        <div class="team-meta">
+                            <span class="team-location">📍 Herriman, UT</span>
+                        </div>
+                        <div class="team-contact-info">
+                            <a href="mailto:ally@medicaremoms.com" class="team-contact-link" onclick="event.stopPropagation()">
+                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect width="20" height="16" x="2" y="4" rx="2"/><path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"/></svg>
+                                ally@medicaremoms.com
+                            </a>
+                            <a href="tel:+14352461548" class="team-contact-link" onclick="event.stopPropagation()">
+                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+                                (435) 246-1548
+                            </a>
+                        </div>
+                        <span class="flip-hint">Conoce más sobre Ally</span>
+                    </div>
+                    <div class="card-back">
+                        <h3 class="back-name">Ally Valdez</h3>
+                        <p class="team-bio">Mamá de 2 varones y una niña basada en Herriman, UT. Ally aporta energía y corazón a todo lo que hace. Se dedica a ayudar a las familias a encontrar cobertura que se ajuste a sus vidas y a su presupuesto.</p>
+                        <div class="team-specialties">
+                            <span class="specialty-tag">Medicare Advantage</span>
+                            <span class="specialty-tag">Medigap</span>
+                            <span class="specialty-tag">ACA</span>
+                            <span class="specialty-tag">Group</span>
+                        </div>
+                        <span class="back-flip-hint">Haz clic para volver</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Erica Harding -->
+            <div class="team-card-wrapper fade-in" onclick="this.classList.toggle('flipped')">
+                <div class="team-card">
+                    <div class="card-front">
+                        <div class="team-photo"><img src="/erica.jpg" alt="Erica Harding" style="width:100%;height:100%;object-fit:cover;object-position:center 25%;border-radius:50%;"></div>
+                        <h3 class="team-name">Erica Harding</h3>
+                        <p class="team-role">Agente de Seguros Licenciada</p>
+                        <div class="team-meta">
+                            <span class="team-location">📍 Katy, TX</span>
+                        </div>
+                        <div class="team-contact-info">
+                            <a href="mailto:erica@medicaremoms.com" class="team-contact-link" onclick="event.stopPropagation()">
+                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect width="20" height="16" x="2" y="4" rx="2"/><path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"/></svg>
+                                erica@medicaremoms.com
+                            </a>
+                            <a href="tel:+18328505726" class="team-contact-link" onclick="event.stopPropagation()">
+                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+                                (832) 850-5726
+                            </a>
+                        </div>
+                        <span class="flip-hint">Conoce más sobre Erica</span>
+                    </div>
+                    <div class="card-back">
+                        <h3 class="back-name">Erica Harding</h3>
+                        <p class="team-bio">Mamá de 3 basada en Katy, TX. Erica es apasionada por ayudar a las familias a navegar sus opciones de cobertura con claridad y confianza. Su enfoque amigable hace que incluso los temas de seguros más confusos se sientan simples.</p>
+                        <div class="team-specialties">
+                            <span class="specialty-tag">ACA</span>
+                        </div>
+                        <span class="back-flip-hint">Haz clic para volver</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Michelle Bodin -->
+            <div class="team-card-wrapper fade-in" onclick="this.classList.toggle('flipped')">
+                <div class="team-card">
+                    <div class="card-front">
+                        <div class="team-photo"><img src="/michelleb.jpg" alt="Michelle Bodin" style="width:100%;height:100%;object-fit:cover;object-position:center 25%;border-radius:50%;"></div>
+                        <h3 class="team-name">Michelle Bodin</h3>
+                        <p class="team-role">Agente de Seguros Licenciada</p>
+                        <div class="team-meta">
+                            <span class="team-location">📍 Tucson, AZ</span>
+                            <span class="team-language">🌐 Inglés / Alemán</span>
+                        </div>
+                        <div class="team-contact-info">
+                            <a href="mailto:michelleb@medicaremoms.com" class="team-contact-link" onclick="event.stopPropagation()">
+                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect width="20" height="16" x="2" y="4" rx="2"/><path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"/></svg>
+                                michelleb@medicaremoms.com
+                            </a>
+                            <a href="tel:+18019058691" class="team-contact-link" onclick="event.stopPropagation()">
+                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+                                (801) 905-8691
+                            </a>
+                        </div>
+                        <span class="flip-hint">Conoce más sobre Michelle</span>
+                    </div>
+                    <div class="card-back">
+                        <h3 class="back-name">Michelle Bodin</h3>
+                        <p class="team-bio">Mamá de 5 y abuela de 9 basada en Tucson, AZ. Michelle se trata todo de familia, ya sea la suya o las familias que ayuda a encontrar la cobertura correcta. Cuando no está trabajando, está planeando su próxima escapada rápida o pasando tiempo con sus nietos.</p>
+                        <div class="team-specialties">
+                            <span class="specialty-tag">Medicare Advantage</span>
+                            <span class="specialty-tag">Medigap</span>
+                            <span class="specialty-tag">ACA</span>
+                            <span class="specialty-tag">Life</span>
+                            <span class="specialty-tag">LTC</span>
+                        </div>
+                        <span class="back-flip-hint">Haz clic para volver</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Madisyn Groberg - HIDDEN until profile photo is available
+            <div class="team-card-wrapper fade-in" onclick="this.classList.toggle('flipped')">
+                <div class="team-card">
+                    <div class="card-front">
+                        <div class="team-photo">
+                            <span class="team-initials">MG</span>
+                        </div>
+                        <h3 class="team-name">Madisyn Groberg</h3>
+                        <p class="team-role">Agente de Seguros Licenciada</p>
+                        <div class="team-meta">
+                            <span class="team-location">📍 Spanish Fork, UT</span>
+                        </div>
+                        <div class="team-contact-info">
+                            <a href="mailto:madisyn@medicaremoms.com" class="team-contact-link" onclick="event.stopPropagation()">
+                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect width="20" height="16" x="2" y="4" rx="2"/><path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"/></svg>
+                                madisyn@medicaremoms.com
+                            </a>
+                        </div>
+                        <span class="flip-hint">Conoce más sobre Madisyn</span>
+                    </div>
+                    <div class="card-back">
+                        <h3 class="back-name">Madisyn Groberg</h3>
+                        <p class="team-bio">Basada en Spanish Fork, UT. Madisyn se especializa en ayudar a individuos, familias y empleadores a encontrar cobertura asequible del Marketplace ACA y planes de salud grupales. Biografía completa próximamente.</p>
+                        <div class="team-specialties">
+                            <span class="specialty-tag">ACA</span>
+                            <span class="specialty-tag">Group</span>
+                        </div>
+                        <span class="back-flip-hint">Haz clic para volver</span>
+                    </div>
+                </div>
+            </div>
+            -->
+
+            <!-- Madison Dennison -->
+            <div class="team-card-wrapper fade-in" onclick="this.classList.toggle('flipped')">
+                <div class="team-card">
+                    <div class="card-front">
+                        <div class="team-photo"><img src="/madison.jpg" alt="Madison Dennison" style="width:100%;height:100%;object-fit:cover;object-position:center 25%;border-radius:50%;"></div>
+                        <h3 class="team-name">Madison Dennison</h3>
+                        <p class="team-role">Agente de Seguros Licenciada</p>
+                        <div class="team-meta">
+                            <span class="team-location">📍 Provo, UT</span>
+                        </div>
+                        <div class="team-contact-info">
+                            <a href="mailto:madison@medicaremoms.com" class="team-contact-link" onclick="event.stopPropagation()">
+                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect width="20" height="16" x="2" y="4" rx="2"/><path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"/></svg>
+                                madison@medicaremoms.com
+                            </a>
+                        </div>
+                        <span class="flip-hint">Conoce más sobre Madison</span>
+                    </div>
+                    <div class="card-back">
+                        <h3 class="back-name">Madison Dennison</h3>
+                        <p class="team-bio">Basada en Provo, UT. Madison es una agente de seguros licenciada dedicada a ayudar a individuos y familias a encontrar la cobertura adecuada. Biografía completa próximamente.</p>
+                        <div class="team-specialties">
+                            <span class="specialty-tag">ACA</span>
+                            <span class="specialty-tag">Group</span>
+                        </div>
+                        <span class="back-flip-hint">Haz clic para volver</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Shaunie Dennison -->
+            <div class="team-card-wrapper fade-in" onclick="this.classList.toggle('flipped')">
+                <div class="team-card">
+                    <div class="card-front">
+                        <div class="team-photo"><img src="/shaunie.jpg" alt="Shaunie Dennison" style="width:100%;height:100%;object-fit:cover;object-position:center 25%;border-radius:50%;"></div>
+                        <h3 class="team-name">Shaunie Dennison</h3>
+                        <p class="team-role">Agente de Seguros Licenciada</p>
+                        <div class="team-meta">
+                            <span class="team-location">📍 Tucson, AZ</span>
+                        </div>
+                        <div class="team-contact-info">
+                            <a href="mailto:shaunie@medicaremoms.com" class="team-contact-link" onclick="event.stopPropagation()">
+                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect width="20" height="16" x="2" y="4" rx="2"/><path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"/></svg>
+                                shaunie@medicaremoms.com
+                            </a>
+                        </div>
+                        <span class="flip-hint">Conoce más sobre Shaunie</span>
+                    </div>
+                    <div class="card-back">
+                        <h3 class="back-name">Shaunie Dennison</h3>
+                        <p class="team-bio">Basada en Tucson, AZ. Shaunie se enfoca en la cobertura del Marketplace ACA y el seguro de salud grupal, ayudando a individuos, familias y negocios locales a encontrar planes que se ajusten a sus necesidades. Biografía completa próximamente.</p>
+                        <div class="team-specialties">
+                            <span class="specialty-tag">ACA</span>
+                            <span class="specialty-tag">Group</span>
+                        </div>
+                        <span class="back-flip-hint">Haz clic para volver</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ============================================
+         WHAT OUR AGENTS HELP WITH (SPANISH)
+         ============================================ -->
+    <section class="agents-help-section">
+        <div class="section-header">
+            <h2>Lo Que Nuestros Agentes Pueden Ayudarte</h2>
+            <p>Cada agente de Medicare Moms está capacitado en nuestro rango completo de productos. Aquí está lo que pueden ayudarte:</p>
+        </div>
+
+        <div class="help-grid">
+            <div class="help-item">
+                <span class="help-icon"><svg width="28" height="28" viewBox="0 0 48 48" fill="none" stroke="#5B8C6B" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><rect x="8" y="8" width="32" height="32" rx="4"/><line x1="24" y1="16" x2="24" y2="32"/><line x1="16" y1="24" x2="32" y2="24"/></svg></span>
+                <div>
+                    <strong>Medicare Advantage y Suplementos</strong>
+                    <p>Elegir el plan de Medicare correcto basado en tus médicos, medicamentos y presupuesto.</p>
+                </div>
+            </div>
+            <div class="help-item">
+                <span class="help-icon"><svg width="28" height="28" viewBox="0 0 48 48" fill="none" stroke="#5B8C6B" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="24" cy="12" r="5"/><path d="M14 40v-4a10 10 0 0 1 20 0v4"/><circle cx="10" cy="18" r="4"/><path d="M4 40v-3a7 7 0 0 1 9-6.7"/><circle cx="38" cy="18" r="4"/><path d="M44 40v-3a7 7 0 0 0-9-6.7"/></svg></span>
+                <div>
+                    <strong>Planes ACA/Marketplace</strong>
+                    <p>Encontrar cobertura familiar asequible con asistencia financiera basada en ingresos.</p>
+                </div>
+            </div>
+            <div class="help-item">
+                <span class="help-icon"><svg width="28" height="28" viewBox="0 0 48 48" fill="none" stroke="#5B8C6B" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M18 6c-3 0-5.5 1.5-7 4s-2 5-2 8c0 4 1.5 7 3 10.5s3 7 4 11.5c.4 1.5 2 1.5 2.4 0 .8-2 1.8-4.5 2.8-6.5.6-1 1.8-1 2.4 0 1 2 2 4.5 2.8 6.5.4 1.5 2 1.5 2.4 0 1-4.5 2.5-8 4-11.5s3-6.5 3-10.5c0-3-.5-5.5-2-8s-4-4-7-4c-2 0-3.5 1-6 3.5C21.5 7 20 6 18 6z"/></svg></span>
+                <div>
+                    <strong>Dental y Visión</strong>
+                    <p>Cobertura independiente o complementaria para la sonrisa y visión de toda la familia.</p>
+                </div>
+            </div>
+            <div class="help-item">
+                <span class="help-icon"><svg width="28" height="28" viewBox="0 0 48 48" fill="none" stroke="#5B8C6B" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M24 42s-18-10-18-22a9.5 9.5 0 0 1 18-4 9.5 9.5 0 0 1 18 4c0 12-18 22-18 22z"/></svg></span>
+                <div>
+                    <strong>Seguro de Vida</strong>
+                    <p>Protegiendo el futuro de tu familia con opciones de cobertura para cada presupuesto y necesidad.</p>
+                </div>
+            </div>
+            <div class="help-item">
+                <span class="help-icon"><svg width="28" height="28" viewBox="0 0 48 48" fill="none" stroke="#5B8C6B" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><polygon points="26,4 10,28 22,28 20,44 38,18 26,18"/></svg></span>
+                <div>
+                    <strong>Accidentes y Enfermedades Críticas</strong>
+                    <p>Tranquilidad adicional con cobertura complementaria de beneficio en efectivo.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ============================================
+         CTA SECTION
+         ============================================ -->
+    <section class="cta-section">
+        <div class="container">
+            <h2>¿Quieres Unirte a Nuestro Equipo?</h2>
+            <p>Siempre estamos buscando personas apasionadas y atentas que quieran ayudar a las familias a encontrar la cobertura correcta. Conviértete en parte de la familia Medicare Moms.</p>
+            <div class="cta-buttons">
+                <a href="/es/unete/" class="btn btn-primary">Conoce Más Sobre Carreras</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- ============================================
+         FOOTER
+         ============================================ -->
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <div class="footer-brand">
+                        <img src="/logo.svg" alt="Medicare Moms - Cobertura Simplificada" class="footer-logo">
+                        <p>Una Compañía de Wildcat Insurance</p>
+                        <p>Ayudando a familias a encontrar cobertura de salud que funciona.</p>
+                    </div>
+                    <div class="social-links">
+                        <a href="https://www.instagram.com/wearemedicaremoms/" target="_blank" rel="noopener noreferrer" title="Instagram"><svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"/><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/></svg></a>
+                        <a href="https://www.facebook.com/profile.php?id=61572026712949" target="_blank" rel="noopener noreferrer" title="Facebook"><svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"/></svg></a>
+                        <a href="https://www.linkedin.com/company/medicaremoms/" target="_blank" rel="noopener noreferrer" title="LinkedIn"><svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"/><rect x="2" y="9" width="4" height="12"/><circle cx="4" cy="4" r="2"/></svg></a>
+                    </div>
+                </div>
+
+                <div class="footer-section">
+                    <h4>Enlaces Rápidos</h4>
+                    <ul>
+                        <li><a href="/">Inicio</a></li>
+                        <li><a href="/es/servicios/">Servicios</a></li>
+                        <li><a href="/es/recursos/">Recursos</a></li>
+                        <li><a href="/blog/">Blog</a></li>
+                        <li><a href="/es/equipo/">Nuestro Equipo</a></li>
+                        <li><a href="/#contacto">Contacto</a></li>
+                                        <li class="lang-toggle">
+                        <a href="/meet-our-team/" class="lang-link" title="View in English">
+                            <span class="lang-inactive">EN</span> / <span class="lang-active">ES</span>
+                        </a>
+                    </li>
+                </ul>
+                </div>
+
+                <div class="footer-section">
+                    <h4>Tipos de Cobertura</h4>
+                    <ul>
+                        <li><a href="/es/servicios/">Medicare Advantage</a></li>
+                        <li><a href="/es/servicios/">Medigap / Suplementos</a></li>
+                        <li><a href="/es/servicios/">Mercado ACA</a></li>
+                        <li><a href="/es/servicios/">Dental y Visión</a></li>
+                        <li><a href="/es/servicios/">Seguro de Vida</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-section">
+                    <h4>Información de Contacto</h4>
+                    <ul>
+                        <li><a href="tel:+14352461548">(435) 246-1548</a></li>
+                        <li><a href="mailto:info@medicaremoms.com">info@medicaremoms.com</a></li>
+                        <li>Lunes–Viernes, 9am–5pm MT</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="footer-bottom">
+                <p>&copy; 2026 Medicare Moms. Todos los derechos reservados.</p>
+                <p style="margin-top: 8px;">Medicare es una marca registrada del Departamento de Salud y Servicios Humanos de EE.UU.</p>
+                <p style="margin-top: 8px;"><a href="/terms/" style="color: #999; text-decoration: none; transition: color 0.3s ease;" onmouseover="this.style.color='#A8C5A0'" onmouseout="this.style.color='#999'">Términos de Servicio</a> &middot; <a href="/privacy/" style="color: #999; text-decoration: none; transition: color 0.3s ease;" onmouseover="this.style.color='#A8C5A0'" onmouseout="this.style.color='#999'">Política de Privacidad</a></p>
+                <div class="legal-disclaimer">
+                    medicaremoms.com y Medicare Moms es un DBA de Wildcat Insurance LLC, una agencia de seguros de salud licenciada. El propósito de este sitio es la solicitud de seguros. El contacto puede ser realizado por un agente/productor de seguros o una compañía de seguros. Medicare Moms y los planes de seguros presentados en este sitio no están conectados ni respaldados por el gobierno de los EE. UU. ni por el programa federal de Medicare. No ofrecemos todos los planes disponibles en su área. Cualquier información que proporcionemos se limita a los planes que ofrecemos en su área. Comuníquese con Medicare.gov o 1-800-MEDICARE para obtener información sobre todas sus opciones.
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Mobile Menu Toggle
+        const hamburger = document.getElementById('hamburger');
+        const navLinks = document.getElementById('navLinks');
+
+        hamburger.addEventListener('click', () => {
+            hamburger.classList.toggle('active');
+            navLinks.classList.toggle('active');
+        });
+
+        document.querySelectorAll('.nav-links a').forEach(link => {
+            link.addEventListener('click', () => {
+                hamburger.classList.remove('active');
+                navLinks.classList.remove('active');
+            });
+        });
+
+        // Fade-in animation on scroll
+        const observerOptions = {
+            threshold: 0.1,
+            rootMargin: '0px 0px -50px 0px'
+        };
+
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('fade-in');
+                    observer.unobserve(entry.target);
+                }
+            });
+        }, observerOptions);
+
+        document.querySelectorAll('.team-card-wrapper').forEach(el => {
+            observer.observe(el);
+        });
+    </script>
+</body>
+</html>

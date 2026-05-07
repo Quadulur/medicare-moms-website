@@ -1,0 +1,1501 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!-- Favicon (auto-inserted by add-favicon.py) -->
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg">
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+    <link rel="shortcut icon" href="/favicon.ico">
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+    <link rel="manifest" href="/site.webmanifest">
+    <meta name="theme-color" content="#5b8c6b">
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Medicare Moms Blog - Expert Insurance Tips & Guides</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display&family=Nunito:wght@400;600;700;800&display=swap" rel="stylesheet">
+
+    <!-- SEO Meta Tags -->
+    <meta name="description" content="Expert Medicare and health insurance tips, guides, and resources from the Medicare Moms team. Learn about Medicare Advantage, Medigap, ACA plans, and more.">
+    <meta name="keywords" content="Medicare blog, Medicare tips, Medicare guide, health insurance advice, Medicare Advantage, Medigap, ACA marketplace, open enrollment">
+    <meta property="og:title" content="Medicare Moms Blog - Expert Insurance Tips & Guides">
+    <meta property="og:description" content="Expert Medicare and health insurance tips, guides, and resources from the Medicare Moms team.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://medicaremoms.com/blog">
+    <link rel="canonical" href="https://medicaremoms.com/blog/">
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family: 'Nunito', sans-serif;
+            color: #2C2C2C;
+            background-color: #FFFFFF;
+            line-height: 1.6;
+        }
+
+        /* ============ Utilities ============ */
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        .section-padding {
+            padding: 80px 0;
+        }
+
+        .text-center {
+            text-align: center;
+        }
+
+        /* ============ Typography ============ */
+        h1, h2, h3, h4, h5, h6 {
+            font-family: 'DM Serif Display', serif;
+            font-weight: 700;
+            line-height: 1.3;
+            color: #2C2C2C;
+        }
+
+        h1 {
+            font-size: clamp(32px, 5vw, 56px);
+            font-weight: 800;
+            margin-bottom: 20px;
+        }
+
+        h2 {
+            font-size: clamp(28px, 4vw, 44px);
+            margin-bottom: 30px;
+        }
+
+        h3 {
+            font-size: clamp(20px, 3vw, 28px);
+            margin-bottom: 15px;
+        }
+
+        p {
+            font-size: 16px;
+            color: #4A5568;
+            margin-bottom: 15px;
+        }
+
+        .lead {
+            font-size: 18px;
+            color: #4A5568;
+            margin-bottom: 20px;
+        }
+
+        /* ============ Buttons ============ */
+        .btn {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            padding: 12px 28px;
+            border-radius: 8px;
+            font-family: 'DM Serif Display', serif;
+            font-size: 15px;
+            font-weight: 600;
+            cursor: pointer;
+            text-decoration: none;
+            border: 2px solid transparent;
+            transition: all 0.3s ease;
+            text-align: center;
+        }
+
+        .btn-primary {
+            background: linear-gradient(135deg, #5B8C6B 0%, #3D6B4A 100%);
+            color: white;
+        }
+
+        .btn-primary:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 10px 30px rgba(91, 140, 107, 0.3);
+        }
+
+        .btn-secondary {
+            background-color: transparent;
+            color: #5B8C6B;
+            border-color: #5B8C6B;
+        }
+
+        .btn-secondary:hover {
+            background-color: #F7F3ED;
+            transform: translateY(-2px);
+        }
+
+        .btn-sm {
+            padding: 10px 20px;
+            font-size: 14px;
+        }
+
+        /* ============ Navigation ============ */
+        nav {
+            position: sticky;
+            top: 0;
+            background-color: white;
+            box-shadow: 0 4px 12px rgba(44, 44, 44, 0.08);
+            z-index: 1000;
+        }
+
+        .nav-container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 15px 20px;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .logo {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            font-family: 'DM Serif Display', serif;
+            font-size: 22px;
+            font-weight: 700;
+            color: #5B8C6B;
+            text-decoration: none;
+        }
+
+        .logo img {
+            height: 60px;
+            width: auto;
+            border-radius: 0;
+        }
+
+        .nav-links {
+            display: flex;
+            gap: 35px;
+            list-style: none;
+            align-items: center;
+        }
+
+        .nav-links a {
+            color: #2C2C2C;
+            text-decoration: none;
+            font-weight: 500;
+            transition: color 0.3s ease;
+            font-size: 15px;
+        }
+
+        .nav-links a:hover {
+            color: #5B8C6B;
+        }
+
+        .hamburger {
+            display: none;
+            flex-direction: column;
+            cursor: pointer;
+            gap: 6px;
+        }
+
+        .hamburger span {
+            width: 25px;
+            height: 3px;
+            background-color: #2C2C2C;
+            border-radius: 2px;
+            transition: all 0.3s ease;
+        }
+
+        .hamburger.active span:nth-child(1) {
+            transform: rotate(45deg) translate(10px, 10px);
+        }
+
+        .hamburger.active span:nth-child(2) {
+            opacity: 0;
+        }
+
+        .hamburger.active span:nth-child(3) {
+            transform: rotate(-45deg) translate(7px, -7px);
+        }
+
+        @media (max-width: 768px) {
+            .hamburger {
+                display: flex;
+            }
+
+            .nav-links {
+                position: absolute;
+                top: 70px;
+                left: 0;
+                right: 0;
+                background-color: white;
+                flex-direction: column;
+                gap: 15px;
+                padding: 30px 20px;
+                display: none;
+            }
+
+            .nav-links.active {
+                display: flex;
+            }
+        }
+
+        
+        .lang-toggle {
+            margin-left: 8px;
+        }
+        .lang-link {
+            text-decoration: none;
+            font-size: 13px;
+            font-weight: 600;
+            color: #4A5568;
+            padding: 4px 12px;
+            border-radius: 20px;
+            background: #E8F0E5;
+            transition: all 0.3s ease;
+            display: inline-flex;
+            align-items: center;
+            gap: 2px;
+        }
+        .lang-link:hover {
+            background: #5B8C6B;
+            color: white;
+        }
+        .lang-active {
+            color: #5B8C6B;
+            font-weight: 700;
+        }
+        .lang-inactive {
+            color: #999;
+            font-weight: 400;
+        }
+        .lang-link:hover .lang-active,
+        .lang-link:hover .lang-inactive {
+            color: white;
+        }
+
+/* ============ Hero Section ============ */
+        .hero {
+            background: linear-gradient(160deg, #F7F3ED 0%, #EDE8DF 40%, #E8F0E5 100%);
+            padding: 100px 0 80px 0;
+            text-align: center;
+        }
+
+        .hero-content h1 {
+            color: #2C2C2C;
+            margin-bottom: 20px;
+            font-weight: 800;
+        }
+
+        .hero-content .lead {
+            font-size: 20px;
+            color: #4A5568;
+            margin-bottom: 40px;
+            max-width: 700px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        @media (max-width: 768px) {
+            .hero {
+                padding: 60px 0 50px 0;
+            }
+        }
+
+        /* ============ Category Pills ============ */
+        .category-filter {
+            position: sticky;
+            top: 70px;
+            background-color: #F7F3ED;
+            padding: 16px 0;
+            z-index: 100;
+            box-shadow: 0 2px 8px rgba(44, 44, 44, 0.1);
+        }
+
+        .category-filter .container {
+            overflow-x: auto;
+            -webkit-overflow-scrolling: touch;
+            scrollbar-width: none;
+        }
+        .category-filter .container::-webkit-scrollbar { display: none; }
+
+        .category-filters {
+            display: flex;
+            gap: 12px;
+            flex-wrap: wrap;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .category-btn {
+            padding: 10px 20px;
+            border: 2px solid #A8C5A0;
+            background-color: white;
+            color: #3D6B4A;
+            border-radius: 25px;
+            cursor: pointer;
+            font-weight: 600;
+            font-size: 14px;
+            transition: all 0.3s ease;
+            white-space: nowrap;
+            font-family: 'Nunito', sans-serif;
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            position: relative;
+        }
+
+        .category-btn:hover {
+            background-color: #A8C5A0;
+            color: white;
+            border-color: #5B8C6B;
+        }
+
+        .category-btn.active {
+            background: linear-gradient(135deg, #5B8C6B 0%, #3D6B4A 100%);
+            color: white;
+            border-color: #3D6B4A;
+        }
+
+        .category-count {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            width: 22px;
+            height: 22px;
+            border-radius: 50%;
+            background-color: rgba(91, 140, 107, 0.15);
+            font-size: 12px;
+            font-weight: 700;
+        }
+
+        .category-btn.active .category-count {
+            background-color: rgba(255, 255, 255, 0.3);
+        }
+
+        /* Mobile: compact single-row scrolling filter bar */
+        @media (max-width: 768px) {
+            .category-filter {
+                padding: 8px 0;
+                top: 60px;
+            }
+            .category-filters {
+                flex-wrap: nowrap;
+                justify-content: flex-start;
+                gap: 6px;
+                padding: 0 4px;
+            }
+            .category-btn {
+                padding: 6px 12px;
+                font-size: 12px;
+                gap: 5px;
+                border-width: 1.5px;
+                flex-shrink: 0;
+            }
+            .category-count {
+                width: 18px;
+                height: 18px;
+                font-size: 10px;
+            }
+        }
+
+        /* ============ Featured Post Card ============ */
+        .featured-post {
+            background: white;
+            border-left: 6px solid #5B8C6B;
+            padding: 40px;
+            border-radius: 8px;
+            margin-bottom: 60px;
+            box-shadow: 0 4px 12px rgba(44, 44, 44, 0.08);
+            transition: all 0.3s ease;
+        }
+
+        .featured-post:hover {
+            box-shadow: 0 8px 24px rgba(91, 140, 107, 0.15);
+            transform: translateY(-4px);
+        }
+
+        .category-pill {
+            display: inline-block;
+            background-color: #E8F0E6;
+            color: #3D6B4A;
+            padding: 6px 14px;
+            border-radius: 20px;
+            font-size: 12px;
+            font-weight: 600;
+            margin-bottom: 16px;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+        }
+
+        .featured-post h2 {
+            margin-bottom: 16px;
+            color: #2C2C2C;
+        }
+
+        .featured-post .excerpt {
+            font-size: 16px;
+            color: #4A5568;
+            margin-bottom: 24px;
+            line-height: 1.7;
+        }
+
+        .post-meta {
+            display: flex;
+            gap: 20px;
+            align-items: center;
+            color: #4A5568;
+            font-size: 14px;
+            margin-bottom: 20px;
+        }
+
+        .post-meta span {
+            display: flex;
+            align-items: center;
+            gap: 6px;
+        }
+
+        .featured-post .btn {
+            margin-top: 20px;
+        }
+
+        /* ============ Blog Post Grid ============ */
+        .blog-section {
+            background-color: white;
+            padding: 60px 0;
+        }
+
+        .blog-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+            gap: 30px;
+            margin-top: 40px;
+        }
+
+        @media (max-width: 1024px) {
+            .blog-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+        }
+
+        @media (max-width: 768px) {
+            .blog-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+
+        .blog-card {
+            background: white;
+            border-radius: 8px;
+            overflow: hidden;
+            box-shadow: 0 4px 12px rgba(44, 44, 44, 0.08);
+            display: flex;
+            flex-direction: column;
+            transition: all 0.3s ease;
+            padding: 24px;
+            cursor: pointer;
+        }
+
+        .blog-card:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 8px 24px rgba(91, 140, 107, 0.15);
+        }
+
+        .blog-card.hidden {
+            display: none;
+        }
+
+        .blog-card .category-pill {
+            margin-bottom: 16px;
+        }
+
+        .blog-card h3 {
+            margin-bottom: 12px;
+            font-size: 20px;
+            line-height: 1.4;
+            color: #2C2C2C;
+        }
+
+        .blog-card .excerpt {
+            font-size: 15px;
+            color: #4A5568;
+            margin-bottom: 20px;
+            flex-grow: 1;
+            line-height: 1.6;
+        }
+
+        .blog-card .post-meta {
+            margin-bottom: 0;
+            padding-top: 16px;
+            border-top: 1px solid #E0E0E0;
+        }
+
+        .blog-card a {
+            color: #5B8C6B;
+            text-decoration: none;
+            font-weight: 600;
+            transition: color 0.3s ease;
+            margin-top: 16px;
+        }
+
+        .blog-card a:hover {
+            color: #3D6B4A;
+        }
+
+        /* ============ Newsletter Section ============ */
+        .newsletter-section {
+            background: linear-gradient(135deg, #3D6B4A 0%, #2C2C2C 100%);
+            color: white;
+            padding: 60px 0;
+            text-align: center;
+            margin: 60px 0;
+        }
+
+        .newsletter-content h2 {
+            color: white;
+            margin-bottom: 16px;
+        }
+
+        .newsletter-content .lead {
+            color: #E8F0E6;
+            max-width: 600px;
+            margin: 0 auto 40px;
+            font-size: 18px;
+        }
+
+        .newsletter-form {
+            display: flex;
+            gap: 12px;
+            max-width: 500px;
+            margin: 0 auto 20px;
+            flex-wrap: wrap;
+            justify-content: center;
+        }
+
+        .newsletter-form input {
+            flex: 1;
+            min-width: 200px;
+            padding: 14px 20px;
+            border: none;
+            border-radius: 8px;
+            font-size: 15px;
+            font-family: 'Nunito', sans-serif;
+        }
+
+        .newsletter-form input:focus {
+            outline: none;
+            box-shadow: 0 0 0 3px rgba(168, 197, 160, 0.3);
+        }
+
+        .newsletter-form button {
+            background-color: #5B8C6B;
+            color: white;
+            padding: 14px 28px;
+            border: none;
+            border-radius: 8px;
+            font-weight: 600;
+            cursor: pointer;
+            font-family: 'DM Serif Display', serif;
+            font-size: 15px;
+            transition: all 0.3s ease;
+        }
+
+        .newsletter-form button:hover {
+            background-color: #A8C5A0;
+            transform: translateY(-2px);
+        }
+
+        .newsletter-disclaimer {
+            font-size: 12px;
+            color: #B8D0B0;
+            margin-top: 16px;
+        }
+
+        @media (max-width: 768px) {
+            .newsletter-form {
+                flex-direction: column;
+            }
+
+            .newsletter-form input,
+            .newsletter-form button {
+                width: 100%;
+            }
+        }
+
+        /* ============ Footer ============ */
+        footer {
+            background-color: #2C2C2C;
+            color: #999;
+            padding: 50px 0 20px 0;
+        }
+
+        .footer-content {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 40px;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+            margin-bottom: 30px;
+        }
+
+        .footer-section h4 {
+            color: white;
+            font-family: 'DM Serif Display', serif;
+            font-size: 16px;
+            margin-bottom: 16px;
+        }
+
+        .footer-section ul {
+            list-style: none;
+        }
+
+        .footer-section ul li {
+            margin-bottom: 12px;
+        }
+
+        .footer-section a {
+            color: #999;
+            text-decoration: none;
+            transition: color 0.3s ease;
+            font-size: 14px;
+        }
+
+        .footer-section a:hover {
+            color: #A8C5A0;
+        }
+
+        .footer-brand {
+            grid-column: 1 / -1;
+        }
+
+        .footer-brand p {
+            color: #999;
+            font-size: 14px;
+            margin-bottom: 16px;
+        }
+
+        .social-links {
+            display: flex;
+            gap: 16px;
+        }
+
+        .social-links a {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            width: 40px;
+            height: 40px;
+            background-color: rgba(255, 255, 255, 0.1);
+            border-radius: 50%;
+            color: #A8C5A0;
+            text-decoration: none;
+            transition: all 0.3s ease;
+            font-size: 16px;
+        }
+
+        .social-links a:hover {
+            background-color: #5B8C6B;
+            color: white;
+        }
+
+        .footer-bottom {
+            text-align: center;
+            padding-top: 30px;
+            border-top: 1px solid rgba(255, 255, 255, 0.1);
+            max-width: 1200px;
+            margin: 0 auto;
+            padding-left: 20px;
+            padding-right: 20px;
+        }
+
+        .footer-bottom p {
+            color: #999;
+            font-size: 13px;
+            margin-bottom: 8px;
+        }
+
+        .legal-disclaimer {
+            color: #999;
+            font-size: 12px;
+            margin-top: 16px;
+            max-width: 600px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        /* ============ Animation ============ */
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        .fade-in {
+            animation: fadeInUp 0.6s ease-out forwards;
+        }
+
+        /* ============ Responsive ============ */
+        @media (max-width: 768px) {
+            .section-padding {
+                padding: 50px 0;
+            }
+
+            h1 {
+                font-size: 32px;
+            }
+
+            h2 {
+                font-size: 28px;
+            }
+
+            .featured-post {
+                padding: 24px;
+            }
+
+            .blog-card {
+                padding: 16px;
+            }
+        }
+    
+        /* Services Dropdown */
+        .services-parent {
+            position: relative;
+        }
+        .services-dropdown {
+            display: none;
+            position: absolute;
+            top: 100%;
+            left: 50%;
+            transform: translateX(-50%);
+            background: white;
+            border-radius: 10px;
+            box-shadow: 0 10px 40px rgba(44, 44, 44, 0.15);
+            padding: 16px 0;
+            min-width: 240px;
+            z-index: 1000;
+            margin-top: 10px;
+        }
+        .services-dropdown::before {
+            content: '';
+            position: absolute;
+            top: -10px;
+            left: 0;
+            right: 0;
+            height: 10px;
+        }
+        .services-parent:hover .services-dropdown {
+            display: block;
+        }
+        .services-dropdown a {
+            display: block;
+            padding: 10px 24px;
+            color: #2C2C2C;
+            font-size: 13px;
+            font-weight: 500;
+            text-decoration: none;
+            white-space: nowrap;
+            transition: background 0.2s, color 0.2s;
+        }
+        .services-dropdown a:hover {
+            background: #F7F3ED;
+            color: #5B8C6B;
+        }
+        @media (max-width: 768px) {
+            .services-dropdown {
+                position: static;
+                transform: none;
+                box-shadow: none;
+                margin-top: 0;
+                padding: 0 0 0 20px;
+                border-radius: 0;
+            }
+            .services-parent:hover .services-dropdown {
+                display: block;
+            }
+        }
+
+    </style>
+</head>
+
+<body>
+    <!-- Navigation -->
+    <nav>
+        <div class="nav-container">
+            <a href="/" class="logo"><img src="/logo-mark.svg" alt="Medicare Moms Logo">Medicare Moms</a>
+            <div class="hamburger" id="hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+            <ul class="nav-links" id="navLinks">
+                <li><a href="/services/">Services</a></li>
+                <li><a href="/resources/">Resources</a></li>
+                <li><a href="/blog/">Blog</a></li>
+                <li><a href="/meet-our-team/">Meet Our Team</a></li>
+                <li><a href="/#contact">Contact</a></li>
+                <li class="lang-toggle">
+                    <a href="/es/blog/" class="lang-link" title="Ver en Español">
+                        <span class="lang-active">EN</span> / <span class="lang-inactive">ES</span>
+                    </a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="container">
+            <div class="hero-content">
+                <h1>Medicare Moms Blog</h1>
+                <p class="lead">Expert tips, guides, and insights to help you navigate Medicare, health insurance, and everything in between.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Featured Post Section -->
+    <section class="section-padding" style="background-color: white;">
+        <div class="container">
+            <div class="featured-post fade-in">
+                <span class="category-pill">Medicare 101</span>
+                <h2>Understanding Medicare in 2026: A Complete Guide for New Enrollees</h2>
+                <p class="excerpt">Navigating Medicare can feel overwhelming, especially if you're new to it. In this comprehensive guide, we break down the fundamentals of Medicare, explain the different parts and plan types, and share insider tips to help you make the right choice for your health and budget. Whether you're turning 65 or considering your options, this guide has everything you need to know.</p>
+                <div class="post-meta">
+                    <span><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#5B8C6B" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/><circle cx="12" cy="7" r="4"/></svg> Ally Valdez</span>
+                    <span><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#5B8C6B" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4" width="18" height="18" rx="2" ry="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></svg> February 24, 2026</span>
+                </div>
+                <a href="/blog/medicare-guide-2026/" class="btn btn-primary">Read More</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Category Filter Section -->
+    <section class="category-filter">
+        <div class="container">
+            <div class="category-filters">
+                <button class="category-btn active" data-category="all">All <span class="category-count">3</span></button>
+                <button class="category-btn" data-category="Medicare Data">Medicare Data <span class="category-count">1</span></button>
+                <button class="category-btn" data-category="ACA &amp; Marketplace">ACA &amp; Marketplace <span class="category-count">1</span></button>
+                <button class="category-btn" data-category="Medicare 101">Medicare 101 <span class="category-count">1</span></button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Blog Post Grid Section -->
+    <section class="blog-section section-padding">
+        <div class="container">
+            <div class="blog-grid" id="blogGrid">
+                <!-- New: Medicare Stats 2026 -->
+                <div class="blog-card fade-in" data-category="Medicare Data">
+                    <span class="category-pill">Medicare Data</span>
+                    <h3>Medicare by the Numbers: Key 2026 Statistics Every American Should Know</h3>
+                    <p class="excerpt">67+ million Americans are on Medicare, and more than half are now on private Medicare Advantage plans. Here's the complete 2026 Medicare landscape by the numbers, including new $2,000 prescription caps and what the One Big Beautiful Bill changed. Sourced from CMS, KFF, and CBO.</p>
+                    <div class="post-meta">
+                        <span><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#5B8C6B" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/><circle cx="12" cy="7" r="4"/></svg> Ally Valdez</span>
+                        <span><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#5B8C6B" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4" width="18" height="18" rx="2" ry="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></svg> April 18, 2026</span>
+                    </div>
+                    <a href="/blog/medicare-statistics-2026/">Read More →</a>
+                </div>
+
+                <!-- New: ACA 2026 -->
+                <div class="blog-card fade-in" data-category="ACA &amp; Marketplace" style="animation-delay: 0.1s;">
+                    <span class="category-pill">ACA &amp; Marketplace</span>
+                    <h3>2026 ACA Marketplace by the Numbers: Enrollment, Subsidy Changes &amp; What to Expect</h3>
+                    <p class="excerpt">A record 24.3 million signed up for 2025 ACA coverage, but 2026 is different. The COVID-era enhanced subsidies expired December 31, 2025, the subsidy cliff is back, and CBO projects 5 million could lose coverage. Here's what changed and what to do about it.</p>
+                    <div class="post-meta">
+                        <span><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#5B8C6B" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/><circle cx="12" cy="7" r="4"/></svg> Saya Murton</span>
+                        <span><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#5B8C6B" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4" width="18" height="18" rx="2" ry="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></svg> March 30, 2026</span>
+                    </div>
+                    <a href="/blog/aca-marketplace-2026/">Read More →</a>
+                </div>
+
+                <!-- Medicare 101 Guide -->
+                <div class="blog-card fade-in" data-category="Medicare 101" style="animation-delay: 0.2s;">
+                    <span class="category-pill">Medicare 101</span>
+                    <h3>Understanding Medicare in 2026: A Complete Guide for New Enrollees</h3>
+                    <p class="excerpt">New to Medicare? This comprehensive 2026 guide covers Parts A, B, C, and D, enrollment dates, costs, and how to choose the right plan for your needs.</p>
+                    <div class="post-meta">
+                        <span><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#5B8C6B" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/><circle cx="12" cy="7" r="4"/></svg> Ally Valdez</span>
+                        <span><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#5B8C6B" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4" width="18" height="18" rx="2" ry="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></svg> February 24, 2026</span>
+                    </div>
+                    <a href="/blog/medicare-guide-2026/">Read More →</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Newsletter Section -->
+    <section class="newsletter-section">
+        <div class="container">
+            <div class="newsletter-content">
+                <h2>Stay in the Know</h2>
+                <p class="lead">Get Medicare tips, enrollment reminders, and helpful guides delivered to your inbox.</p>
+                <form class="newsletter-form" onsubmit="handleNewsletterSubmit(event)">
+                    <input type="email" placeholder="Enter your email address" required>
+                    <button type="submit" class="btn-primary">Subscribe</button>
+                </form>
+                <p class="newsletter-disclaimer">We respect your privacy. Unsubscribe at any time.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-brand">
+                    <h3 style="color: white; font-family: 'DM Serif Display', serif; font-size: 22px; margin-bottom: 16px;">Medicare Moms</h3>
+                    <p>Making health coverage simple, affordable, and accessible for everyone.</p>
+                    <div class="social-links">
+                        <a href="https://www.instagram.com/wearemedicaremoms/" target="_blank" rel="noopener noreferrer" title="Instagram"><svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"/><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/></svg></a>
+                        <a href="https://www.facebook.com/profile.php?id=61572026712949" target="_blank" rel="noopener noreferrer" title="Facebook"><svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"/></svg></a>
+                        <a href="https://www.linkedin.com/company/medicaremoms/" target="_blank" rel="noopener noreferrer" title="LinkedIn"><svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"/><rect x="2" y="9" width="4" height="12"/><circle cx="4" cy="4" r="2"/></svg></a>
+                    </div>
+                </div>
+
+                <div class="footer-section">
+                    <h4>Quick Links</h4>
+                    <ul>
+                        <li><a href="/">Home</a></li>
+                        <li><a href="/services/">Services</a></li>
+                        <li><a href="/resources/">Resources</a></li>
+                        <li><a href="/blog/">Blog</a></li>
+                        <li><a href="/#contact">Contact</a></li>
+                        <li><a href="/meet-our-team/">Meet Our Team</a></li>
+                        <li><a href="/join-our-team/">Join Our Team</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-section">
+                    <h4>Coverage Types</h4>
+                    <ul>
+                        <li><a href="#plans">Medicare Advantage</a></li>
+                        <li><a href="#plans">Medigap / Supplements</a></li>
+                        <li><a href="#plans">ACA Marketplace</a></li>
+                        <li><a href="#plans">Dental & Vision</a></li>
+                        <li><a href="#plans">Life Insurance</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-section">
+                    <h4>Contact Info</h4>
+                    <ul>
+                        <li><a href="tel:+14352461548">(435) 246-1548</a></li>
+                        <li><a href="mailto:info@medicaremoms.com">info@medicaremoms.com</a></li>
+                        <li>Monday–Friday, 9am–5pm MT</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="footer-bottom">
+                <p>&copy; 2026 Medicare Moms. All rights reserved.</p>
+                <p style="margin-top: 8px;">Medicare is a registered trademark of the U.S. Department of Health and Human Services.</p>
+                <p style="margin-top: 8px;"><a href="/terms/" style="color: #999; text-decoration: none; transition: color 0.3s ease;" onmouseover="this.style.color='#A8C5A0'" onmouseout="this.style.color='#999'">Terms of Service</a> &middot; <a href="/privacy/" style="color: #999; text-decoration: none; transition: color 0.3s ease;" onmouseover="this.style.color='#A8C5A0'" onmouseout="this.style.color='#999'">Privacy Policy</a></p>
+                <div class="legal-disclaimer">
+                    medicaremoms.com and Medicare Moms is a DBA of Wildcat Insurance LLC, a licensed health insurance agency. The purpose of this site is the solicitation of insurance. Contact may be made by an insurance agent/producer or insurance company. Medicare Moms and the insurance plans presented on this site are not connected with or endorsed by the U.S. government or the federal Medicare program. We do not offer every plan available in your area. Any information we provide is limited to those plans we do offer in your area. Please contact Medicare.gov or 1-800-MEDICARE to get information on all of your options.
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Mobile Menu Toggle
+        const hamburger = document.getElementById('hamburger');
+        const navLinks = document.getElementById('navLinks');
+
+        hamburger.addEventListener('click', () => {
+            hamburger.classList.toggle('active');
+            navLinks.classList.toggle('active');
+        });
+
+        // Close menu when a link is clicked
+        document.querySelectorAll('.nav-links a').forEach(link => {
+            link.addEventListener('click', () => {
+                hamburger.classList.remove('active');
+                navLinks.classList.remove('active');
+            });
+        });
+
+        // Fade-in animation on scroll
+        const observerOptions = {
+            threshold: 0.1,
+            rootMargin: '0px 0px -50px 0px'
+        };
+
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('fade-in');
+                    observer.unobserve(entry.target);
+                }
+            });
+        }, observerOptions);
+
+        document.querySelectorAll('.blog-card, .featured-post').forEach(el => {
+            observer.observe(el);
+        });
+
+        // Category Filter
+        const categoryButtons = document.querySelectorAll('.category-btn');
+        const blogCards = document.querySelectorAll('.blog-card');
+
+        // Function to calculate and update category counts
+        function updateCategoryCounts() {
+            categoryButtons.forEach(button => {
+                const category = button.getAttribute('data-category');
+                let count = 0;
+
+                if (category === 'all') {
+                    count = blogCards.length;
+                } else {
+                    blogCards.forEach(card => {
+                        if (card.getAttribute('data-category') === category) {
+                            count++;
+                        }
+                    });
+                }
+
+                const countBadge = button.querySelector('.category-count');
+                if (countBadge) {
+                    countBadge.textContent = count;
+                }
+            });
+        }
+
+        // Initialize counts on page load
+        updateCategoryCounts();
+
+        categoryButtons.forEach(button => {
+            button.addEventListener('click', () => {
+                // Remove active class from all buttons
+                categoryButtons.forEach(btn => btn.classList.remove('active'));
+                // Add active class to clicked button
+                button.classList.add('active');
+
+                // Get selected category
+                const selectedCategory = button.getAttribute('data-category');
+
+                // Show/hide cards based on category
+                blogCards.forEach(card => {
+                    const cardCategory = card.getAttribute('data-category');
+                    if (selectedCategory === 'all' || cardCategory === selectedCategory) {
+                        card.classList.remove('hidden');
+                    } else {
+                        card.classList.add('hidden');
+                    }
+                });
+            });
+        });
+
+        // Newsletter form submission
+        function handleNewsletterSubmit(event) {
+            event.preventDefault();
+            const email = event.target.querySelector('input[type="email"]').value;
+            console.log('Newsletter signup:', { email });
+            alert('Thank you for subscribing! Check your inbox for a welcome message.');
+            event.target.reset();
+        }
+    </script>
+
+    <!-- CHAT WIDGET -->
+    <div id="chatWidgetContainer">
+        <style>
+            /* Chat Widget Styles */
+            #chatButton {
+                position: fixed;
+                bottom: 20px;
+                right: 20px;
+                width: 60px;
+                height: 60px;
+                border-radius: 50%;
+                background: linear-gradient(135deg, #5B8C6B 0%, #3D6B4A 100%);
+                border: none;
+                cursor: pointer;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                box-shadow: 0 4px 12px rgba(91, 140, 107, 0.3);
+                z-index: 9999;
+                transition: all 0.3s ease;
+                animation: chatButtonPulse 1.2s ease-in-out 3;
+            }
+
+            #chatButton:hover {
+                transform: translateY(-3px);
+                box-shadow: 0 6px 16px rgba(91, 140, 107, 0.4);
+            }
+
+            #chatButton svg {
+                width: 28px;
+                height: 28px;
+                fill: white;
+            }
+
+            @keyframes chatButtonPulse {
+                0%, 100% {
+                    transform: scale(1);
+                }
+                50% {
+                    transform: scale(1.1);
+                }
+            }
+
+            #chatPanel {
+                position: fixed;
+                bottom: 90px;
+                right: 20px;
+                width: 350px;
+                height: 450px;
+                background: white;
+                border-radius: 12px;
+                box-shadow: 0 5px 40px rgba(0, 0, 0, 0.16);
+                display: none;
+                flex-direction: column;
+                z-index: 9998;
+                animation: slideUp 0.3s ease;
+                font-family: 'Nunito', sans-serif;
+            }
+
+            #chatPanel.active {
+                display: flex;
+            }
+
+            @keyframes slideUp {
+                from {
+                    opacity: 0;
+                    transform: translateY(20px);
+                }
+                to {
+                    opacity: 1;
+                    transform: translateY(0);
+                }
+            }
+
+            .chat-header {
+                background: linear-gradient(135deg, #5B8C6B 0%, #3D6B4A 100%);
+                color: white;
+                padding: 18px;
+                border-radius: 12px 12px 0 0;
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+                flex-shrink: 0;
+            }
+
+            .chat-header h3 {
+                font-family: 'DM Serif Display', serif;
+                font-size: 18px;
+                font-weight: 600;
+                color: white;
+                margin: 0;
+            }
+
+            .chat-close-btn {
+                background: none;
+                border: none;
+                color: white;
+                font-size: 24px;
+                cursor: pointer;
+                padding: 0;
+                width: 30px;
+                height: 30px;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                transition: transform 0.2s ease;
+            }
+
+            .chat-close-btn:hover {
+                transform: rotate(90deg);
+            }
+
+            #chatMessages {
+                flex: 1;
+                overflow-y: auto;
+                padding: 16px;
+                display: flex;
+                flex-direction: column;
+                gap: 12px;
+                background-color: #FAFAFA;
+            }
+
+            .message {
+                display: flex;
+                margin-bottom: 8px;
+                animation: fadeIn 0.3s ease;
+            }
+
+            @keyframes fadeIn {
+                from {
+                    opacity: 0;
+                    transform: translateY(10px);
+                }
+                to {
+                    opacity: 1;
+                    transform: translateY(0);
+                }
+            }
+
+            .message.received {
+                justify-content: flex-start;
+            }
+
+            .message.sent {
+                justify-content: flex-end;
+            }
+
+            .message-bubble {
+                max-width: 80%;
+                padding: 12px 16px;
+                border-radius: 16px;
+                word-wrap: break-word;
+                font-size: 14px;
+                line-height: 1.4;
+            }
+
+            .message.received .message-bubble {
+                background-color: #A8C5A0;
+                color: white;
+                border-radius: 16px 16px 16px 4px;
+            }
+
+            .message.sent .message-bubble {
+                background: linear-gradient(135deg, #5B8C6B 0%, #3D6B4A 100%);
+                color: white;
+                border-radius: 16px 16px 4px 16px;
+            }
+
+            .quick-replies {
+                display: flex;
+                flex-wrap: wrap;
+                gap: 8px;
+                padding: 12px 0;
+            }
+
+            .quick-reply-btn {
+                display: inline-block;
+                padding: 8px 14px;
+                background-color: #E8F0E6;
+                border: 1.5px solid #A8C5A0;
+                border-radius: 20px;
+                cursor: pointer;
+                font-size: 12px;
+                color: #3D6B4A;
+                font-weight: 500;
+                transition: all 0.2s ease;
+                font-family: 'Nunito', sans-serif;
+                white-space: nowrap;
+            }
+
+            .quick-reply-btn:hover {
+                background-color: #A8C5A0;
+                color: white;
+                border-color: #5B8C6B;
+            }
+
+            #chatInput {
+                display: flex;
+                gap: 8px;
+                padding: 12px;
+                border-top: 1px solid #E0E0E0;
+                background-color: white;
+                border-radius: 0 0 12px 12px;
+                flex-shrink: 0;
+            }
+
+            #messageInput {
+                flex: 1;
+                border: 1px solid #D0D0D0;
+                border-radius: 20px;
+                padding: 10px 16px;
+                font-size: 14px;
+                font-family: 'Nunito', sans-serif;
+                transition: border-color 0.2s ease;
+            }
+
+            #messageInput:focus {
+                outline: none;
+                border-color: #5B8C6B;
+                box-shadow: 0 0 0 2px rgba(91, 140, 107, 0.1);
+            }
+
+            #sendBtn {
+                background: linear-gradient(135deg, #5B8C6B 0%, #3D6B4A 100%);
+                color: white;
+                border: none;
+                border-radius: 50%;
+                width: 38px;
+                height: 38px;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                cursor: pointer;
+                transition: all 0.2s ease;
+                font-size: 18px;
+            }
+
+            #sendBtn:hover {
+                box-shadow: 0 2px 8px rgba(91, 140, 107, 0.3);
+            }
+
+            #sendBtn:active {
+                transform: scale(0.95);
+            }
+
+            /* Mobile responsiveness */
+            @media (max-width: 480px) {
+                #chatPanel {
+                    position: fixed;
+                    bottom: 0;
+                    right: 0;
+                    left: 0;
+                    width: 100%;
+                    height: calc(100vh - 60px);
+                    border-radius: 0;
+                    bottom: 0;
+                    animation: slideUpMobile 0.3s ease;
+                }
+
+                @keyframes slideUpMobile {
+                    from {
+                        transform: translateY(100%);
+                    }
+                    to {
+                        transform: translateY(0);
+                    }
+                }
+
+                .message-bubble {
+                    max-width: 85%;
+                }
+            }
+        </style>
+
+        <button id="chatButton" aria-label="Open chat">
+            <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                <path d="M20 2H4c-1.1 0-2 .9-2 2v18l4-4h14c1.1 0 2-.9 2-2V4c0-1.1-.9-2-2-2z"/>
+            </svg>
+        </button>
+
+        <div id="chatPanel">
+            <div class="chat-header">
+                <h3>Chat with Us</h3>
+                <button class="chat-close-btn" aria-label="Close chat">&times;</button>
+            </div>
+
+            <div id="chatMessages">
+                <div class="message received">
+                    <div class="message-bubble">Hi there! 👋 We're the Medicare Moms team. How can we help you today?</div>
+                </div>
+                <div class="quick-replies">
+                    <button class="quick-reply-btn">Medicare Questions</button>
+                    <button class="quick-reply-btn">Get a Free Quote</button>
+                    <button class="quick-reply-btn">Talk to an Agent</button>
+                    <button class="quick-reply-btn">Habla Español?</button>
+                </div>
+            </div>
+
+            <div id="chatInput">
+                <input type="text" id="messageInput" placeholder="Type your message...">
+                <button id="sendBtn" aria-label="Send message">➤</button>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        // Chat Widget JavaScript
+        (function() {
+            const chatButton = document.getElementById('chatButton');
+            const chatPanel = document.getElementById('chatPanel');
+            const closeBtn = document.querySelector('.chat-close-btn');
+            const messageInput = document.getElementById('messageInput');
+            const sendBtn = document.getElementById('sendBtn');
+            const chatMessages = document.getElementById('chatMessages');
+            const quickReplyButtons = document.querySelectorAll('.quick-reply-btn');
+
+            // Toggle chat panel
+            chatButton.addEventListener('click', () => {
+                chatPanel.classList.toggle('active');
+                if (chatPanel.classList.contains('active')) {
+                    messageInput.focus();
+                }
+            });
+
+            // Close chat panel
+            closeBtn.addEventListener('click', () => {
+                chatPanel.classList.remove('active');
+            });
+
+            // Handle quick reply buttons
+            quickReplyButtons.forEach(btn => {
+                btn.addEventListener('click', () => {
+                    messageInput.value = btn.textContent;
+                    messageInput.focus();
+                });
+            });
+
+            // Send message function
+            function sendMessage() {
+                const message = messageInput.value.trim();
+                if (!message) return;
+
+                // Remove quick replies if they exist
+                const quickRepliesDiv = document.querySelector('.quick-replies');
+                if (quickRepliesDiv) {
+                    quickRepliesDiv.remove();
+                }
+
+                // Add user message
+                const userMessageDiv = document.createElement('div');
+                userMessageDiv.className = 'message sent';
+                userMessageDiv.innerHTML = `<div class="message-bubble">${escapeHtml(message)}</div>`;
+                chatMessages.appendChild(userMessageDiv);
+
+                // Clear input
+                messageInput.value = '';
+
+                // Scroll to bottom
+                chatMessages.scrollTop = chatMessages.scrollHeight;
+
+                // Show response after a brief delay
+                setTimeout(() => {
+                    const responseDiv = document.createElement('div');
+                    responseDiv.className = 'message received';
+                    responseDiv.innerHTML = `<div class="message-bubble">Thanks for reaching out! One of our agents will be in touch shortly. In the meantime, feel free to call us at (435) 246-1548 or email info@medicaremoms.com</div>`;
+                    chatMessages.appendChild(responseDiv);
+
+                    // Scroll to bottom
+                    chatMessages.scrollTop = chatMessages.scrollHeight;
+                }, 800);
+            }
+
+            // Send button click
+            sendBtn.addEventListener('click', sendMessage);
+
+            // Send on Enter key
+            messageInput.addEventListener('keypress', (e) => {
+                if (e.key === 'Enter') {
+                    e.preventDefault();
+                    sendMessage();
+                }
+            });
+
+            // Utility function to escape HTML
+            function escapeHtml(text) {
+                const div = document.createElement('div');
+                div.textContent = text;
+                return div.innerHTML;
+            }
+        })();
+    </script>
+    <!-- /CHAT WIDGET -->
+
+</body>
+</html>

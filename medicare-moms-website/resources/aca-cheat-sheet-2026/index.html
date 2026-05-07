@@ -1,0 +1,686 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg">
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+    <link rel="shortcut icon" href="/favicon.ico">
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+    <link rel="manifest" href="/site.webmanifest">
+    <meta name="theme-color" content="#5b8c6b">
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>2026 ACA &amp; Subsidy Cheat Sheet: FPL, Subsidies, Out-of-Pocket Max, Medicaid &amp; CHIP | Medicare Moms</title>
+    <meta name="description" content="The complete 2026 ACA reference: Federal Poverty Level chart for households 1-8, expected premium contributions by income, Marketplace out-of-pocket maximums, CSR levels, Medicaid and CHIP thresholds, employer coverage affordability, and APTC repayment limits. Sourced from HHS, IRS, and the Federal Register.">
+    <meta property="og:title" content="2026 ACA &amp; Subsidy Cheat Sheet">
+    <meta property="og:description" content="Complete 2026 Marketplace reference: FPL thresholds, subsidies, Medicaid and CHIP, out-of-pocket maxes, and more. Source-linked.">
+    <meta property="og:type" content="article">
+    <meta property="og:url" content="https://medicaremoms.com/resources/aca-cheat-sheet-2026/">
+    <link rel="canonical" href="https://medicaremoms.com/resources/aca-cheat-sheet-2026/">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display&family=Nunito:wght@400;600;700;800&display=swap" rel="stylesheet">
+
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Article",
+      "headline": "2026 ACA & Subsidy Cheat Sheet: FPL, Subsidies, Out-of-Pocket Max, Medicaid & CHIP",
+      "author": {"@type": "Organization", "name": "Medicare Moms", "url": "https://medicaremoms.com"},
+      "publisher": {"@type": "Organization", "name": "Medicare Moms", "logo": {"@type": "ImageObject", "url": "https://medicaremoms.com/logo.svg"}},
+      "datePublished": "2026-04-18",
+      "dateModified": "2026-04-18",
+      "description": "A full 2026 ACA Marketplace reference with FPL chart, subsidies, Medicaid/CHIP, and out-of-pocket thresholds. All figures sourced from HHS, IRS, and the Federal Register.",
+      "mainEntityOfPage": {"@type": "WebPage", "@id": "https://medicaremoms.com/resources/aca-cheat-sheet-2026/"}
+    }
+    </script>
+
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        html { scroll-behavior: smooth; }
+        body { font-family: 'Nunito', sans-serif; color: #2C2C2C; background-color: #FFFFFF; line-height: 1.6; }
+        h1, h2, h3, h4 { font-family: 'DM Serif Display', serif; font-weight: 700; line-height: 1.3; color: #2C2C2C; }
+        a { color: #5B8C6B; font-weight: 600; text-decoration: none; }
+        a:hover { text-decoration: underline; }
+
+        nav { position: sticky; top: 0; background-color: white; box-shadow: 0 4px 12px rgba(44, 44, 44, 0.08); z-index: 1000; }
+        .nav-container { display: flex; justify-content: space-between; align-items: center; padding: 15px 20px; max-width: 1200px; margin: 0 auto; }
+        .logo { display: flex; align-items: center; gap: 10px; font-family: 'DM Serif Display', serif; font-size: 22px; font-weight: 700; color: #5B8C6B; text-decoration: none; }
+        .logo img { height: 60px; width: auto; }
+        .nav-links { display: flex; gap: 35px; list-style: none; align-items: center; }
+        .nav-links a { color: #2C2C2C; font-weight: 500; font-size: 15px; }
+        .nav-links a:hover { color: #5B8C6B; }
+        .hamburger { display: none; flex-direction: column; cursor: pointer; gap: 6px; }
+        .hamburger span { width: 25px; height: 3px; background-color: #2C2C2C; border-radius: 2px; }
+        @media (max-width: 768px) {
+            .hamburger { display: flex; }
+            .nav-links { position: absolute; top: 70px; left: 0; right: 0; background-color: white; flex-direction: column; gap: 15px; padding: 30px 20px; display: none; }
+            .nav-links.active { display: flex; }
+        }
+        .lang-toggle { margin-left: 8px; }
+        .lang-link { font-size: 13px; font-weight: 600; color: #4A5568; padding: 4px 12px; border-radius: 20px; background: #E8F0E5; display: inline-flex; align-items: center; gap: 2px; }
+        .lang-link:hover { background: #5B8C6B; color: white; }
+        .lang-active { color: #5B8C6B; font-weight: 700; }
+        .lang-inactive { color: #999; font-weight: 400; }
+        .lang-link:hover .lang-active, .lang-link:hover .lang-inactive { color: white; }
+
+        .hero { background: linear-gradient(160deg, #F7F3ED 0%, #EDE8DF 40%, #E8F0E5 100%); padding: 70px 0 55px 0; }
+        .hero-content { max-width: 1000px; margin: 0 auto; padding: 0 20px; }
+        .breadcrumb { display: flex; gap: 8px; font-size: 14px; color: #4A5568; margin-bottom: 20px; flex-wrap: wrap; }
+        .category-pill { display: inline-block; background-color: #A8C5A0; color: white; padding: 6px 14px; border-radius: 20px; font-size: 13px; font-weight: 600; margin-bottom: 15px; }
+        .hero h1 { color: #2C2C2C; margin-bottom: 15px; font-weight: 800; font-size: clamp(30px, 4.5vw, 44px); }
+        .hero .lead { font-size: 18px; color: #3A4A63; line-height: 1.6; max-width: 760px; }
+        .hero-meta { display: flex; gap: 18px; font-size: 14px; color: #4A5568; font-weight: 500; margin-top: 20px; flex-wrap: wrap; }
+
+        main { max-width: 1000px; margin: 0 auto; padding: 60px 20px; }
+        .intro { font-size: 17px; line-height: 1.8; color: #4A5568; margin-bottom: 40px; }
+        .intro strong { color: #2C2C2C; }
+
+        /* Table of contents */
+        .toc {
+            background: #F7F3ED;
+            border-left: 5px solid #5B8C6B;
+            padding: 22px 26px;
+            border-radius: 6px;
+            margin-bottom: 45px;
+        }
+        .toc h3 { color: #3D6B4A; font-size: 16px; margin-bottom: 12px; font-family: 'Nunito', sans-serif; letter-spacing: 0.4px; text-transform: uppercase; font-weight: 800; }
+        .toc ol { margin: 0 0 0 20px; column-count: 2; column-gap: 30px; }
+        .toc li { font-size: 14px; line-height: 1.8; color: #4A5568; break-inside: avoid; }
+        .toc a { color: #5B8C6B; }
+        @media (max-width: 600px) { .toc ol { column-count: 1; } }
+
+        /* Section */
+        .chart-section { margin-bottom: 55px; }
+        .chart-section h2 {
+            font-size: 26px;
+            margin-bottom: 8px;
+            color: #2C2C2C;
+            padding-bottom: 10px;
+            border-bottom: 2px solid #E8F0E5;
+        }
+        .chart-section .section-intro { font-size: 15px; color: #4A5568; margin-bottom: 20px; line-height: 1.7; }
+
+        /* Reusable chart wrapper */
+        .chart-wrapper {
+            background: #FFFFFF;
+            border: 1px solid #E0D9CE;
+            border-radius: 12px;
+            box-shadow: 0 6px 20px rgba(44, 44, 44, 0.06);
+            margin: 20px 0 12px;
+            overflow: hidden;
+        }
+        .chart-header {
+            background: linear-gradient(135deg, #5B8C6B 0%, #3D6B4A 100%);
+            color: white;
+            padding: 18px 24px;
+        }
+        .chart-header h3 {
+            color: white;
+            font-family: 'DM Serif Display', serif;
+            font-size: 20px;
+            margin: 0 0 4px 0;
+        }
+        .chart-header p {
+            color: rgba(255, 255, 255, 0.92);
+            font-size: 13px;
+            margin: 0;
+            line-height: 1.5;
+        }
+        .chart-scroll { overflow-x: auto; -webkit-overflow-scrolling: touch; }
+        table.cs-table {
+            width: 100%;
+            border-collapse: collapse;
+            font-size: 14px;
+            min-width: 640px;
+        }
+        table.cs-table thead th {
+            background-color: #F7F3ED;
+            color: #3D6B4A;
+            font-weight: 700;
+            padding: 13px 10px;
+            text-align: center;
+            border-bottom: 2px solid #5B8C6B;
+            font-size: 12.5px;
+            letter-spacing: 0.2px;
+        }
+        table.cs-table thead th:first-child {
+            text-align: left;
+            padding-left: 22px;
+            background-color: #EDE8DF;
+        }
+        table.cs-table tbody td {
+            padding: 12px 10px;
+            text-align: center;
+            color: #4A5568;
+            font-variant-numeric: tabular-nums;
+            border-bottom: 1px solid #F0EAE0;
+        }
+        table.cs-table tbody td:first-child {
+            text-align: left;
+            padding-left: 22px;
+            font-weight: 700;
+            color: #2C2C2C;
+            background-color: #FBF8F2;
+        }
+        table.cs-table tbody tr:nth-child(even) td { background-color: #FAFAF7; }
+        table.cs-table tbody tr:nth-child(even) td:first-child { background-color: #F7F3ED; }
+        table.cs-table tbody tr:hover td { background-color: #E8F0E5; }
+        table.cs-table tbody tr:hover td:first-child { background-color: #D7E7CC; }
+
+        /* Highlight rows for Medicaid/CHIP lines */
+        table.cs-table tbody tr.highlight-medicaid td {
+            background-color: #FFF3E5;
+            color: #8A5A1B;
+            font-style: italic;
+            font-size: 13px;
+        }
+        table.cs-table tbody tr.highlight-medicaid td:first-child {
+            background-color: #F5E4CB;
+            color: #8A5A1B;
+            font-style: italic;
+        }
+
+        .chart-footer {
+            padding: 16px 24px 20px;
+            font-size: 12px;
+            color: #7A8FA4;
+            border-top: 1px solid #F0EAE0;
+            background-color: #FDFCF9;
+            line-height: 1.7;
+        }
+        .chart-footer strong { color: #3D6B4A; }
+        .chart-footer a { color: #5B8C6B; word-break: break-word; }
+
+        /* Callout boxes */
+        .callout {
+            background: #F7F3ED;
+            border-left: 5px solid #5B8C6B;
+            padding: 18px 22px;
+            border-radius: 4px;
+            margin: 22px 0;
+            font-size: 14px;
+            line-height: 1.7;
+            color: #4A5568;
+        }
+        .callout strong { color: #3D6B4A; }
+        .callout.warn { background: #FDF6E3; border-left-color: #D4956B; }
+        .callout.warn strong { color: #B56B3D; }
+
+        /* Two-column simple */
+        .two-col-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 20px;
+            margin: 20px 0;
+        }
+        @media (max-width: 720px) { .two-col-grid { grid-template-columns: 1fr; } }
+        .simple-card {
+            background: #FFFFFF;
+            border: 1px solid #E0D9CE;
+            border-radius: 10px;
+            padding: 22px 24px;
+        }
+        .simple-card h4 { color: #3D6B4A; font-size: 17px; margin-bottom: 8px; font-family: 'Nunito', sans-serif; font-weight: 800; letter-spacing: 0.2px; }
+        .simple-card .big-number { font-family: 'DM Serif Display', serif; font-size: 32px; color: #3D6B4A; line-height: 1; margin: 4px 0 8px; }
+        .simple-card p { font-size: 13px; color: #4A5568; line-height: 1.6; }
+
+        .sources { background: #F7F3ED; padding: 26px 28px; border-radius: 10px; margin-top: 50px; }
+        .sources h3 { font-size: 18px; margin-bottom: 12px; color: #2C2C2C; }
+        .sources ol { margin-left: 22px; font-size: 13px; color: #4A5568; }
+        .sources li { margin-bottom: 8px; line-height: 1.6; }
+        .sources a { color: #5B8C6B; word-break: break-word; }
+        .sources .disclaimer { font-size: 12px; color: #7A8FA4; margin-top: 14px; line-height: 1.6; }
+
+        .cta-section { background: linear-gradient(135deg, #F7F3ED 0%, #E8F0E5 100%); padding: 60px 20px; text-align: center; max-width: 1000px; margin: 0 auto; border-radius: 16px; }
+        .cta-section h2 { margin-bottom: 14px; font-size: 28px; }
+        .cta-section p { font-size: 16px; color: #4A5568; margin-bottom: 24px; max-width: 600px; margin-left: auto; margin-right: auto; }
+        .btn { display: inline-flex; align-items: center; justify-content: center; padding: 12px 28px; border-radius: 8px; font-family: 'DM Serif Display', serif; font-size: 15px; font-weight: 600; text-decoration: none; transition: all 0.3s ease; }
+        .btn-primary { background: linear-gradient(135deg, #5B8C6B 0%, #3D6B4A 100%); color: white; }
+        .btn-primary:hover { transform: translateY(-2px); box-shadow: 0 10px 30px rgba(91, 140, 107, 0.3); }
+
+        footer { background-color: #2C2C2C; color: white; padding: 60px 20px 20px; }
+        .footer-content { max-width: 1200px; margin: 0 auto; display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 40px; margin-bottom: 40px; }
+        .footer-section h4 { font-family: 'DM Serif Display', serif; font-size: 18px; margin-bottom: 20px; }
+        .footer-section ul { list-style: none; }
+        .footer-section ul li { margin-bottom: 12px; }
+        .footer-section a { color: #E0D9CE; font-size: 15px; font-weight: 400; }
+        .footer-section a:hover { color: #A8C5A0; }
+        .footer-brand { background-color: #1F1F1F; padding: 30px 20px; border-top: 1px solid #404040; text-align: center; }
+        .footer-brand p { color: #7A8FA4; font-size: 14px; }
+        .legal-disclaimer { font-size: 12px; margin-top: 20px; line-height: 1.6; color: rgba(255, 255, 255, 0.5); }
+
+        /* Print optimization */
+        @media print {
+            nav, footer, .cta-section, .hero { display: none !important; }
+            main { padding: 10px; }
+            .chart-wrapper { box-shadow: none; break-inside: avoid; page-break-inside: avoid; }
+            .toc { display: none; }
+            body { font-size: 11pt; }
+        }
+    </style>
+</head>
+<body>
+    <nav>
+        <div class="nav-container">
+            <a href="/" class="logo"><img src="/logo-mark.svg" alt="Medicare Moms Logo">Medicare Moms</a>
+            <ul class="nav-links" id="navLinks">
+                <li><a href="/services/">Services</a></li>
+                <li><a href="/resources/">Resources</a></li>
+                <li><a href="/blog/">Blog</a></li>
+                <li><a href="/meet-our-team/">Meet Our Team</a></li>
+                <li><a href="/#contact">Contact</a></li>
+                <li class="lang-toggle">
+                    <a href="/es/recursos/" class="lang-link" title="Ver en Español">
+                        <span class="lang-active">EN</span> / <span class="lang-inactive">ES</span>
+                    </a>
+                </li>
+            </ul>
+            <div class="hamburger" id="hamburger"><span></span><span></span><span></span></div>
+        </div>
+    </nav>
+
+    <section class="hero">
+        <div class="hero-content">
+            <div class="breadcrumb">
+                <a href="/">Home</a><span>/</span>
+                <a href="/resources/">Resources</a><span>/</span>
+                <span>ACA &amp; Subsidy Cheat Sheet</span>
+            </div>
+            <span class="category-pill">Agent &amp; Consumer Reference</span>
+            <h1>2026 ACA &amp; Subsidy Cheat Sheet</h1>
+            <p class="lead">Everything you need on one page: Federal Poverty Level chart for household sizes 1&ndash;8, expected premium contributions, Marketplace out-of-pocket maximums, Medicaid and CHIP eligibility lines, employer affordability threshold, and APTC repayment limits for the 2026 coverage year.</p>
+            <div class="hero-meta">
+                <span>Last updated April 18, 2026</span>
+                <span>Coverage Year 2026 (uses 2025 FPL)</span>
+                <span>Sourced from HHS, IRS, and the Federal Register</span>
+            </div>
+        </div>
+    </section>
+
+    <main>
+        <p class="intro">This reference pulls together every income and threshold figure Medicare Moms agents (and their clients) commonly need when talking about 2026 ACA Marketplace coverage. Every number on this page comes directly from the U.S. Department of Health &amp; Human Services, the IRS, or the Federal Register. All amounts apply to the <strong>48 contiguous states and Washington, D.C.</strong> Alaska and Hawai'i use separate, higher poverty guidelines &mdash; check <a href="https://aspe.hhs.gov/poverty-guidelines" target="_blank" rel="noopener">aspe.hhs.gov/poverty-guidelines</a> for those.</p>
+
+        <div class="callout" style="background: linear-gradient(135deg, #E8F0E5 0%, #F7F3ED 100%); border-left-color: #3D6B4A;">
+            <strong>Prefer a printable one-page version?</strong> Grab the <a href="/resources/aca-quickref-2026/"><strong>2026 ACA Quick Reference</strong></a> &mdash; every number on this page condensed onto a single letter-size page, designed to print cleanly and live on your desk during enrollment conversations.
+        </div>
+
+        <div class="toc">
+            <h3>On This Page</h3>
+            <ol>
+                <li><a href="#fpl-table">2025 Federal Poverty Level chart</a></li>
+                <li><a href="#premium-contribution">Expected premium contribution by FPL</a></li>
+                <li><a href="#medicaid-chip">Medicaid &amp; CHIP eligibility</a></li>
+                <li><a href="#moop">Marketplace out-of-pocket maximums</a></li>
+                <li><a href="#employer">Employer coverage affordability</a></li>
+                <li><a href="#aptc-repay">APTC repayment limits</a></li>
+                <li><a href="#tax-filing">Tax filing thresholds</a></li>
+                <li><a href="#catastrophic">Affordability exemption (catastrophic)</a></li>
+                <li><a href="#sources">Sources &amp; disclaimers</a></li>
+            </ol>
+        </div>
+
+        <!-- ============== 1. FPL TABLE ============== -->
+        <div class="chart-section" id="fpl-table">
+            <h2>1. 2025 Federal Poverty Level Chart</h2>
+            <p class="section-intro">Eligibility for ACA premium tax credits, cost-sharing reductions, Medicaid expansion, and CHIP is measured against the <strong>prior year's</strong> Federal Poverty Level. Coverage Year 2026 uses the HHS 2025 poverty guidelines. Figures shown are annual household income in U.S. dollars.</p>
+
+            <div class="chart-wrapper">
+                <div class="chart-header">
+                    <h3>2025 FPL by Household Size</h3>
+                    <p>For determining 2026 ACA subsidy eligibility. 48 contiguous states and D.C.</p>
+                </div>
+                <div class="chart-scroll">
+                    <table class="cs-table">
+                        <thead>
+                            <tr>
+                                <th>Household Size</th>
+                                <th>100% FPL</th>
+                                <th>138% FPL<br><span style="font-weight:400;font-size:11px;">Medicaid (expansion)</span></th>
+                                <th>150% FPL</th>
+                                <th>200% FPL</th>
+                                <th>250% FPL</th>
+                                <th>300% FPL</th>
+                                <th>400% FPL<br><span style="font-weight:400;font-size:11px;">Subsidy cliff</span></th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr><td>1 person</td><td>$15,650</td><td>$21,597</td><td>$23,475</td><td>$31,300</td><td>$39,125</td><td>$46,950</td><td>$62,600</td></tr>
+                            <tr><td>2 people</td><td>$21,150</td><td>$29,187</td><td>$31,725</td><td>$42,300</td><td>$52,875</td><td>$63,450</td><td>$84,600</td></tr>
+                            <tr><td>3 people</td><td>$26,650</td><td>$36,777</td><td>$39,975</td><td>$53,300</td><td>$66,625</td><td>$79,950</td><td>$106,600</td></tr>
+                            <tr><td>4 people</td><td>$32,150</td><td>$44,367</td><td>$48,225</td><td>$64,300</td><td>$80,375</td><td>$96,450</td><td>$128,600</td></tr>
+                            <tr><td>5 people</td><td>$37,650</td><td>$51,957</td><td>$56,475</td><td>$75,300</td><td>$94,125</td><td>$112,950</td><td>$150,600</td></tr>
+                            <tr><td>6 people</td><td>$43,150</td><td>$59,547</td><td>$64,725</td><td>$86,300</td><td>$107,875</td><td>$129,450</td><td>$172,600</td></tr>
+                            <tr><td>7 people</td><td>$48,650</td><td>$67,137</td><td>$72,975</td><td>$97,300</td><td>$121,625</td><td>$145,950</td><td>$194,600</td></tr>
+                            <tr><td>8 people</td><td>$54,150</td><td>$74,727</td><td>$81,225</td><td>$108,300</td><td>$135,375</td><td>$162,450</td><td>$216,600</td></tr>
+                        </tbody>
+                    </table>
+                </div>
+                <div class="chart-footer">
+                    <strong>Households larger than 8:</strong> add $5,500 for each additional person to reach 100% FPL, then multiply by the relevant percentage.<br>
+                    <strong>Alaska &amp; Hawai'i:</strong> These states use separate, higher poverty guidelines.<br>
+                    Source: U.S. Department of Health &amp; Human Services, 2025 Poverty Guidelines, published by ASPE at <a href="https://aspe.hhs.gov/poverty-guidelines" target="_blank" rel="noopener">aspe.hhs.gov/poverty-guidelines</a>.
+                </div>
+            </div>
+        </div>
+
+        <!-- ============== 2. EXPECTED PREMIUM CONTRIBUTION ============== -->
+        <div class="chart-section" id="premium-contribution">
+            <h2>2. Expected Premium Contribution by Income Level</h2>
+            <p class="section-intro">How much of a household's income goes toward the benchmark (second-lowest-cost Silver) plan under the IRS premium tax credit formula. Because enhanced subsidies from the Inflation Reduction Act expired December 31, 2025, the 2026 percentages reflect the <strong>pre-ARPA formula</strong> &mdash; which is higher at most income levels and excludes anyone above 400% FPL entirely.</p>
+
+            <div class="chart-wrapper">
+                <div class="chart-header">
+                    <h3>Benchmark Silver Premium Cap (% of Income)</h3>
+                    <p>Applicable Figure used in premium tax credit calculations, CY 2026.</p>
+                </div>
+                <div class="chart-scroll">
+                    <table class="cs-table">
+                        <thead>
+                            <tr>
+                                <th>Household Income</th>
+                                <th>Expected Contribution</th>
+                                <th>Notes</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr><td>Less than 133% FPL</td><td>2.10%</td><td>Below Medicaid threshold in most states</td></tr>
+                            <tr><td>133% FPL</td><td>3.14%</td><td>Expansion-state Medicaid transition zone</td></tr>
+                            <tr><td>138% FPL</td><td>3.45%</td><td>Medicaid eligibility line in expansion states</td></tr>
+                            <tr><td>150% FPL</td><td>4.19%</td><td>Strongest CSR (94% AV Silver) tier</td></tr>
+                            <tr><td>200% FPL</td><td>6.60%</td><td>Upper bound for 87% AV CSR</td></tr>
+                            <tr><td>250% FPL</td><td>8.44%</td><td>Upper bound for 73% AV CSR</td></tr>
+                            <tr><td>300&ndash;400% FPL</td><td>9.96%</td><td>Maximum expected contribution</td></tr>
+                            <tr><td>More than 400% FPL</td><td>Ineligible</td><td>No premium tax credit; full premium owed</td></tr>
+                        </tbody>
+                    </table>
+                </div>
+                <div class="chart-footer">
+                    Source: IRS Revenue Procedure 2025-25, Applicable Figures for CY 2026 (<a href="https://www.irs.gov/pub/irs-drop/rp-25-25.pdf" target="_blank" rel="noopener">irs.gov/pub/irs-drop/rp-25-25.pdf</a>).<br>
+                    These percentages are higher than CY 2025 because the enhanced premium tax credits from the American Rescue Plan and Inflation Reduction Act expired on December 31, 2025.
+                </div>
+            </div>
+        </div>
+
+        <!-- ============== 3. MEDICAID + CHIP ============== -->
+        <div class="chart-section" id="medicaid-chip">
+            <h2>3. Medicaid &amp; CHIP Eligibility</h2>
+            <p class="section-intro">Medicaid and CHIP (Children's Health Insurance Program) cover different populations depending on state. Eligibility is set at the state level within federal minimums. Enrollees at or below these thresholds typically qualify for Medicaid or CHIP instead of Marketplace subsidies.</p>
+
+            <div class="chart-wrapper">
+                <div class="chart-header">
+                    <h3>Typical Income Lines for Medicaid &amp; CHIP</h3>
+                    <p>Ranges reflect federal minimums and common state thresholds. Check your specific state for exact cutoffs.</p>
+                </div>
+                <div class="chart-scroll">
+                    <table class="cs-table">
+                        <thead>
+                            <tr>
+                                <th>Program / Group</th>
+                                <th>Typical Income Threshold</th>
+                                <th>Notes</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>Medicaid &mdash; adults (expansion states)</td>
+                                <td>Up to <strong>138% FPL</strong></td>
+                                <td>41 states + D.C. have expanded Medicaid as of 2026</td>
+                            </tr>
+                            <tr>
+                                <td>Medicaid &mdash; adults (non-expansion states)</td>
+                                <td>Varies; typically well below 100% FPL for parents, usually none for childless adults</td>
+                                <td>TX, FL, TN, AL, MS, SC, GA, WY, KS; coverage gap exists</td>
+                            </tr>
+                            <tr>
+                                <td>Medicaid &mdash; pregnant women</td>
+                                <td>Typically 138&ndash;200% FPL (state-dependent)</td>
+                                <td>Many states extend higher, up to 300% FPL</td>
+                            </tr>
+                            <tr>
+                                <td>Medicaid &mdash; children</td>
+                                <td>At least 138% FPL nationwide; many states higher</td>
+                                <td>Children under 19 have the broadest Medicaid eligibility</td>
+                            </tr>
+                            <tr>
+                                <td>CHIP &mdash; children</td>
+                                <td>Typically <strong>170% to 400% FPL</strong> depending on state</td>
+                                <td>Bridges the gap above Medicaid for children; median cutoff ~255% FPL</td>
+                            </tr>
+                            <tr>
+                                <td>CHIP &mdash; pregnant women (some states)</td>
+                                <td>Up to 300% FPL in participating states</td>
+                                <td>Not offered in all states</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+                <div class="chart-footer">
+                    <strong>State variation:</strong> Medicaid and CHIP income limits are set by each state. The ranges above are federal minimums and common state practice; actual thresholds vary widely.<br>
+                    Sources: Medicaid.gov, CHIP state summaries (<a href="https://www.medicaid.gov/chip/eligibility-standards" target="_blank" rel="noopener">medicaid.gov/chip/eligibility-standards</a>) and KFF state-level eligibility tables (<a href="https://www.kff.org/medicaid/state-indicator/medicaid-and-chip-income-eligibility-limits-for-children-as-a-percent-of-the-federal-poverty-level/" target="_blank" rel="noopener">kff.org</a>).
+                </div>
+            </div>
+
+            <div class="callout">
+                <strong>Referral rule of thumb:</strong> If an applicant's income is below 138% FPL in an expansion state, or their children's household income is below the state CHIP threshold, their application should route through Medicaid/CHIP rather than a Marketplace plan. Healthcare.gov and state exchanges automatically screen for this when an application is submitted.
+            </div>
+        </div>
+
+        <!-- ============== 4. OUT-OF-POCKET MAX ============== -->
+        <div class="chart-section" id="moop">
+            <h2>4. Marketplace Out-of-Pocket Maximums (2026)</h2>
+            <p class="section-intro">The maximum a consumer can be required to pay out-of-pocket in a single plan year for in-network essential health benefits. Silver plans qualify for Cost-Sharing Reductions (CSRs) at lower income levels, which lower the MOOP substantially.</p>
+
+            <div class="chart-wrapper">
+                <div class="chart-header">
+                    <h3>2026 MOOP by Plan Type &amp; CSR Level</h3>
+                    <p>Federal limits for non-grandfathered individual and group plans.</p>
+                </div>
+                <div class="chart-scroll">
+                    <table class="cs-table">
+                        <thead>
+                            <tr>
+                                <th>Plan Type</th>
+                                <th>Income Level</th>
+                                <th>Individual MOOP</th>
+                                <th>Family MOOP</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr><td>Standard (all plans)</td><td>All income levels</td><td>$10,600</td><td>$21,200</td></tr>
+                            <tr><td>CSR Silver &mdash; 73% AV</td><td>201&ndash;250% FPL</td><td>$8,450</td><td>$16,900</td></tr>
+                            <tr><td>CSR Silver &mdash; 87% AV</td><td>151&ndash;200% FPL</td><td>$3,500</td><td>$7,000</td></tr>
+                            <tr><td>CSR Silver &mdash; 94% AV</td><td>Up to 150% FPL</td><td>$3,500</td><td>$7,000</td></tr>
+                        </tbody>
+                    </table>
+                </div>
+                <div class="chart-footer">
+                    <strong>CSR Silver tip:</strong> Cost-sharing reductions are only available on Silver plans purchased through the Marketplace. Enrollees eligible for a CSR who buy Bronze, Gold, or Platinum lose the benefit.<br>
+                    Source: 2026 Marketplace Integrity and Affordability rule, Federal Register (<a href="https://www.federalregister.gov/documents/2025/06/25/2025-11606/patient-protection-and-affordable-care-act-marketplace-integrity-and-affordability" target="_blank" rel="noopener">federalregister.gov</a>).
+                </div>
+            </div>
+        </div>
+
+        <!-- ============== 5. EMPLOYER AFFORDABILITY ============== -->
+        <div class="chart-section" id="employer">
+            <h2>5. Employer Coverage Affordability</h2>
+            <p class="section-intro">If an employee is offered health coverage through their job, they generally can't qualify for Marketplace subsidies <strong>unless</strong> the employer offer is deemed "unaffordable" by the IRS standard. The 2026 threshold is pegged to self-only coverage cost, but family-affordability determinations now look at the cost of family coverage (a 2023 IRS rule change).</p>
+
+            <div class="two-col-grid">
+                <div class="simple-card">
+                    <h4>Affordability Threshold</h4>
+                    <div class="big-number">9.96%</div>
+                    <p>Employer-sponsored coverage is considered unaffordable if the employee's share of premium exceeds this percentage of household income. Above this line, the employee (and family) may qualify for Marketplace subsidies instead.</p>
+                </div>
+                <div class="simple-card">
+                    <h4>Family Affordability Basis</h4>
+                    <div class="big-number" style="font-size:22px;">Cost of family coverage</div>
+                    <p>For dependents, affordability is now measured against the cost to enroll the family &mdash; not just the employee. This expanded eligibility significantly starting in 2023 and remains in effect for 2026.</p>
+                </div>
+            </div>
+            <div class="callout">
+                Source: IRS Revenue Procedure 2025-25 and 26 CFR 1.36B-2. The affordability percentage is indexed annually.
+            </div>
+        </div>
+
+        <!-- ============== 6. APTC REPAYMENT ============== -->
+        <div class="chart-section" id="aptc-repay">
+            <h2>6. APTC Repayment Limits (Tax Year 2025)</h2>
+            <p class="section-intro">If a household receives more Advance Premium Tax Credit (APTC) than they should have based on actual year-end income, they owe the excess back at tax time &mdash; but the IRS caps repayment at these amounts for lower-income households. <strong>Tax year 2026</strong> changes are noted below.</p>
+
+            <div class="chart-wrapper">
+                <div class="chart-header">
+                    <h3>Maximum APTC Repayment for Tax Year 2025</h3>
+                    <p>What a household owes back if they received too much advance premium tax credit.</p>
+                </div>
+                <div class="chart-scroll">
+                    <table class="cs-table">
+                        <thead>
+                            <tr>
+                                <th>Income (% of FPL)</th>
+                                <th>Single Taxpayers</th>
+                                <th>All Other Taxpayers</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr><td>Under 200% FPL</td><td>$375</td><td>$750</td></tr>
+                            <tr><td>200% &ndash; 299% FPL</td><td>$975</td><td>$1,950</td></tr>
+                            <tr><td>300% &ndash; 399% FPL</td><td>$1,625</td><td>$3,250</td></tr>
+                            <tr><td>400% FPL and above</td><td>No cap</td><td>No cap</td></tr>
+                        </tbody>
+                    </table>
+                </div>
+                <div class="chart-footer">
+                    Source: IRS Revenue Procedure 2024-40 (<a href="https://www.irs.gov/pub/irs-drop/rp-24-40.pdf" target="_blank" rel="noopener">irs.gov/pub/irs-drop/rp-24-40.pdf</a>).
+                </div>
+            </div>
+
+            <div class="callout warn">
+                <strong>Important change for tax year 2026:</strong> Public Law 119-21 (the One Big Beautiful Bill Act, 2025) <strong>eliminates the APTC repayment caps entirely</strong> starting with tax year 2026. Households that overstate expected income and receive more APTC than they qualify for will owe the full excess at tax time, with no cap at any income level.
+            </div>
+        </div>
+
+        <!-- ============== 7. TAX FILING THRESHOLDS ============== -->
+        <div class="chart-section" id="tax-filing">
+            <h2>7. Tax Filing Thresholds (Tax Year 2025)</h2>
+            <p class="section-intro">The minimum gross income at which a taxpayer under age 65 must file a federal return. Important for ACA subsidy reconciliation because APTC recipients must file a return even if their income is below these thresholds.</p>
+
+            <div class="chart-wrapper">
+                <div class="chart-header">
+                    <h3>Must-File Income Thresholds (under age 65)</h3>
+                    <p>Based on the 2025 standard deduction by filing status.</p>
+                </div>
+                <div class="chart-scroll">
+                    <table class="cs-table">
+                        <thead>
+                            <tr>
+                                <th>Filing Status</th>
+                                <th>Threshold</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr><td>Single</td><td>$15,750</td></tr>
+                            <tr><td>Head of Household</td><td>$23,625</td></tr>
+                            <tr><td>Married Filing Jointly (both under 65)</td><td>$31,500</td></tr>
+                            <tr><td>Qualifying Surviving Spouse w/ Qualifying Child</td><td>$31,500</td></tr>
+                            <tr><td>Married Filing Separately</td><td>Any gross income</td></tr>
+                        </tbody>
+                    </table>
+                </div>
+                <div class="chart-footer">
+                    <strong>ACA note:</strong> Anyone who received APTC during the year must file a return and Form 8962 regardless of these thresholds. Failing to reconcile can block future subsidy eligibility.<br>
+                    Source: IRS Revenue Procedure 2024-40 and P.L. 119-21.
+                </div>
+            </div>
+        </div>
+
+        <!-- ============== 8. AFFORDABILITY EXEMPTION ============== -->
+        <div class="chart-section" id="catastrophic">
+            <h2>8. Affordability Exemption (Catastrophic Coverage, Age 30+)</h2>
+            <p class="section-intro">Catastrophic health plans on the Marketplace are normally limited to enrollees under 30. People 30 and older can qualify under a "hardship exemption" if no affordable Marketplace or employer plan is available.</p>
+
+            <div class="two-col-grid">
+                <div class="simple-card">
+                    <h4>Affordability Cutoff</h4>
+                    <div class="big-number">8.05%</div>
+                    <p>If the lowest-cost Marketplace or employer coverage (after APTC) would cost more than this percentage of household income, the enrollee age 30+ can purchase a catastrophic plan under the affordability exemption.</p>
+                </div>
+                <div class="simple-card">
+                    <h4>What Catastrophic Plans Cover</h4>
+                    <p style="font-size:13px;padding-top:8px;">Essential health benefits, three primary-care visits per year before deductible, and all preventive services. Very high deductibles (close to the annual MOOP) make them best suited as a bridge or emergency-only coverage option.</p>
+                </div>
+            </div>
+            <div class="callout">
+                Source: 2026 Marketplace Integrity and Affordability rule, Federal Register (<a href="https://www.federalregister.gov/documents/2025/06/25/2025-11606/patient-protection-and-affordable-care-act-marketplace-integrity-and-affordability" target="_blank" rel="noopener">federalregister.gov</a>).
+            </div>
+        </div>
+
+        <!-- ============== SOURCES ============== -->
+        <div class="sources" id="sources">
+            <h3>Sources</h3>
+            <ol>
+                <li>U.S. Department of Health &amp; Human Services, 2025 Poverty Guidelines, <a href="https://aspe.hhs.gov/poverty-guidelines" target="_blank" rel="noopener">aspe.hhs.gov/poverty-guidelines</a></li>
+                <li>IRS Revenue Procedure 2025-25, Applicable Figures for ACA Premium Tax Credit, <a href="https://www.irs.gov/pub/irs-drop/rp-25-25.pdf" target="_blank" rel="noopener">irs.gov/pub/irs-drop/rp-25-25.pdf</a></li>
+                <li>IRS Revenue Procedure 2024-40, Inflation Adjustments for Tax Year 2025, <a href="https://www.irs.gov/pub/irs-drop/rp-24-40.pdf" target="_blank" rel="noopener">irs.gov/pub/irs-drop/rp-24-40.pdf</a></li>
+                <li>2026 Patient Protection and Affordable Care Act Marketplace Integrity and Affordability, Federal Register, <a href="https://www.federalregister.gov/documents/2025/06/25/2025-11606/patient-protection-and-affordable-care-act-marketplace-integrity-and-affordability" target="_blank" rel="noopener">federalregister.gov</a></li>
+                <li>Public Law 119-21 (One Big Beautiful Bill Act of 2025), full text at <a href="https://www.congress.gov/bill/119th-congress/house-bill/1/text" target="_blank" rel="noopener">congress.gov</a></li>
+                <li>Medicaid.gov Eligibility &amp; State Standards, <a href="https://www.medicaid.gov/medicaid/eligibility/index.html" target="_blank" rel="noopener">medicaid.gov/medicaid/eligibility</a></li>
+                <li>KFF, State-level Medicaid and CHIP eligibility data, <a href="https://www.kff.org/medicaid/state-indicator/medicaid-and-chip-income-eligibility-limits-for-children-as-a-percent-of-the-federal-poverty-level/" target="_blank" rel="noopener">kff.org</a></li>
+                <li>Healthcare.gov, official ACA Marketplace, <a href="https://www.healthcare.gov" target="_blank" rel="noopener">healthcare.gov</a></li>
+            </ol>
+            <p class="disclaimer"><strong>Disclaimer:</strong> This page compiles publicly available federal data for quick reference. Amounts and rules are accurate as of publication (April 18, 2026) but change with new annual guidelines, IRS procedures, and legislation. Always verify with the original source or with a licensed insurance agent before relying on any figure for a specific enrollment or tax filing decision. Medicare Moms is a licensed insurance agency and is not affiliated with or endorsed by any government agency.</p>
+        </div>
+    </main>
+
+    <section class="cta-section">
+        <h2>Need to Talk Through a Specific Situation?</h2>
+        <p>A licensed Medicare Moms agent can walk through the numbers with a specific household in mind, run Marketplace quotes, and check Medicaid/CHIP eligibility. Free for consumers, always.</p>
+        <a href="/#contact" class="btn btn-primary">Contact a Licensed Agent</a>
+    </section>
+
+    <footer>
+        <div class="footer-content">
+            <div class="footer-section">
+                <h4>Medicare Moms</h4>
+                <ul>
+                    <li><a href="/">Home</a></li>
+                    <li><a href="/services/">Services</a></li>
+                    <li><a href="/resources/">Resources</a></li>
+                    <li><a href="/blog/">Blog</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h4>Company</h4>
+                <ul>
+                    <li><a href="/meet-our-team/">Meet Our Team</a></li>
+                    <li><a href="/join-our-team/">Join Our Team</a></li>
+                    <li><a href="/#contact">Contact Us</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h4>Legal</h4>
+                <ul>
+                    <li><a href="/privacy/">Privacy Policy</a></li>
+                    <li><a href="/terms/">Terms of Service</a></li>
+                    <li><a href="/consent-disclosure/">Consent &amp; TPMO Disclosure</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="footer-brand">
+            <p>&copy; 2026 Medicare Moms. All rights reserved. We do not offer every plan available in your area. Any information we provide is limited to those plans we do offer in your area. Please contact Medicare.gov or 1-800-MEDICARE for Medicare options, or Healthcare.gov for ACA Marketplace options.</p>
+            <p class="legal-disclaimer">medicaremoms.com and Medicare Moms is a DBA of Wildcat Insurance LLC, a licensed health insurance agency. The purpose of this site is insurance solicitation. Contact may be made by an insurance agent/producer or insurance company. Medicare Moms and the insurance plans presented on this site are not connected with or endorsed by the U.S. Government or the federal Medicare program. We do not offer all plans available in your area. Any information we provide is limited to the plans we offer in your area. Please contact Medicare.gov or 1-800-MEDICARE for information on all of your options.</p>
+        </div>
+    </footer>
+
+    <script>
+        const hamburger = document.getElementById('hamburger');
+        const navLinks = document.getElementById('navLinks');
+        hamburger.addEventListener('click', () => {
+            hamburger.classList.toggle('active');
+            navLinks.classList.toggle('active');
+        });
+    </script>
+</body>
+</html>

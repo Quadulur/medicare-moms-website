@@ -1,0 +1,1875 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <!-- Favicon (auto-inserted by add-favicon.py) -->
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg">
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+    <link rel="shortcut icon" href="/favicon.ico">
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+    <link rel="manifest" href="/site.webmanifest">
+    <meta name="theme-color" content="#5b8c6b">
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Medicare Moms - Cobertura de Salud Simplificada</title>
+    <meta name="description" content="Medicare Moms ayuda a familias a encontrar planes de Medicare, Medigap, ACA y seguros de salud adecuados. Agentes licenciados que hablan inglés, español y japonés. Una empresa de Wildcat Insurance.">
+    <meta name="keywords" content="Medicare, Medicare Advantage, Medigap, seguro de salud ACA, Medicare Moms, Wildcat Insurance, agentes de seguros de salud, agentes bilingües de seguros">
+    <meta property="og:title" content="Medicare Moms - Encontrando la Cobertura Correcta para tu Familia">
+    <meta property="og:description" content="Medicare Moms ayuda a familias a encontrar planes de Medicare, Medigap, ACA y seguros de salud adecuados. Agentes bilingües listos para ayudar.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://medicaremoms.com/es/">
+    <meta property="og:site_name" content="Medicare Moms">
+    <link rel="canonical" href="https://medicaremoms.com/es/">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display&family=Nunito:wght@400;600;700;800&display=swap" rel="stylesheet">
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family: 'Nunito', sans-serif;
+            color: #2C2C2C;
+            background-color: #FFFFFF;
+            line-height: 1.6;
+        }
+
+        /* ============ Utilities ============ */
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        .section-padding {
+            padding: 80px 0;
+        }
+
+        .text-center {
+            text-align: center;
+        }
+
+        /* ============ Typography ============ */
+        h1, h2, h3, h4, h5, h6 {
+            font-family: 'DM Serif Display', serif;
+            font-weight: 700;
+            line-height: 1.3;
+            color: #2C2C2C;
+        }
+
+        h1 {
+            font-size: clamp(32px, 5vw, 56px);
+            font-weight: 800;
+            margin-bottom: 20px;
+        }
+
+        h2 {
+            font-size: clamp(28px, 4vw, 44px);
+            margin-bottom: 30px;
+        }
+
+        h3 {
+            font-size: clamp(20px, 3vw, 28px);
+            margin-bottom: 15px;
+        }
+
+        p {
+            font-size: 16px;
+            color: #4A5568;
+            margin-bottom: 15px;
+        }
+
+        .lead {
+            font-size: 18px;
+            color: #4A5568;
+            margin-bottom: 20px;
+        }
+
+        /* ============ Buttons ============ */
+        .btn {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            padding: 12px 28px;
+            border-radius: 8px;
+            font-family: 'DM Serif Display', serif;
+            font-size: 15px;
+            font-weight: 600;
+            cursor: pointer;
+            text-decoration: none;
+            border: 2px solid transparent;
+            transition: all 0.3s ease;
+            text-align: center;
+        }
+
+        .btn-primary {
+            background: linear-gradient(135deg, #5B8C6B 0%, #3D6B4A 100%);
+            color: white;
+        }
+
+        .btn-primary:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 10px 30px rgba(91, 140, 107, 0.3);
+        }
+
+        .btn-secondary {
+            background-color: transparent;
+            color: #5B8C6B;
+            border-color: #5B8C6B;
+        }
+
+        .btn-secondary:hover {
+            background-color: #F7F3ED;
+            transform: translateY(-2px);
+        }
+
+        .btn-sm {
+            padding: 10px 20px;
+            font-size: 14px;
+        }
+
+        /* ============ Navigation ============ */
+        nav {
+            position: sticky;
+            top: 0;
+            background-color: white;
+            box-shadow: 0 4px 12px rgba(44, 44, 44, 0.08);
+            z-index: 1000;
+        }
+
+        .nav-container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 15px 20px;
+        }
+
+        .logo {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            font-family: 'DM Serif Display', serif;
+            font-size: 22px;
+            font-weight: 700;
+            color: #5B8C6B;
+            text-decoration: none;
+        }
+
+        .logo img {
+            height: 60px;
+            width: auto;
+        }
+
+        .nav-links {
+            display: flex;
+            gap: 35px;
+            list-style: none;
+            align-items: center;
+        }
+
+        .nav-links a {
+            color: #2C2C2C;
+            text-decoration: none;
+            font-weight: 500;
+            transition: color 0.3s ease;
+            font-size: 15px;
+        }
+
+        .nav-links a:hover {
+            color: #5B8C6B;
+        }
+
+        .hamburger {
+            display: none;
+            flex-direction: column;
+            cursor: pointer;
+            gap: 6px;
+        }
+
+        .hamburger span {
+            width: 25px;
+            height: 3px;
+            background-color: #2C2C2C;
+            border-radius: 2px;
+            transition: all 0.3s ease;
+        }
+
+        .hamburger.active span:nth-child(1) {
+            transform: rotate(45deg) translate(10px, 10px);
+        }
+
+        .hamburger.active span:nth-child(2) {
+            opacity: 0;
+        }
+
+        .hamburger.active span:nth-child(3) {
+            transform: rotate(-45deg) translate(7px, -7px);
+        }
+
+        @media (max-width: 768px) {
+            .hamburger {
+                display: flex;
+            }
+
+            .nav-links {
+                position: absolute;
+                top: 70px;
+                left: 0;
+                right: 0;
+                background-color: white;
+                flex-direction: column;
+                gap: 15px;
+                padding: 30px 20px;
+                display: none;
+            }
+
+            .nav-links.active {
+                display: flex;
+            }
+        }
+
+        
+        .lang-toggle {
+            margin-left: 8px;
+        }
+        .lang-link {
+            text-decoration: none;
+            font-size: 13px;
+            font-weight: 600;
+            color: #4A5568;
+            padding: 4px 12px;
+            border-radius: 20px;
+            background: #E8F0E5;
+            transition: all 0.3s ease;
+            display: inline-flex;
+            align-items: center;
+            gap: 2px;
+        }
+        .lang-link:hover {
+            background: #5B8C6B;
+            color: white;
+        }
+        .lang-active {
+            color: #5B8C6B;
+            font-weight: 700;
+        }
+        .lang-inactive {
+            color: #999;
+            font-weight: 400;
+        }
+        .lang-link:hover .lang-active,
+        .lang-link:hover .lang-inactive {
+            color: white;
+        }
+
+/* ============ Hero Section ============ */
+        .hero {
+            background: linear-gradient(160deg, #F7F3ED 0%, #EDE8DF 40%, #E8F0E5 100%);
+            padding: 100px 0 80px 0;
+            text-align: center;
+        }
+
+        .hero-content h1 {
+            color: #2C2C2C;
+            margin-bottom: 20px;
+            font-weight: 800;
+        }
+
+        .hero-content .lead {
+            font-size: 20px;
+            color: #4A5568;
+            margin-bottom: 40px;
+            max-width: 600px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .hero-buttons {
+            display: flex;
+            gap: 20px;
+            justify-content: center;
+            flex-wrap: wrap;
+            margin-bottom: 60px;
+        }
+
+        .trust-badges {
+            display: flex;
+            justify-content: center;
+            gap: 40px;
+            flex-wrap: wrap;
+            padding-top: 30px;
+            border-top: 1px solid rgba(44, 44, 44, 0.1);
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        .trust-badge {
+            text-align: center;
+        }
+
+        .trust-badge-value {
+            font-family: 'DM Serif Display', serif;
+            font-size: 24px;
+            font-weight: 700;
+            color: #5B8C6B;
+        }
+
+        .trust-badge-label {
+            font-size: 14px;
+            color: #4A5568;
+            margin-top: 5px;
+        }
+
+        /* ============ Stats Section ============ */
+        .stats-section {
+            background-color: white;
+            padding: 60px 0;
+            border-top: 1px solid rgba(91, 140, 107, 0.1);
+            border-bottom: 1px solid rgba(91, 140, 107, 0.1);
+        }
+
+        .stats-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 40px;
+            max-width: 1000px;
+            margin: 0 auto;
+        }
+
+        .stat-item {
+            text-align: center;
+        }
+
+        .stat-number {
+            font-family: 'DM Serif Display', serif;
+            font-size: 48px;
+            font-weight: 700;
+            color: #5B8C6B;
+            line-height: 1;
+            margin-bottom: 10px;
+        }
+
+        .stat-label {
+            font-family: 'Nunito', sans-serif;
+            font-size: 14px;
+            color: #4A5568;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+        }
+
+        @media (max-width: 768px) {
+            .hero {
+                padding: 60px 0 50px 0;
+            }
+
+            .hero-buttons {
+                flex-direction: column;
+                gap: 12px;
+            }
+
+            .btn {
+                width: 100%;
+            }
+
+            .trust-badges {
+                gap: 25px;
+            }
+
+            .stats-grid {
+                gap: 30px;
+            }
+
+            .stat-number {
+                font-size: 36px;
+            }
+        }
+
+        /* ============ Plans Section ============ */
+        .plans-section {
+            background-color: #F7F3ED;
+        }
+
+        .plans-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 25px;
+            margin-top: 50px;
+        }
+
+        .plan-card {
+            background-color: white;
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0 10px 30px rgba(44, 44, 44, 0.1);
+            transition: all 0.3s ease;
+            text-align: center;
+        }
+
+        .plan-card:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 15px 40px rgba(44, 44, 44, 0.15);
+        }
+
+        .plan-icon {
+            font-size: 48px;
+            margin-bottom: 15px;
+        }
+
+        .plan-card h3 {
+            color: #2C2C2C;
+            margin-bottom: 12px;
+            font-size: 22px;
+        }
+
+        .plan-card p {
+            font-size: 15px;
+            color: #4A5568;
+            margin-bottom: 20px;
+            line-height: 1.6;
+        }
+
+        .plan-card .btn {
+            width: 100%;
+        }
+
+        .plan-icon svg {
+            display: inline-block;
+        }
+
+        .plan-who {
+            font-size: 13px;
+            color: #5B8C6B;
+            font-weight: 600;
+            margin-bottom: 12px;
+            padding-bottom: 10px;
+            border-bottom: 1px solid rgba(91, 140, 107, 0.15);
+        }
+
+        .plan-highlights {
+            list-style: none;
+            text-align: left;
+            margin-bottom: 20px;
+            padding: 0;
+        }
+
+        .plan-highlights li {
+            font-size: 14px;
+            color: #4A5568;
+            padding: 4px 0;
+            display: flex;
+            align-items: flex-start;
+            gap: 8px;
+        }
+
+        .plan-highlights li::before {
+            content: "\2713";
+            color: #5B8C6B;
+            font-weight: 700;
+            flex-shrink: 0;
+        }
+
+        /* ============ Plan Finder Section ============ */
+        .plan-finder-section {
+            background-color: white;
+        }
+
+        .finder-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+            gap: 25px;
+            margin-top: 40px;
+        }
+
+        .finder-card {
+            background-color: #F7F3ED;
+            padding: 30px;
+            border-radius: 10px;
+            text-align: center;
+            border: 2px solid transparent;
+            transition: all 0.3s ease;
+        }
+
+        .finder-card:hover {
+            border-color: #5B8C6B;
+            transform: translateY(-5px);
+            box-shadow: 0 10px 30px rgba(44, 44, 44, 0.1);
+        }
+
+        .finder-emoji {
+            margin-bottom: 15px;
+            display: flex;
+            justify-content: center;
+        }
+
+        .finder-card h3 {
+            color: #2C2C2C;
+            margin-bottom: 12px;
+            font-size: 20px;
+        }
+
+        .finder-card p {
+            font-size: 15px;
+            color: #4A5568;
+            margin-bottom: 20px;
+            line-height: 1.6;
+        }
+
+        .finder-card .btn {
+            width: 100%;
+        }
+
+        @media (max-width: 768px) {
+            .finder-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+
+        .footer-logo {
+            display: block;
+            max-width: 180px;
+            height: auto;
+            margin-bottom: 15px;
+        }
+
+        /* ============ How We Help Section ============ */
+        .process-section {
+            background-color: white;
+        }
+
+        .process-steps {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+            gap: 30px;
+            margin-top: 60px;
+        }
+
+        .step {
+            text-align: center;
+            position: relative;
+        }
+
+        .step-number {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 60px;
+            height: 60px;
+            background: linear-gradient(135deg, #5B8C6B 0%, #3D6B4A 100%);
+            color: white;
+            font-family: 'DM Serif Display', serif;
+            font-size: 28px;
+            font-weight: 700;
+            border-radius: 50%;
+            margin: 0 auto 20px;
+        }
+
+        .step h3 {
+            color: #2C2C2C;
+            margin-bottom: 12px;
+        }
+
+        .step p {
+            color: #4A5568;
+            font-size: 15px;
+        }
+
+        .step-connector {
+            display: none;
+            position: absolute;
+            top: 30px;
+            right: -15px;
+            width: 30px;
+            height: 3px;
+            background-color: #5B8C6B;
+        }
+
+        @media (min-width: 900px) {
+            .step-connector {
+                display: block;
+            }
+
+            .step:last-child .step-connector {
+                display: none;
+            }
+        }
+
+        .process-note {
+            background-color: #A8C5A0;
+            color: white;
+            padding: 20px;
+            border-radius: 10px;
+            margin-top: 40px;
+            text-align: center;
+            font-weight: 500;
+        }
+
+        /* ============ Why Choose Us Section ============ */
+        .why-section {
+            background-color: #F7F3ED;
+        }
+
+        .why-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+            gap: 25px;
+            margin-top: 50px;
+        }
+
+        .why-card {
+            background-color: white;
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0 4px 12px rgba(44, 44, 44, 0.08);
+            text-align: center;
+        }
+
+        .why-card h3 {
+            color: #2C2C2C;
+            margin-bottom: 12px;
+            font-size: 20px;
+        }
+
+        .why-card p {
+            color: #4A5568;
+            font-size: 15px;
+        }
+
+        /* ============ Testimonials Section ============ */
+        .testimonials-section {
+            background-color: white;
+        }
+
+        .testimonials-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 25px;
+            margin-top: 50px;
+        }
+
+        .testimonial-card {
+            background-color: #F7F3ED;
+            padding: 30px;
+            border-radius: 10px;
+            border-left: 4px solid #5B8C6B;
+        }
+
+        .stars {
+            color: #5B8C6B;
+            margin-bottom: 15px;
+            font-size: 14px;
+        }
+
+        .testimonial-text {
+            font-style: italic;
+            color: #4A5568;
+            margin-bottom: 15px;
+            font-size: 15px;
+            line-height: 1.6;
+        }
+
+        .testimonial-author {
+            font-family: 'DM Serif Display', serif;
+            font-weight: 600;
+            color: #2C2C2C;
+            font-size: 15px;
+        }
+
+        .testimonial-location {
+            font-size: 13px;
+            color: #4A5568;
+            margin-top: 5px;
+        }
+
+        /* ============ Contact Section ============ */
+        .contact-section {
+            background: linear-gradient(135deg, #3D6B4A 0%, #2C5038 100%);
+            color: white;
+        }
+
+        .contact-content {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 50px;
+            align-items: center;
+        }
+
+        .contact-section h2 {
+            color: white;
+            margin-bottom: 30px;
+        }
+
+        .contact-form {
+            display: flex;
+            flex-direction: column;
+            gap: 15px;
+        }
+
+        .form-group {
+            display: flex;
+            flex-direction: column;
+        }
+
+        .form-group label {
+            font-family: 'DM Serif Display', serif;
+            font-weight: 500;
+            margin-bottom: 8px;
+            font-size: 14px;
+            color: white;
+        }
+
+        .contact-section p,
+        .contact-section .contact-info p {
+            color: rgba(255, 255, 255, 0.9);
+        }
+
+        .form-group input,
+        .form-group select,
+        .form-group textarea {
+            padding: 12px 15px;
+            border: 2px solid rgba(255, 255, 255, 0.2);
+            border-radius: 8px;
+            background-color: rgba(255, 255, 255, 0.95);
+            color: #2C2C2C;
+            font-family: 'Nunito', sans-serif;
+            font-size: 14px;
+            transition: all 0.3s ease;
+        }
+
+        .form-group input:focus,
+        .form-group select:focus,
+        .form-group textarea:focus {
+            outline: none;
+            border-color: #5B8C6B;
+            background-color: white;
+        }
+
+        .contact-info {
+            color: rgba(255, 255, 255, 0.9);
+        }
+
+        .contact-info h3 {
+            color: white;
+            margin-bottom: 30px;
+        }
+
+        .contact-method {
+            margin-bottom: 25px;
+        }
+
+        .contact-method label {
+            font-family: 'DM Serif Display', serif;
+            font-weight: 600;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            margin-bottom: 8px;
+        }
+
+        .contact-method label svg {
+            flex-shrink: 0;
+        }
+
+        .contact-method p {
+            color: rgba(255, 255, 255, 0.8);
+            margin: 0;
+        }
+
+        .contact-disclaimer {
+            margin-top: 30px;
+            font-size: 13px;
+            color: rgba(255, 255, 255, 0.7);
+            line-height: 1.5;
+        }
+
+        @media (max-width: 768px) {
+            .contact-content {
+                grid-template-columns: 1fr;
+                gap: 30px;
+            }
+        }
+
+        /* ============ Footer ============ */
+        footer {
+            background-color: #2C2C2C;
+            color: rgba(255, 255, 255, 0.8);
+            padding: 50px 0 20px 0;
+        }
+
+        .footer-content {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 40px;
+            margin-bottom: 40px;
+        }
+
+        .footer-section h4 {
+            color: white;
+            margin-bottom: 20px;
+            font-family: 'DM Serif Display', serif;
+            font-weight: 600;
+            font-size: 16px;
+        }
+
+        .footer-section ul {
+            list-style: none;
+        }
+
+        .footer-section ul li {
+            margin-bottom: 12px;
+        }
+
+        .footer-section a {
+            color: rgba(255, 255, 255, 0.7);
+            text-decoration: none;
+            font-size: 14px;
+            transition: color 0.3s ease;
+        }
+
+        .footer-section a:hover {
+            color: #5B8C6B;
+        }
+
+        .footer-brand {
+            margin-bottom: 15px;
+        }
+
+        .footer-brand p {
+            color: rgba(255, 255, 255, 0.6);
+            font-size: 13px;
+            margin: 8px 0;
+        }
+
+        .social-links {
+            display: flex;
+            gap: 15px;
+            margin-top: 15px;
+        }
+
+        .social-links a {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            width: 35px;
+            height: 35px;
+            background-color: rgba(91, 140, 107, 0.2);
+            color: #5B8C6B;
+            border-radius: 50%;
+            text-decoration: none;
+            transition: all 0.3s ease;
+            font-size: 18px;
+        }
+
+        .social-links a:hover {
+            background-color: #5B8C6B;
+            color: white;
+        }
+
+        .footer-bottom {
+            border-top: 1px solid rgba(255, 255, 255, 0.1);
+            padding-top: 30px;
+            text-align: center;
+            font-size: 13px;
+            color: rgba(255, 255, 255, 0.6);
+        }
+
+        .legal-disclaimer {
+            font-size: 12px;
+            margin-top: 20px;
+            line-height: 1.6;
+            color: rgba(255, 255, 255, 0.5);
+        }
+
+        /* ============ Animations ============ */
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        .fade-in {
+            animation: fadeInUp 0.6s ease-out forwards;
+        }
+
+        /* ============ Responsive ============ */
+        @media (max-width: 768px) {
+            .section-padding {
+                padding: 50px 0;
+            }
+
+            h1 {
+                font-size: 32px;
+            }
+
+            h2 {
+                font-size: 28px;
+            }
+
+            .plans-grid,
+            .why-grid,
+            .testimonials-grid,
+            .process-steps {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "InsuranceAgency",
+      "name": "Medicare Moms",
+      "description": "Agentes de seguros licenciados ayudando a familias a encontrar planes de Medicare, Medigap, ACA y seguros de salud adecuados.",
+      "url": "https://medicaremoms.com/es",
+      "telephone": "(435) 246-1548",
+      "email": "info@medicaremoms.com",
+      "parentOrganization": {
+        "@type": "Organization",
+        "name": "Wildcat Insurance"
+      },
+      "areaServed": "US",
+      "knowsLanguage": ["English", "Spanish", "Japanese"],
+      "serviceType": ["Medicare Advantage", "Medigap", "ACA Marketplace", "Life Insurance", "Dental Insurance", "Vision Insurance"]
+    }
+    </script>
+</head>
+<body>
+    <!-- Navigation -->
+    <nav>
+        <div class="container">
+            <div class="nav-container">
+                <a href="/es/" class="logo"><img src="/logo-mark.svg" alt="Medicare Moms Logo">Medicare Moms</a>
+                <ul class="nav-links" id="navLinks">
+                    <li><a href="/es/servicios/">Servicios</a></li>
+                    <li><a href="/es/recursos/">Recursos</a></li>
+                    <li><a href="/es/blog/">Blog</a></li>
+                    <li><a href="/es/equipo/">Nuestro Equipo</a></li>
+                    <li><a href="#contact">Contacto</a></li>
+                    <li class="lang-toggle">
+                        <a href="/" class="lang-link" title="View in English">
+                            <span class="lang-inactive">EN</span> / <span class="lang-active">ES</span>
+                        </a>
+                    </li>
+                </ul>
+                <div class="hamburger" id="hamburger">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="container">
+            <div class="hero-content">
+                <h1>Cobertura de Salud Simplificada. Por Mamás que se Importan.</h1>
+                <p class="lead">Más de 5,000 jubilados y familias asistidos con más de 20 años de experiencia. Licenciados en más de 40 estados. Te guiaremos a través de cada opción, responderemos tus preguntas y te ayudaremos a elegir una cobertura que se adapte a tu vida.</p>
+                <div class="hero-buttons">
+                    <button class="btn btn-primary" onclick="document.getElementById('contact').scrollIntoView({behavior: 'smooth'})">Encuentra tu Plan</button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Stats Section -->
+    <section class="stats-section">
+        <div class="container">
+            <div class="stats-grid">
+                <div class="stat-item">
+                    <div class="stat-number">5,000+</div>
+                    <div class="stat-label">Jubilados y Familias Asistidos</div>
+                </div>
+                <div class="stat-item">
+                    <div class="stat-number">90+</div>
+                    <div class="stat-label">Años Combinados en Seguros</div>
+                </div>
+                <div class="stat-item">
+                    <div class="stat-number">35+</div>
+                    <div class="stat-label">Estados Cubiertos</div>
+                </div>
+                <div class="stat-item">
+                    <div class="stat-number">100%</div>
+                    <div class="stat-label">Consultas Gratuitas</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Plans Section -->
+    <section class="plans-section section-padding" id="plans">
+        <div class="container">
+            <h2 class="text-center">Opciones de Cobertura para Cada Etapa de la Vida</h2>
+            <p class="text-center" style="max-width: 600px; margin: 0 auto 30px; color: #4A5568;">Ya sea que estés cumpliendo 65 años o buscando cambiar de planes, tenemos opciones que tienen sentido para las necesidades únicas de tu familia.</p>
+
+            <div class="plans-grid">
+                <div class="plan-card fade-in">
+                    <div class="plan-icon"><svg width="48" height="48" viewBox="0 0 48 48" fill="none" stroke="#5B8C6B" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><rect x="8" y="8" width="32" height="32" rx="4"/><line x1="24" y1="16" x2="24" y2="32"/><line x1="16" y1="24" x2="32" y2="24"/></svg></div>
+                    <h3>Medicare Advantage</h3>
+                    <p>Cobertura integral para quienes cumplen 65 años o son nuevamente elegibles. A menudo incluye dental, visión y medicamentos sin costo adicional.</p>
+                    <div class="plan-who">Para quién es: Adultos mayores que cumplen 65 años o que son nuevamente elegibles para Medicare</div>
+                    <ul class="plan-highlights">
+                        <li>Opciones con prima de $0 disponibles</li>
+                        <li>Incluye dental, visión y audición</li>
+                        <li>Una sola tarjeta para toda tu cobertura</li>
+                    </ul>
+                    <a href="#contact" class="btn btn-primary btn-sm">Más Información</a>
+                </div>
+
+                <div class="plan-card fade-in" style="animation-delay: 0.1s;">
+                    <div class="plan-icon"><svg width="48" height="48" viewBox="0 0 48 48" fill="none" stroke="#5B8C6B" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M24 4L8 12v10c0 12 6.8 22 16 26 9.2-4 16-14 16-26V12L24 4z"/><polyline points="17,24 22,29 31,20"/></svg></div>
+                    <h3>Suplementos de Medicare (Medigap)</h3>
+                    <p>Cubre las brechas que Medicare Original no cubre, como copagos, coseguros y deducibles. Consulta con cualquier doctor a nivel nacional.</p>
+                    <div class="plan-who">Para quién es: Personas inscritas en Medicare que quieren costos predecibles y libertad de elegir doctores</div>
+                    <ul class="plan-highlights">
+                        <li>Consulta con cualquier doctor que acepte Medicare</li>
+                        <li>No se necesitan referidos</li>
+                        <li>Costos mensuales predecibles</li>
+                    </ul>
+                    <a href="#contact" class="btn btn-primary btn-sm">Más Información</a>
+                </div>
+
+                <div class="plan-card fade-in" style="animation-delay: 0.2s;">
+                    <div class="plan-icon"><svg width="48" height="48" viewBox="0 0 48 48" fill="none" stroke="#5B8C6B" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="24" cy="12" r="5"/><path d="M14 40v-4a10 10 0 0 1 20 0v4"/><circle cx="10" cy="18" r="4"/><path d="M4 40v-3a7 7 0 0 1 9-6.7"/><circle cx="38" cy="18" r="4"/><path d="M44 40v-3a7 7 0 0 0-9-6.7"/></svg></div>
+                    <h3>Planes ACA / Marketplace</h3>
+                    <p>Seguro de salud asequible para individuos y familias menores de 65 años. Hay asistencia financiera disponible según tus ingresos.</p>
+                    <div class="plan-who">Para quién es: Individuos y familias menores de 65, trabajadores por cuenta propia o entre empleos</div>
+                    <ul class="plan-highlights">
+                        <li>Subsidios según los ingresos</li>
+                        <li>Cubre maternidad, salud mental y más</li>
+                        <li>Inscripción durante todo el año por eventos de vida</li>
+                    </ul>
+                    <a href="#contact" class="btn btn-primary btn-sm">Más Información</a>
+                </div>
+
+                <div class="plan-card fade-in" style="animation-delay: 0.3s;">
+                    <div class="plan-icon"><svg width="48" height="48" viewBox="0 0 48 48" fill="none" stroke="#5B8C6B" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M18 6c-3 0-5.5 1.5-7 4s-2 5-2 8c0 4 1.5 7 3 10.5s3 7 4 11.5c.4 1.5 2 1.5 2.4 0 .8-2 1.8-4.5 2.8-6.5.6-1 1.8-1 2.4 0 1 2 2 4.5 2.8 6.5.4 1.5 2 1.5 2.4 0 1-4.5 2.5-8 4-11.5s3-6.5 3-10.5c0-3-.5-5.5-2-8s-4-4-7-4c-2 0-3.5 1-6 3.5C21.5 7 20 6 18 6z"/></svg></div>
+                    <h3>Dental y Visión</h3>
+                    <p>Mantén tu sonrisa brillante y tus ojos saludables. Planes individuales o combinados con Medicare a tarifas mensuales asequibles.</p>
+                    <div class="plan-who">Para quién es: Cualquiera que quiera cobertura dental y de visión, individual o con Medicare</div>
+                    <ul class="plan-highlights">
+                        <li>Limpiezas, empastes, coronas y dentaduras</li>
+                        <li>Exámenes de ojos, lentes y contactos</li>
+                        <li>Planes familiares asequibles</li>
+                    </ul>
+                    <a href="#contact" class="btn btn-primary btn-sm">Más Información</a>
+                </div>
+
+                <div class="plan-card fade-in" style="animation-delay: 0.4s;">
+                    <div class="plan-icon"><svg width="48" height="48" viewBox="0 0 48 48" fill="none" stroke="#5B8C6B" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M24 42s-18-10-18-22a9.5 9.5 0 0 1 18-4 9.5 9.5 0 0 1 18 4c0 12-18 22-18 22z"/></svg></div>
+                    <h3>Seguro de Vida y Cuidado a Largo Plazo</h3>
+                    <p>Protege lo que más importa. Seguro de vida para gastos finales o un respaldo financiero, más cobertura de cuidado a largo plazo para futuras necesidades de enfermería, vivienda asistida o cuidado en el hogar.</p>
+                    <div class="plan-who">Para quién es: Cualquiera que quiera proteger el futuro financiero de su familia</div>
+                    <ul class="plan-highlights">
+                        <li>Opciones para cada presupuesto y necesidad</li>
+                        <li>Sin examen médico en muchos planes</li>
+                        <li>Aprobaciones en tan solo 24 horas</li>
+                    </ul>
+                    <a href="#contact" class="btn btn-primary btn-sm">Más Información</a>
+                </div>
+
+                <div class="plan-card fade-in" style="animation-delay: 0.5s;">
+                    <div class="plan-icon"><svg width="48" height="48" viewBox="0 0 48 48" fill="none" stroke="#5B8C6B" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><polygon points="26,4 10,28 22,28 20,44 38,18 26,18"/></svg></div>
+                    <h3>Accidentes y Enfermedades Críticas</h3>
+                    <p>Protección adicional que te paga en efectivo directamente a ti, no al hospital, cuando la vida te sorprende.</p>
+                    <div class="plan-who">Para quién es: Cualquiera que quiera protección financiera adicional más allá del seguro de salud</div>
+                    <ul class="plan-highlights">
+                        <li>Efectivo pagado directamente a ti</li>
+                        <li>Cubre accidentes, infartos, cáncer y más</li>
+                        <li>Funciona junto a tu seguro existente</li>
+                    </ul>
+                    <a href="#contact" class="btn btn-primary btn-sm">Más Información</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Plan Finder Section -->
+    <section class="plan-finder-section section-padding" id="plan-finder">
+        <div class="container">
+            <h2 class="text-center">¿No Sabes Por Dónde Empezar?</h2>
+            <p class="text-center" style="max-width: 600px; margin: 0 auto 40px; color: #4A5568;">Cuéntanos tu situación y te orientaremos en la dirección correcta.</p>
+
+            <div class="finder-grid">
+                <!-- Card 1 -->
+                <div class="finder-card">
+                    <div class="finder-emoji"><svg width="48" height="48" viewBox="0 0 48 48" fill="none" stroke="#5B8C6B" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><rect x="6" y="22" width="36" height="18" rx="3"/><path d="M6 30h36"/><path d="M14 22v-4a3 3 0 0 1 6 0v4"/><path d="M28 22v-4a3 3 0 0 1 6 0v4"/><line x1="17" y1="10" x2="17" y2="14"/><line x1="31" y1="10" x2="31" y2="14"/></svg></div>
+                    <h3>¿Cumples 65 Pronto?</h3>
+                    <p>Estás por ser elegible para Medicare. Te ayudaremos a elegir entre Medicare Advantage y los Suplementos de Medicare según tus doctores, medicamentos y presupuesto.</p>
+                    <a href="#contact" class="btn btn-primary btn-sm">Hablemos de Medicare</a>
+                </div>
+                <!-- Card 2 -->
+                <div class="finder-card">
+                    <div class="finder-emoji"><svg width="48" height="48" viewBox="0 0 48 48" fill="none" stroke="#5B8C6B" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="24" cy="12" r="5"/><path d="M14 40v-4a10 10 0 0 1 20 0v4"/><circle cx="10" cy="18" r="4"/><path d="M4 40v-3a7 7 0 0 1 9-6.7"/><circle cx="38" cy="18" r="4"/><path d="M44 40v-3a7 7 0 0 0-9-6.7"/></svg></div>
+                    <h3>¿Necesitas Cobertura Familiar?</h3>
+                    <p>Los planes ACA del mercado ofrecen cobertura integral para familias menores de 65. Muchas familias califican para asistencia financiera que reduce las primas significativamente.</p>
+                    <a href="#contact" class="btn btn-primary btn-sm">Explora Planes ACA</a>
+                </div>
+                <!-- Card 3 -->
+                <div class="finder-card">
+                    <div class="finder-emoji"><svg width="48" height="48" viewBox="0 0 48 48" fill="none" stroke="#5B8C6B" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M36 12A16 16 0 0 0 10 14"/><polyline points="36,4 36,12 28,12"/><path d="M12 36A16 16 0 0 0 38 34"/><polyline points="12,44 12,36 20,36"/></svg></div>
+                    <h3>¿Ya Tienes Medicare?</h3>
+                    <p>¿Te preguntas si estás en el mejor plan? Revisaremos tu cobertura actual y compararemos opciones, especialmente durante la Inscripción Abierta (15 de Oct – 7 de Dic).</p>
+                    <a href="#contact" class="btn btn-primary btn-sm">Revisa Mi Plan</a>
+                </div>
+                <!-- Card 4 -->
+                <div class="finder-card">
+                    <div class="finder-emoji"><svg width="48" height="48" viewBox="0 0 48 48" fill="none" stroke="#5B8C6B" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M24 4L8 12v10c0 12 6.8 22 16 26 9.2-4 16-14 16-26V12L24 4z"/><line x1="24" y1="18" x2="24" y2="30"/><line x1="18" y1="24" x2="30" y2="24"/></svg></div>
+                    <h3>¿Quieres Protección Extra?</h3>
+                    <p>Dental, visión, seguro de vida, accidentes y enfermedades críticas. Estos cubren las brechas que tu plan principal de salud puede no cubrir. Agrega tranquilidad.</p>
+                    <a href="#contact" class="btn btn-primary btn-sm">Ver Mis Opciones</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- How We Help Section -->
+    <section class="process-section section-padding" id="how">
+        <div class="container">
+            <h2 class="text-center">Simple. Sin Presión. Sin Complicaciones.</h2>
+            <p class="text-center" style="max-width: 600px; margin: 0 auto 50px; color: #4A5568;">Así es como hacemos que encontrar cobertura sea fácil.</p>
+
+            <div class="process-steps">
+                <div class="step">
+                    <div class="step-number">1</div>
+                    <h3>Cuéntanos tus Necesidades</h3>
+                    <p>Llámanos o completa un formulario rápido. ¿Qué te importa? ¿Costo? ¿Doctores específicos? ¿Cobertura dental?</p>
+                    <div class="step-connector"></div>
+                </div>
+
+                <div class="step">
+                    <div class="step-number">2</div>
+                    <h3>Comparamos Planes Para Ti</h3>
+                    <p>No tienes que navegar cientos de opciones. Encontramos los mejores ajustes y los explicamos claramente.</p>
+                    <div class="step-connector"></div>
+                </div>
+
+                <div class="step">
+                    <div class="step-number">3</div>
+                    <h3>Elige el Plan que se Ajuste</h3>
+                    <p>Tú estás en control. Sin presión. Elige lo que tiene sentido para ti y tu familia.</p>
+                    <div class="step-connector"></div>
+                </div>
+
+                <div class="step">
+                    <div class="step-number">4</div>
+                    <h3>Apoyo Todo el Año</h3>
+                    <p>¿Preguntas sobre inscripción abierta? ¿Cambios en la vida? Estamos aquí para ayudarte cuando nos necesites.</p>
+                </div>
+            </div>
+
+            <div class="process-note">
+                ✓ Nuestros servicios son completamente gratis para ti
+            </div>
+        </div>
+    </section>
+
+    <!-- Why Choose Us Section -->
+    <section class="why-section section-padding" id="why">
+        <div class="container">
+            <h2 class="text-center">Por Qué Medicare Moms se Destaca</h2>
+            <p class="text-center" style="max-width: 600px; margin: 0 auto 50px; color: #4A5568;">No somos un centro de llamadas. Somos mamás, hermanas y vecinas que nos importa genuinamente la salud de tu familia. Más de 5,000 jubilados y familias asistidos en más de 40 estados.</p>
+
+            <div class="why-grid">
+                <div class="why-card fade-in">
+                    <h3><svg width="24" height="24" viewBox="0 0 48 48" fill="none" stroke="#5B8C6B" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="display:inline-block;vertical-align:middle;margin-right:8px;"><circle cx="24" cy="14" r="8"/><path d="M8 44c0-8.8 7.2-16 16-16s16 7.2 16 16"/></svg>Liderado por Mujeres y Orientado a la Comunidad</h3>
+                    <p>Construido por mujeres que entienden las necesidades únicas de salud de las familias. Somos parte de tu comunidad, no una corporación lejana.</p>
+                </div>
+
+                <div class="why-card fade-in" style="animation-delay: 0.1s;">
+                    <h3><svg width="24" height="24" viewBox="0 0 48 48" fill="none" stroke="#5B8C6B" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="display:inline-block;vertical-align:middle;margin-right:8px;"><path d="M8 8h32a4 4 0 0 1 4 4v18a4 4 0 0 1-4 4H16l-8 8V12a4 4 0 0 1 4-4z"/></svg>Como Hablar con una Amiga</h3>
+                    <p>Sin jerga corporativa. Explicamos las cosas claramente, respondemos preguntas sin importancia y nunca te hacemos sentir apresurado.</p>
+                </div>
+
+                <div class="why-card fade-in" style="animation-delay: 0.2s;">
+                    <h3><svg width="24" height="24" viewBox="0 0 48 48" fill="none" stroke="#5B8C6B" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="display:inline-block;vertical-align:middle;margin-right:8px;"><circle cx="24" cy="24" r="20"/><polyline points="15,24 22,31 33,18"/></svg>Licenciados y Certificados</h3>
+                    <p>Licenciados en más de 40 estados. Somos profesionales reales con años de experiencia en seguros, y trabajamos con más de 40 aseguradoras en todo el país.</p>
+                </div>
+
+                <div class="why-card fade-in" style="animation-delay: 0.3s;">
+                    <h3><svg width="24" height="24" viewBox="0 0 48 48" fill="none" stroke="#5B8C6B" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="display:inline-block;vertical-align:middle;margin-right:8px;"><circle cx="24" cy="24" r="20"/><circle cx="24" cy="24" r="12"/><circle cx="24" cy="24" r="4"/></svg>Personalizado, no Genérico</h3>
+                    <p>Tu situación es única. Nos tomamos el tiempo para entender las necesidades de tu familia y encontrar planes que realmente funcionen para ti, tal como lo hemos hecho para más de 5,000 familias.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonials Section -->
+    <section class="testimonials-section section-padding">
+        <div class="container">
+            <h2 class="text-center">Gente Real, Historias Reales</h2>
+            <p class="text-center" style="max-width: 600px; margin: 0 auto 50px; color: #4A5568;">No confíes solo en nuestra palabra. Aquí está lo que las familias están diciendo.</p>
+
+            <div class="testimonials-grid">
+                <div class="testimonial-card fade-in">
+                    <div class="stars">★★★★★</div>
+                    <p class="testimonial-text">"Estaba tan confundida sobre las opciones de Medicare, pero Sarah me guió a través de todo y lo hizo simple. Es como una amiga, no una vendedora. ¡Encontré un plan que me ahorra cientos de dólares al mes!"</p>
+                    <p class="testimonial-author">Margaret L.</p>
+                    <p class="testimonial-location">Portland, Oregon</p>
+                </div>
+
+                <div class="testimonial-card fade-in" style="animation-delay: 0.1s;">
+                    <div class="stars">★★★★★</div>
+                    <p class="testimonial-text">"Con tres hijos y las necesidades médicas de mi esposo, necesitábamos cobertura que funcionara para todos nosotros. Medicare Moms nos encontró un plan ACA que realmente podemos pagar. Fue un cambio revolucionario."</p>
+                    <p class="testimonial-author">Jennifer M.</p>
+                    <p class="testimonial-location">Austin, Texas</p>
+                </div>
+
+                <div class="testimonial-card fade-in" style="animation-delay: 0.2s;">
+                    <div class="stars">★★★★★</div>
+                    <p class="testimonial-text">"¿La mejor parte? Me llamaron al día siguiente con respuestas. Seres humanos reales que se importan. ¡Mi Medicare está arreglado y también tengo dental!"</p>
+                    <p class="testimonial-author">Diana T.</p>
+                    <p class="testimonial-location">Denver, Colorado</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section class="contact-section section-padding" id="contact">
+        <div class="container">
+            <div class="contact-content">
+                <div>
+                    <h2>¿Listo para Encontrar el Plan Correcto?</h2>
+                    <p>Hablemos. Ya sea que tengas preguntas o estés listo para comenzar, estamos aquí para ayudarte.</p>
+
+                    <div class="contact-info">
+                        <h3>Ponte en Contacto</h3>
+
+                        <div class="contact-method">
+                            <label><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#A8C5A0" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg> Llámanos</label>
+                            <p><a href="tel:+14352461548" style="color: #A8C5A0; text-decoration: none;">(435) 246-1548</a></p>
+                        </div>
+
+                        <div class="contact-method">
+                            <label><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#A8C5A0" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg> Email</label>
+                            <p><a href="mailto:info@medicaremoms.com" style="color: #A8C5A0; text-decoration: none;">info@medicaremoms.com</a></p>
+                        </div>
+
+                        <div class="contact-method">
+                            <label><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#A8C5A0" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><polyline points="12,6 12,12 16,14"/></svg> Horario</label>
+                            <p>Lunes a Viernes, 9am–5pm MT</p>
+                        </div>
+
+                        <div class="contact-disclaimer">
+                            Nuestros servicios son completamente gratis para ti.
+                        </div>
+                    </div>
+                </div>
+
+                <form class="contact-form" onsubmit="handleFormSubmit(event)">
+                    <div class="form-row" style="display: grid; grid-template-columns: 1fr 1fr; gap: 12px;">
+                        <div class="form-group">
+                            <label for="firstName">Nombre</label>
+                            <input type="text" id="firstName" name="firstName" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="lastName">Apellido</label>
+                            <input type="text" id="lastName" name="lastName" required>
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="email">Email</label>
+                        <input type="email" id="email" name="email" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="phone">Teléfono</label>
+                        <input type="tel" id="phone" name="phone" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="interested">¿Qué estás buscando?</label>
+                        <select id="interested" name="interested" required>
+                            <option value="">Selecciona una opción</option>
+                            <option value="Medicare Advantage">Medicare Advantage</option>
+                            <option value="Medicare Supplement">Suplemento de Medicare (Medigap)</option>
+                            <option value="ACA/Marketplace">Planes ACA / Marketplace</option>
+                            <option value="Dental & Vision">Dental y Visión</option>
+                            <option value="Life Insurance">Seguro de Vida</option>
+                            <option value="Not Sure">No Estoy Seguro, Ayúdame a Decidir</option>
+                        </select>
+                    </div>
+
+                    <div class="form-group" style="margin-top: 10px;">
+                        <label for="consent" style="display: flex; align-items: flex-start; gap: 10px; font-family: 'Nunito', sans-serif; font-weight: 400; font-size: 13px; line-height: 1.5; color: rgba(255, 255, 255, 0.9); cursor: pointer;">
+                            <input type="checkbox" id="consent" name="consent" required style="margin-top: 3px; flex-shrink: 0; width: 16px; height: 16px; accent-color: #A8C5A0; cursor: pointer;">
+                            <span>
+                                Acepto ser contactado por Medicare Moms y sus agentes licenciados por teléfono, mensaje de texto y correo electrónico sobre opciones de seguro, incluyendo mediante mensajes automatizados. El consentimiento no es una condición de compra. <a href="/es/consentimiento/" target="_blank" rel="noopener" style="color: #A8C5A0; text-decoration: underline;">Ver términos completos y aviso TPMO</a>.
+                            </span>
+                        </label>
+                    </div>
+
+                    <button type="submit" class="btn btn-primary" style="margin-top: 10px;">Obtén una Consulta Gratis</button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <div class="footer-brand">
+                        <img src="/logo.svg" alt="Medicare Moms - Cobertura Simplificada" class="footer-logo">
+                        <p>Una Empresa de Wildcat Insurance</p>
+                        <p>Ayudando a las familias a encontrar cobertura de salud que funciona.</p>
+                    </div>
+                    <div class="social-links">
+                        <a href="https://www.instagram.com/wearemedicaremoms/" target="_blank" rel="noopener noreferrer" title="Instagram"><svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"/><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/></svg></a>
+                        <a href="https://www.facebook.com/profile.php?id=61572026712949" target="_blank" rel="noopener noreferrer" title="Facebook"><svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"/></svg></a>
+                        <a href="https://www.linkedin.com/company/medicaremoms/" target="_blank" rel="noopener noreferrer" title="LinkedIn"><svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"/><rect x="2" y="9" width="4" height="12"/><circle cx="4" cy="4" r="2"/></svg></a>
+                    </div>
+                </div>
+
+                <div class="footer-section">
+                    <h4>Enlaces Rápidos</h4>
+                    <ul>
+                        <li><a href="/">Inicio</a></li>
+                        <li><a href="/es/servicios/">Servicios</a></li>
+                        <li><a href="/es/recursos/">Recursos</a></li>
+                        <li><a href="/es/blog/">Blog</a></li>
+                        <li><a href="/#contact">Contacto</a></li>
+                        <li><a href="/es/equipo/">Nuestro Equipo</a></li>
+                        <li><a href="/es/unete/">Únete a Nuestro Equipo</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-section">
+                    <h4>Tipos de Cobertura</h4>
+                    <ul>
+                        <li><a href="#plans">Medicare Advantage</a></li>
+                        <li><a href="#plans">Medigap / Suplementos</a></li>
+                        <li><a href="#plans">ACA Marketplace</a></li>
+                        <li><a href="#plans">Dental y Visión</a></li>
+                        <li><a href="#plans">Seguro de Vida</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-section">
+                    <h4>Información de Contacto</h4>
+                    <ul>
+                        <li><a href="tel:+14352461548">(435) 246-1548</a></li>
+                        <li><a href="mailto:info@medicaremoms.com">info@medicaremoms.com</a></li>
+                        <li>Lunes a Viernes, 9am–5pm MT</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="footer-bottom">
+                <p>&copy; 2026 Medicare Moms. Todos los derechos reservados.</p>
+                <p style="margin-top: 8px;">Medicare es una marca registrada del Departamento de Salud y Servicios Humanos de EE.UU.</p>
+                <p style="margin-top: 8px;"><a href="/terms/" style="color: #999; text-decoration: none; transition: color 0.3s ease;" onmouseover="this.style.color='#A8C5A0'" onmouseout="this.style.color='#999'">Términos de Servicio</a> &middot; <a href="/privacy/" style="color: #999; text-decoration: none; transition: color 0.3s ease;" onmouseover="this.style.color='#A8C5A0'" onmouseout="this.style.color='#999'">Política de Privacidad</a></p>
+                <div class="legal-disclaimer">
+                    medicaremoms.com y Medicare Moms es un DBA de Wildcat Insurance LLC, una agencia de seguros de salud licenciada. El propósito de este sitio es la solicitud de seguros. El contacto puede ser realizado por un agente/productor de seguros o una compañía de seguros. Medicare Moms y los planes de seguros presentados en este sitio no están conectados ni respaldados por el gobierno de los EE. UU. ni por el programa federal de Medicare. No ofrecemos todos los planes disponibles en su área. Cualquier información que proporcionemos se limita a los planes que ofrecemos en su área. Comuníquese con Medicare.gov o 1-800-MEDICARE para obtener información sobre todas sus opciones.
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Mobile Menu Toggle
+        const hamburger = document.getElementById('hamburger');
+        const navLinks = document.getElementById('navLinks');
+
+        hamburger.addEventListener('click', () => {
+            hamburger.classList.toggle('active');
+            navLinks.classList.toggle('active');
+        });
+
+        // Close menu when a link is clicked
+        document.querySelectorAll('.nav-links a').forEach(link => {
+            link.addEventListener('click', () => {
+                hamburger.classList.remove('active');
+                navLinks.classList.remove('active');
+            });
+        });
+
+        // Fade-in animation on scroll
+        const observerOptions = {
+            threshold: 0.1,
+            rootMargin: '0px 0px -50px 0px'
+        };
+
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('fade-in');
+                    observer.unobserve(entry.target);
+                }
+            });
+        }, observerOptions);
+
+        document.querySelectorAll('.plan-card, .why-card, .testimonial-card, .step').forEach(el => {
+            observer.observe(el);
+        });
+
+        // Form submission handler
+        const GHL_WEBHOOK_URL = 'https://services.leadconnectorhq.com/hooks/LSuIvEciA8JlCaL35rzM/webhook-trigger/642a0837-5bb0-4824-8571-afde058cb752';
+
+        async function handleFormSubmit(event) {
+            event.preventDefault();
+            const firstName = document.getElementById('firstName').value.trim();
+            const lastName = document.getElementById('lastName').value.trim();
+            const email = document.getElementById('email').value.trim();
+            const phone = document.getElementById('phone').value.trim();
+            const interested = document.getElementById('interested').value;
+            const consentEl = document.getElementById('consent');
+            if (!consentEl || !consentEl.checked) {
+                alert('Por favor marca la casilla de consentimiento para continuar.');
+                return;
+            }
+
+            const consentText = 'Acepto ser contactado por Medicare Moms y sus agentes licenciados por teléfono, mensaje de texto y correo electrónico sobre opciones de seguro, incluyendo mediante mensajes automatizados. El consentimiento no es una condición de compra. Términos completos y aviso TPMO en https://medicaremoms.com/es/consentimiento/';
+
+            const payload = {
+                firstName,
+                lastName,
+                fullName: (firstName + ' ' + lastName).trim(),
+                email,
+                phone,
+                interested,
+                consentGiven: true,
+                consentTimestamp: new Date().toISOString(),
+                consentText,
+                consentUserAgent: navigator.userAgent,
+                source: 'homepage_contact_es',
+                page: window.location.href,
+                language: 'es',
+                submittedAt: new Date().toISOString()
+            };
+
+            const submitBtn = event.target.querySelector('button[type="submit"]');
+            const originalText = submitBtn ? submitBtn.textContent : '';
+            if (submitBtn) { submitBtn.disabled = true; submitBtn.textContent = 'Enviando...'; }
+
+            try {
+                const response = await fetch(GHL_WEBHOOK_URL, {
+                    method: 'POST',
+                    headers: { 'Content-Type': 'application/json' },
+                    body: JSON.stringify(payload)
+                });
+                if (!response.ok) throw new Error('HTTP ' + response.status);
+                alert('¡Gracias! Nos comunicaremos contigo dentro de 24 horas. ¡Espera una llamada de nuestro equipo!');
+                event.target.reset();
+            } catch (err) {
+                console.error('Form submit error:', err);
+                alert('Lo sentimos, hubo un problema al enviar tu mensaje. Por favor llámanos al (435) 246-1548 o envía un correo a info@medicaremoms.com.');
+            } finally {
+                if (submitBtn) { submitBtn.disabled = false; submitBtn.textContent = originalText; }
+            }
+        }
+    </script>
+    <!-- CHAT WIDGET -->
+    <div id="chatWidgetContainer">
+        <style>
+            /* Chat Widget Styles */
+            #chatButton {
+                position: fixed;
+                bottom: 20px;
+                right: 20px;
+                width: 60px;
+                height: 60px;
+                border-radius: 50%;
+                background: linear-gradient(135deg, #5B8C6B 0%, #3D6B4A 100%);
+                border: none;
+                cursor: pointer;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                box-shadow: 0 4px 12px rgba(91, 140, 107, 0.3);
+                z-index: 9999;
+                transition: all 0.3s ease;
+                animation: chatButtonPulse 1.2s ease-in-out 3;
+            }
+
+            #chatButton:hover {
+                transform: translateY(-3px);
+                box-shadow: 0 6px 16px rgba(91, 140, 107, 0.4);
+            }
+
+            #chatButton svg {
+                width: 28px;
+                height: 28px;
+                fill: white;
+            }
+
+            @keyframes chatButtonPulse {
+                0%, 100% {
+                    transform: scale(1);
+                }
+                50% {
+                    transform: scale(1.1);
+                }
+            }
+
+            #chatPanel {
+                position: fixed;
+                bottom: 90px;
+                right: 20px;
+                width: 350px;
+                height: 450px;
+                background: white;
+                border-radius: 12px;
+                box-shadow: 0 5px 40px rgba(0, 0, 0, 0.16);
+                display: none;
+                flex-direction: column;
+                z-index: 9998;
+                animation: slideUp 0.3s ease;
+                font-family: 'Nunito', sans-serif;
+            }
+
+            #chatPanel.active {
+                display: flex;
+            }
+
+            @keyframes slideUp {
+                from {
+                    opacity: 0;
+                    transform: translateY(20px);
+                }
+                to {
+                    opacity: 1;
+                    transform: translateY(0);
+                }
+            }
+
+            .chat-header {
+                background: linear-gradient(135deg, #5B8C6B 0%, #3D6B4A 100%);
+                color: white;
+                padding: 18px;
+                border-radius: 12px 12px 0 0;
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+                flex-shrink: 0;
+            }
+
+            .chat-header h3 {
+                font-family: 'DM Serif Display', serif;
+                font-size: 18px;
+                font-weight: 600;
+                color: white;
+                margin: 0;
+            }
+
+            .chat-close-btn {
+                background: none;
+                border: none;
+                color: white;
+                font-size: 24px;
+                cursor: pointer;
+                padding: 0;
+                width: 30px;
+                height: 30px;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                transition: transform 0.2s ease;
+            }
+
+            .chat-close-btn:hover {
+                transform: rotate(90deg);
+            }
+
+            #chatMessages {
+                flex: 1;
+                overflow-y: auto;
+                padding: 16px;
+                display: flex;
+                flex-direction: column;
+                gap: 12px;
+                background-color: #FAFAFA;
+            }
+
+            .message {
+                display: flex;
+                margin-bottom: 8px;
+                animation: fadeIn 0.3s ease;
+            }
+
+            @keyframes fadeIn {
+                from {
+                    opacity: 0;
+                    transform: translateY(10px);
+                }
+                to {
+                    opacity: 1;
+                    transform: translateY(0);
+                }
+            }
+
+            .message.received {
+                justify-content: flex-start;
+            }
+
+            .message.sent {
+                justify-content: flex-end;
+            }
+
+            .message-bubble {
+                max-width: 80%;
+                padding: 12px 16px;
+                border-radius: 16px;
+                word-wrap: break-word;
+                font-size: 14px;
+                line-height: 1.4;
+            }
+
+            .message.received .message-bubble {
+                background-color: #A8C5A0;
+                color: white;
+                border-radius: 16px 16px 16px 4px;
+            }
+
+            .message.sent .message-bubble {
+                background: linear-gradient(135deg, #5B8C6B 0%, #3D6B4A 100%);
+                color: white;
+                border-radius: 16px 16px 4px 16px;
+            }
+
+            .quick-replies {
+                display: flex;
+                flex-wrap: wrap;
+                gap: 8px;
+                padding: 12px 0;
+            }
+
+            .quick-reply-btn {
+                display: inline-block;
+                padding: 8px 14px;
+                background-color: #E8F0E6;
+                border: 1.5px solid #A8C5A0;
+                border-radius: 20px;
+                cursor: pointer;
+                font-size: 12px;
+                color: #3D6B4A;
+                font-weight: 500;
+                transition: all 0.2s ease;
+                font-family: 'Nunito', sans-serif;
+                white-space: nowrap;
+            }
+
+            .quick-reply-btn:hover {
+                background-color: #A8C5A0;
+                color: white;
+                border-color: #5B8C6B;
+            }
+
+            #chatInput {
+                display: flex;
+                gap: 8px;
+                padding: 12px;
+                border-top: 1px solid #E0E0E0;
+                background-color: white;
+                border-radius: 0 0 12px 12px;
+                flex-shrink: 0;
+            }
+
+            #messageInput {
+                flex: 1;
+                border: 1px solid #D0D0D0;
+                border-radius: 20px;
+                padding: 10px 16px;
+                font-size: 14px;
+                font-family: 'Nunito', sans-serif;
+                transition: border-color 0.2s ease;
+            }
+
+            #messageInput:focus {
+                outline: none;
+                border-color: #5B8C6B;
+                box-shadow: 0 0 0 2px rgba(91, 140, 107, 0.1);
+            }
+
+            #sendBtn {
+                background: linear-gradient(135deg, #5B8C6B 0%, #3D6B4A 100%);
+                color: white;
+                border: none;
+                border-radius: 50%;
+                width: 38px;
+                height: 38px;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                cursor: pointer;
+                transition: all 0.2s ease;
+                font-size: 18px;
+            }
+
+            #sendBtn:hover {
+                box-shadow: 0 2px 8px rgba(91, 140, 107, 0.3);
+            }
+
+            #sendBtn:active {
+                transform: scale(0.95);
+            }
+
+            /* Mobile responsiveness */
+            @media (max-width: 480px) {
+                #chatPanel {
+                    position: fixed;
+                    bottom: 0;
+                    right: 0;
+                    left: 0;
+                    width: 100%;
+                    height: calc(100vh - 60px);
+                    border-radius: 0;
+                    bottom: 0;
+                    animation: slideUpMobile 0.3s ease;
+                }
+
+                @keyframes slideUpMobile {
+                    from {
+                        transform: translateY(100%);
+                    }
+                    to {
+                        transform: translateY(0);
+                    }
+                }
+
+                .message-bubble {
+                    max-width: 85%;
+                }
+            }
+        </style>
+
+        <button id="chatButton" aria-label="Abrir chat">
+            <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                <path d="M20 2H4c-1.1 0-2 .9-2 2v18l4-4h14c1.1 0 2-.9 2-2V4c0-1.1-.9-2-2-2z"/>
+            </svg>
+        </button>
+
+        <div id="chatPanel">
+            <div class="chat-header">
+                <h3>Chatea con Nosotros</h3>
+                <button class="chat-close-btn" aria-label="Cerrar chat">&times;</button>
+            </div>
+
+            <div id="chatMessages">
+                <div class="message received">
+                    <div class="message-bubble">¡Hola! 👋 Somos el equipo de Medicare Moms. ¿Cómo podemos ayudarte hoy?</div>
+                </div>
+                <div class="quick-replies">
+                    <button class="quick-reply-btn">Preguntas sobre Medicare</button>
+                    <button class="quick-reply-btn">Cotización Gratis</button>
+                    <button class="quick-reply-btn">Hablar con un Agente</button>
+                    <button class="quick-reply-btn">English?</button>
+                </div>
+            </div>
+
+            <div id="chatInput">
+                <input type="text" id="messageInput" placeholder="Escribe tu mensaje...">
+                <button id="sendBtn" aria-label="Enviar mensaje">➤</button>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        // Chat Widget JavaScript
+        (function() {
+            const chatButton = document.getElementById('chatButton');
+            const chatPanel = document.getElementById('chatPanel');
+            const closeBtn = document.querySelector('.chat-close-btn');
+            const messageInput = document.getElementById('messageInput');
+            const sendBtn = document.getElementById('sendBtn');
+            const chatMessages = document.getElementById('chatMessages');
+            const quickReplyButtons = document.querySelectorAll('.quick-reply-btn');
+
+            // Toggle chat panel
+            chatButton.addEventListener('click', () => {
+                chatPanel.classList.toggle('active');
+                if (chatPanel.classList.contains('active')) {
+                    messageInput.focus();
+                }
+            });
+
+            // Close chat panel
+            closeBtn.addEventListener('click', () => {
+                chatPanel.classList.remove('active');
+            });
+
+            // Handle quick reply buttons
+            quickReplyButtons.forEach(btn => {
+                btn.addEventListener('click', () => {
+                    messageInput.value = btn.textContent;
+                    messageInput.focus();
+                });
+            });
+
+            // Send message function
+            function sendMessage() {
+                const message = messageInput.value.trim();
+                if (!message) return;
+
+                // Remove quick replies if they exist
+                const quickRepliesDiv = document.querySelector('.quick-replies');
+                if (quickRepliesDiv) {
+                    quickRepliesDiv.remove();
+                }
+
+                // Add user message
+                const userMessageDiv = document.createElement('div');
+                userMessageDiv.className = 'message sent';
+                userMessageDiv.innerHTML = `<div class="message-bubble">${escapeHtml(message)}</div>`;
+                chatMessages.appendChild(userMessageDiv);
+
+                // Clear input
+                messageInput.value = '';
+
+                // Scroll to bottom
+                chatMessages.scrollTop = chatMessages.scrollHeight;
+
+                // Show response after a brief delay
+                setTimeout(() => {
+                    const responseDiv = document.createElement('div');
+                    responseDiv.className = 'message received';
+                    responseDiv.innerHTML = `<div class="message-bubble">¡Gracias por comunicarte! Uno de nuestros agentes se pondrá en contacto contigo pronto. Mientras tanto, siéntete libre de llamarnos al (435) 246-1548 o enviar un correo a info@medicaremoms.com</div>`;
+                    chatMessages.appendChild(responseDiv);
+
+                    // Scroll to bottom
+                    chatMessages.scrollTop = chatMessages.scrollHeight;
+                }, 800);
+            }
+
+            // Send button click
+            sendBtn.addEventListener('click', sendMessage);
+
+            // Send on Enter key
+            messageInput.addEventListener('keypress', (e) => {
+                if (e.key === 'Enter') {
+                    e.preventDefault();
+                    sendMessage();
+                }
+            });
+
+            // Utility function to escape HTML
+            function escapeHtml(text) {
+                const div = document.createElement('div');
+                div.textContent = text;
+                return div.innerHTML;
+            }
+        })();
+    </script>
+    <!-- /CHAT WIDGET -->
+
+</body>
+</html>
