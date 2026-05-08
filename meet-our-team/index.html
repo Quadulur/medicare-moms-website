@@ -368,7 +368,7 @@
         /* Flip card wrapper */
         .team-card-wrapper {
             perspective: 1000px;
-            height: 340px;
+            height: 420px;
         }
 
         .team-card-wrapper.fade-in {
@@ -410,17 +410,36 @@
             backface-visibility: hidden;
             -webkit-backface-visibility: hidden;
             border-radius: 12px;
-            box-shadow: 0 4px 12px rgba(44, 44, 44, 0.08);
-            overflow: hidden;
+            box-shadow: 0 4px 16px rgba(44, 44, 44, 0.1), 0 1px 4px rgba(44, 44, 44, 0.06);
+            overflow: visible;
         }
 
         .card-front {
             background: white;
-            padding: 20px 20px;
             text-align: center;
             display: flex;
             flex-direction: column;
             align-items: center;
+            overflow: hidden;
+            border-radius: 12px;
+        }
+
+        .card-header-band {
+            background: linear-gradient(135deg, #5B8C6B, #3D6B4A);
+            width: 100%;
+            padding-top: 24px;
+            display: flex;
+            justify-content: center;
+            border-radius: 12px 12px 0 0;
+            flex-shrink: 0;
+        }
+
+        .card-body {
+            padding: 58px 20px 16px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            flex: 1;
         }
 
         .card-back {
@@ -439,12 +458,16 @@
             width: 140px;
             height: 140px;
             border-radius: 50%;
-            margin: 0 auto 12px;
+            margin-bottom: -50px;
             display: flex;
             align-items: center;
             justify-content: center;
             background: linear-gradient(135deg, #5B8C6B, #3D6B4A);
             flex-shrink: 0;
+            border: 4px solid white;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.12);
+            position: relative;
+            z-index: 1;
         }
 
         .team-initials {
@@ -820,12 +843,17 @@
             }
 
             .team-card-wrapper {
-                height: 340px;
+                height: 420px;
             }
 
             .team-photo {
-                width: 110px;
-                height: 110px;
+                width: 120px;
+                height: 120px;
+                margin-bottom: -42px;
+            }
+
+            .card-body {
+                padding-top: 50px;
             }
 
             .team-initials {
@@ -1032,8 +1060,11 @@
             <div class="team-card-wrapper fade-in" onclick="this.classList.toggle('flipped')">
                 <div class="team-card">
                     <div class="card-front">
-                        <div class="team-photo"><img src="/michelled.jpg" alt="Michelle Dennison" style="width:100%;height:100%;object-fit:cover;object-position:center 30%;border-radius:50%;"></div>
-                        <h3 class="team-name">Michelle Dennison</h3>
+                        <div class="card-header-band">
+                            <div class="team-photo"><img src="/michelled.jpg" alt="Michelle Dennison" style="width:100%;height:100%;object-fit:cover;object-position:center 30%;border-radius:50%;"></div>
+                        </div>
+                        <div class="card-body">
+                            <h3 class="team-name">Michelle Dennison</h3>
                         <p class="team-role">Licensed Insurance Agent</p>
                         <div class="team-meta">
                             <span class="team-location">📍 Orem, UT</span>
@@ -1049,8 +1080,8 @@
                             </a>
                         </div>
                         <span class="flip-hint">Learn more about Michelle</span>
-                    </div>
-                    <div class="card-back">
+                        </div>
+                    </div><div class="card-back">
                         <h3 class="back-name">Michelle Dennison</h3>
                         <p class="team-bio">Mom of 3 and proud grandma based in Orem, UT. Michelle loves to travel and spend quality time with her grandkids. Her warmth and life experience make her a natural at helping clients feel comfortable and confident in their coverage choices.</p>
                         <div class="team-specialties">
@@ -1067,8 +1098,11 @@
             <div class="team-card-wrapper fade-in" onclick="this.classList.toggle('flipped')">
                 <div class="team-card">
                     <div class="card-front">
-                        <div class="team-photo"><img src="/aidyl.jpg" alt="Aidyl Semidey" style="width:100%;height:100%;object-fit:cover;object-position:center 25%;border-radius:50%;"></div>
-                        <h3 class="team-name">Aidyl Semidey</h3>
+                        <div class="card-header-band">
+                            <div class="team-photo"><img src="/aidyl.jpg" alt="Aidyl Semidey" style="width:100%;height:100%;object-fit:cover;object-position:center 25%;border-radius:50%;"></div>
+                        </div>
+                        <div class="card-body">
+                            <h3 class="team-name">Aidyl Semidey</h3>
                         <p class="team-role">Licensed Insurance Agent</p>
                         <div class="team-meta">
                             <span class="team-location">📍 Murray, UT</span>
@@ -1085,8 +1119,8 @@
                             </a>
                         </div>
                         <span class="flip-hint">Learn more about Aidyl</span>
-                    </div>
-                    <div class="card-back">
+                        </div>
+                    </div><div class="card-back">
                         <h3 class="back-name">Aidyl Semidey</h3>
                         <p class="team-bio">Mom of 2 daughters based in Murray, UT. Aidyl is passionate about making insurance accessible for everyone, especially in the Spanish-speaking community. She takes the time to make sure every client truly understands their options.</p>
                         <div class="team-specialties">
@@ -1103,10 +1137,13 @@
             <div class="team-card-wrapper fade-in" onclick="this.classList.toggle('flipped')">
                 <div class="team-card">
                     <div class="card-front">
-                        <div class="team-photo">
+                        <div class="card-header-band">
+                            <div class="team-photo">
                             <img src="/tamara.jpg" alt="Tamara Redd" style="width:100%;height:100%;object-fit:cover;object-position:center 25%;border-radius:50%;">
                         </div>
-                        <h3 class="team-name">Tamara Redd</h3>
+                        </div>
+                        <div class="card-body">
+                            <h3 class="team-name">Tamara Redd</h3>
                         <p class="team-role">Licensed Insurance Agent</p>
                         <div class="team-meta">
                             <span class="team-location">📍 Lehi, UT</span>
@@ -1122,8 +1159,8 @@
                             </a>
                         </div>
                         <span class="flip-hint">Learn more about Tamara</span>
-                    </div>
-                    <div class="card-back">
+                        </div>
+                    </div><div class="card-back">
                         <h3 class="back-name">Tamara Redd</h3>
                         <p class="team-bio">Mom of 5 based in Lehi, UT. Tamara knows firsthand what it means to manage a busy household, and she brings that same care and attention to detail to every client she works with. She's here to simplify the process and find the right fit for your family.</p>
                         <div class="team-specialties">
@@ -1139,8 +1176,11 @@
             <div class="team-card-wrapper fade-in" onclick="this.classList.toggle('flipped')">
                 <div class="team-card">
                     <div class="card-front">
-                        <div class="team-photo"><img src="/elizabeth.jpg" alt="Elizabeth Perez" style="width:100%;height:100%;object-fit:cover;object-position:center 25%;border-radius:50%;"></div>
-                        <h3 class="team-name">Elizabeth Perez</h3>
+                        <div class="card-header-band">
+                            <div class="team-photo"><img src="/elizabeth.jpg" alt="Elizabeth Perez" style="width:100%;height:100%;object-fit:cover;object-position:center 25%;border-radius:50%;"></div>
+                        </div>
+                        <div class="card-body">
+                            <h3 class="team-name">Elizabeth Perez</h3>
                         <p class="team-role">Licensed Insurance Agent</p>
                         <div class="team-meta">
                             <span class="team-location">📍 Puerto Rico</span>
@@ -1157,8 +1197,8 @@
                             </a>
                         </div>
                         <span class="flip-hint">Learn more about Elizabeth</span>
-                    </div>
-                    <div class="card-back">
+                        </div>
+                    </div><div class="card-back">
                         <h3 class="back-name">Elizabeth Perez</h3>
                         <p class="team-bio">Mom of 2 based in Puerto Rico. A Medicare agent since 2013 with a background in Computer Science and Business Administration, Elizabeth sees her work as real service, not just a sale. This career gave her the flexibility to be a present mom while providing for her family. Fun fact: she loves boxing and says consistency is everything.</p>
                         <div class="team-specialties">
@@ -1175,10 +1215,13 @@
             <div class="team-card-wrapper fade-in" onclick="this.classList.toggle('flipped')">
                 <div class="team-card">
                     <div class="card-front">
-                        <div class="team-photo">
+                        <div class="card-header-band">
+                            <div class="team-photo">
                             <img src="/saya.jpg" alt="Saya Murton" style="width:100%;height:100%;object-fit:cover;object-position:center 25%;border-radius:50%;">
                         </div>
-                        <h3 class="team-name">Saya Murton</h3>
+                        </div>
+                        <div class="card-body">
+                            <h3 class="team-name">Saya Murton</h3>
                         <p class="team-role">Licensed Insurance Agent</p>
                         <div class="team-meta">
                             <span class="team-location">📍 Herriman, UT</span>
@@ -1195,8 +1238,8 @@
                             </a>
                         </div>
                         <span class="flip-hint">Learn more about Saya</span>
-                    </div>
-                    <div class="card-back">
+                        </div>
+                    </div><div class="card-back">
                         <h3 class="back-name">Saya Murton</h3>
                         <p class="team-bio">Mom of 3 boys based in Herriman, UT. Originally from Japan, Saya brings almost 15 years of insurance experience to the team. When she's not helping clients find the perfect plan, you'll probably find her at Disney with her family.</p>
                         <div class="team-specialties">
@@ -1215,8 +1258,11 @@
             <div class="team-card-wrapper fade-in" onclick="this.classList.toggle('flipped')">
                 <div class="team-card">
                     <div class="card-front">
-                        <div class="team-photo"><img src="/ally.jpg" alt="Ally Valdez" style="width:100%;height:100%;object-fit:cover;object-position:center 25%;border-radius:50%;"></div>
-                        <h3 class="team-name">Ally Valdez</h3>
+                        <div class="card-header-band">
+                            <div class="team-photo"><img src="/ally.jpg" alt="Ally Valdez" style="width:100%;height:100%;object-fit:cover;object-position:center 25%;border-radius:50%;"></div>
+                        </div>
+                        <div class="card-body">
+                            <h3 class="team-name">Ally Valdez</h3>
                         <p class="team-role">Licensed Insurance Agent</p>
                         <div class="team-meta">
                             <span class="team-location">📍 Herriman, UT</span>
@@ -1232,8 +1278,8 @@
                             </a>
                         </div>
                         <span class="flip-hint">Learn more about Ally</span>
-                    </div>
-                    <div class="card-back">
+                        </div>
+                    </div><div class="card-back">
                         <h3 class="back-name">Ally Valdez</h3>
                         <p class="team-bio">Mom of 2 boys and a daughter based in Herriman, UT. Ally brings energy and heart to everything she does. She's dedicated to helping families find coverage that fits their lives and their budget.</p>
                         <div class="team-specialties">
@@ -1251,10 +1297,13 @@
             <div class="team-card-wrapper fade-in" onclick="this.classList.toggle('flipped')">
                 <div class="team-card">
                     <div class="card-front">
-                        <div class="team-photo">
+                        <div class="card-header-band">
+                            <div class="team-photo">
                             <img src="/erica.jpg" alt="Erica Harding" style="width:100%;height:100%;object-fit:cover;object-position:center 25%;border-radius:50%;">
                         </div>
-                        <h3 class="team-name">Erica Harding</h3>
+                        </div>
+                        <div class="card-body">
+                            <h3 class="team-name">Erica Harding</h3>
                         <p class="team-role">Licensed Insurance Agent</p>
                         <div class="team-meta">
                             <span class="team-location">📍 Katy, TX</span>
@@ -1270,8 +1319,8 @@
                             </a>
                         </div>
                         <span class="flip-hint">Learn more about Erica</span>
-                    </div>
-                    <div class="card-back">
+                        </div>
+                    </div><div class="card-back">
                         <h3 class="back-name">Erica Harding</h3>
                         <p class="team-bio">Mom of 3 based in Katy, TX. Erica is passionate about helping families navigate their health coverage options with clarity and confidence. Her friendly approach makes even the most confusing insurance topics feel simple.</p>
                         <div class="team-specialties">
@@ -1286,8 +1335,11 @@
             <div class="team-card-wrapper fade-in" onclick="this.classList.toggle('flipped')">
                 <div class="team-card">
                     <div class="card-front">
-                        <div class="team-photo"><img src="/michelleb.jpg" alt="Michelle Bodin" style="width:100%;height:100%;object-fit:cover;object-position:center 25%;border-radius:50%;"></div>
-                        <h3 class="team-name">Michelle Bodin</h3>
+                        <div class="card-header-band">
+                            <div class="team-photo"><img src="/michelleb.jpg" alt="Michelle Bodin" style="width:100%;height:100%;object-fit:cover;object-position:center 25%;border-radius:50%;"></div>
+                        </div>
+                        <div class="card-body">
+                            <h3 class="team-name">Michelle Bodin</h3>
                         <p class="team-role">Licensed Insurance Agent</p>
                         <div class="team-meta">
                             <span class="team-location">📍 Tucson, AZ</span>
@@ -1304,8 +1356,8 @@
                             </a>
                         </div>
                         <span class="flip-hint">Learn more about Michelle</span>
-                    </div>
-                    <div class="card-back">
+                        </div>
+                    </div><div class="card-back">
                         <h3 class="back-name">Michelle Bodin</h3>
                         <p class="team-bio">Mom of 5 and grandma of 9 based in Tucson, AZ. Michelle is all about family, whether that's her own or the families she helps find the right coverage. When she's not working, she's planning her next quick getaway or spending time with her grandkids.</p>
                         <div class="team-specialties">
@@ -1324,8 +1376,11 @@
             <div class="team-card-wrapper fade-in" onclick="this.classList.toggle('flipped')">
                 <div class="team-card">
                     <div class="card-front">
-                        <div class="team-photo"><img src="/edmi.jpg" alt="Edmi Dominguez" style="width:100%;height:100%;object-fit:cover;object-position:center 25%;border-radius:50%;"></div>
-                        <h3 class="team-name">Edmi Dominguez</h3>
+                        <div class="card-header-band">
+                            <div class="team-photo"><img src="/edmi.jpg" alt="Edmi Dominguez" style="width:100%;height:100%;object-fit:cover;object-position:center 25%;border-radius:50%;"></div>
+                        </div>
+                        <div class="card-body">
+                            <h3 class="team-name">Edmi Dominguez</h3>
                         <p class="team-role">Licensed Insurance Agent</p>
                         <div class="team-meta">
                             <span class="team-location">📍 West Jordan, UT</span>
@@ -1342,8 +1397,8 @@
                             </a>
                         </div>
                         <span class="flip-hint">Learn more about Edmi</span>
-                    </div>
-                    <div class="card-back">
+                        </div>
+                    </div><div class="card-back">
                         <h3 class="back-name">Edmi Dominguez</h3>
                         <p class="team-bio">Mom of 2 based in West Jordan, UT. Edmi is dedicated to making sure every client feels heard and understood. She takes the time to walk you through your options so you can feel confident in your coverage decisions.</p>
                         <div class="team-specialties">
@@ -1360,10 +1415,13 @@
             <div class="team-card-wrapper fade-in" onclick="this.classList.toggle('flipped')">
                 <div class="team-card">
                     <div class="card-front">
-                        <div class="team-photo">
+                        <div class="card-header-band">
+                            <div class="team-photo">
                             <span class="team-initials">LW</span>
                         </div>
-                        <h3 class="team-name">Lissette Wong</h3>
+                        </div>
+                        <div class="card-body">
+                            <h3 class="team-name">Lissette Wong</h3>
                         <p class="team-role">Licensed Insurance Agent</p>
                         <div class="team-meta">
                             <span class="team-language">🌐 English / Spanish</span>
@@ -1379,8 +1437,8 @@
                             </a>
                         </div>
                         <span class="flip-hint">Learn more about Lissette</span>
-                    </div>
-                    <div class="card-back">
+                        </div>
+                    </div><div class="card-back">
                         <h3 class="back-name">Lissette Wong</h3>
                         <p class="team-bio">Lissette is passionate about helping families navigate their insurance options with clarity and care. She's committed to making sure every client feels supported and confident in their coverage choices.</p>
                         <div class="team-specialties">
@@ -1398,8 +1456,11 @@
             <div class="team-card-wrapper fade-in" onclick="this.classList.toggle('flipped')">
                 <div class="team-card">
                     <div class="card-front">
-                        <div class="team-photo"><img src="/Magarely.jpg" alt="Magarely Sanchez" style="width:100%;height:100%;object-fit:cover;object-position:center 25%;border-radius:50%;"></div>
-                        <h3 class="team-name">Magarely Sanchez</h3>
+                        <div class="card-header-band">
+                            <div class="team-photo"><img src="/Magarely.jpg" alt="Magarely Sanchez" style="width:100%;height:100%;object-fit:cover;object-position:center 25%;border-radius:50%;"></div>
+                        </div>
+                        <div class="card-body">
+                            <h3 class="team-name">Magarely Sanchez</h3>
                         <p class="team-role">Licensed Insurance Agent</p>
                         <div class="team-meta">
                             <span class="team-language">🌐 English / Spanish</span>
@@ -1415,8 +1476,8 @@
                             </a>
                         </div>
                         <span class="flip-hint">Learn more about Magarely</span>
-                    </div>
-                    <div class="card-back">
+                        </div>
+                    </div><div class="card-back">
                         <h3 class="back-name">Magarely Sanchez</h3>
                         <p class="team-bio">Magarely brings warmth and dedication to every client interaction. She loves helping families in her community find the right coverage and feel confident about their health insurance decisions.</p>
                         <div class="team-specialties">
@@ -1433,10 +1494,13 @@
             <div class="team-card-wrapper fade-in" onclick="this.classList.toggle('flipped')">
                 <div class="team-card">
                     <div class="card-front">
-                        <div class="team-photo">
+                        <div class="card-header-band">
+                            <div class="team-photo">
                             <span class="team-initials">MG</span>
                         </div>
-                        <h3 class="team-name">Madisyn Groberg</h3>
+                        </div>
+                        <div class="card-body">
+                            <h3 class="team-name">Madisyn Groberg</h3>
                         <p class="team-role">Licensed Insurance Agent</p>
                         <div class="team-meta">
                             <span class="team-location">📍 Spanish Fork, UT</span>
@@ -1448,8 +1512,8 @@
                             </a>
                         </div>
                         <span class="flip-hint">Learn more about Madisyn</span>
-                    </div>
-                    <div class="card-back">
+                        </div>
+                    </div><div class="card-back">
                         <h3 class="back-name">Madisyn Groberg</h3>
                         <p class="team-bio">Based in Spanish Fork, UT. Madisyn specializes in helping individuals, families, and employers find affordable ACA Marketplace coverage and group health insurance. Full bio coming soon.</p>
                         <div class="team-specialties">
@@ -1466,8 +1530,11 @@
             <div class="team-card-wrapper fade-in" onclick="this.classList.toggle('flipped')">
                 <div class="team-card">
                     <div class="card-front">
-                        <div class="team-photo"><img src="/madison.jpg" alt="Madison Dennison" style="width:100%;height:100%;object-fit:cover;object-position:center 25%;border-radius:50%;"></div>
-                        <h3 class="team-name">Madison Dennison</h3>
+                        <div class="card-header-band">
+                            <div class="team-photo"><img src="/madison.jpg" alt="Madison Dennison" style="width:100%;height:100%;object-fit:cover;object-position:center 25%;border-radius:50%;"></div>
+                        </div>
+                        <div class="card-body">
+                            <h3 class="team-name">Madison Dennison</h3>
                         <p class="team-role">Licensed Insurance Agent</p>
                         <div class="team-meta">
                             <span class="team-location">📍 Provo, UT</span>
@@ -1479,8 +1546,8 @@
                             </a>
                         </div>
                         <span class="flip-hint">Learn more about Madison</span>
-                    </div>
-                    <div class="card-back">
+                        </div>
+                    </div><div class="card-back">
                         <h3 class="back-name">Madison Dennison</h3>
                         <p class="team-bio">Based in Provo, UT. Madison is a licensed insurance agent dedicated to helping individuals and families find the right coverage. Full bio coming soon.</p>
                         <div class="team-specialties">
@@ -1496,8 +1563,11 @@
             <div class="team-card-wrapper fade-in" onclick="this.classList.toggle('flipped')">
                 <div class="team-card">
                     <div class="card-front">
-                        <div class="team-photo"><img src="/shaunie.jpg" alt="Shaunie Dennison" style="width:100%;height:100%;object-fit:cover;object-position:center 25%;border-radius:50%;"></div>
-                        <h3 class="team-name">Shaunie Dennison</h3>
+                        <div class="card-header-band">
+                            <div class="team-photo"><img src="/shaunie.jpg" alt="Shaunie Dennison" style="width:100%;height:100%;object-fit:cover;object-position:center 25%;border-radius:50%;"></div>
+                        </div>
+                        <div class="card-body">
+                            <h3 class="team-name">Shaunie Dennison</h3>
                         <p class="team-role">Licensed Insurance Agent</p>
                         <div class="team-meta">
                             <span class="team-location">📍 Tucson, AZ</span>
@@ -1509,8 +1579,8 @@
                             </a>
                         </div>
                         <span class="flip-hint">Learn more about Shaunie</span>
-                    </div>
-                    <div class="card-back">
+                        </div>
+                    </div><div class="card-back">
                         <h3 class="back-name">Shaunie Dennison</h3>
                         <p class="team-bio">Based in Tucson, AZ. Shaunie focuses on ACA Marketplace coverage and group health insurance, helping individuals, families, and local businesses find plans that fit their needs. Full bio coming soon.</p>
                         <div class="team-specialties">
