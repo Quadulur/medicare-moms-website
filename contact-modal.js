@@ -1,5 +1,5 @@
 /**
- * Contact Modal for Medicare Moms
+ * Contact Modal for HealthPlan Moms
  * Intercepts /#contact links on non-homepage pages and shows an inline modal
  * instead of redirecting users back to the homepage.
  * Detects Spanish pages automatically via URL path.
@@ -33,7 +33,7 @@
         optLife: 'Seguro de Vida',
         optNotSure: 'No estoy seguro, ayudenme a decidir',
         consent:
-          'Acepto ser contactado por Medicare Moms y sus agentes licenciados por telefono, texto y correo electronico sobre opciones de seguros, incluyendo mensajes automatizados. El consentimiento no es obligatorio para comprar.',
+          'Acepto ser contactado por HealthPlan Moms y sus agentes licenciados por telefono, texto y correo electronico sobre opciones de seguros, incluyendo mensajes automatizados. El consentimiento no es obligatorio para comprar.',
         consentLink: 'Ver terminos completos y divulgacion TPMO',
         submit: 'Solicitar Consulta Gratis',
         free: 'Nuestros servicios siempre son gratis para ti.',
@@ -59,7 +59,7 @@
         optLife: 'Life Insurance',
         optNotSure: 'Not Sure, Help Me Decide',
         consent:
-          'I agree to be contacted by Medicare Moms and its licensed agents by phone, text, and email about insurance options, including via automated messages. Consent is not required to purchase.',
+          'I agree to be contacted by HealthPlan Moms and its licensed agents by phone, text, and email about insurance options, including via automated messages. Consent is not required to purchase.',
         consentLink: 'View full terms & TPMO disclosure',
         submit: 'Get a Free Consultation',
         free: 'Our services are always free to you.',

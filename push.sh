@@ -1,5 +1,5 @@
 #!/bin/bash
-# Quick push script for Medicare Moms website
+# Quick push script for HealthPlan Moms website
 # Usage: ./push.sh "description of what you changed"
 
 cd "$(dirname "$0")"
@@ -25,4 +25,4 @@ git push
 
 echo ""
 echo "Done! Changes are live in 1-2 minutes."
-echo "View at: https://github.com/Quadulur/medicare-moms-website"
+echo "View at: https://github.com/Quadulur/healthplanmoms-website"

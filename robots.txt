@@ -1,4 +1,4 @@
-# robots.txt for medicaremoms.com
+# robots.txt for healthplanmoms.com
 # Allow all well-behaved crawlers
 
 User-agent: *
@@ -21,4 +21,4 @@ Disallow: /terms.html
 Disallow: /blog.html
 
 # Location of sitemap
-Sitemap: https://medicaremoms.com/sitemap.xml
+Sitemap: https://healthplanmoms.com/sitemap.xml

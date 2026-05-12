@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
 """
-Medicare Moms Website Update Script #2
-Run from inside the medicare-moms-website directory.
+HealthPlan Moms Website Update Script #2
+Run from inside the healthplanmoms-website directory.
 Changes:
 1. Replaces (800) 555-1234 with Ally Valdez (435) 246-1548 on all pages
 2. Fixes contact link colors (#A8C5A0 -> white) on dark backgrounds
@@ -40,8 +40,8 @@ for f in glob.glob('*.html'):
             'style="color: #FFFFFF; text-decoration: none;">(435) 246-1548'
         )
         t = t.replace(
-            'style="color: #A8C5A0; text-decoration: none;">info@medicaremoms.com',
-            'style="color: #FFFFFF; text-decoration: none;">info@medicaremoms.com'
+            'style="color: #A8C5A0; text-decoration: none;">info@healthplanmoms.com',
+            'style="color: #FFFFFF; text-decoration: none;">info@healthplanmoms.com'
         )
         changed = True
 

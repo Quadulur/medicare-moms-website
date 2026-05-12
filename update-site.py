@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
 """
-Medicare Moms Website Update Script
-Run from inside the medicare-moms-website directory.
+HealthPlan Moms Website Update Script
+Run from inside the healthplanmoms-website directory.
 Changes:
 1. Updates resources.html - removes ACA section, adds callout to new ACA page
 2. Adds Services hover dropdown to nav on all pages

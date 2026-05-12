@@ -1,5 +1,5 @@
 #!/bin/bash
-# Medicare Moms Website - One-Time Git Setup Script
+# HealthPlan Moms Website - One-Time Git Setup Script
 # Run this once to connect your local folder to GitHub.
 # After this, you can push updates anytime with: git add -A && git commit -m "your message" && git push
 
@@ -7,7 +7,7 @@ set -e
 
 echo ""
 echo "======================================"
-echo "  Medicare Moms - Git Setup"
+echo "  HealthPlan Moms - Git Setup"
 echo "======================================"
 echo ""
 
@@ -51,7 +51,7 @@ if command -v gh &> /dev/null; then
 
     # Set remote
     git remote remove origin 2>/dev/null || true
-    git remote add origin https://github.com/Quadulur/medicare-moms-website.git
+    git remote add origin https://github.com/Quadulur/healthplanmoms-website.git
 
     # Configure credential helper via gh
     gh auth setup-git
@@ -67,7 +67,7 @@ else
 
         # Set remote
         git remote remove origin 2>/dev/null || true
-        git remote add origin https://github.com/Quadulur/medicare-moms-website.git
+        git remote add origin https://github.com/Quadulur/healthplanmoms-website.git
 
         # Configure credential helper
         gh auth setup-git
@@ -80,7 +80,7 @@ else
 
         # Set remote
         git remote remove origin 2>/dev/null || true
-        git remote add origin https://github.com/Quadulur/medicare-moms-website.git
+        git remote add origin https://github.com/Quadulur/healthplanmoms-website.git
 
         # Use macOS Keychain to remember credentials
         git config credential.helper osxkeychain
@@ -92,7 +92,7 @@ echo "Adding all files..."
 git add -A
 
 echo "Creating initial commit..."
-git commit -m "Initial commit - Medicare Moms website" || echo "Nothing new to commit."
+git commit -m "Initial commit - HealthPlan Moms website" || echo "Nothing new to commit."
 
 echo ""
 echo "Pushing to GitHub..."
@@ -104,7 +104,7 @@ echo "  Setup Complete!"
 echo "======================================"
 echo ""
 echo "Your site is now on GitHub at:"
-echo "  https://github.com/Quadulur/medicare-moms-website"
+echo "  https://github.com/Quadulur/healthplanmoms-website"
 echo ""
 echo "To push future updates, just run:"
 echo "  cd $(pwd)"

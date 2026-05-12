@@ -163,7 +163,7 @@ export default function BrandPreview() {
             boxShadow: "0 2px 8px rgba(0,0,0,0.06)",
           }}>
             <span style={{ fontFamily: s.headingFont, fontSize: 20, fontWeight: 700, color: c.primary }}>
-              Medicare Moms
+              HealthPlan Moms
             </span>
             <div style={{ display: "flex", gap: 24, alignItems: "center" }}>
               {["Services", "Resources", "Our Team", "Contact"].map(link => (
