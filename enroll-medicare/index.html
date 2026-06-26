@@ -163,12 +163,16 @@
         }
 
         .logo {
+            display: flex;
+            align-items: center;
+            gap: 10px;
             font-family: 'DM Serif Display', serif;
             font-size: 22px;
             font-weight: 700;
             color: #5B8C6B;
             text-decoration: none;
         }
+        .logo img { height: 60px; width: auto; }
 
         .nav-links {
             display: flex;
@@ -865,7 +869,7 @@
     <!-- Navigation -->
     <nav>
         <div class="nav-container container">
-            <a href="/" class="logo">HealthPlan Moms</a>
+            <a href="/" class="logo"><img src="/logo-mark.svg" alt="HealthPlan Moms Logo">HealthPlan Moms</a>
             <div class="hamburger" id="hamburger">
                 <span></span>
                 <span></span>
@@ -877,9 +881,8 @@
                 <li><a href="/blog/">Blog</a></li>
                 <li><a href="/meet-our-team/">Meet Our Team</a></li>
                 <li><a href="/#contact">Contact</a></li>
-                <li><a href="/join-our-team/">Join Our Team</a></li>
                 <li class="lang-toggle">
-                    <a href="#" class="lang-link">
+                    <a href="/es/inscripcion-medicare/" class="lang-link" title="Ver en Español">
                         <span class="lang-active">EN</span>
                         <span>/</span>
                         <span class="lang-inactive">ES</span>
