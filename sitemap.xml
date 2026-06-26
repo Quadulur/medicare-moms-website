@@ -172,6 +172,22 @@
 
     <!-- Individual blog posts -->
     <url>
+        <loc>https://healthplanmoms.com/blog/medicare-open-enrollment-2026/</loc>
+        <lastmod>2026-06-25</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.9</priority>
+        <xhtml:link rel="alternate" hreflang="en" href="https://healthplanmoms.com/blog/medicare-open-enrollment-2026/"/>
+        <xhtml:link rel="alternate" hreflang="es" href="https://healthplanmoms.com/es/blog/medicare-inscripcion-abierta-2026/"/>
+    </url>
+    <url>
+        <loc>https://healthplanmoms.com/es/blog/medicare-inscripcion-abierta-2026/</loc>
+        <lastmod>2026-06-25</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.9</priority>
+        <xhtml:link rel="alternate" hreflang="en" href="https://healthplanmoms.com/blog/medicare-open-enrollment-2026/"/>
+        <xhtml:link rel="alternate" hreflang="es" href="https://healthplanmoms.com/es/blog/medicare-inscripcion-abierta-2026/"/>
+    </url>
+    <url>
         <loc>https://healthplanmoms.com/blog/medicare-guide-2026/</loc>
         <lastmod>2026-04-18</lastmod>
         <changefreq>monthly</changefreq>
