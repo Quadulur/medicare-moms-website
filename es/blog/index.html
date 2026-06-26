@@ -952,6 +952,16 @@
             });
         });
 
+        // Make the entire blog card clickable
+        document.querySelectorAll('.blog-card').forEach(card => {
+            const link = card.querySelector('a[href]');
+            if (!link) return;
+            card.addEventListener('click', (e) => {
+                if (e.target.closest('a')) return; // let the Read More link behave normally
+                window.location = link.getAttribute('href');
+            });
+        });
+
         // Newsletter form submission
         function handleNewsletterSubmit(event) {
             event.preventDefault();
