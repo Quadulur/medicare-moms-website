@@ -104,6 +104,7 @@ See [Join Our Team](https://healthplanmoms.com/join-our-team/) for details.
 - [Medicare Resources Hub](https://healthplanmoms.com/resources/): Consumer guidance on Medicare
 - [ACA & Individual Insurance Resources](https://healthplanmoms.com/aca-resources/): Marketplace guidance
 - [How to Enroll in Medicare](https://healthplanmoms.com/enroll-medicare/): IEP, SEP, AEP, OEP, GEP, IRMAA guide
+- [2027 ACA & Subsidy Cheat Sheet](https://healthplanmoms.com/resources/aca-cheat-sheet-2027/): Full 2027 reference: 2026 FPL chart (used for 2027 coverage), 2027 applicable percentages, $12,000 MOOP and CSR limits, Medicaid/CHIP lines and 2027 work requirements, 10.22% employer affordability, no APTC repayment cap, tax filing thresholds, 8.50% catastrophic exemption
 - [2026 ACA & Subsidy Cheat Sheet](https://healthplanmoms.com/resources/aca-cheat-sheet-2026/): Full reference — FPL chart for households 1–8, subsidies, Medicaid/CHIP, MOOP, employer affordability, APTC repayment
 - [2026 ACA Quick Reference (1-page)](https://healthplanmoms.com/resources/aca-quickref-2026/): Printable agent/consumer cheat sheet
 
