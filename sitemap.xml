@@ -135,7 +135,7 @@
         <loc>https://healthplanmoms.com/blog/</loc>
         <xhtml:link rel="alternate" hreflang="en" href="https://healthplanmoms.com/blog/"/>
         <xhtml:link rel="alternate" hreflang="es" href="https://healthplanmoms.com/es/blog/"/>
-        <lastmod>2026-04-18</lastmod>
+        <lastmod>2026-10-10</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.8</priority>
     </url>
@@ -143,7 +143,7 @@
         <loc>https://healthplanmoms.com/es/blog/</loc>
         <xhtml:link rel="alternate" hreflang="en" href="https://healthplanmoms.com/blog/"/>
         <xhtml:link rel="alternate" hreflang="es" href="https://healthplanmoms.com/es/blog/"/>
-        <lastmod>2026-04-18</lastmod>
+        <lastmod>2026-10-10</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.8</priority>
     </url>
@@ -178,6 +178,22 @@
 
     <!-- Individual blog posts -->
     <url>
+        <loc>https://healthplanmoms.com/blog/medicare-advantage-changes-2027/</loc>
+        <lastmod>2026-10-10</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.9</priority>
+        <xhtml:link rel="alternate" hreflang="en" href="https://healthplanmoms.com/blog/medicare-advantage-changes-2027/"/>
+        <xhtml:link rel="alternate" hreflang="es" href="https://healthplanmoms.com/es/blog/cambios-medicare-advantage-2027/"/>
+    </url>
+    <url>
+        <loc>https://healthplanmoms.com/es/blog/cambios-medicare-advantage-2027/</loc>
+        <lastmod>2026-10-10</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.9</priority>
+        <xhtml:link rel="alternate" hreflang="en" href="https://healthplanmoms.com/blog/medicare-advantage-changes-2027/"/>
+        <xhtml:link rel="alternate" hreflang="es" href="https://healthplanmoms.com/es/blog/cambios-medicare-advantage-2027/"/>
+    </url>
+    <url>
         <loc>https://healthplanmoms.com/blog/medicare-open-enrollment-2026/</loc>
         <lastmod>2026-06-25</lastmod>
         <changefreq>monthly</changefreq>
@@ -207,7 +223,7 @@
     </url>
     <url>
         <loc>https://healthplanmoms.com/blog/aca-marketplace-2027/</loc>
-        <lastmod>2026-10-09</lastmod>
+        <lastmod>2026-09-10</lastmod>
         <changefreq>monthly</changefreq>
         <priority>0.8</priority>
     </url>
