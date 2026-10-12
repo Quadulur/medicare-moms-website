@@ -21,6 +21,9 @@
     <meta property="og:url" content="https://healthplanmoms.com/enroll-medicare/">
     <meta property="og:site_name" content="HealthPlan Moms">
     <link rel="canonical" href="https://healthplanmoms.com/enroll-medicare/">
+    <meta property="og:image" content="https://healthplanmoms.com/logo-pill.png">
+    <meta property="og:image:width" content="1000">
+    <meta property="og:image:height" content="1574">
     <link rel="alternate" hreflang="en" href="https://healthplanmoms.com/enroll-medicare/">
     <link rel="alternate" hreflang="es" href="https://healthplanmoms.com/es/inscripcion-medicare/">
     <link rel="alternate" hreflang="x-default" href="https://healthplanmoms.com/enroll-medicare/">
@@ -67,7 +70,7 @@
             text-align: center;
         }
 
-        h1, h2, h3, h4, h5, h6 {
+        h1, h2, h3, h4, h5, h6, .hx4 {
             font-family: 'DM Serif Display', serif;
             font-weight: 700;
             line-height: 1.3;
@@ -90,7 +93,7 @@
             margin-bottom: 15px;
         }
 
-        h4 {
+        h4, .hx4 {
             font-size: 20px;
             margin-bottom: 12px;
         }
@@ -124,7 +127,7 @@
         }
 
         .btn-primary {
-            background: linear-gradient(135deg, #5B8C6B 0%, #3D6B4A 100%);
+            background: var(--sage-ink);
             color: white;
         }
 
@@ -135,7 +138,7 @@
 
         .btn-secondary {
             background-color: transparent;
-            color: #5B8C6B;
+            color: var(--sage-ink);
             border-color: #5B8C6B;
         }
 
@@ -150,125 +153,6 @@
         }
 
         /* ============ Navigation ============ */
-        nav {
-            position: sticky;
-            top: 0;
-            background-color: white;
-            box-shadow: 0 4px 12px rgba(44, 44, 44, 0.08);
-            z-index: 1000;
-        }
-
-        .nav-container {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            padding: 15px 20px;
-        }
-
-        .logo {
-            display: flex;
-            align-items: center;
-            gap: 10px;
-            font-family: 'DM Serif Display', serif;
-            font-size: 22px;
-            font-weight: 700;
-            color: #5B8C6B;
-            text-decoration: none;
-        }
-        .logo img { height: 60px; width: auto; }
-
-        .nav-links {
-            display: flex;
-            gap: 35px;
-            list-style: none;
-            align-items: center;
-        }
-
-        .nav-links a {
-            color: #2C2C2C;
-            text-decoration: none;
-            font-weight: 500;
-            transition: color 0.3s ease;
-            font-size: 15px;
-        }
-
-        .nav-links a:hover {
-            color: #5B8C6B;
-        }
-
-        .nav-links a.active-link {
-            color: #5B8C6B;
-        }
-
-        .hamburger {
-            display: none;
-            flex-direction: column;
-            cursor: pointer;
-            gap: 6px;
-        }
-
-        .hamburger span {
-            width: 25px;
-            height: 3px;
-            background-color: #2C2C2C;
-            border-radius: 2px;
-            transition: all 0.3s ease;
-        }
-
-        @media (max-width: 768px) {
-            .hamburger {
-                display: flex;
-            }
-
-            .nav-links {
-                position: absolute;
-                top: 70px;
-                left: 0;
-                right: 0;
-                background-color: white;
-                flex-direction: column;
-                gap: 15px;
-                padding: 30px 20px;
-                display: none;
-            }
-
-            .nav-links.active {
-                display: flex;
-            }
-        }
-
-        .lang-toggle {
-            margin-left: 8px;
-        }
-        .lang-link {
-            text-decoration: none;
-            font-size: 13px;
-            font-weight: 600;
-            color: #4A5568;
-            padding: 4px 12px;
-            border-radius: 20px;
-            background: #E8F0E5;
-            transition: all 0.3s ease;
-            display: inline-flex;
-            align-items: center;
-            gap: 2px;
-        }
-        .lang-link:hover {
-            background: #5B8C6B;
-            color: white;
-        }
-        .lang-active {
-            color: #5B8C6B;
-            font-weight: 700;
-        }
-        .lang-inactive {
-            color: #999;
-            font-weight: 400;
-        }
-        .lang-link:hover .lang-active,
-        .lang-link:hover .lang-inactive {
-            color: white;
-        }
 
         /* ============ Hero ============ */
         .hero {
@@ -342,7 +226,7 @@
             margin-bottom: 12px;
         }
 
-        .info-card h4 {
+        .info-card h4, .info-card .hx4 {
             font-size: 18px;
             margin-bottom: 10px;
         }
@@ -375,7 +259,7 @@
             font-family: 'DM Serif Display', serif;
             font-weight: 600;
             font-size: 14px;
-            color: #5B8C6B;
+            color: var(--sage-ink);
             margin-bottom: 8px;
         }
 
@@ -431,7 +315,7 @@
 
         .feature-list-standalone li::before {
             content: "✓";
-            color: #5B8C6B;
+            color: var(--sage-ink);
             font-weight: 700;
             flex-shrink: 0;
             margin-top: 1px;
@@ -482,105 +366,8 @@
         }
 
         /* ============ Footer ============ */
-        footer {
-            background-color: #2C2C2C;
-            color: rgba(255, 255, 255, 0.8);
-            padding: 50px 0 20px 0;
-        }
-
-        .footer-content {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-            gap: 40px;
-            margin-bottom: 40px;
-        }
-
-        .footer-section h4 {
-            color: white;
-            margin-bottom: 20px;
-            font-family: 'DM Serif Display', serif;
-            font-weight: 600;
-            font-size: 16px;
-        }
-
-        .footer-section ul {
-            list-style: none;
-        }
-
-        .footer-section ul li {
-            margin-bottom: 12px;
-        }
-
-        .footer-section a {
-            color: rgba(255, 255, 255, 0.7);
-            text-decoration: none;
-            font-size: 14px;
-            transition: color 0.3s ease;
-        }
-
-        .footer-section a:hover {
-            color: #FFFFFF;
-        }
-
-        .footer-brand {
-            margin-bottom: 15px;
-        }
-
-        .footer-brand h4 {
-            color: white;
-            margin-bottom: 8px;
-            font-size: 18px;
-        }
-
-        .footer-brand p {
-            color: rgba(255, 255, 255, 0.6);
-            font-size: 13px;
-            margin: 8px 0;
-        }
-
-        .social-links {
-            display: flex;
-            gap: 16px;
-            margin-top: 12px;
-        }
-
-        .social-links a {
-            width: 36px;
-            height: 36px;
-            border-radius: 50%;
-            background-color: rgba(255, 255, 255, 0.1);
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            color: rgba(255, 255, 255, 0.8);
-            transition: all 0.3s ease;
-            font-size: 18px;
-        }
-
-        .social-links a:hover {
-            background-color: #5B8C6B;
-            color: white;
-        }
-
-        .footer-bottom {
-            border-top: 1px solid rgba(255, 255, 255, 0.1);
-            padding-top: 20px;
-            text-align: center;
-            font-size: 13px;
-            color: rgba(255, 255, 255, 0.5);
-        }
-
-        .legal-disclaimer {
-            margin-top: 15px;
-            font-size: 12px;
-            color: rgba(255, 255, 255, 0.4);
-            line-height: 1.6;
-        }
 
         @media (max-width: 768px) {
-            .footer-content {
-                gap: 30px;
-            }
 
             .cta-section {
                 padding: 60px 0;
@@ -613,35 +400,32 @@
             }
         }
 
-            .footer-logo { display: block; max-width: 180px; height: auto; margin-bottom: 15px; }
     </style>
+    <link rel="stylesheet" href="/site-shell.css">
 </head>
 <body>
     <!-- Navigation -->
-    <nav>
-        <div class="nav-container container">
-            <a href="/" class="logo"><img src="/logo-mark.svg" alt="HealthPlan Moms Logo">HealthPlan Moms</a>
-            <div class="hamburger" id="hamburger">
-                <span></span>
-                <span></span>
-                <span></span>
-            </div>
-            <ul class="nav-links" id="navLinks">
+    <a class="skip-link" href="#main">Skip to content</a>
+    <header class="site-header">
+        <div class="site-header__inner">
+            <a href="/" class="site-logo"><img src="/logo-mark.svg" alt="" width="52" height="52">HealthPlan Moms</a>
+            <nav class="site-nav" aria-label="Main">
+            <ul class="site-nav__links" id="site-menu">
                 <li><a href="/services/">Services</a></li>
                 <li><a href="/resources/">Resources</a></li>
                 <li><a href="/blog/">Blog</a></li>
                 <li><a href="/meet-our-team/">Meet Our Team</a></li>
-                <li><a href="/#contact">Contact</a></li>
-                <li class="lang-toggle">
-                    <a href="/es/inscripcion-medicare/" class="lang-link" title="Ver en Español">
-                        <span class="lang-active">EN</span>
-                        <span>/</span>
-                        <span class="lang-inactive">ES</span>
-                    </a>
-                </li>
+                <li><a href="/join-our-team/">Join Our Team</a></li>
+                <li class="site-lang"><a class="site-lang__link" href="/es/inscripcion-medicare/" hreflang="es" lang="es" aria-label="Ver en español"><span class="site-lang__on" aria-hidden="true">EN</span><span class="site-lang__sep" aria-hidden="true">/</span><span class="site-lang__off" aria-hidden="true">ES</span></a></li>
             </ul>
+            </nav>
+            <a class="site-call" href="tel:+14352461548"><svg aria-hidden="true" focusable="false" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.12.96.36 1.9.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.91.34 1.85.58 2.81.7A2 2 0 0 1 22 16.92z"/></svg><span class="site-call__label">Call</span> <span class="site-call__num">(435) 246-1548</span></a>
+            <button type="button" class="site-menu-btn" aria-label="Menu" aria-expanded="false" aria-controls="site-menu"><span class="site-menu-btn__bar"></span><span class="site-menu-btn__bar"></span><span class="site-menu-btn__bar"></span></button>
         </div>
-    </nav>
+    </header>
+
+    <main id="main" tabindex="-1">
+
 
     <!-- Hero Section -->
     <section class="hero">
@@ -665,17 +449,17 @@
             <div class="info-grid">
                 <div class="info-card">
                     <div class="card-icon"><svg width="48" height="48" viewBox="0 0 48 48" fill="none" stroke="#5B8C6B" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="24" cy="12" r="5"/><path d="M24 18v8M18 26h12M24 26v8M18 36l-2 6M32 36l2 6"/><path d="M14 26a10 10 0 0 1 20 0"/></svg></div>
-                    <h4>Age 65 or Older</h4>
+                    <h3 class="hx4">Age 65 or Older</h3>
                     <p>You become eligible for Medicare on the first day of the month you turn 65, as long as you are a U.S. citizen or permanent resident who has lived in the U.S. for at least 5 years.</p>
                 </div>
                 <div class="info-card">
                     <div class="card-icon"><svg width="48" height="48" viewBox="0 0 48 48" fill="none" stroke="#5B8C6B" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="24" cy="10" r="5"/><path d="M24 16v8M18 24h12M24 24v12M18 36h12M16 32l-6 8M32 32l6 8"/><circle cx="24" cy="24" r="12" fill="none"/></svg></div>
-                    <h4>Under 65 with a Disability</h4>
+                    <h3 class="hx4">Under 65 with a Disability</h3>
                     <p>You can qualify for Medicare if you are under 65 and have been receiving Social Security Disability Benefits (SSDI) for 24 consecutive months.</p>
                 </div>
                 <div class="info-card">
                     <div class="card-icon"><svg width="48" height="48" viewBox="0 0 48 48" fill="none" stroke="#5B8C6B" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M24 42s-18-10-18-22a9.5 9.5 0 0 1 18-4 9.5 9.5 0 0 1 18 4c0 12-18 22-18 22z"/></svg></div>
-                    <h4>ESRD (End-Stage Renal Disease)</h4>
+                    <h3 class="hx4">ESRD (End-Stage Renal Disease)</h3>
                     <p>If you have permanent kidney failure and need dialysis or a transplant, you can qualify for Medicare regardless of age or work history.</p>
                 </div>
             </div>
@@ -717,15 +501,15 @@
         <div class="container">
             <div class="info-grid">
                 <div class="info-card">
-                    <h4>If You're Receiving Social Security</h4>
+                    <h3 class="hx4">If You're Receiving Social Security</h3>
                     <p>Good news: <strong>You're automatically enrolled!</strong> Most people who are receiving Social Security retirement benefits will be automatically enrolled in Part A when they reach 65. You'll receive a Medicare card in the mail 3 months before your 65th birthday.</p>
-                    <p>You don't need to do anything—it happens automatically.</p>
+                    <p>You don't need to do anything. It happens automatically.</p>
                 </div>
                 <div class="info-card">
-                    <h4>If You're NOT Receiving Social Security</h4>
+                    <h3 class="hx4">If You're NOT Receiving Social Security</h3>
                     <p>You'll need to apply manually. You have two options:</p>
                     <ul class="feature-list-standalone">
-                        <li><strong>Online:</strong> Visit <a href="https://www.ssa.gov/medicare" style="color: #5B8C6B; text-decoration: underline;">ssa.gov/medicare</a> and apply for Medicare</li>
+                        <li><strong>Online:</strong> Visit <a href="https://www.ssa.gov/medicare" style="color: var(--sage-ink); text-decoration: underline;">ssa.gov/medicare</a> and apply for Medicare</li>
                         <li><strong>In Person:</strong> Visit your local Social Security office</li>
                     </ul>
                     <p>Apply during your Initial Enrollment Period to avoid delays or penalties.</p>
@@ -744,24 +528,24 @@
         </div>
         <div class="container">
             <div class="info-card" style="max-width: 800px; margin: 40px auto;">
-                <h4>What You Need to Know About Part B</h4>
+                <h3 class="hx4">What You Need to Know About Part B</h3>
                 <p><strong>Part B is optional but highly recommended.</strong> The standard monthly premium is $202.90 (2026), though higher-income earners may pay more due to IRMAA (see below). Part B covers essential outpatient services you'll use regularly.</p>
 
-                <h4 style="margin-top: 25px;">How to Enroll</h4>
+                <h3 style="margin-top: 25px;" class="hx4">How to Enroll</h3>
                 <p>You can enroll in Part B when you enroll in Part A:</p>
                 <ul class="feature-list-standalone">
-                    <li><strong>Online:</strong> Visit <a href="https://www.ssa.gov/medicare" style="color: #5B8C6B; text-decoration: underline;">ssa.gov/medicare</a></li>
+                    <li><strong>Online:</strong> Visit <a href="https://www.ssa.gov/medicare" style="color: var(--sage-ink); text-decoration: underline;">ssa.gov/medicare</a></li>
                     <li><strong>Phone:</strong> Call Social Security at 1-800-772-1213</li>
                     <li><strong>In Person:</strong> Visit your local Social Security office</li>
                 </ul>
 
                 <div class="callout" style="margin-top: 30px; text-align: left;">
-                    <h4 style="color: white; margin-bottom: 10px;">What is IRMAA?</h4>
+                    <h3 style="color: white; margin-bottom: 10px;" class="hx4">What is IRMAA?</h3>
                     <p style="color: rgba(255,255,255,0.9); margin-bottom: 8px;">IRMAA stands for <strong>Income-Related Monthly Adjustment Amount</strong>. If your modified adjusted gross income from two years ago exceeds a certain threshold (currently $109,000 for individuals or $218,000 for married couples filing jointly), you'll pay a surcharge on top of the standard Part B premium.</p>
                     <p style="color: rgba(255,255,255,0.9); margin-bottom: 0;">IRMAA can also apply to Part D premiums. The extra amount ranges from about $70 to $400+ per month depending on your income bracket. If your income has dropped since then (due to retirement, for example), you can appeal the surcharge with Social Security.</p>
                 </div>
 
-                <h4 style="margin-top: 25px;">The Late Enrollment Penalty</h4>
+                <h3 style="margin-top: 25px;" class="hx4">The Late Enrollment Penalty</h3>
                 <p>If you delay enrolling in Part B without creditable health coverage, you may face a permanent penalty of 10% per year for every 12 months you were eligible but not enrolled.</p>
                 <p><strong>Exceptions:</strong> You can delay Part B without penalty if you're still working and covered by employer-sponsored health insurance, or if you meet other special circumstances.</p>
             </div>
@@ -778,7 +562,7 @@
         </div>
         <div class="container">
             <div class="info-card" style="max-width: 800px; margin: 40px auto;">
-                <h4>Who Qualifies for SEP?</h4>
+                <h3 class="hx4">Who Qualifies for SEP?</h3>
                 <p>You may be eligible for a Special Enrollment Period if you:</p>
                 <ul class="feature-list-standalone">
                     <li>Lost employer coverage after age 65</li>
@@ -805,7 +589,7 @@
         <div class="container">
             <div class="info-grid" style="max-width: 900px; margin: 0 auto;">
                 <div class="info-card">
-                    <h4>Annual Enrollment Period (AEP)</h4>
+                    <h3 class="hx4">Annual Enrollment Period (AEP)</h3>
                     <p><strong>October 15 through December 7 each year.</strong> Changes take effect January 1.</p>
                     <p>During AEP, you can:</p>
                     <ul class="feature-list-standalone">
@@ -818,7 +602,7 @@
                 </div>
 
                 <div class="info-card">
-                    <h4>Open Enrollment Period (OEP)</h4>
+                    <h3 class="hx4">Open Enrollment Period (OEP)</h3>
                     <p><strong>January 1 through March 31 each year.</strong> Changes take effect the first of the following month.</p>
                     <p>The OEP is specifically for people who are <strong>already enrolled in a Medicare Advantage plan</strong>. During this window, you can:</p>
                     <ul class="feature-list-standalone">
@@ -830,7 +614,7 @@
             </div>
 
             <div class="info-card" style="max-width: 900px; margin: 30px auto 0;">
-                <h4>General Enrollment Period (GEP)</h4>
+                <h3 class="hx4">General Enrollment Period (GEP)</h3>
                 <p><strong>January 1 through March 31 each year.</strong> Coverage begins July 1 of that year.</p>
                 <p>The GEP is <strong>not for changing plans</strong>. It's a safety net for people who missed their Initial Enrollment Period and need to sign up for Part A or Part B for the first time. Enrolling during GEP typically comes with a permanent late enrollment penalty of 10% per year for every 12 months you were eligible but didn't enroll.</p>
                 <div class="example-box" style="margin-top: 20px;">
@@ -853,19 +637,19 @@
         <div class="container">
             <div class="info-grid">
                 <div class="info-card">
-                    <h4>Original Medicare + Supplement + Part D</h4>
+                    <h3 class="hx4">Original Medicare + Supplement + Part D</h3>
                     <p>This option gives you maximum flexibility. You keep Original Medicare (Part A & B), add a Medigap supplement to cover costs, and add a standalone Part D prescription drug plan.</p>
                     <p><strong>Best for:</strong> People who like flexibility and want to see any doctor.</p>
                 </div>
                 <div class="info-card">
-                    <h4>Medicare Advantage</h4>
+                    <h3 class="hx4">Medicare Advantage</h3>
                     <p>Also called Part C, Medicare Advantage is an all-in-one alternative to Original Medicare. It includes Part A, Part B, and usually prescription drug coverage in one plan.</p>
                     <p><strong>Best for:</strong> People who want simplicity and lower premiums (often $0).</p>
                 </div>
                 <div class="info-card">
-                    <h4>Get Expert Guidance</h4>
+                    <h3 class="hx4">Get Expert Guidance</h3>
                     <p>The decision between Original Medicare and Medicare Advantage is complex and personal. That's where we come in. We'll help you understand your options and choose the right coverage for your situation.</p>
-                    <p><a href="/resources/" style="color: #5B8C6B; text-decoration: underline; font-weight: 600;">Explore our resources</a> to learn more about each option.</p>
+                    <p><a href="/resources/" style="color: var(--sage-ink); text-decoration: underline; font-weight: 600;">Explore our resources</a> to learn more about each option.</p>
                 </div>
             </div>
         </div>
@@ -875,7 +659,7 @@
     <section class="cta-section">
         <div class="container">
             <h2>Need Help Enrolling?</h2>
-            <p>We'll walk you through the enrollment process step by step. Getting Medicare doesn't have to be confusing—we're here to make it simple.</p>
+            <p>We'll walk you through the enrollment process step by step. Getting Medicare doesn't have to be confusing. We're here to make it simple.</p>
             <div class="cta-buttons">
                 <a href="/#contact" class="btn btn-primary">Schedule a Consultation</a>
                 <a href="tel:+14352461548" class="btn btn-secondary">Call (435) 246-1548</a>
@@ -885,85 +669,63 @@
     </section>
 
     <!-- Footer -->
-    <footer>
-        <div class="container">
-            <div class="footer-content">
-                <div class="footer-section">
-                    <div class="footer-brand">
-                        <svg xmlns="http://www.w3.org/2000/svg" class="footer-logo" viewBox="0 0 375 375" width="120" height="120" role="img" aria-label="HealthPlan Moms - Coverage Made Simple"><defs><g/><clipPath id="62a5dd6ee4"><path d="M 102.683594 49.007812 L 270.683594 49.007812 L 270.683594 325.757812 L 102.683594 325.757812 Z M 102.683594 49.007812 " clip-rule="nonzero"/></clipPath><clipPath id="2a292b0266"><path d="M 177 164 L 198 164 L 198 211.839844 L 177 211.839844 Z M 177 164 " clip-rule="nonzero"/></clipPath><clipPath id="5604cf875e"><path d="M 177 103.089844 L 198 103.089844 L 198 151 L 177 151 Z M 177 103.089844 " clip-rule="nonzero"/></clipPath><clipPath id="371a180a35"><path d="M 194 146 L 241.972656 146 L 241.972656 168 L 194 168 Z M 194 146 " clip-rule="nonzero"/></clipPath><clipPath id="dc5e2af6d9"><path d="M 133.222656 146 L 181 146 L 181 168 L 133.222656 168 Z M 133.222656 146 " clip-rule="nonzero"/></clipPath><clipPath id="3cead0ac92"><rect x="0" width="81" y="0" height="19"/></clipPath></defs><path fill="#5b8c6b" fill-opacity="1" d="M 186.78125 325.980469 C 140.46875 325.980469 102.726562 288.238281 102.726562 241.925781 L 102.726562 133.066406 C 102.726562 86.753906 140.46875 49.007812 186.78125 49.007812 C 233.09375 49.007812 270.839844 86.753906 270.839844 133.066406 L 270.839844 241.925781 C 270.839844 288.320312 233.09375 325.980469 186.78125 325.980469 Z"/><g clip-path="url(#62a5dd6ee4)"><path fill="#F7F3ED" d="M 186.78125 325.980469 C 140.46875 325.980469 102.726562 288.238281 102.726562 241.925781 L 102.726562 133.066406 C 102.726562 86.753906 140.46875 49.007812 186.78125 49.007812 C 233.09375 49.007812 270.839844 86.753906 270.839844 133.066406 L 270.839844 241.925781 C 270.839844 288.320312 233.09375 325.980469 186.78125 325.980469 Z M 186.78125 50.246094 C 141.128906 50.246094 103.960938 87.410156 103.960938 133.066406 L 103.960938 241.925781 C 103.960938 287.582031 141.128906 324.746094 186.78125 324.746094 C 232.4375 324.746094 269.601562 287.582031 269.601562 241.925781 L 269.601562 133.066406 C 269.601562 87.410156 232.4375 50.246094 186.78125 50.246094 Z M 186.78125 50.246094 " fill-opacity="1" fill-rule="nonzero"/></g><g clip-path="url(#2a292b0266)"><path fill="#F7F3ED" d="M 194.617188 183.023438 C 189.546875 172.761719 187.882812 165.695312 187.558594 164.167969 C 187.527344 164.167969 187.5 164.171875 187.46875 164.171875 C 187.457031 164.171875 187.445312 164.167969 187.433594 164.167969 C 187.109375 165.703125 185.445312 172.769531 180.378906 183.023438 C 174.628906 194.664062 175.722656 211.644531 187.496094 211.644531 L 187.5 211.644531 C 199.273438 211.644531 200.367188 194.664062 194.617188 183.023438 Z M 194.617188 183.023438 " fill-opacity="1" fill-rule="nonzero"/></g><g clip-path="url(#5604cf875e)"><path fill="#F7F3ED" d="M 180.378906 131.710938 C 185.449219 141.972656 187.113281 149.039062 187.4375 150.570312 C 187.464844 150.566406 187.496094 150.566406 187.527344 150.566406 C 187.539062 150.566406 187.550781 150.566406 187.558594 150.566406 C 187.886719 149.03125 189.550781 141.96875 194.617188 131.710938 C 200.367188 120.074219 199.273438 103.09375 187.5 103.089844 L 187.496094 103.089844 C 175.722656 103.09375 174.628906 120.074219 180.378906 131.710938 Z M 180.378906 131.710938 " fill-opacity="1" fill-rule="nonzero"/></g><g clip-path="url(#371a180a35)"><path fill="#F7F3ED" d="M 213.15625 150.25 C 202.890625 155.320312 195.824219 156.984375 194.296875 157.304688 C 194.296875 157.335938 194.300781 157.367188 194.300781 157.398438 C 194.300781 157.410156 194.300781 157.417969 194.300781 157.429688 C 195.835938 157.753906 202.898438 159.421875 213.15625 164.488281 C 224.792969 170.238281 241.773438 169.144531 241.773438 157.371094 L 241.773438 157.367188 C 241.773438 145.59375 224.792969 144.496094 213.15625 150.25 Z M 213.15625 150.25 " fill-opacity="1" fill-rule="nonzero"/></g><g clip-path="url(#dc5e2af6d9)"><path fill="#F7F3ED" d="M 161.839844 164.488281 C 172.105469 159.417969 179.171875 157.753906 180.699219 157.429688 C 180.699219 157.398438 180.695312 157.367188 180.695312 157.339844 C 180.695312 157.328125 180.695312 157.316406 180.695312 157.304688 C 179.160156 156.980469 172.097656 155.316406 161.839844 150.25 C 150.203125 144.496094 133.222656 145.59375 133.222656 157.367188 L 133.222656 157.371094 C 133.222656 169.144531 150.203125 170.238281 161.839844 164.488281 Z M 161.839844 164.488281 " fill-opacity="1" fill-rule="nonzero"/></g><path fill="#F7F3ED" d="M 206.238281 168.414062 C 197.609375 165.496094 192.695312 162.453125 191.65625 161.773438 C 191.640625 161.792969 191.625 161.8125 191.605469 161.828125 C 191.601562 161.835938 191.59375 161.839844 191.585938 161.847656 C 192.269531 162.894531 195.304688 167.804688 198.226562 176.429688 C 201.539062 186.214844 211.710938 195.152344 218.339844 188.527344 C 224.964844 181.898438 216.027344 171.730469 206.238281 168.414062 Z M 206.238281 168.414062 " fill-opacity="1" fill-rule="nonzero"/><path fill="#F7F3ED" d="M 169.351562 147.554688 C 177.980469 150.472656 182.890625 153.515625 183.933594 154.195312 C 183.949219 154.175781 183.964844 154.15625 183.984375 154.140625 C 183.988281 154.132812 183.996094 154.128906 184.003906 154.121094 C 183.320312 153.074219 180.28125 148.164062 177.363281 139.539062 C 174.050781 129.753906 163.878906 120.816406 157.25 127.441406 C 150.625 134.070312 159.5625 144.238281 169.351562 147.554688 Z M 169.351562 147.554688 " fill-opacity="1" fill-rule="nonzero"/><path fill="#F7F3ED" d="M 198.226562 139.539062 C 195.304688 148.167969 192.265625 153.082031 191.585938 154.125 C 191.601562 154.140625 191.621094 154.15625 191.640625 154.171875 C 191.644531 154.179688 191.652344 154.1875 191.65625 154.191406 C 192.703125 153.511719 197.617188 150.472656 206.238281 147.554688 C 216.023438 144.238281 224.964844 134.070312 218.339844 127.441406 C 211.710938 120.816406 201.539062 129.753906 198.226562 139.539062 Z M 198.226562 139.539062 " fill-opacity="1" fill-rule="nonzero"/><path fill="#F7F3ED" d="M 177.363281 176.429688 C 180.285156 167.800781 183.324219 162.886719 184.003906 161.84375 C 183.984375 161.828125 183.96875 161.8125 183.949219 161.796875 C 183.941406 161.789062 183.9375 161.78125 183.933594 161.777344 C 182.886719 162.457031 177.972656 165.496094 169.351562 168.414062 C 159.5625 171.730469 150.625 181.898438 157.25 188.527344 C 163.878906 195.152344 174.050781 186.214844 177.363281 176.429688 Z M 177.363281 176.429688 " fill-opacity="1" fill-rule="nonzero"/><text x="187.5" y="243" text-anchor="middle" font-family="'DM Serif Display', Georgia, serif" font-size="24" fill="#2c2c2c" font-weight="400">HealthPlan</text>
-<text x="187.5" y="273" text-anchor="middle" font-family="'DM Serif Display', Georgia, serif" font-size="24" fill="#2c2c2c" font-weight="400">Moms</text>
-<text x="187.5" y="293" text-anchor="middle" font-family="'DM Serif Display', Georgia, serif" font-size="7" fill="#2c2c2c" letter-spacing="3" font-weight="400">COVERAGE MADE SIMPLE</text>
-</svg>
-                        <p>Helping families find health coverage that works.</p>
-                    </div>
-                    <div class="social-links">
-                        <a href="https://www.instagram.com/wearehealthplanmoms/" target="_blank" rel="noopener noreferrer" title="Instagram"><svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"/><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/></svg></a>
-                        <a href="https://www.facebook.com/profile.php?id=61572026712949" target="_blank" rel="noopener noreferrer" title="Facebook"><svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"/></svg></a>
-                        <a href="https://www.linkedin.com/company/healthplanmoms/" target="_blank" rel="noopener noreferrer" title="LinkedIn"><svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"/><rect x="2" y="9" width="4" height="12"/><circle cx="4" cy="4" r="2"/></svg></a>
-                    </div>
-                </div>
+    </main>
 
-                <div class="footer-section">
-                    <h4>Quick Links</h4>
-                    <ul>
+    <footer class="site-footer">
+        <div class="site-footer__inner">
+            <div class="site-footer__grid">
+                <div class="site-footer__col">
+                    <a href="/" class="site-footer__brand"><img src="/logo-mark.svg" alt="" width="44" height="44">HealthPlan Moms</a>
+                    <p class="site-footer__tagline">Helping families find health coverage that works.</p>
+                    <ul class="site-footer__social" aria-label="Social media"><li><a href="https://www.instagram.com/wearehealthplanmoms/" target="_blank" rel="noopener noreferrer" aria-label="Instagram"><svg aria-hidden="true" focusable="false" xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"/><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/></svg></a></li><li><a href="https://www.facebook.com/profile.php?id=61572026712949" target="_blank" rel="noopener noreferrer" aria-label="Facebook"><svg aria-hidden="true" focusable="false" xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"/></svg></a></li><li><a href="https://www.linkedin.com/company/healthplanmoms/" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn"><svg aria-hidden="true" focusable="false" xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"/><rect x="2" y="9" width="4" height="12"/><circle cx="4" cy="4" r="2"/></svg></a></li></ul>
+                </div>
+                <div class="site-footer__col">
+                    <h2 class="site-footer__heading">Explore</h2>
+                    <ul class="site-footer__list">
                         <li><a href="/">Home</a></li>
                         <li><a href="/services/">Services</a></li>
                         <li><a href="/resources/">Resources</a></li>
                         <li><a href="/blog/">Blog</a></li>
-                        <li><a href="/#contact">Contact</a></li>
                         <li><a href="/meet-our-team/">Meet Our Team</a></li>
                         <li><a href="/join-our-team/">Join Our Team</a></li>
+                        <li><a href="/#contact">Contact</a></li>
                     </ul>
                 </div>
-
-                <div class="footer-section">
-                    <h4>Coverage Types</h4>
-                    <ul>
-                        <li><a href="/services/">Medicare Advantage</a></li>
-                        <li><a href="/services/">Medigap / Supplements</a></li>
-                        <li><a href="/services/">ACA Marketplace</a></li>
-                        <li><a href="/services/">Dental & Vision</a></li>
-                        <li><a href="/services/">Life Insurance</a></li>
+                <div class="site-footer__col">
+                    <h2 class="site-footer__heading">Coverage</h2>
+                    <ul class="site-footer__list">
+                        <li><a href="/services/#medicare-advantage">Medicare Advantage</a></li>
+                        <li><a href="/services/#medigap">Medigap / Supplements</a></li>
+                        <li><a href="/services/#aca">ACA Marketplace</a></li>
+                        <li><a href="/services/#dental-vision">Dental &amp; Vision</a></li>
+                        <li><a href="/services/#life-insurance">Life Insurance</a></li>
                     </ul>
                 </div>
-
-                <div class="footer-section">
-                    <h4>Contact Info</h4>
-                    <ul>
+                <div class="site-footer__col">
+                    <h2 class="site-footer__heading">Contact</h2>
+                    <ul class="site-footer__list">
                         <li><a href="tel:+14352461548">(435) 246-1548</a></li>
                         <li><a href="mailto:info@healthplanmoms.com">info@healthplanmoms.com</a></li>
-                        <li>Monday–Friday, 9am–5pm MT</li>
+                        <li class="site-footer__note">Monday to Friday, 9am to 5pm MT</li>
                     </ul>
                 </div>
             </div>
-
-            <div class="footer-bottom">
+            <div class="site-footer__bottom">
                 <p>&copy; 2026 HealthPlan Moms. All rights reserved.</p>
-                <p style="margin-top: 8px;">Medicare is a registered trademark of the U.S. Department of Health and Human Services.</p>
-                <p style="margin-top: 8px;"><a href="/terms/" style="color: #999; text-decoration: none; transition: color 0.3s ease;" onmouseover="this.style.color='#FFFFFF'" onmouseout="this.style.color='#999'">Terms of Service</a> &middot; <a href="/privacy/" style="color: #999; text-decoration: none; transition: color 0.3s ease;" onmouseover="this.style.color='#FFFFFF'" onmouseout="this.style.color='#999'">Privacy Policy</a></p>
-                <div class="legal-disclaimer">
-                    healthplanmoms.com and HealthPlan Moms is a DBA of Wildcat Insurance LLC, a licensed health insurance agency. The purpose of this site is the solicitation of insurance. Contact may be made by an insurance agent/producer or insurance company. HealthPlan Moms and the insurance plans presented on this site are not connected with or endorsed by the U.S. government or the federal Medicare program. We do not offer every plan available in your area. Any information we provide is limited to those plans we do offer in your area. Please contact Medicare.gov or 1-800-MEDICARE to get information on all of your options.
-                </div>
+                <p>Medicare is a registered trademark of the U.S. Department of Health and Human Services.</p>
+                <ul class="site-footer__legal-links" aria-label="Legal">
+                    <li><a href="/terms/">Terms of Service</a></li>
+                    <li><a href="/privacy/">Privacy Policy</a></li>
+                    <li><a href="/consent-disclosure/">Consent &amp; TPMO Disclosure</a></li>
+                </ul>
+                <p class="site-footer__disclaimer">healthplanmoms.com and HealthPlan Moms is a DBA of Wildcat Insurance LLC, a licensed health insurance agency. The purpose of this site is the solicitation of insurance. Contact may be made by an insurance agent/producer or insurance company. HealthPlan Moms and the insurance plans presented on this site are not connected with or endorsed by the U.S. government or the federal Medicare program. We do not offer every plan available in your area. Any information we provide is limited to those plans we do offer in your area. Please contact Medicare.gov or 1-800-MEDICARE to get information on all of your options.</p>
             </div>
         </div>
     </footer>
 
     <script>
-        // Mobile Menu Toggle
-        const hamburger = document.getElementById('hamburger');
-        const navLinks = document.getElementById('navLinks');
 
-        hamburger.addEventListener('click', () => {
-            hamburger.classList.toggle('active');
-            navLinks.classList.toggle('active');
-        });
 
-        document.querySelectorAll('.nav-links a').forEach(link => {
-            link.addEventListener('click', () => {
-                hamburger.classList.remove('active');
-                navLinks.classList.remove('active');
-            });
-        });
 
         // Fade-in animation on scroll
         const observerOptions = {
@@ -989,5 +751,6 @@
     <script src="/chat-widget.js" defer></script>
 
 <script src="/contact-modal.js"></script>
+<script src="/site-shell.js" defer></script>
 </body>
 </html>

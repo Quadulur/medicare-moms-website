@@ -18,6 +18,9 @@
     <meta property="og:type" content="article">
     <meta property="og:url" content="https://healthplanmoms.com/resources/aca-cheat-sheet-2026/">
     <link rel="canonical" href="https://healthplanmoms.com/resources/aca-cheat-sheet-2026/">
+    <meta property="og:image" content="https://healthplanmoms.com/logo-pill.png">
+    <meta property="og:image:width" content="1000">
+    <meta property="og:image:height" content="1574">
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -41,35 +44,14 @@
         * { margin: 0; padding: 0; box-sizing: border-box; }
         html { scroll-behavior: smooth; }
         body { font-family: 'Nunito', sans-serif; color: #2C2C2C; background-color: #FFFFFF; line-height: 1.6; }
-        h1, h2, h3, h4 { font-family: 'DM Serif Display', serif; font-weight: 700; line-height: 1.3; color: #2C2C2C; }
-        a { color: #5B8C6B; font-weight: 600; text-decoration: none; }
+        h1, h2, h3, h4, .hx3, .hx4 { font-family: 'DM Serif Display', serif; font-weight: 700; line-height: 1.3; color: #2C2C2C; }
+        a { color: var(--sage-ink); font-weight: 600; text-decoration: none; }
         a:hover { text-decoration: underline; }
-
-        nav { position: sticky; top: 0; background-color: white; box-shadow: 0 4px 12px rgba(44, 44, 44, 0.08); z-index: 1000; }
-        .nav-container { display: flex; justify-content: space-between; align-items: center; padding: 15px 20px; max-width: 1200px; margin: 0 auto; }
-        .logo { display: flex; align-items: center; gap: 10px; font-family: 'DM Serif Display', serif; font-size: 22px; font-weight: 700; color: #5B8C6B; text-decoration: none; }
-        .logo img { height: 60px; width: auto; }
-        .nav-links { display: flex; gap: 35px; list-style: none; align-items: center; }
-        .nav-links a { color: #2C2C2C; font-weight: 500; font-size: 15px; }
-        .nav-links a:hover { color: #5B8C6B; }
-        .hamburger { display: none; flex-direction: column; cursor: pointer; gap: 6px; }
-        .hamburger span { width: 25px; height: 3px; background-color: #2C2C2C; border-radius: 2px; }
-        @media (max-width: 768px) {
-            .hamburger { display: flex; }
-            .nav-links { position: absolute; top: 70px; left: 0; right: 0; background-color: white; flex-direction: column; gap: 15px; padding: 30px 20px; display: none; }
-            .nav-links.active { display: flex; }
-        }
-        .lang-toggle { margin-left: 8px; }
-        .lang-link { font-size: 13px; font-weight: 600; color: #4A5568; padding: 4px 12px; border-radius: 20px; background: #E8F0E5; display: inline-flex; align-items: center; gap: 2px; }
-        .lang-link:hover { background: #5B8C6B; color: white; }
-        .lang-active { color: #5B8C6B; font-weight: 700; }
-        .lang-inactive { color: #999; font-weight: 400; }
-        .lang-link:hover .lang-active, .lang-link:hover .lang-inactive { color: white; }
 
         .hero { background: linear-gradient(160deg, #F7F3ED 0%, #EDE8DF 40%, #E8F0E5 100%); padding: 70px 0 55px 0; }
         .hero-content { max-width: 1000px; margin: 0 auto; padding: 0 20px; }
         .breadcrumb { display: flex; gap: 8px; font-size: 14px; color: #4A5568; margin-bottom: 20px; flex-wrap: wrap; }
-        .category-pill { display: inline-block; background-color: #A8C5A0; color: white; padding: 6px 14px; border-radius: 20px; font-size: 13px; font-weight: 600; margin-bottom: 15px; }
+        .category-pill { display: inline-block; background-color: #E8F0E5; color: var(--sage-ink); padding: 6px 14px; border-radius: 20px; font-size: 13px; font-weight: 600; margin-bottom: 15px; }
         .hero h1 { color: #2C2C2C; margin-bottom: 15px; font-weight: 800; font-size: clamp(30px, 4.5vw, 44px); }
         .hero .lead { font-size: 18px; color: #3A4A63; line-height: 1.6; max-width: 760px; }
         .hero-meta { display: flex; gap: 18px; font-size: 14px; color: #4A5568; font-weight: 500; margin-top: 20px; flex-wrap: wrap; }
@@ -86,10 +68,10 @@
             border-radius: 6px;
             margin-bottom: 45px;
         }
-        .toc h3 { color: #3D6B4A; font-size: 16px; margin-bottom: 12px; font-family: 'Nunito', sans-serif; letter-spacing: 0.4px; text-transform: uppercase; font-weight: 800; }
+        .toc h3, .toc .hx3 { color: #3D6B4A; font-size: 16px; margin-bottom: 12px; font-family: 'Nunito', sans-serif; letter-spacing: 0.4px; text-transform: uppercase; font-weight: 800; }
         .toc ol { margin: 0 0 0 20px; column-count: 2; column-gap: 30px; }
         .toc li { font-size: 14px; line-height: 1.8; color: #4A5568; break-inside: avoid; }
-        .toc a { color: #5B8C6B; }
+        .toc a { color: var(--sage-ink); }
         @media (max-width: 600px) { .toc ol { column-count: 1; } }
 
         /* Section */
@@ -113,11 +95,11 @@
             overflow: hidden;
         }
         .chart-header {
-            background: linear-gradient(135deg, #5B8C6B 0%, #3D6B4A 100%);
+            background: var(--sage-ink);
             color: white;
             padding: 18px 24px;
         }
-        .chart-header h3 {
+        .chart-header h3, .chart-header .hx3 {
             color: white;
             font-family: 'DM Serif Display', serif;
             font-size: 20px;
@@ -186,13 +168,13 @@
         .chart-footer {
             padding: 16px 24px 20px;
             font-size: 12px;
-            color: #7A8FA4;
+            color: #56677a;
             border-top: 1px solid #F0EAE0;
             background-color: #FDFCF9;
             line-height: 1.7;
         }
         .chart-footer strong { color: #3D6B4A; }
-        .chart-footer a { color: #5B8C6B; word-break: break-word; }
+        .chart-footer a { color: var(--sage-ink); word-break: break-word; }
 
         /* Callout boxes */
         .callout {
@@ -207,7 +189,7 @@
         }
         .callout strong { color: #3D6B4A; }
         .callout.warn { background: #FDF6E3; border-left-color: #D4956B; }
-        .callout.warn strong { color: #B56B3D; }
+        .callout.warn strong { color: #9a5530; }
 
         /* Two-column simple */
         .two-col-grid {
@@ -223,63 +205,57 @@
             border-radius: 10px;
             padding: 22px 24px;
         }
-        .simple-card h4 { color: #3D6B4A; font-size: 17px; margin-bottom: 8px; font-family: 'Nunito', sans-serif; font-weight: 800; letter-spacing: 0.2px; }
+        .simple-card h4, .simple-card .hx4 { color: #3D6B4A; font-size: 17px; margin-bottom: 8px; font-family: 'Nunito', sans-serif; font-weight: 800; letter-spacing: 0.2px; }
         .simple-card .big-number { font-family: 'DM Serif Display', serif; font-size: 32px; color: #3D6B4A; line-height: 1; margin: 4px 0 8px; }
         .simple-card p { font-size: 13px; color: #4A5568; line-height: 1.6; }
 
         .sources { background: #F7F3ED; padding: 26px 28px; border-radius: 10px; margin-top: 50px; }
-        .sources h3 { font-size: 18px; margin-bottom: 12px; color: #2C2C2C; }
+        .sources h3, .sources .hx3 { font-size: 18px; margin-bottom: 12px; color: #2C2C2C; }
         .sources ol { margin-left: 22px; font-size: 13px; color: #4A5568; }
         .sources li { margin-bottom: 8px; line-height: 1.6; }
-        .sources a { color: #5B8C6B; word-break: break-word; }
-        .sources .disclaimer { font-size: 12px; color: #7A8FA4; margin-top: 14px; line-height: 1.6; }
+        .sources a { color: var(--sage-ink); word-break: break-word; }
+        .sources .disclaimer { font-size: 12px; color: #56677a; margin-top: 14px; line-height: 1.6; }
 
         .cta-section { background: linear-gradient(135deg, #F7F3ED 0%, #E8F0E5 100%); padding: 60px 20px; text-align: center; max-width: 1000px; margin: 0 auto; border-radius: 16px; }
         .cta-section h2 { margin-bottom: 14px; font-size: 28px; }
         .cta-section p { font-size: 16px; color: #4A5568; margin-bottom: 24px; max-width: 600px; margin-left: auto; margin-right: auto; }
         .btn { display: inline-flex; align-items: center; justify-content: center; padding: 12px 28px; border-radius: 8px; font-family: 'DM Serif Display', serif; font-size: 15px; font-weight: 600; text-decoration: none; transition: all 0.3s ease; }
-        .btn-primary { background: linear-gradient(135deg, #5B8C6B 0%, #3D6B4A 100%); color: white; }
+        .btn-primary { background: var(--sage-ink); color: white; }
         .btn-primary:hover { transform: translateY(-2px); box-shadow: 0 10px 30px rgba(91, 140, 107, 0.3); }
-
-        footer { background-color: #2C2C2C; color: white; padding: 60px 20px 20px; }
-        .footer-content { max-width: 1200px; margin: 0 auto; display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 40px; margin-bottom: 40px; }
-        .footer-section h4 { font-family: 'DM Serif Display', serif; font-size: 18px; margin-bottom: 20px; }
-        .footer-section ul { list-style: none; }
-        .footer-section ul li { margin-bottom: 12px; }
-        .footer-section a { color: #E0D9CE; font-size: 15px; font-weight: 400; }
-        .footer-section a:hover { color: #A8C5A0; }
-        .footer-brand { background-color: #1F1F1F; padding: 30px 20px; border-top: 1px solid #404040; text-align: center; }
-        .footer-brand p { color: #7A8FA4; font-size: 14px; }
 
         /* Print optimization */
         @media print {
-            nav, footer, .cta-section, .hero { display: none !important; }
+            .cta-section,.hero { display: none !important; }
             main { padding: 10px; }
             .chart-wrapper { box-shadow: none; break-inside: avoid; page-break-inside: avoid; }
             .toc { display: none; }
             body { font-size: 11pt; }
         }
     </style>
+    <link rel="stylesheet" href="/site-shell.css">
 </head>
 <body>
-    <nav>
-        <div class="nav-container">
-            <a href="/" class="logo"><img src="/logo-mark.svg" alt="HealthPlan Moms Logo">HealthPlan Moms</a>
-            <ul class="nav-links" id="navLinks">
+    <a class="skip-link" href="#main">Skip to content</a>
+    <header class="site-header">
+        <div class="site-header__inner">
+            <a href="/" class="site-logo"><img src="/logo-mark.svg" alt="" width="52" height="52">HealthPlan Moms</a>
+            <nav class="site-nav" aria-label="Main">
+            <ul class="site-nav__links" id="site-menu">
                 <li><a href="/services/">Services</a></li>
-                <li><a href="/resources/">Resources</a></li>
+                <li><a href="/resources/" aria-current="true">Resources</a></li>
                 <li><a href="/blog/">Blog</a></li>
                 <li><a href="/meet-our-team/">Meet Our Team</a></li>
-                <li><a href="/#contact">Contact</a></li>
-                <li class="lang-toggle">
-                    <a href="/es/recursos/" class="lang-link" title="Ver en Español">
-                        <span class="lang-active">EN</span> / <span class="lang-inactive">ES</span>
-                    </a>
-                </li>
+                <li><a href="/join-our-team/">Join Our Team</a></li>
+                <li class="site-lang"><a class="site-lang__link" href="/es/recursos/" hreflang="es" lang="es" aria-label="Ver en español"><span class="site-lang__on" aria-hidden="true">EN</span><span class="site-lang__sep" aria-hidden="true">/</span><span class="site-lang__off" aria-hidden="true">ES</span></a></li>
             </ul>
-            <div class="hamburger" id="hamburger"><span></span><span></span><span></span></div>
+            </nav>
+            <a class="site-call" href="tel:+14352461548"><svg aria-hidden="true" focusable="false" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.12.96.36 1.9.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.91.34 1.85.58 2.81.7A2 2 0 0 1 22 16.92z"/></svg><span class="site-call__label">Call</span> <span class="site-call__num">(435) 246-1548</span></a>
+            <button type="button" class="site-menu-btn" aria-label="Menu" aria-expanded="false" aria-controls="site-menu"><span class="site-menu-btn__bar"></span><span class="site-menu-btn__bar"></span><span class="site-menu-btn__bar"></span></button>
         </div>
-    </nav>
+    </header>
+
+    <main id="main" tabindex="-1">
+
 
     <section class="hero">
         <div class="hero-content">
@@ -299,15 +275,14 @@
         </div>
     </section>
 
-    <main>
-        <p class="intro">This reference pulls together every income and threshold figure HealthPlan Moms agents (and their clients) commonly need when talking about 2026 ACA Marketplace coverage. Every number on this page comes directly from the U.S. Department of Health &amp; Human Services, the IRS, or the Federal Register. All amounts apply to the <strong>48 contiguous states and Washington, D.C.</strong> Alaska and Hawai'i use separate, higher poverty guidelines &mdash; check <a href="https://aspe.hhs.gov/poverty-guidelines" target="_blank" rel="noopener">aspe.hhs.gov/poverty-guidelines</a> for those.</p>
+        <p class="intro">This reference pulls together every income and threshold figure HealthPlan Moms agents (and their clients) commonly need when talking about 2026 ACA Marketplace coverage. Every number on this page comes directly from the U.S. Department of Health &amp; Human Services, the IRS, or the Federal Register. All amounts apply to the <strong>48 contiguous states and Washington, D.C.</strong> Alaska and Hawai'i use separate, higher poverty guidelines; check <a href="https://aspe.hhs.gov/poverty-guidelines" target="_blank" rel="noopener">aspe.hhs.gov/poverty-guidelines</a> for those.</p>
 
         <div class="callout" style="background: linear-gradient(135deg, #E8F0E5 0%, #F7F3ED 100%); border-left-color: #3D6B4A;">
-            <strong>Prefer a printable one-page version?</strong> Grab the <a href="/resources/aca-quickref-2026/"><strong>2026 ACA Quick Reference</strong></a> &mdash; every number on this page condensed onto a single letter-size page, designed to print cleanly and live on your desk during enrollment conversations.
+            <strong>Prefer a printable one-page version?</strong> Grab the <a href="/resources/aca-quickref-2026/"><strong>2026 ACA Quick Reference</strong></a>: every number on this page condensed onto a single letter-size page, designed to print cleanly and live on your desk during enrollment conversations.
         </div>
 
         <div class="toc">
-            <h3>On This Page</h3>
+            <h2 class="hx3">On This Page</h2>
             <ol>
                 <li><a href="#fpl-table">2025 Federal Poverty Level chart</a></li>
                 <li><a href="#premium-contribution">Expected premium contribution by FPL</a></li>
@@ -331,7 +306,7 @@
                     <h3>2025 FPL by Household Size</h3>
                     <p>For determining 2026 ACA subsidy eligibility. 48 contiguous states and D.C.</p>
                 </div>
-                <div class="chart-scroll">
+                <div class="chart-scroll" tabindex="0" role="region" aria-label="2025 FPL by Household Size">
                     <table class="cs-table">
                         <thead>
                             <tr>
@@ -368,14 +343,14 @@
         <!-- ============== 2. EXPECTED PREMIUM CONTRIBUTION ============== -->
         <div class="chart-section" id="premium-contribution">
             <h2>2. Expected Premium Contribution by Income Level</h2>
-            <p class="section-intro">How much of a household's income goes toward the benchmark (second-lowest-cost Silver) plan under the IRS premium tax credit formula. Because enhanced subsidies from the Inflation Reduction Act expired December 31, 2025, the 2026 percentages reflect the <strong>pre-ARPA formula</strong> &mdash; which is higher at most income levels and excludes anyone above 400% FPL entirely.</p>
+            <p class="section-intro">How much of a household's income goes toward the benchmark (second-lowest-cost Silver) plan under the IRS premium tax credit formula. Because enhanced subsidies from the Inflation Reduction Act expired December 31, 2025, the 2026 percentages reflect the <strong>pre-ARPA formula</strong>, which is higher at most income levels and excludes anyone above 400% FPL entirely.</p>
 
             <div class="chart-wrapper">
                 <div class="chart-header">
                     <h3>Benchmark Silver Premium Cap (% of Income)</h3>
                     <p>Applicable Figure used in premium tax credit calculations, CY 2026.</p>
                 </div>
-                <div class="chart-scroll">
+                <div class="chart-scroll" tabindex="0" role="region" aria-label="Benchmark Silver Premium Cap (% of Income)">
                     <table class="cs-table">
                         <thead>
                             <tr>
@@ -413,7 +388,7 @@
                     <h3>Typical Income Lines for Medicaid &amp; CHIP</h3>
                     <p>Ranges reflect federal minimums and common state thresholds. Check your specific state for exact cutoffs.</p>
                 </div>
-                <div class="chart-scroll">
+                <div class="chart-scroll" tabindex="0" role="region" aria-label="Typical Income Lines for Medicaid &amp; CHIP">
                     <table class="cs-table">
                         <thead>
                             <tr>
@@ -424,32 +399,32 @@
                         </thead>
                         <tbody>
                             <tr>
-                                <td>Medicaid &mdash; adults (expansion states)</td>
+                                <td>Medicaid: adults (expansion states)</td>
                                 <td>Up to <strong>138% FPL</strong></td>
                                 <td>41 states + D.C. have expanded Medicaid as of 2026</td>
                             </tr>
                             <tr>
-                                <td>Medicaid &mdash; adults (non-expansion states)</td>
+                                <td>Medicaid: adults (non-expansion states)</td>
                                 <td>Varies; typically well below 100% FPL for parents, usually none for childless adults</td>
                                 <td>TX, FL, TN, AL, MS, SC, GA, WY, KS; coverage gap exists</td>
                             </tr>
                             <tr>
-                                <td>Medicaid &mdash; pregnant women</td>
+                                <td>Medicaid: pregnant women</td>
                                 <td>Typically 138&ndash;200% FPL (state-dependent)</td>
                                 <td>Many states extend higher, up to 300% FPL</td>
                             </tr>
                             <tr>
-                                <td>Medicaid &mdash; children</td>
+                                <td>Medicaid: children</td>
                                 <td>At least 138% FPL nationwide; many states higher</td>
                                 <td>Children under 19 have the broadest Medicaid eligibility</td>
                             </tr>
                             <tr>
-                                <td>CHIP &mdash; children</td>
+                                <td>CHIP: children</td>
                                 <td>Typically <strong>170% to 400% FPL</strong> depending on state</td>
                                 <td>Bridges the gap above Medicaid for children; median cutoff ~255% FPL</td>
                             </tr>
                             <tr>
-                                <td>CHIP &mdash; pregnant women (some states)</td>
+                                <td>CHIP: pregnant women (some states)</td>
                                 <td>Up to 300% FPL in participating states</td>
                                 <td>Not offered in all states</td>
                             </tr>
@@ -477,7 +452,7 @@
                     <h3>2026 MOOP by Plan Type &amp; CSR Level</h3>
                     <p>Federal limits for non-grandfathered individual and group plans.</p>
                 </div>
-                <div class="chart-scroll">
+                <div class="chart-scroll" tabindex="0" role="region" aria-label="2026 MOOP by Plan Type &amp; CSR Level">
                     <table class="cs-table">
                         <thead>
                             <tr>
@@ -489,9 +464,9 @@
                         </thead>
                         <tbody>
                             <tr><td>Standard (all plans)</td><td>All income levels</td><td>$10,600</td><td>$21,200</td></tr>
-                            <tr><td>CSR Silver &mdash; 73% AV</td><td>201&ndash;250% FPL</td><td>$8,450</td><td>$16,900</td></tr>
-                            <tr><td>CSR Silver &mdash; 87% AV</td><td>151&ndash;200% FPL</td><td>$3,500</td><td>$7,000</td></tr>
-                            <tr><td>CSR Silver &mdash; 94% AV</td><td>Up to 150% FPL</td><td>$3,500</td><td>$7,000</td></tr>
+                            <tr><td>CSR Silver (73% AV)</td><td>201&ndash;250% FPL</td><td>$8,450</td><td>$16,900</td></tr>
+                            <tr><td>CSR Silver (87% AV)</td><td>151&ndash;200% FPL</td><td>$3,500</td><td>$7,000</td></tr>
+                            <tr><td>CSR Silver (94% AV)</td><td>Up to 150% FPL</td><td>$3,500</td><td>$7,000</td></tr>
                         </tbody>
                     </table>
                 </div>
@@ -509,14 +484,14 @@
 
             <div class="two-col-grid">
                 <div class="simple-card">
-                    <h4>Affordability Threshold</h4>
+                    <h3 class="hx4">Affordability Threshold</h3>
                     <div class="big-number">9.96%</div>
                     <p>Employer-sponsored coverage is considered unaffordable if the employee's share of premium exceeds this percentage of household income. Above this line, the employee (and family) may qualify for Marketplace subsidies instead.</p>
                 </div>
                 <div class="simple-card">
-                    <h4>Family Affordability Basis</h4>
+                    <h3 class="hx4">Family Affordability Basis</h3>
                     <div class="big-number" style="font-size:22px;">Cost of family coverage</div>
-                    <p>For dependents, affordability is now measured against the cost to enroll the family &mdash; not just the employee. This expanded eligibility significantly starting in 2023 and remains in effect for 2026.</p>
+                    <p>For dependents, affordability is now measured against the cost to enroll the family, not just the employee. This expanded eligibility significantly starting in 2023 and remains in effect for 2026.</p>
                 </div>
             </div>
             <div class="callout">
@@ -527,14 +502,14 @@
         <!-- ============== 6. APTC REPAYMENT ============== -->
         <div class="chart-section" id="aptc-repay">
             <h2>6. APTC Repayment Limits (Tax Year 2025)</h2>
-            <p class="section-intro">If a household receives more Advance Premium Tax Credit (APTC) than they should have based on actual year-end income, they owe the excess back at tax time &mdash; but the IRS caps repayment at these amounts for lower-income households. <strong>Tax year 2026</strong> changes are noted below.</p>
+            <p class="section-intro">If a household receives more Advance Premium Tax Credit (APTC) than they should have based on actual year-end income, they owe the excess back at tax time, but the IRS caps repayment at these amounts for lower-income households. <strong>Tax year 2026</strong> changes are noted below.</p>
 
             <div class="chart-wrapper">
                 <div class="chart-header">
                     <h3>Maximum APTC Repayment for Tax Year 2025</h3>
                     <p>What a household owes back if they received too much advance premium tax credit.</p>
                 </div>
-                <div class="chart-scroll">
+                <div class="chart-scroll" tabindex="0" role="region" aria-label="Maximum APTC Repayment for Tax Year 2025">
                     <table class="cs-table">
                         <thead>
                             <tr>
@@ -571,7 +546,7 @@
                     <h3>Must-File Income Thresholds (under age 65)</h3>
                     <p>Based on the 2025 standard deduction by filing status.</p>
                 </div>
-                <div class="chart-scroll">
+                <div class="chart-scroll" tabindex="0" role="region" aria-label="Must-File Income Thresholds (under age 65)">
                     <table class="cs-table">
                         <thead>
                             <tr>
@@ -602,13 +577,13 @@
 
             <div class="two-col-grid">
                 <div class="simple-card">
-                    <h4>Affordability Cutoff</h4>
+                    <h3 class="hx4">Affordability Cutoff</h3>
                     <div class="big-number">8.05%</div>
                     <p>If the lowest-cost Marketplace or employer coverage (after APTC) would cost more than this percentage of household income, the enrollee age 30+ can purchase a catastrophic plan under the affordability exemption.</p>
                 </div>
                 <div class="simple-card">
-                    <h4>What Catastrophic Plans Cover</h4>
-                    <p style="font-size:13px;padding-top:8px;">Essential health benefits, three primary-care visits per year before deductible, and all preventive services. Very high deductibles (close to the annual MOOP) make them best suited as a bridge or emergency-only coverage option.</p>
+                    <h3 class="hx4">What Catastrophic Plans Cover</h3>
+                    <p style="padding-top:8px;">Essential health benefits, three primary-care visits per year before deductible, and all preventive services. Very high deductibles (close to the annual MOOP) make them best suited as a bridge or emergency-only coverage option.</p>
                 </div>
             </div>
             <div class="callout">
@@ -631,7 +606,6 @@
             </ol>
             <p class="disclaimer"><strong>Disclaimer:</strong> This page compiles publicly available federal data for quick reference. Amounts and rules are accurate as of publication (April 18, 2026) but change with new annual guidelines, IRS procedures, and legislation. Always verify with the original source or with a licensed insurance agent before relying on any figure for a specific enrollment or tax filing decision. HealthPlan Moms is a licensed insurance agency and is not affiliated with or endorsed by any government agency.</p>
         </div>
-    </main>
 
     <section class="cta-section">
         <h2>Need to Talk Through a Specific Situation?</h2>
@@ -639,47 +613,63 @@
         <a href="/#contact" class="btn btn-primary">Contact a Licensed Agent</a>
     </section>
 
-    <footer>
-        <div class="footer-content">
-            <div class="footer-section">
-                <h4>HealthPlan Moms</h4>
-                <ul>
-                    <li><a href="/">Home</a></li>
-                    <li><a href="/services/">Services</a></li>
-                    <li><a href="/resources/">Resources</a></li>
-                    <li><a href="/blog/">Blog</a></li>
-                </ul>
+    </main>
+
+    <footer class="site-footer">
+        <div class="site-footer__inner">
+            <div class="site-footer__grid">
+                <div class="site-footer__col">
+                    <a href="/" class="site-footer__brand"><img src="/logo-mark.svg" alt="" width="44" height="44">HealthPlan Moms</a>
+                    <p class="site-footer__tagline">Helping families find health coverage that works.</p>
+                    <ul class="site-footer__social" aria-label="Social media"><li><a href="https://www.instagram.com/wearehealthplanmoms/" target="_blank" rel="noopener noreferrer" aria-label="Instagram"><svg aria-hidden="true" focusable="false" xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"/><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/></svg></a></li><li><a href="https://www.facebook.com/profile.php?id=61572026712949" target="_blank" rel="noopener noreferrer" aria-label="Facebook"><svg aria-hidden="true" focusable="false" xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"/></svg></a></li><li><a href="https://www.linkedin.com/company/healthplanmoms/" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn"><svg aria-hidden="true" focusable="false" xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"/><rect x="2" y="9" width="4" height="12"/><circle cx="4" cy="4" r="2"/></svg></a></li></ul>
+                </div>
+                <div class="site-footer__col">
+                    <h2 class="site-footer__heading">Explore</h2>
+                    <ul class="site-footer__list">
+                        <li><a href="/">Home</a></li>
+                        <li><a href="/services/">Services</a></li>
+                        <li><a href="/resources/">Resources</a></li>
+                        <li><a href="/blog/">Blog</a></li>
+                        <li><a href="/meet-our-team/">Meet Our Team</a></li>
+                        <li><a href="/join-our-team/">Join Our Team</a></li>
+                        <li><a href="/#contact">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="site-footer__col">
+                    <h2 class="site-footer__heading">Coverage</h2>
+                    <ul class="site-footer__list">
+                        <li><a href="/services/#medicare-advantage">Medicare Advantage</a></li>
+                        <li><a href="/services/#medigap">Medigap / Supplements</a></li>
+                        <li><a href="/services/#aca">ACA Marketplace</a></li>
+                        <li><a href="/services/#dental-vision">Dental &amp; Vision</a></li>
+                        <li><a href="/services/#life-insurance">Life Insurance</a></li>
+                    </ul>
+                </div>
+                <div class="site-footer__col">
+                    <h2 class="site-footer__heading">Contact</h2>
+                    <ul class="site-footer__list">
+                        <li><a href="tel:+14352461548">(435) 246-1548</a></li>
+                        <li><a href="mailto:info@healthplanmoms.com">info@healthplanmoms.com</a></li>
+                        <li class="site-footer__note">Monday to Friday, 9am to 5pm MT</li>
+                    </ul>
+                </div>
             </div>
-            <div class="footer-section">
-                <h4>Company</h4>
-                <ul>
-                    <li><a href="/meet-our-team/">Meet Our Team</a></li>
-                    <li><a href="/join-our-team/">Join Our Team</a></li>
-                    <li><a href="/#contact">Contact Us</a></li>
-                </ul>
-            </div>
-            <div class="footer-section">
-                <h4>Legal</h4>
-                <ul>
-                    <li><a href="/privacy/">Privacy Policy</a></li>
+            <div class="site-footer__bottom">
+                <p>&copy; 2026 HealthPlan Moms. All rights reserved.</p>
+                <p>Medicare is a registered trademark of the U.S. Department of Health and Human Services.</p>
+                <ul class="site-footer__legal-links" aria-label="Legal">
                     <li><a href="/terms/">Terms of Service</a></li>
+                    <li><a href="/privacy/">Privacy Policy</a></li>
                     <li><a href="/consent-disclosure/">Consent &amp; TPMO Disclosure</a></li>
                 </ul>
+                <p class="site-footer__disclaimer">healthplanmoms.com and HealthPlan Moms is a DBA of Wildcat Insurance LLC, a licensed health insurance agency. The purpose of this site is the solicitation of insurance. Contact may be made by an insurance agent/producer or insurance company. HealthPlan Moms and the insurance plans presented on this site are not connected with or endorsed by the U.S. government or the federal Medicare program. We do not offer every plan available in your area. Any information we provide is limited to those plans we do offer in your area. Please contact Medicare.gov or 1-800-MEDICARE to get information on all of your options.</p>
             </div>
-        </div>
-        <div class="footer-brand">
-            <p>&copy; 2026 HealthPlan Moms. All rights reserved. We do not offer every plan available in your area. Any information we provide is limited to those plans we do offer in your area. Please contact Medicare.gov or 1-800-MEDICARE for Medicare options, or Healthcare.gov for ACA Marketplace options.</p>
         </div>
     </footer>
 
     <script>
-        const hamburger = document.getElementById('hamburger');
-        const navLinks = document.getElementById('navLinks');
-        hamburger.addEventListener('click', () => {
-            hamburger.classList.toggle('active');
-            navLinks.classList.toggle('active');
-        });
     </script>
 <script src="/contact-modal.js"></script>
+<script src="/site-shell.js" defer></script>
 </body>
 </html>

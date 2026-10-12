@@ -24,8 +24,11 @@
     <meta property="og:title" content="HealthPlan Moms Blog - Expert Insurance Tips & Guides">
     <meta property="og:description" content="Expert Medicare and health insurance tips, guides, and resources from the HealthPlan Moms team.">
     <meta property="og:type" content="website">
-    <meta property="og:url" content="https://healthplanmoms.com/blog">
+    <meta property="og:url" content="https://healthplanmoms.com/blog/">
     <link rel="canonical" href="https://healthplanmoms.com/blog/">
+    <meta property="og:image" content="https://healthplanmoms.com/logo-pill.png">
+    <meta property="og:image:width" content="1000">
+    <meta property="og:image:height" content="1574">
     <link rel="alternate" hreflang="en" href="https://healthplanmoms.com/blog/">
     <link rel="alternate" hreflang="es" href="https://healthplanmoms.com/es/blog/">
     <link rel="alternate" hreflang="x-default" href="https://healthplanmoms.com/blog/">
@@ -117,7 +120,7 @@
         }
 
         .btn-primary {
-            background: linear-gradient(135deg, #5B8C6B 0%, #3D6B4A 100%);
+            background: var(--sage-ink);
             color: white;
         }
 
@@ -128,7 +131,7 @@
 
         .btn-secondary {
             background-color: transparent;
-            color: #5B8C6B;
+            color: var(--sage-ink);
             border-color: #5B8C6B;
         }
 
@@ -143,141 +146,6 @@
         }
 
         /* ============ Navigation ============ */
-        nav {
-            position: sticky;
-            top: 0;
-            background-color: white;
-            box-shadow: 0 4px 12px rgba(44, 44, 44, 0.08);
-            z-index: 1000;
-        }
-
-        .nav-container {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            padding: 15px 20px;
-            max-width: 1200px;
-            margin: 0 auto;
-        }
-
-        .logo {
-            display: flex;
-            align-items: center;
-            gap: 10px;
-            font-family: 'DM Serif Display', serif;
-            font-size: 22px;
-            font-weight: 700;
-            color: #5B8C6B;
-            text-decoration: none;
-        }
-
-        .logo img {
-            height: 60px;
-            width: auto;
-            border-radius: 0;
-        }
-
-        .nav-links {
-            display: flex;
-            gap: 35px;
-            list-style: none;
-            align-items: center;
-        }
-
-        .nav-links a {
-            color: #2C2C2C;
-            text-decoration: none;
-            font-weight: 500;
-            transition: color 0.3s ease;
-            font-size: 15px;
-        }
-
-        .nav-links a:hover {
-            color: #5B8C6B;
-        }
-
-        .hamburger {
-            display: none;
-            flex-direction: column;
-            cursor: pointer;
-            gap: 6px;
-        }
-
-        .hamburger span {
-            width: 25px;
-            height: 3px;
-            background-color: #2C2C2C;
-            border-radius: 2px;
-            transition: all 0.3s ease;
-        }
-
-        .hamburger.active span:nth-child(1) {
-            transform: rotate(45deg) translate(10px, 10px);
-        }
-
-        .hamburger.active span:nth-child(2) {
-            opacity: 0;
-        }
-
-        .hamburger.active span:nth-child(3) {
-            transform: rotate(-45deg) translate(7px, -7px);
-        }
-
-        @media (max-width: 768px) {
-            .hamburger {
-                display: flex;
-            }
-
-            .nav-links {
-                position: absolute;
-                top: 70px;
-                left: 0;
-                right: 0;
-                background-color: white;
-                flex-direction: column;
-                gap: 15px;
-                padding: 30px 20px;
-                display: none;
-            }
-
-            .nav-links.active {
-                display: flex;
-            }
-        }
-
-        
-        .lang-toggle {
-            margin-left: 8px;
-        }
-        .lang-link {
-            text-decoration: none;
-            font-size: 13px;
-            font-weight: 600;
-            color: #4A5568;
-            padding: 4px 12px;
-            border-radius: 20px;
-            background: #E8F0E5;
-            transition: all 0.3s ease;
-            display: inline-flex;
-            align-items: center;
-            gap: 2px;
-        }
-        .lang-link:hover {
-            background: #5B8C6B;
-            color: white;
-        }
-        .lang-active {
-            color: #5B8C6B;
-            font-weight: 700;
-        }
-        .lang-inactive {
-            color: #999;
-            font-weight: 400;
-        }
-        .lang-link:hover .lang-active,
-        .lang-link:hover .lang-inactive {
-            color: white;
-        }
 
 /* ============ Hero Section ============ */
         .hero {
@@ -351,13 +219,13 @@
         }
 
         .category-btn:hover {
-            background-color: #A8C5A0;
+            background-color: var(--sage-ink);
             color: white;
-            border-color: #5B8C6B;
+            border-color: var(--sage-ink);
         }
 
         .category-btn.active {
-            background: linear-gradient(135deg, #5B8C6B 0%, #3D6B4A 100%);
+            background: var(--sage-ink);
             color: white;
             border-color: #3D6B4A;
         }
@@ -536,7 +404,7 @@
         }
 
         .blog-card a {
-            color: #5B8C6B;
+            color: var(--sage-ink);
             text-decoration: none;
             font-weight: 600;
             transition: color 0.3s ease;
@@ -606,7 +474,7 @@
         }
 
         .newsletter-form button:hover {
-            background-color: #A8C5A0;
+            background-color: var(--sage-deep);
             transform: translateY(-2px);
         }
 
@@ -628,106 +496,6 @@
         }
 
         /* ============ Footer ============ */
-        footer {
-            background-color: #2C2C2C;
-            color: #999;
-            padding: 50px 0 20px 0;
-        }
-
-        .footer-content {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-            gap: 40px;
-            max-width: 1200px;
-            margin: 0 auto;
-            padding: 0 20px;
-            margin-bottom: 30px;
-        }
-
-        .footer-section h4 {
-            color: white;
-            font-family: 'DM Serif Display', serif;
-            font-size: 16px;
-            margin-bottom: 16px;
-        }
-
-        .footer-section ul {
-            list-style: none;
-        }
-
-        .footer-section ul li {
-            margin-bottom: 12px;
-        }
-
-        .footer-section a {
-            color: #999;
-            text-decoration: none;
-            transition: color 0.3s ease;
-            font-size: 14px;
-        }
-
-        .footer-section a:hover {
-            color: #A8C5A0;
-        }
-
-        .footer-brand {
-            grid-column: 1 / -1;
-        }
-
-        .footer-brand p {
-            color: #999;
-            font-size: 14px;
-            margin-bottom: 16px;
-        }
-
-        .social-links {
-            display: flex;
-            gap: 16px;
-        }
-
-        .social-links a {
-            display: inline-flex;
-            align-items: center;
-            justify-content: center;
-            width: 40px;
-            height: 40px;
-            background-color: rgba(255, 255, 255, 0.1);
-            border-radius: 50%;
-            color: #A8C5A0;
-            text-decoration: none;
-            transition: all 0.3s ease;
-            font-size: 16px;
-        }
-
-        .social-links a:hover {
-            background-color: #5B8C6B;
-            color: white;
-        }
-
-        .footer-bottom {
-            text-align: center;
-            padding-top: 30px;
-            border-top: 1px solid rgba(255, 255, 255, 0.1);
-            max-width: 1200px;
-            margin: 0 auto;
-            padding-left: 20px;
-            padding-right: 20px;
-        }
-
-        .footer-bottom p {
-            color: #999;
-            font-size: 13px;
-            margin-bottom: 8px;
-        }
-
-        .legal-disclaimer {
-            color: #999;
-            font-size: 12px;
-            margin-top: 16px;
-            max-width: 600px;
-            margin-left: auto;
-            margin-right: auto;
-        }
 
         /* ============ Animation ============ */
         @keyframes fadeInUp {
@@ -809,7 +577,7 @@
         }
         .services-dropdown a:hover {
             background: #F7F3ED;
-            color: #5B8C6B;
+            color: var(--sage-ink);
         }
         @media (max-width: 768px) {
             .services-dropdown {
@@ -826,32 +594,32 @@
         }
 
     </style>
+    <link rel="stylesheet" href="/site-shell.css">
 </head>
 
 <body>
     <!-- Navigation -->
-    <nav>
-        <div class="nav-container">
-            <a href="/" class="logo"><img src="/logo-mark.svg" alt="HealthPlan Moms Logo">HealthPlan Moms</a>
-            <div class="hamburger" id="hamburger">
-                <span></span>
-                <span></span>
-                <span></span>
-            </div>
-            <ul class="nav-links" id="navLinks">
+    <a class="skip-link" href="#main">Skip to content</a>
+    <header class="site-header">
+        <div class="site-header__inner">
+            <a href="/" class="site-logo"><img src="/logo-mark.svg" alt="" width="52" height="52">HealthPlan Moms</a>
+            <nav class="site-nav" aria-label="Main">
+            <ul class="site-nav__links" id="site-menu">
                 <li><a href="/services/">Services</a></li>
                 <li><a href="/resources/">Resources</a></li>
-                <li><a href="/blog/">Blog</a></li>
+                <li><a href="/blog/" aria-current="page">Blog</a></li>
                 <li><a href="/meet-our-team/">Meet Our Team</a></li>
-                <li><a href="/#contact">Contact</a></li>
-                <li class="lang-toggle">
-                    <a href="/es/blog/" class="lang-link" title="Ver en Español">
-                        <span class="lang-active">EN</span> / <span class="lang-inactive">ES</span>
-                    </a>
-                </li>
+                <li><a href="/join-our-team/">Join Our Team</a></li>
+                <li class="site-lang"><a class="site-lang__link" href="/es/blog/" hreflang="es" lang="es" aria-label="Ver en español"><span class="site-lang__on" aria-hidden="true">EN</span><span class="site-lang__sep" aria-hidden="true">/</span><span class="site-lang__off" aria-hidden="true">ES</span></a></li>
             </ul>
+            </nav>
+            <a class="site-call" href="tel:+14352461548"><svg aria-hidden="true" focusable="false" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.12.96.36 1.9.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.91.34 1.85.58 2.81.7A2 2 0 0 1 22 16.92z"/></svg><span class="site-call__label">Call</span> <span class="site-call__num">(435) 246-1548</span></a>
+            <button type="button" class="site-menu-btn" aria-label="Menu" aria-expanded="false" aria-controls="site-menu"><span class="site-menu-btn__bar"></span><span class="site-menu-btn__bar"></span><span class="site-menu-btn__bar"></span></button>
         </div>
-    </nav>
+    </header>
+
+    <main id="main" tabindex="-1">
+
 
     <!-- Hero Section -->
     <section class="hero">
@@ -877,6 +645,7 @@
     <!-- Blog Post Grid Section -->
     <section class="blog-section section-padding">
         <div class="container">
+            <h2 class="visually-hidden">Latest articles</h2>
             <div class="blog-grid" id="blogGrid">
                 <!-- New: Medicare Advantage 2027 changes -->
                 <div class="blog-card fade-in" data-category="Medicare">
@@ -957,7 +726,7 @@
     <section class="newsletter-section">
         <div class="container">
             <div class="newsletter-content">
-                <h2>Stay in the Know</h2>
+                <h2>Enrollment Reminders, Straight to Your Inbox</h2>
                 <p class="lead">Get Medicare tips, enrollment reminders, and helpful guides delivered to your inbox.</p>
                 <form class="newsletter-form" id="newsletterForm" data-hpm-lead data-source="blog_newsletter" data-kind="newsletter">
                     <div class="hpm-hp" aria-hidden="true" style="position:absolute;left:-10000px;width:1px;height:1px;overflow:hidden;">
@@ -974,81 +743,63 @@
     </section>
 
     <!-- Footer -->
-    <footer>
-        <div class="container">
-            <div class="footer-content">
-                <div class="footer-brand">
-                    <h3 style="color: white; font-family: 'DM Serif Display', serif; font-size: 22px; margin-bottom: 16px;">HealthPlan Moms</h3>
-                    <p>Making health coverage simple, affordable, and accessible for everyone.</p>
-                    <div class="social-links">
-                        <a href="https://www.instagram.com/wearehealthplanmoms/" target="_blank" rel="noopener noreferrer" title="Instagram"><svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"/><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/></svg></a>
-                        <a href="https://www.facebook.com/profile.php?id=61572026712949" target="_blank" rel="noopener noreferrer" title="Facebook"><svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"/></svg></a>
-                        <a href="https://www.linkedin.com/company/healthplanmoms/" target="_blank" rel="noopener noreferrer" title="LinkedIn"><svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"/><rect x="2" y="9" width="4" height="12"/><circle cx="4" cy="4" r="2"/></svg></a>
-                    </div>
-                </div>
+    </main>
 
-                <div class="footer-section">
-                    <h4>Quick Links</h4>
-                    <ul>
+    <footer class="site-footer">
+        <div class="site-footer__inner">
+            <div class="site-footer__grid">
+                <div class="site-footer__col">
+                    <a href="/" class="site-footer__brand"><img src="/logo-mark.svg" alt="" width="44" height="44">HealthPlan Moms</a>
+                    <p class="site-footer__tagline">Helping families find health coverage that works.</p>
+                    <ul class="site-footer__social" aria-label="Social media"><li><a href="https://www.instagram.com/wearehealthplanmoms/" target="_blank" rel="noopener noreferrer" aria-label="Instagram"><svg aria-hidden="true" focusable="false" xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"/><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/></svg></a></li><li><a href="https://www.facebook.com/profile.php?id=61572026712949" target="_blank" rel="noopener noreferrer" aria-label="Facebook"><svg aria-hidden="true" focusable="false" xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"/></svg></a></li><li><a href="https://www.linkedin.com/company/healthplanmoms/" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn"><svg aria-hidden="true" focusable="false" xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"/><rect x="2" y="9" width="4" height="12"/><circle cx="4" cy="4" r="2"/></svg></a></li></ul>
+                </div>
+                <div class="site-footer__col">
+                    <h2 class="site-footer__heading">Explore</h2>
+                    <ul class="site-footer__list">
                         <li><a href="/">Home</a></li>
                         <li><a href="/services/">Services</a></li>
                         <li><a href="/resources/">Resources</a></li>
                         <li><a href="/blog/">Blog</a></li>
-                        <li><a href="/#contact">Contact</a></li>
                         <li><a href="/meet-our-team/">Meet Our Team</a></li>
                         <li><a href="/join-our-team/">Join Our Team</a></li>
+                        <li><a href="/#contact">Contact</a></li>
                     </ul>
                 </div>
-
-                <div class="footer-section">
-                    <h4>Coverage Types</h4>
-                    <ul>
-                        <li><a href="#plans">Medicare Advantage</a></li>
-                        <li><a href="#plans">Medigap / Supplements</a></li>
-                        <li><a href="#plans">ACA Marketplace</a></li>
-                        <li><a href="#plans">Dental & Vision</a></li>
-                        <li><a href="#plans">Life Insurance</a></li>
+                <div class="site-footer__col">
+                    <h2 class="site-footer__heading">Coverage</h2>
+                    <ul class="site-footer__list">
+                        <li><a href="/services/#medicare-advantage">Medicare Advantage</a></li>
+                        <li><a href="/services/#medigap">Medigap / Supplements</a></li>
+                        <li><a href="/services/#aca">ACA Marketplace</a></li>
+                        <li><a href="/services/#dental-vision">Dental &amp; Vision</a></li>
+                        <li><a href="/services/#life-insurance">Life Insurance</a></li>
                     </ul>
                 </div>
-
-                <div class="footer-section">
-                    <h4>Contact Info</h4>
-                    <ul>
+                <div class="site-footer__col">
+                    <h2 class="site-footer__heading">Contact</h2>
+                    <ul class="site-footer__list">
                         <li><a href="tel:+14352461548">(435) 246-1548</a></li>
                         <li><a href="mailto:info@healthplanmoms.com">info@healthplanmoms.com</a></li>
-                        <li>Monday–Friday, 9am–5pm MT</li>
+                        <li class="site-footer__note">Monday to Friday, 9am to 5pm MT</li>
                     </ul>
                 </div>
             </div>
-
-            <div class="footer-bottom">
+            <div class="site-footer__bottom">
                 <p>&copy; 2026 HealthPlan Moms. All rights reserved.</p>
-                <p style="margin-top: 8px;">Medicare is a registered trademark of the U.S. Department of Health and Human Services.</p>
-                <p style="margin-top: 8px;"><a href="/terms/" style="color: #999; text-decoration: none; transition: color 0.3s ease;" onmouseover="this.style.color='#A8C5A0'" onmouseout="this.style.color='#999'">Terms of Service</a> &middot; <a href="/privacy/" style="color: #999; text-decoration: none; transition: color 0.3s ease;" onmouseover="this.style.color='#A8C5A0'" onmouseout="this.style.color='#999'">Privacy Policy</a></p>
-                <div class="legal-disclaimer">
-                    healthplanmoms.com and HealthPlan Moms is a DBA of Wildcat Insurance LLC, a licensed health insurance agency. The purpose of this site is the solicitation of insurance. Contact may be made by an insurance agent/producer or insurance company. HealthPlan Moms and the insurance plans presented on this site are not connected with or endorsed by the U.S. government or the federal Medicare program. We do not offer every plan available in your area. Any information we provide is limited to those plans we do offer in your area. Please contact Medicare.gov or 1-800-MEDICARE to get information on all of your options.
-                </div>
+                <p>Medicare is a registered trademark of the U.S. Department of Health and Human Services.</p>
+                <ul class="site-footer__legal-links" aria-label="Legal">
+                    <li><a href="/terms/">Terms of Service</a></li>
+                    <li><a href="/privacy/">Privacy Policy</a></li>
+                    <li><a href="/consent-disclosure/">Consent &amp; TPMO Disclosure</a></li>
+                </ul>
+                <p class="site-footer__disclaimer">healthplanmoms.com and HealthPlan Moms is a DBA of Wildcat Insurance LLC, a licensed health insurance agency. The purpose of this site is the solicitation of insurance. Contact may be made by an insurance agent/producer or insurance company. HealthPlan Moms and the insurance plans presented on this site are not connected with or endorsed by the U.S. government or the federal Medicare program. We do not offer every plan available in your area. Any information we provide is limited to those plans we do offer in your area. Please contact Medicare.gov or 1-800-MEDICARE to get information on all of your options.</p>
             </div>
         </div>
     </footer>
 
     <script>
-        // Mobile Menu Toggle
-        const hamburger = document.getElementById('hamburger');
-        const navLinks = document.getElementById('navLinks');
 
-        hamburger.addEventListener('click', () => {
-            hamburger.classList.toggle('active');
-            navLinks.classList.toggle('active');
-        });
 
-        // Close menu when a link is clicked
-        document.querySelectorAll('.nav-links a').forEach(link => {
-            link.addEventListener('click', () => {
-                hamburger.classList.remove('active');
-                navLinks.classList.remove('active');
-            });
-        });
 
         // Fade-in animation on scroll
         const observerOptions = {
@@ -1139,5 +890,6 @@
 
 <script src="/lead-forms.js" defer></script>
 <script src="/contact-modal.js"></script>
+<script src="/site-shell.js" defer></script>
 </body>
 </html>

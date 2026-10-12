@@ -19,6 +19,9 @@
     <meta property="og:type" content="article">
     <meta property="og:url" content="https://healthplanmoms.com/blog/aca-marketplace-2027/">
     <link rel="canonical" href="https://healthplanmoms.com/blog/aca-marketplace-2027/">
+    <meta property="og:image" content="https://healthplanmoms.com/logo-pill.png">
+    <meta property="og:image:width" content="1000">
+    <meta property="og:image:height" content="1574">
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -42,35 +45,14 @@
         * { margin: 0; padding: 0; box-sizing: border-box; }
         html { scroll-behavior: smooth; }
         body { font-family: 'Nunito', sans-serif; color: #2C2C2C; background-color: #FFFFFF; line-height: 1.6; }
-        h1, h2, h3, h4 { font-family: 'DM Serif Display', serif; font-weight: 700; line-height: 1.3; color: #2C2C2C; }
-
-        nav { position: sticky; top: 0; background-color: white; box-shadow: 0 4px 12px rgba(44, 44, 44, 0.08); z-index: 1000; }
-        .nav-container { display: flex; justify-content: space-between; align-items: center; padding: 15px 20px; max-width: 1200px; margin: 0 auto; }
-        .logo { display: flex; align-items: center; gap: 10px; font-family: 'DM Serif Display', serif; font-size: 22px; font-weight: 700; color: #5B8C6B; text-decoration: none; }
-        .logo img { height: 60px; width: auto; }
-        .nav-links { display: flex; gap: 35px; list-style: none; align-items: center; }
-        .nav-links a { color: #2C2C2C; text-decoration: none; font-weight: 500; font-size: 15px; }
-        .nav-links a:hover { color: #5B8C6B; }
-        .hamburger { display: none; flex-direction: column; cursor: pointer; gap: 6px; }
-        .hamburger span { width: 25px; height: 3px; background-color: #2C2C2C; border-radius: 2px; }
-        @media (max-width: 768px) {
-            .hamburger { display: flex; }
-            .nav-links { position: absolute; top: 70px; left: 0; right: 0; background-color: white; flex-direction: column; gap: 15px; padding: 30px 20px; display: none; }
-            .nav-links.active { display: flex; }
-        }
-        .lang-toggle { margin-left: 8px; }
-        .lang-link { text-decoration: none; font-size: 13px; font-weight: 600; color: #4A5568; padding: 4px 12px; border-radius: 20px; background: #E8F0E5; display: inline-flex; align-items: center; gap: 2px; }
-        .lang-link:hover { background: #5B8C6B; color: white; }
-        .lang-active { color: #5B8C6B; font-weight: 700; }
-        .lang-inactive { color: #999; font-weight: 400; }
-        .lang-link:hover .lang-active, .lang-link:hover .lang-inactive { color: white; }
+        h1, h2, h3, h4, .hx4 { font-family: 'DM Serif Display', serif; font-weight: 700; line-height: 1.3; color: #2C2C2C; }
 
         .article-hero { background: linear-gradient(160deg, #F7F3ED 0%, #EDE8DF 40%, #E8F0E5 100%); padding: 60px 0 50px 0; }
         .article-hero-content { max-width: 900px; margin: 0 auto; padding: 0 20px; }
         .breadcrumb { display: flex; gap: 8px; font-size: 14px; color: #4A5568; margin-bottom: 20px; }
-        .breadcrumb a { color: #5B8C6B; text-decoration: none; }
+        .breadcrumb a { color: var(--sage-ink); text-decoration: none; }
         .breadcrumb a:hover { text-decoration: underline; }
-        .category-pill { display: inline-block; background-color: #A8C5A0; color: white; padding: 6px 14px; border-radius: 20px; font-size: 13px; font-weight: 600; margin-bottom: 15px; }
+        .category-pill { display: inline-block; background-color: #E8F0E5; color: var(--sage-ink); padding: 6px 14px; border-radius: 20px; font-size: 13px; font-weight: 600; margin-bottom: 15px; }
         .article-hero h1 { color: #2C2C2C; margin-bottom: 15px; font-weight: 800; font-size: clamp(32px, 5vw, 48px); }
         .article-meta { font-size: 14px; color: #4A5568; font-weight: 500; display: flex; gap: 20px; flex-wrap: wrap; }
 
@@ -78,52 +60,43 @@
         .article-content p { font-size: 16px; line-height: 1.8; color: #4A5568; margin-bottom: 20px; }
         .article-content h2 { margin-top: 45px; margin-bottom: 20px; font-size: 32px; }
         .article-content h3 { margin-top: 35px; margin-bottom: 15px; font-size: 22px; }
+        .article-content h3.hx4 { margin-top: 0; }
         .article-content ul, .article-content ol { margin-left: 25px; margin-bottom: 20px; color: #4A5568; }
         .article-content li { margin-bottom: 10px; line-height: 1.8; }
         .article-content strong { color: #2C2C2C; font-weight: 700; }
-        .article-content a { color: #5B8C6B; font-weight: 600; }
+        .article-content a { color: var(--sage-ink); font-weight: 600; }
         .article-content a:hover { text-decoration: underline; }
 
         .stat-block { background: linear-gradient(135deg, #E8F0E5 0%, #F7F3ED 100%); border-radius: 12px; padding: 30px; margin: 35px 0; text-align: center; }
         .stat-block .stat-number { font-family: 'DM Serif Display', serif; font-size: 48px; font-weight: 800; color: #3D6B4A; line-height: 1; margin-bottom: 8px; }
         .stat-block .stat-label { font-size: 15px; color: #4A5568; font-weight: 600; }
-        .stat-block .stat-source { font-size: 12px; color: #7A8FA4; margin-top: 10px; }
+        .stat-block .stat-source { font-size: 12px; color: #56677a; margin-top: 10px; }
 
         .callout { background-color: #F7F3ED; border-left: 5px solid #5B8C6B; padding: 20px 25px; margin: 30px 0; border-radius: 4px; }
-        .callout h4 { color: #5B8C6B; margin-bottom: 10px; font-size: 16px; }
+        .callout h4, .callout .hx4 { color: var(--sage-ink); margin-bottom: 10px; font-size: 16px; }
         .callout p { color: #4A5568; margin-bottom: 0; font-size: 15px; line-height: 1.7; }
 
         .callout.warning { background-color: #FDF6E3; border-left-color: #D4956B; }
-        .callout.warning h4 { color: #B56B3D; }
+        .callout.warning h4, .callout.warning .hx4 { color: #9a5530; }
 
         .sources-list { background-color: #F7F3ED; padding: 30px; border-radius: 10px; margin-top: 50px; }
         .sources-list h3 { color: #2C2C2C; margin-top: 0; margin-bottom: 15px; font-size: 20px; }
         .sources-list ol { margin-left: 20px; font-size: 14px; }
         .sources-list li { margin-bottom: 10px; line-height: 1.6; color: #4A5568; }
-        .sources-list a { color: #5B8C6B; word-break: break-word; }
+        .sources-list a { color: var(--sage-ink); word-break: break-word; }
 
         .author-box { background-color: #F7F3ED; border: 1px solid #E0D9CE; padding: 30px; border-radius: 10px; margin: 60px auto; max-width: 760px; }
-        .author-box h4 { color: #2C2C2C; margin-bottom: 8px; font-size: 18px; }
+        .author-box h4, .author-box .hx4 { color: #2C2C2C; margin-bottom: 8px; font-size: 18px; }
         .author-box p { color: #4A5568; font-size: 15px; margin-bottom: 15px; }
-        .author-box a { color: #5B8C6B; text-decoration: none; font-weight: 600; }
+        .author-box a { color: var(--sage-ink); text-decoration: none; font-weight: 600; }
 
         .cta-section { background: linear-gradient(135deg, #F7F3ED 0%, #E8F0E5 100%); padding: 80px 20px; text-align: center; max-width: 900px; margin: 0 auto; border-radius: 16px; }
         .cta-section h2 { margin-bottom: 20px; font-size: 32px; }
         .cta-section p { font-size: 18px; color: #4A5568; margin-bottom: 30px; max-width: 600px; margin-left: auto; margin-right: auto; }
 
         .btn { display: inline-flex; align-items: center; justify-content: center; padding: 12px 28px; border-radius: 8px; font-family: 'DM Serif Display', serif; font-size: 15px; font-weight: 600; cursor: pointer; text-decoration: none; transition: all 0.3s ease; }
-        .btn-primary { background: linear-gradient(135deg, #5B8C6B 0%, #3D6B4A 100%); color: white; }
+        .btn-primary { background: var(--sage-ink); color: white; }
         .btn-primary:hover { transform: translateY(-2px); box-shadow: 0 10px 30px rgba(91, 140, 107, 0.3); }
-
-        footer { background-color: #2C2C2C; color: white; padding: 60px 20px 20px; }
-        .footer-content { max-width: 1200px; margin: 0 auto; display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 40px; margin-bottom: 40px; }
-        .footer-section h4 { font-family: 'DM Serif Display', serif; font-size: 18px; margin-bottom: 20px; }
-        .footer-section ul { list-style: none; }
-        .footer-section ul li { margin-bottom: 12px; }
-        .footer-section a { color: #E0D9CE; text-decoration: none; font-size: 15px; }
-        .footer-section a:hover { color: #A8C5A0; }
-        .footer-brand { background-color: #1F1F1F; padding: 30px 20px; border-top: 1px solid #404040; text-align: center; }
-        .footer-brand p { color: #7A8FA4; font-size: 14px; }
 
         /* ============ FPL Chart ============ */
         .fpl-chart-wrapper {
@@ -135,7 +108,7 @@
             overflow: hidden;
         }
         .fpl-chart-header {
-            background: linear-gradient(135deg, #5B8C6B 0%, #3D6B4A 100%);
+            background: var(--sage-ink);
             color: white;
             padding: 22px 24px;
         }
@@ -206,20 +179,20 @@
         .fpl-chart-footer {
             padding: 16px 24px 20px;
             font-size: 12px;
-            color: #7A8FA4;
+            color: #56677a;
             border-top: 1px solid #F0EAE0;
             background-color: #FDFCF9;
             line-height: 1.6;
         }
         .fpl-chart-footer strong { color: #3D6B4A; }
-        .fpl-chart-footer a { color: #5B8C6B; font-weight: 600; }
+        .fpl-chart-footer a { color: var(--sage-ink); font-weight: 600; }
 
         @media (max-width: 600px) {
             .fpl-chart-header { padding: 18px 18px; }
             .fpl-chart-header h3 { font-size: 18px; }
             .fpl-chart-footer { padding: 14px 18px 18px; }
         }
-        .cheatsheet-cta { display: flex; align-items: center; justify-content: space-between; gap: 24px; background: linear-gradient(135deg, #5B8C6B 0%, #3D6B4A 100%); border-radius: 14px; padding: 28px 30px; margin: 10px 0 35px; box-shadow: 0 10px 30px rgba(61, 107, 74, 0.25); }
+        .cheatsheet-cta { display: flex; align-items: center; justify-content: space-between; gap: 24px; background: var(--sage-ink); border-radius: 14px; padding: 28px 30px; margin: 10px 0 35px; box-shadow: 0 10px 30px rgba(61, 107, 74, 0.25); }
         .cheatsheet-cta-label { display: inline-block; background: rgba(255,255,255,0.18); color: #fff; font-size: 12px; font-weight: 700; letter-spacing: 0.06em; text-transform: uppercase; padding: 4px 12px; border-radius: 20px; margin-bottom: 10px; }
         .article-content .cheatsheet-cta h3 { color: #fff; margin: 0 0 8px; font-size: 24px; }
         .article-content .cheatsheet-cta p { color: #E8F0E5; margin: 0; font-size: 15px; line-height: 1.6; }
@@ -227,28 +200,30 @@
         .article-content a.cheatsheet-cta-btn:hover { text-decoration: none; box-shadow: 0 10px 30px rgba(0,0,0,0.2); }
         @media (max-width: 640px) { .cheatsheet-cta { flex-direction: column; align-items: flex-start; padding: 24px 22px; } .article-content a.cheatsheet-cta-btn { white-space: normal; } }
     </style>
+    <link rel="stylesheet" href="/site-shell.css">
 </head>
 <body>
-    <nav>
-        <div class="nav-container">
-            <a href="/" class="logo"><img src="/logo-mark.svg" alt="HealthPlan Moms Logo">HealthPlan Moms</a>
-            <ul class="nav-links" id="navLinks">
+    <a class="skip-link" href="#main">Skip to content</a>
+    <header class="site-header">
+        <div class="site-header__inner">
+            <a href="/" class="site-logo"><img src="/logo-mark.svg" alt="" width="52" height="52">HealthPlan Moms</a>
+            <nav class="site-nav" aria-label="Main">
+            <ul class="site-nav__links" id="site-menu">
                 <li><a href="/services/">Services</a></li>
                 <li><a href="/resources/">Resources</a></li>
-                <li><a href="/blog/">Blog</a></li>
+                <li><a href="/blog/" aria-current="true">Blog</a></li>
                 <li><a href="/meet-our-team/">Meet Our Team</a></li>
-                <li><a href="/#contact">Contact</a></li>
-                <li class="lang-toggle">
-                    <a href="/es/blog/" class="lang-link" title="Ver en Español">
-                        <span class="lang-active">EN</span> / <span class="lang-inactive">ES</span>
-                    </a>
-                </li>
+                <li><a href="/join-our-team/">Join Our Team</a></li>
+                <li class="site-lang"><a class="site-lang__link" href="/es/blog/" hreflang="es" lang="es" aria-label="Ver en español"><span class="site-lang__on" aria-hidden="true">EN</span><span class="site-lang__sep" aria-hidden="true">/</span><span class="site-lang__off" aria-hidden="true">ES</span></a></li>
             </ul>
-            <div class="hamburger" id="hamburger">
-                <span></span><span></span><span></span>
-            </div>
+            </nav>
+            <a class="site-call" href="tel:+14352461548"><svg aria-hidden="true" focusable="false" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.12.96.36 1.9.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.91.34 1.85.58 2.81.7A2 2 0 0 1 22 16.92z"/></svg><span class="site-call__label">Call</span> <span class="site-call__num">(435) 246-1548</span></a>
+            <button type="button" class="site-menu-btn" aria-label="Menu" aria-expanded="false" aria-controls="site-menu"><span class="site-menu-btn__bar"></span><span class="site-menu-btn__bar"></span><span class="site-menu-btn__bar"></span></button>
         </div>
-    </nav>
+    </header>
+
+    <main id="main" tabindex="-1">
+
 
     <section class="article-hero">
         <div class="article-hero-content">
@@ -275,7 +250,7 @@
         <h2>Where Subsidies Stand for 2027</h2>
 
         <div class="callout warning">
-            <h4>Bottom line: the enhanced subsidies are still gone</h4>
+            <h3 class="hx4">Bottom line: the enhanced subsidies are still gone</h3>
             <p>The enhanced premium tax credits from the American Rescue Plan and Inflation Reduction Act <strong>expired December 31, 2025</strong> and have not been renewed. On December 11, 2025 the Senate failed to advance a three-year extension (51 to 48, short of the 60 votes needed). In January 2026 the House passed its own three-year extension 230 to 196, but the Senate has not acted on it. Unless Congress acts, 2027 subsidies are calculated under the original ACA formula, the same one used for 2026.</p>
         </div>
 
@@ -313,7 +288,7 @@
                 <h3>2026 Federal Poverty Guidelines</h3>
                 <p>Used to determine subsidy eligibility for Coverage Year 2027. Amounts shown are annual household income.</p>
             </div>
-            <div class="fpl-chart-scroll">
+            <div class="fpl-chart-scroll" tabindex="0" role="region" aria-label="2026 Federal Poverty Guidelines">
                 <table class="fpl-chart-table">
                     <thead>
                         <tr>
@@ -362,7 +337,7 @@
                 <h3>Benchmark Silver Premium Cap, % of Income</h3>
                 <p>IRS Revenue Procedure 2026-26, taxable years beginning in 2027, with 2026 for comparison.</p>
             </div>
-            <div class="fpl-chart-scroll">
+            <div class="fpl-chart-scroll" tabindex="0" role="region" aria-label="Benchmark Silver Premium Cap, % of Income">
                 <table class="fpl-chart-table">
                     <thead>
                         <tr><th>Household Income</th><th>2027</th><th>2026</th></tr>
@@ -399,7 +374,7 @@
                 <h3>2027 Maximum Out-of-Pocket by Plan and CSR Level</h3>
                 <p>Annual in-network limit for essential health benefits.</p>
             </div>
-            <div class="fpl-chart-scroll">
+            <div class="fpl-chart-scroll" tabindex="0" role="region" aria-label="2027 Maximum Out-of-Pocket by Plan and CSR Level">
                 <table class="fpl-chart-table">
                     <thead>
                         <tr><th>Plan Type</th><th>Income Level</th><th>Individual</th><th>Family</th></tr>
@@ -492,7 +467,7 @@
 
         <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: 16px; margin: 15px 0 30px;">
             <div class="stat-block" style="margin: 0; padding: 28px 20px;">
-                <div class="stat-number" style="font-size: 56px; line-height: 1;">4 <span style="font-size: 32px; color: #5B8C6B;">out of</span> 5</div>
+                <div class="stat-number" style="font-size: 56px; line-height: 1;">4 <span style="font-size: 32px; color: var(--sage-ink);">out of</span> 5</div>
                 <div class="stat-label" style="font-size: 15px; margin-top: 10px;">of our clients pay less than <strong>$120 per month</strong></div>
             </div>
             <div class="stat-block" style="margin: 0; padding: 28px 20px;">
@@ -520,7 +495,7 @@
                 <li>Colorado HCPF, Medicaid work requirements FAQs (H.R. 1 implementation timeline), <a href="https://hcpf.colorado.gov/work-requirements-faqs" target="_blank" rel="noopener">hcpf.colorado.gov</a></li>
                 <li>One Big Beautiful Bill Act of 2025 (H.R. 1), <a href="https://www.congress.gov" target="_blank" rel="noopener">congress.gov</a></li>
             </ol>
-            <p style="font-size: 13px; color: #7A8FA4; margin-top: 15px;">Figures reflect publicly available data as of September 10, 2026. Premiums and state rules vary; consult a licensed agent or Healthcare.gov for personalized pricing in your area.</p>
+            <p style="font-size: 13px; color: #56677a; margin-top: 15px;">Figures reflect publicly available data as of September 10, 2026. Premiums and state rules vary; consult a licensed agent or Healthcare.gov for personalized pricing in your area.</p>
         </div>
     </article>
 
@@ -536,47 +511,63 @@
         <a href="/#contact" class="btn btn-primary">Talk to a Licensed Agent</a>
     </section>
 
-    <footer>
-        <div class="footer-content">
-            <div class="footer-section">
-                <h4>HealthPlan Moms</h4>
-                <ul>
-                    <li><a href="/">Home</a></li>
-                    <li><a href="/services/">Services</a></li>
-                    <li><a href="/resources/">Resources</a></li>
-                    <li><a href="/blog/">Blog</a></li>
-                </ul>
+    </main>
+
+    <footer class="site-footer">
+        <div class="site-footer__inner">
+            <div class="site-footer__grid">
+                <div class="site-footer__col">
+                    <a href="/" class="site-footer__brand"><img src="/logo-mark.svg" alt="" width="44" height="44">HealthPlan Moms</a>
+                    <p class="site-footer__tagline">Helping families find health coverage that works.</p>
+                    <ul class="site-footer__social" aria-label="Social media"><li><a href="https://www.instagram.com/wearehealthplanmoms/" target="_blank" rel="noopener noreferrer" aria-label="Instagram"><svg aria-hidden="true" focusable="false" xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"/><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/></svg></a></li><li><a href="https://www.facebook.com/profile.php?id=61572026712949" target="_blank" rel="noopener noreferrer" aria-label="Facebook"><svg aria-hidden="true" focusable="false" xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"/></svg></a></li><li><a href="https://www.linkedin.com/company/healthplanmoms/" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn"><svg aria-hidden="true" focusable="false" xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"/><rect x="2" y="9" width="4" height="12"/><circle cx="4" cy="4" r="2"/></svg></a></li></ul>
+                </div>
+                <div class="site-footer__col">
+                    <h2 class="site-footer__heading">Explore</h2>
+                    <ul class="site-footer__list">
+                        <li><a href="/">Home</a></li>
+                        <li><a href="/services/">Services</a></li>
+                        <li><a href="/resources/">Resources</a></li>
+                        <li><a href="/blog/">Blog</a></li>
+                        <li><a href="/meet-our-team/">Meet Our Team</a></li>
+                        <li><a href="/join-our-team/">Join Our Team</a></li>
+                        <li><a href="/#contact">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="site-footer__col">
+                    <h2 class="site-footer__heading">Coverage</h2>
+                    <ul class="site-footer__list">
+                        <li><a href="/services/#medicare-advantage">Medicare Advantage</a></li>
+                        <li><a href="/services/#medigap">Medigap / Supplements</a></li>
+                        <li><a href="/services/#aca">ACA Marketplace</a></li>
+                        <li><a href="/services/#dental-vision">Dental &amp; Vision</a></li>
+                        <li><a href="/services/#life-insurance">Life Insurance</a></li>
+                    </ul>
+                </div>
+                <div class="site-footer__col">
+                    <h2 class="site-footer__heading">Contact</h2>
+                    <ul class="site-footer__list">
+                        <li><a href="tel:+14352461548">(435) 246-1548</a></li>
+                        <li><a href="mailto:info@healthplanmoms.com">info@healthplanmoms.com</a></li>
+                        <li class="site-footer__note">Monday to Friday, 9am to 5pm MT</li>
+                    </ul>
+                </div>
             </div>
-            <div class="footer-section">
-                <h4>Company</h4>
-                <ul>
-                    <li><a href="/meet-our-team/">Meet Our Team</a></li>
-                    <li><a href="/join-our-team/">Join Our Team</a></li>
-                    <li><a href="/#contact">Contact Us</a></li>
-                </ul>
-            </div>
-            <div class="footer-section">
-                <h4>Legal</h4>
-                <ul>
-                    <li><a href="/privacy/">Privacy Policy</a></li>
+            <div class="site-footer__bottom">
+                <p>&copy; 2026 HealthPlan Moms. All rights reserved.</p>
+                <p>Medicare is a registered trademark of the U.S. Department of Health and Human Services.</p>
+                <ul class="site-footer__legal-links" aria-label="Legal">
                     <li><a href="/terms/">Terms of Service</a></li>
+                    <li><a href="/privacy/">Privacy Policy</a></li>
                     <li><a href="/consent-disclosure/">Consent &amp; TPMO Disclosure</a></li>
                 </ul>
+                <p class="site-footer__disclaimer">healthplanmoms.com and HealthPlan Moms is a DBA of Wildcat Insurance LLC, a licensed health insurance agency. The purpose of this site is the solicitation of insurance. Contact may be made by an insurance agent/producer or insurance company. HealthPlan Moms and the insurance plans presented on this site are not connected with or endorsed by the U.S. government or the federal Medicare program. We do not offer every plan available in your area. Any information we provide is limited to those plans we do offer in your area. Please contact Medicare.gov or 1-800-MEDICARE to get information on all of your options.</p>
             </div>
-        </div>
-        <div class="footer-brand">
-            <p>&copy; 2026 HealthPlan Moms. All rights reserved. We do not offer every plan available in your area. Any information we provide is limited to those plans we do offer in your area. Please contact Medicare.gov or 1-800-MEDICARE to get information on all of your Medicare options, or Healthcare.gov for ACA Marketplace options.</p>
         </div>
     </footer>
 
     <script>
-        const hamburger = document.getElementById('hamburger');
-        const navLinks = document.getElementById('navLinks');
-        hamburger.addEventListener('click', () => {
-            hamburger.classList.toggle('active');
-            navLinks.classList.toggle('active');
-        });
     </script>
 <script src="/contact-modal.js"></script>
+<script src="/site-shell.js" defer></script>
 </body>
 </html>

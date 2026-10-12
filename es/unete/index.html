@@ -12,15 +12,18 @@
 
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Únete a Nuestro Equipo - HealthPlan Moms</title>
+    <title>Únete a nuestro equipo - HealthPlan Moms</title>
     <meta name="description" content="Únete al equipo de HealthPlan Moms. Buscamos agentes de seguros licenciados para ayudar a las familias. Horario flexible y comisiones competitivas.">
     <meta name="keywords" content="trabajos de agente de seguros, carrera de agente de Medicare, oportunidades de carrera en seguros, únete a HealthPlan Moms, reclutamiento de agentes de seguros">
-    <meta property="og:title" content="Únete a Nuestro Equipo - HealthPlan Moms">
+    <meta property="og:title" content="Únete a nuestro equipo - HealthPlan Moms">
     <meta property="og:description" content="Únete al equipo de HealthPlan Moms. Buscamos agentes de seguros licenciados apasionados que quieran ayudar a las familias a encontrar la cobertura correcta.">
     <meta property="og:type" content="website">
     <meta property="og:url" content="https://healthplanmoms.com/es/unete/">
     <meta property="og:site_name" content="HealthPlan Moms">
     <link rel="canonical" href="https://healthplanmoms.com/es/unete/">
+    <meta property="og:image" content="https://healthplanmoms.com/logo-pill.png">
+    <meta property="og:image:width" content="1000">
+    <meta property="og:image:height" content="1574">
     <link rel="alternate" hreflang="en" href="https://healthplanmoms.com/join-our-team/">
     <link rel="alternate" hreflang="es" href="https://healthplanmoms.com/es/unete/">
     <link rel="alternate" hreflang="x-default" href="https://healthplanmoms.com/join-our-team/">
@@ -59,7 +62,7 @@
             line-height: 1.6;
         }
 
-        h1, h2, h3, h4, h5, h6 {
+        h1, h2, h3, h4, h5, h6, .hx4 {
             font-family: 'DM Serif Display', serif;
             font-weight: 600;
             color: var(--navy-dark);
@@ -82,19 +85,6 @@
         }
 
         /* Navigation */
-        nav {
-            position: fixed;
-            top: 0;
-            left: 0;
-            right: 0;
-            background-color: var(--white);
-            z-index: 1000;
-            box-shadow: var(--shadow-md);
-            padding: 1rem 2rem;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-        }
 
         .nav-logo {
             display: flex;
@@ -103,7 +93,7 @@
             font-family: 'DM Serif Display', serif;
             font-size: 1.5rem;
             font-weight: 700;
-            color: var(--sage-primary);
+            color: var(--sage-ink);
         }
 
         .nav-logo img {
@@ -114,101 +104,6 @@
 
         .nav-logo span {
             color: var(--navy-dark);
-        }
-
-        .logo {
-            display: flex;
-            align-items: center;
-            gap: 10px;
-            font-family: 'DM Serif Display', serif;
-            font-size: 22px;
-            font-weight: 700;
-            color: var(--sage-primary);
-            text-decoration: none;
-        }
-
-        .logo img {
-            height: 60px;
-            width: auto;
-        }
-
-        .lang-toggle { margin-left: 8px; }
-        .lang-link {
-            text-decoration: none;
-            font-size: 13px;
-            font-weight: 600;
-            color: #4A5568;
-            padding: 4px 12px;
-            border-radius: 20px;
-            background: #E8F0E5;
-            transition: all 0.3s ease;
-            display: inline-flex;
-            align-items: center;
-            gap: 2px;
-        }
-        .lang-link:hover { background: var(--sage-primary); color: var(--white); }
-        .lang-active { color: var(--sage-primary); font-weight: 700; }
-        .lang-inactive { color: #999; font-weight: 400; }
-        .lang-link:hover .lang-active,
-        .lang-link:hover .lang-inactive { color: var(--white); }
-
-        .nav-links {
-            display: flex;
-            list-style: none;
-            gap: 2rem;
-            align-items: center;
-        }
-
-        .nav-links a {
-            text-decoration: none;
-            color: var(--text-dark);
-            font-weight: 500;
-            font-size: 0.95rem;
-            transition: color 0.3s ease;
-        }
-
-        .nav-links a:hover {
-            color: var(--sage-primary);
-        }
-
-        .nav-links .cta-button {
-            background: linear-gradient(135deg, var(--sage-primary), var(--sage-dark));
-            color: var(--white);
-            padding: 0.75rem 1.5rem;
-            border-radius: 6px;
-            transition: transform 0.3s ease, box-shadow 0.3s ease;
-        }
-
-        .nav-links .cta-button:hover {
-            transform: translateY(-2px);
-            box-shadow: var(--shadow-md);
-        }
-
-        .hamburger {
-            display: none;
-            flex-direction: column;
-            cursor: pointer;
-            gap: 5px;
-        }
-
-        .hamburger span {
-            width: 25px;
-            height: 3px;
-            background-color: var(--navy-dark);
-            border-radius: 2px;
-            transition: 0.3s;
-        }
-
-        .hamburger.active span:nth-child(1) {
-            transform: rotate(45deg) translate(8px, 8px);
-        }
-
-        .hamburger.active span:nth-child(2) {
-            opacity: 0;
-        }
-
-        .hamburger.active span:nth-child(3) {
-            transform: rotate(-45deg) translate(7px, -7px);
         }
 
         /* Hero Section */
@@ -240,7 +135,7 @@
 
         .hero .secondary-text {
             font-size: 1rem;
-            color: var(--sage-primary);
+            color: var(--sage-ink);
             font-weight: 600;
             margin-top: 1.5rem;
             animation: slideUp 0.8s ease 0.6s backwards;
@@ -268,7 +163,7 @@
         }
 
         .btn-primary {
-            background: linear-gradient(135deg, var(--sage-primary), var(--sage-dark));
+            background: var(--sage-ink);
             color: var(--white);
         }
 
@@ -279,7 +174,7 @@
 
         .btn-secondary {
             background-color: var(--white);
-            color: var(--sage-primary);
+            color: var(--sage-ink);
             border: 2px solid var(--sage-primary);
         }
 
@@ -459,7 +354,7 @@
 
         .story-milestone {
             background-color: var(--gray-light-bg);
-            color: var(--sage-primary);
+            color: var(--sage-ink);
             padding: 0.5rem 1rem;
             border-radius: 6px;
             display: inline-block;
@@ -498,7 +393,7 @@
             width: 60px;
             height: 60px;
             border-radius: 50%;
-            background: linear-gradient(135deg, var(--sage-primary), var(--sage-dark));
+            background: var(--sage-ink);
             color: var(--white);
             font-size: 1.8rem;
             font-weight: 700;
@@ -541,7 +436,7 @@
             text-align: center;
             margin-top: 3rem;
             font-size: 1.1rem;
-            color: var(--sage-primary);
+            color: var(--sage-ink);
             font-weight: 600;
         }
 
@@ -586,7 +481,7 @@
             color: var(--white);
         }
 
-        .faq-question h4 {
+        .faq-question h4, .faq-question .hx4 {
             margin: 0;
             font-size: 1rem;
             color: inherit;
@@ -595,7 +490,7 @@
         .faq-toggle {
             font-size: 1.5rem;
             transition: transform 0.3s ease;
-            color: var(--sage-primary);
+            color: var(--sage-ink);
         }
 
         .faq-question.active .faq-toggle {
@@ -676,7 +571,7 @@
 
         .form-submit {
             width: 100%;
-            background: linear-gradient(135deg, var(--sage-primary), var(--sage-dark));
+            background: var(--sage-ink);
             color: var(--white);
             padding: 1rem;
             border: none;
@@ -705,7 +600,7 @@
         }
 
         .form-contact a {
-            color: var(--sage-primary);
+            color: var(--sage-ink);
             text-decoration: none;
             font-weight: 600;
         }
@@ -715,83 +610,6 @@
         }
 
         /* Footer */
-        footer {
-            background-color: var(--navy-dark);
-            color: var(--white);
-            padding: 3rem 2rem;
-            text-align: center;
-        }
-
-        .footer-content {
-            max-width: 1200px;
-            margin: 0 auto;
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-            gap: 2rem;
-            text-align: left;
-            margin-bottom: 2rem;
-        }
-
-        .footer-section h4 {
-            color: var(--sage-primary);
-            margin-bottom: 1rem;
-            font-size: 1rem;
-        }
-
-        .footer-section ul {
-            list-style: none;
-        }
-
-        .footer-section ul li {
-            margin-bottom: 0.5rem;
-        }
-
-        .footer-section a {
-            color: #A0ACBE;
-            text-decoration: none;
-            font-size: 0.9rem;
-            transition: color 0.3s ease;
-        }
-
-        .footer-section a:hover {
-            color: var(--sage-primary);
-        }
-
-        .footer-social {
-            display: flex;
-            gap: 1rem;
-            justify-content: center;
-            margin-top: 1rem;
-        }
-
-        .footer-social a {
-            display: inline-flex;
-            align-items: center;
-            justify-content: center;
-            width: 40px;
-            height: 40px;
-            background-color: var(--navy-gray);
-            border-radius: 50%;
-            color: var(--white);
-            transition: background-color 0.3s ease;
-        }
-
-        .footer-social a:hover {
-            background-color: var(--sage-primary);
-        }
-
-        .footer-bottom {
-            border-top: 1px solid var(--navy-gray);
-            padding-top: 2rem;
-            text-align: center;
-            color: #A0ACBE;
-            font-size: 0.9rem;
-        }
-
-        .footer-disclaimer {
-            font-size: 0.8rem;
-            margin-top: 1rem;
-        }
 
         /* Animations */
         @keyframes fadeIn {
@@ -833,33 +651,6 @@
 
             h2 {
                 font-size: 1.8rem;
-            }
-
-            .nav-links {
-                display: none;
-            }
-
-            .hamburger {
-                display: flex;
-            }
-
-            .nav-links.active {
-                display: flex;
-                position: absolute;
-                top: 70px;
-                left: 0;
-                right: 0;
-                flex-direction: column;
-                background-color: var(--white);
-                padding: 2rem;
-                gap: 1rem;
-                box-shadow: var(--shadow-md);
-                z-index: 999;
-            }
-
-            .nav-links.active a {
-                display: block;
-                padding: 0.5rem 0;
             }
 
             section {
@@ -904,18 +695,6 @@
                 display: none !important;
             }
 
-            .footer-content {
-                grid-template-columns: 1fr;
-                text-align: center;
-            }
-
-            .footer-section a {
-                color: #A0ACBE;
-            }
-
-            .footer-social {
-                justify-content: center;
-            }
         }
 
         /* Success Message */
@@ -1023,37 +802,41 @@
             }
         }
 
-            .footer-logo { display: block; max-width: 180px; height: auto; margin-bottom: 15px; }
     </style>
+    <link rel="stylesheet" href="/site-shell.css">
 </head>
 <body>
     <!-- Navigation -->
-    <nav>
-        <a href="/es/" class="logo"><img src="/logo-mark.svg" alt="HealthPlan Moms Logo">HealthPlan Moms</a>
-        <ul class="nav-links">
-            <li><a href="/es/">Inicio</a></li>
-            <li><a href="/es/equipo/">Conoce Nuestro Equipo</a></li>
-            <li class="lang-toggle">
-                <a href="/join-our-team/" class="lang-link" title="View in English">
-                    <span class="lang-inactive">EN</span> / <span class="lang-active">ES</span>
-                </a>
-            </li>
-        </ul>
-        <div class="hamburger">
-            <span></span>
-            <span></span>
-            <span></span>
+    <a class="skip-link" href="#main">Saltar al contenido</a>
+    <header class="site-header">
+        <div class="site-header__inner">
+            <a href="/es/" class="site-logo"><img src="/logo-mark.svg" alt="" width="52" height="52">HealthPlan Moms</a>
+            <nav class="site-nav" aria-label="Principal">
+            <ul class="site-nav__links" id="site-menu">
+                <li><a href="/es/servicios/">Servicios</a></li>
+                <li><a href="/es/recursos/">Recursos</a></li>
+                <li><a href="/es/blog/">Blog</a></li>
+                <li><a href="/es/equipo/">Nuestro Equipo</a></li>
+                <li><a href="/es/unete/" aria-current="page">Únete al Equipo</a></li>
+                <li class="site-lang"><a class="site-lang__link" href="/join-our-team/" hreflang="en" lang="en" aria-label="View in English"><span class="site-lang__off" aria-hidden="true">EN</span><span class="site-lang__sep" aria-hidden="true">/</span><span class="site-lang__on" aria-hidden="true">ES</span></a></li>
+            </ul>
+            </nav>
+            <a class="site-call" href="tel:+14352461548"><svg aria-hidden="true" focusable="false" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.12.96.36 1.9.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.91.34 1.85.58 2.81.7A2 2 0 0 1 22 16.92z"/></svg><span class="site-call__label">Llamar</span> <span class="site-call__num">(435) 246-1548</span></a>
+            <button type="button" class="site-menu-btn" aria-label="Menú" aria-expanded="false" aria-controls="site-menu"><span class="site-menu-btn__bar"></span><span class="site-menu-btn__bar"></span><span class="site-menu-btn__bar"></span></button>
         </div>
-    </nav>
+    </header>
+
+    <main id="main" tabindex="-1">
+
 
     <!-- Hero Section -->
     <section class="hero">
         <div class="hero-content">
-            <h1>Tu Familia Viene Primero. Tu Carrera También Puede.</h1>
+            <h1>Tu familia viene primero. Tu carrera también puede.</h1>
             <p class="subheadline">Construye un negocio de seguros flexible en tus propios términos. Trabaja alrededor del horario de tu familia, no al revés.</p>
             <div class="hero-buttons">
-                <button class="btn btn-primary" onclick="document.getElementById('application').scrollIntoView({ behavior: 'smooth' })">Comienza tu Viaje</button>
-                <button class="btn btn-secondary" onclick="document.getElementById('opportunity').scrollIntoView({ behavior: 'smooth' })">Aprende Más</button>
+                <button class="btn btn-primary" onclick="document.getElementById('application').scrollIntoView({ behavior: 'smooth' })">Comienza tu viaje</button>
+                <button class="btn btn-secondary" onclick="document.getElementById('opportunity').scrollIntoView({ behavior: 'smooth' })">Aprende más</button>
             </div>
             <p class="secondary-text">✓ No se necesita experiencia, te enseñaremos todo</p>
         </div>
@@ -1061,13 +844,13 @@
 
     <!-- The Opportunity -->
     <section id="opportunity" class="opportunity">
-        <h2>La Oportunidad</h2>
+        <h2>La oportunidad</h2>
         <div class="opportunity-content">
-            <p>HealthPlan Moms es una comunidad de personas construyendo algo significativo — negocios de seguros exitosos que ayudan a familias. No somos solo otra agencia, somos un movimiento de padres, personas en transición de carrera y emprendedores que están tomando control de sus futuros.</p>
+            <p>HealthPlan Moms es una comunidad de personas construyendo algo significativo: negocios de seguros exitosos que ayudan a familias. No somos solo otra agencia, somos un movimiento de padres, personas en transición de carrera y emprendedores que están tomando control de sus futuros.</p>
 
             <p>La industria de seguros está en auge. Una población envejecida significa que la inscripción en Medicare está en un máximo histórico. La Ley de Cuidado de Salud Asequible continúa abriendo puertas. Los productos complementarios (dental, visión, seguros de vida) están en demanda constante. Este es uno de los mejores momentos para entrar en el negocio de seguros.</p>
 
-            <p>Y aquí está la cosa: las mamás están posicionadas de manera única para sobresalir en este campo. Entiendes las relaciones. Sabes cómo hacer malabarismos con múltiples prioridades. Puedes conectar con los clientes a un nivel personal. *Entiendes* lo que significa equilibrarlo todo.</p>
+            <p>Y aquí está la cosa: las mamás están posicionadas de manera única para sobresalir en este campo. Entiendes las relaciones. Sabes cómo hacer malabarismos con múltiples prioridades. Puedes conectar con los clientes a un nivel personal. <em>Entiendes</em> lo que significa equilibrarlo todo.</p>
 
             <div class="opportunity-highlight">
                 <strong>HealthPlan Moms está respaldado por Wildcat Insurance,</strong> una compañía de seguros confiable y establecida con décadas de experiencia. No estás solo. Te estás uniendo a un sistema comprobado con soporte real y capacitación real.
@@ -1077,53 +860,53 @@
 
     <!-- Benefits -->
     <section id="benefits" class="benefits">
-        <h2>¿Por Qué Unirse a HealthPlan Moms?</h2>
+        <h2>¿Por qué unirse a HealthPlan Moms?</h2>
         <div class="benefits-grid">
             <div class="benefit-card">
                 <div class="benefit-icon"><svg width="40" height="40" viewBox="0 0 48 48" fill="none" stroke="#5B8C6B" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="24" cy="24" r="18"/><path d="M24 12v12l8 5"/></svg></div>
-                <h3>Horario Flexible</h3>
+                <h3>Horario flexible</h3>
                 <p>Trabaja alrededor de las horas de escuela, tiempo de siesta y práctica de fútbol. Tómate las mañanas libres si lo necesitas. Tu negocio se adapta a tu vida, no al revés.</p>
             </div>
 
             <div class="benefit-card">
                 <div class="benefit-icon"><svg width="40" height="40" viewBox="0 0 48 48" fill="none" stroke="#5B8C6B" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="24" cy="24" r="20"/><path d="M24 10v28M10 24h28M16.97 16.97l15.56 15.56M31.03 16.97l-15.56 15.56"/></svg></div>
-                <h3>Trabaja Desde Cualquier Lugar</h3>
+                <h3>Trabaja desde cualquier lugar</h3>
                 <p>Tu mesa de la cocina. Una cafetería. La fila de la escuela. Todo lo que necesitas es una laptop e internet. Construye tu negocio desde donde te sientas más cómodo.</p>
             </div>
 
             <div class="benefit-card">
                 <div class="benefit-icon"><svg width="40" height="40" viewBox="0 0 48 48" fill="none" stroke="#5B8C6B" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M12 16c0-2.21 1.79-4 4-4h16c2.21 0 4 1.79 4 4v16c0 2.21-1.79 4-4 4H16c-2.21 0-4-1.79-4-4V16z"/><path d="M24 22v8M20 26h8"/></svg></div>
-                <h3>Ingreso Adicional</h3>
+                <h3>Ingreso adicional</h3>
                 <p>Agrega una corriente de ingresos flexible que se adapte a tu vida. Tus comisiones son tuyas para quedarte, y estableces tu propio ritmo.</p>
             </div>
 
             <div class="benefit-card">
                 <div class="benefit-icon"><svg width="40" height="40" viewBox="0 0 48 48" fill="none" stroke="#5B8C6B" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M16 30h2v4h-2v-4zM23 18h2v16h-2V18zM30 24h2v10h-2v-10z"/><path d="M12 38h24M14 14c0-2.21 1.79-4 4-4s4 1.79 4 4-1.79 4-4 4-4-1.79-4-4zM30 12c0-2.21 1.79-4 4-4s4 1.79 4 4-1.79 4-4 4-4-1.79-4-4z"/></svg></div>
-                <h3>No Se Requiere Experiencia</h3>
+                <h3>No se requiere experiencia</h3>
                 <p>¿Cambiando de carrera? ¿Primer propietario de negocio? Está bien. Proporcionamos capacitación exhaustiva, apoyo de licencia y educación continua para ayudarte a tener éxito.</p>
             </div>
 
             <div class="benefit-card">
                 <div class="benefit-icon"><svg width="40" height="40" viewBox="0 0 48 48" fill="none" stroke="#5B8C6B" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="16" cy="14" r="3"/><path d="M12 20c0-1.1.9-2 2-2h4c1.1 0 2 .9 2 2v8h-8v-8z"/><circle cx="32" cy="14" r="3"/><path d="M28 20c0-1.1.9-2 2-2h4c1.1 0 2 .9 2 2v8h-8v-8z"/><path d="M12 28h24M14 32h4M30 32h4"/></svg></div>
-                <h3>Comunidad y Mentoría</h3>
+                <h3>Comunidad y mentoría</h3>
                 <p>Nunca estás solo. Tendrás un equipo de agentes experimentados que han estado donde tú estás. Capacitación regular, coaching grupal, y una red de mujeres que verdaderamente entienden tu viaje.</p>
             </div>
 
             <div class="benefit-card">
                 <div class="benefit-icon"><svg width="40" height="40" viewBox="0 0 48 48" fill="none" stroke="#5B8C6B" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M24 10l3.5 7h7.5l-6 4.5 2.5 7-6.5-5-6.5 5 2.5-7-6-4.5h7.5l3.5-7z"/></svg></div>
-                <h3>Sé Tu Propio Jefe</h3>
+                <h3>Sé tu propio jefe</h3>
                 <p>Construye TU negocio, no el de otro. Toma tus propias decisiones. Establece tus propias horas. Quédate con lo que ganes. Verdadero emprendimiento, respaldado por nuestro sistema de apoyo.</p>
             </div>
 
             <div class="benefit-card">
                 <div class="benefit-icon"><svg width="40" height="40" viewBox="0 0 48 48" fill="none" stroke="#5B8C6B" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="24" cy="24" r="14"/><path d="M24 16v8l-5 3"/></svg></div>
-                <h3>Ingresos Residuales</h3>
+                <h3>Ingresos residuales</h3>
                 <p>Gana renovaciones año tras año en cada póliza que escribas. Los clientes renuevan su seguro anualmente, lo que significa ingresos recurrentes incluso mientras construyes un nuevo negocio.</p>
             </div>
 
             <div class="benefit-card">
                 <div class="benefit-icon"><svg width="40" height="40" viewBox="0 0 48 48" fill="none" stroke="#5B8C6B" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="24" cy="24" r="16"/><path d="M24 12v24M12 24h24M16.97 16.97l16.06 16.06M31.03 16.97l-16.06 16.06"/></svg></div>
-                <h3>Múltiples Líneas de Productos</h3>
+                <h3>Múltiples líneas de productos</h3>
                 <p>Medicare. ACA. Medigap. Dental. Visión. Seguro de Vida. Diversifica tus corrientes de ingresos y ayuda a los clientes con todas sus necesidades de seguros en un lugar.</p>
             </div>
         </div>
@@ -1131,7 +914,7 @@
 
     <!-- What You'll Be Offering (SPANISH) -->
     <section id="products" class="products-section">
-        <h2>Lo Que Puedes Ofrecer</h2>
+        <h2>Lo que puedes ofrecer</h2>
         <p class="section-subtitle">Aquí está el menú completo. La palabra clave es <em>puedes</em>. Nunca estás atrapado con nosotros, así que vende lo que se ajuste a tu vida, sáltate lo que no, y mantén cualquier cartera de negocios que ya tengas en otro lugar.</p>
 
         <div class="products-grid">
@@ -1143,31 +926,31 @@
 
             <div class="product-item">
                 <div class="product-icon"><svg width="42" height="42" viewBox="0 0 48 48" fill="none" stroke="#5B8C6B" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M24 4L8 12v10c0 12 6.8 22 16 26 9.2-4 16-14 16-26V12L24 4z"/><polyline points="17,24 22,29 31,20"/></svg></div>
-                <h3>Suplementos de Medicare</h3>
+                <h3>Suplementos de Medicare (Medigap)</h3>
                 <p>Planes Medigap que cubren lo que Medicare Original no. Excelente para clientes que quieren ver cualquier médico en todo el país. Se vende todo el año, no necesita ventana de inscripción.</p>
             </div>
 
             <div class="product-item">
                 <div class="product-icon"><svg width="42" height="42" viewBox="0 0 48 48" fill="none" stroke="#5B8C6B" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="24" cy="12" r="5"/><path d="M14 40v-4a10 10 0 0 1 20 0v4"/><circle cx="10" cy="18" r="4"/><path d="M4 40v-3a7 7 0 0 1 9-6.7"/><circle cx="38" cy="18" r="4"/><path d="M44 40v-3a7 7 0 0 0-9-6.7"/></svg></div>
-                <h3>Salud Individual y Familiar</h3>
+                <h3>Salud individual y familiar</h3>
                 <p>Planes del Mercado ACA más seguros de salud privados y suscritos para individuos y familias menores de 65. La Inscripción Abierta va del 1 Nov – 15 Dic, más Inscripción Especial durante todo el año.</p>
             </div>
 
             <div class="product-item">
                 <div class="product-icon"><svg width="42" height="42" viewBox="0 0 48 48" fill="none" stroke="#5B8C6B" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M18 6c-3 0-5.5 1.5-7 4s-2 5-2 8c0 4 1.5 7 3 10.5s3 7 4 11.5c.4 1.5 2 1.5 2.4 0 .8-2 1.8-4.5 2.8-6.5.6-1 1.8-1 2.4 0 1 2 2 4.5 2.8 6.5.4 1.5 2 1.5 2.4 0 1-4.5 2.5-8 4-11.5s3-6.5 3-10.5c0-3-.5-5.5-2-8s-4-4-7-4c-2 0-3.5 1-6 3.5C21.5 7 20 6 18 6z"/></svg></div>
-                <h3>Dental, Visión y Complementario</h3>
+                <h3>Dental, visión y complementario</h3>
                 <p>Cobertura para dientes y ojos, más planes de accidentes y enfermedades críticas que pagan efectivo directamente a los clientes. Ventas cruzadas fáciles que se emparejan con cualquier plan de salud.</p>
             </div>
 
             <div class="product-item">
                 <div class="product-icon"><svg width="42" height="42" viewBox="0 0 48 48" fill="none" stroke="#5B8C6B" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M24 42s-18-10-18-22a9.5 9.5 0 0 1 18-4 9.5 9.5 0 0 1 18 4c0 12-18 22-18 22z"/></svg></div>
-                <h3>Seguro de Vida y Cuidado a Largo Plazo</h3>
+                <h3>Seguro de vida y cuidado a largo plazo</h3>
                 <p>Cobertura de vida a plazo, gastos finales y cuidado a largo plazo para proteger familias y planificar el futuro. Muchos planes no requieren examen médico.</p>
             </div>
 
             <div class="product-item">
                 <div class="product-icon"><svg width="42" height="42" viewBox="0 0 48 48" fill="none" stroke="#5B8C6B" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><rect x="6" y="16" width="36" height="26" rx="2"/><path d="M18 16v-4a2 2 0 0 1 2-2h8a2 2 0 0 1 2 2v4"/><line x1="6" y1="26" x2="42" y2="26"/></svg></div>
-                <h3>Grupos Pequeños y Grandes</h3>
+                <h3>Grupos pequeños y grandes</h3>
                 <p>Planes de salud patrocinados por empleadores para negocios locales. Ingresos recurrentes y relaciones con clientes a largo plazo.</p>
             </div>
         </div>
@@ -1177,8 +960,8 @@
 
             <p style="margin-top: 16px;"><strong>Compensación flexible, opciones reales.</strong> Tenemos varios caminos dependiendo de lo que quieras de esto:</p>
             <ul style="margin: 10px 0 16px 20px; line-height: 1.7;">
-                <li><strong>Solo comisión</strong> — quédate con más de lo que ganes</li>
-                <li><strong>Base + comisión</strong> — ingresos predecibles mientras construyes</li>
+                <li><strong>Solo comisión:</strong> quédate con más de lo que ganes</li>
+                <li><strong>Base + comisión:</strong> ingresos predecibles mientras construyes</li>
                 <li><strong>División de comisión</strong> donde proporcionamos los clientes potenciales y el negocio cálido</li>
                 <li><strong>Posiciones asalariadas</strong> para quienes quieren un salario fijo sin variabilidad de comisión</li>
             </ul>
@@ -1200,7 +983,7 @@
 
     <!-- How It Works -->
     <section id="how-it-works" class="how-it-works">
-        <h2>Tu Camino al Éxito</h2>
+        <h2>Tu camino al éxito</h2>
         <div class="step-connector"></div>
         <div class="steps-grid">
             <div class="step">
@@ -1217,7 +1000,7 @@
 
             <div class="step">
                 <div class="step-number">3</div>
-                <h3>Obten tu Licencia</h3>
+                <h3>Obtén tu licencia</h3>
                 <p>Te guiamos a través del proceso de licencia paso a paso.</p>
             </div>
 
@@ -1238,11 +1021,11 @@
 
     <!-- FAQ -->
     <section id="faq" class="faq">
-        <h2>Preguntas Frecuentes</h2>
+        <h2>Preguntas frecuentes</h2>
         <div class="faq-container">
             <div class="faq-item">
                 <div class="faq-question" onclick="toggleFAQ(this)">
-                    <h4>¿Necesito experiencia en seguros?</h4>
+                    <h3 class="hx4">¿Necesito experiencia en seguros?</h3>
                     <span class="faq-toggle">▼</span>
                 </div>
                 <div class="faq-answer">
@@ -1252,7 +1035,7 @@
 
             <div class="faq-item">
                 <div class="faq-question" onclick="toggleFAQ(this)">
-                    <h4>¿Puedo hacer esto a tiempo parcial?</h4>
+                    <h3 class="hx4">¿Puedo hacer esto a tiempo parcial?</h3>
                     <span class="faq-toggle">▼</span>
                 </div>
                 <div class="faq-answer">
@@ -1262,7 +1045,7 @@
 
             <div class="faq-item">
                 <div class="faq-question" onclick="toggleFAQ(this)">
-                    <h4>¿Cuál es el costo para comenzar?</h4>
+                    <h3 class="hx4">¿Cuál es el costo para comenzar?</h3>
                     <span class="faq-toggle">▼</span>
                 </div>
                 <div class="faq-answer">
@@ -1272,7 +1055,7 @@
 
             <div class="faq-item">
                 <div class="faq-question" onclick="toggleFAQ(this)">
-                    <h4>¿Realmente puedo hacer esto mientras crío a los niños?</h4>
+                    <h3 class="hx4">¿Realmente puedo hacer esto mientras crío a los niños?</h3>
                     <span class="faq-toggle">▼</span>
                 </div>
                 <div class="faq-answer">
@@ -1282,7 +1065,7 @@
 
             <div class="faq-item">
                 <div class="faq-question" onclick="toggleFAQ(this)">
-                    <h4>¿Qué apoyo recibo?</h4>
+                    <h3 class="hx4">¿Qué apoyo recibo?</h3>
                     <span class="faq-toggle">▼</span>
                 </div>
                 <div class="faq-answer">
@@ -1295,7 +1078,7 @@
 
     <!-- Application -->
     <section id="application" class="application">
-        <h2>¿Listo para Construir Algo Increíble?</h2>
+        <h2>Queremos conocerte</h2>
         <div class="form-container">
             <form id="applicationForm" data-hpm-lead data-source="join" data-kind="recruit">
                 <div class="hpm-hp" aria-hidden="true" style="position:absolute;left:-10000px;width:1px;height:1px;overflow:hidden;">
@@ -1347,12 +1130,12 @@
 
                 <div class="form-group" style="margin-top: 0.5rem;">
                     <label for="joinConsent" style="display: flex; align-items: flex-start; gap: 10px; font-weight: 400; font-size: 13px; line-height: 1.5; color: #4A5568; cursor: pointer;">
-                        <input type="checkbox" id="joinConsent" name="consent" required data-consent-text="Acepto que HealthPlan Moms se comunique conmigo por teléfono, mensaje de texto y correo electrónico sobre mi solicitud y oportunidades de carrera como agente, incluso mediante mensajes automatizados. El consentimiento no es una condición para presentar la solicitud. Pueden aplicarse tarifas de mensajes y datos. Responde STOP para dejar de recibir mensajes de texto. Consulta nuestra Política de Privacidad: https://healthplanmoms.com/privacy/" style="margin-top: 3px; flex-shrink: 0; width: 16px; height: 16px; padding: 0; accent-color: #5B8C6B; cursor: pointer;">
-                        <span>Acepto que HealthPlan Moms se comunique conmigo por teléfono, mensaje de texto y correo electrónico sobre mi solicitud y oportunidades de carrera como agente, incluso mediante mensajes automatizados. El consentimiento no es una condición para presentar la solicitud. Pueden aplicarse tarifas de mensajes y datos. Responde STOP para dejar de recibir mensajes de texto. Consulta nuestra <a href="/privacy/" target="_blank" rel="noopener" style="color: #3D6B4A; text-decoration: underline;">Política de Privacidad</a>.</span>
+                        <input type="checkbox" id="joinConsent" name="consent" required data-consent-text="Acepto que HealthPlan Moms se comunique conmigo por teléfono, mensaje de texto y correo electrónico sobre mi solicitud y oportunidades de carrera como agente, incluso mediante mensajes automatizados. El consentimiento no es una condición para presentar la solicitud. Pueden aplicarse tarifas de mensajes y datos. Responde STOP para dejar de recibir mensajes de texto. Consulta nuestra Política de Privacidad: https://healthplanmoms.com/privacy/" style="margin-top: 3px; flex-shrink: 0; width: 20px; height: 20px; padding: 0; accent-color: #5B8C6B; cursor: pointer;">
+                        <span>Acepto que HealthPlan Moms se comunique conmigo por teléfono, mensaje de texto y correo electrónico sobre mi solicitud y oportunidades de carrera como agente, incluso mediante mensajes automatizados. El consentimiento no es una condición para presentar la solicitud. Pueden aplicarse tarifas de mensajes y datos. Responde STOP para dejar de recibir mensajes de texto. Consulta nuestra <a href="/privacy/" target="_blank" rel="noopener" style="color: #3D6B4A; text-decoration: underline;">Política de privacidad</a>.</span>
                     </label>
                 </div>
 
-                <button type="submit" class="form-submit">Solicitar Ahora</button>
+                <button type="submit" class="form-submit">Solicitar ahora</button>
             </form>
 
             <div class="form-contact">
@@ -1362,78 +1145,63 @@
     </section>
 
     <!-- Footer -->
-    <footer>
-        <div class="footer-content">
-            <div class="footer-section">
-                <svg xmlns="http://www.w3.org/2000/svg" class="footer-logo" viewBox="0 0 375 375" width="120" height="120" role="img" aria-label="HealthPlan Moms - Coverage Made Simple"><defs><g/><clipPath id="62a5dd6ee4"><path d="M 102.683594 49.007812 L 270.683594 49.007812 L 270.683594 325.757812 L 102.683594 325.757812 Z M 102.683594 49.007812 " clip-rule="nonzero"/></clipPath><clipPath id="2a292b0266"><path d="M 177 164 L 198 164 L 198 211.839844 L 177 211.839844 Z M 177 164 " clip-rule="nonzero"/></clipPath><clipPath id="5604cf875e"><path d="M 177 103.089844 L 198 103.089844 L 198 151 L 177 151 Z M 177 103.089844 " clip-rule="nonzero"/></clipPath><clipPath id="371a180a35"><path d="M 194 146 L 241.972656 146 L 241.972656 168 L 194 168 Z M 194 146 " clip-rule="nonzero"/></clipPath><clipPath id="dc5e2af6d9"><path d="M 133.222656 146 L 181 146 L 181 168 L 133.222656 168 Z M 133.222656 146 " clip-rule="nonzero"/></clipPath><clipPath id="3cead0ac92"><rect x="0" width="81" y="0" height="19"/></clipPath></defs><path fill="#5b8c6b" fill-opacity="1" d="M 186.78125 325.980469 C 140.46875 325.980469 102.726562 288.238281 102.726562 241.925781 L 102.726562 133.066406 C 102.726562 86.753906 140.46875 49.007812 186.78125 49.007812 C 233.09375 49.007812 270.839844 86.753906 270.839844 133.066406 L 270.839844 241.925781 C 270.839844 288.320312 233.09375 325.980469 186.78125 325.980469 Z"/><g clip-path="url(#62a5dd6ee4)"><path fill="#F7F3ED" d="M 186.78125 325.980469 C 140.46875 325.980469 102.726562 288.238281 102.726562 241.925781 L 102.726562 133.066406 C 102.726562 86.753906 140.46875 49.007812 186.78125 49.007812 C 233.09375 49.007812 270.839844 86.753906 270.839844 133.066406 L 270.839844 241.925781 C 270.839844 288.320312 233.09375 325.980469 186.78125 325.980469 Z M 186.78125 50.246094 C 141.128906 50.246094 103.960938 87.410156 103.960938 133.066406 L 103.960938 241.925781 C 103.960938 287.582031 141.128906 324.746094 186.78125 324.746094 C 232.4375 324.746094 269.601562 287.582031 269.601562 241.925781 L 269.601562 133.066406 C 269.601562 87.410156 232.4375 50.246094 186.78125 50.246094 Z M 186.78125 50.246094 " fill-opacity="1" fill-rule="nonzero"/></g><g clip-path="url(#2a292b0266)"><path fill="#F7F3ED" d="M 194.617188 183.023438 C 189.546875 172.761719 187.882812 165.695312 187.558594 164.167969 C 187.527344 164.167969 187.5 164.171875 187.46875 164.171875 C 187.457031 164.171875 187.445312 164.167969 187.433594 164.167969 C 187.109375 165.703125 185.445312 172.769531 180.378906 183.023438 C 174.628906 194.664062 175.722656 211.644531 187.496094 211.644531 L 187.5 211.644531 C 199.273438 211.644531 200.367188 194.664062 194.617188 183.023438 Z M 194.617188 183.023438 " fill-opacity="1" fill-rule="nonzero"/></g><g clip-path="url(#5604cf875e)"><path fill="#F7F3ED" d="M 180.378906 131.710938 C 185.449219 141.972656 187.113281 149.039062 187.4375 150.570312 C 187.464844 150.566406 187.496094 150.566406 187.527344 150.566406 C 187.539062 150.566406 187.550781 150.566406 187.558594 150.566406 C 187.886719 149.03125 189.550781 141.96875 194.617188 131.710938 C 200.367188 120.074219 199.273438 103.09375 187.5 103.089844 L 187.496094 103.089844 C 175.722656 103.09375 174.628906 120.074219 180.378906 131.710938 Z M 180.378906 131.710938 " fill-opacity="1" fill-rule="nonzero"/></g><g clip-path="url(#371a180a35)"><path fill="#F7F3ED" d="M 213.15625 150.25 C 202.890625 155.320312 195.824219 156.984375 194.296875 157.304688 C 194.296875 157.335938 194.300781 157.367188 194.300781 157.398438 C 194.300781 157.410156 194.300781 157.417969 194.300781 157.429688 C 195.835938 157.753906 202.898438 159.421875 213.15625 164.488281 C 224.792969 170.238281 241.773438 169.144531 241.773438 157.371094 L 241.773438 157.367188 C 241.773438 145.59375 224.792969 144.496094 213.15625 150.25 Z M 213.15625 150.25 " fill-opacity="1" fill-rule="nonzero"/></g><g clip-path="url(#dc5e2af6d9)"><path fill="#F7F3ED" d="M 161.839844 164.488281 C 172.105469 159.417969 179.171875 157.753906 180.699219 157.429688 C 180.699219 157.398438 180.695312 157.367188 180.695312 157.339844 C 180.695312 157.328125 180.695312 157.316406 180.695312 157.304688 C 179.160156 156.980469 172.097656 155.316406 161.839844 150.25 C 150.203125 144.496094 133.222656 145.59375 133.222656 157.367188 L 133.222656 157.371094 C 133.222656 169.144531 150.203125 170.238281 161.839844 164.488281 Z M 161.839844 164.488281 " fill-opacity="1" fill-rule="nonzero"/></g><path fill="#F7F3ED" d="M 206.238281 168.414062 C 197.609375 165.496094 192.695312 162.453125 191.65625 161.773438 C 191.640625 161.792969 191.625 161.8125 191.605469 161.828125 C 191.601562 161.835938 191.59375 161.839844 191.585938 161.847656 C 192.269531 162.894531 195.304688 167.804688 198.226562 176.429688 C 201.539062 186.214844 211.710938 195.152344 218.339844 188.527344 C 224.964844 181.898438 216.027344 171.730469 206.238281 168.414062 Z M 206.238281 168.414062 " fill-opacity="1" fill-rule="nonzero"/><path fill="#F7F3ED" d="M 169.351562 147.554688 C 177.980469 150.472656 182.890625 153.515625 183.933594 154.195312 C 183.949219 154.175781 183.964844 154.15625 183.984375 154.140625 C 183.988281 154.132812 183.996094 154.128906 184.003906 154.121094 C 183.320312 153.074219 180.28125 148.164062 177.363281 139.539062 C 174.050781 129.753906 163.878906 120.816406 157.25 127.441406 C 150.625 134.070312 159.5625 144.238281 169.351562 147.554688 Z M 169.351562 147.554688 " fill-opacity="1" fill-rule="nonzero"/><path fill="#F7F3ED" d="M 198.226562 139.539062 C 195.304688 148.167969 192.265625 153.082031 191.585938 154.125 C 191.601562 154.140625 191.621094 154.15625 191.640625 154.171875 C 191.644531 154.179688 191.652344 154.1875 191.65625 154.191406 C 192.703125 153.511719 197.617188 150.472656 206.238281 147.554688 C 216.023438 144.238281 224.964844 134.070312 218.339844 127.441406 C 211.710938 120.816406 201.539062 129.753906 198.226562 139.539062 Z M 198.226562 139.539062 " fill-opacity="1" fill-rule="nonzero"/><path fill="#F7F3ED" d="M 177.363281 176.429688 C 180.285156 167.800781 183.324219 162.886719 184.003906 161.84375 C 183.984375 161.828125 183.96875 161.8125 183.949219 161.796875 C 183.941406 161.789062 183.9375 161.78125 183.933594 161.777344 C 182.886719 162.457031 177.972656 165.496094 169.351562 168.414062 C 159.5625 171.730469 150.625 181.898438 157.25 188.527344 C 163.878906 195.152344 174.050781 186.214844 177.363281 176.429688 Z M 177.363281 176.429688 " fill-opacity="1" fill-rule="nonzero"/><text x="187.5" y="243" text-anchor="middle" font-family="'DM Serif Display', Georgia, serif" font-size="24" fill="#2c2c2c" font-weight="400">HealthPlan</text>
-<text x="187.5" y="273" text-anchor="middle" font-family="'DM Serif Display', Georgia, serif" font-size="24" fill="#2c2c2c" font-weight="400">Moms</text>
-<text x="187.5" y="293" text-anchor="middle" font-family="'DM Serif Display', Georgia, serif" font-size="7" fill="#2c2c2c" letter-spacing="3" font-weight="400">COVERAGE MADE SIMPLE</text>
-</svg>
-                <p style="font-size: 0.85rem; margin-top: 1rem; color: #A0ACBE;">Construyendo carreras. Apoyando familias. Cambiando vidas.</p>
-            </div>
+    </main>
 
-            <div class="footer-section">
-                <h4>Enlaces Rápidos</h4>
-                <ul>
-                    <li><a href="/">Inicio</a></li>
-                    <li><a href="/es/servicios/">Servicios</a></li>
-                    <li><a href="/es/recursos/">Recursos</a></li>
-                    <li><a href="/blog/">Blog</a></li>
-                    <li><a href="/es/equipo/">Conoce Nuestro Equipo</a></li>
-                    <li><a href="/es/unete/">Únete a Nuestro Equipo</a></li>
-                    <li><a href="/#contact">Contacto</a></li>
-                                    <li class="lang-toggle">
-                        <a href="/join-our-team/" class="lang-link" title="View in English">
-                            <span class="lang-inactive">EN</span> / <span class="lang-active">ES</span>
-                        </a>
-                    </li>
+    <footer class="site-footer">
+        <div class="site-footer__inner">
+            <div class="site-footer__grid">
+                <div class="site-footer__col">
+                    <a href="/es/" class="site-footer__brand"><img src="/logo-mark.svg" alt="" width="44" height="44">HealthPlan Moms</a>
+                    <p class="site-footer__tagline">Ayudando a las familias a encontrar cobertura de salud que funciona.</p>
+                    <ul class="site-footer__social" aria-label="Redes sociales"><li><a href="https://www.instagram.com/wearehealthplanmoms/" target="_blank" rel="noopener noreferrer" aria-label="Instagram"><svg aria-hidden="true" focusable="false" xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"/><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/></svg></a></li><li><a href="https://www.facebook.com/profile.php?id=61572026712949" target="_blank" rel="noopener noreferrer" aria-label="Facebook"><svg aria-hidden="true" focusable="false" xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"/></svg></a></li><li><a href="https://www.linkedin.com/company/healthplanmoms/" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn"><svg aria-hidden="true" focusable="false" xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"/><rect x="2" y="9" width="4" height="12"/><circle cx="4" cy="4" r="2"/></svg></a></li></ul>
+                </div>
+                <div class="site-footer__col">
+                    <h2 class="site-footer__heading">Explorar</h2>
+                    <ul class="site-footer__list">
+                        <li><a href="/es/">Inicio</a></li>
+                        <li><a href="/es/servicios/">Servicios</a></li>
+                        <li><a href="/es/recursos/">Recursos</a></li>
+                        <li><a href="/es/blog/">Blog</a></li>
+                        <li><a href="/es/equipo/">Nuestro Equipo</a></li>
+                        <li><a href="/es/unete/">Únete al Equipo</a></li>
+                        <li><a href="/es/#contact">Contacto</a></li>
+                    </ul>
+                </div>
+                <div class="site-footer__col">
+                    <h2 class="site-footer__heading">Cobertura</h2>
+                    <ul class="site-footer__list">
+                        <li><a href="/es/servicios/#medicare-advantage">Medicare Advantage</a></li>
+                        <li><a href="/es/servicios/#medigap">Medigap / Suplementos</a></li>
+                        <li><a href="/es/servicios/#aca">Mercado de Seguros ACA</a></li>
+                        <li><a href="/es/servicios/#dental-vision">Dental y Visión</a></li>
+                        <li><a href="/es/servicios/#life-insurance">Seguro de Vida</a></li>
+                    </ul>
+                </div>
+                <div class="site-footer__col">
+                    <h2 class="site-footer__heading">Contacto</h2>
+                    <ul class="site-footer__list">
+                        <li><a href="tel:+14352461548">(435) 246-1548</a></li>
+                        <li><a href="mailto:info@healthplanmoms.com">info@healthplanmoms.com</a></li>
+                        <li class="site-footer__note">Lunes a viernes, 9am a 5pm MT</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="site-footer__bottom">
+                <p>&copy; 2026 HealthPlan Moms. Todos los derechos reservados.</p>
+                <p>Medicare es una marca registrada del Departamento de Salud y Servicios Humanos de los EE. UU.</p>
+                <ul class="site-footer__legal-links" aria-label="Legal">
+                    <li><a href="/terms/">Términos de Servicio</a></li>
+                    <li><a href="/privacy/">Política de Privacidad</a></li>
+                    <li><a href="/es/consentimiento/">Consentimiento y aviso TPMO</a></li>
                 </ul>
+                <p class="site-footer__disclaimer">healthplanmoms.com y HealthPlan Moms es un DBA de Wildcat Insurance LLC, una agencia de seguros de salud licenciada. El propósito de este sitio es la solicitud de seguros. El contacto puede ser realizado por un agente/productor de seguros o una compañía de seguros. HealthPlan Moms y los planes de seguros presentados en este sitio no están conectados ni respaldados por el gobierno de los EE. UU. ni por el programa federal de Medicare. No ofrecemos todos los planes disponibles en su área. Cualquier información que proporcionemos se limita a los planes que ofrecemos en su área. Comuníquese con Medicare.gov o 1-800-MEDICARE para obtener información sobre todas sus opciones.</p>
             </div>
-
-            <div class="footer-section">
-                <h4>Ponte en Contacto</h4>
-                <ul>
-                    <li><a href="tel:+14352461548">(435) 246-1548</a></li>
-                    <li><a href="mailto:info@healthplanmoms.com">info@healthplanmoms.com</a></li>
-                    <li>Lunes–Viernes, 9am–5pm MT</li>
-                </ul>
-            </div>
-
-            <div class="footer-section">
-                <h4>Síguenos</h4>
-                <div class="footer-social">
-                    <a href="https://www.facebook.com/profile.php?id=61572026712949" target="_blank" rel="noopener noreferrer" title="Facebook"><svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"/></svg></a>
-                    <a href="https://www.instagram.com/wearehealthplanmoms/" target="_blank" rel="noopener noreferrer" title="Instagram"><svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"/><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/></svg></a>
-                    <a href="https://www.linkedin.com/company/healthplanmoms/" target="_blank" rel="noopener noreferrer" title="LinkedIn"><svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"/><rect x="2" y="9" width="4" height="12"/><circle cx="4" cy="4" r="2"/></svg></a>
-                    </div>
-            </div>
-        </div>
-
-        <div class="footer-bottom">
-            <p>&copy; 2026 HealthPlan Moms. Todos los derechos reservados.</p>
-            <p style="margin-top: 8px;">Medicare es una marca registrada del Departamento de Salud y Servicios Humanos de EE.UU.</p>
-            <p style="margin-top: 8px;"><a href="/terminos.html" style="color: #999; text-decoration: none; transition: color 0.3s ease;" onmouseover="this.style.color='#A8C5A0'" onmouseout="this.style.color='#999'">Términos de Servicio</a> &middot; <a href="/privacidad.html" style="color: #999; text-decoration: none; transition: color 0.3s ease;" onmouseover="this.style.color='#A8C5A0'" onmouseout="this.style.color='#999'">Política de Privacidad</a></p>
-            <p class="footer-disclaimer">healthplanmoms.com y HealthPlan Moms es un DBA de Wildcat Insurance LLC, una agencia de seguros de salud licenciada. El propósito de este sitio es la solicitud de seguros. El contacto puede ser realizado por un agente/productor de seguros o una compañía de seguros. HealthPlan Moms y los planes de seguros presentados en este sitio no están conectados ni respaldados por el gobierno de los EE. UU. ni por el programa federal de Medicare. No ofrecemos todos los planes disponibles en su área. Cualquier información que proporcionemos se limita a los planes que ofrecemos en su área. Comuníquese con Medicare.gov o 1-800-MEDICARE para obtener información sobre todas sus opciones.</p>
         </div>
     </footer>
 
     <script>
-        // Mobile Menu Toggle
-        const hamburger = document.querySelector('.hamburger');
-        const navLinks = document.querySelector('.nav-links');
 
-        hamburger.addEventListener('click', () => {
-            hamburger.classList.toggle('active');
-            navLinks.classList.toggle('active');
-        });
 
-        // Close mobile menu when a link is clicked
-        document.querySelectorAll('.nav-links a').forEach(link => {
-            link.addEventListener('click', () => {
-                hamburger.classList.remove('active');
-                navLinks.classList.remove('active');
-            });
-        });
 
         // FAQ Toggle
         function toggleFAQ(element) {
@@ -1476,5 +1244,6 @@
     <script src="/chat-widget.js" defer></script>
 <script src="/lead-forms.js" defer></script>
 <script src="/contact-modal.js"></script>
+<script src="/site-shell.js" defer></script>
 </body>
 </html>

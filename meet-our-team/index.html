@@ -21,6 +21,9 @@
     <meta property="og:url" content="https://healthplanmoms.com/meet-our-team/">
     <meta property="og:site_name" content="HealthPlan Moms">
     <link rel="canonical" href="https://healthplanmoms.com/meet-our-team/">
+    <meta property="og:image" content="https://healthplanmoms.com/logo-pill.png">
+    <meta property="og:image:width" content="1000">
+    <meta property="og:image:height" content="1574">
     <link rel="alternate" hreflang="en" href="https://healthplanmoms.com/meet-our-team/">
     <link rel="alternate" hreflang="es" href="https://healthplanmoms.com/es/equipo/">
     <link rel="alternate" hreflang="x-default" href="https://healthplanmoms.com/meet-our-team/">
@@ -69,91 +72,6 @@
         /* ============================================
            HEADER & NAVIGATION
            ============================================ */
-        header {
-            background: white;
-            box-shadow: 0 4px 12px rgba(44, 44, 44, 0.08);
-            position: fixed;
-            top: 0;
-            width: 100%;
-            z-index: 1000;
-            transition: all 0.3s ease;
-        }
-
-        header.sticky-nav {
-            box-shadow: 0 10px 30px rgba(44, 44, 44, 0.1);
-            padding: 12px 0;
-        }
-
-        .header-container {
-            max-width: 1200px;
-            margin: 0 auto;
-            padding: 16px 20px;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-        }
-
-        .logo {
-            display: flex;
-            align-items: center;
-            gap: 10px;
-            font-family: 'DM Serif Display', serif;
-            font-size: 24px;
-            font-weight: 700;
-            color: #5B8C6B;
-            text-decoration: none;
-        }
-
-        .logo img {
-            height: 60px;
-            width: auto;
-            border-radius: 0;
-        }
-
-        nav {
-            display: flex;
-            align-items: center;
-            gap: 30px;
-        }
-
-        .nav-links {
-            display: flex;
-            list-style: none;
-            gap: 30px;
-            align-items: center;
-        }
-
-        .nav-links a {
-            text-decoration: none;
-            color: #2C2C2C;
-            font-size: 14px;
-            font-weight: 500;
-            transition: color 0.3s ease;
-        }
-
-        .nav-links a:hover {
-            color: #5B8C6B;
-        }
-
-        .lang-toggle { margin-left: 8px; }
-        .lang-link {
-            text-decoration: none;
-            font-size: 13px;
-            font-weight: 600;
-            color: #4A5568;
-            padding: 4px 12px;
-            border-radius: 20px;
-            background: #E8F0E5;
-            transition: all 0.3s ease;
-            display: inline-flex;
-            align-items: center;
-            gap: 2px;
-        }
-        .lang-link:hover { background: #5B8C6B; color: white; }
-        .lang-active { color: #5B8C6B; font-weight: 700; }
-        .lang-inactive { color: #999; font-weight: 400; }
-        .lang-link:hover .lang-active,
-        .lang-link:hover .lang-inactive { color: white; }
 
         /* Buttons */
         .btn {
@@ -170,7 +88,7 @@
         }
 
         .btn-primary {
-            background: linear-gradient(135deg, #5B8C6B, #3D6B4A);
+            background: var(--sage-ink);
             color: white;
         }
 
@@ -181,7 +99,7 @@
 
         .btn-secondary {
             background: white;
-            color: #5B8C6B;
+            color: var(--sage-ink);
             border: 2px solid #5B8C6B;
         }
 
@@ -194,21 +112,6 @@
         .btn-sm {
             padding: 8px 16px;
             font-size: 13px;
-        }
-
-        .hamburger {
-            display: none;
-            flex-direction: column;
-            cursor: pointer;
-            gap: 5px;
-        }
-
-        .hamburger span {
-            width: 24px;
-            height: 3px;
-            background: #2C2C2C;
-            border-radius: 2px;
-            transition: all 0.3s ease;
         }
 
         /* ============================================
@@ -280,7 +183,7 @@
         .experience-stat .stat-number {
             font-family: 'DM Serif Display', serif;
             font-size: 48px;
-            color: #5B8C6B;
+            color: var(--sage-ink);
             line-height: 1.1;
         }
 
@@ -309,7 +212,7 @@
 
         .experience-highlight .highlight-name {
             font-weight: 700;
-            color: #5B8C6B;
+            color: var(--sage-ink);
             font-size: 16px;
             margin-bottom: 6px;
         }
@@ -371,7 +274,7 @@
         /* Flip card wrapper */
         .team-card-wrapper {
             perspective: 1000px;
-            height: 420px;
+            height: 460px;
         }
 
         .team-card-wrapper.fade-in {
@@ -428,7 +331,7 @@
         }
 
         .card-header-band {
-            background: linear-gradient(135deg, #5B8C6B, #3D6B4A);
+            background: var(--sage-ink);
             width: 100%;
             padding-top: 24px;
             display: flex;
@@ -446,7 +349,7 @@
         }
 
         .card-back {
-            background: linear-gradient(160deg, #3D6B4A, #5B8C6B);
+            background: linear-gradient(160deg, #2F5639, #3D6B4A);
             color: white;
             transform: rotateY(180deg);
             padding: 28px 20px;
@@ -465,7 +368,7 @@
             display: flex;
             align-items: center;
             justify-content: center;
-            background: linear-gradient(135deg, #5B8C6B, #3D6B4A);
+            background: var(--sage-ink);
             flex-shrink: 0;
             border: 4px solid white;
             box-shadow: 0 2px 8px rgba(0,0,0,0.12);
@@ -490,7 +393,7 @@
 
         .team-role {
             font-size: 13px;
-            color: #5B8C6B;
+            color: var(--sage-ink);
             font-weight: 600;
             margin-bottom: 10px;
         }
@@ -564,8 +467,9 @@
         }
 
         .flip-hint {
-            font-size: 11px;
-            color: #A8C5A0;
+            font-family: inherit;
+            font-size: 12px;
+            color: var(--sage-ink);
             margin-top: 10px;
             font-weight: 600;
             letter-spacing: 0.5px;
@@ -598,7 +502,8 @@
 
         .specialty-tag {
             display: inline-block;
-            background: rgba(255,255,255,0.2);
+            background: rgba(0,0,0,0.2);
+            border: 1px solid rgba(255,255,255,0.35);
             color: white;
             padding: 5px 12px;
             border-radius: 20px;
@@ -607,8 +512,9 @@
         }
 
         .back-flip-hint {
-            font-size: 11px;
-            color: rgba(255,255,255,0.6);
+            font-family: inherit;
+            font-size: 12px;
+            color: rgba(255,255,255,0.9);
             margin-top: auto;
             font-weight: 600;
             letter-spacing: 0.5px;
@@ -643,72 +549,19 @@
         }
 
         .btn-light {
-            background: #A8C5A0;
-            color: white;
+            background: #fff;
+            color: var(--sage-ink);
             border: none;
         }
 
         .btn-light:hover {
-            background: #5B8C6B;
+            background: var(--cream);
+            color: var(--sage-deep);
         }
 
         /* ============================================
            FOOTER
            ============================================ */
-        footer {
-            background: #2C2C2C;
-            color: white;
-            padding: 50px 20px 30px;
-            margin-top: 0;
-        }
-
-        .footer-container {
-            max-width: 1200px;
-            margin: 0 auto;
-            display: grid;
-            grid-template-columns: repeat(3, 1fr);
-            gap: 40px;
-            margin-bottom: 40px;
-        }
-
-        .footer-column h3 {
-            font-family: 'DM Serif Display', serif;
-            font-size: 16px;
-            font-weight: 700;
-            margin-bottom: 16px;
-            color: #A8C5A0;
-        }
-
-        .footer-column p {
-            font-size: 14px;
-            line-height: 1.8;
-            opacity: 0.9;
-        }
-
-        .footer-links {
-            list-style: none;
-        }
-
-        .footer-links li {
-            margin-bottom: 10px;
-        }
-
-        .footer-links a {
-            color: #E0E0E0;
-            text-decoration: none;
-            font-size: 14px;
-            transition: color 0.3s ease;
-        }
-
-        .footer-links a:hover {
-            color: #A8C5A0;
-        }
-
-        .social-icons {
-            display: flex;
-            gap: 16px;
-            margin-top: 16px;
-        }
 
         a.social-icon,
         a.social-icon:link,
@@ -731,55 +584,10 @@
             color: #2C2C2C;
         }
 
-        .footer-bottom {
-            border-top: 1px solid rgba(168, 197, 160, 0.2);
-            padding-top: 30px;
-            text-align: center;
-            font-size: 13px;
-            color: #999;
-        }
-
-        .footer-brand {
-            font-family: 'DM Serif Display', serif;
-            font-size: 18px;
-            font-weight: 700;
-            color: #A8C5A0;
-            margin-bottom: 8px;
-        }
-
         /* ============================================
            RESPONSIVE DESIGN
            ============================================ */
         @media (max-width: 768px) {
-            .hamburger {
-                display: flex;
-            }
-
-            .nav-links {
-                display: none;
-                position: absolute;
-                top: 70px;
-                left: 0;
-                right: 0;
-                flex-direction: column;
-                background: white;
-                gap: 0;
-                padding: 20px;
-                box-shadow: 0 10px 30px rgba(44, 44, 44, 0.1);
-            }
-
-            .nav-links.active {
-                display: flex;
-            }
-
-            .nav-links li {
-                border-bottom: 1px solid #F7F3ED;
-                padding: 12px 0;
-            }
-
-            .nav-links li:last-child {
-                border-bottom: none;
-            }
 
             .hero {
                 padding: 120px 20px 80px;
@@ -803,24 +611,12 @@
                 font-size: 28px;
             }
 
-            .footer-container {
-                grid-template-columns: 1fr;
-                gap: 30px;
-            }
-
             .cta-section h2 {
                 font-size: 28px;
             }
         }
 
         @media (max-width: 480px) {
-            .header-container {
-                padding: 12px 16px;
-            }
-
-            .logo {
-                font-size: 20px;
-            }
 
             .hero {
                 padding: 100px 16px 60px;
@@ -848,7 +644,7 @@
             }
 
             .team-card-wrapper {
-                height: 420px;
+                height: 460px;
             }
 
             .team-photo {
@@ -976,7 +772,7 @@
         }
         .services-dropdown a:hover {
             background: #F7F3ED;
-            color: #5B8C6B;
+            color: var(--sage-ink);
         }
         @media (max-width: 768px) {
             .services-dropdown {
@@ -993,35 +789,33 @@
         }
 
     </style>
+    <link rel="stylesheet" href="/site-shell.css">
 </head>
 <body>
     <!-- ============================================
          HEADER & NAVIGATION
          ============================================ -->
-    <header id="header">
-        <div class="header-container">
-            <a href="/" class="logo"><img src="/logo-mark.svg" alt="HealthPlan Moms Logo">HealthPlan Moms</a>
-            <nav>
-                <ul class="nav-links" id="navLinks">
-                    <li><a href="/services/">Services</a></li>
-                    <li><a href="/resources/">Resources</a></li>
-                    <li><a href="/blog/">Blog</a></li>
-                    <li><a href="/meet-our-team/">Meet Our Team</a></li>
-                    <li><a href="/#contact">Contact</a></li>
-                    <li class="lang-toggle">
-                        <a href="/es/equipo/" class="lang-link" title="Ver en Español">
-                            <span class="lang-active">EN</span> / <span class="lang-inactive">ES</span>
-                        </a>
-                    </li>
-                </ul>
-                <div class="hamburger" id="hamburger">
-                    <span></span>
-                    <span></span>
-                    <span></span>
-                </div>
+    <a class="skip-link" href="#main">Skip to content</a>
+    <header class="site-header">
+        <div class="site-header__inner">
+            <a href="/" class="site-logo"><img src="/logo-mark.svg" alt="" width="52" height="52">HealthPlan Moms</a>
+            <nav class="site-nav" aria-label="Main">
+            <ul class="site-nav__links" id="site-menu">
+                <li><a href="/services/">Services</a></li>
+                <li><a href="/resources/">Resources</a></li>
+                <li><a href="/blog/">Blog</a></li>
+                <li><a href="/meet-our-team/" aria-current="page">Meet Our Team</a></li>
+                <li><a href="/join-our-team/">Join Our Team</a></li>
+                <li class="site-lang"><a class="site-lang__link" href="/es/equipo/" hreflang="es" lang="es" aria-label="Ver en español"><span class="site-lang__on" aria-hidden="true">EN</span><span class="site-lang__sep" aria-hidden="true">/</span><span class="site-lang__off" aria-hidden="true">ES</span></a></li>
+            </ul>
             </nav>
+            <a class="site-call" href="tel:+14352461548"><svg aria-hidden="true" focusable="false" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.12.96.36 1.9.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.91.34 1.85.58 2.81.7A2 2 0 0 1 22 16.92z"/></svg><span class="site-call__label">Call</span> <span class="site-call__num">(435) 246-1548</span></a>
+            <button type="button" class="site-menu-btn" aria-label="Menu" aria-expanded="false" aria-controls="site-menu"><span class="site-menu-btn__bar"></span><span class="site-menu-btn__bar"></span><span class="site-menu-btn__bar"></span></button>
         </div>
     </header>
+
+    <main id="main" tabindex="-1">
+
 
     <!-- ============================================
          HERO SECTION
@@ -1083,7 +877,7 @@
                                 (385) 481-3683
                             </a>
                         </div>
-                        <span class="flip-hint">Learn more about Michelle</span>
+                        <button type="button" class="flip-hint" aria-pressed="false">Learn more about Michelle</button>
                         </div>
                     </div><div class="card-back">
                         <h3 class="back-name">Michelle Dennison</h3>
@@ -1093,7 +887,7 @@
                             <span class="specialty-tag">Medigap</span>
                             <span class="specialty-tag">ACA</span>
                         </div>
-                        <span class="back-flip-hint">Click to flip back</span>
+                        <button type="button" class="back-flip-hint" aria-pressed="true">Click to flip back</button>
                     </div>
                 </div>
             </div>
@@ -1122,7 +916,7 @@
                                 (801) 895-3327
                             </a>
                         </div>
-                        <span class="flip-hint">Learn more about Aidyl</span>
+                        <button type="button" class="flip-hint" aria-pressed="false">Learn more about Aidyl</button>
                         </div>
                     </div><div class="card-back">
                         <h3 class="back-name">Aidyl Semidey</h3>
@@ -1132,7 +926,7 @@
                             <span class="specialty-tag">Medigap</span>
                             <span class="specialty-tag">ACA</span>
                         </div>
-                        <span class="back-flip-hint">Click to flip back</span>
+                        <button type="button" class="back-flip-hint" aria-pressed="true">Click to flip back</button>
                     </div>
                 </div>
             </div>
@@ -1162,7 +956,7 @@
                                 (385) 360-1512
                             </a>
                         </div>
-                        <span class="flip-hint">Learn more about Tamara</span>
+                        <button type="button" class="flip-hint" aria-pressed="false">Learn more about Tamara</button>
                         </div>
                     </div><div class="card-back">
                         <h3 class="back-name">Tamara Redd</h3>
@@ -1171,7 +965,7 @@
                             <span class="specialty-tag">Medicare Advantage</span>
                             <span class="specialty-tag">ACA</span>
                         </div>
-                        <span class="back-flip-hint">Click to flip back</span>
+                        <button type="button" class="back-flip-hint" aria-pressed="true">Click to flip back</button>
                     </div>
                 </div>
             </div>
@@ -1200,7 +994,7 @@
                                 (801) 901-7070
                             </a>
                         </div>
-                        <span class="flip-hint">Learn more about Elizabeth</span>
+                        <button type="button" class="flip-hint" aria-pressed="false">Learn more about Elizabeth</button>
                         </div>
                     </div><div class="card-back">
                         <h3 class="back-name">Elizabeth Perez</h3>
@@ -1210,7 +1004,7 @@
                             <span class="specialty-tag">Medigap</span>
                             <span class="specialty-tag">ACA</span>
                         </div>
-                        <span class="back-flip-hint">Click to flip back</span>
+                        <button type="button" class="back-flip-hint" aria-pressed="true">Click to flip back</button>
                     </div>
                 </div>
             </div>
@@ -1241,7 +1035,7 @@
                                 (801) 316-8113
                             </a>
                         </div>
-                        <span class="flip-hint">Learn more about Saya</span>
+                        <button type="button" class="flip-hint" aria-pressed="false">Learn more about Saya</button>
                         </div>
                     </div><div class="card-back">
                         <h3 class="back-name">Saya Murton</h3>
@@ -1253,7 +1047,7 @@
                             <span class="specialty-tag">Life</span>
                             <span class="specialty-tag">Group</span>
                         </div>
-                        <span class="back-flip-hint">Click to flip back</span>
+                        <button type="button" class="back-flip-hint" aria-pressed="true">Click to flip back</button>
                     </div>
                 </div>
             </div>
@@ -1281,7 +1075,7 @@
                                 (435) 246-1548
                             </a>
                         </div>
-                        <span class="flip-hint">Learn more about Ally</span>
+                        <button type="button" class="flip-hint" aria-pressed="false">Learn more about Ally</button>
                         </div>
                     </div><div class="card-back">
                         <h3 class="back-name">Ally Valdez</h3>
@@ -1292,7 +1086,7 @@
                             <span class="specialty-tag">ACA</span>
                             <span class="specialty-tag">Group</span>
                         </div>
-                        <span class="back-flip-hint">Click to flip back</span>
+                        <button type="button" class="back-flip-hint" aria-pressed="true">Click to flip back</button>
                     </div>
                 </div>
             </div>
@@ -1322,7 +1116,7 @@
                                 (832) 850-5726
                             </a>
                         </div>
-                        <span class="flip-hint">Learn more about Erica</span>
+                        <button type="button" class="flip-hint" aria-pressed="false">Learn more about Erica</button>
                         </div>
                     </div><div class="card-back">
                         <h3 class="back-name">Erica Harding</h3>
@@ -1330,7 +1124,7 @@
                         <div class="team-specialties">
                             <span class="specialty-tag">ACA</span>
                         </div>
-                        <span class="back-flip-hint">Click to flip back</span>
+                        <button type="button" class="back-flip-hint" aria-pressed="true">Click to flip back</button>
                     </div>
                 </div>
             </div>
@@ -1359,7 +1153,7 @@
                                 (801) 905-8691
                             </a>
                         </div>
-                        <span class="flip-hint">Learn more about Michelle</span>
+                        <button type="button" class="flip-hint" aria-pressed="false">Learn more about Michelle</button>
                         </div>
                     </div><div class="card-back">
                         <h3 class="back-name">Michelle Bodin</h3>
@@ -1371,7 +1165,7 @@
                             <span class="specialty-tag">Life</span>
                             <span class="specialty-tag">LTC</span>
                         </div>
-                        <span class="back-flip-hint">Click to flip back</span>
+                        <button type="button" class="back-flip-hint" aria-pressed="true">Click to flip back</button>
                     </div>
                 </div>
             </div>
@@ -1400,7 +1194,7 @@
                                 (801) 448-0443
                             </a>
                         </div>
-                        <span class="flip-hint">Learn more about Edmi</span>
+                        <button type="button" class="flip-hint" aria-pressed="false">Learn more about Edmi</button>
                         </div>
                     </div><div class="card-back">
                         <h3 class="back-name">Edmi Dominguez</h3>
@@ -1410,7 +1204,7 @@
                             <span class="specialty-tag">Medigap</span>
                             <span class="specialty-tag">ACA</span>
                         </div>
-                        <span class="back-flip-hint">Click to flip back</span>
+                        <button type="button" class="back-flip-hint" aria-pressed="true">Click to flip back</button>
                     </div>
                 </div>
             </div>
@@ -1440,7 +1234,7 @@
                                 (801) 448-0858
                             </a>
                         </div>
-                        <span class="flip-hint">Learn more about Lissette</span>
+                        <button type="button" class="flip-hint" aria-pressed="false">Learn more about Lissette</button>
                         </div>
                     </div><div class="card-back">
                         <h3 class="back-name">Lissette Wong</h3>
@@ -1450,7 +1244,7 @@
                             <span class="specialty-tag">Medigap</span>
                             <span class="specialty-tag">ACA</span>
                         </div>
-                        <span class="back-flip-hint">Click to flip back</span>
+                        <button type="button" class="back-flip-hint" aria-pressed="true">Click to flip back</button>
                     </div>
                 </div>
             </div>
@@ -1479,7 +1273,7 @@
                                 (801) 889-2428
                             </a>
                         </div>
-                        <span class="flip-hint">Learn more about Magarely</span>
+                        <button type="button" class="flip-hint" aria-pressed="false">Learn more about Magarely</button>
                         </div>
                     </div><div class="card-back">
                         <h3 class="back-name">Magarely Sanchez</h3>
@@ -1489,7 +1283,7 @@
                             <span class="specialty-tag">Medigap</span>
                             <span class="specialty-tag">ACA</span>
                         </div>
-                        <span class="back-flip-hint">Click to flip back</span>
+                        <button type="button" class="back-flip-hint" aria-pressed="true">Click to flip back</button>
                     </div>
                 </div>
             </div>
@@ -1515,7 +1309,7 @@
                                 madisyn@healthplanmoms.com
                             </a>
                         </div>
-                        <span class="flip-hint">Learn more about Madisyn</span>
+                        <button type="button" class="flip-hint" aria-pressed="false">Learn more about Madisyn</button>
                         </div>
                     </div><div class="card-back">
                         <h3 class="back-name">Madisyn Groberg</h3>
@@ -1524,7 +1318,7 @@
                             <span class="specialty-tag">ACA</span>
                             <span class="specialty-tag">Group</span>
                         </div>
-                        <span class="back-flip-hint">Click to flip back</span>
+                        <button type="button" class="back-flip-hint" aria-pressed="true">Click to flip back</button>
                     </div>
                 </div>
             </div>
@@ -1550,7 +1344,7 @@
                                 milgret@healthplanmoms.com
                             </a>
                         </div>
-                        <span class="flip-hint">Learn more about Milgret</span>
+                        <button type="button" class="flip-hint" aria-pressed="false">Learn more about Milgret</button>
                         </div>
                     </div><div class="card-back">
                         <h3 class="back-name">Milgret Diorio Acosta</h3>
@@ -1559,7 +1353,7 @@
                             <span class="specialty-tag">ACA</span>
                             <span class="specialty-tag">Medicare</span>
                         </div>
-                        <span class="back-flip-hint">Click to flip back</span>
+                        <button type="button" class="back-flip-hint" aria-pressed="true">Click to flip back</button>
                     </div>
                 </div>
             </div>
@@ -1583,7 +1377,7 @@
                                 madison@healthplanmoms.com
                             </a>
                         </div>
-                        <span class="flip-hint">Learn more about Madison</span>
+                        <button type="button" class="flip-hint" aria-pressed="false">Learn more about Madison</button>
                         </div>
                     </div><div class="card-back">
                         <h3 class="back-name">Madison Dennison</h3>
@@ -1592,7 +1386,7 @@
                             <span class="specialty-tag">ACA</span>
                             <span class="specialty-tag">Group</span>
                         </div>
-                        <span class="back-flip-hint">Click to flip back</span>
+                        <button type="button" class="back-flip-hint" aria-pressed="true">Click to flip back</button>
                     </div>
                 </div>
             </div>
@@ -1616,7 +1410,7 @@
                                 shaunie@healthplanmoms.com
                             </a>
                         </div>
-                        <span class="flip-hint">Learn more about Shaunie</span>
+                        <button type="button" class="flip-hint" aria-pressed="false">Learn more about Shaunie</button>
                         </div>
                     </div><div class="card-back">
                         <h3 class="back-name">Shaunie Dennison</h3>
@@ -1626,7 +1420,7 @@
                             <span class="specialty-tag">Group</span>
                             <span class="specialty-tag">ASL</span>
                         </div>
-                        <span class="back-flip-hint">Click to flip back</span>
+                        <button type="button" class="back-flip-hint" aria-pressed="true">Click to flip back</button>
                     </div>
                 </div>
             </div>
@@ -1737,69 +1531,70 @@
     <!-- ============================================
          FOOTER
          ============================================ -->
-    <footer>
-        <div class="footer-container">
-            <div class="footer-column">
-                <div class="footer-brand">HealthPlan Moms</div>
-                <div class="social-icons">
-                    <a href="https://www.facebook.com/profile.php?id=61572026712949" target="_blank" rel="noopener noreferrer" title="Facebook" class="social-icon"><svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"/></svg></a>
-                    <a href="https://www.instagram.com/wearehealthplanmoms/" target="_blank" rel="noopener noreferrer" title="Instagram" class="social-icon"><svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"/><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/></svg></a>
-                    <a href="https://www.linkedin.com/company/healthplanmoms/" target="_blank" rel="noopener noreferrer" title="LinkedIn" class="social-icon"><svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"/><rect x="2" y="9" width="4" height="12"/><circle cx="4" cy="4" r="2"/></svg></a>
+    </main>
+
+    <footer class="site-footer">
+        <div class="site-footer__inner">
+            <div class="site-footer__grid">
+                <div class="site-footer__col">
+                    <a href="/" class="site-footer__brand"><img src="/logo-mark.svg" alt="" width="44" height="44">HealthPlan Moms</a>
+                    <p class="site-footer__tagline">Helping families find health coverage that works.</p>
+                    <ul class="site-footer__social" aria-label="Social media"><li><a href="https://www.instagram.com/wearehealthplanmoms/" target="_blank" rel="noopener noreferrer" aria-label="Instagram"><svg aria-hidden="true" focusable="false" xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"/><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/></svg></a></li><li><a href="https://www.facebook.com/profile.php?id=61572026712949" target="_blank" rel="noopener noreferrer" aria-label="Facebook"><svg aria-hidden="true" focusable="false" xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"/></svg></a></li><li><a href="https://www.linkedin.com/company/healthplanmoms/" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn"><svg aria-hidden="true" focusable="false" xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"/><rect x="2" y="9" width="4" height="12"/><circle cx="4" cy="4" r="2"/></svg></a></li></ul>
+                </div>
+                <div class="site-footer__col">
+                    <h2 class="site-footer__heading">Explore</h2>
+                    <ul class="site-footer__list">
+                        <li><a href="/">Home</a></li>
+                        <li><a href="/services/">Services</a></li>
+                        <li><a href="/resources/">Resources</a></li>
+                        <li><a href="/blog/">Blog</a></li>
+                        <li><a href="/meet-our-team/">Meet Our Team</a></li>
+                        <li><a href="/join-our-team/">Join Our Team</a></li>
+                        <li><a href="/#contact">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="site-footer__col">
+                    <h2 class="site-footer__heading">Coverage</h2>
+                    <ul class="site-footer__list">
+                        <li><a href="/services/#medicare-advantage">Medicare Advantage</a></li>
+                        <li><a href="/services/#medigap">Medigap / Supplements</a></li>
+                        <li><a href="/services/#aca">ACA Marketplace</a></li>
+                        <li><a href="/services/#dental-vision">Dental &amp; Vision</a></li>
+                        <li><a href="/services/#life-insurance">Life Insurance</a></li>
+                    </ul>
+                </div>
+                <div class="site-footer__col">
+                    <h2 class="site-footer__heading">Contact</h2>
+                    <ul class="site-footer__list">
+                        <li><a href="tel:+14352461548">(435) 246-1548</a></li>
+                        <li><a href="mailto:info@healthplanmoms.com">info@healthplanmoms.com</a></li>
+                        <li class="site-footer__note">Monday to Friday, 9am to 5pm MT</li>
+                    </ul>
                 </div>
             </div>
-            <div class="footer-column">
-                <h3>Quick Links</h3>
-                <ul class="footer-links">
-                    <li><a href="/">Home</a></li>
-                    <li><a href="/services/">Services</a></li>
-                    <li><a href="/resources/">Resources</a></li>
-                    <li><a href="/blog/">Blog</a></li>
-                    <li><a href="/meet-our-team/">Meet Our Team</a></li>
-                    <li><a href="/join-our-team/">Join Our Team</a></li>
-                    <li><a href="/#contact">Contact</a></li>
-                                    <li class="lang-toggle">
-                        <a href="/es/equipo/" class="lang-link" title="Ver en Español">
-                            <span class="lang-active">EN</span> / <span class="lang-inactive">ES</span>
-                        </a>
-                    </li>
+            <div class="site-footer__bottom">
+                <p>&copy; 2026 HealthPlan Moms. All rights reserved.</p>
+                <p>Medicare is a registered trademark of the U.S. Department of Health and Human Services.</p>
+                <ul class="site-footer__legal-links" aria-label="Legal">
+                    <li><a href="/terms/">Terms of Service</a></li>
+                    <li><a href="/privacy/">Privacy Policy</a></li>
+                    <li><a href="/consent-disclosure/">Consent &amp; TPMO Disclosure</a></li>
                 </ul>
+                <p class="site-footer__disclaimer">healthplanmoms.com and HealthPlan Moms is a DBA of Wildcat Insurance LLC, a licensed health insurance agency. The purpose of this site is the solicitation of insurance. Contact may be made by an insurance agent/producer or insurance company. HealthPlan Moms and the insurance plans presented on this site are not connected with or endorsed by the U.S. government or the federal Medicare program. We do not offer every plan available in your area. Any information we provide is limited to those plans we do offer in your area. Please contact Medicare.gov or 1-800-MEDICARE to get information on all of your options.</p>
             </div>
-            <div class="footer-column">
-                <h3>Get in Touch</h3>
-                <p><strong>Phone:</strong> <a href="tel:+14352461548" style="color: #D0D0D0;">(435) 246-1548</a></p>
-                <p><strong>Email:</strong> <a href="mailto:info@healthplanmoms.com" style="color: #D0D0D0;">info@healthplanmoms.com</a></p>
-                <p style="margin-top: 16px; font-size: 12px;">Available Monday–Friday, 9am–5pm MT</p>
-            </div>
-        </div>
-        <div class="footer-bottom">
-            <p>&copy; 2026 HealthPlan Moms. All rights reserved.</p>
-            <p style="margin-top: 8px;">Medicare is a registered trademark of the U.S. Department of Health and Human Services.</p>
-            <p style="margin-top: 8px;"><a href="/terms/" style="color: #999; text-decoration: none; transition: color 0.3s ease;" onmouseover="this.style.color='#A8C5A0'" onmouseout="this.style.color='#999'">Terms of Service</a> &middot; <a href="/privacy/" style="color: #999; text-decoration: none; transition: color 0.3s ease;" onmouseover="this.style.color='#A8C5A0'" onmouseout="this.style.color='#999'">Privacy Policy</a></p>
         </div>
     </footer>
 
     <script>
         // ============================================
         // HAMBURGER MENU
-        // ============================================
-        const hamburger = document.getElementById('hamburger');
-        const navLinks = document.getElementById('navLinks');
 
-        hamburger.addEventListener('click', function() {
-            navLinks.classList.toggle('active');
-        });
 
-        // Close menu when a link is clicked
-        document.querySelectorAll('.nav-links a').forEach(link => {
-            link.addEventListener('click', function() {
-                navLinks.classList.remove('active');
-            });
-        });
 
         // ============================================
         // STICKY HEADER ON SCROLL
         // ============================================
-        const header = document.getElementById('header');
+        const header = document.querySelector('.site-header');
         let lastScrollTop = 0;
 
         window.addEventListener('scroll', function() {
@@ -1846,5 +1641,6 @@
     <script src="/chat-widget.js" defer></script>
 
 <script src="/contact-modal.js"></script>
+<script src="/site-shell.js" defer></script>
 </body>
 </html>

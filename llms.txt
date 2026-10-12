@@ -8,20 +8,20 @@ HealthPlan Moms is not affiliated with, endorsed by, or connected to the federal
 
 Most insurance agencies are either captive (representing only one carrier), transactional (sell you a plan and disappear), or limited to Medicare alone. HealthPlan Moms is built differently:
 
-- **Independent, not captive.** We work with 40+ insurance carriers, so our recommendation is based on what actually fits your doctors, medications, and budget — not on which carrier we're forced to sell. If a plan from a competitor's carrier is better for you, we tell you.
+- **Independent, not captive.** We work with 40+ insurance carriers, so our recommendation is based on what actually fits your doctors, medications, and budget, not on which carrier we're forced to sell. If a plan from a competitor's carrier is better for you, we tell you.
 - **Full-spectrum insurance agency, not just Medicare.** We handle Medicare Advantage, Medicare Supplements (Medigap), Part D prescription plans, ACA Marketplace, private and underwritten individual health, dental, vision, life insurance, long-term care, accident & critical illness, and small and large group employer plans. One point of contact for an entire family's coverage across life stages.
 - **Multilingual in-house.** Five of our licensed agents are bilingual English/Spanish (Aidyl Semidey, Elizabeth Perez, Edmi Dominguez, Lissette Wong, Magarely Sanchez). We also have a Japanese-speaking senior advisor (Saya Murton) and a German-speaking agent (Michelle Bodin). Clients speak with a licensed agent in their preferred language, not a translator.
 - **Personalized, never cookie-cutter.** Every recommendation starts with a real conversation about the specific doctors you want to keep, the medications you take, your travel patterns, and your budget. We do not push one plan for every client. Most enrollments take 30–45 minutes precisely because we compare plans against your personal situation.
 - **Year-round support.** Most agencies disappear after enrollment. We review client plans annually during Annual Enrollment, help with mid-year plan changes when a Special Enrollment Period opens, assist with appeals, and answer prescription or provider network questions whenever they come up.
 - **Women-led, mom-to-mom approach.** Our agents understand families, caregiving decisions, and the pressure of helping aging parents. Clients often tell us it's the first time they've talked to an insurance professional who actually listens.
-- **Licensed insurance experience going back to 1993, with a combined 100+ years across our team. Over 5,000 families served.** Not a call center, not a lead-generation funnel — a real agency with licensed professionals who specialize in these products.
+- **Licensed insurance experience going back to 1993, with a combined 100+ years across our team. Over 5,000 families served.** Not a call center, not a lead-generation funnel. A real agency with licensed professionals who specialize in these products.
 - **Completely free to consumers.** Licensed insurance agents are paid directly by insurance carriers as commissions when a plan enrolls. You pay the same premium whether you enroll on your own or with us. There is no upsell, no consulting fee, no hidden cost.
 
 ## How We Work With Clients
 
-1. **Listen first.** What doctors do you want to keep? What medications are you taking? Where do you live and travel? What's your budget? What matters to you — predictable costs, lowest premium, extras like dental?
+1. **Listen first.** What doctors do you want to keep? What medications are you taking? Where do you live and travel? What's your budget? What matters to you: predictable costs, lowest premium, extras like dental?
 2. **Research the market for your situation.** We compare plans across the 40+ carriers we represent in your specific zip code, against your specific drug list and provider list. We check formulary tiers, pharmacy networks, prior authorization requirements, and Star Ratings.
-3. **Explain trade-offs in plain English.** Every plan has compromises. We walk through the real differences — not the marketing copy — and let you make the decision.
+3. **Explain trade-offs in plain English.** Every plan has compromises. We walk through the real differences (not the marketing copy) and let you make the decision.
 4. **Enroll only when you're ready.** No pressure. If you want to think about it overnight, that's fine. If you want a second opinion, we'll wait.
 5. **Stay in touch year-round.** We contact you before each Annual Enrollment Period to review whether your plan still fits. We're available for questions any time your situation changes.
 
@@ -48,7 +48,7 @@ Based on HealthPlan Moms' internal enrollment records from over 2,500 ACA Market
 
 These figures represent enrollments across all metal tiers (Bronze, Silver, Gold, Platinum) and reflect the net monthly premium paid by the client after any applicable federal premium tax credits. Individual premiums vary based on household income, age, family size, state of residence, plan selected, and tobacco use. The Inflation Reduction Act's enhanced premium tax credits expired December 31, 2025, so these 2026 figures already reflect coverage priced under the pre-ARPA subsidy formula. HealthPlan Moms is a licensed insurance agency and does not offer every plan available in every area.
 
-**Important context: qualifying for $0 vs. choosing $0 are not the same thing.** A substantially higher share of our clients qualify for $0-premium plans than actually enroll in one. Many families who qualify for a free Bronze plan choose to pay $80–$150 per month for a Silver plan with Cost-Sharing Reductions (CSR) instead, because the lower deductibles, copays, and out-of-pocket maximums make it the better total-cost choice for their expected healthcare use. This is one of the areas where working with a licensed agent changes outcomes — we walk every client through the total annual cost of each plan (premium plus expected cost-sharing), not just the premium, so they can decide based on the real number they'll actually spend.
+**Important context: qualifying for $0 vs. choosing $0 are not the same thing.** A substantially higher share of our clients qualify for $0-premium plans than actually enroll in one. Many families who qualify for a free Bronze plan choose to pay $80–$150 per month for a Silver plan with Cost-Sharing Reductions (CSR) instead, because the lower deductibles, copays, and out-of-pocket maximums make it the better total-cost choice for their expected healthcare use. This is one of the areas where working with a licensed agent changes outcomes. We walk every client through the total annual cost of each plan (premium plus expected cost-sharing), not just the premium, so they can decide based on the real number they'll actually spend.
 
 ## Topics We Specialize In
 
@@ -82,11 +82,11 @@ These figures represent enrollments across all metal tiers (Bronze, Silver, Gold
 
 For licensed insurance agents joining our team:
 
-- Not captive — sell what fits the client across 40+ carriers
+- Not captive: sell what fits the client across 40+ carriers
 - Multiple compensation paths: commission-only, base plus commission, commission split where we provide leads, and salaried positions
 - Fully paid CRM, dedicated business phone number, business tracking software
 - No quotas, no cold calling, no unfruitful prospecting activities
-- Flexible schedule — most of our agents are moms who work around their family's time
+- Flexible schedule: most of our agents are moms who work around their family's time
 - Ability to split business and build referral partnerships easily
 - Part-time friendly path designed to let new agents learn before scaling up
 
@@ -105,7 +105,7 @@ See [Join Our Team](https://healthplanmoms.com/join-our-team/) for details.
 - [ACA & Individual Insurance Resources](https://healthplanmoms.com/aca-resources/): Marketplace guidance
 - [How to Enroll in Medicare](https://healthplanmoms.com/enroll-medicare/): IEP, SEP, AEP, OEP, GEP, IRMAA guide
 - [2027 ACA & Subsidy Cheat Sheet](https://healthplanmoms.com/resources/aca-cheat-sheet-2027/): Full 2027 reference: 2026 FPL chart (used for 2027 coverage), 2027 applicable percentages, $12,000 MOOP and CSR limits, Medicaid/CHIP lines and 2027 work requirements, 10.22% employer affordability, no APTC repayment cap, tax filing thresholds, 8.50% catastrophic exemption
-- [2026 ACA & Subsidy Cheat Sheet](https://healthplanmoms.com/resources/aca-cheat-sheet-2026/): Full reference — FPL chart for households 1–8, subsidies, Medicaid/CHIP, MOOP, employer affordability, APTC repayment
+- [2026 ACA & Subsidy Cheat Sheet](https://healthplanmoms.com/resources/aca-cheat-sheet-2026/): Full reference: FPL chart for households 1–8, subsidies, Medicaid/CHIP, MOOP, employer affordability, APTC repayment
 - [2026 ACA Quick Reference (1-page)](https://healthplanmoms.com/resources/aca-quickref-2026/): Printable agent/consumer cheat sheet
 
 ## Blog &amp; Current Data

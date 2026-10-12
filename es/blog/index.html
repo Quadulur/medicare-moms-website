@@ -12,7 +12,7 @@
 
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Blog de HealthPlan Moms - Consejos e Información Experta</title>
+    <title>Blog de HealthPlan Moms - Consejos e información experta</title>
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -21,11 +21,14 @@
     <!-- SEO Meta Tags -->
     <meta name="description" content="Consejos y guías de seguros de salud del equipo de HealthPlan Moms. Aprende sobre Medicare Advantage, Medigap, planes ACA y más.">
     <meta name="keywords" content="blog de Medicare, consejos de Medicare, guía de Medicare, asesoramiento de seguros, Medicare Advantage, Medigap, mercado ACA">
-    <meta property="og:title" content="Blog de HealthPlan Moms - Consejos e Información Experta">
+    <meta property="og:title" content="Blog de HealthPlan Moms - Consejos e información experta">
     <meta property="og:description" content="Consejos y guías de seguros de salud del equipo de HealthPlan Moms.">
     <meta property="og:type" content="website">
-    <meta property="og:url" content="https://healthplanmoms.com/blog/">
-    <link rel="canonical" href="https://healthplanmoms.com/blog/">
+    <meta property="og:url" content="https://healthplanmoms.com/es/blog/">
+    <link rel="canonical" href="https://healthplanmoms.com/es/blog/">
+    <meta property="og:image" content="https://healthplanmoms.com/logo-pill.png">
+    <meta property="og:image:width" content="1000">
+    <meta property="og:image:height" content="1574">
     <link rel="alternate" hreflang="en" href="https://healthplanmoms.com/blog/">
     <link rel="alternate" hreflang="es" href="https://healthplanmoms.com/es/blog/">
     <link rel="alternate" hreflang="x-default" href="https://healthplanmoms.com/blog/">
@@ -117,7 +120,7 @@
         }
 
         .btn-primary {
-            background: linear-gradient(135deg, #5B8C6B 0%, #3D6B4A 100%);
+            background: var(--sage-ink);
             color: white;
         }
 
@@ -128,7 +131,7 @@
 
         .btn-secondary {
             background-color: transparent;
-            color: #5B8C6B;
+            color: var(--sage-ink);
             border-color: #5B8C6B;
         }
 
@@ -143,141 +146,6 @@
         }
 
         /* ============ Navigation ============ */
-        nav {
-            position: sticky;
-            top: 0;
-            background-color: white;
-            box-shadow: 0 4px 12px rgba(44, 44, 44, 0.08);
-            z-index: 1000;
-        }
-
-        .nav-container {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            padding: 15px 20px;
-            max-width: 1200px;
-            margin: 0 auto;
-        }
-
-        .logo {
-            display: flex;
-            align-items: center;
-            gap: 10px;
-            font-family: 'DM Serif Display', serif;
-            font-size: 22px;
-            font-weight: 700;
-            color: #5B8C6B;
-            text-decoration: none;
-        }
-
-        .logo img {
-            height: 50px;
-            width: auto;
-            border-radius: 6px;
-        }
-
-        .nav-links {
-            display: flex;
-            gap: 35px;
-            list-style: none;
-            align-items: center;
-        }
-
-        .nav-links a {
-            color: #2C2C2C;
-            text-decoration: none;
-            font-weight: 500;
-            transition: color 0.3s ease;
-            font-size: 15px;
-        }
-
-        .nav-links a:hover {
-            color: #5B8C6B;
-        }
-
-        .hamburger {
-            display: none;
-            flex-direction: column;
-            cursor: pointer;
-            gap: 6px;
-        }
-
-        .hamburger span {
-            width: 25px;
-            height: 3px;
-            background-color: #2C2C2C;
-            border-radius: 2px;
-            transition: all 0.3s ease;
-        }
-
-        .hamburger.active span:nth-child(1) {
-            transform: rotate(45deg) translate(10px, 10px);
-        }
-
-        .hamburger.active span:nth-child(2) {
-            opacity: 0;
-        }
-
-        .hamburger.active span:nth-child(3) {
-            transform: rotate(-45deg) translate(7px, -7px);
-        }
-
-        @media (max-width: 768px) {
-            .hamburger {
-                display: flex;
-            }
-
-            .nav-links {
-                position: absolute;
-                top: 70px;
-                left: 0;
-                right: 0;
-                background-color: white;
-                flex-direction: column;
-                gap: 15px;
-                padding: 30px 20px;
-                display: none;
-            }
-
-            .nav-links.active {
-                display: flex;
-            }
-        }
-
-        
-        .lang-toggle {
-            margin-left: 8px;
-        }
-        .lang-link {
-            text-decoration: none;
-            font-size: 13px;
-            font-weight: 600;
-            color: #4A5568;
-            padding: 4px 12px;
-            border-radius: 20px;
-            background: #E8F0E5;
-            transition: all 0.3s ease;
-            display: inline-flex;
-            align-items: center;
-            gap: 2px;
-        }
-        .lang-link:hover {
-            background: #5B8C6B;
-            color: white;
-        }
-        .lang-active {
-            color: #5B8C6B;
-            font-weight: 700;
-        }
-        .lang-inactive {
-            color: #999;
-            font-weight: 400;
-        }
-        .lang-link:hover .lang-active,
-        .lang-link:hover .lang-inactive {
-            color: white;
-        }
 
 /* ============ Hero Section ============ */
         .hero {
@@ -336,13 +204,13 @@
         }
 
         .category-btn:hover {
-            background-color: #A8C5A0;
+            background-color: var(--sage-ink);
             color: white;
-            border-color: #5B8C6B;
+            border-color: var(--sage-ink);
         }
 
         .category-btn.active {
-            background: linear-gradient(135deg, #5B8C6B 0%, #3D6B4A 100%);
+            background: var(--sage-ink);
             color: white;
             border-color: #3D6B4A;
         }
@@ -479,7 +347,7 @@
         }
 
         .blog-card a {
-            color: #5B8C6B;
+            color: var(--sage-ink);
             text-decoration: none;
             font-weight: 600;
             transition: color 0.3s ease;
@@ -549,7 +417,7 @@
         }
 
         .newsletter-form button:hover {
-            background-color: #A8C5A0;
+            background-color: var(--sage-deep);
             transform: translateY(-2px);
         }
 
@@ -571,106 +439,6 @@
         }
 
         /* ============ Footer ============ */
-        footer {
-            background-color: #2C2C2C;
-            color: #999;
-            padding: 50px 0 20px 0;
-        }
-
-        .footer-content {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-            gap: 40px;
-            max-width: 1200px;
-            margin: 0 auto;
-            padding: 0 20px;
-            margin-bottom: 30px;
-        }
-
-        .footer-section h4 {
-            color: white;
-            font-family: 'DM Serif Display', serif;
-            font-size: 16px;
-            margin-bottom: 16px;
-        }
-
-        .footer-section ul {
-            list-style: none;
-        }
-
-        .footer-section ul li {
-            margin-bottom: 12px;
-        }
-
-        .footer-section a {
-            color: #999;
-            text-decoration: none;
-            transition: color 0.3s ease;
-            font-size: 14px;
-        }
-
-        .footer-section a:hover {
-            color: #A8C5A0;
-        }
-
-        .footer-brand {
-            grid-column: 1 / -1;
-        }
-
-        .footer-brand p {
-            color: #999;
-            font-size: 14px;
-            margin-bottom: 16px;
-        }
-
-        .social-links {
-            display: flex;
-            gap: 16px;
-        }
-
-        .social-links a {
-            display: inline-flex;
-            align-items: center;
-            justify-content: center;
-            width: 40px;
-            height: 40px;
-            background-color: rgba(255, 255, 255, 0.1);
-            border-radius: 50%;
-            color: #A8C5A0;
-            text-decoration: none;
-            transition: all 0.3s ease;
-            font-size: 16px;
-        }
-
-        .social-links a:hover {
-            background-color: #5B8C6B;
-            color: white;
-        }
-
-        .footer-bottom {
-            text-align: center;
-            padding-top: 30px;
-            border-top: 1px solid rgba(255, 255, 255, 0.1);
-            max-width: 1200px;
-            margin: 0 auto;
-            padding-left: 20px;
-            padding-right: 20px;
-        }
-
-        .footer-bottom p {
-            color: #999;
-            font-size: 13px;
-            margin-bottom: 8px;
-        }
-
-        .legal-disclaimer {
-            color: #999;
-            font-size: 12px;
-            margin-top: 16px;
-            max-width: 600px;
-            margin-left: auto;
-            margin-right: auto;
-        }
 
         /* ============ Animation ============ */
         @keyframes fadeInUp {
@@ -710,34 +478,34 @@
                 padding: 16px;
             }
         }
-            .footer-logo { display: block; max-width: 180px; height: auto; margin-bottom: 15px; }
+            
     </style>
+    <link rel="stylesheet" href="/site-shell.css">
 </head>
 
 <body>
     <!-- Navigation -->
-    <nav>
-        <div class="nav-container">
-            <a href="/" class="logo"><img src="/logo-mark.svg" alt="HealthPlan Moms Logo">HealthPlan Moms</a>
-            <div class="hamburger" id="hamburger">
-                <span></span>
-                <span></span>
-                <span></span>
-            </div>
-            <ul class="nav-links" id="navLinks">
+    <a class="skip-link" href="#main">Saltar al contenido</a>
+    <header class="site-header">
+        <div class="site-header__inner">
+            <a href="/es/" class="site-logo"><img src="/logo-mark.svg" alt="" width="52" height="52">HealthPlan Moms</a>
+            <nav class="site-nav" aria-label="Principal">
+            <ul class="site-nav__links" id="site-menu">
                 <li><a href="/es/servicios/">Servicios</a></li>
                 <li><a href="/es/recursos/">Recursos</a></li>
-                <li><a href="/blog/">Blog</a></li>
-                <li><a href="/es/equipo/">Conoce Nuestro Equipo</a></li>
-                <li><a href="/#contact">Contacto</a></li>
-                <li class="lang-toggle">
-                    <a href="/blog/" class="lang-link" title="View in English">
-                        <span class="lang-inactive">EN</span> / <span class="lang-active">ES</span>
-                    </a>
-                </li>
+                <li><a href="/es/blog/" aria-current="page">Blog</a></li>
+                <li><a href="/es/equipo/">Nuestro Equipo</a></li>
+                <li><a href="/es/unete/">Únete al Equipo</a></li>
+                <li class="site-lang"><a class="site-lang__link" href="/blog/" hreflang="en" lang="en" aria-label="View in English"><span class="site-lang__off" aria-hidden="true">EN</span><span class="site-lang__sep" aria-hidden="true">/</span><span class="site-lang__on" aria-hidden="true">ES</span></a></li>
             </ul>
+            </nav>
+            <a class="site-call" href="tel:+14352461548"><svg aria-hidden="true" focusable="false" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.12.96.36 1.9.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.91.34 1.85.58 2.81.7A2 2 0 0 1 22 16.92z"/></svg><span class="site-call__label">Llamar</span> <span class="site-call__num">(435) 246-1548</span></a>
+            <button type="button" class="site-menu-btn" aria-label="Menú" aria-expanded="false" aria-controls="site-menu"><span class="site-menu-btn__bar"></span><span class="site-menu-btn__bar"></span><span class="site-menu-btn__bar"></span></button>
         </div>
-    </nav>
+    </header>
+
+    <main id="main" tabindex="-1">
+
 
     <!-- Hero Section -->
     <section class="hero">
@@ -763,77 +531,78 @@
     <!-- Blog Post Grid Section -->
     <section class="blog-section section-padding">
         <div class="container">
+            <h2 class="visually-hidden">Artículos recientes</h2>
             <div class="blog-grid" id="blogGrid">
                 <!-- Nuevo: Cambios en Medicare Advantage 2027 -->
                 <div class="blog-card fade-in" data-category="Medicare">
                     <span class="category-pill">Medicare Advantage</span>
-                    <h3>¿Tu Plan Medicare Advantage Cambia en 2027? Lo Que Significan los Recortes de Planes</h3>
+                    <h3>¿Tu plan Medicare Advantage cambia en 2027? Lo que significan los recortes de planes</h3>
                     <p class="excerpt">CMS dice que 2027 es estable, pero las aseguradoras están saliendo de cientos de condados y 193 condados no tendrán ningún plan Advantage con medicamentos. Los máximos de gastos de bolsillo y los deducibles también suben. Así puedes saber si tu plan está afectado, tus fechas límite y tus derechos garantizados de Medigap.</p>
                     <div class="post-meta">
                         <span><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#5B8C6B" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/><circle cx="12" cy="7" r="4"/></svg> Ally Valdez</span>
                         <span><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#5B8C6B" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4" width="18" height="18" rx="2" ry="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></svg> 10 de Octubre, 2026</span>
                     </div>
-                    <a href="/es/blog/cambios-medicare-advantage-2027/">Leer Más &rarr;</a>
+                    <a href="/es/blog/cambios-medicare-advantage-2027/">Leer más &rarr;</a>
                 </div>
 
                 <!-- Nuevo: ACA 2027 -->
                 <div class="blog-card fade-in" data-category="ACA y Mercado">
                     <span class="category-pill">ACA y Mercado</span>
-                    <h3>Guía del Mercado ACA 2027: Subsidios, Límites de Ingresos y Hoja de Referencia 2027</h3>
+                    <h3>Guía del Mercado ACA 2027: subsidios, límites de ingresos y hoja de referencia 2027</h3>
                     <p class="excerpt">La inscripción abierta para 2027 comienza el 1 de noviembre. El precipicio de subsidios del 400% FPL es de $63,840 para una persona, el máximo de gastos de bolsillo sube a $12,000 y ya no hay límite para devolver subsidios al declarar impuestos. Tabla FPL 2027, porcentajes de subsidio y fechas clave.</p>
                     <div class="post-meta">
                         <span><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#5B8C6B" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/><circle cx="12" cy="7" r="4"/></svg> Saya Murton</span>
                         <span><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#5B8C6B" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4" width="18" height="18" rx="2" ry="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></svg> 10 de Septiembre, 2026</span>
                     </div>
-                    <a href="/blog/aca-marketplace-2027/">Leer Más &rarr;</a>
+                    <a href="/blog/aca-marketplace-2027/" hreflang="en">Leer más (en inglés) &rarr;</a>
                 </div>
 
                 <!-- Inscripción Abierta de Otoño 2026 -->
                 <div class="blog-card fade-in" data-category="Medicare">
                     <span class="category-pill">Inscripción Abierta</span>
-                    <h3>Inscripción Abierta de Otoño de Medicare 2026: Tu Lista Paso a Paso</h3>
+                    <h3>Inscripción Abierta de Otoño de Medicare 2026: tu lista paso a paso</h3>
                     <p class="excerpt">La Inscripción Abierta de Otoño va del 15 de octubre al 7 de diciembre de 2026, y 2027 trae cambios reales: un tope más alto de $2,400 en la Parte D, el fin permanente del donut hole y contacto más rápido de los agentes. Aquí tienes una lista sencilla, las fechas que importan y qué revisar antes de decidir.</p>
                     <div class="post-meta">
                         <span><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#5B8C6B" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/><circle cx="12" cy="7" r="4"/></svg> Ally Valdez</span>
                         <span><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#5B8C6B" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4" width="18" height="18" rx="2" ry="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></svg> 25 de Junio, 2026</span>
                     </div>
-                    <a href="/es/blog/medicare-inscripcion-abierta-2026/">Leer Más &rarr;</a>
+                    <a href="/es/blog/medicare-inscripcion-abierta-2026/">Leer más &rarr;</a>
                 </div>
 
                 <!-- Medicare Stats 2026 -->
                 <div class="blog-card fade-in" data-category="Medicare">
                     <span class="category-pill">Datos de Medicare</span>
-                    <h3>Medicare en Cifras: Estadísticas Clave de 2026 que Todo Estadounidense Debe Conocer</h3>
+                    <h3>Medicare en cifras: estadísticas clave de 2026 que todo estadounidense debe conocer</h3>
                     <p class="excerpt">Más de 67 millones de estadounidenses tienen Medicare, y más de la mitad ahora están en planes privados de Medicare Advantage. Aquí está el panorama completo de Medicare en 2026, incluyendo los nuevos topes de $2,000 en recetas y lo que cambió con la Ley One Big Beautiful Bill. Fuentes: CMS, KFF y CBO.</p>
                     <div class="post-meta">
                         <span><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#5B8C6B" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/><circle cx="12" cy="7" r="4"/></svg> Ally Valdez</span>
                         <span><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#5B8C6B" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4" width="18" height="18" rx="2" ry="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></svg> 18 de Abril, 2026</span>
                     </div>
-                    <a href="/blog/medicare-statistics-2026/">Leer Más →</a>
+                    <a href="/blog/medicare-statistics-2026/" hreflang="en">Leer más (en inglés) →</a>
                 </div>
 
                 <!-- ACA 2026 -->
                 <div class="blog-card fade-in" data-category="ACA y Mercado" style="animation-delay: 0.1s;">
                     <span class="category-pill">ACA y Mercado</span>
-                    <h3>Mercado ACA 2026 en Cifras: Inscripción, Cambios en Subsidios y Qué Esperar</h3>
+                    <h3>Mercado ACA 2026 en cifras: inscripción, cambios en subsidios y qué esperar</h3>
                     <p class="excerpt">Un récord de 24.3 millones se inscribieron en cobertura ACA para 2025, pero 2026 es diferente. Los subsidios mejorados de la era COVID expiraron el 31 de diciembre de 2025, el precipicio de subsidios regresó, y el CBO proyecta que 5 millones podrían perder cobertura. Esto es lo que cambió y qué hacer al respecto.</p>
                     <div class="post-meta">
                         <span><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#5B8C6B" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/><circle cx="12" cy="7" r="4"/></svg> Saya Murton</span>
                         <span><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#5B8C6B" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4" width="18" height="18" rx="2" ry="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></svg> 30 de Marzo, 2026</span>
                     </div>
-                    <a href="/blog/aca-marketplace-2026/">Leer Más →</a>
+                    <a href="/blog/aca-marketplace-2026/" hreflang="en">Leer más (en inglés) →</a>
                 </div>
 
                 <!-- Medicare 101 Guide -->
                 <div class="blog-card fade-in" data-category="Medicare" style="animation-delay: 0.2s;">
                     <span class="category-pill">Medicare 101</span>
-                    <h3>Entendiendo Medicare en 2026: Guía Completa para Nuevos Usuarios</h3>
+                    <h3>Entendiendo Medicare en 2026: guía completa para nuevos usuarios</h3>
                     <p class="excerpt">¿Nuevo en Medicare? Esta guía completa de 2026 cubre las Partes A, B, C y D, fechas de inscripción, costos y cómo elegir el plan adecuado para tus necesidades.</p>
                     <div class="post-meta">
                         <span><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#5B8C6B" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/><circle cx="12" cy="7" r="4"/></svg> Ally Valdez</span>
                         <span><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#5B8C6B" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4" width="18" height="18" rx="2" ry="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></svg> 24 de Febrero, 2026</span>
                     </div>
-                    <a href="/blog/medicare-guide-2026/">Leer Más →</a>
+                    <a href="/blog/medicare-guide-2026/" hreflang="en">Leer más (en inglés) →</a>
                 </div>
             </div>
         </div>
@@ -843,7 +612,7 @@
     <section class="newsletter-section">
         <div class="container">
             <div class="newsletter-content">
-                <h2>Mantente Informado</h2>
+                <h2>Recordatorios de inscripción, directo a tu correo</h2>
                 <p class="lead">Recibe consejos de Medicare, recordatorios de inscripción y guías útiles en tu bandeja de entrada.</p>
                 <form class="newsletter-form" id="newsletterForm" data-hpm-lead data-source="blog_newsletter" data-kind="newsletter">
                     <div class="hpm-hp" aria-hidden="true" style="position:absolute;left:-10000px;width:1px;height:1px;overflow:hidden;">
@@ -860,84 +629,63 @@
     </section>
 
     <!-- Footer -->
-    <footer>
-        <div class="container">
-            <div class="footer-content">
-                <div class="footer-brand">
-                    <svg xmlns="http://www.w3.org/2000/svg" class="footer-logo" viewBox="0 0 375 375" width="120" height="120" role="img" aria-label="HealthPlan Moms - Coverage Made Simple"><defs><g/><clipPath id="62a5dd6ee4"><path d="M 102.683594 49.007812 L 270.683594 49.007812 L 270.683594 325.757812 L 102.683594 325.757812 Z M 102.683594 49.007812 " clip-rule="nonzero"/></clipPath><clipPath id="2a292b0266"><path d="M 177 164 L 198 164 L 198 211.839844 L 177 211.839844 Z M 177 164 " clip-rule="nonzero"/></clipPath><clipPath id="5604cf875e"><path d="M 177 103.089844 L 198 103.089844 L 198 151 L 177 151 Z M 177 103.089844 " clip-rule="nonzero"/></clipPath><clipPath id="371a180a35"><path d="M 194 146 L 241.972656 146 L 241.972656 168 L 194 168 Z M 194 146 " clip-rule="nonzero"/></clipPath><clipPath id="dc5e2af6d9"><path d="M 133.222656 146 L 181 146 L 181 168 L 133.222656 168 Z M 133.222656 146 " clip-rule="nonzero"/></clipPath><clipPath id="3cead0ac92"><rect x="0" width="81" y="0" height="19"/></clipPath></defs><path fill="#5b8c6b" fill-opacity="1" d="M 186.78125 325.980469 C 140.46875 325.980469 102.726562 288.238281 102.726562 241.925781 L 102.726562 133.066406 C 102.726562 86.753906 140.46875 49.007812 186.78125 49.007812 C 233.09375 49.007812 270.839844 86.753906 270.839844 133.066406 L 270.839844 241.925781 C 270.839844 288.320312 233.09375 325.980469 186.78125 325.980469 Z"/><g clip-path="url(#62a5dd6ee4)"><path fill="#F7F3ED" d="M 186.78125 325.980469 C 140.46875 325.980469 102.726562 288.238281 102.726562 241.925781 L 102.726562 133.066406 C 102.726562 86.753906 140.46875 49.007812 186.78125 49.007812 C 233.09375 49.007812 270.839844 86.753906 270.839844 133.066406 L 270.839844 241.925781 C 270.839844 288.320312 233.09375 325.980469 186.78125 325.980469 Z M 186.78125 50.246094 C 141.128906 50.246094 103.960938 87.410156 103.960938 133.066406 L 103.960938 241.925781 C 103.960938 287.582031 141.128906 324.746094 186.78125 324.746094 C 232.4375 324.746094 269.601562 287.582031 269.601562 241.925781 L 269.601562 133.066406 C 269.601562 87.410156 232.4375 50.246094 186.78125 50.246094 Z M 186.78125 50.246094 " fill-opacity="1" fill-rule="nonzero"/></g><g clip-path="url(#2a292b0266)"><path fill="#F7F3ED" d="M 194.617188 183.023438 C 189.546875 172.761719 187.882812 165.695312 187.558594 164.167969 C 187.527344 164.167969 187.5 164.171875 187.46875 164.171875 C 187.457031 164.171875 187.445312 164.167969 187.433594 164.167969 C 187.109375 165.703125 185.445312 172.769531 180.378906 183.023438 C 174.628906 194.664062 175.722656 211.644531 187.496094 211.644531 L 187.5 211.644531 C 199.273438 211.644531 200.367188 194.664062 194.617188 183.023438 Z M 194.617188 183.023438 " fill-opacity="1" fill-rule="nonzero"/></g><g clip-path="url(#5604cf875e)"><path fill="#F7F3ED" d="M 180.378906 131.710938 C 185.449219 141.972656 187.113281 149.039062 187.4375 150.570312 C 187.464844 150.566406 187.496094 150.566406 187.527344 150.566406 C 187.539062 150.566406 187.550781 150.566406 187.558594 150.566406 C 187.886719 149.03125 189.550781 141.96875 194.617188 131.710938 C 200.367188 120.074219 199.273438 103.09375 187.5 103.089844 L 187.496094 103.089844 C 175.722656 103.09375 174.628906 120.074219 180.378906 131.710938 Z M 180.378906 131.710938 " fill-opacity="1" fill-rule="nonzero"/></g><g clip-path="url(#371a180a35)"><path fill="#F7F3ED" d="M 213.15625 150.25 C 202.890625 155.320312 195.824219 156.984375 194.296875 157.304688 C 194.296875 157.335938 194.300781 157.367188 194.300781 157.398438 C 194.300781 157.410156 194.300781 157.417969 194.300781 157.429688 C 195.835938 157.753906 202.898438 159.421875 213.15625 164.488281 C 224.792969 170.238281 241.773438 169.144531 241.773438 157.371094 L 241.773438 157.367188 C 241.773438 145.59375 224.792969 144.496094 213.15625 150.25 Z M 213.15625 150.25 " fill-opacity="1" fill-rule="nonzero"/></g><g clip-path="url(#dc5e2af6d9)"><path fill="#F7F3ED" d="M 161.839844 164.488281 C 172.105469 159.417969 179.171875 157.753906 180.699219 157.429688 C 180.699219 157.398438 180.695312 157.367188 180.695312 157.339844 C 180.695312 157.328125 180.695312 157.316406 180.695312 157.304688 C 179.160156 156.980469 172.097656 155.316406 161.839844 150.25 C 150.203125 144.496094 133.222656 145.59375 133.222656 157.367188 L 133.222656 157.371094 C 133.222656 169.144531 150.203125 170.238281 161.839844 164.488281 Z M 161.839844 164.488281 " fill-opacity="1" fill-rule="nonzero"/></g><path fill="#F7F3ED" d="M 206.238281 168.414062 C 197.609375 165.496094 192.695312 162.453125 191.65625 161.773438 C 191.640625 161.792969 191.625 161.8125 191.605469 161.828125 C 191.601562 161.835938 191.59375 161.839844 191.585938 161.847656 C 192.269531 162.894531 195.304688 167.804688 198.226562 176.429688 C 201.539062 186.214844 211.710938 195.152344 218.339844 188.527344 C 224.964844 181.898438 216.027344 171.730469 206.238281 168.414062 Z M 206.238281 168.414062 " fill-opacity="1" fill-rule="nonzero"/><path fill="#F7F3ED" d="M 169.351562 147.554688 C 177.980469 150.472656 182.890625 153.515625 183.933594 154.195312 C 183.949219 154.175781 183.964844 154.15625 183.984375 154.140625 C 183.988281 154.132812 183.996094 154.128906 184.003906 154.121094 C 183.320312 153.074219 180.28125 148.164062 177.363281 139.539062 C 174.050781 129.753906 163.878906 120.816406 157.25 127.441406 C 150.625 134.070312 159.5625 144.238281 169.351562 147.554688 Z M 169.351562 147.554688 " fill-opacity="1" fill-rule="nonzero"/><path fill="#F7F3ED" d="M 198.226562 139.539062 C 195.304688 148.167969 192.265625 153.082031 191.585938 154.125 C 191.601562 154.140625 191.621094 154.15625 191.640625 154.171875 C 191.644531 154.179688 191.652344 154.1875 191.65625 154.191406 C 192.703125 153.511719 197.617188 150.472656 206.238281 147.554688 C 216.023438 144.238281 224.964844 134.070312 218.339844 127.441406 C 211.710938 120.816406 201.539062 129.753906 198.226562 139.539062 Z M 198.226562 139.539062 " fill-opacity="1" fill-rule="nonzero"/><path fill="#F7F3ED" d="M 177.363281 176.429688 C 180.285156 167.800781 183.324219 162.886719 184.003906 161.84375 C 183.984375 161.828125 183.96875 161.8125 183.949219 161.796875 C 183.941406 161.789062 183.9375 161.78125 183.933594 161.777344 C 182.886719 162.457031 177.972656 165.496094 169.351562 168.414062 C 159.5625 171.730469 150.625 181.898438 157.25 188.527344 C 163.878906 195.152344 174.050781 186.214844 177.363281 176.429688 Z M 177.363281 176.429688 " fill-opacity="1" fill-rule="nonzero"/><text x="187.5" y="243" text-anchor="middle" font-family="'DM Serif Display', Georgia, serif" font-size="24" fill="#2c2c2c" font-weight="400">HealthPlan</text>
-<text x="187.5" y="273" text-anchor="middle" font-family="'DM Serif Display', Georgia, serif" font-size="24" fill="#2c2c2c" font-weight="400">Moms</text>
-<text x="187.5" y="293" text-anchor="middle" font-family="'DM Serif Display', Georgia, serif" font-size="7" fill="#2c2c2c" letter-spacing="3" font-weight="400">COVERAGE MADE SIMPLE</text>
-</svg>
-                    <p>Haciendo la cobertura de salud simple, asequible y accesible para todos.</p>
-                    <div class="social-links">
-                        <a href="https://www.instagram.com/wearehealthplanmoms/" target="_blank" rel="noopener noreferrer" title="Instagram"><svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"/><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/></svg></a>
-                        <a href="https://www.facebook.com/profile.php?id=61572026712949" target="_blank" rel="noopener noreferrer" title="Facebook"><svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"/></svg></a>
-                        <a href="https://www.linkedin.com/company/healthplanmoms/" target="_blank" rel="noopener noreferrer" title="LinkedIn"><svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"/><rect x="2" y="9" width="4" height="12"/><circle cx="4" cy="4" r="2"/></svg></a>
-                    </div>
-                </div>
+    </main>
 
-                <div class="footer-section">
-                    <h4>Enlaces Rápidos</h4>
-                    <ul>
-                        <li><a href="/">Inicio</a></li>
+    <footer class="site-footer">
+        <div class="site-footer__inner">
+            <div class="site-footer__grid">
+                <div class="site-footer__col">
+                    <a href="/es/" class="site-footer__brand"><img src="/logo-mark.svg" alt="" width="44" height="44">HealthPlan Moms</a>
+                    <p class="site-footer__tagline">Ayudando a las familias a encontrar cobertura de salud que funciona.</p>
+                    <ul class="site-footer__social" aria-label="Redes sociales"><li><a href="https://www.instagram.com/wearehealthplanmoms/" target="_blank" rel="noopener noreferrer" aria-label="Instagram"><svg aria-hidden="true" focusable="false" xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"/><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/></svg></a></li><li><a href="https://www.facebook.com/profile.php?id=61572026712949" target="_blank" rel="noopener noreferrer" aria-label="Facebook"><svg aria-hidden="true" focusable="false" xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"/></svg></a></li><li><a href="https://www.linkedin.com/company/healthplanmoms/" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn"><svg aria-hidden="true" focusable="false" xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"/><rect x="2" y="9" width="4" height="12"/><circle cx="4" cy="4" r="2"/></svg></a></li></ul>
+                </div>
+                <div class="site-footer__col">
+                    <h2 class="site-footer__heading">Explorar</h2>
+                    <ul class="site-footer__list">
+                        <li><a href="/es/">Inicio</a></li>
                         <li><a href="/es/servicios/">Servicios</a></li>
                         <li><a href="/es/recursos/">Recursos</a></li>
-                        <li><a href="/blog/">Blog</a></li>
-                        <li><a href="/#contact">Contacto</a></li>
-                        <li><a href="/es/equipo/">Conoce Nuestro Equipo</a></li>
-                        <li><a href="/es/unete/">Únete a Nuestro Equipo</a></li>
+                        <li><a href="/es/blog/">Blog</a></li>
+                        <li><a href="/es/equipo/">Nuestro Equipo</a></li>
+                        <li><a href="/es/unete/">Únete al Equipo</a></li>
+                        <li><a href="/es/#contact">Contacto</a></li>
                     </ul>
                 </div>
-
-                <div class="footer-section">
-                    <h4>Tipos de Cobertura</h4>
-                    <ul>
-                        <li><a href="#plans">Medicare Advantage</a></li>
-                        <li><a href="#plans">Medigap / Suplementos</a></li>
-                        <li><a href="#plans">Mercado ACA</a></li>
-                        <li><a href="#plans">Dental y Visión</a></li>
-                        <li><a href="#plans">Seguro de Vida</a></li>
+                <div class="site-footer__col">
+                    <h2 class="site-footer__heading">Cobertura</h2>
+                    <ul class="site-footer__list">
+                        <li><a href="/es/servicios/#medicare-advantage">Medicare Advantage</a></li>
+                        <li><a href="/es/servicios/#medigap">Medigap / Suplementos</a></li>
+                        <li><a href="/es/servicios/#aca">Mercado de Seguros ACA</a></li>
+                        <li><a href="/es/servicios/#dental-vision">Dental y Visión</a></li>
+                        <li><a href="/es/servicios/#life-insurance">Seguro de Vida</a></li>
                     </ul>
                 </div>
-
-                <div class="footer-section">
-                    <h4>Información de Contacto</h4>
-                    <ul>
+                <div class="site-footer__col">
+                    <h2 class="site-footer__heading">Contacto</h2>
+                    <ul class="site-footer__list">
                         <li><a href="tel:+14352461548">(435) 246-1548</a></li>
                         <li><a href="mailto:info@healthplanmoms.com">info@healthplanmoms.com</a></li>
-                        <li>Lunes–Viernes, 9am–5pm MT</li>
+                        <li class="site-footer__note">Lunes a viernes, 9am a 5pm MT</li>
                     </ul>
                 </div>
             </div>
-
-            <div class="footer-bottom">
+            <div class="site-footer__bottom">
                 <p>&copy; 2026 HealthPlan Moms. Todos los derechos reservados.</p>
-                <p style="margin-top: 8px;">Medicare es una marca registrada del Departamento de Salud y Servicios Humanos de EE.UU.</p>
-                <p style="margin-top: 8px;"><a href="/terminos.html" style="color: #999; text-decoration: none; transition: color 0.3s ease;" onmouseover="this.style.color='#A8C5A0'" onmouseout="this.style.color='#999'">Términos de Servicio</a> &middot; <a href="/privacidad.html" style="color: #999; text-decoration: none; transition: color 0.3s ease;" onmouseover="this.style.color='#A8C5A0'" onmouseout="this.style.color='#999'">Política de Privacidad</a></p>
-                <div class="legal-disclaimer">
-                    healthplanmoms.com y HealthPlan Moms es un DBA de Wildcat Insurance LLC, una agencia de seguros de salud licenciada. El propósito de este sitio es la solicitud de seguros. El contacto puede ser realizado por un agente/productor de seguros o una compañía de seguros. HealthPlan Moms y los planes de seguros presentados en este sitio no están conectados ni respaldados por el gobierno de los EE. UU. ni por el programa federal de Medicare. No ofrecemos todos los planes disponibles en su área. Cualquier información que proporcionemos se limita a los planes que ofrecemos en su área. Comuníquese con Medicare.gov o 1-800-MEDICARE para obtener información sobre todas sus opciones.
-                </div>
+                <p>Medicare es una marca registrada del Departamento de Salud y Servicios Humanos de los EE. UU.</p>
+                <ul class="site-footer__legal-links" aria-label="Legal">
+                    <li><a href="/terms/">Términos de Servicio</a></li>
+                    <li><a href="/privacy/">Política de Privacidad</a></li>
+                    <li><a href="/es/consentimiento/">Consentimiento y aviso TPMO</a></li>
+                </ul>
+                <p class="site-footer__disclaimer">healthplanmoms.com y HealthPlan Moms es un DBA de Wildcat Insurance LLC, una agencia de seguros de salud licenciada. El propósito de este sitio es la solicitud de seguros. El contacto puede ser realizado por un agente/productor de seguros o una compañía de seguros. HealthPlan Moms y los planes de seguros presentados en este sitio no están conectados ni respaldados por el gobierno de los EE. UU. ni por el programa federal de Medicare. No ofrecemos todos los planes disponibles en su área. Cualquier información que proporcionemos se limita a los planes que ofrecemos en su área. Comuníquese con Medicare.gov o 1-800-MEDICARE para obtener información sobre todas sus opciones.</p>
             </div>
         </div>
     </footer>
 
     <script>
-        // Mobile Menu Toggle
-        const hamburger = document.getElementById('hamburger');
-        const navLinks = document.getElementById('navLinks');
 
-        hamburger.addEventListener('click', () => {
-            hamburger.classList.toggle('active');
-            navLinks.classList.toggle('active');
-        });
 
-        // Close menu when a link is clicked
-        document.querySelectorAll('.nav-links a').forEach(link => {
-            link.addEventListener('click', () => {
-                hamburger.classList.remove('active');
-                navLinks.classList.remove('active');
-            });
-        });
 
         // Fade-in animation on scroll
         const observerOptions = {
@@ -1002,5 +750,6 @@
 
 <script src="/lead-forms.js" defer></script>
 <script src="/contact-modal.js"></script>
+<script src="/site-shell.js" defer></script>
 </body>
 </html>
