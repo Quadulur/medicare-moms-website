@@ -17,27 +17,30 @@
 
   var labels = isSpanish
     ? {
-        heading: 'Contactanos',
+        heading: 'Contáctanos',
         subtext:
-          'Hablemos de tus opciones. Sin presion, sin jerga, solo respuestas reales.',
+          'Hablemos de tus opciones. Sin presión, sin jerga, solo respuestas reales.',
         firstName: 'Nombre',
         lastName: 'Apellido',
-        email: 'Correo Electronico',
-        phone: 'Telefono',
-        lookingFor: 'Que estas buscando?',
-        selectOption: 'Selecciona una opcion',
+        email: 'Correo electrónico',
+        phone: 'Teléfono',
+        lookingFor: '¿Qué estás buscando?',
+        selectOption: 'Selecciona una opción',
         optMedicareAdv: 'Medicare Advantage',
         optMedicareSup: 'Suplemento de Medicare (Medigap)',
-        optACA: 'ACA / Planes del Mercado',
-        optDental: 'Dental y Vision',
+        optACA: 'Planes ACA / Marketplace',
+        optDental: 'Dental y Visión',
         optLife: 'Seguro de Vida',
-        optNotSure: 'No estoy seguro, ayudenme a decidir',
+        optNotSure: 'No estoy seguro, ayúdenme a decidir',
         consent:
-          'Acepto ser contactado por HealthPlan Moms y sus agentes licenciados por telefono, texto y correo electronico sobre opciones de seguros, incluyendo mensajes automatizados. El consentimiento no es obligatorio para comprar.',
-        consentLink: 'Ver terminos completos y divulgacion TPMO',
+          'Acepto ser contactado por HealthPlan Moms y sus agentes licenciados por teléfono, mensaje de texto y correo electrónico sobre opciones de seguro, incluyendo mediante mensajes automatizados. El consentimiento no es una condición de compra.',
+        consentLink: 'Ver términos completos y aviso TPMO',
+        consentHref: '/es/consentimiento/',
+        consentText:
+          'Acepto ser contactado por HealthPlan Moms y sus agentes licenciados por teléfono, mensaje de texto y correo electrónico sobre opciones de seguro, incluyendo mediante mensajes automatizados. El consentimiento no es una condición de compra. Términos completos y aviso TPMO en https://healthplanmoms.com/es/consentimiento/',
         submit: 'Solicitar Consulta Gratis',
         free: 'Nuestros servicios siempre son gratis para ti.',
-        successHeading: 'Gracias!',
+        successHeading: '¡Gracias!',
         successMsg:
           'Nos pondremos en contacto contigo pronto. Mientras tanto, puedes llamarnos al (435) 246-1548.',
         close: 'Cerrar',
@@ -61,6 +64,9 @@
         consent:
           'I agree to be contacted by HealthPlan Moms and its licensed agents by phone, text, and email about insurance options, including via automated messages. Consent is not required to purchase.',
         consentLink: 'View full terms & TPMO disclosure',
+        consentHref: '/consent-disclosure/',
+        consentText:
+          'I agree to be contacted by HealthPlan Moms and its licensed agents by phone, text, and email about insurance options, including via automated messages. Consent is not required to purchase. Full terms & TPMO disclosure at https://healthplanmoms.com/consent-disclosure/',
         submit: 'Get a Free Consultation',
         free: 'Our services are always free to you.',
         successHeading: 'Thank You!',
@@ -68,6 +74,19 @@
           "We'll be in touch soon. In the meantime, feel free to call us at (435) 246-1548.",
         close: 'Close',
       };
+
+  function escAttr(str) {
+    return String(str).replace(/&/g, '&amp;').replace(/"/g, '&quot;').replace(/</g, '&lt;');
+  }
+
+  // Make sure the shared lead form helper is on the page.
+  if (!window.HPM && !document.querySelector('script[src*="lead-forms.js"]')) {
+    var lf = document.createElement('script');
+    lf.src = '/lead-forms.js';
+    lf.defer = true;
+    document.head.appendChild(lf);
+  }
+  window.HPM_READY = window.HPM_READY || [];
 
   // Inject CSS
   var style = document.createElement('style');
@@ -101,27 +120,33 @@
     '.cm-success p{font-size:15px;color:#4A5568;margin-bottom:24px;line-height:1.6}' +
     '.cm-success-btn{display:inline-block;padding:12px 32px;background:linear-gradient(135deg,#5B8C6B 0%,#3D6B4A 100%);color:#fff;border:none;border-radius:8px;font-family:"Nunito",sans-serif;font-size:15px;font-weight:600;cursor:pointer;transition:all .3s}' +
     '.cm-success-btn:hover{transform:translateY(-2px);box-shadow:0 10px 30px rgba(91,140,107,.3)}' +
-    '@media(max-width:540px){#contactModal{max-width:100%;border-radius:12px}.cm-header{padding:22px 20px 18px}.cm-body{padding:20px}.cm-form-row{grid-template-columns:1fr}}';
+    '.cm-close:focus-visible,.cm-submit:focus-visible,.cm-success-btn:focus-visible{outline:3px solid #A8C5A0;outline-offset:2px}' +
+    '.hpm-hp{position:absolute!important;left:-10000px!important;width:1px!important;height:1px!important;overflow:hidden!important}' +
+    '.cm-submit:disabled{opacity:.7;cursor:wait;transform:none}' +
+    '#contactModal .hpm-lead-success{border:none;padding:24px 0 4px}' +
+    '#contactModal .cm-success-btn{margin-top:18px}' +
+    '@media(max-width:540px){#contactModal{max-width:100%;border-radius:12px}.cm-header{padding:22px 20px 18px}.cm-body{padding:20px}.cm-form-row{grid-template-columns:1fr}.cm-form-group input,.cm-form-group select{font-size:16px}}';
   document.head.appendChild(style);
 
   // Inject HTML
   var overlay = document.createElement('div');
   overlay.id = 'contactModalOverlay';
   overlay.innerHTML =
-    '<div id="contactModal">' +
+    '<div id="contactModal" role="dialog" aria-modal="true" aria-labelledby="cmTitle" aria-describedby="cmSubtext">' +
     '<div class="cm-header">' +
-    '<button class="cm-close" aria-label="Close">&times;</button>' +
-    '<h2>' + labels.heading + '</h2>' +
-    '<p>' + labels.subtext + '</p>' +
+    '<button type="button" class="cm-close" aria-label="' + labels.close + '">&times;</button>' +
+    '<h2 id="cmTitle">' + labels.heading + '</h2>' +
+    '<p id="cmSubtext">' + labels.subtext + '</p>' +
     '</div>' +
     '<div class="cm-body">' +
-    '<form id="contactModalForm">' +
+    '<form id="contactModalForm" data-kind="client">' +
+    '<div class="hpm-hp" aria-hidden="true"><label for="cmCompanyWebsite">Company website</label><input type="text" id="cmCompanyWebsite" name="company_website" tabindex="-1" autocomplete="off" value=""></div>' +
     '<div class="cm-form-row">' +
-    '<div class="cm-form-group"><label for="cmFirstName">' + labels.firstName + '</label><input type="text" id="cmFirstName" name="firstName" required></div>' +
-    '<div class="cm-form-group"><label for="cmLastName">' + labels.lastName + '</label><input type="text" id="cmLastName" name="lastName" required></div>' +
+    '<div class="cm-form-group"><label for="cmFirstName">' + labels.firstName + '</label><input type="text" id="cmFirstName" name="firstName" autocomplete="given-name" required></div>' +
+    '<div class="cm-form-group"><label for="cmLastName">' + labels.lastName + '</label><input type="text" id="cmLastName" name="lastName" autocomplete="family-name" required></div>' +
     '</div>' +
-    '<div class="cm-form-group"><label for="cmEmail">' + labels.email + '</label><input type="email" id="cmEmail" name="email" required></div>' +
-    '<div class="cm-form-group"><label for="cmPhone">' + labels.phone + '</label><input type="tel" id="cmPhone" name="phone" required></div>' +
+    '<div class="cm-form-group"><label for="cmEmail">' + labels.email + '</label><input type="email" id="cmEmail" name="email" autocomplete="email" required></div>' +
+    '<div class="cm-form-group"><label for="cmPhone">' + labels.phone + '</label><input type="tel" id="cmPhone" name="phone" autocomplete="tel" required></div>' +
     '<div class="cm-form-group"><label for="cmInterested">' + labels.lookingFor + '</label>' +
     '<select id="cmInterested" name="interested" required>' +
     '<option value="">' + labels.selectOption + '</option>' +
@@ -132,7 +157,7 @@
     '<option value="Life Insurance">' + labels.optLife + '</option>' +
     '<option value="Not Sure">' + labels.optNotSure + '</option>' +
     '</select></div>' +
-    '<label class="cm-consent"><input type="checkbox" name="consent" required><span>' + labels.consent + ' <a href="/consent-disclosure/" target="_blank" rel="noopener">' + labels.consentLink + '</a>.</span></label>' +
+    '<label class="cm-consent" for="cmConsent"><input type="checkbox" id="cmConsent" name="consent" required data-consent-text="' + escAttr(labels.consentText) + '"><span>' + labels.consent + ' <a href="' + labels.consentHref + '" target="_blank" rel="noopener">' + labels.consentLink + '</a>.</span></label>' +
     '<button type="submit" class="cm-submit">' + labels.submit + '</button>' +
     '<p class="cm-free">' + labels.free + '</p>' +
     '</form>' +
@@ -140,10 +165,49 @@
     '</div>';
   document.body.appendChild(overlay);
 
+  var modal = overlay.querySelector('#contactModal');
+  var form = overlay.querySelector('#contactModalForm');
+  var lastFocus = null;
+  var pathSlug = window.location.pathname.replace(/index\.html$/, '').replace(/^\/+|\/+$/g, '').replace(/[^a-zA-Z0-9]+/g, '_') || 'home';
+  var source = 'modal_' + pathSlug;
+
+  // Never let the browser do a native submit (would put details in the URL) before the helper binds.
+  form.addEventListener('submit', function (e) {
+    if (!form._hpmBound) e.preventDefault();
+  });
+
+  window.HPM_READY.push(function (HPM) {
+    HPM.bind(form, {
+      source: source,
+      kind: 'client',
+      successTitle: labels.successHeading,
+      successText: labels.successMsg,
+      onSuccess: function (panel) {
+        var btn = document.createElement('button');
+        btn.type = 'button';
+        btn.className = 'cm-success-btn';
+        btn.textContent = labels.close;
+        btn.addEventListener('click', closeModal);
+        panel.appendChild(btn);
+      }
+    });
+  });
+
+  function focusables() {
+    var nodes = modal.querySelectorAll('a[href], button:not([disabled]), input:not([disabled]):not([tabindex="-1"]), select:not([disabled]), textarea:not([disabled]), [tabindex]:not([tabindex="-1"])');
+    var out = [];
+    for (var i = 0; i < nodes.length; i++) {
+      if (nodes[i].offsetParent !== null || nodes[i] === document.activeElement) out.push(nodes[i]);
+    }
+    return out;
+  }
+
   // Functions
-  function openModal(preselect) {
+  function openModal(preselect, opener) {
+    lastFocus = opener || document.activeElement;
     overlay.classList.add('active');
     document.body.style.overflow = 'hidden';
+    if (window.HPM && window.HPM.markRendered && !form.hidden) window.HPM.markRendered(form);
     // Pre-select dropdown if we know the service
     if (preselect) {
       var sel = document.getElementById('cmInterested');
@@ -154,11 +218,16 @@
         }
       }
     }
+    var first = form.hidden ? overlay.querySelector('.cm-success-btn') : document.getElementById('cmFirstName');
+    (first || overlay.querySelector('.cm-close')).focus();
   }
 
   function closeModal() {
+    if (!overlay.classList.contains('active')) return;
     overlay.classList.remove('active');
     document.body.style.overflow = '';
+    if (lastFocus && typeof lastFocus.focus === 'function') lastFocus.focus();
+    lastFocus = null;
   }
 
   // Close button
@@ -169,22 +238,27 @@
     if (e.target === overlay) closeModal();
   });
 
-  // Escape key to close
+  // Escape closes, Tab stays inside the dialog
   document.addEventListener('keydown', function (e) {
-    if (e.key === 'Escape') closeModal();
-  });
-
-  // Form submission
-  document.getElementById('contactModalForm').addEventListener('submit', function (e) {
-    e.preventDefault();
-    var modal = document.getElementById('contactModal');
-    modal.innerHTML =
-      '<div class="cm-success">' +
-      '<svg width="64" height="64" viewBox="0 0 64 64" fill="none"><circle cx="32" cy="32" r="30" stroke="#5B8C6B" stroke-width="3"/><polyline points="20,34 28,42 44,24" stroke="#5B8C6B" stroke-width="3" fill="none" stroke-linecap="round" stroke-linejoin="round"/></svg>' +
-      '<h2>' + labels.successHeading + '</h2>' +
-      '<p>' + labels.successMsg + '</p>' +
-      '<button class="cm-success-btn" onclick="document.getElementById(\'contactModalOverlay\').classList.remove(\'active\');document.body.style.overflow=\'\'">' + labels.close + '</button>' +
-      '</div>';
+    if (!overlay.classList.contains('active')) return;
+    if (e.key === 'Escape') {
+      e.preventDefault();
+      closeModal();
+      return;
+    }
+    if (e.key === 'Tab') {
+      var f = focusables();
+      if (!f.length) return;
+      var firstEl = f[0];
+      var lastEl = f[f.length - 1];
+      if (e.shiftKey && (document.activeElement === firstEl || !modal.contains(document.activeElement))) {
+        e.preventDefault();
+        lastEl.focus();
+      } else if (!e.shiftKey && (document.activeElement === lastEl || !modal.contains(document.activeElement))) {
+        e.preventDefault();
+        firstEl.focus();
+      }
+    }
   });
 
   // Intercept all /#contact links
@@ -213,6 +287,6 @@
           preselect = 'Not Sure';
       }
     }
-    openModal(preselect);
+    openModal(preselect, link);
   });
 })();
