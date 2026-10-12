@@ -7,18 +7,11 @@ Allow: /
 # Internal scratch / preview pages - not for indexing
 Disallow: /brand-preview/
 Disallow: /brand-preview.html
+Disallow: /agent-tools/
 
-# Old .html redirects (already redirect, but nudge crawlers to the clean URLs)
-Disallow: /services.html
-Disallow: /resources.html
-Disallow: /aca-resources.html
-Disallow: /meet-our-team.html
-Disallow: /join-our-team.html
-Disallow: /enroll-medicare.html
-Disallow: /needs-analysis.html
-Disallow: /privacy.html
-Disallow: /terms.html
-Disallow: /blog.html
+# Old .html URLs are not blocked on purpose: each one carries noindex and a
+# canonical tag pointing at its clean URL, and crawlers must be able to read
+# those pages to follow them.
 
 # Location of sitemap
 Sitemap: https://healthplanmoms.com/sitemap.xml
