@@ -109,7 +109,6 @@
 
         /* Hero Section */
         .hero {
-            margin-top: 70px;
             background: linear-gradient(160deg, #F7F3ED 0%, #EDE8DF 40%, #E8F0E5 100%);
             padding: 5rem 2rem;
             text-align: center;
@@ -186,9 +185,7 @@
 
         /* Sections */
         section {
-            padding: 5rem 2rem;
-            max-width: 1200px;
-            margin: 0 auto;
+            padding: 5rem max(2rem, calc((100% - 1200px) / 2 + 2rem));
         }
 
         section h2 {
@@ -716,10 +713,7 @@
 
         /* Products Section */
         .products-section {
-            padding: 5rem 2rem;
             background-color: var(--white);
-            max-width: 1200px;
-            margin: 0 auto;
             text-align: center;
         }
 

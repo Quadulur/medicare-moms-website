@@ -605,3 +605,80 @@ button.flip-hint:hover { text-decoration: underline; text-underline-offset: 3px;
     main [class*="grid"] > *,
     main [class*="-row"] > * { min-width: 0; }
 }
+
+/* ==========================================================================
+   Polish pass (Oct 2026)
+   ========================================================================== */
+
+/* DM Serif Display ships one weight (400). Stop the browser from faking bold,
+   which smeared the letterforms on every heading set at 600-800. */
+html { font-synthesis-weight: none; font-synthesis: none; }
+body h1, body h2, body h3, body h4, body h5, body h6 { font-weight: 400; }
+
+/* The display face is for headings. Controls, labels and small UI read
+   cleaner in Nunito, which has real weights. */
+body .btn,
+body button,
+body input[type="submit"],
+body .form-group label,
+body .contact-method label,
+body .testimonial-author,
+body .faq-question {
+    font-family: 'Nunito', system-ui, sans-serif;
+    font-weight: 700;
+    letter-spacing: 0;
+}
+body .btn { font-weight: 800; }
+
+/* Primary buttons on the dark green sections were the same green as the
+   section (contrast 1:1), so they read as disabled. Invert them. */
+body .cta-section .btn-primary,
+body .contact-section .btn-primary,
+body .form-section .btn-primary,
+body .newsletter-section .btn-primary,
+body .newsletter-form button {
+    background: #fff;
+    background-image: none;
+    color: var(--sage-ink);
+    border-color: #fff;
+    box-shadow: 0 6px 18px rgba(16, 38, 22, 0.22);
+}
+body .cta-section .btn-primary:hover,
+body .cta-section .btn-primary:focus-visible,
+body .contact-section .btn-primary:hover,
+body .contact-section .btn-primary:focus-visible,
+body .form-section .btn-primary:hover,
+body .form-section .btn-primary:focus-visible,
+body .newsletter-section .btn-primary:hover,
+body .newsletter-section .btn-primary:focus-visible,
+body .newsletter-form button:hover,
+body .newsletter-form button:focus-visible {
+    background: var(--sage-mist);
+    color: var(--sage-deep);
+    border-color: var(--sage-mist);
+}
+body .newsletter-disclaimer { color: #d7e6d2; }
+
+/* Card grids: buttons sit on one shared baseline regardless of copy length */
+.plan-card,
+.finder-card {
+    display: flex;
+    flex-direction: column;
+}
+.plan-card > .btn,
+.finder-card > .btn {
+    margin-top: auto;
+    align-self: stretch;
+}
+
+/* Inline SVG icons that replaced emoji */
+.ico {
+    width: 1em;
+    height: 1em;
+    flex-shrink: 0;
+    vertical-align: -0.125em;
+}
+
+/* Placeholder text meets 4.5:1 on white and the pale field fills */
+body input::placeholder,
+body textarea::placeholder { color: var(--muted-soft); opacity: 1; }
