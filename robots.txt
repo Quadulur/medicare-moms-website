@@ -8,6 +8,7 @@ Allow: /
 Disallow: /brand-preview/
 Disallow: /brand-preview.html
 Disallow: /agent-tools/
+Disallow: /go/
 
 # Old .html URLs are not blocked on purpose: each one carries noindex and a
 # canonical tag pointing at its clean URL, and crawlers must be able to read

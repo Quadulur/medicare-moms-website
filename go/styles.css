@@ -1,0 +1,86 @@
+:root{
+  --sage:#5b8c6b; --sage-d:#3d6b4a; --sage-l:#a8c5a0; --mist:#eef4ec; --cream:#fbf8f3;
+  --ink:#24302a; --muted:#56635b; --line:#d9e3d5; --err:#a8261d; --white:#fff;
+  --r:14px;
+}
+*{box-sizing:border-box}
+html{-webkit-text-size-adjust:100%}
+body{margin:0;background:var(--cream);color:var(--ink);font:400 17px/1.55 "Nunito",system-ui,sans-serif}
+img{max-width:100%}
+a{color:var(--sage-d)}
+.wrap{max-width:1080px;margin:0 auto;padding:0 16px}
+[hidden]{display:none!important}
+
+.top{background:var(--white);border-bottom:1px solid var(--line)}
+.top-in{display:flex;align-items:center;justify-content:space-between;height:60px}
+.brand{display:flex;align-items:center;gap:8px;font:400 21px/1 "DM Serif Display",serif;color:var(--ink)}
+.brand em{font-style:normal;color:var(--sage-d)}
+.call{display:inline-flex;white-space:nowrap;flex-shrink:0;align-items:center;gap:6px;font-weight:800;text-decoration:none;color:var(--sage-d);font-size:16px;padding:8px 12px;border-radius:999px;background:var(--mist)}
+.call svg{width:17px;height:17px;fill:none;stroke:currentColor;stroke-width:2}
+
+.hero{padding:28px 0 40px;background:linear-gradient(180deg,var(--mist),var(--cream))}
+.hero-in{display:grid;gap:24px}
+.eyebrow{margin:0 0 8px;font-weight:800;font-size:13px;letter-spacing:.08em;text-transform:uppercase;color:var(--sage-d)}
+h1{font:400 clamp(30px,6.4vw,46px)/1.12 "DM Serif Display",serif;margin:0 0 12px;letter-spacing:-.01em}
+.sub{margin:0 0 18px;color:var(--muted);font-size:18px}
+.moms{display:flex;align-items:center;gap:12px}
+.faces{display:flex;flex-shrink:0}
+.faces img{width:44px;height:44px;border-radius:50%;object-fit:cover;border:3px solid var(--cream);margin-left:-10px}
+.faces img:first-child{margin-left:0}
+.moms p{margin:0;font-size:15px;color:var(--muted);font-weight:600}
+
+.card{background:var(--white);border:1px solid var(--line);border-radius:var(--r);padding:20px;box-shadow:0 12px 30px -18px rgba(36,48,42,.35)}
+.steps{display:flex;gap:6px;list-style:none;margin:0 0 18px;padding:0;counter-reset:s}
+.steps li{flex:1;font-size:12px;font-weight:800;text-transform:uppercase;letter-spacing:.06em;color:#8a978f;padding-top:8px;border-top:4px solid var(--line)}
+.steps li.on{color:var(--sage-d);border-color:var(--sage)}
+.big{display:block;font:400 23px/1.25 "DM Serif Display",serif;margin:0 0 12px}
+label{font-weight:700;font-size:14px}
+.field{margin:0 0 12px}
+.field label{display:block;margin:0 0 4px}
+input,select{width:100%;font:inherit;font-size:17px;color:var(--ink);padding:13px 14px;border:1.5px solid #b9c7b6;border-radius:10px;background:var(--white)}
+input:focus,select:focus{outline:3px solid rgba(91,140,107,.35);border-color:var(--sage)}
+.row{display:flex;gap:8px}
+.row input{flex:1;font-size:22px;letter-spacing:.08em;font-weight:700}
+.two{display:grid;grid-template-columns:1fr 1fr;gap:10px}
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:6px;border:0;border-radius:10px;background:var(--sage-d);color:var(--white);font:800 17px/1 "Nunito",sans-serif;padding:15px 20px;cursor:pointer;text-decoration:none;white-space:nowrap}
+.btn:hover{background:#2f5a3c}
+.btn:disabled{opacity:.6;cursor:wait}
+.btn.wide{width:100%;margin-top:6px}
+.btn.ghost{background:var(--mist);color:var(--sage-d);flex-wrap:wrap}
+.btn.ghost span{white-space:nowrap}
+.fine{margin:10px 0 0;font-size:13.5px;color:var(--muted)}
+.err{margin:10px 0 0;color:var(--err);font-weight:700;font-size:14.5px}
+.consent{display:flex;gap:10px;align-items:flex-start;font-weight:400;font-size:12.5px;line-height:1.45;color:var(--muted);margin:4px 0 10px}
+.consent input{width:20px;height:20px;flex:0 0 20px;margin-top:2px;accent-color:var(--sage-d)}
+.consent a{white-space:nowrap}
+.hp{position:absolute;left:-10000px;width:1px;height:1px;overflow:hidden}
+
+.count{background:var(--mist);border-radius:10px;padding:14px 16px;margin:0 0 16px}
+.count:empty{display:none}
+.count b{display:block;font:400 40px/1 "DM Serif Display",serif;color:var(--sage-d)}
+.count span{font-weight:700;font-size:15px}
+.count small{display:block;color:var(--muted);font-size:13px;margin-top:4px}
+
+.done{text-align:center;padding:8px 4px}
+.done svg{width:56px;height:56px;fill:none;stroke:var(--sage);stroke-width:3;stroke-linecap:round;stroke-linejoin:round}
+.done h2{font:400 28px/1.2 "DM Serif Display",serif;margin:8px 0}
+.done p{color:var(--muted)}
+
+.why{padding:40px 0}
+.why h2{font:400 30px/1.2 "DM Serif Display",serif;margin:0 0 16px}
+.points{list-style:none;margin:0;padding:0;display:grid;gap:14px}
+.points li{background:var(--white);border:1px solid var(--line);border-radius:var(--r);padding:18px}
+.points strong{display:block;font-size:18px;margin-bottom:2px}
+
+.foot{border-top:1px solid var(--line);padding:24px 0 40px;font-size:12.5px;color:var(--muted)}
+.foot a{color:var(--muted)}
+
+@media (min-width:860px){
+  .hero{padding:56px 0 64px}
+  .hero-in{grid-template-columns:1.05fr .95fr;gap:48px;align-items:center}
+  .card{padding:28px}
+  .points{grid-template-columns:repeat(3,1fr)}
+}
+@media (max-width:520px){.brand{font-size:19px}.brand img{width:28px;height:28px}.call{font-size:14px;padding:7px 10px}.sub{font-size:16.5px;margin-bottom:14px}h1{margin-bottom:10px}.hero{padding-top:20px}}
+@media (max-width:380px){.two{grid-template-columns:1fr}.row{flex-direction:column}}
+@media (prefers-reduced-motion:no-preference){.step{animation:in .25s ease}@keyframes in{from{opacity:0;transform:translateY(6px)}to{opacity:1;transform:none}}}
