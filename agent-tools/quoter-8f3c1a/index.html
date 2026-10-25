@@ -1,0 +1,619 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="robots" content="noindex, nofollow, noarchive, nosnippet">
+<title>ACA Quoter (Internal) - HealthPlan Moms</title>
+<link rel="icon" type="image/svg+xml" href="/favicon.svg">
+<meta name="theme-color" content="#5b8c6b">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display&family=Nunito:wght@400;600;700;800&display=swap" rel="stylesheet">
+<style>
+:root{
+  --sage:#5B8C6B; --sage-dark:#3D6B4A; --sage-light:#EDF3EE;
+  --ink:#2C2C2C; --muted:#4A5568; --line:#E2E8F0; --bg:#F7F9F7;
+  --warn:#B7791F; --err:#C53030;
+}
+*{margin:0;padding:0;box-sizing:border-box}
+body{font-family:'Nunito',sans-serif;color:var(--ink);background:var(--bg);line-height:1.6}
+h1,h2,h3,h4{font-family:'DM Serif Display',serif;color:var(--ink);line-height:1.25}
+a{color:var(--sage-dark)}
+.wrap{max-width:1180px;margin:0 auto;padding:0 20px}
+
+header.bar{background:linear-gradient(135deg,var(--sage) 0%,var(--sage-dark) 100%);color:#fff;padding:22px 0}
+header.bar h1{color:#fff;font-size:clamp(22px,3vw,30px)}
+header.bar p{color:rgba(255,255,255,.85);font-size:14px;margin-top:4px}
+.badge{display:inline-block;background:rgba(255,255,255,.18);border:1px solid rgba(255,255,255,.35);
+  color:#fff;font-size:11px;font-weight:800;letter-spacing:.08em;text-transform:uppercase;
+  padding:3px 10px;border-radius:999px;margin-bottom:8px}
+
+main{padding:28px 0 60px}
+.layout{display:grid;grid-template-columns:380px 1fr;gap:24px;align-items:start}
+@media (max-width:980px){.layout{grid-template-columns:1fr}}
+
+.card{background:#fff;border:1px solid var(--line);border-radius:14px;padding:22px;
+  box-shadow:0 1px 3px rgba(0,0,0,.04)}
+.card + .card{margin-top:18px}
+.panel{position:sticky;top:18px}
+@media (max-width:980px){.panel{position:static}}
+
+fieldset{border:0;margin:0 0 18px}
+legend{font-family:'DM Serif Display',serif;font-size:17px;margin-bottom:10px;color:var(--sage-dark)}
+label{display:block;font-size:12px;font-weight:800;letter-spacing:.04em;text-transform:uppercase;
+  color:var(--muted);margin-bottom:5px}
+input[type=text],input[type=number],select{width:100%;padding:10px 12px;border:1px solid var(--line);
+  border-radius:8px;font-family:inherit;font-size:15px;color:var(--ink);background:#fff}
+input:focus,select:focus{outline:2px solid var(--sage);outline-offset:1px;border-color:var(--sage)}
+.row{display:grid;gap:12px}
+.row.two{grid-template-columns:1fr 1fr}
+.row.three{grid-template-columns:1fr 1fr 1fr}
+.field{margin-bottom:12px}
+.hint{font-size:12px;color:var(--muted);margin-top:4px;font-weight:600}
+
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:8px;padding:11px 22px;
+  border-radius:8px;font-family:'DM Serif Display',serif;font-size:15px;cursor:pointer;
+  border:2px solid transparent;transition:all .2s ease;text-decoration:none}
+.btn-primary{background:linear-gradient(135deg,var(--sage) 0%,var(--sage-dark) 100%);color:#fff;width:100%}
+.btn-primary:hover{filter:brightness(1.06)}
+.btn-primary:disabled{opacity:.55;cursor:not-allowed;filter:none}
+.btn-ghost{background:#fff;border-color:var(--line);color:var(--muted);font-size:13px;padding:7px 14px}
+.btn-ghost:hover{border-color:var(--sage);color:var(--sage-dark)}
+.btn-sm{font-size:13px;padding:8px 14px}
+
+.applicant{background:var(--sage-light);border:1px solid #D9E5DC;border-radius:10px;padding:14px;margin-bottom:10px;position:relative}
+.applicant .who{font-family:'DM Serif Display',serif;font-size:14px;color:var(--sage-dark);margin-bottom:8px}
+.applicant .rm{position:absolute;top:10px;right:10px;background:none;border:0;color:var(--muted);
+  font-size:18px;cursor:pointer;line-height:1;padding:2px 6px;border-radius:6px}
+.applicant .rm:hover{background:rgba(0,0,0,.06);color:var(--err)}
+.check{display:flex;align-items:center;gap:8px;margin-top:8px}
+.check input{width:16px;height:16px;accent-color:var(--sage)}
+.check label{margin:0;text-transform:none;letter-spacing:0;font-size:13px;font-weight:700;color:var(--ink)}
+
+.chips{display:flex;flex-wrap:wrap;gap:7px}
+.chip{border:1px solid var(--line);background:#fff;border-radius:999px;padding:6px 13px;font-size:13px;
+  font-weight:700;color:var(--muted);cursor:pointer;user-select:none}
+.chip.on{background:var(--sage);border-color:var(--sage);color:#fff}
+
+.summary{display:grid;grid-template-columns:repeat(auto-fit,minmax(150px,1fr));gap:12px;margin-bottom:18px}
+.stat{background:#fff;border:1px solid var(--line);border-radius:12px;padding:14px 16px}
+.stat .k{font-size:11px;font-weight:800;letter-spacing:.06em;text-transform:uppercase;color:var(--muted)}
+.stat .v{font-family:'DM Serif Display',serif;font-size:26px;color:var(--sage-dark);margin-top:2px}
+
+.plan{background:#fff;border:1px solid var(--line);border-radius:14px;padding:18px;margin-bottom:12px}
+.plan:hover{border-color:#CBD5E0}
+.plan-top{display:flex;justify-content:space-between;gap:18px;align-items:flex-start;flex-wrap:wrap}
+.plan-name{font-family:'DM Serif Display',serif;font-size:19px;line-height:1.3}
+.plan-issuer{font-size:13px;color:var(--muted);font-weight:700;margin-top:2px}
+.price{text-align:right;flex-shrink:0}
+.price .net{font-family:'DM Serif Display',serif;font-size:32px;color:var(--sage-dark);line-height:1}
+.price .per{font-size:12px;color:var(--muted);font-weight:700}
+.price .gross{font-size:12px;color:var(--muted);margin-top:4px}
+.price .gross s{opacity:.7}
+.price .save{color:var(--sage-dark);font-weight:800}
+
+.tags{display:flex;flex-wrap:wrap;gap:6px;margin-top:12px}
+.tag{font-size:11px;font-weight:800;letter-spacing:.04em;text-transform:uppercase;
+  padding:3px 9px;border-radius:999px;background:var(--sage-light);color:var(--sage-dark)}
+.tag.alt{background:#EDF2F7;color:var(--muted)}
+
+.facts{display:grid;grid-template-columns:repeat(auto-fit,minmax(120px,1fr));gap:10px;margin-top:14px;
+  padding-top:14px;border-top:1px solid var(--line)}
+.fact .k{font-size:11px;font-weight:800;letter-spacing:.05em;text-transform:uppercase;color:var(--muted)}
+.fact .v{font-size:15px;font-weight:800;color:var(--ink)}
+.links{display:flex;flex-wrap:wrap;gap:8px;margin-top:14px;padding-top:12px;border-top:1px solid var(--line)}
+
+.note{border-radius:10px;padding:12px 14px;font-size:14px;font-weight:600;margin-bottom:14px}
+.note.info{background:#EBF8FF;border:1px solid #BEE3F8;color:#2A4365}
+.note.warn{background:#FFFAF0;border:1px solid #FEEBC8;color:var(--warn)}
+.note.err{background:#FFF5F5;border:1px solid #FED7D7;color:var(--err)}
+
+.empty{text-align:center;padding:60px 20px;color:var(--muted)}
+.empty h3{color:var(--muted);margin-bottom:6px}
+.spinner{width:22px;height:22px;border:3px solid rgba(255,255,255,.4);border-top-color:#fff;
+  border-radius:50%;animation:spin .8s linear infinite}
+@keyframes spin{to{transform:rotate(360deg)}}
+.results-head{display:flex;justify-content:space-between;align-items:center;gap:12px;flex-wrap:wrap;margin-bottom:12px}
+.results-head h2{font-size:22px}
+footer.foot{text-align:center;padding:26px 20px;color:var(--muted);font-size:12px;font-weight:600}
+
+@media print{
+  header.bar,.panel,.btn,.links,footer.foot{display:none!important}
+  .layout{grid-template-columns:1fr}
+  body{background:#fff}
+  .plan{break-inside:avoid;border-color:#ccc}
+}
+</style>
+</head>
+<body>
+
+<header class="bar">
+  <div class="wrap">
+    <span class="badge">Internal tool</span>
+    <h1>ACA Quoter</h1>
+    <p>HealthPlan Moms agent quoting, powered by the HealthSherpa ONE API. Not for public sharing.</p>
+  </div>
+</header>
+
+<main>
+<div class="wrap layout">
+
+  <!-- ============ Input panel ============ -->
+  <div class="panel">
+    <form class="card" id="quoteForm" autocomplete="off">
+
+      <fieldset>
+        <legend>Where</legend>
+        <div class="row two">
+          <div class="field">
+            <label for="zip">ZIP code</label>
+            <input type="text" id="zip" inputmode="numeric" maxlength="5" placeholder="84660" required>
+          </div>
+          <div class="field">
+            <label for="planYear">Plan year</label>
+            <select id="planYear"></select>
+          </div>
+        </div>
+        <div class="field" id="countyField" style="display:none">
+          <label for="county">County</label>
+          <select id="county"></select>
+          <div class="hint" id="countyHint"></div>
+        </div>
+      </fieldset>
+
+      <fieldset>
+        <legend>Household</legend>
+        <div id="applicants"></div>
+        <button type="button" class="btn btn-ghost btn-sm" id="addApplicant">+ Add household member</button>
+
+        <div class="row two" style="margin-top:14px">
+          <div class="field">
+            <label for="income">Annual household income</label>
+            <input type="text" id="income" inputmode="numeric" placeholder="45,000">
+            <div class="hint">Drives the subsidy. Leave blank for full price.</div>
+          </div>
+          <div class="field">
+            <label for="hhSize">Tax household size</label>
+            <input type="number" id="hhSize" min="1" max="20" placeholder="auto">
+            <div class="hint">Blank matches applicant count.</div>
+          </div>
+        </div>
+      </fieldset>
+
+      <fieldset>
+        <legend>Filters</legend>
+        <div class="field">
+          <label>Metal level</label>
+          <div class="chips" id="metals"></div>
+        </div>
+        <div class="field">
+          <label>Plan type</label>
+          <div class="chips" id="ptypes"></div>
+        </div>
+        <div class="row two">
+          <div class="field">
+            <label for="market">Market</label>
+            <select id="market">
+              <option value="on_exchange">On exchange</option>
+              <option value="off_exchange">Off exchange</option>
+            </select>
+          </div>
+          <div class="field">
+            <label for="sortField">Sort by</label>
+            <select id="sortField">
+              <option value="premium">Net premium</option>
+              <option value="deductible">Deductible</option>
+              <option value="moop">Out of pocket max</option>
+            </select>
+          </div>
+        </div>
+      </fieldset>
+
+      <button type="submit" class="btn btn-primary" id="runBtn">Get quotes</button>
+    </form>
+
+    <div class="card" style="margin-top:16px">
+      <div class="hint" style="margin:0">
+        Plans and pricing come straight from HealthSherpa. Always confirm final premium and
+        eligibility on the carrier or Marketplace application before the client signs.
+      </div>
+    </div>
+  </div>
+
+  <!-- ============ Results ============ -->
+  <div>
+    <div id="messages"></div>
+    <div id="summary"></div>
+    <div class="results-head" id="resultsHead" style="display:none">
+      <h2 id="resultsTitle">Plans</h2>
+      <div style="display:flex;gap:8px">
+        <button type="button" class="btn btn-ghost btn-sm" id="copyBtn">Copy summary</button>
+        <button type="button" class="btn btn-ghost btn-sm" onclick="window.print()">Print</button>
+      </div>
+    </div>
+    <div id="results">
+      <div class="empty">
+        <h3>No quotes yet</h3>
+        <p>Enter a ZIP and at least one household member, then run the quote.</p>
+      </div>
+    </div>
+  </div>
+
+</div>
+</main>
+
+<footer class="foot">HealthPlan Moms internal quoting tool. Do not share this URL outside the team.</footer>
+
+<script>
+/* =========================================================================
+   CONFIG - the one line you edit after deploying the Worker
+   ========================================================================= */
+const WORKER_URL = "https://hpm-quoter-proxy.YOUR-SUBDOMAIN.workers.dev";
+
+/* ========================================================================= */
+
+const METALS = [
+  ["bronze","Bronze"],["expanded_bronze","Expanded bronze"],["silver","Silver"],
+  ["gold","Gold"],["platinum","Platinum"],["catastrophic","Catastrophic"]
+];
+const PTYPES = [["hmo","HMO"],["ppo","PPO"],["epo","EPO"],["pos","POS"],["indemnity","Indemnity"]];
+
+const state = { counties: [], applicants: [], metals: new Set(), ptypes: new Set(), plans: [], lastQuery: null };
+
+const $ = (id) => document.getElementById(id);
+const money = (n) => (n === null || n === undefined || isNaN(n)) ? "n/a"
+  : "$" + Number(n).toLocaleString("en-US", { maximumFractionDigits: 0 });
+const money2 = (n) => (n === null || n === undefined || isNaN(n)) ? "n/a"
+  : "$" + Number(n).toLocaleString("en-US", { minimumFractionDigits: 2, maximumFractionDigits: 2 });
+const titleCase = (s) => String(s || "").replace(/_/g, " ").replace(/\b\w/g, (c) => c.toUpperCase());
+
+/* ---------- setup ---------- */
+function init() {
+  const thisYear = new Date().getFullYear();
+  [thisYear + 1, thisYear].forEach((y, i) => {
+    const o = document.createElement("option");
+    o.value = y; o.textContent = y; if (i === 0) o.selected = true;
+    $("planYear").appendChild(o);
+  });
+
+  buildChips($("metals"), METALS, state.metals);
+  buildChips($("ptypes"), PTYPES, state.ptypes);
+
+  addApplicant("primary");
+  $("addApplicant").addEventListener("click", () => addApplicant());
+  $("quoteForm").addEventListener("submit", runQuote);
+  $("copyBtn").addEventListener("click", copySummary);
+
+  let zipTimer;
+  $("zip").addEventListener("input", (e) => {
+    const v = e.target.value.replace(/\D/g, "").slice(0, 5);
+    e.target.value = v;
+    clearTimeout(zipTimer);
+    if (v.length === 5) zipTimer = setTimeout(() => lookupCounty(v), 250);
+    else { $("countyField").style.display = "none"; state.counties = []; }
+  });
+
+  $("income").addEventListener("input", (e) => {
+    const raw = e.target.value.replace(/[^\d]/g, "");
+    e.target.value = raw ? Number(raw).toLocaleString("en-US") : "";
+  });
+}
+
+function buildChips(host, items, set) {
+  items.forEach(([val, label]) => {
+    const b = document.createElement("button");
+    b.type = "button"; b.className = "chip"; b.textContent = label;
+    b.addEventListener("click", () => {
+      if (set.has(val)) { set.delete(val); b.classList.remove("on"); }
+      else { set.add(val); b.classList.add("on"); }
+    });
+    host.appendChild(b);
+  });
+}
+
+/* ---------- applicants ---------- */
+function addApplicant(force) {
+  const i = state.applicants.length;
+  const rel = force || (i === 0 ? "primary" : (i === 1 ? "spouse" : "dependent"));
+  state.applicants.push({ id: "a" + Date.now() + i, relationship: rel, age: "", tobacco: false });
+  renderApplicants();
+}
+
+function renderApplicants() {
+  const host = $("applicants");
+  host.innerHTML = "";
+  state.applicants.forEach((a, i) => {
+    const box = document.createElement("div");
+    box.className = "applicant";
+    box.innerHTML =
+      '<div class="who">' + (i === 0 ? "Primary applicant" : "Member " + (i + 1)) + "</div>" +
+      (i > 0 ? '<button type="button" class="rm" aria-label="Remove">&times;</button>' : "") +
+      '<div class="row two">' +
+        '<div><label>Age</label><input type="number" class="ag" min="0" max="130" value="' + (a.age || "") + '" placeholder="42"></div>' +
+        '<div><label>Relationship</label><select class="rel"' + (i === 0 ? " disabled" : "") + '>' +
+          '<option value="primary"' + (a.relationship === "primary" ? " selected" : "") + ">Primary</option>" +
+          '<option value="spouse"' + (a.relationship === "spouse" ? " selected" : "") + ">Spouse</option>" +
+          '<option value="dependent"' + (a.relationship === "dependent" ? " selected" : "") + ">Dependent</option>" +
+        "</select></div>" +
+      "</div>" +
+      '<div class="check"><input type="checkbox" class="tob" id="tob' + a.id + '"' + (a.tobacco ? " checked" : "") + '>' +
+      '<label for="tob' + a.id + '">Uses tobacco</label></div>';
+
+    box.querySelector(".ag").addEventListener("input", (e) => { a.age = e.target.value; });
+    box.querySelector(".tob").addEventListener("change", (e) => { a.tobacco = e.target.checked; });
+    const rel = box.querySelector(".rel");
+    if (rel && !rel.disabled) rel.addEventListener("change", (e) => { a.relationship = e.target.value; });
+    const rm = box.querySelector(".rm");
+    if (rm) rm.addEventListener("click", () => {
+      state.applicants = state.applicants.filter((x) => x.id !== a.id);
+      renderApplicants();
+    });
+    host.appendChild(box);
+  });
+}
+
+/* ---------- county lookup ---------- */
+async function lookupCounty(zip) {
+  setMessage("");
+  try {
+    const res = await fetch(WORKER_URL + "/counties?zip=" + zip);
+    const data = await res.json();
+    if (!res.ok) throw new Error(data.message || data.error || "County lookup failed");
+    const counties = data.counties || data.data || (Array.isArray(data) ? data : []);
+    state.counties = counties;
+    const sel = $("county");
+    sel.innerHTML = "";
+    counties.forEach((c) => {
+      const o = document.createElement("option");
+      o.value = c.fips_code;
+      o.dataset.state = c.state || "";
+      o.textContent = c.name + (c.state ? ", " + c.state : "");
+      sel.appendChild(o);
+    });
+    $("countyField").style.display = counties.length ? "block" : "none";
+    $("countyHint").textContent = counties.length > 1
+      ? "This ZIP spans " + counties.length + " counties. Pick the client's county, rates differ."
+      : "";
+    if (!counties.length) setMessage("No county found for that ZIP.", "warn");
+  } catch (err) {
+    $("countyField").style.display = "none";
+    setMessage("Could not resolve that ZIP. " + err.message, "warn");
+  }
+}
+
+/* ---------- quote ---------- */
+async function runQuote(e) {
+  e.preventDefault();
+  setMessage("");
+
+  const zip = $("zip").value.trim();
+  if (!/^\d{5}$/.test(zip)) return setMessage("Enter a 5 digit ZIP code.", "err");
+
+  const sel = $("county").selectedOptions[0];
+  if (!sel) return setMessage("Waiting on the county lookup for that ZIP. Try again in a second.", "err");
+
+  const applicants = [];
+  for (const a of state.applicants) {
+    const age = parseInt(a.age, 10);
+    if (isNaN(age)) return setMessage("Every household member needs an age.", "err");
+    applicants.push({ age, relationship: a.relationship, uses_tobacco: !!a.tobacco });
+  }
+  if (!applicants.length) return setMessage("Add at least one household member.", "err");
+
+  const incomeRaw = $("income").value.replace(/[^\d]/g, "");
+  const payload = {
+    zip,
+    fips: sel.value,
+    state: sel.dataset.state || undefined,
+    plan_year: parseInt($("planYear").value, 10),
+    exchange: $("market").value,
+    applicants,
+    metal_levels: [...state.metals],
+    plan_types: [...state.ptypes],
+    sort_field: $("sortField").value,
+    sort_direction: "asc",
+    page_size: 100,
+  };
+  if (incomeRaw) payload.annual_income = parseInt(incomeRaw, 10);
+  const hh = parseInt($("hhSize").value, 10);
+  if (!isNaN(hh) && hh > 0) payload.household_size = hh;
+
+  const btn = $("runBtn");
+  btn.disabled = true;
+  btn.innerHTML = '<span class="spinner"></span> Pulling plans';
+
+  try {
+    const res = await fetch(WORKER_URL + "/quotes", {
+      method: "POST",
+      headers: { "Content-Type": "application/json" },
+      body: JSON.stringify(payload),
+    });
+    const data = await res.json();
+    if (!res.ok) {
+      const detail = data.message || (data.errors && data.errors[0] && data.errors[0].detail) || data.error || res.status;
+      throw new Error(detail);
+    }
+    state.plans = data.plans || [];
+    state.lastQuery = { payload, county: sel.textContent };
+    renderResults(data);
+  } catch (err) {
+    setMessage("Quote failed: " + err.message, "err");
+    $("results").innerHTML = '<div class="empty"><h3>No plans returned</h3><p>Check the Worker URL and API key, then try again.</p></div>';
+    $("summary").innerHTML = "";
+    $("resultsHead").style.display = "none";
+  } finally {
+    btn.disabled = false;
+    btn.textContent = "Get quotes";
+  }
+}
+
+/* ---------- render ---------- */
+function renderResults(data) {
+  const plans = state.plans;
+  const head = $("resultsHead");
+
+  if (!plans.length) {
+    $("summary").innerHTML = "";
+    head.style.display = "none";
+    $("results").innerHTML = '<div class="empty"><h3>No plans matched</h3><p>Loosen the metal or plan type filters and run it again.</p></div>';
+    return;
+  }
+
+  const nets = plans.map((p) => (p.pricing && p.pricing.net_premium) || 0).filter((n) => n > 0);
+  const lowest = nets.length ? Math.min(...nets) : 0;
+  const subsidy = plans.reduce((m, p) => Math.max(m, (p.pricing && p.pricing.subsidy_applied) || 0), 0);
+  const silvers = plans.filter((p) => p.details && p.details.metal_level === "silver");
+
+  $("summary").innerHTML =
+    '<div class="summary">' +
+      stat("Plans found", plans.length) +
+      stat("Lowest net premium", money2(lowest) + "/mo") +
+      stat("Subsidy applied", subsidy ? money2(subsidy) + "/mo" : "None") +
+      stat("Silver options", silvers.length) +
+    "</div>";
+
+  head.style.display = "flex";
+  $("resultsTitle").textContent = plans.length + " plan" + (plans.length === 1 ? "" : "s") +
+    " in " + (state.lastQuery ? state.lastQuery.county : "");
+
+  if (!subsidy && state.lastQuery && state.lastQuery.payload.annual_income) {
+    setMessage("No subsidy came back for this income and household. Check the tax household size, and confirm the client is not Medicaid eligible.", "info");
+  }
+
+  $("results").innerHTML = plans.map(planCard).join("");
+  document.querySelectorAll("[data-enroll]").forEach((b) => {
+    b.addEventListener("click", () => startEnrollment(b.dataset.enroll, b));
+  });
+}
+
+function stat(k, v) {
+  return '<div class="stat"><div class="k">' + k + '</div><div class="v">' + v + "</div></div>";
+}
+
+function planCard(p) {
+  const pr = p.pricing || {}, d = p.details || {}, doc = p.documents || {};
+  const saved = (pr.subsidy_applied || 0) > 0;
+  const tags = [];
+  if (d.metal_level) tags.push('<span class="tag">' + titleCase(d.metal_level) + "</span>");
+  if (d.plan_type) tags.push('<span class="tag alt">' + String(d.plan_type).toUpperCase() + "</span>");
+  if (d.hsa_eligible) tags.push('<span class="tag alt">HSA eligible</span>');
+  if (d.csr_level && d.csr_level !== "none") tags.push('<span class="tag">CSR ' + d.csr_level + "</span>");
+  if (p.api_enrollable) tags.push('<span class="tag alt">API enrollable</span>');
+
+  const links = [];
+  if (doc.sbc_url) links.push('<a class="btn btn-ghost btn-sm" target="_blank" rel="noopener" href="' + doc.sbc_url + '">Summary of benefits</a>');
+  if (doc.formulary_url) links.push('<a class="btn btn-ghost btn-sm" target="_blank" rel="noopener" href="' + doc.formulary_url + '">Drug formulary</a>');
+  links.push('<button type="button" class="btn btn-ghost btn-sm" data-enroll="' + (p.plan_id || "") + '">Start enrollment</button>');
+
+  return '<div class="plan">' +
+    '<div class="plan-top">' +
+      "<div>" +
+        '<div class="plan-name">' + (p.name || "Unnamed plan") + "</div>" +
+        '<div class="plan-issuer">' + ((p.issuer && p.issuer.name) || "") + "</div>" +
+      "</div>" +
+      '<div class="price">' +
+        '<div class="net">' + money2(pr.net_premium) + "</div>" +
+        '<div class="per">per month</div>' +
+        (saved
+          ? '<div class="gross"><s>' + money2(pr.gross_premium) + '</s> <span class="save">saves ' + money2(pr.subsidy_applied) + "</span></div>"
+          : "") +
+      "</div>" +
+    "</div>" +
+    '<div class="tags">' + tags.join("") + "</div>" +
+    '<div class="facts">' +
+      fact("Deductible", money(d.deductible_individual)) +
+      fact("Family deductible", money(d.deductible_family)) +
+      fact("Out of pocket max", money(d.moop_individual)) +
+      fact("Family max", money(d.moop_family)) +
+    "</div>" +
+    '<div class="links">' + links.join("") + "</div>" +
+  "</div>";
+}
+
+function fact(k, v) {
+  return '<div class="fact"><div class="k">' + k + '</div><div class="v">' + v + "</div></div>";
+}
+
+/* ---------- enrollment deeplink ---------- */
+async function startEnrollment(planId, btn) {
+  if (!state.lastQuery) return;
+  const q = state.lastQuery.payload;
+  const original = btn.textContent;
+  btn.textContent = "Opening";
+  btn.disabled = true;
+  try {
+    const res = await fetch(WORKER_URL + "/enrollment-session", {
+      method: "POST",
+      headers: { "Content-Type": "application/json" },
+      body: JSON.stringify({
+        plan_id: planId,
+        plan_year: q.plan_year,
+        flow: "agent_assisted",
+        location: { zip_code: q.zip, fips_code: q.fips, state: q.state },
+        household: {
+          annual_income: q.annual_income,
+          household_size: q.household_size || q.applicants.length,
+          applicants: q.applicants.map((a) => ({
+            relationship: a.relationship, age: a.age, uses_tobacco: a.uses_tobacco
+          })),
+        },
+      }),
+    });
+    const data = await res.json();
+    if (!res.ok) {
+      const detail = data.message || (data.errors && data.errors[0] && data.errors[0].detail) || data.error;
+      if (res.status === 403) {
+        setMessage("Enrollment sessions are approval gated. Email developers@one.healthsherpa.com to turn them on for your key. Quoting still works.", "warn");
+      } else {
+        setMessage("Enrollment link failed: " + detail, "err");
+      }
+      return;
+    }
+    const link = (data.links && (data.links.client_apply_url || data.links.shopping_url));
+    if (link) window.open(link, "_blank", "noopener");
+    else setMessage("HealthSherpa returned no link for that plan.", "warn");
+  } catch (err) {
+    setMessage("Enrollment link failed: " + err.message, "err");
+  } finally {
+    btn.textContent = original;
+    btn.disabled = false;
+  }
+}
+
+/* ---------- helpers ---------- */
+function setMessage(text, kind) {
+  $("messages").innerHTML = text ? '<div class="note ' + (kind || "info") + '">' + text + "</div>" : "";
+}
+
+function copySummary() {
+  if (!state.plans.length) return;
+  const q = state.lastQuery;
+  const lines = [
+    "HealthPlan Moms quote summary",
+    q.county + "  |  ZIP " + q.payload.zip + "  |  Plan year " + q.payload.plan_year,
+    "Household: " + q.payload.applicants.map((a) => a.relationship + " age " + a.age).join(", "),
+    q.payload.annual_income ? "Income: " + money(q.payload.annual_income) : "Income: not provided",
+    "",
+  ];
+  state.plans.slice(0, 10).forEach((p, i) => {
+    const pr = p.pricing || {}, d = p.details || {};
+    lines.push(
+      (i + 1) + ". " + p.name + " (" + ((p.issuer && p.issuer.name) || "") + ")",
+      "   " + money2(pr.net_premium) + "/mo net" +
+        ((pr.subsidy_applied || 0) > 0 ? "  (was " + money2(pr.gross_premium) + ")" : "") +
+        "  |  Deductible " + money(d.deductible_individual) +
+        "  |  Max " + money(d.moop_individual)
+    );
+  });
+  lines.push("", "Pricing is an estimate. Confirm on the application before enrolling.");
+  navigator.clipboard.writeText(lines.join("\n")).then(() => {
+    const b = $("copyBtn"); const t = b.textContent;
+    b.textContent = "Copied"; setTimeout(() => { b.textContent = t; }, 1600);
+  });
+}
+
+init();
+</script>
+</body>
+</html>

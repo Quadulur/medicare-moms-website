@@ -31,7 +31,7 @@ h1{font:400 clamp(30px,6.4vw,46px)/1.12 "DM Serif Display",serif;margin:0 0 12px
 
 .card{background:var(--white);border:1px solid var(--line);border-radius:var(--r);padding:20px;box-shadow:0 12px 30px -18px rgba(36,48,42,.35)}
 .steps{display:flex;gap:6px;list-style:none;margin:0 0 18px;padding:0;counter-reset:s}
-.steps li{flex:1;font-size:12px;font-weight:800;text-transform:uppercase;letter-spacing:.06em;color:#8a978f;padding-top:8px;border-top:4px solid var(--line)}
+.steps li{flex:1;font-size:12px;font-weight:800;text-transform:uppercase;letter-spacing:.06em;color:#5f6d64;padding-top:8px;border-top:4px solid var(--line)}
 .steps li.on{color:var(--sage-d);border-color:var(--sage)}
 .big{display:block;font:400 23px/1.25 "DM Serif Display",serif;margin:0 0 12px}
 label{font-weight:700;font-size:14px}

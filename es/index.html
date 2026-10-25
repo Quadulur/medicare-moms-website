@@ -76,7 +76,7 @@
 
         h1 {
             font-size: clamp(32px, 5vw, 56px);
-            font-weight: 800;
+            font-weight: 400;
             margin-bottom: 20px;
         }
 
@@ -157,7 +157,7 @@
         .hero-content h1 {
             color: #2C2C2C;
             margin-bottom: 20px;
-            font-weight: 800;
+            font-weight: 400;
         }
 
         .hero-content .lead {
@@ -529,7 +529,7 @@
             background-color: #F7F3ED;
             padding: 30px;
             border-radius: 10px;
-            border-left: 4px solid #5B8C6B;
+            border: 1px solid var(--line, #e6dfd3);
         }
 
         .stars {
@@ -752,7 +752,7 @@
     <a class="skip-link" href="#main">Saltar al contenido</a>
     <header class="site-header">
         <div class="site-header__inner">
-            <a href="/es/" class="site-logo"><img src="/logo-mark.svg" alt="" width="52" height="52">HealthPlan Moms</a>
+            <a href="/es/" class="site-logo"><img src="/logo-mark.svg" alt="" width="52" height="52"><span>HealthPlan <span class="logo-accent">Moms</span></span></a>
             <nav class="site-nav" aria-label="Principal">
             <ul class="site-nav__links" id="site-menu">
                 <li><a href="/es/servicios/">Servicios</a></li>
@@ -775,7 +775,7 @@
         <div class="container">
             <div class="hero-content">
                 <h1>Cobertura de salud sin complicaciones. De mamás a quienes de verdad les importas.</h1>
-                <p class="lead">Bienvenido a HealthPlan Moms, donde encontrar la cobertura correcta es simple, personal, y hasta agradable. Nos sentamos contigo, escuchamos lo que importa, y te conectamos con un plan que se adapte a tu vida, tu presupuesto y tu familia.</p>
+                <p class="lead">Somos agentes de seguros con licencia, y todas somos mamás. Cuéntanos sobre tus doctores, medicamentos y presupuesto, y compararemos planes lado a lado para explicarte los pocos que de verdad te convienen.</p>
                 <div class="hero-buttons">
                     <button class="btn btn-primary" onclick="document.getElementById('contact').scrollIntoView({behavior: 'smooth'})">Encuentra tu plan</button>
                 </div>
@@ -811,8 +811,8 @@
     <!-- Plans Section -->
     <section class="plans-section section-padding" id="plans">
         <div class="container">
-            <h2 class="text-center">Opciones de cobertura para cada etapa de la vida</h2>
-            <p class="text-center" style="max-width: 600px; margin: 0 auto 30px; color: #4A5568;">Ya sea que estés cumpliendo 65 años o buscando cambiar de planes, tenemos opciones que tienen sentido para las necesidades únicas de tu familia.</p>
+            <h2 class="text-center">En qué te podemos ayudar</h2>
+            <p class="text-center" style="max-width: 600px; margin: 0 auto 30px; color: #4A5568;">Medicare, ACA, dental, visión, vida y planes complementarios, todo con una agente que conoce tu situación.</p>
 
             <div class="plans-grid">
                 <div class="plan-card fade-in">
@@ -849,7 +849,7 @@
                     <ul class="plan-highlights">
                         <li>Subsidios según los ingresos</li>
                         <li>Cubre maternidad, salud mental y más</li>
-                        <li>Inscripción durante todo el año por eventos de vida</li>
+                        <li>Inscripción Especial si te mudas, pierdes tu trabajo, te casas o tienes un bebé</li>
                     </ul>
                     <a href="/es/servicios/#aca" class="btn btn-primary btn-sm">Más información</a>
                 </div>
@@ -883,7 +883,7 @@
                 <div class="plan-card fade-in" style="animation-delay: 0.5s;">
                     <div class="plan-icon"><svg width="48" height="48" viewBox="0 0 48 48" fill="none" stroke="#5B8C6B" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><polygon points="26,4 10,28 22,28 20,44 38,18 26,18"/></svg></div>
                     <h3>Accidentes y enfermedades críticas</h3>
-                    <p>Protección adicional que te paga en efectivo directamente a ti, no al hospital, cuando la vida te sorprende.</p>
+                    <p>Te paga en efectivo directamente a ti, no al hospital, después de un accidente o diagnóstico cubierto.</p>
                     <div class="plan-who">Para quién es: Cualquiera que quiera protección financiera adicional más allá del seguro de salud</div>
                     <ul class="plan-highlights">
                         <li>Efectivo pagado directamente a ti</li>
@@ -928,7 +928,7 @@
                 <div class="finder-card">
                     <div class="finder-emoji"><svg width="48" height="48" viewBox="0 0 48 48" fill="none" stroke="#5B8C6B" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M24 4L8 12v10c0 12 6.8 22 16 26 9.2-4 16-14 16-26V12L24 4z"/><line x1="24" y1="18" x2="24" y2="30"/><line x1="18" y1="24" x2="30" y2="24"/></svg></div>
                     <h3>¿Quieres protección extra?</h3>
-                    <p>Dental, visión, seguro de vida, accidentes y enfermedades críticas. Estos cubren las brechas que tu plan principal de salud puede no cubrir. Agrega tranquilidad.</p>
+                    <p>Dental, visión, seguro de vida, accidentes y enfermedades críticas: la cobertura que tu plan principal deja fuera.</p>
                     <a href="#contact" class="btn btn-primary btn-sm">Ver mis opciones</a>
                 </div>
             </div>
@@ -938,8 +938,8 @@
     <!-- How We Help Section -->
     <section class="process-section section-padding" id="how">
         <div class="container">
-            <h2 class="text-center">Cuatro pasos sencillos. Cero presión.</h2>
-            <p class="text-center" style="max-width: 600px; margin: 0 auto 50px; color: #4A5568;">Así es como hacemos que encontrar cobertura sea fácil.</p>
+            <h2 class="text-center">Cómo funciona</h2>
+            <p class="text-center" style="max-width: 600px; margin: 0 auto 50px; color: #4A5568;">Cuatro pasos, y tú decides en cada uno.</p>
 
             <div class="process-steps">
                 <div class="step">
@@ -959,14 +959,14 @@
                 <div class="step">
                     <div class="step-number">3</div>
                     <h3>Elige el plan que se ajuste</h3>
-                    <p>Tú estás en control. Sin presión. Elige lo que tiene sentido para ti y tu familia.</p>
+                    <p>Tú decides. Nunca te inscribimos en un plan que no hayas elegido.</p>
                     <div class="step-connector"></div>
                 </div>
 
                 <div class="step">
                     <div class="step-number">4</div>
                     <h3>Apoyo todo el año</h3>
-                    <p>¿Preguntas sobre inscripción abierta? ¿Cambios en la vida? Estamos aquí para ayudarte cuando nos necesites.</p>
+                    <p>Preguntas en la renovación, una mudanza, un bebé: llamas a la misma agente que te ayudó a inscribirte.</p>
                 </div>
             </div>
 
@@ -980,12 +980,12 @@
     <section class="why-section section-padding" id="why">
         <div class="container">
             <h2 class="text-center">La diferencia de tener una agente de verdad</h2>
-            <p class="text-center" style="max-width: 600px; margin: 0 auto 50px; color: #4A5568;">No somos un centro de llamadas. Somos mamás, hermanas y vecinas a quienes de verdad nos importa la salud de tu familia. Más de 5,000 jubilados y familias asistidos en los 50 estados.</p>
+            <p class="text-center" style="max-width: 600px; margin: 0 auto 50px; color: #4A5568;">No somos un centro de llamadas. Somos agentes con licencia que también somos mamás, hermanas y vecinas, y hemos ayudado a más de 5,000 jubilados y familias en los 50 estados.</p>
 
             <div class="why-grid">
                 <div class="why-card fade-in">
                     <h3><svg width="24" height="24" viewBox="0 0 48 48" fill="none" stroke="#5B8C6B" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="display:inline-block;vertical-align:middle;margin-right:8px;"><circle cx="24" cy="14" r="8"/><path d="M8 44c0-8.8 7.2-16 16-16s16 7.2 16 16"/></svg>Liderado por mujeres y orientado a la comunidad</h3>
-                    <p>Construido por mujeres que entienden las necesidades únicas de salud de las familias. Somos parte de tu comunidad, no una corporación lejana.</p>
+                    <p>Fundado y dirigido por mamás que trabajan y viven en las comunidades que atienden. Tienes un nombre y una línea directa, no un número de caso.</p>
                 </div>
 
                 <div class="why-card fade-in" style="animation-delay: 0.1s;">
@@ -999,8 +999,8 @@
                 </div>
 
                 <div class="why-card fade-in" style="animation-delay: 0.3s;">
-                    <h3><svg width="24" height="24" viewBox="0 0 48 48" fill="none" stroke="#5B8C6B" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="display:inline-block;vertical-align:middle;margin-right:8px;"><circle cx="24" cy="24" r="20"/><circle cx="24" cy="24" r="12"/><circle cx="24" cy="24" r="4"/></svg>Personalizado, no genérico</h3>
-                    <p>Tu situación es única. Nos tomamos el tiempo para entender las necesidades de tu familia y encontrar planes que realmente funcionen para ti, tal como lo hemos hecho para más de 5,000 familias.</p>
+                    <h3><svg width="24" height="24" viewBox="0 0 48 48" fill="none" stroke="#5B8C6B" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="display:inline-block;vertical-align:middle;margin-right:8px;"><circle cx="24" cy="24" r="20"/><circle cx="24" cy="24" r="12"/><circle cx="24" cy="24" r="4"/></svg>Pensado para tu situación</h3>
+                    <p>Preguntamos por tus doctores, medicamentos y presupuesto antes de sugerir algo, y te decimos cuando el plan que ya tienes es el correcto.</p>
                 </div>
             </div>
         </div>
@@ -1010,7 +1010,7 @@
     <section class="testimonials-section section-padding">
         <div class="container">
             <h2 class="text-center">En sus propias palabras: familias que hemos ayudado</h2>
-            <p class="text-center" style="max-width: 600px; margin: 0 auto 50px; color: #4A5568;">No confíes solo en nuestra palabra. Esto es lo que dicen las familias.</p>
+            <p class="text-center" style="max-width: 600px; margin: 0 auto 50px; color: #4A5568;">Algunas de las familias que hemos ayudado, en sus propias palabras.</p>
 
             <div class="testimonials-grid">
                 <div class="testimonial-card fade-in">
@@ -1043,7 +1043,7 @@
             <div class="contact-content">
                 <div>
                     <h2>¿Listo para encontrar el plan correcto?</h2>
-                    <p>Hablemos. Ya sea que tengas preguntas o estés listo para comenzar, estamos aquí para ayudarte.</p>
+                    <p>Llama, escribe o envía el formulario. Una agente con licencia se comunicará contigo, sin costo ni compromiso.</p>
 
                     <div class="contact-info">
                         <h3>Ponte en contacto</h3>
@@ -1130,7 +1130,7 @@
         <div class="site-footer__inner">
             <div class="site-footer__grid">
                 <div class="site-footer__col">
-                    <a href="/es/" class="site-footer__brand"><img src="/logo-mark.svg" alt="" width="44" height="44">HealthPlan Moms</a>
+                    <a href="/es/" class="site-footer__brand"><img src="/logo-mark.svg" alt="" width="44" height="44"><span>HealthPlan <span class="logo-accent">Moms</span></span></a>
                     <p class="site-footer__tagline">Ayudando a las familias a encontrar cobertura de salud que funciona.</p>
                     <ul class="site-footer__social" aria-label="Redes sociales"><li><a href="https://www.instagram.com/wearehealthplanmoms/" target="_blank" rel="noopener noreferrer" aria-label="Instagram"><svg aria-hidden="true" focusable="false" xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"/><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/></svg></a></li><li><a href="https://www.facebook.com/profile.php?id=61572026712949" target="_blank" rel="noopener noreferrer" aria-label="Facebook"><svg aria-hidden="true" focusable="false" xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"/></svg></a></li><li><a href="https://www.linkedin.com/company/healthplanmoms/" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn"><svg aria-hidden="true" focusable="false" xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"/><rect x="2" y="9" width="4" height="12"/><circle cx="4" cy="4" r="2"/></svg></a></li></ul>
                 </div>

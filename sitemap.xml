@@ -178,6 +178,38 @@
 
     <!-- Individual blog posts -->
     <url>
+        <loc>https://healthplanmoms.com/blog/short-term-health-insurance-2027/</loc>
+        <lastmod>2026-10-19</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.9</priority>
+        <xhtml:link rel="alternate" hreflang="en" href="https://healthplanmoms.com/blog/short-term-health-insurance-2027/"/>
+        <xhtml:link rel="alternate" hreflang="es" href="https://healthplanmoms.com/es/blog/seguro-salud-corto-plazo-2027/"/>
+    </url>
+    <url>
+        <loc>https://healthplanmoms.com/es/blog/seguro-salud-corto-plazo-2027/</loc>
+        <lastmod>2026-10-19</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.9</priority>
+        <xhtml:link rel="alternate" hreflang="en" href="https://healthplanmoms.com/blog/short-term-health-insurance-2027/"/>
+        <xhtml:link rel="alternate" hreflang="es" href="https://healthplanmoms.com/es/blog/seguro-salud-corto-plazo-2027/"/>
+    </url>
+    <url>
+        <loc>https://healthplanmoms.com/blog/medicare-aca-news-october-2026/</loc>
+        <lastmod>2026-10-15</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.9</priority>
+        <xhtml:link rel="alternate" hreflang="en" href="https://healthplanmoms.com/blog/medicare-aca-news-october-2026/"/>
+        <xhtml:link rel="alternate" hreflang="es" href="https://healthplanmoms.com/es/blog/noticias-medicare-aca-octubre-2026/"/>
+    </url>
+    <url>
+        <loc>https://healthplanmoms.com/es/blog/noticias-medicare-aca-octubre-2026/</loc>
+        <lastmod>2026-10-15</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.9</priority>
+        <xhtml:link rel="alternate" hreflang="en" href="https://healthplanmoms.com/blog/medicare-aca-news-october-2026/"/>
+        <xhtml:link rel="alternate" hreflang="es" href="https://healthplanmoms.com/es/blog/noticias-medicare-aca-octubre-2026/"/>
+    </url>
+    <url>
         <loc>https://healthplanmoms.com/blog/medicare-advantage-changes-2027/</loc>
         <lastmod>2026-10-12</lastmod>
         <changefreq>monthly</changefreq>

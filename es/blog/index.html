@@ -77,7 +77,7 @@
 
         h1 {
             font-size: clamp(32px, 5vw, 56px);
-            font-weight: 800;
+            font-weight: 400;
             margin-bottom: 20px;
         }
 
@@ -158,7 +158,7 @@
         .hero-content h1 {
             color: #2C2C2C;
             margin-bottom: 20px;
-            font-weight: 800;
+            font-weight: 400;
         }
 
         .hero-content .lead {
@@ -490,7 +490,7 @@
     <a class="skip-link" href="#main">Saltar al contenido</a>
     <header class="site-header">
         <div class="site-header__inner">
-            <a href="/es/" class="site-logo"><img src="/logo-mark.svg" alt="" width="52" height="52">HealthPlan Moms</a>
+            <a href="/es/" class="site-logo"><img src="/logo-mark.svg" alt="" width="52" height="52"><span>HealthPlan <span class="logo-accent">Moms</span></span></a>
             <nav class="site-nav" aria-label="Principal">
             <ul class="site-nav__links" id="site-menu">
                 <li><a href="/es/servicios/">Servicios</a></li>
@@ -513,7 +513,7 @@
         <div class="container">
             <div class="hero-content">
                 <h1>Blog de HealthPlan Moms</h1>
-                <p class="lead">Consejos expertos, guías e información para ayudarte a navegar Medicare, seguros de salud y mucho más.</p>
+                <p class="lead">Novedades de Medicare, ACA y cobertura complementaria en palabras sencillas, escritas por nuestras agentes con licencia.</p>
             </div>
         </div>
     </section>
@@ -522,9 +522,10 @@
     <section class="category-filter">
         <div class="container">
             <div class="category-filters">
-                <button class="category-btn active" data-category="all">Todos <span class="category-count">6</span></button>
-                <button class="category-btn" data-category="Medicare">Medicare <span class="category-count">4</span></button>
+                <button class="category-btn active" data-category="all">Todos <span class="category-count">8</span></button>
+                <button class="category-btn" data-category="Medicare">Medicare <span class="category-count">5</span></button>
                 <button class="category-btn" data-category="ACA y Mercado">ACA y Mercado <span class="category-count">2</span></button>
+                <button class="category-btn" data-category="Corto Plazo">Corto Plazo <span class="category-count">1</span></button>
             </div>
         </div>
     </section>
@@ -534,6 +535,30 @@
         <div class="container">
             <h2 class="visually-hidden">Artículos recientes</h2>
             <div class="blog-grid" id="blogGrid">
+                <!-- Nuevo: Seguro de salud a corto plazo 2027 -->
+                <div class="blog-card fade-in" data-category="Corto Plazo">
+                    <span class="category-pill">Seguro de salud a corto plazo</span>
+                    <h3>Seguro de salud a corto plazo en 2027: para quién funciona y quién debe evitarlo</h3>
+                    <p class="excerpt">Con las primas del ACA subiendo y sin subsidios por encima del límite, más familias preguntan por los planes a corto plazo. Cómo se comparan con el ACA, para quién funcionan, quién debe evitarlos y la trampa de inscripción que debes conocer.</p>
+                    <div class="post-meta">
+                        <span><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#5B8C6B" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/><circle cx="12" cy="7" r="4"/></svg> Ally Valdez</span>
+                        <span><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#5B8C6B" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4" width="18" height="18" rx="2" ry="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></svg> 19 de Octubre, 2026</span>
+                    </div>
+                    <a href="/es/blog/seguro-salud-corto-plazo-2027/">Leer más &rarr;</a>
+                </div>
+
+                <!-- Nuevo: Noticias de Medicare y ACA octubre 2026 -->
+                <div class="blog-card fade-in" data-category="Medicare">
+                    <span class="category-pill">Noticias de Medicare y ACA</span>
+                    <h3>Noticias de Medicare y ACA: 6 cambios de la primera mitad de octubre de 2026</h3>
+                    <p class="excerpt">Un pago único de $90 para la Parte B de Medicare, cheques de reembolso de $500 del ACA, menos planes de 5 estrellas para 2027, un aumento de 3.6% del Seguro Social y siete aseguradoras que salen del Mercado ACA. Esto es lo que cambió y qué hacer.</p>
+                    <div class="post-meta">
+                        <span><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#5B8C6B" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/><circle cx="12" cy="7" r="4"/></svg> Ally Valdez</span>
+                        <span><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#5B8C6B" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4" width="18" height="18" rx="2" ry="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></svg> 15 de Octubre, 2026</span>
+                    </div>
+                    <a href="/es/blog/noticias-medicare-aca-octubre-2026/">Leer más &rarr;</a>
+                </div>
+
                 <!-- Nuevo: Cambios en Medicare Advantage 2027 -->
                 <div class="blog-card fade-in" data-category="Medicare">
                     <span class="category-pill">Medicare Advantage</span>
@@ -636,7 +661,7 @@
         <div class="site-footer__inner">
             <div class="site-footer__grid">
                 <div class="site-footer__col">
-                    <a href="/es/" class="site-footer__brand"><img src="/logo-mark.svg" alt="" width="44" height="44">HealthPlan Moms</a>
+                    <a href="/es/" class="site-footer__brand"><img src="/logo-mark.svg" alt="" width="44" height="44"><span>HealthPlan <span class="logo-accent">Moms</span></span></a>
                     <p class="site-footer__tagline">Ayudando a las familias a encontrar cobertura de salud que funciona.</p>
                     <ul class="site-footer__social" aria-label="Redes sociales"><li><a href="https://www.instagram.com/wearehealthplanmoms/" target="_blank" rel="noopener noreferrer" aria-label="Instagram"><svg aria-hidden="true" focusable="false" xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"/><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/></svg></a></li><li><a href="https://www.facebook.com/profile.php?id=61572026712949" target="_blank" rel="noopener noreferrer" aria-label="Facebook"><svg aria-hidden="true" focusable="false" xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"/></svg></a></li><li><a href="https://www.linkedin.com/company/healthplanmoms/" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn"><svg aria-hidden="true" focusable="false" xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"/><rect x="2" y="9" width="4" height="12"/><circle cx="4" cy="4" r="2"/></svg></a></li></ul>
                 </div>

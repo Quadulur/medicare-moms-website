@@ -112,6 +112,8 @@ button.btn-primary {
     border-radius: 0;
 }
 .site-logo:hover { color: var(--sage-ink); }
+.site-logo .logo-accent { color: var(--sage-ink); }
+.site-footer__brand .logo-accent { color: var(--sage-light); }
 
 .site-nav {
     margin-left: auto;
@@ -435,7 +437,7 @@ button.btn-primary {
     color: var(--footer-muted);
     font-size: 13px;
     line-height: 1.7;
-    max-width: 110ch;
+    max-width: 78ch;
     margin: 0;
 }
 @media (max-width: 960px) {

@@ -420,7 +420,7 @@
         .sm-modal h3 { font-family: 'DM Serif Display', serif; font-size: 26px; color: #2C2C2C; text-align: center; margin-bottom: 6px; }
         .sm-who { text-align: center; color: var(--sage-ink); font-weight: 700; font-size: 14px; margin-bottom: 18px; }
         .sm-overview { color: #4A5568; font-size: 15.5px; line-height: 1.7; margin-bottom: 20px; }
-        .sm-help { background: #F7F3ED; border-left: 4px solid #5B8C6B; border-radius: 0 10px 10px 0; padding: 16px 20px; margin-bottom: 24px; }
+        .sm-help { background: #F7F3ED; border: 1px solid #e6dfd3; border-radius: 10px; padding: 16px 20px; margin-bottom: 24px; }
         .sm-help h4, .sm-help .hx4 { font-family: 'DM Serif Display', serif; color: #3D6B4A; font-size: 16px; margin-bottom: 6px; }
         .sm-help p { color: #4A5568; font-size: 14.5px; line-height: 1.65; margin: 0; }
         .sm-actions { display: flex; flex-direction: column; gap: 10px; }
@@ -462,7 +462,7 @@
     <a class="skip-link" href="#main">Saltar al contenido</a>
     <header class="site-header">
         <div class="site-header__inner">
-            <a href="/es/" class="site-logo"><img src="/logo-mark.svg" alt="" width="52" height="52">HealthPlan Moms</a>
+            <a href="/es/" class="site-logo"><img src="/logo-mark.svg" alt="" width="52" height="52"><span>HealthPlan <span class="logo-accent">Moms</span></span></a>
             <nav class="site-nav" aria-label="Principal">
             <ul class="site-nav__links" id="site-menu">
                 <li><a href="/es/servicios/" aria-current="page">Servicios</a></li>
@@ -581,7 +581,7 @@
                 <div class="service-text">
                     <h2>Suplementos de Medicare (Medigap)</h2>
                     <p>Medicare Original cubre mucho, pero no todo. Los planes Medigap cierran las brechas como copagos, coaseguros y deducibles para que no enfrentes facturas inesperadas.</p>
-                    <p>¿La mayor ventaja? Puedes ver a cualquier médico o especialista en todo el país que acepte Medicare. Sin referencias, sin restricciones de red. Es la tranquilidad definitiva.</p>
+                    <p>¿La mayor ventaja? Puedes ver a cualquier médico o especialista en todo el país que acepte Medicare. Sin referencias, sin restricciones de red.</p>
                     <ul class="service-features">
                         <li>Cubre costos que Medicare Original no cubre: copagos, coaseguros y deducibles</li>
                         <li>Ve a cualquier médico en todo el país que acepte Medicare</li>
@@ -607,7 +607,7 @@
                 <div class="service-text">
                     <h2>Planes ACA / Mercado de Seguros</h2>
                     <p>¿Aún no tienes 65 años? ¿Necesitas cobertura para ti o tu familia? Los planes del mercado ACA ofrecen seguro de salud integral con asistencia financiera basada en tus ingresos.</p>
-                    <p>Ya sea que seas trabajador independiente, estés entre empleos o simplemente necesites mejor cobertura, te ayudaremos a navegar el mercado y encontrar un plan que realmente puedas pagar.</p>
+                    <p>Si trabajas por tu cuenta, estás entre empleos o simplemente pagas demasiado, revisaremos qué subsidio te corresponde y compararemos los planes del Mercado en tu zona.</p>
                     <ul class="service-features">
                         <li>Cobertura para individuos y familias menores de 65 años</li>
                         <li>Asistencia financiera y subsidios basados en ingresos</li>
@@ -632,7 +632,7 @@
             <div class="service-layout reverse">
                 <div class="service-text">
                     <h2>Dental y visión</h2>
-                    <p>Tu sonrisa y tu vista importan. Ya sea que necesites cobertura dental y de visión individual o quieras agregarla a tu plan Medicare existente, tenemos opciones que mantienen a toda la familia saludable.</p>
+                    <p>Planes dentales y de visión para toda la familia, o como complemento del plan de Medicare que ya tienes.</p>
                     <p>Los planes cubren todo desde limpiezas y exámenes de rutina hasta coronas, dentaduras y gafas, todo a precios que no te quebrantarán.</p>
                     <ul class="service-features">
                         <li>Planes individuales o combinados con cobertura Medicare</li>
@@ -683,13 +683,13 @@
             <div class="service-layout reverse">
                 <div class="service-text">
                     <h2>Accidentes y enfermedades críticas</h2>
-                    <p>La vida te sorprende. Los planes de accidente y enfermedad crítica te dan una capa extra de protección pagando beneficios en efectivo directamente a ti, no al hospital, cuando más lo necesitas.</p>
+                    <p>Los planes de accidente y enfermedad crítica te pagan en efectivo directamente a ti (no al hospital) después de una lesión, infarto, derrame cerebral o diagnóstico de cáncer cubierto.</p>
                     <p>Usa el dinero para facturas médicas, pagos de hipoteca, comestibles o cualquier otra cosa. Es tu red de seguridad cuando lo inesperado sucede.</p>
                     <ul class="service-features">
                         <li>Beneficios en efectivo pagados directamente a ti</li>
                         <li>Cubre accidentes, ataques cardíacos, accidentes cerebrovasculares, cáncer y más</li>
                         <li>Funciona junto con tu seguro de salud existente</li>
-                        <li>Primas asequibles para una valiosa tranquilidad</li>
+                        <li>Primas mensuales bajas</li>
                     </ul>
                     <a href="/es/#contact" class="btn btn-primary btn-sm">Aprende sobre protección extra</a>
                     <a href="/es/recursos/#ancillary" class="learn-link" style="display:inline-block; margin-left:18px; color: var(--sage-ink); font-weight:700; font-size:14px; text-decoration:none;">Aprende cómo funciona &rarr;</a>
@@ -707,7 +707,7 @@
     <section class="cta-section">
         <div class="container">
             <h2>¿No estás seguro de qué plan es el correcto para ti?</h2>
-            <p>Eso es exactamente por lo que estamos aquí. Hablemos a través de tus opciones, sin presión, sin jerga, solo respuestas reales.</p>
+            <p>Eso es exactamente por lo que estamos aquí. Revisemos tus opciones en palabras sencillas.</p>
             <div class="cta-buttons">
                 <a href="/es/#contact" class="btn btn-primary">Obtén una consulta gratis</a>
                 <a href="tel:+14352461548" class="btn btn-secondary">Llama (435) 246-1548</a>
@@ -723,7 +723,7 @@
         <div class="site-footer__inner">
             <div class="site-footer__grid">
                 <div class="site-footer__col">
-                    <a href="/es/" class="site-footer__brand"><img src="/logo-mark.svg" alt="" width="44" height="44">HealthPlan Moms</a>
+                    <a href="/es/" class="site-footer__brand"><img src="/logo-mark.svg" alt="" width="44" height="44"><span>HealthPlan <span class="logo-accent">Moms</span></span></a>
                     <p class="site-footer__tagline">Ayudando a las familias a encontrar cobertura de salud que funciona.</p>
                     <ul class="site-footer__social" aria-label="Redes sociales"><li><a href="https://www.instagram.com/wearehealthplanmoms/" target="_blank" rel="noopener noreferrer" aria-label="Instagram"><svg aria-hidden="true" focusable="false" xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"/><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/></svg></a></li><li><a href="https://www.facebook.com/profile.php?id=61572026712949" target="_blank" rel="noopener noreferrer" aria-label="Facebook"><svg aria-hidden="true" focusable="false" xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"/></svg></a></li><li><a href="https://www.linkedin.com/company/healthplanmoms/" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn"><svg aria-hidden="true" focusable="false" xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"/><rect x="2" y="9" width="4" height="12"/><circle cx="4" cy="4" r="2"/></svg></a></li></ul>
                 </div>
