@@ -34,15 +34,74 @@
       whyTitle: 'What working with us looks like'
     }
   };
+  var LANG = (document.documentElement.lang || 'en').slice(0, 2).toLowerCase() === 'es' ? 'es' : 'en';
+  var VARIANTS_ES = {
+    plans: {
+      eyebrow: 'Inscripción Abierta ' + C.planYear,
+      headline: 'Mira cuántos planes de salud ' + C.planYear + ' hay donde vives',
+      subhead: 'Escribe tu código postal. Te mostramos cuántos planes hay en tu condado y una mamá con licencia de nuestro equipo te ayuda a compararlos. Gratis y sin compromiso.',
+      cta: 'Ver planes'
+    },
+    selfemployed: {
+      eyebrow: 'Trabajas por tu cuenta, 1099 o entre empleos',
+      headline: '¿Sin seguro del trabajo? Mira tus opciones para ' + C.planYear + ' en un minuto',
+      subhead: 'Dueños de negocio, contratistas y quienes trabajan por app compran su propia cobertura. Escribe tu código postal y una mamá con licencia te explica tus opciones en español.',
+      cta: 'Ver opciones',
+      whyTitle: 'Pensado para quienes trabajan por su cuenta'
+    },
+    family: {
+      eyebrow: 'Seguro médico para toda la familia',
+      headline: '¿Buscas seguro médico para tu familia en ' + C.planYear + '? Empieza con tu código postal',
+      subhead: 'Hijos, pareja, todos en un plan o divididos de la forma que más te convenga. Mira cuántos planes hay en tu condado y compáralos en español con una mamá que también lo hizo para su familia.',
+      cta: 'Ver planes',
+      whyTitle: 'Por qué las familias llaman a las mamás'
+    },
+    talk: {
+      eyebrow: 'Habla con una persona real',
+      headline: '¿Preguntas sobre tu seguro médico? Pregúntale a una mamá que hace esto todos los días',
+      subhead: 'Sin centros de llamadas. Una agente con licencia de nuestro equipo conoce tu situación y compara contigo los planes de tu condado, en español.',
+      cta: 'Empezar',
+      whyTitle: 'Cómo es trabajar con nosotras'
+    }
+  };
+  var T = LANG === 'es' ? {
+    wait: 'Un momento…', checking: 'Buscando planes…', sending: 'Enviando…',
+    zip: 'Escribe un código postal de 5 dígitos.',
+    pickCounty: 'Tu código postal cubre más de un condado. Elige el tuyo y vuelve a tocar el botón.',
+    name: 'Escribe tu nombre y apellido.', phone: 'Escribe un número de celular válido de 10 dígitos.',
+    email: 'Escribe un correo electrónico válido.', consent: 'Marca la casilla para que una agente con licencia pueda contactarte.',
+    age: 'Escribe tu edad.', fail: 'Algo salió mal al enviar tu solicitud. Inténtalo de nuevo o llama al ',
+    yourArea: 'tu zona',
+    countMany: function (n, where) { return '<b>' + n + '</b><span>planes de salud ' + C.planYear + ' disponibles en ' + where + '</span>'; },
+    issuers: function (k) { return '<small>de ' + k + ' compañías de seguros. Una mamá con licencia te ayuda a elegir.</small>'; },
+    help: '<small>Una mamá con licencia te ayuda a elegir.</small>',
+    noCount: function (where) { return '<span>Buenas noticias: hay planes ' + C.planYear + ' disponibles en ' + where + '.</span><small>Dinos cómo contactarte y una mamá con licencia los compara contigo.</small>'; }
+  } : {
+    wait: 'One moment…', checking: 'Checking plans…', sending: 'Sending…',
+    zip: 'Please enter a 5-digit ZIP code.',
+    pickCounty: 'Your ZIP covers more than one county. Pick yours, then tap the button again.',
+    name: 'Please enter your first and last name.', phone: 'Please enter a valid 10-digit mobile number.',
+    email: 'Please enter a valid email address.', consent: 'Please check the box so a licensed agent can contact you.',
+    age: 'Please enter your age.', fail: 'Something went wrong sending your request. Please try again or call ',
+    yourArea: 'your area',
+    countMany: function (n, where) { return '<b>' + n + '</b><span>' + C.planYear + ' health plans available in ' + where + '</span>'; },
+    issuers: function (k) { return '<small>from ' + k + ' insurance companies. A licensed mom will help you narrow it down.</small>'; },
+    help: '<small>A licensed mom will help you narrow it down.</small>',
+    noCount: function (where) { return '<span>Good news: ' + C.planYear + ' plans are available in ' + where + '.</span><small>Tell us where to reach you and a licensed mom will compare them with you.</small>'; }
+  };
+  if (LANG === 'es') VARIANTS = VARIANTS_ES;
   var params = new URLSearchParams(location.search);
   // Entry domain: ?d=acamoms when the visitor came through a forwarding domain, else this site.
   var d = (params.get('d') || '').toLowerCase().replace(/\.com$/, '');
   var host = (C.entryDomains || {})[d] || location.hostname.replace(/^www\./, '').toLowerCase();
   try { if (d) sessionStorage.setItem('hpm_entry', host); else host = sessionStorage.getItem('hpm_entry') || host; } catch (e) {}
   // Variant from the path: /go/<variant>/  (self-employed maps to selfemployed). ?v= still overrides for previews.
-  var seg = (location.pathname.match(/\/go\/([a-z-]+)/) || [])[1] || '';
-  var PATHS = { 'plans': 'plans', 'self-employed': 'selfemployed', 'family': 'family', 'talk': 'talk' };
-  var variant = params.get('v') && VARIANTS[params.get('v')] ? params.get('v') : (PATHS[seg] || C.defaultVariant || 'plans');
+  // Spanish pages live at /go/es/<variant>/ and default to the family angle.
+  var seg = (location.pathname.match(LANG === 'es' ? /\/go\/es\/([a-z-]+)/ : /\/go\/([a-z-]+)/) || [])[1] || '';
+  var PATHS = { 'plans': 'plans', 'self-employed': 'selfemployed', 'family': 'family', 'talk': 'talk',
+    'planes': 'plans', 'independientes': 'selfemployed', 'familia': 'family', 'hablar': 'talk' };
+  var fallback = LANG === 'es' ? 'family' : (C.defaultVariant || 'plans');
+  var variant = params.get('v') && VARIANTS[params.get('v')] ? params.get('v') : (PATHS[seg] || fallback);
   var V = VARIANTS[variant];
   ['eyebrow', 'headline', 'subhead', 'momsLine', 'whyTitle'].forEach(function (k) { if (V[k] && $(k)) $(k).textContent = V[k]; });
   document.querySelector('#s1 .btn').textContent = V.cta;
@@ -85,7 +144,7 @@
   function err(n, msg) { var el = $('e' + n); el.textContent = msg || ''; el.hidden = !msg; }
   function busy(form, on, label) {
     var b = form.querySelector('button[type=submit]');
-    if (on) { b.dataset.l = b.textContent; b.textContent = label || 'One moment…'; b.disabled = true; }
+    if (on) { b.dataset.l = b.textContent; b.textContent = label || T.wait; b.disabled = true; }
     else { b.textContent = b.dataset.l || b.textContent; b.disabled = false; }
   }
 
@@ -113,13 +172,12 @@
   }
   function renderCount() {
     var box = $('countBox');
-    var where = S.county ? S.county + (S.state ? ', ' + S.state : '') : (S.state || 'your area');
+    var where = S.county ? S.county + (S.state ? ', ' + S.state : '') : (S.state || T.yourArea);
     if (S.planCount) {
       var n = S.planCount >= 100 ? '100+' : String(S.planCount);
-      box.innerHTML = '<b>' + n + '</b><span>' + C.planYear + ' health plans available in ' + esc(where) + '</span>' +
-        (S.issuerCount > 1 ? '<small>from ' + S.issuerCount + ' insurance companies. A licensed mom will help you narrow it down.</small>' : '<small>A licensed mom will help you narrow it down.</small>');
+      box.innerHTML = T.countMany(n, esc(where)) + (S.issuerCount > 1 ? T.issuers(S.issuerCount) : T.help);
     } else {
-      box.innerHTML = '<span>Good news: ' + C.planYear + ' plans are available in ' + esc(where) + '.</span><small>Tell us where to reach you and a licensed mom will compare them with you.</small>';
+      box.innerHTML = T.noCount(esc(where));
     }
   }
   function esc(s) { var d = document.createElement('div'); d.textContent = s == null ? '' : String(s); return d.innerHTML; }
@@ -130,13 +188,13 @@
   $('s1').addEventListener('submit', function (e) {
     e.preventDefault(); err(1);
     var zip = $('zip').value.trim();
-    if (!/^\d{5}$/.test(zip)) return err(1, 'Please enter a 5-digit ZIP code.');
+    if (!/^\d{5}$/.test(zip)) return err(1, T.zip);
     // New ZIP: forget the old county. Same ZIP with the county picker showing: keep the pick.
     if (zip !== S.zip) {
       S.zip = zip; S.fips = ''; S.county = ''; S.state = ''; S.planCount = null; S.issuerCount = null;
       $('countyWrap').hidden = true;
     }
-    var form = this; busy(form, true, 'Checking plans…');
+    var form = this; busy(form, true, T.checking);
     var lookup = (C.quoterUrl && !S.fips) ? quoter('/counties?zip=' + zip).then(function (d) {
       var list = countyList(d).map(normCounty).filter(function (c) { return c.fips; });
       if (list.length > 1 && $('countyWrap').hidden) {
@@ -152,7 +210,7 @@
       fbq('track', 'ViewContent', { content_name: 'zip_' + variant });
     }).catch(function (x) {
       busy(form, false);
-      if (x === 'pick') return err(1, 'Your ZIP covers more than one county. Pick yours, then tap the button again.');
+      if (x === 'pick') return err(1, T.pickCounty);
       renderCount(); show('s2');
     });
   });
@@ -169,10 +227,10 @@
   $('s2').addEventListener('submit', function (e) {
     e.preventDefault(); err(2);
     var f = $('first_name').value.trim(), l = $('last_name').value.trim(), p = cleanPhone($('phone').value), m = $('email').value.trim();
-    if (!f || !l) return err(2, 'Please enter your first and last name.');
-    if (!/^[2-9]\d{2}[2-9]\d{6}$/.test(p) || /^(\d)\1{9}$/.test(p) || p.slice(3, 6) === '555') return err(2, 'Please enter a valid 10-digit mobile number.');
-    if (!/^[^\s@]+@[^\s@]+\.[a-z]{2,}$/i.test(m)) return err(2, 'Please enter a valid email address.');
-    if (!$('consent').checked) return err(2, 'Please check the box so a licensed agent can contact you.');
+    if (!f || !l) return err(2, T.name);
+    if (!/^[2-9]\d{2}[2-9]\d{6}$/.test(p) || /^(\d)\1{9}$/.test(p) || p.slice(3, 6) === '555') return err(2, T.phone);
+    if (!/^[^\s@]+@[^\s@]+\.[a-z]{2,}$/i.test(m)) return err(2, T.email);
+    if (!$('consent').checked) return err(2, T.consent);
     var bot = $('company_website').value || (Date.now() - S.started) < 4000;
     S.contact = { first_name: f, last_name: l, phone: '+1' + p, email: m, consent_at: new Date().toISOString(), bot: !!bot };
     fbq('track', 'Lead', { content_name: variant });
@@ -192,25 +250,25 @@
   $('s3').addEventListener('submit', function (e) {
     e.preventDefault(); err(3);
     var age = parseInt($('age').value, 10);
-    if (!(age >= 18 && age <= 110)) return err(3, 'Please enter your age.');
+    if (!(age >= 18 && age <= 110)) return err(3, T.age);
     S.details = { age: age, household_size: $('hh').value, covering: $('covering').value, income_band: $('income').value, current_coverage: $('current').value };
     S.finished = true; clearTimeout(S.timer);
     if (age >= 65 && S.details.covering === 'me') { show('over65'); }
-    var form = this; busy(form, true, 'Sending…');
+    var form = this; busy(form, true, T.sending);
     if (S.contact.bot) { busy(form, false); return show('done'); }
     var p = C.intakeUrl ? sendIntake(false) : sendCrm(false);
     p.then(function () { busy(form, false); if (!(age >= 65 && S.details.covering === 'me')) show('done'); })
-     .catch(function () { busy(form, false); err(3, 'Something went wrong sending your request. Please try again or call ' + (C.phone || '') + '.'); S.finished = false; });
+     .catch(function () { busy(form, false); err(3, T.fail + (C.phone || '') + '.'); S.finished = false; });
   });
 
   /* ---------- Payloads ---------- */
   function consentBlock() {
-    return { consent: true, consent_text: $('consentText').textContent.trim(), consent_version: 'hpm-lp-2026-10', consent_at: S.contact.consent_at, consent_page: location.href };
+    return { consent: true, consent_text: $('consentText').textContent.trim(), consent_version: LANG === 'es' ? 'hpm-lp-es-2026-10' : 'hpm-lp-2026-10', consent_at: S.contact.consent_at, consent_page: location.href };
   }
   function basePayload(partial) {
     var c = S.contact, d = S.details || {};
     var p = {
-      brand: C.brand, product: C.product, site: host || 'preview', page: location.pathname, landing_path: location.pathname, variant: variant,
+      brand: C.brand, product: C.product, site: host || 'preview', page: location.pathname, landing_path: location.pathname, variant: variant, language: LANG,
       first_name: c.first_name, last_name: c.last_name, phone: c.phone, email: c.email,
       zip: S.zip, state: S.state, county: S.county, county_fips: S.fips,
       plans_shown: S.planCount, partial: partial, device: device, user_agent: navigator.userAgent,
@@ -234,11 +292,11 @@
     S.sentCrm = true;
     var p = basePayload(partial), d = S.details || {};
     Object.assign(p, {
-      kind: kind, source: 'ad_' + (host || 'preview').replace(/\.com$/, '') + '_' + variant,
+      kind: kind, source: 'ad_' + (host || 'preview').replace(/\.com$/, '') + '_' + (LANG === 'es' ? 'es_' : '') + variant,
       firstName: p.first_name, lastName: p.last_name, fullName: p.first_name + ' ' + p.last_name,
       interested: 'ACA / Marketplace', consentGiven: true, consentTimestamp: p.consent_at, consentText: p.consent_text,
-      language: 'en', page: location.href,
-      summary: [partial ? 'Stopped after contact step' : 'Finished all steps',
+      language: LANG, preferredLanguage: LANG === 'es' ? 'Spanish' : 'English', page: location.href,
+      summary: [LANG === 'es' ? 'SPANISH SPEAKER (Spanish ad page)' : '', partial ? 'Stopped after contact step' : 'Finished all steps',
         'Plans shown: ' + (S.planCount || 'n/a'),
         d.age ? 'Age ' + d.age : '', d.household_size ? 'Household ' + d.household_size : '', d.covering ? 'Covering: ' + d.covering : '',
         d.income_band ? 'Income: ' + (INCOME[d.income_band] || d.income_band) : '', d.current_coverage ? 'Current: ' + d.current_coverage : '',

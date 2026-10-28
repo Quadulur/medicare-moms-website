@@ -76,3 +76,52 @@
         });
     });
 })();
+
+/* Language: remember the visitor's choice, and offer Spanish once to Spanish-language browsers.
+   Never auto-redirects first-time visitors, so search engines and bilingual readers see the page they asked for. */
+(function () {
+    var link = document.querySelector('.site-lang__link');
+    if (!link) return;
+    var KEY = 'hpm-lang';
+    function get() { try { return localStorage.getItem(KEY); } catch (e) { return null; } }
+    function set(v) { try { localStorage.setItem(KEY, v); } catch (e) {} }
+    var pageLang = (document.documentElement.lang || 'en').slice(0, 2).toLowerCase();
+    var otherLang = pageLang === 'es' ? 'en' : 'es';
+    var target = link.getAttribute('href');
+
+    document.querySelectorAll('.site-lang__link').forEach(function (a) {
+        a.addEventListener('click', function () { set(otherLang); });
+    });
+
+    var saved = get();
+    if (saved === pageLang) return;
+    if (saved === otherLang) {
+        // Only jump when this exact page has a translated twin (declared with hreflang).
+        var twin = document.querySelector('link[rel="alternate"][hreflang="' + otherLang + '"]');
+        if (twin) {
+            var url = new URL(twin.getAttribute('href'), location.href);
+            if (url.pathname !== location.pathname) { window.location.replace(url.pathname + location.hash); return; }
+        }
+        return;
+    }
+
+    // No saved choice yet: suggest Spanish once if the browser prefers it.
+    if (pageLang !== 'en') return;
+    var langs = navigator.languages && navigator.languages.length ? navigator.languages : [navigator.language || ''];
+    if (String(langs[0]).toLowerCase().indexOf('es') !== 0) return;
+
+    var bar = document.createElement('div');
+    bar.className = 'lang-suggest';
+    bar.setAttribute('lang', 'es');
+    var hasTwin = !!document.querySelector('link[rel="alternate"][hreflang="es"]');
+    bar.innerHTML = '<span>¿Prefieres español?</span> <a href="' + target + '">' +
+        (hasTwin ? 'Ver esta página en español' : 'Ver el sitio en español') + '</a>' +
+        '<button type="button" class="lang-suggest__close" aria-label="Cerrar">&times;</button>';
+    bar.querySelector('a').addEventListener('click', function () { set('es'); });
+    bar.querySelector('button').addEventListener('click', function () {
+        set('en');
+        bar.remove();
+    });
+    var header = document.querySelector('.site-header');
+    if (header) header.parentNode.insertBefore(bar, header); else document.body.insertBefore(bar, document.body.firstChild);
+})();

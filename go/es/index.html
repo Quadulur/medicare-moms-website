@@ -1,0 +1,127 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Planes de salud 2027 para tu familia | HealthPlan Moms</title>
+<meta name="description" content="Mira cuántos planes de salud 2027 hay donde vives y habla en español con una agente con licencia de HealthPlan Moms. Ayuda gratis y sin compromiso.">
+<meta name="robots" content="noindex">
+<link rel="icon" href="/favicon.svg" type="image/svg+xml">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display&family=Nunito:wght@400;600;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="/go/styles.css?v=20261025">
+<script src="/go/config.js?v=20261025"></script>
+</head>
+<body>
+<header class="top">
+  <div class="wrap top-in">
+    <span class="brand"><img src="/logo-mark.svg" alt="" width="34" height="34"><span>HealthPlan <em>Moms</em></span></span>
+    <a class="call" id="callTop" href="tel:+14352461548"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3.1 19.5 19.5 0 0 1-6-6A19.8 19.8 0 0 1 2.1 4.2 2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.1 1 .4 1.9.7 2.8a2 2 0 0 1-.5 2.1L8.1 9.9a16 16 0 0 0 6 6l1.3-1.3a2 2 0 0 1 2.1-.4c.9.3 1.8.6 2.8.7a2 2 0 0 1 1.7 2z"/></svg><span id="phoneTop">(435) 246-1548</span></a>
+  </div>
+</header>
+
+<main>
+  <section class="hero">
+    <div class="wrap hero-in">
+      <div class="pitch">
+        <p class="eyebrow" id="eyebrow">Seguro médico para toda la familia</p>
+        <h1 id="headline">¿Buscas seguro médico para tu familia en 2027? Empieza con tu código postal</h1>
+        <p class="sub" id="subhead">Hijos, pareja, todos en un plan o divididos de la forma que más te convenga. Mira cuántos planes hay en tu condado y compáralos en español con una mamá que también lo hizo para su familia.</p>
+        <div class="moms">
+          <div class="faces"><img src="/aidyl.jpg" alt="" width="44" height="44"><img src="/Magarely.jpg" alt="" width="44" height="44"><img src="/elizabeth.jpg" alt="" width="44" height="44"></div>
+          <p id="momsLine">Agentes con licencia que también son mamás, y te atienden en español. Ayudamos a familias en los 50 estados.</p>
+        </div>
+      </div>
+
+      <div class="card" id="card">
+        <ol class="steps" aria-label="Progreso"><li class="on">Zona</li><li>Contacto</li><li>Hogar</li></ol>
+
+        <!-- Step 1 -->
+        <form id="s1" class="step" novalidate>
+          <label for="zip" class="big">¿Cuál es tu código postal?</label>
+          <div class="row">
+            <input id="zip" name="zip" inputmode="numeric" autocomplete="postal-code" maxlength="5" placeholder="84096" required>
+            <button type="submit" class="btn">Ver planes</button>
+          </div>
+          <div id="countyWrap" class="field" hidden>
+            <label for="county">Tu condado</label>
+            <select id="county"></select>
+          </div>
+          <p class="err" id="e1" role="alert" hidden></p>
+          <p class="fine">Toma como un minuto. Revisar no te inscribe en nada.</p>
+        </form>
+
+        <!-- Step 2 -->
+        <form id="s2" class="step" novalidate hidden>
+          <div class="count" id="countBox" aria-live="polite"></div>
+          <p class="big">¿A dónde te enviamos tus opciones?</p>
+          <div class="two">
+            <div class="field"><label for="first_name">Nombre</label><input id="first_name" name="first_name" autocomplete="given-name" required></div>
+            <div class="field"><label for="last_name">Apellido</label><input id="last_name" name="last_name" autocomplete="family-name" required></div>
+          </div>
+          <div class="field"><label for="phone">Celular</label><input id="phone" name="phone" type="tel" inputmode="tel" autocomplete="tel" placeholder="(555) 555-5555" required></div>
+          <div class="field"><label for="email">Correo electrónico</label><input id="email" name="email" type="email" autocomplete="email" required></div>
+          <div class="hp" aria-hidden="true"><label for="company_website">Company website</label><input id="company_website" name="company_website" tabindex="-1" autocomplete="off"></div>
+          <label class="consent"><input type="checkbox" id="consent" required><span id="consentText">Acepto que HealthPlan Moms y sus agentes con licencia me contacten por teléfono, mensaje de texto y correo electrónico sobre opciones de seguro médico, incluso mediante mensajes automatizados. El consentimiento no es un requisito para comprar. Pueden aplicar tarifas de mensajes y datos. Responde STOP para dejar de recibir mensajes.</span> <a href="/es/consentimiento/" target="_blank" rel="noopener">Términos completos</a></label>
+          <button type="submit" class="btn wide">Continuar</button>
+          <p class="err" id="e2" role="alert" hidden></p>
+        </form>
+
+        <!-- Step 3 -->
+        <form id="s3" class="step" novalidate hidden>
+          <p class="big">Último paso: ¿quién necesita cobertura?</p>
+          <div class="two">
+            <div class="field"><label for="age">Tu edad</label><input id="age" inputmode="numeric" maxlength="3" required></div>
+            <div class="field"><label for="hh">Personas en tu hogar</label>
+              <select id="hh"><option>1</option><option>2</option><option selected>3</option><option>4</option><option>5</option><option>6</option><option value="7">7+</option></select></div>
+          </div>
+          <div class="field"><label for="covering">¿Quién necesita cobertura?</label>
+            <select id="covering"><option value="me">Solo yo</option><option value="me_spouse">Mi pareja y yo</option><option value="family" selected>Toda mi familia</option><option value="kids">Solo mis hijos</option></select></div>
+          <div class="field"><label for="income">Ingresos del hogar este año (aproximado)</label>
+            <select id="income"><option value="">Elige uno</option><option value="under_25k">Menos de $25,000</option><option value="25_50k">$25,000 a $50,000</option><option value="50_75k">$50,000 a $75,000</option><option value="75_100k">$75,000 a $100,000</option><option value="100_150k">$100,000 a $150,000</option><option value="over_150k">Más de $150,000</option></select></div>
+          <div class="field"><label for="current">Cobertura actual</label>
+            <select id="current"><option value="">Elige uno</option><option value="none">No tengo cobertura ahora</option><option value="marketplace">Plan del Mercado / Obamacare</option><option value="employer">Seguro del trabajo (W-2)</option><option value="cobra">COBRA</option><option value="medicaid">Medicaid / CHIP</option><option value="other">Otra cosa</option></select></div>
+          <button type="submit" class="btn wide">Ver mis opciones</button>
+          <p class="err" id="e3" role="alert" hidden></p>
+        </form>
+
+        <!-- Done -->
+        <div id="done" class="step done" hidden tabindex="-1">
+          <svg viewBox="0 0 64 64" aria-hidden="true"><circle cx="32" cy="32" r="30"/><polyline points="20,34 28,42 44,24"/></svg>
+          <h2 id="doneTitle">¡Listo!</h2>
+          <p id="doneText">Una mamá con licencia de nuestro equipo te llamará o te enviará un mensaje pronto, en español, desde un número local. Si es fuera de horario, te contactamos a primera hora cuando abra la oficina.</p>
+          <a class="btn wide ghost" href="tel:+14352461548">¿Prefieres llamar ahora? <span>(435) 246-1548</span></a>
+        </div>
+
+        <div id="over65" class="step done" hidden tabindex="-1">
+          <h2>¿Buscas Medicare?</h2>
+          <p>Esta página es para planes de personas menores de 65 años. Nuestro equipo también ayuda con Medicare, en español.</p>
+          <a class="btn wide" href="https://healthplanmoms.com/es/">Ir a HealthPlan Moms en español</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="why">
+    <div class="wrap">
+      <h2 id="whyTitle">Por qué las familias llaman a las mamás</h2>
+      <ul class="points" id="points">
+        <li><strong>Una sola persona, de principio a fin.</strong> Hablas con la misma agente con licencia desde tu primera pregunta hasta tus tarjetas del seguro.</li>
+        <li><strong>Nosotras comparamos, tú decides.</strong> Revisamos los planes disponibles en tu condado y te explicamos las diferencias en español claro.</li>
+        <li><strong>Nuestra ayuda no te cuesta nada.</strong> A las agentes les paga la compañía de seguros, así que tu prima es la misma con o sin nosotras.</li>
+      </ul>
+    </div>
+  </section>
+</main>
+
+<footer class="foot">
+  <div class="wrap">
+    <p>HealthPlan Moms es una agencia de seguros independiente y con licencia. No estamos afiliados a HealthCare.gov, a ningún mercado estatal ni al gobierno federal. La disponibilidad de planes, los costos y los ahorros dependen de dónde vives, tu hogar y tus ingresos. No ofrecemos todos los planes disponibles en tu área; comunícate con CuidadoDeSalud.gov o con el mercado de tu estado para conocer todas tus opciones.</p>
+    <p><a href="/privacy/">Privacidad</a> · <a href="/terms/">Términos</a> · <a href="/es/consentimiento/">Consentimiento de contacto</a></p>
+  </div>
+</footer>
+
+<script src="/go/app.js?v=20261025" defer></script>
+</body>
+</html>

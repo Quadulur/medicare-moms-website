@@ -161,23 +161,58 @@ button.btn-primary {
     background: var(--sage);
 }
 
-/* Language toggle */
-.site-lang { margin-left: 8px; }
+/* Language toggle: a quiet text link to the other language */
+.site-lang { margin-left: 4px; }
 .site-nav__links a.site-lang__link {
-    gap: 4px;
-    min-height: 40px;
-    padding: 0 14px;
-    border-radius: 999px;
-    background: var(--sage-mist);
+    min-height: 32px;
+    padding: 0 8px;
+    border-radius: 6px;
+    background: none;
     color: var(--muted-soft);
-    font-size: 14px;
+    font-size: 13px;
     font-weight: 600;
-    letter-spacing: 0.02em;
+    letter-spacing: 0.01em;
+    text-decoration: underline;
+    text-decoration-color: transparent;
+    text-underline-offset: 3px;
 }
-.site-nav__links a.site-lang__link:hover { background: #d9e6d4; color: var(--ink); }
-.site-lang__on { color: var(--sage-ink); font-weight: 800; }
-.site-lang__off { color: var(--muted-soft); font-weight: 600; }
-.site-lang__sep { color: var(--muted-soft); }
+.site-nav__links a.site-lang__link:hover {
+    color: var(--sage-ink);
+    text-decoration-color: currentColor;
+}
+
+/* One-time language suggestion (shown by site-shell.js) */
+.lang-suggest {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 12px;
+    padding: 8px 48px 8px 16px;
+    position: relative;
+    background: var(--sage-mist);
+    color: var(--ink);
+    font-family: 'Nunito', sans-serif;
+    font-size: 14px;
+    line-height: 1.4;
+    text-align: center;
+}
+.lang-suggest a { color: var(--sage-ink); font-weight: 800; text-underline-offset: 3px; }
+.lang-suggest__close {
+    position: absolute;
+    right: 8px;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 32px;
+    height: 32px;
+    border: 0;
+    border-radius: 6px;
+    background: none;
+    color: var(--muted-soft);
+    font-size: 20px;
+    line-height: 1;
+    cursor: pointer;
+}
+.lang-suggest__close:hover { background: #d9e6d4; color: var(--ink); }
 
 /* Call button */
 .site-call {
@@ -292,6 +327,7 @@ button.btn-primary {
     .site-nav__links a.site-lang__link {
         display: inline-flex;
         min-height: 44px;
+        padding: 0 8px;
         font-size: 15px;
     }
 }
@@ -432,6 +468,10 @@ button.btn-primary {
     text-decoration: underline;
     text-decoration-color: rgba(255, 255, 255, 0.3);
     text-underline-offset: 3px;
+}
+.site-footer__legal-links a.site-footer__lang {
+    color: var(--sage-light);
+    text-decoration-color: rgba(168, 197, 160, 0.5);
 }
 .site-footer__disclaimer {
     color: var(--footer-muted);

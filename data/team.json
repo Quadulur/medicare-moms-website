@@ -1,0 +1,468 @@
+[
+  {
+    "id": "michelle",
+    "tbwId": "4307",
+    "name": "Michelle Dennison",
+    "photo": "/michelled.jpg",
+    "photoPosition": "center 30%",
+    "city": "Orem, UT",
+    "languages": [
+      "English"
+    ],
+    "lines": [
+      "Medicare Advantage",
+      "Medigap",
+      "ACA"
+    ],
+    "phone": "(385) 481-3683",
+    "email": "michelle@healthplanmoms.com",
+    "en": {
+      "tagline": "Mom of 3 and proud grandma",
+      "bio": "Mom of 3 and proud grandma based in Orem, UT. Michelle loves to travel and spend quality time with her grandkids. Her warmth and life experience make her a natural at helping clients feel comfortable and confident in their coverage choices."
+    },
+    "es": {
+      "tagline": "Mamá de 3 y orgullosa abuela",
+      "bio": "Mamá de 3 y orgullosa abuela basada en Orem, UT. A Michelle le encanta viajar y pasar tiempo de calidad con sus nietos. Su calidez y experiencia de vida la hacen una natural para ayudar a los clientes a sentirse cómodos y seguros en sus opciones de cobertura.",
+      "lines": [
+        "Medicare Advantage",
+        "Medigap",
+        "ACA"
+      ]
+    },
+    "orderEn": 0,
+    "orderEs": 4
+  },
+  {
+    "id": "aidyl",
+    "tbwId": "4312",
+    "name": "Aidyl Semidey",
+    "photo": "/aidyl.jpg",
+    "photoPosition": "center 25%",
+    "city": "Murray, UT",
+    "languages": [
+      "English",
+      "Spanish"
+    ],
+    "lines": [
+      "Medicare Advantage",
+      "Medigap",
+      "ACA"
+    ],
+    "phone": "(801) 895-3327",
+    "email": "aidyl@healthplanmoms.com",
+    "en": {
+      "tagline": "Mom of 2 daughters",
+      "bio": "Mom of 2 daughters based in Murray, UT. Aidyl works with a lot of Spanish-speaking families and explains every option in the language they're most comfortable in. She takes the time to make sure every client truly understands their options."
+    },
+    "es": {
+      "tagline": "Mamá de 2 hijas",
+      "bio": "Mamá de 2 hijas basada en Murray, UT. Aidyl trabaja con muchas familias hispanohablantes y explica cada opción en el idioma en que se sienten más cómodas. Se toma el tiempo para asegurarse de que cada cliente entienda realmente sus opciones.",
+      "lines": [
+        "Medicare Advantage",
+        "Medigap",
+        "ACA"
+      ]
+    },
+    "orderEn": 1,
+    "orderEs": 0
+  },
+  {
+    "id": "tamara",
+    "tbwId": null,
+    "name": "Tamara Redd",
+    "photo": "/tamara.jpg",
+    "photoPosition": "center 25%",
+    "city": "Lehi, UT",
+    "languages": [
+      "English"
+    ],
+    "lines": [
+      "Medicare Advantage",
+      "ACA"
+    ],
+    "phone": "(385) 360-1512",
+    "email": "tamara@healthplanmoms.com",
+    "en": {
+      "tagline": "Mom of 5",
+      "bio": "Mom of 5 based in Lehi, UT. Tamara knows firsthand what it means to manage a busy household, and she brings that same care and attention to detail to every client she works with. She's here to simplify the process and find the right fit for your family."
+    },
+    "es": {
+      "tagline": "Mamá de 5",
+      "bio": "Mamá de 5 basada en Lehi, UT. Tamara conoce de primera mano lo que significa administrar un hogar ocupado, y trae esa misma atención al detalle y cuidado a cada cliente con el que trabaja. Está aquí para simplificar el proceso y encontrar el ajuste correcto para tu familia.",
+      "lines": [
+        "Medicare Advantage",
+        "ACA"
+      ]
+    },
+    "orderEn": 2,
+    "orderEs": 5
+  },
+  {
+    "id": "elizabeth",
+    "tbwId": null,
+    "name": "Elizabeth Perez",
+    "photo": "/elizabeth.jpg",
+    "photoPosition": "center 25%",
+    "city": "Puerto Rico",
+    "languages": [
+      "English",
+      "Spanish"
+    ],
+    "lines": [
+      "Medicare Advantage",
+      "Medigap",
+      "ACA"
+    ],
+    "phone": "(801) 901-7070",
+    "email": "elizabeth@healthplanmoms.com",
+    "en": {
+      "tagline": "Mom of 2",
+      "bio": "Mom of 2 based in Puerto Rico. A Medicare agent since 2013 with a background in Computer Science and Business Administration, Elizabeth sees her work as real service, not just a sale. This career gave her the flexibility to be a present mom while providing for her family. Fun fact: she loves boxing and says consistency is everything."
+    },
+    "es": {
+      "tagline": "Mamá de 2 hijos",
+      "bio": "Mamá de 2 hijos basada en Puerto Rico. Agente de Medicare desde 2013 con formación en Ciencias de la Computación y Administración de Empresas, Elizabeth ve su trabajo como un verdadero servicio, no solo una venta. Esta carrera le dio la flexibilidad de ser una mamá presente mientras mantiene a su familia. Dato curioso: le encanta el boxeo y dice que la constancia lo es todo.",
+      "lines": [
+        "Medicare Advantage",
+        "Medigap",
+        "ACA"
+      ]
+    },
+    "orderEn": 3,
+    "orderEs": 1
+  },
+  {
+    "id": "saya",
+    "tbwId": null,
+    "name": "Saya Murton",
+    "photo": "/saya.jpg",
+    "photoPosition": "center 25%",
+    "city": "Herriman, UT",
+    "languages": [
+      "English",
+      "Japanese"
+    ],
+    "lines": [
+      "Medicare Advantage",
+      "Medigap",
+      "ACA",
+      "Life",
+      "Group"
+    ],
+    "phone": "(801) 316-8113",
+    "email": "saya@healthplanmoms.com",
+    "en": {
+      "tagline": "Mom of 3 boys",
+      "bio": "Mom of 3 boys based in Herriman, UT. Originally from Japan, Saya brings almost 15 years of insurance experience to the team. When she's not helping clients find the perfect plan, you'll probably find her at Disney with her family."
+    },
+    "es": {
+      "tagline": "Mamá de 3 varones",
+      "bio": "Mamá de 3 varones basada en Herriman, UT. Originaria de Japón, Saya aporta casi 15 años de experiencia en seguros al equipo. Cuando no está ayudando a los clientes a encontrar el plan perfecto, probablemente la encontrarás en Disney con su familia.",
+      "lines": [
+        "Medicare Advantage",
+        "Medigap",
+        "ACA",
+        "Vida",
+        "Grupal"
+      ]
+    },
+    "orderEn": 4,
+    "orderEs": 6
+  },
+  {
+    "id": "ally",
+    "tbwId": null,
+    "name": "Ally Valdez",
+    "photo": "/ally.jpg",
+    "photoPosition": "center 25%",
+    "city": "Herriman, UT",
+    "languages": [
+      "English"
+    ],
+    "lines": [
+      "Medicare Advantage",
+      "Medigap",
+      "ACA",
+      "Group"
+    ],
+    "phone": "(435) 246-1548",
+    "email": "ally@healthplanmoms.com",
+    "en": {
+      "tagline": "Mom of 2 boys and a daughter",
+      "bio": "Mom of 2 boys and a daughter based in Herriman, UT. Ally brings energy and heart to everything she does. She's dedicated to helping families find coverage that fits their lives and their budget."
+    },
+    "es": {
+      "tagline": "Mamá de 2 varones y una niña",
+      "bio": "Mamá de 2 varones y una niña basada en Herriman, UT. Ally aporta energía y corazón a todo lo que hace. Se dedica a ayudar a las familias a encontrar cobertura que se ajuste a sus vidas y a su presupuesto.",
+      "lines": [
+        "Medicare Advantage",
+        "Medigap",
+        "ACA",
+        "Grupal"
+      ]
+    },
+    "orderEn": 5,
+    "orderEs": 7
+  },
+  {
+    "id": "erica",
+    "tbwId": null,
+    "name": "Erica Harding",
+    "photo": "/erica.jpg",
+    "photoPosition": "center 25%",
+    "city": "Katy, TX",
+    "languages": [
+      "English"
+    ],
+    "lines": [
+      "ACA"
+    ],
+    "phone": "(832) 850-5726",
+    "email": "erica@healthplanmoms.com",
+    "en": {
+      "tagline": "Mom of 3",
+      "bio": "Mom of 3 based in Katy, TX. Erica handles enrollment for many of our clients and is good at turning confusing plan details into a plain answer."
+    },
+    "es": {
+      "tagline": "Mamá de 3",
+      "bio": "Mamá de 3 basada en Katy, TX. Erica maneja la inscripción de muchos de nuestros clientes y sabe convertir los detalles confusos de un plan en una respuesta clara.",
+      "lines": [
+        "ACA"
+      ]
+    },
+    "orderEn": 6,
+    "orderEs": 8
+  },
+  {
+    "id": "michelleb",
+    "tbwId": null,
+    "name": "Michelle Bodin",
+    "photo": "/michelleb.jpg",
+    "photoPosition": "center 25%",
+    "city": "Tucson, AZ",
+    "languages": [
+      "English",
+      "German"
+    ],
+    "lines": [
+      "Medicare Advantage",
+      "Medigap",
+      "ACA",
+      "Life",
+      "LTC"
+    ],
+    "phone": "(801) 905-8691",
+    "email": "michelleb@healthplanmoms.com",
+    "en": {
+      "tagline": "Mom of 5 and grandma of 9",
+      "bio": "Mom of 5 and grandma of 9 based in Tucson, AZ. Michelle is all about family, whether that's her own or the families she helps find the right coverage. When she's not working, she's planning her next quick getaway or spending time with her grandkids."
+    },
+    "es": {
+      "tagline": "Mamá de 5 y abuela de 9",
+      "bio": "Mamá de 5 y abuela de 9 basada en Tucson, AZ. Para Michelle, todo gira en torno a la familia: la suya y las familias a las que ayuda a encontrar la cobertura correcta. Cuando no está trabajando, está planeando su próxima escapada rápida o pasando tiempo con sus nietos.",
+      "lines": [
+        "Medicare Advantage",
+        "Medigap",
+        "ACA",
+        "Vida",
+        "Cuidado a largo plazo"
+      ]
+    },
+    "orderEn": 7,
+    "orderEs": 9
+  },
+  {
+    "id": "edmi",
+    "tbwId": null,
+    "name": "Edmi Dominguez",
+    "photo": "/edmi.jpg",
+    "photoPosition": "center 25%",
+    "city": "West Jordan, UT",
+    "languages": [
+      "English",
+      "Spanish"
+    ],
+    "lines": [
+      "Medicare Advantage",
+      "Medigap",
+      "ACA"
+    ],
+    "phone": "(801) 448-0443",
+    "email": "edmi@healthplanmoms.com",
+    "en": {
+      "tagline": "Mom of 2",
+      "bio": "Mom of 2 based in West Jordan, UT. Edmi is dedicated to making sure every client feels heard and understood. She takes the time to walk you through your options so you can feel confident in your coverage decisions."
+    },
+    "es": {
+      "tagline": "Mamá de 2",
+      "bio": "Mamá de 2 basada en West Jordan, UT. Edmi se dedica a asegurarse de que cada cliente se sienta escuchado y comprendido. Se toma el tiempo para guiarte a través de tus opciones para que puedas sentirte segura en tus decisiones de cobertura.",
+      "lines": [
+        "Medicare Advantage",
+        "Medigap",
+        "ACA"
+      ]
+    },
+    "orderEn": 8,
+    "orderEs": 2
+  },
+  {
+    "id": "magarely",
+    "tbwId": null,
+    "name": "Magarely Sanchez",
+    "photo": "/Magarely.jpg",
+    "photoPosition": "center 25%",
+    "city": null,
+    "languages": [
+      "English",
+      "Spanish"
+    ],
+    "lines": [
+      "Medicare Advantage",
+      "Medigap",
+      "ACA"
+    ],
+    "phone": "(801) 889-2428",
+    "email": "magarely@healthplanmoms.com",
+    "en": {
+      "tagline": null,
+      "bio": "Magarely brings warmth and dedication to every client interaction. She loves helping families in her community find the right coverage and feel confident about their health insurance decisions."
+    },
+    "es": {
+      "tagline": null,
+      "bio": "Magarely aporta calidez y dedicación a cada interacción con sus clientes. Le encanta ayudar a las familias de su comunidad a encontrar la cobertura correcta y sentirse seguras en sus decisiones de seguro de salud.",
+      "lines": [
+        "Medicare Advantage",
+        "Medigap",
+        "ACA"
+      ]
+    },
+    "orderEn": 9,
+    "orderEs": 3
+  },
+  {
+    "id": "madisyn",
+    "tbwId": null,
+    "name": "Madisyn Groberg",
+    "photo": null,
+    "photoPosition": null,
+    "city": "Spanish Fork, UT",
+    "languages": [
+      "English"
+    ],
+    "lines": [
+      "ACA",
+      "Group"
+    ],
+    "phone": null,
+    "email": "madisyn@healthplanmoms.com",
+    "en": {
+      "tagline": null,
+      "bio": "Based in Spanish Fork, UT. Madisyn specializes in helping individuals, families, and employers find affordable ACA Marketplace coverage and group health insurance."
+    },
+    "es": {
+      "tagline": null,
+      "bio": "Basada en Spanish Fork, UT. Madisyn se especializa en ayudar a individuos, familias y empleadores a encontrar cobertura asequible del Mercado de Seguros ACA y planes de salud grupales.",
+      "lines": [
+        "ACA",
+        "Grupal"
+      ]
+    },
+    "orderEn": 10,
+    "orderEs": 10
+  },
+  {
+    "id": "milgret",
+    "tbwId": null,
+    "name": "Milgret Diorio Acosta",
+    "photo": null,
+    "photoPosition": null,
+    "city": null,
+    "languages": [
+      "English",
+      "Spanish"
+    ],
+    "lines": [
+      "ACA",
+      "Medicare"
+    ],
+    "phone": null,
+    "email": "milgret@healthplanmoms.com",
+    "en": {
+      "tagline": null,
+      "bio": "Milgret is a licensed insurance agent helping individuals and families find the right coverage. She is bilingual in English and Spanish."
+    },
+    "es": {
+      "tagline": null,
+      "bio": "Milgret es una agente de seguros con licencia que ayuda a individuos y familias a encontrar la cobertura adecuada. Es bilingüe en inglés y español.",
+      "lines": [
+        "ACA",
+        "Medicare"
+      ]
+    },
+    "orderEn": 11,
+    "orderEs": 11
+  },
+  {
+    "id": "madison",
+    "tbwId": null,
+    "name": "Madison Dennison",
+    "photo": "/madison.jpg",
+    "photoPosition": "center 25%",
+    "city": "Provo, UT",
+    "languages": [
+      "English"
+    ],
+    "lines": [
+      "ACA",
+      "Group"
+    ],
+    "phone": null,
+    "email": "madison@healthplanmoms.com",
+    "en": {
+      "tagline": null,
+      "bio": "Based in Provo, UT. Madison is a licensed insurance agent who helps individuals and families find the right coverage."
+    },
+    "es": {
+      "tagline": null,
+      "bio": "Basada en Provo, UT. Madison es una agente de seguros con licencia que ayuda a individuos y familias a encontrar la cobertura adecuada.",
+      "lines": [
+        "ACA",
+        "Grupal"
+      ]
+    },
+    "orderEn": 12,
+    "orderEs": 12
+  },
+  {
+    "id": "shaunie",
+    "tbwId": null,
+    "name": "Shaunie Dennison",
+    "photo": "/shaunie.jpg",
+    "photoPosition": "center 25%",
+    "city": "Tucson, AZ",
+    "languages": [
+      "English",
+      "American Sign Language"
+    ],
+    "lines": [
+      "ACA",
+      "Group"
+    ],
+    "phone": null,
+    "email": "shaunie@healthplanmoms.com",
+    "en": {
+      "tagline": "Mom of 3",
+      "bio": "Mom of 3 based in Tucson, AZ. Before insurance, Shaunie spent years as an American Sign Language interpreter and still works with Deaf clients today, making sure they feel truly seen and understood. She brings that same heart to every family she helps, making coverage feel clear instead of confusing. \"I love helping people understand what they have and feel confident in their coverage.\""
+    },
+    "es": {
+      "tagline": null,
+      "bio": "Madre de 3, basada en Tucson, AZ. Antes de los seguros, Shaunie trabajo como interprete de Lengua de Senas Americana y todavia trabaja con clientes Sordos, asegurandose de que se sientan verdaderamente vistos y comprendidos. Lleva ese mismo corazon a cada familia que ayuda, haciendo que la cobertura se sienta clara en lugar de confusa. \"Me encanta ayudar a las personas a entender lo que tienen y sentirse seguras con su cobertura.\"",
+      "lines": [
+        "ACA",
+        "Grupal"
+      ]
+    },
+    "orderEn": 13,
+    "orderEs": 13
+  }
+]
