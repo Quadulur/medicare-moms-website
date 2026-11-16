@@ -408,25 +408,6 @@
             color: #3D6B4A;
         }
 
-        /* ===== Service detail modal ===== */
-        .sm-overlay { position: fixed; inset: 0; background: rgba(44,44,44,0.55); display: none; align-items: center; justify-content: center; z-index: 4000; padding: 20px; }
-        .sm-overlay.active { display: flex; }
-        .sm-modal { background: #fff; border-radius: 16px; max-width: 520px; width: 100%; max-height: 90vh; overflow-y: auto; padding: 36px 34px 30px; box-shadow: 0 20px 60px rgba(0,0,0,0.25); position: relative; animation: smPop 0.25s ease; }
-        @keyframes smPop { from { opacity: 0; transform: translateY(14px); } to { opacity: 1; transform: translateY(0); } }
-        .sm-close { position: absolute; top: 14px; right: 16px; background: none; border: none; font-size: 30px; line-height: 1; color: #9aa5b1; cursor: pointer; }
-        .sm-close:hover { color: #2C2C2C; }
-        .sm-icon { display: flex; justify-content: center; margin-bottom: 12px; }
-        .sm-icon svg { width: 50px; height: 50px; }
-        .sm-modal h3 { font-family: 'DM Serif Display', serif; font-size: 26px; color: #2C2C2C; text-align: center; margin-bottom: 6px; }
-        .sm-who { text-align: center; color: var(--sage-ink); font-weight: 700; font-size: 14px; margin-bottom: 18px; }
-        .sm-overview { color: #4A5568; font-size: 15.5px; line-height: 1.7; margin-bottom: 20px; }
-        .sm-help { background: #F7F3ED; border: 1px solid #e6dfd3; border-radius: 10px; padding: 16px 20px; margin-bottom: 24px; }
-        .sm-help h4, .sm-help .hx4 { font-family: 'DM Serif Display', serif; color: #3D6B4A; font-size: 16px; margin-bottom: 6px; }
-        .sm-help p { color: #4A5568; font-size: 14.5px; line-height: 1.65; margin: 0; }
-        .sm-actions { display: flex; flex-direction: column; gap: 10px; }
-        .sm-actions .btn { width: 100%; }
-        @media (max-width: 600px) { .sm-modal { padding: 30px 22px 24px; } .sm-modal h3 { font-size: 22px; } }
-
         @media (max-width: 768px) {
             .section-padding {
                 padding: 50px 0;
@@ -454,6 +435,82 @@
             }
         }
             
+        /* Quick facts panel (replaces the old icon placeholder box) */
+        .service-facts {
+            background: #fff;
+            border: 1px solid var(--line, #e6dfd3);
+            border-radius: 18px;
+            padding: 26px 28px 6px;
+            box-shadow: 0 26px 48px -38px rgba(44, 44, 44, 0.45);
+        }
+        .service-detail:nth-child(odd) .service-facts {
+            background: var(--cream, #f7f3ed);
+            border-color: transparent;
+            box-shadow: none;
+        }
+        .service-facts__head {
+            display: flex;
+            align-items: center;
+            gap: 14px;
+            padding-bottom: 18px;
+            border-bottom: 1px solid var(--line, #e6dfd3);
+        }
+        .service-facts__icon {
+            display: grid;
+            place-items: center;
+            width: 44px;
+            height: 44px;
+            flex-shrink: 0;
+            border-radius: 12px;
+            background: var(--sage-mist, #e8f0e5);
+            color: var(--sage-ink, #3d6b4a);
+        }
+        .service-detail:nth-child(odd) .service-facts__icon { background: #fff; }
+        .service-facts__icon svg { width: 24px; height: 24px; }
+        .service-facts h3 { font-size: 21px; margin: 0; }
+        .service-facts dl { margin: 0; }
+        .service-facts dl > div {
+            display: grid;
+            grid-template-columns: minmax(0, 9.5em) minmax(0, 1fr);
+            gap: 18px;
+            padding: 15px 0;
+            border-bottom: 1px solid var(--line, #e6dfd3);
+        }
+        .service-facts dl > div:last-child { border-bottom: 0; }
+        .service-facts dt { font-size: 14px; font-weight: 800; color: var(--sage-ink, #3d6b4a); line-height: 1.5; }
+        .service-facts dd { margin: 0; font-size: 15.5px; color: #39414d; line-height: 1.55; }
+        @media (max-width: 768px) {
+            .service-facts { padding: 22px 20px 4px; }
+            .service-facts dl > div { grid-template-columns: minmax(0, 1fr); gap: 2px; padding: 13px 0; }
+        }
+
+        /* Overview cards are jump links to the sections below */
+        a.overview-card {
+            display: grid;
+            grid-template-columns: 44px minmax(0, 1fr);
+            column-gap: 16px;
+            align-content: start;
+            text-align: left;
+            color: inherit;
+            text-decoration: none;
+            border: 1px solid transparent;
+        }
+        a.overview-card > * { grid-column: 2; }
+        a.overview-card .overview-icon {
+            grid-column: 1;
+            grid-row: 1 / span 4;
+            display: grid;
+            place-items: center;
+            width: 44px;
+            height: 44px;
+            margin: 0;
+            border-radius: 12px;
+            background: #fff;
+        }
+        a.overview-card .overview-icon svg { width: 24px; height: 24px; stroke-width: 3; }
+        a.overview-card:hover { border-color: var(--sage, #5b8c6b); transform: none; box-shadow: none; }
+        a.overview-card .overview-link { margin-top: auto; }
+
     </style>
     <link rel="stylesheet" href="/site-shell.css">
 </head>
@@ -494,56 +551,56 @@
     <section class="coverage-overview section-padding" style="background-color: white; padding-bottom: 40px;">
         <div class="container">
             <h2 class="text-center">Cobertura de un vistazo</h2>
-            <p class="text-center" style="max-width: 650px; margin: 0 auto 40px; color: #4A5568;">Aquí hay una vista rápida de qué cubre cada tipo de plan y para quién está diseñado. Haz clic en cualquier plan para ver los detalles y cómo te ayudamos.</p>
+            <p class="text-center" style="max-width: 650px; margin: 0 auto 40px; color: #4A5568;">Aquí hay una vista rápida de qué cubre cada tipo de plan y para quién está diseñado. Toca cualquier plan para ir a los detalles y ver cómo te ayudamos.</p>
 
             <div class="overview-grid">
-                <div class="overview-card" data-service="medicare-advantage" role="button" tabindex="0">
+                <a class="overview-card" href="#medicare-advantage">
                     <div class="overview-icon"><svg width="36" height="36" viewBox="0 0 48 48" fill="none" stroke="#5B8C6B" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><rect x="8" y="8" width="32" height="32" rx="4"/><line x1="24" y1="16" x2="24" y2="32"/><line x1="16" y1="24" x2="32" y2="24"/></svg></div>
                     <h3 class="hx4">Medicare Advantage</h3>
                     <p class="overview-who">Para personas mayores de 65+ o recientemente elegibles</p>
                     <p class="overview-desc">Plan integral que agrupa hospital, médica, Rx, y a menudo dental/visión. Muchos a prima $0.</p>
-                    <span class="overview-link">Más detalles &rarr;</span>
-                </div>
+                    <span class="overview-link">Ver detalles &darr;</span>
+                </a>
 
-                <div class="overview-card" data-service="medigap" role="button" tabindex="0">
+                <a class="overview-card" href="#medigap">
                     <div class="overview-icon"><svg width="36" height="36" viewBox="0 0 48 48" fill="none" stroke="#5B8C6B" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M24 4L8 12v10c0 12 6.8 22 16 26 9.2-4 16-14 16-26V12L24 4z"/><polyline points="17,24 22,29 31,20"/></svg></div>
                     <h3 class="hx4">Suplementos de Medicare (Medigap)</h3>
                     <p class="overview-who">Para beneficiarios de Medicare que quieren menos sorpresas</p>
                     <p class="overview-desc">Cubre las brechas que Medicare Original deja: copagos, coaseguros y deducibles. Ve a cualquier médico en todo el país.</p>
-                    <span class="overview-link">Más detalles &rarr;</span>
-                </div>
+                    <span class="overview-link">Ver detalles &darr;</span>
+                </a>
 
-                <div class="overview-card" data-service="aca" role="button" tabindex="0">
+                <a class="overview-card" href="#aca">
                     <div class="overview-icon"><svg width="36" height="36" viewBox="0 0 48 48" fill="none" stroke="#5B8C6B" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="24" cy="12" r="5"/><path d="M14 40v-4a10 10 0 0 1 20 0v4"/><circle cx="10" cy="18" r="4"/><path d="M4 40v-3a7 7 0 0 1 9-6.7"/><circle cx="38" cy="18" r="4"/><path d="M44 40v-3a7 7 0 0 0-9-6.7"/></svg></div>
                     <h3 class="hx4">ACA / Mercado de Seguros</h3>
                     <p class="overview-who">Para individuos y familias menores de 65</p>
                     <p class="overview-desc">Cobertura integral con subsidios basados en ingresos. Incluye maternidad, salud mental y atención preventiva.</p>
-                    <span class="overview-link">Más detalles &rarr;</span>
-                </div>
+                    <span class="overview-link">Ver detalles &darr;</span>
+                </a>
 
-                <div class="overview-card" data-service="dental-vision" role="button" tabindex="0">
+                <a class="overview-card" href="#dental-vision">
                     <div class="overview-icon"><svg width="36" height="36" viewBox="0 0 48 48" fill="none" stroke="#5B8C6B" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M18 6c-3 0-5.5 1.5-7 4s-2 5-2 8c0 4 1.5 7 3 10.5s3 7 4 11.5c.4 1.5 2 1.5 2.4 0 .8-2 1.8-4.5 2.8-6.5.6-1 1.8-1 2.4 0 1 2 2 4.5 2.8 6.5.4 1.5 2 1.5 2.4 0 1-4.5 2.5-8 4-11.5s3-6.5 3-10.5c0-3-.5-5.5-2-8s-4-4-7-4c-2 0-3.5 1-6 3.5C21.5 7 20 6 18 6z"/></svg></div>
                     <h3 class="hx4">Dental y visión</h3>
                     <p class="overview-who">Para cualquiera, individual o complementario</p>
                     <p class="overview-desc">Limpiezas de rutina, empastes, exámenes oculares, gafas. Disponible como individual o agrupado con Medicare.</p>
-                    <span class="overview-link">Más detalles &rarr;</span>
-                </div>
+                    <span class="overview-link">Ver detalles &darr;</span>
+                </a>
 
-                <div class="overview-card" data-service="life" role="button" tabindex="0">
+                <a class="overview-card" href="#life-insurance">
                     <div class="overview-icon"><svg width="36" height="36" viewBox="0 0 48 48" fill="none" stroke="#5B8C6B" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M24 42s-18-10-18-22a9.5 9.5 0 0 1 18-4 9.5 9.5 0 0 1 18 4c0 12-18 22-18 22z"/></svg></div>
                     <h3 class="hx4">Seguro de vida y cuidados a largo plazo</h3>
                     <p class="overview-who">Para cualquiera que proteja a sus seres queridos</p>
                     <p class="overview-desc">Vida a término, vida entera, gastos finales y cobertura a largo plazo. Muchos planes sin examen médico y aprobaciones rápidas.</p>
-                    <span class="overview-link">Más detalles &rarr;</span>
-                </div>
+                    <span class="overview-link">Ver detalles &darr;</span>
+                </a>
 
-                <div class="overview-card" data-service="accident" role="button" tabindex="0">
+                <a class="overview-card" href="#accident">
                     <div class="overview-icon"><svg width="36" height="36" viewBox="0 0 48 48" fill="none" stroke="#5B8C6B" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><polygon points="26,4 10,28 22,28 20,44 38,18 26,18"/></svg></div>
                     <h3 class="hx4">Accidente y enfermedad crítica</h3>
                     <p class="overview-who">Para protección financiera adicional</p>
                     <p class="overview-desc">Beneficios en efectivo pagados directamente a ti cuando lo inesperado ocurre. Funciona junto con cobertura existente.</p>
-                    <span class="overview-link">Más detalles &rarr;</span>
-                </div>
+                    <span class="overview-link">Ver detalles &darr;</span>
+                </a>
             </div>
         </div>
     </section>
@@ -565,11 +622,18 @@
                     <a href="/es/#contact" class="btn btn-primary btn-sm">Obtén una consulta gratis</a>
                     <a href="/es/recursos/#advantage-vs-supplement" class="learn-link" style="display:inline-block; margin-left:18px; color: var(--sage-ink); font-weight:700; font-size:14px; text-decoration:none;">Aprende cómo funciona &rarr;</a>
                 </div>
-                <div class="service-visual">
-                    <div class="service-icon"><svg width="72" height="72" viewBox="0 0 48 48" fill="none" stroke="#5B8C6B" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><rect x="8" y="8" width="32" height="32" rx="4"/><line x1="24" y1="16" x2="24" y2="32"/><line x1="16" y1="24" x2="32" y2="24"/></svg></div>
-                    <div class="service-highlight">Cobertura Integral</div>
-                    <div class="service-highlight-sub">Hospital + Médica + Rx + Extras</div>
-                </div>
+                <aside class="service-facts" aria-label="Datos clave">
+                    <div class="service-facts__head">
+                        <span class="service-facts__icon"><svg aria-hidden="true" focusable="false" viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><rect x="8" y="8" width="32" height="32" rx="4"/><line x1="24" y1="16" x2="24" y2="32"/><line x1="16" y1="24" x2="32" y2="24"/></svg></span>
+                        <h3>Datos clave</h3>
+                    </div>
+                    <dl>
+                            <div><dt>Quién puede inscribirse</dt><dd>Personas con Medicare Parte A y Parte B</dd></div>
+                            <div><dt>Cuándo</dt><dd>Alrededor de tus 65 años, o cada año del 15 de octubre al 7 de diciembre</dd></div>
+                            <div><dt>Costo</dt><dd>Sigues pagando la prima de la Parte B. Muchos planes no agregan nada más.</dd></div>
+                            <div><dt>Ten en cuenta</dt><dd>Redes de proveedores y autorización previa para algunos servicios</dd></div>
+                    </dl>
+                </aside>
             </div>
         </div>
     </section>
@@ -591,11 +655,18 @@
                     <a href="/es/#contact" class="btn btn-primary btn-sm">Encuentra el suplemento correcto</a>
                     <a href="/es/recursos/#advantage-vs-supplement" class="learn-link" style="display:inline-block; margin-left:18px; color: var(--sage-ink); font-weight:700; font-size:14px; text-decoration:none;">Aprende cómo funciona &rarr;</a>
                 </div>
-                <div class="service-visual">
-                    <div class="service-icon"><svg width="72" height="72" viewBox="0 0 48 48" fill="none" stroke="#5B8C6B" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M24 4L8 12v10c0 12 6.8 22 16 26 9.2-4 16-14 16-26V12L24 4z"/><polyline points="17,24 22,29 31,20"/></svg></div>
-                    <div class="service-highlight">Cubre las Brechas</div>
-                    <div class="service-highlight-sub">Ve a Cualquier Médico, En Cualquier Lugar</div>
-                </div>
+                <aside class="service-facts" aria-label="Datos clave">
+                    <div class="service-facts__head">
+                        <span class="service-facts__icon"><svg aria-hidden="true" focusable="false" viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M24 4L8 12v10c0 12 6.8 22 16 26 9.2-4 16-14 16-26V12L24 4z"/><polyline points="17,24 22,29 31,20"/></svg></span>
+                        <h3>Datos clave</h3>
+                    </div>
+                    <dl>
+                            <div><dt>Quién puede inscribirse</dt><dd>Personas con Medicare Original (Parte A y Parte B)</dd></div>
+                            <div><dt>Mejor momento para comprar</dt><dd>Tu período de inscripción abierta de Medigap de 6 meses, que empieza el mes en que cumples 65 y tienes la Parte B</dd></div>
+                            <div><dt>Se combina con</dt><dd>Un plan de medicamentos de la Parte D por separado</dd></div>
+                            <div><dt>Doctores</dt><dd>Cualquier proveedor en EE. UU. que acepte Medicare</dd></div>
+                    </dl>
+                </aside>
             </div>
         </div>
     </section>
@@ -617,11 +688,18 @@
                     <a href="/es/#contact" class="btn btn-primary btn-sm">Explora tus opciones</a>
                     <a href="/es/recursos-aca/" class="learn-link" style="display:inline-block; margin-left:18px; color: var(--sage-ink); font-weight:700; font-size:14px; text-decoration:none;">Aprende cómo funciona &rarr;</a>
                 </div>
-                <div class="service-visual">
-                    <div class="service-icon"><svg width="72" height="72" viewBox="0 0 48 48" fill="none" stroke="#5B8C6B" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="24" cy="12" r="5"/><path d="M14 40v-4a10 10 0 0 1 20 0v4"/><circle cx="10" cy="18" r="4"/><path d="M4 40v-3a7 7 0 0 1 9-6.7"/><circle cx="38" cy="18" r="4"/><path d="M44 40v-3a7 7 0 0 0-9-6.7"/></svg></div>
-                    <div class="service-highlight">Cobertura Familiar Asequible</div>
-                    <div class="service-highlight-sub">Subsidios y Asistencia Financiera Disponibles</div>
-                </div>
+                <aside class="service-facts" aria-label="Datos clave">
+                    <div class="service-facts__head">
+                        <span class="service-facts__icon"><svg aria-hidden="true" focusable="false" viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><circle cx="24" cy="12" r="5"/><path d="M14 40v-4a10 10 0 0 1 20 0v4"/><circle cx="10" cy="18" r="4"/><path d="M4 40v-3a7 7 0 0 1 9-6.7"/><circle cx="38" cy="18" r="4"/><path d="M44 40v-3a7 7 0 0 0-9-6.7"/></svg></span>
+                        <h3>Datos clave</h3>
+                    </div>
+                    <dl>
+                            <div><dt>Quién puede inscribirse</dt><dd>Personas menores de 65 que no tienen Medicare</dd></div>
+                            <div><dt>Cuándo</dt><dd>La Inscripción Abierta va del 1 de noviembre al 15 de enero en HealthCare.gov, o Inscripción Especial después de un cambio de vida que califique</dd></div>
+                            <div><dt>Ayuda con el costo</dt><dd>Créditos fiscales para ingresos familiares del 100% al 400% del nivel federal de pobreza</dd></div>
+                            <div><dt>Cubre</dt><dd>Beneficios de salud esenciales, incluidos maternidad y salud mental</dd></div>
+                    </dl>
+                </aside>
             </div>
         </div>
     </section>
@@ -643,11 +721,18 @@
                     <a href="/es/#contact" class="btn btn-primary btn-sm">Obtén cotizaciones de dental y visión</a>
                     <a href="/es/recursos/#ancillary" class="learn-link" style="display:inline-block; margin-left:18px; color: var(--sage-ink); font-weight:700; font-size:14px; text-decoration:none;">Aprende cómo funciona &rarr;</a>
                 </div>
-                <div class="service-visual">
-                    <div class="service-icon"><svg width="72" height="72" viewBox="0 0 48 48" fill="none" stroke="#5B8C6B" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M18 6c-3 0-5.5 1.5-7 4s-2 5-2 8c0 4 1.5 7 3 10.5s3 7 4 11.5c.4 1.5 2 1.5 2.4 0 .8-2 1.8-4.5 2.8-6.5.6-1 1.8-1 2.4 0 1 2 2 4.5 2.8 6.5.4 1.5 2 1.5 2.4 0 1-4.5 2.5-8 4-11.5s3-6.5 3-10.5c0-3-.5-5.5-2-8s-4-4-7-4c-2 0-3.5 1-6 3.5C21.5 7 20 6 18 6z"/></svg></div>
-                    <div class="service-highlight">Mantén la Sonrisa</div>
-                    <div class="service-highlight-sub">Dental + Visión para Toda la Familia</div>
-                </div>
+                <aside class="service-facts" aria-label="Datos clave">
+                    <div class="service-facts__head">
+                        <span class="service-facts__icon"><svg aria-hidden="true" focusable="false" viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M18 6c-3 0-5.5 1.5-7 4s-2 5-2 8c0 4 1.5 7 3 10.5s3 7 4 11.5c.4 1.5 2 1.5 2.4 0 .8-2 1.8-4.5 2.8-6.5.6-1 1.8-1 2.4 0 1 2 2 4.5 2.8 6.5.4 1.5 2 1.5 2.4 0 1-4.5 2.5-8 4-11.5s3-6.5 3-10.5c0-3-.5-5.5-2-8s-4-4-7-4c-2 0-3.5 1-6 3.5C21.5 7 20 6 18 6z"/></svg></span>
+                        <h3>Datos clave</h3>
+                    </div>
+                    <dl>
+                            <div><dt>Quién puede inscribirse</dt><dd>Cualquier persona, a cualquier edad</dd></div>
+                            <div><dt>Funciona con</dt><dd>Medicare, un plan ACA o por sí solo</dd></div>
+                            <div><dt>Cubre</dt><dd>Limpiezas, empastes, coronas, dentaduras, exámenes de la vista, lentes y contactos</dd></div>
+                            <div><dt>Pregunta por</dt><dd>Períodos de espera para trabajos dentales mayores</dd></div>
+                    </dl>
+                </aside>
             </div>
         </div>
     </section>
@@ -668,11 +753,18 @@
                     </ul>
                     <a href="/es/#contact" class="btn btn-primary btn-sm">Obtén una cotización de seguro de vida</a>
                 </div>
-                <div class="service-visual">
-                    <div class="service-icon"><svg width="72" height="72" viewBox="0 0 48 48" fill="none" stroke="#5B8C6B" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M24 42s-18-10-18-22a9.5 9.5 0 0 1 18-4 9.5 9.5 0 0 1 18 4c0 12-18 22-18 22z"/></svg></div>
-                    <div class="service-highlight">Protege lo que Importa</div>
-                    <div class="service-highlight-sub">Planes Simples, Aprobaciones Rápidas</div>
-                </div>
+                <aside class="service-facts" aria-label="Datos clave">
+                    <div class="service-facts__head">
+                        <span class="service-facts__icon"><svg aria-hidden="true" focusable="false" viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M24 42s-18-10-18-22a9.5 9.5 0 0 1 18-4 9.5 9.5 0 0 1 18 4c0 12-18 22-18 22z"/></svg></span>
+                        <h3>Datos clave</h3>
+                    </div>
+                    <dl>
+                            <div><dt>Tipos de póliza</dt><dd>Vida a término, vida entera y gastos finales</dd></div>
+                            <div><dt>Cobertura</dt><dd>De $5,000 a más de $500,000</dd></div>
+                            <div><dt>Aprobación</dt><dd>Muchos planes no requieren examen médico, y algunos se aprueban en tan solo 24 horas</dd></div>
+                            <div><dt>Cuidado a largo plazo</dt><dd>Hogar de ancianos, vivienda asistida o cuidado en casa</dd></div>
+                    </dl>
+                </aside>
             </div>
         </div>
     </section>
@@ -694,11 +786,18 @@
                     <a href="/es/#contact" class="btn btn-primary btn-sm">Aprende sobre protección extra</a>
                     <a href="/es/recursos/#ancillary" class="learn-link" style="display:inline-block; margin-left:18px; color: var(--sage-ink); font-weight:700; font-size:14px; text-decoration:none;">Aprende cómo funciona &rarr;</a>
                 </div>
-                <div class="service-visual">
-                    <div class="service-icon"><svg width="72" height="72" viewBox="0 0 48 48" fill="none" stroke="#5B8C6B" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><polygon points="26,4 10,28 22,28 20,44 38,18 26,18"/></svg></div>
-                    <div class="service-highlight">Tranquilidad Extra</div>
-                    <div class="service-highlight-sub">Beneficios en Efectivo Cuando los Necesitas</div>
-                </div>
+                <aside class="service-facts" aria-label="Datos clave">
+                    <div class="service-facts__head">
+                        <span class="service-facts__icon"><svg aria-hidden="true" focusable="false" viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polygon points="26,4 10,28 22,28 20,44 38,18 26,18"/></svg></span>
+                        <h3>Datos clave</h3>
+                    </div>
+                    <dl>
+                            <div><dt>Paga</dt><dd>Efectivo directamente a ti, no al hospital</dd></div>
+                            <div><dt>Cubre</dt><dd>Accidentes, infartos, derrames cerebrales, cáncer y más</dd></div>
+                            <div><dt>Se combina con</dt><dd>Cualquier plan de salud, sobre todo los de deducible alto</dd></div>
+                            <div><dt>Úsalo para</dt><dd>Gastos médicos, la hipoteca, la comida o lo que necesites</dd></div>
+                    </dl>
+                </aside>
             </div>
         </div>
     </section>
@@ -798,121 +897,6 @@
     <script src="/chat-widget.js" defer></script>
 
 <!-- Modal de detalle de servicio -->
-    <div class="sm-overlay" id="smOverlay" aria-hidden="true">
-        <div class="sm-modal" role="dialog" aria-modal="true" aria-labelledby="smTitle">
-            <button class="sm-close" id="smClose" aria-label="Cerrar">&times;</button>
-            <div class="sm-icon" id="smIcon"></div>
-            <h3 id="smTitle"></h3>
-            <p class="sm-who" id="smWho"></p>
-            <p class="sm-overview" id="smOverview"></p>
-            <div class="sm-help">
-                <h4>Cómo te ayudamos</h4>
-                <p id="smHelp"></p>
-            </div>
-            <div class="sm-actions">
-                <a class="btn btn-primary" id="smPrimary" href="/es/recursos/">Leer la guía completa &rarr;</a>
-                <a class="btn btn-secondary" id="smSecondary" href="/es/#contact">Obtén una consulta gratis</a>
-            </div>
-        </div>
-    </div>
-
-    <script>
-    (function () {
-        const details = {
-            'medicare-advantage': {
-                title: 'Medicare Advantage (Parte C)',
-                who: 'Para personas mayores de 65+ o recientemente elegibles',
-                overview: 'Medicare Advantage agrupa tu cobertura hospitalaria, médica y normalmente de medicamentos recetados en un solo plan de una aseguradora privada. Muchos planes incluyen extras como dental, visión, audición y membresías de gimnasio, a menudo con prima mensual de $0. Los planes son por red, así que tus costos son menores cuando te mantienes dentro de la red.',
-                help: 'Comparamos cada aseguradora Advantage disponible en tu código postal, confirmamos que tus médicos y recetas estén cubiertos, y te explicamos las diferencias para que elijas con confianza, sin costo para ti.',
-                linkText: 'Leer la guía completa de Medicare &rarr;',
-                linkHref: '/es/recursos/#advantage-vs-supplement'
-            },
-            'medigap': {
-                title: 'Suplementos de Medicare (Medigap)',
-                who: 'Para beneficiarios de Medicare que quieren menos sorpresas',
-                overview: 'Los planes Medigap pagan los gastos de bolsillo que Medicare Original deja, como el coaseguro del 20%, los copagos y los deducibles. La gran ventaja: puedes ver a cualquier médico u hospital del país que acepte Medicare, sin redes y sin referidos.',
-                help: 'Como los planes Medigap están estandarizados por ley, el mismo Plan G es idéntico de una aseguradora a otra, así que compramos solo por precio y lo combinamos con un plan de medicamentos de la Parte D para mantener bajo tu costo total.',
-                linkText: 'Comparar Advantage vs. suplemento &rarr;',
-                linkHref: '/es/recursos/#advantage-vs-supplement'
-            },
-            'aca': {
-                title: 'Planes ACA / Mercado de Seguros',
-                who: 'Para individuos y familias menores de 65',
-                overview: 'Los planes del mercado ACA ofrecen cobertura integral para individuos y familias menores de 65 años, incluyendo maternidad, salud mental y atención preventiva. La mayoría de los inscritos califican para subsidios basados en ingresos que reducen la prima mensual, a veces a $0.',
-                help: 'Verificamos exactamente para qué subsidio calificas, comparamos los planes por costo anual total (prima más gastos de bolsillo esperados), y manejamos el papeleo de inscripción de principio a fin.',
-                linkText: 'Explorar planes ACA e individuales &rarr;',
-                linkHref: '/es/recursos-aca/'
-            },
-            'dental-vision': {
-                title: 'Dental y visión',
-                who: 'Para cualquiera, individual o complementario',
-                overview: 'Los planes dentales y de visión, individuales o complementarios, cubren la atención de rutina que Medicare Original no cubre, como limpiezas, empastes, coronas, exámenes oculares y gafas. Se pueden comprar por separado o agrupados con un plan de Medicare.',
-                help: 'Te conectamos con un plan que mantenga a tu dentista y oftalmólogo actuales cuando sea posible, y comparamos las opciones individuales frente a las agrupadas según lo que realmente esperas usar.',
-                linkText: 'Ver beneficios complementarios &rarr;',
-                linkHref: '/es/recursos/#ancillary'
-            },
-            'life': {
-                title: 'Seguro de vida y cuidados a largo plazo',
-                who: 'Para cualquiera que proteja a sus seres queridos',
-                overview: 'El seguro de vida y la cobertura de cuidados a largo plazo protegen a quienes dependen de ti. Las opciones van desde vida a término y vida entera hasta gastos finales y planes de cuidados a largo plazo, muchos sin examen médico y con aprobación rápida.',
-                help: 'Comenzamos con tu objetivo, ya sea reemplazar ingresos, cubrir gastos finales o dejar un legado, y luego te conectamos con el producto adecuado y buscamos opciones sin examen cuando la rapidez o el historial de salud importan.',
-                linkText: 'Obtén una consulta gratis',
-                linkHref: '/es/#contact',
-                noResources: true
-            },
-            'accident': {
-                title: 'Accidente y enfermedad crítica',
-                who: 'Para protección financiera adicional',
-                overview: 'Los planes de accidente y enfermedad crítica pagan un beneficio en efectivo directamente a ti cuando ocurre algo inesperado, como una lesión cubierta, un infarto, un derrame cerebral o un diagnóstico de cáncer. El dinero es tuyo para usarlo en lo que necesites, y funciona junto con tu cobertura de salud existente.',
-                help: 'Agregamos estos suplementos accesibles sobre tu plan principal para amortiguar los deducibles y los gastos de bolsillo, ajustados para cubrir las brechas a las que estás más expuesto.',
-                linkText: 'Ver beneficios complementarios &rarr;',
-                linkHref: '/es/recursos/#ancillary'
-            }
-        };
-
-        const overlay = document.getElementById('smOverlay');
-        const elIcon = document.getElementById('smIcon');
-        const elTitle = document.getElementById('smTitle');
-        const elWho = document.getElementById('smWho');
-        const elOverview = document.getElementById('smOverview');
-        const elHelp = document.getElementById('smHelp');
-        const elPrimary = document.getElementById('smPrimary');
-        const elSecondary = document.getElementById('smSecondary');
-
-        function openModal(card) {
-            const key = card.getAttribute('data-service');
-            const d = details[key];
-            if (!d) return;
-            const icon = card.querySelector('.overview-icon');
-            elIcon.innerHTML = icon ? icon.innerHTML : '';
-            elTitle.textContent = d.title;
-            elWho.textContent = d.who;
-            elOverview.textContent = d.overview;
-            elHelp.textContent = d.help;
-            elPrimary.innerHTML = d.linkText;
-            elPrimary.setAttribute('href', d.linkHref);
-            elSecondary.style.display = d.noResources ? 'none' : '';
-            overlay.classList.add('active');
-            overlay.setAttribute('aria-hidden', 'false');
-            document.body.style.overflow = 'hidden';
-        }
-        function closeModal() {
-            overlay.classList.remove('active');
-            overlay.setAttribute('aria-hidden', 'true');
-            document.body.style.overflow = '';
-        }
-
-        document.querySelectorAll('.overview-card[data-service]').forEach(card => {
-            card.addEventListener('click', () => openModal(card));
-            card.addEventListener('keydown', (e) => {
-                if (e.key === 'Enter' || e.key === ' ') { e.preventDefault(); openModal(card); }
-            });
-        });
-        document.getElementById('smClose').addEventListener('click', closeModal);
-        overlay.addEventListener('click', (e) => { if (e.target === overlay) closeModal(); });
-        document.addEventListener('keydown', (e) => { if (e.key === 'Escape') closeModal(); });
-    })();
-    </script>
 <script src="/contact-modal.js"></script>
 <script src="/site-shell.js" defer></script>
 </body>

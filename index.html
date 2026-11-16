@@ -33,750 +33,6 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display&family=Nunito:wght@400;600;700;800&display=swap" rel="stylesheet">
 
-    <style>
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
-
-        html {
-            scroll-behavior: smooth;
-        }
-
-        body {
-            font-family: 'Nunito', sans-serif;
-            color: #2C2C2C;
-            background-color: #FFFFFF;
-            line-height: 1.6;
-        }
-
-        /* ============ Utilities ============ */
-        .container {
-            max-width: 1200px;
-            margin: 0 auto;
-            padding: 0 20px;
-        }
-
-        .section-padding {
-            padding: 80px 0;
-        }
-
-        .text-center {
-            text-align: center;
-        }
-
-        /* ============ Typography ============ */
-        h1, h2, h3, h4, h5, h6 {
-            font-family: 'DM Serif Display', serif;
-            font-weight: 700;
-            line-height: 1.3;
-            color: #2C2C2C;
-        }
-
-        h1 {
-            font-size: clamp(32px, 5vw, 56px);
-            font-weight: 400;
-            margin-bottom: 20px;
-        }
-
-        h2 {
-            font-size: clamp(28px, 4vw, 44px);
-            margin-bottom: 30px;
-        }
-
-        h3 {
-            font-size: clamp(20px, 3vw, 28px);
-            margin-bottom: 15px;
-        }
-
-        p {
-            font-size: 16px;
-            color: #4A5568;
-            margin-bottom: 15px;
-        }
-
-        .lead {
-            font-size: 18px;
-            color: #4A5568;
-            margin-bottom: 20px;
-        }
-
-        /* ============ Buttons ============ */
-        .btn {
-            display: inline-flex;
-            align-items: center;
-            justify-content: center;
-            padding: 12px 28px;
-            border-radius: 8px;
-            font-family: 'DM Serif Display', serif;
-            font-size: 15px;
-            font-weight: 600;
-            cursor: pointer;
-            text-decoration: none;
-            border: 2px solid transparent;
-            transition: all 0.3s ease;
-            text-align: center;
-        }
-
-        .btn-primary {
-            background: var(--sage-ink);
-            color: white;
-        }
-
-        .btn-primary:hover {
-            transform: translateY(-2px);
-            box-shadow: 0 10px 30px rgba(91, 140, 107, 0.3);
-        }
-
-        .btn-secondary {
-            background-color: transparent;
-            color: var(--sage-ink);
-            border-color: #5B8C6B;
-        }
-
-        .btn-secondary:hover {
-            background-color: #F7F3ED;
-            transform: translateY(-2px);
-        }
-
-        .btn-sm {
-            padding: 10px 20px;
-            font-size: 14px;
-        }
-
-        /* ============ Navigation ============ */
-
-        /* ============ Hero Section ============ */
-        .hero {
-            background: linear-gradient(160deg, #F7F3ED 0%, #EDE8DF 40%, #E8F0E5 100%);
-            padding: 100px 0 80px 0;
-            text-align: center;
-        }
-
-        .hero-content h1 {
-            color: #2C2C2C;
-            margin-bottom: 20px;
-            font-weight: 400;
-        }
-
-        .hero-content .lead {
-            font-size: 20px;
-            color: #4A5568;
-            margin-bottom: 40px;
-            max-width: 600px;
-            margin-left: auto;
-            margin-right: auto;
-        }
-
-        .hero-buttons {
-            display: flex;
-            gap: 20px;
-            justify-content: center;
-            flex-wrap: wrap;
-            margin-bottom: 60px;
-        }
-
-        .trust-badges {
-            display: flex;
-            justify-content: center;
-            gap: 40px;
-            flex-wrap: wrap;
-            padding-top: 30px;
-            border-top: 1px solid rgba(44, 44, 44, 0.1);
-            max-width: 800px;
-            margin: 0 auto;
-        }
-
-        .trust-badge {
-            text-align: center;
-        }
-
-        .trust-badge-value {
-            font-family: 'DM Serif Display', serif;
-            font-size: 24px;
-            font-weight: 700;
-            color: var(--sage-ink);
-        }
-
-        .trust-badge-label {
-            font-size: 14px;
-            color: #4A5568;
-            margin-top: 5px;
-        }
-
-        /* ============ Stats Section ============ */
-        .stats-section {
-            background-color: white;
-            padding: 60px 0;
-            border-top: 1px solid rgba(91, 140, 107, 0.1);
-            border-bottom: 1px solid rgba(91, 140, 107, 0.1);
-        }
-
-        .stats-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-            gap: 40px;
-            max-width: 1000px;
-            margin: 0 auto;
-        }
-
-        .stat-item {
-            text-align: center;
-        }
-
-        .stat-number {
-            font-family: 'DM Serif Display', serif;
-            font-size: 48px;
-            font-weight: 700;
-            color: var(--sage-ink);
-            line-height: 1;
-            margin-bottom: 10px;
-        }
-
-        .stat-label {
-            font-family: 'Nunito', sans-serif;
-            font-size: 14px;
-            color: #4A5568;
-            font-weight: 600;
-            text-transform: uppercase;
-            letter-spacing: 0.5px;
-        }
-
-        @media (max-width: 768px) {
-            .hero {
-                padding: 60px 0 50px 0;
-            }
-
-            .hero-buttons {
-                flex-direction: column;
-                gap: 12px;
-            }
-
-            .btn {
-                width: 100%;
-            }
-
-            .trust-badges {
-                gap: 25px;
-            }
-
-            .stats-grid {
-                gap: 30px;
-            }
-
-            .stat-number {
-                font-size: 36px;
-            }
-        }
-
-        /* ============ Plans Section ============ */
-        .plans-section {
-            background-color: #F7F3ED;
-        }
-
-        .plans-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-            gap: 25px;
-            margin-top: 50px;
-        }
-
-        .plan-card {
-            background-color: white;
-            padding: 30px;
-            border-radius: 10px;
-            box-shadow: 0 10px 30px rgba(44, 44, 44, 0.1);
-            transition: all 0.3s ease;
-            text-align: center;
-        }
-
-        .plan-card:hover {
-            transform: translateY(-8px);
-            box-shadow: 0 15px 40px rgba(44, 44, 44, 0.15);
-        }
-
-        .plan-icon {
-            margin-bottom: 15px;
-            display: flex;
-            justify-content: center;
-        }
-
-        .plan-card h3 {
-            color: #2C2C2C;
-            margin-bottom: 12px;
-            font-size: 22px;
-        }
-
-        .plan-card p {
-            font-size: 15px;
-            color: #4A5568;
-            margin-bottom: 20px;
-            line-height: 1.6;
-        }
-
-        .plan-card .btn {
-            width: 100%;
-        }
-
-        /* ============ How We Help Section ============ */
-        .process-section {
-            background-color: white;
-        }
-
-        .process-steps {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
-            gap: 30px;
-            margin-top: 60px;
-        }
-
-        .step {
-            text-align: center;
-            position: relative;
-        }
-
-        .step-number {
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            width: 60px;
-            height: 60px;
-            background: var(--sage-ink);
-            color: white;
-            font-family: 'DM Serif Display', serif;
-            font-size: 28px;
-            font-weight: 700;
-            border-radius: 50%;
-            margin: 0 auto 20px;
-        }
-
-        .step h3 {
-            color: #2C2C2C;
-            margin-bottom: 12px;
-        }
-
-        .step p {
-            color: #4A5568;
-            font-size: 15px;
-        }
-
-        .step-connector {
-            display: none;
-            position: absolute;
-            top: 30px;
-            right: -15px;
-            width: 30px;
-            height: 3px;
-            background-color: #5B8C6B;
-        }
-
-        @media (min-width: 900px) {
-            .step-connector {
-                display: block;
-            }
-
-            .step:last-child .step-connector {
-                display: none;
-            }
-        }
-
-        .process-note {
-            background-color: var(--sage-ink);
-            color: white;
-            padding: 20px;
-            border-radius: 10px;
-            margin-top: 40px;
-            text-align: center;
-            font-weight: 500;
-        }
-
-        /* ============ Why Choose Us Section ============ */
-        .why-section {
-            background-color: #F7F3ED;
-        }
-
-        .why-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
-            gap: 25px;
-            margin-top: 50px;
-        }
-
-        .why-card {
-            background-color: white;
-            padding: 30px;
-            border-radius: 10px;
-            box-shadow: 0 4px 12px rgba(44, 44, 44, 0.08);
-            text-align: center;
-        }
-
-        .why-card h3 {
-            color: #2C2C2C;
-            margin-bottom: 12px;
-            font-size: 20px;
-        }
-
-        .why-card p {
-            color: #4A5568;
-            font-size: 15px;
-        }
-
-        /* ============ Testimonials Section ============ */
-        .testimonials-section {
-            background-color: white;
-        }
-
-        .testimonials-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-            gap: 25px;
-            margin-top: 50px;
-        }
-
-        .testimonial-card {
-            background-color: #F7F3ED;
-            padding: 30px;
-            border-radius: 10px;
-            border: 1px solid var(--line, #e6dfd3);
-        }
-
-        .stars {
-            color: var(--sage-ink);
-            margin-bottom: 15px;
-            font-size: 14px;
-        }
-
-        .testimonial-text {
-            font-style: italic;
-            color: #4A5568;
-            margin-bottom: 15px;
-            font-size: 15px;
-            line-height: 1.6;
-        }
-
-        .testimonial-author {
-            font-family: 'DM Serif Display', serif;
-            font-weight: 600;
-            color: #2C2C2C;
-            font-size: 15px;
-        }
-
-        .testimonial-location {
-            font-size: 13px;
-            color: #4A5568;
-            margin-top: 5px;
-        }
-
-        /* ============ Contact Section ============ */
-        .contact-section {
-            background: linear-gradient(135deg, #3D6B4A 0%, #2C5038 100%);
-            color: white;
-        }
-
-        .contact-content {
-            display: grid;
-            grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
-            gap: 50px;
-            align-items: center;
-        }
-
-        .contact-section h2 {
-            color: white;
-            margin-bottom: 30px;
-        }
-
-        .contact-form {
-            display: flex;
-            flex-direction: column;
-            gap: 15px;
-        }
-
-        .form-group {
-            display: flex;
-            flex-direction: column;
-        }
-
-        .form-group label {
-            font-family: 'DM Serif Display', serif;
-            font-weight: 500;
-            margin-bottom: 8px;
-            font-size: 14px;
-            color: white;
-        }
-
-        .contact-section p,
-        .contact-section .contact-info p {
-            color: rgba(255, 255, 255, 0.9);
-        }
-
-        .form-group input,
-        .form-group select,
-        .form-group textarea {
-            padding: 12px 15px;
-            border: 2px solid rgba(255, 255, 255, 0.2);
-            border-radius: 8px;
-            background-color: rgba(255, 255, 255, 0.95);
-            color: #2C2C2C;
-            font-family: 'Nunito', sans-serif;
-            font-size: 14px;
-            transition: all 0.3s ease;
-        }
-
-        .form-group input:focus,
-        .form-group select:focus,
-        .form-group textarea:focus {
-            outline: none;
-            border-color: #5B8C6B;
-            background-color: white;
-        }
-
-        .contact-info {
-            color: rgba(255, 255, 255, 0.9);
-        }
-
-        .contact-info h3 {
-            color: white;
-            margin-bottom: 30px;
-        }
-
-        .contact-method {
-            margin-bottom: 25px;
-        }
-
-        .contact-method label {
-            font-family: 'DM Serif Display', serif;
-            font-weight: 600;
-            display: flex;
-            align-items: center;
-            gap: 8px;
-            margin-bottom: 8px;
-        }
-
-        .contact-method label svg {
-            flex-shrink: 0;
-        }
-
-        .contact-method p {
-            color: rgba(255, 255, 255, 0.8);
-            margin: 0;
-        }
-
-        .contact-content > *,
-        .contact-form .form-row > * {
-            min-width: 0;
-        }
-
-        .form-group input,
-        .form-group select,
-        .form-group textarea {
-            width: 100%;
-            min-width: 0;
-            max-width: 100%;
-        }
-
-        @media (max-width: 480px) {
-            .contact-form .form-row {
-                grid-template-columns: minmax(0, 1fr) !important;
-            }
-        }
-
-        .contact-disclaimer {
-            margin-top: 30px;
-            font-size: 13px;
-            color: rgba(255, 255, 255, 0.7);
-            line-height: 1.5;
-        }
-
-        @media (max-width: 768px) {
-            .contact-content {
-                grid-template-columns: minmax(0, 1fr);
-                gap: 30px;
-            }
-        }
-
-        /* ============ Footer ============ */
-
-        /* ============ Animations ============ */
-        @keyframes fadeInUp {
-            from {
-                opacity: 0;
-                transform: translateY(20px);
-            }
-            to {
-                opacity: 1;
-                transform: translateY(0);
-            }
-        }
-
-        .fade-in {
-            animation: fadeInUp 0.6s ease-out forwards;
-        }
-
-        /* ============ Plan Card Enhancements ============ */
-        .plan-who {
-            font-size: 13px;
-            color: var(--sage-ink);
-            font-weight: 600;
-            margin-bottom: 12px;
-            padding-bottom: 10px;
-            border-bottom: 1px solid rgba(91, 140, 107, 0.15);
-        }
-
-        .plan-highlights {
-            list-style: none;
-            text-align: left;
-            margin-bottom: 20px;
-            padding: 0;
-        }
-
-        .plan-highlights li {
-            font-size: 14px;
-            color: #4A5568;
-            padding: 4px 0;
-            display: flex;
-            align-items: flex-start;
-            gap: 8px;
-        }
-
-        .plan-highlights li::before {
-            content: "✓";
-            color: var(--sage-ink);
-            font-weight: 700;
-            flex-shrink: 0;
-        }
-
-        /* ============ Plan Finder Section ============ */
-        .plan-finder-section {
-            background-color: white;
-        }
-
-        .finder-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
-            gap: 25px;
-            margin-top: 40px;
-        }
-
-        .finder-card {
-            background-color: #F7F3ED;
-            padding: 30px;
-            border-radius: 10px;
-            text-align: center;
-            border: 2px solid transparent;
-            transition: all 0.3s ease;
-        }
-
-        .finder-card:hover {
-            border-color: #5B8C6B;
-            transform: translateY(-5px);
-            box-shadow: 0 10px 30px rgba(44, 44, 44, 0.1);
-        }
-
-        .finder-emoji {
-            margin-bottom: 15px;
-            display: flex;
-            justify-content: center;
-        }
-
-        .finder-card h3 {
-            color: #2C2C2C;
-            margin-bottom: 12px;
-            font-size: 20px;
-        }
-
-        .finder-card p {
-            font-size: 15px;
-            color: #4A5568;
-            margin-bottom: 20px;
-            line-height: 1.6;
-        }
-
-        .finder-card .btn {
-            width: 100%;
-        }
-
-        /* ============ Responsive ============ */
-        @media (max-width: 768px) {
-            .section-padding {
-                padding: 50px 0;
-            }
-
-            h1 {
-                font-size: 32px;
-            }
-
-            h2 {
-                font-size: 28px;
-            }
-
-            .plans-grid,
-            .why-grid,
-            .testimonials-grid,
-            .process-steps,
-            .finder-grid {
-                grid-template-columns: 1fr;
-            }
-        }
-    
-        /* Services Dropdown */
-        .services-parent {
-            position: relative;
-        }
-        .services-dropdown {
-            display: none;
-            position: absolute;
-            top: 100%;
-            left: 50%;
-            transform: translateX(-50%);
-            background: white;
-            border-radius: 10px;
-            box-shadow: 0 10px 40px rgba(44, 44, 44, 0.15);
-            padding: 16px 0;
-            min-width: 240px;
-            z-index: 1000;
-            margin-top: 10px;
-        }
-        .services-dropdown::before {
-            content: '';
-            position: absolute;
-            top: -10px;
-            left: 0;
-            right: 0;
-            height: 10px;
-        }
-        .services-parent:hover .services-dropdown {
-            display: block;
-        }
-        .services-dropdown a {
-            display: block;
-            padding: 10px 24px;
-            color: #2C2C2C;
-            font-size: 13px;
-            font-weight: 500;
-            text-decoration: none;
-            white-space: nowrap;
-            transition: background 0.2s, color 0.2s;
-        }
-        .services-dropdown a:hover {
-            background: #F7F3ED;
-            color: var(--sage-ink);
-        }
-        @media (max-width: 768px) {
-            .services-dropdown {
-                position: static;
-                transform: none;
-                box-shadow: none;
-                margin-top: 0;
-                padding: 0 0 0 20px;
-                border-radius: 0;
-            }
-            .services-parent:hover .services-dropdown {
-                display: block;
-            }
-        }
-
-    </style>
 
     <script type="application/ld+json">
     {
@@ -854,6 +110,8 @@
       ]
     }
     </script>
+    <link rel="preload" as="image" href="/michelled.jpg">
+    <link rel="stylesheet" href="/home.css">
     <link rel="stylesheet" href="/site-shell.css">
 </head>
 <body>
@@ -878,361 +136,291 @@
 
     <main id="main" tabindex="-1">
 
-
-    <!-- Hero Section -->
     <section class="hero">
-        <div class="container">
-            <div class="hero-content">
-                <h1>Health Coverage Made Simple. By Moms Who Care.</h1>
+        <div class="container hero-grid">
+            <div class="hero-copy">
+                <h1>Health Coverage Made Simple. <span class="h1-accent">By Moms Who Care.</span></h1>
                 <p class="lead">We're licensed insurance agents, and every one of us is a mom. Tell us about your doctors, prescriptions and budget, and we'll compare plans side by side and walk you through the few that actually fit.</p>
-                <div class="hero-buttons">
-                    <button class="btn btn-primary" onclick="document.getElementById('contact').scrollIntoView({behavior: 'smooth'})">Find Your Plan</button>
+                <div class="hero-actions">
+                    <a class="btn btn-primary btn-lg" href="#contact">Find Your Plan</a>
+                    <a class="btn btn-ghost btn-lg" href="tel:+14352461548"><svg aria-hidden="true" focusable="false" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.12.96.36 1.9.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.91.34 1.85.58 2.81.7A2 2 0 0 1 22 16.92z"/></svg><span class="visually-hidden">Call </span>(435) 246-1548</a>
                 </div>
+                <p class="hero-note"><svg aria-hidden="true" focusable="false" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="m8 12.5 2.5 2.5L16 9.5"/></svg>Our help is always free to you. We're paid by the insurance carriers.</p>
             </div>
+            <figure class="hero-team">
+                <ul class="hero-team__grid">
+                    <li><img src="/michelled.jpg" alt="Michelle Dennison, licensed agent" width="593" height="800" fetchpriority="high" decoding="async"><span class="hero-team__name" aria-hidden="true">Michelle</span></li>
+                    <li><img src="/ally.jpg" alt="Ally Valdez, licensed agent" width="800" height="644" fetchpriority="high" decoding="async"><span class="hero-team__name" aria-hidden="true">Ally</span></li>
+                    <li><img src="/elizabeth.jpg" alt="Elizabeth Perez, licensed agent" width="747" height="800" fetchpriority="auto" decoding="async"><span class="hero-team__name" aria-hidden="true">Elizabeth</span></li>
+                    <li><img src="/saya.jpg" alt="Saya Murton, licensed agent" width="800" height="644" fetchpriority="auto" decoding="async"><span class="hero-team__name" aria-hidden="true">Saya</span></li>
+                </ul>
+                <figcaption><a class="text-link" href="/meet-our-team/">Meet all of our moms<svg aria-hidden="true" focusable="false" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14"/><path d="m13 6 6 6-6 6"/></svg></a></figcaption>
+            </figure>
+        </div>
+        <div class="container">
+            <ul class="proof">
+                <li><strong>5,000+</strong><span>Seniors &amp; families assisted</span></li>
+                <li><strong>90+</strong><span>Combined years in insurance</span></li>
+                <li><strong>50</strong><span>States covered, plus Puerto Rico</span></li>
+                <li><strong>40+</strong><span>Insurance carriers we compare</span></li>
+            </ul>
         </div>
     </section>
 
-    <!-- Stats Section -->
-    <section class="stats-section">
-        <div class="container">
-            <div class="stats-grid">
-                <div class="stat-item">
-                    <div class="stat-number">5,000+</div>
-                    <div class="stat-label">Seniors & Families Assisted</div>
-                </div>
-                <div class="stat-item">
-                    <div class="stat-number">90+</div>
-                    <div class="stat-label">Combined Years in Insurance</div>
-                </div>
-                <div class="stat-item">
-                    <div class="stat-number">50</div>
-                    <div class="stat-label">States Covered</div>
-                    <div style="font-size: 12px; color: #56677a; font-weight: 600; margin-top: 4px;">+ Puerto Rico</div>
-                </div>
-                <div class="stat-item">
-                    <div class="stat-number">100%</div>
-                    <div class="stat-label">Free Consultations</div>
-                </div>
+    <section class="section coverage-section" id="plans">
+        <div class="container coverage-grid">
+            <div class="coverage-intro">
+                <h2>What We Can Help You With</h2>
+                <p>Medicare, ACA, dental, vision, life and supplemental plans, all from one agent who knows your situation.</p>
+                <a class="text-link" href="/services/">Compare every coverage type<svg aria-hidden="true" focusable="false" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14"/><path d="m13 6 6 6-6 6"/></svg></a>
             </div>
+            <ul class="coverage-list">
+                    <li>
+                        <a class="coverage-item" href="/services/#medicare-advantage">
+                            <span class="coverage-icon"><svg aria-hidden="true" focusable="false" viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><rect x="8" y="8" width="32" height="32" rx="5"/><path d="M24 16v16M16 24h16"/></svg></span>
+                            <span class="coverage-body">
+                                <h3>Medicare Advantage<svg aria-hidden="true" focusable="false" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14"/><path d="m13 6 6 6-6 6"/></svg></h3>
+                                <p>All-in-one coverage for those turning 65 or newly eligible. Often includes dental, vision, and prescriptions at no extra cost.</p>
+                                <ul class="coverage-tags"><li>$0 premium options</li><li>Dental, vision &amp; hearing</li><li>One card for everything</li></ul>
+                            </span>
+                        </a>
+                    </li>
+                    <li>
+                        <a class="coverage-item" href="/services/#medigap">
+                            <span class="coverage-icon"><svg aria-hidden="true" focusable="false" viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M24 4 8 12v10c0 12 6.8 22 16 26 9.2-4 16-14 16-26V12L24 4z"/><path d="m17 24 5 5 9-9"/></svg></span>
+                            <span class="coverage-body">
+                                <h3>Medicare Supplements (Medigap)<svg aria-hidden="true" focusable="false" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14"/><path d="m13 6 6 6-6 6"/></svg></h3>
+                                <p>Fill the gaps Original Medicare doesn't cover, like copays, coinsurance, and deductibles.</p>
+                                <ul class="coverage-tags"><li>Any doctor that accepts Medicare</li><li>No referrals</li><li>Predictable costs</li></ul>
+                            </span>
+                        </a>
+                    </li>
+                    <li>
+                        <a class="coverage-item" href="/services/#aca">
+                            <span class="coverage-icon"><svg aria-hidden="true" focusable="false" viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><circle cx="24" cy="12" r="5"/><path d="M14 40v-4a10 10 0 0 1 20 0v4"/><circle cx="10" cy="18" r="4"/><path d="M4 40v-3a7 7 0 0 1 9-6.7"/><circle cx="38" cy="18" r="4"/><path d="M44 40v-3a7 7 0 0 0-9-6.7"/></svg></span>
+                            <span class="coverage-body">
+                                <h3>ACA / Marketplace Plans<svg aria-hidden="true" focusable="false" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14"/><path d="m13 6 6 6-6 6"/></svg></h3>
+                                <p>Health insurance for individuals and families under 65, including the self-employed and people between jobs. Financial help is based on your income.</p>
+                                <ul class="coverage-tags"><li>Income-based subsidies</li><li>Maternity &amp; mental health</li><li>Special Enrollment after life changes</li></ul>
+                            </span>
+                        </a>
+                    </li>
+                    <li>
+                        <a class="coverage-item" href="/services/#dental-vision">
+                            <span class="coverage-icon"><svg aria-hidden="true" focusable="false" viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M18 6c-3 0-5.5 1.5-7 4s-2 5-2 8c0 4 1.5 7 3 10.5s3 7 4 11.5c.4 1.5 2 1.5 2.4 0 .8-2 1.8-4.5 2.8-6.5.6-1 1.8-1 2.4 0 1 2 2 4.5 2.8 6.5.4 1.5 2 1.5 2.4 0 1-4.5 2.5-8 4-11.5s3-6.5 3-10.5c0-3-.5-5.5-2-8s-4-4-7-4c-2 0-3.5 1-6 3.5C21.5 7 20 6 18 6z"/></svg></span>
+                            <span class="coverage-body">
+                                <h3>Dental &amp; Vision<svg aria-hidden="true" focusable="false" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14"/><path d="m13 6 6 6-6 6"/></svg></h3>
+                                <p>Standalone plans or bundled with Medicare at affordable monthly rates.</p>
+                                <ul class="coverage-tags"><li>Cleanings, crowns &amp; dentures</li><li>Exams, glasses &amp; contacts</li><li>Family plans</li></ul>
+                            </span>
+                        </a>
+                    </li>
+                    <li>
+                        <a class="coverage-item" href="/services/#life-insurance">
+                            <span class="coverage-icon"><svg aria-hidden="true" focusable="false" viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M24 42s-18-10-18-22a9.5 9.5 0 0 1 18-4 9.5 9.5 0 0 1 18 4c0 12-18 22-18 22z"/></svg></span>
+                            <span class="coverage-body">
+                                <h3>Life Insurance &amp; Long-Term Care<svg aria-hidden="true" focusable="false" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14"/><path d="m13 6 6 6-6 6"/></svg></h3>
+                                <p>Life insurance for final expenses or a financial cushion, plus long-term care coverage for nursing, assisted living, or in-home care.</p>
+                                <ul class="coverage-tags"><li>Options for every budget</li><li>No medical exam on many plans</li><li>Approval in as little as 24 hours</li></ul>
+                            </span>
+                        </a>
+                    </li>
+                    <li>
+                        <a class="coverage-item" href="/services/#accident">
+                            <span class="coverage-icon"><svg aria-hidden="true" focusable="false" viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M26 4 10 28h12l-2 16 18-26H26z"/></svg></span>
+                            <span class="coverage-body">
+                                <h3>Accident &amp; Critical Illness<svg aria-hidden="true" focusable="false" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14"/><path d="m13 6 6 6-6 6"/></svg></h3>
+                                <p>Pays cash directly to you, not the hospital, after a covered accident or diagnosis.</p>
+                                <ul class="coverage-tags"><li>Cash paid to you</li><li>Accidents, heart attacks, cancer &amp; more</li><li>Works alongside your insurance</li></ul>
+                            </span>
+                        </a>
+                    </li>
+            </ul>
         </div>
     </section>
 
-    <!-- Plans Section -->
-    <section class="plans-section section-padding" id="plans">
+    <section class="section situations-section" id="plan-finder">
         <div class="container">
-            <h2 class="text-center">What We Can Help You With</h2>
-            <p class="text-center" style="max-width: 600px; margin: 0 auto 30px; color: #4A5568;">Medicare, ACA, dental, vision, life and supplemental plans, all from one agent who knows your situation.</p>
-
-            <div class="plans-grid">
-                <div class="plan-card fade-in">
-                    <div class="plan-icon"><svg width="48" height="48" viewBox="0 0 48 48" fill="none" stroke="#5B8C6B" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><rect x="8" y="8" width="32" height="32" rx="4"/><line x1="24" y1="16" x2="24" y2="32"/><line x1="16" y1="24" x2="32" y2="24"/></svg></div>
-                    <h3>Medicare Advantage</h3>
-                    <p>All-in-one coverage for those turning 65 or newly eligible. Often includes dental, vision, and prescriptions at no extra cost.</p>
-                    <div class="plan-who">Who it's for: Seniors turning 65 or newly eligible for Medicare</div>
-                    <ul class="plan-highlights">
-                        <li>$0 premium options available</li>
-                        <li>Includes dental, vision & hearing</li>
-                        <li>One card for all your coverage</li>
-                    </ul>
-                    <a href="/services/#medicare-advantage" class="btn btn-primary btn-sm">Learn More</a>
-                </div>
-
-                <div class="plan-card fade-in" style="animation-delay: 0.1s;">
-                    <div class="plan-icon"><svg width="48" height="48" viewBox="0 0 48 48" fill="none" stroke="#5B8C6B" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M24 4L8 12v10c0 12 6.8 22 16 26 9.2-4 16-14 16-26V12L24 4z"/><polyline points="17,24 22,29 31,20"/></svg></div>
-                    <h3>Medicare Supplements (Medigap)</h3>
-                    <p>Fill the gaps Original Medicare doesn't cover, like copays, coinsurance, and deductibles. See any doctor nationwide.</p>
-                    <div class="plan-who">Who it's for: Medicare enrollees who want predictable costs and doctor freedom</div>
-                    <ul class="plan-highlights">
-                        <li>See any doctor that accepts Medicare</li>
-                        <li>No referrals needed</li>
-                        <li>Predictable monthly costs</li>
-                    </ul>
-                    <a href="/services/#medigap" class="btn btn-primary btn-sm">Learn More</a>
-                </div>
-
-                <div class="plan-card fade-in" style="animation-delay: 0.2s;">
-                    <div class="plan-icon"><svg width="48" height="48" viewBox="0 0 48 48" fill="none" stroke="#5B8C6B" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="24" cy="12" r="5"/><path d="M14 40v-4a10 10 0 0 1 20 0v4"/><circle cx="10" cy="18" r="4"/><path d="M4 40v-3a7 7 0 0 1 9-6.7"/><circle cx="38" cy="18" r="4"/><path d="M44 40v-3a7 7 0 0 0-9-6.7"/></svg></div>
-                    <h3>ACA / Marketplace Plans</h3>
-                    <p>Affordable health insurance for individuals and families under 65. Financial assistance available based on your income.</p>
-                    <div class="plan-who">Who it's for: Individuals & families under 65, self-employed, or between jobs</div>
-                    <ul class="plan-highlights">
-                        <li>Subsidies based on income</li>
-                        <li>Covers maternity, mental health & more</li>
-                        <li>Special Enrollment after a move, job loss, marriage or new baby</li>
-                    </ul>
-                    <a href="/services/#aca" class="btn btn-primary btn-sm">Learn More</a>
-                </div>
-
-                <div class="plan-card fade-in" style="animation-delay: 0.3s;">
-                    <div class="plan-icon"><svg width="48" height="48" viewBox="0 0 48 48" fill="none" stroke="#5B8C6B" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M18 6c-3 0-5.5 1.5-7 4s-2 5-2 8c0 4 1.5 7 3 10.5s3 7 4 11.5c.4 1.5 2 1.5 2.4 0 .8-2 1.8-4.5 2.8-6.5.6-1 1.8-1 2.4 0 1 2 2 4.5 2.8 6.5.4 1.5 2 1.5 2.4 0 1-4.5 2.5-8 4-11.5s3-6.5 3-10.5c0-3-.5-5.5-2-8s-4-4-7-4c-2 0-3.5 1-6 3.5C21.5 7 20 6 18 6z"/></svg></div>
-                    <h3>Dental & Vision</h3>
-                    <p>Keep your smile bright and eyes healthy. Standalone plans or bundled with Medicare at affordable monthly rates.</p>
-                    <div class="plan-who">Who it's for: Anyone wanting dental and vision coverage, standalone or with Medicare</div>
-                    <ul class="plan-highlights">
-                        <li>Cleanings, fillings, crowns & dentures</li>
-                        <li>Eye exams, glasses & contacts</li>
-                        <li>Affordable family plans</li>
-                    </ul>
-                    <a href="/services/#dental-vision" class="btn btn-primary btn-sm">Learn More</a>
-                </div>
-
-                <div class="plan-card fade-in" style="animation-delay: 0.4s;">
-                    <div class="plan-icon"><svg width="48" height="48" viewBox="0 0 48 48" fill="none" stroke="#5B8C6B" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M24 42s-18-10-18-22a9.5 9.5 0 0 1 18-4 9.5 9.5 0 0 1 18 4c0 12-18 22-18 22z"/></svg></div>
-                    <h3>Life Insurance & Long-Term Care</h3>
-                    <p>Protect what matters most. Life insurance for final expenses or a financial cushion, plus long-term care coverage for future nursing, assisted living, or in-home care needs.</p>
-                    <div class="plan-who">Who it's for: Anyone wanting to protect their family's financial future</div>
-                    <ul class="plan-highlights">
-                        <li>Options for every budget & need</li>
-                        <li>No medical exam on many plans</li>
-                        <li>Approvals in as little as 24 hours</li>
-                    </ul>
-                    <a href="/services/#life-insurance" class="btn btn-primary btn-sm">Learn More</a>
-                </div>
-
-                <div class="plan-card fade-in" style="animation-delay: 0.5s;">
-                    <div class="plan-icon"><svg width="48" height="48" viewBox="0 0 48 48" fill="none" stroke="#5B8C6B" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><polygon points="26,4 10,28 22,28 20,44 38,18 26,18"/></svg></div>
-                    <h3>Accident & Critical Illness</h3>
-                    <p>Pays cash directly to you, not the hospital, after a covered accident or diagnosis.</p>
-                    <div class="plan-who">Who it's for: Anyone wanting extra financial protection beyond health insurance</div>
-                    <ul class="plan-highlights">
-                        <li>Cash paid directly to you</li>
-                        <li>Covers accidents, heart attacks, cancer & more</li>
-                        <li>Works alongside your existing insurance</li>
-                    </ul>
-                    <a href="/services/#accident" class="btn btn-primary btn-sm">Learn More</a>
-                </div>
+            <div class="section-head">
+                <h2>Not Sure Where to Start?</h2>
+                <p>Tell us your situation and we'll point you in the right direction.</p>
             </div>
-        </div>
-    </section>
-
-    <!-- Plan Finder Section -->
-    <section class="plan-finder-section section-padding" id="plan-finder">
-        <div class="container">
-            <h2 class="text-center">Not Sure Where to Start?</h2>
-            <p class="text-center" style="max-width: 600px; margin: 0 auto 40px; color: #4A5568;">Tell us your situation and we'll point you in the right direction.</p>
-
-            <div class="finder-grid">
-                <!-- Card 1 -->
-                <div class="finder-card">
-                    <div class="finder-emoji"><svg width="48" height="48" viewBox="0 0 48 48" fill="none" stroke="#5B8C6B" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><rect x="6" y="22" width="36" height="18" rx="3"/><path d="M6 30h36"/><path d="M14 22v-4a3 3 0 0 1 6 0v4"/><path d="M28 22v-4a3 3 0 0 1 6 0v4"/><line x1="17" y1="10" x2="17" y2="14"/><line x1="31" y1="10" x2="31" y2="14"/></svg></div>
+            <ul class="situations">
+                <li>
                     <h3>Turning 65 Soon?</h3>
                     <p>You're becoming eligible for Medicare. We'll help you choose between Medicare Advantage and Medicare Supplements based on your doctors, prescriptions, and budget.</p>
-                    <a href="#contact" class="btn btn-primary btn-sm">Let's Talk Medicare</a>
-                </div>
-                <!-- Card 2 -->
-                <div class="finder-card">
-                    <div class="finder-emoji"><svg width="48" height="48" viewBox="0 0 48 48" fill="none" stroke="#5B8C6B" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="24" cy="12" r="5"/><path d="M14 40v-4a10 10 0 0 1 20 0v4"/><circle cx="10" cy="18" r="4"/><path d="M4 40v-3a7 7 0 0 1 9-6.7"/><circle cx="38" cy="18" r="4"/><path d="M44 40v-3a7 7 0 0 0-9-6.7"/></svg></div>
+                    <a class="text-link" href="#contact">Let's talk Medicare<svg aria-hidden="true" focusable="false" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14"/><path d="m13 6 6 6-6 6"/></svg></a>
+                </li>
+                <li>
                     <h3>Need Family Coverage?</h3>
-                    <p>ACA marketplace plans offer comprehensive coverage for families under 65. Many qualify for financial assistance that lowers premiums significantly.</p>
-                    <a href="#contact" class="btn btn-primary btn-sm">Explore ACA Plans</a>
-                </div>
-                <!-- Card 3 -->
-                <div class="finder-card">
-                    <div class="finder-emoji"><svg width="48" height="48" viewBox="0 0 48 48" fill="none" stroke="#5B8C6B" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M36 12A16 16 0 0 0 10 14"/><polyline points="36,4 36,12 28,12"/><path d="M12 36A16 16 0 0 0 38 34"/><polyline points="12,44 12,36 20,36"/></svg></div>
+                    <p>ACA Marketplace plans offer comprehensive coverage for families under 65. Many qualify for financial assistance that lowers premiums significantly.</p>
+                    <a class="text-link" href="#contact">Explore ACA plans<svg aria-hidden="true" focusable="false" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14"/><path d="m13 6 6 6-6 6"/></svg></a>
+                </li>
+                <li>
                     <h3>Already on Medicare?</h3>
-                    <p>Wondering if you're on the best plan? We'll review your current coverage and compare options, especially during Open Enrollment (Oct 15 – Dec 7).</p>
-                    <a href="#contact" class="btn btn-primary btn-sm">Review My Plan</a>
-                </div>
-                <!-- Card 4 -->
-                <div class="finder-card">
-                    <div class="finder-emoji"><svg width="48" height="48" viewBox="0 0 48 48" fill="none" stroke="#5B8C6B" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M24 4L8 12v10c0 12 6.8 22 16 26 9.2-4 16-14 16-26V12L24 4z"/><line x1="24" y1="18" x2="24" y2="30"/><line x1="18" y1="24" x2="30" y2="24"/></svg></div>
+                    <p>Wondering if you're on the best plan? We'll review your current coverage and compare options, especially during Open Enrollment (October 15 to December 7).</p>
+                    <a class="text-link" href="#contact">Review my plan<svg aria-hidden="true" focusable="false" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14"/><path d="m13 6 6 6-6 6"/></svg></a>
+                </li>
+                <li>
                     <h3>Want Extra Protection?</h3>
                     <p>Dental, vision, life insurance, accident and critical illness: the coverage your main health plan leaves out.</p>
-                    <a href="#contact" class="btn btn-primary btn-sm">See My Options</a>
-                </div>
-            </div>
+                    <a class="text-link" href="#contact">See my options<svg aria-hidden="true" focusable="false" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14"/><path d="m13 6 6 6-6 6"/></svg></a>
+                </li>
+            </ul>
         </div>
     </section>
 
-    <!-- How We Help Section -->
-    <section class="process-section section-padding" id="how">
+    <section class="section process-section" id="how">
         <div class="container">
-            <h2 class="text-center">How It Works</h2>
-            <p class="text-center" style="max-width: 600px; margin: 0 auto 50px; color: #4A5568;">Four steps, and you make the call at every one.</p>
-
-            <div class="process-steps">
-                <div class="step">
-                    <div class="step-number">1</div>
+            <div class="section-head">
+                <h2>How It Works</h2>
+                <p>Four steps, and you make the call at every one.</p>
+            </div>
+            <ol class="steps">
+                <li>
+                    <span class="step-num" aria-hidden="true">1</span>
                     <h3>Tell Us About Your Needs</h3>
                     <p>Call us or fill out a quick form. What matters to you? Cost? Specific doctors? Dental coverage?</p>
-                    <div class="step-connector"></div>
-                </div>
-
-                <div class="step">
-                    <div class="step-number">2</div>
-                    <h3>We Compare Plans For You</h3>
+                </li>
+                <li>
+                    <span class="step-num" aria-hidden="true">2</span>
+                    <h3>We Compare Plans for You</h3>
                     <p>You don't have to wade through hundreds of options. We find the best fits and explain them clearly.</p>
-                    <div class="step-connector"></div>
-                </div>
-
-                <div class="step">
-                    <div class="step-number">3</div>
+                </li>
+                <li>
+                    <span class="step-num" aria-hidden="true">3</span>
                     <h3>Pick the Plan That Fits</h3>
                     <p>You decide. We never enroll you in a plan you didn't choose.</p>
-                    <div class="step-connector"></div>
-                </div>
-
-                <div class="step">
-                    <div class="step-number">4</div>
+                </li>
+                <li>
+                    <span class="step-num" aria-hidden="true">4</span>
                     <h3>Year-Round Support</h3>
                     <p>Questions at renewal, a move, a new baby: you call the same agent who helped you enroll.</p>
-                </div>
-            </div>
+                </li>
+            </ol>
+        </div>
+    </section>
 
-            <div class="process-note">
-                ✓ Our help is always free to you. We're paid by the insurance carriers.
+    <section class="section why-section" id="why">
+        <div class="container why-grid">
+            <figure class="why-photo">
+                <img src="/erica.jpg" alt="Erica Harding, a HealthPlan Moms agent" width="800" height="800" loading="lazy" decoding="async">
+                <figcaption>Erica Harding, mom of 3, Katy, TX. <a href="/meet-our-team/">Meet the team</a></figcaption>
+            </figure>
+            <div class="why-copy">
+                <h2>The Difference a Real Agent Makes</h2>
+                <p>We're not a call center. We're licensed agents who are also moms, sisters and neighbors, and we've helped over 5,000 seniors and families across all 50 states.</p>
+                <ul class="points">
+                        <li>
+                            <h3><svg aria-hidden="true" focusable="false" viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="3.4" stroke-linecap="round" stroke-linejoin="round"><circle cx="24" cy="14" r="8"/><path d="M8 44c0-8.8 7.2-16 16-16s16 7.2 16 16"/></svg>Women-Led &amp; Community-Driven</h3>
+                            <p>Started and run by working moms who live in the communities we serve. You get a name and a direct line, not a ticket number.</p>
+                        </li>
+                        <li>
+                            <h3><svg aria-hidden="true" focusable="false" viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="3.4" stroke-linecap="round" stroke-linejoin="round"><path d="M8 8h32a4 4 0 0 1 4 4v18a4 4 0 0 1-4 4H16l-8 8V12a4 4 0 0 1 4-4z"/></svg>Like Talking to a Friend</h3>
+                            <p>No corporate jargon. We explain things clearly, answer silly questions, and never make you feel rushed.</p>
+                        </li>
+                        <li>
+                            <h3><svg aria-hidden="true" focusable="false" viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="3.4" stroke-linecap="round" stroke-linejoin="round"><circle cx="24" cy="24" r="20"/><path d="m15 24 7 7 11-13"/></svg>Licensed &amp; Certified</h3>
+                            <p>Licensed in all 50 states. We're real professionals with years of insurance expertise, and we work with over 40 carriers across the country.</p>
+                        </li>
+                        <li>
+                            <h3><svg aria-hidden="true" focusable="false" viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="3.4" stroke-linecap="round" stroke-linejoin="round"><circle cx="24" cy="24" r="20"/><circle cx="24" cy="24" r="12"/><circle cx="24" cy="24" r="4"/></svg>Built Around Your Situation</h3>
+                            <p>We ask about your doctors, prescriptions and budget before we suggest anything, and we'll tell you when the plan you already have is the right one.</p>
+                        </li>
+                </ul>
             </div>
         </div>
     </section>
 
-    <!-- Why Choose Us Section -->
-    <section class="why-section section-padding" id="why">
+    <section class="section testimonials-section">
         <div class="container">
-            <h2 class="text-center">The Difference a Real Agent Makes</h2>
-            <p class="text-center" style="max-width: 600px; margin: 0 auto 50px; color: #4A5568;">We're not a call center. We're licensed agents who are also moms, sisters and neighbors, and we've helped over 5,000 seniors and families across all 50 states.</p>
-
-            <div class="why-grid">
-                <div class="why-card fade-in">
-                    <h3><svg width="24" height="24" viewBox="0 0 48 48" fill="none" stroke="#5B8C6B" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="display:inline-block;vertical-align:middle;margin-right:8px;"><circle cx="24" cy="14" r="8"/><path d="M8 44c0-8.8 7.2-16 16-16s16 7.2 16 16"/></svg>Women-Led & Community-Driven</h3>
-                    <p>Started and run by working moms who live in the communities we serve. You get a name and a direct line, not a ticket number.</p>
-                </div>
-
-                <div class="why-card fade-in" style="animation-delay: 0.1s;">
-                    <h3><svg width="24" height="24" viewBox="0 0 48 48" fill="none" stroke="#5B8C6B" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="display:inline-block;vertical-align:middle;margin-right:8px;"><path d="M8 8h32a4 4 0 0 1 4 4v18a4 4 0 0 1-4 4H16l-8 8V12a4 4 0 0 1 4-4z"/></svg>Like Talking to a Friend</h3>
-                    <p>No corporate jargon. We explain things clearly, answer silly questions, and never make you feel rushed.</p>
-                </div>
-
-                <div class="why-card fade-in" style="animation-delay: 0.2s;">
-                    <h3><svg width="24" height="24" viewBox="0 0 48 48" fill="none" stroke="#5B8C6B" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="display:inline-block;vertical-align:middle;margin-right:8px;"><circle cx="24" cy="24" r="20"/><polyline points="15,24 22,31 33,18"/></svg>Licensed & Certified</h3>
-                    <p>Licensed in all 50 states. We're real professionals with years of insurance expertise, and we work with over 40 carriers across the country.</p>
-                </div>
-
-                <div class="why-card fade-in" style="animation-delay: 0.3s;">
-                    <h3><svg width="24" height="24" viewBox="0 0 48 48" fill="none" stroke="#5B8C6B" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="display:inline-block;vertical-align:middle;margin-right:8px;"><circle cx="24" cy="24" r="20"/><circle cx="24" cy="24" r="12"/><circle cx="24" cy="24" r="4"/></svg>Built Around Your Situation</h3>
-                    <p>We ask about your doctors, prescriptions and budget before we suggest anything, and we'll tell you when the plan you already have is the right one.</p>
-                </div>
+            <div class="section-head">
+                <h2>Families We've Helped</h2>
+            </div>
+            <div class="quotes">
+                <figure class="quote">
+                    <div class="quote-stars" role="img" aria-label="Rated 5 out of 5"><svg aria-hidden="true" focusable="false" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2.6l2.85 6 6.55.79-4.83 4.5 1.24 6.5L12 17.2l-5.81 3.19 1.24-6.5-4.83-4.5 6.55-.79z"/></svg><svg aria-hidden="true" focusable="false" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2.6l2.85 6 6.55.79-4.83 4.5 1.24 6.5L12 17.2l-5.81 3.19 1.24-6.5-4.83-4.5 6.55-.79z"/></svg><svg aria-hidden="true" focusable="false" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2.6l2.85 6 6.55.79-4.83 4.5 1.24 6.5L12 17.2l-5.81 3.19 1.24-6.5-4.83-4.5 6.55-.79z"/></svg><svg aria-hidden="true" focusable="false" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2.6l2.85 6 6.55.79-4.83 4.5 1.24 6.5L12 17.2l-5.81 3.19 1.24-6.5-4.83-4.5 6.55-.79z"/></svg><svg aria-hidden="true" focusable="false" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2.6l2.85 6 6.55.79-4.83 4.5 1.24 6.5L12 17.2l-5.81 3.19 1.24-6.5-4.83-4.5 6.55-.79z"/></svg></div>
+                    <blockquote><p>&ldquo;I was confused about all my Medicare options, but Michelle walked me through everything and made it simple. She helped find me a plan that also lowered what I was spending on dental work!&rdquo;</p></blockquote>
+                    <figcaption><strong>Krissan M.</strong> &middot; Tooele, Utah</figcaption>
+                </figure>
+                <figure class="quote">
+                    <div class="quote-stars" role="img" aria-label="Rated 5 out of 5"><svg aria-hidden="true" focusable="false" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2.6l2.85 6 6.55.79-4.83 4.5 1.24 6.5L12 17.2l-5.81 3.19 1.24-6.5-4.83-4.5 6.55-.79z"/></svg><svg aria-hidden="true" focusable="false" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2.6l2.85 6 6.55.79-4.83 4.5 1.24 6.5L12 17.2l-5.81 3.19 1.24-6.5-4.83-4.5 6.55-.79z"/></svg><svg aria-hidden="true" focusable="false" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2.6l2.85 6 6.55.79-4.83 4.5 1.24 6.5L12 17.2l-5.81 3.19 1.24-6.5-4.83-4.5 6.55-.79z"/></svg><svg aria-hidden="true" focusable="false" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2.6l2.85 6 6.55.79-4.83 4.5 1.24 6.5L12 17.2l-5.81 3.19 1.24-6.5-4.83-4.5 6.55-.79z"/></svg><svg aria-hidden="true" focusable="false" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2.6l2.85 6 6.55.79-4.83 4.5 1.24 6.5L12 17.2l-5.81 3.19 1.24-6.5-4.83-4.5 6.55-.79z"/></svg></div>
+                    <blockquote><p>&ldquo;I was laid off and lost my group plan, so I had no idea where to start. Ally made it easy and sent over multiple options to compare. She knew a lot more than what we could find online.&rdquo;</p></blockquote>
+                    <figcaption><strong>Blake B.</strong> &middot; Tucson, Arizona</figcaption>
+                </figure>
+                <figure class="quote">
+                    <div class="quote-stars" role="img" aria-label="Rated 5 out of 5"><svg aria-hidden="true" focusable="false" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2.6l2.85 6 6.55.79-4.83 4.5 1.24 6.5L12 17.2l-5.81 3.19 1.24-6.5-4.83-4.5 6.55-.79z"/></svg><svg aria-hidden="true" focusable="false" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2.6l2.85 6 6.55.79-4.83 4.5 1.24 6.5L12 17.2l-5.81 3.19 1.24-6.5-4.83-4.5 6.55-.79z"/></svg><svg aria-hidden="true" focusable="false" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2.6l2.85 6 6.55.79-4.83 4.5 1.24 6.5L12 17.2l-5.81 3.19 1.24-6.5-4.83-4.5 6.55-.79z"/></svg><svg aria-hidden="true" focusable="false" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2.6l2.85 6 6.55.79-4.83 4.5 1.24 6.5L12 17.2l-5.81 3.19 1.24-6.5-4.83-4.5 6.55-.79z"/></svg><svg aria-hidden="true" focusable="false" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2.6l2.85 6 6.55.79-4.83 4.5 1.24 6.5L12 17.2l-5.81 3.19 1.24-6.5-4.83-4.5 6.55-.79z"/></svg></div>
+                    <blockquote><p>&ldquo;We have had different agents over the years but have been happy with Ally. She always responds or gets someone else at the office to help if she can't assist us. I appreciate someone who actually responds and follows up.&rdquo;</p></blockquote>
+                    <figcaption><strong>Bill W.</strong> &middot; Spanish Fork, Utah</figcaption>
+                </figure>
             </div>
         </div>
     </section>
 
-    <!-- Testimonials Section -->
-    <section class="testimonials-section section-padding">
-        <div class="container">
-            <h2 class="text-center">In Their Own Words: Families We've Helped</h2>
-            <p class="text-center" style="max-width: 600px; margin: 0 auto 50px; color: #4A5568;">A few of the families we've helped, in their own words.</p>
-
-            <div class="testimonials-grid">
-                <div class="testimonial-card fade-in">
-                    <div class="stars">★★★★★</div>
-                    <p class="testimonial-text">"I was confused about all my Medicare options, but Michelle walked me through everything and made it simple. She helped find me a plan that also lowered what I was spending on dental work!"</p>
-                    <p class="testimonial-author">Krissan M.</p>
-                    <p class="testimonial-location">Tooele, Utah</p>
+    <section class="section contact-section" id="contact">
+        <div class="container contact-content">
+            <div>
+                <h2>Ready to Find the Right Plan?</h2>
+                <p class="contact-intro">Call, email or send the form. A licensed agent will get back to you, and there's no cost or obligation.</p>
+                <div class="contact-method">
+                    <p class="contact-label"><svg aria-hidden="true" focusable="false" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.12.96.36 1.9.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.91.34 1.85.58 2.81.7A2 2 0 0 1 22 16.92z"/></svg>Call us</p>
+                    <p><a href="tel:+14352461548">(435) 246-1548</a></p>
                 </div>
-
-                <div class="testimonial-card fade-in" style="animation-delay: 0.1s;">
-                    <div class="stars">★★★★★</div>
-                    <p class="testimonial-text">"I was laid off and lost my group plan, so I had no idea where to start. Ally made it easy and sent over multiple options to compare. She knew a lot more than what we could find online."</p>
-                    <p class="testimonial-author">Blake B.</p>
-                    <p class="testimonial-location">Tucson, Arizona</p>
+                <div class="contact-method">
+                    <p class="contact-label"><svg aria-hidden="true" focusable="false" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="m22 6-10 7L2 6"/></svg>Email</p>
+                    <p><a href="mailto:info@healthplanmoms.com">info@healthplanmoms.com</a></p>
                 </div>
-
-                <div class="testimonial-card fade-in" style="animation-delay: 0.2s;">
-                    <div class="stars">★★★★★</div>
-                    <p class="testimonial-text">"We have had different agents over the years but have been happy with Ally. She always responds or gets someone else at the office to help if she can't assist us. I appreciate someone who actually responds and follows up."</p>
-                    <p class="testimonial-author">Bill W.</p>
-                    <p class="testimonial-location">Spanish Fork, Utah</p>
+                <div class="contact-method">
+                    <p class="contact-label"><svg aria-hidden="true" focusable="false" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></svg>Hours</p>
+                    <p>Monday to Friday, 9am to 5pm MT</p>
                 </div>
+                <p class="contact-disclaimer">Our help is always free to you.</p>
             </div>
+
+            <form class="contact-form" id="homeContactForm" data-hpm-lead data-source="homepage" data-kind="client">
+                <div class="hpm-hp" aria-hidden="true" style="position:absolute;left:-10000px;width:1px;height:1px;overflow:hidden;">
+                    <label for="homeCompanyWebsite">Company website</label>
+                    <input type="text" id="homeCompanyWebsite" name="company_website" tabindex="-1" autocomplete="off" value="">
+                </div>
+                <div class="form-row">
+                    <div class="form-group">
+                        <label for="firstName">First name</label>
+                        <input type="text" id="firstName" name="firstName" autocomplete="given-name" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="lastName">Last name</label>
+                        <input type="text" id="lastName" name="lastName" autocomplete="family-name" required>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label for="email">Email</label>
+                    <input type="email" id="email" name="email" autocomplete="email" required>
+                </div>
+                <div class="form-group">
+                    <label for="phone">Phone</label>
+                    <input type="tel" id="phone" name="phone" autocomplete="tel" required>
+                </div>
+                <div class="form-group">
+                    <label for="interested">What are you looking for?</label>
+                    <select id="interested" name="interested" required>
+                                <option value="">Select an option</option>
+                                <option value="Medicare Advantage">Medicare Advantage</option>
+                                <option value="Medicare Supplement">Medicare Supplement (Medigap)</option>
+                                <option value="ACA/Marketplace">ACA / Marketplace Plans</option>
+                                <option value="Dental &amp; Vision">Dental &amp; Vision</option>
+                                <option value="Life Insurance">Life Insurance</option>
+                                <option value="Not Sure">Not sure, help me decide</option>
+                    </select>
+                </div>
+                <label class="consent-label" for="consent">
+                    <input type="checkbox" id="consent" name="consent" required data-consent-text="I agree to be contacted by HealthPlan Moms and its licensed agents by phone, text, and email about insurance options, including via automated messages. Consent is not required to purchase. Full terms &amp; TPMO disclosure at https://healthplanmoms.com/consent-disclosure/">
+                    <span>I agree to be contacted by HealthPlan Moms and its licensed agents by phone, text, and email about insurance options, including via automated messages. Consent is not required to purchase. <a href="/consent-disclosure/" target="_blank" rel="noopener">View full terms &amp; TPMO disclosure</a>.</span>
+                </label>
+                <button type="submit" class="btn btn-primary btn-lg">Get a Free Consultation</button>
+            </form>
         </div>
     </section>
 
-    <!-- Contact Section -->
-    <section class="contact-section section-padding" id="contact">
-        <div class="container">
-            <div class="contact-content">
-                <div>
-                    <h2>Ready to Find the Right Plan?</h2>
-                    <p>Call, email or send the form. A licensed agent will get back to you, and there's no cost or obligation.</p>
-
-                    <div class="contact-info">
-                        <h3>Get in Touch</h3>
-
-                        <div class="contact-method">
-                            <label><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#A8C5A0" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg> Call Us</label>
-                            <p><a href="tel:+14352461548" style="color: #FFFFFF; text-decoration: underline; text-decoration-color: rgba(168, 197, 160, 0.8); text-underline-offset: 3px;">(435) 246-1548</a></p>
-                        </div>
-
-                        <div class="contact-method">
-                            <label><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#A8C5A0" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg> Email</label>
-                            <p><a href="mailto:info@healthplanmoms.com" style="color: #FFFFFF; text-decoration: underline; text-decoration-color: rgba(168, 197, 160, 0.8); text-underline-offset: 3px;">info@healthplanmoms.com</a></p>
-                        </div>
-
-                        <div class="contact-method">
-                            <label><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#A8C5A0" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><polyline points="12,6 12,12 16,14"/></svg> Hours</label>
-                            <p>Monday–Friday, 9am–5pm MT</p>
-                        </div>
-
-                        <div class="contact-disclaimer">
-                            Our help is always free to you.
-                        </div>
-                    </div>
-                </div>
-
-                <form class="contact-form" id="homeContactForm" data-hpm-lead data-source="homepage" data-kind="client">
-                    <div class="hpm-hp" aria-hidden="true" style="position:absolute;left:-10000px;width:1px;height:1px;overflow:hidden;">
-                        <label for="homeCompanyWebsite">Company website</label>
-                        <input type="text" id="homeCompanyWebsite" name="company_website" tabindex="-1" autocomplete="off" value="">
-                    </div>
-                    <div class="form-row" style="display: grid; grid-template-columns: 1fr 1fr; gap: 12px;">
-                        <div class="form-group">
-                            <label for="firstName">First Name</label>
-                            <input type="text" id="firstName" name="firstName" required>
-                        </div>
-                        <div class="form-group">
-                            <label for="lastName">Last Name</label>
-                            <input type="text" id="lastName" name="lastName" required>
-                        </div>
-                    </div>
-
-                    <div class="form-group">
-                        <label for="email">Email</label>
-                        <input type="email" id="email" name="email" required>
-                    </div>
-
-                    <div class="form-group">
-                        <label for="phone">Phone</label>
-                        <input type="tel" id="phone" name="phone" required>
-                    </div>
-
-                    <div class="form-group">
-                        <label for="interested">What are you looking for?</label>
-                        <select id="interested" name="interested" required>
-                            <option value="">Select an option</option>
-                            <option value="Medicare Advantage">Medicare Advantage</option>
-                            <option value="Medicare Supplement">Medicare Supplement (Medigap)</option>
-                            <option value="ACA/Marketplace">ACA / Marketplace Plans</option>
-                            <option value="Dental & Vision">Dental & Vision</option>
-                            <option value="Life Insurance">Life Insurance</option>
-                            <option value="Not Sure">Not Sure, Help Me Decide</option>
-                        </select>
-                    </div>
-
-                    <div class="form-group" style="margin-top: 10px;">
-                        <label for="consent" style="display: flex; align-items: flex-start; gap: 10px; font-family: 'Nunito', sans-serif; font-weight: 400; font-size: 13px; line-height: 1.5; color: rgba(255, 255, 255, 0.9); cursor: pointer;">
-                            <input type="checkbox" id="consent" name="consent" required data-consent-text="I agree to be contacted by HealthPlan Moms and its licensed agents by phone, text, and email about insurance options, including via automated messages. Consent is not required to purchase. Full terms &amp; TPMO disclosure at https://healthplanmoms.com/consent-disclosure/" style="margin-top: 3px; flex-shrink: 0; width: 20px; height: 20px; accent-color: #A8C5A0; cursor: pointer;">
-                            <span>
-                                I agree to be contacted by HealthPlan Moms and its licensed agents by phone, text, and email about insurance options, including via automated messages. Consent is not required to purchase. <a href="/consent-disclosure/" target="_blank" rel="noopener" style="color: #FFFFFF; text-decoration: underline; text-decoration-color: #A8C5A0; text-underline-offset: 3px;">View full terms &amp; TPMO disclosure</a>.
-                            </span>
-                        </label>
-                    </div>
-
-                    <button type="submit" class="btn btn-primary" style="margin-top: 10px;">Get a Free Consultation</button>
-                </form>
-            </div>
-        </div>
-    </section>
-
-    <!-- Footer -->
     </main>
 
     <footer class="site-footer">
@@ -1288,30 +476,6 @@
         </div>
     </footer>
 
-    <script>
-
-
-
-        // Fade-in animation on scroll
-        const observerOptions = {
-            threshold: 0.1,
-            rootMargin: '0px 0px -50px 0px'
-        };
-
-        const observer = new IntersectionObserver((entries) => {
-            entries.forEach(entry => {
-                if (entry.isIntersecting) {
-                    entry.target.classList.add('fade-in');
-                    observer.unobserve(entry.target);
-                }
-            });
-        }, observerOptions);
-
-        document.querySelectorAll('.plan-card, .why-card, .testimonial-card, .step').forEach(el => {
-            observer.observe(el);
-        });
-        // Contact form is handled by /lead-forms.js (data-hpm-lead on the form).
-    </script>
     <!-- CHAT WIDGET (shared, see /chat-widget.js) -->
     <script src="/chat-widget.js" defer></script>
 

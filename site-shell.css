@@ -724,3 +724,47 @@ body .newsletter-disclaimer { color: #d7e6d2; }
 /* Placeholder text meets 4.5:1 on white and the pale field fills */
 body input::placeholder,
 body textarea::placeholder { color: var(--muted-soft); opacity: 1; }
+
+/* ==========================================================================
+   Refinement pass (Nov 2026)
+   ========================================================================== */
+
+/* Browser surfaces carry the palette */
+input, textarea, select { caret-color: var(--sage-ink); }
+input[type="checkbox"], input[type="radio"] { accent-color: var(--sage-ink); }
+
+/* Callouts read as tinted panels, not side-striped alerts */
+body .callout,
+body .legal-notice,
+body .example-box,
+body .opportunity-highlight,
+body .products-note,
+body .faq-toc,
+body .toc {
+    border-left: 0;
+    border-radius: 14px;
+    box-shadow: inset 0 0 0 1px rgba(61, 107, 74, 0.14);
+}
+body .callout.warning,
+body .callout.warn { box-shadow: inset 0 0 0 1px rgba(212, 149, 107, 0.45); }
+body .faq-answer.show { border-left: 0; }
+body .featured-post { border-left: 0; border: 1px solid var(--line); }
+
+/* Info cards: no colored top bar */
+body .info-card { border-top: 0; border: 1px solid var(--line); box-shadow: 0 18px 36px -30px rgba(44, 44, 44, 0.35); }
+
+/* Hover lift is reserved for things you can click */
+body .btn:hover,
+body .btn-primary:hover,
+body .btn-secondary:hover,
+body .form-submit:hover,
+body .newsletter-form button:hover,
+body .ancillary-card:hover,
+body .benefit-card:hover,
+body .help-item:hover,
+body .product-item:hover,
+body .story-card:hover,
+body .step:hover { transform: none; }
+
+/* Jump links in page heroes use the UI face, not the display face */
+body .page-nav a { font-family: 'Nunito', system-ui, sans-serif; font-weight: 800; letter-spacing: 0; }

@@ -230,7 +230,6 @@
             padding: 2rem;
             border-radius: 12px;
             margin-top: 2rem;
-            border-left: 5px solid var(--sage-primary);
         }
 
         /* Benefits Grid */
@@ -506,7 +505,6 @@
         .faq-answer.show {
             max-height: 500px;
             padding: 1.5rem;
-            border-left: 4px solid var(--sage-primary);
         }
 
         .faq-answer p {
@@ -776,9 +774,8 @@
 
         .products-note {
             background-color: #E8F0E5;
-            border-left: 4px solid var(--sage-primary);
             padding: 20px 25px;
-            border-radius: 0 10px 10px 0;
+            border-radius: 14px;
             text-align: left;
             font-size: 0.95rem;
             color: var(--navy-dark);
@@ -795,6 +792,90 @@
             .products-grid {
                 grid-template-columns: 1fr;
             }
+        }
+
+        /* ===== Refinement pass (Nov 2026) ===== */
+        section h2 { padding-bottom: 0; }
+        section h2::after { display: none; }
+        .hero .secondary-text { display: inline-flex; align-items: center; gap: 8px; }
+        .hero .secondary-text svg { width: 18px; height: 18px; flex-shrink: 0; }
+
+        /* Benefits: real moms beside a scannable list */
+        .benefits-layout {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: minmax(0, 1fr) minmax(0, 1.25fr);
+            gap: clamp(36px, 5vw, 72px);
+            align-items: start;
+        }
+        .benefits .benefits-layout h2 { text-align: left; margin-bottom: 28px; line-height: 1.12; }
+        .benefits-photos { margin: 0; }
+        .benefits-photos ul { list-style: none; display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 12px; padding: 0; margin: 0; }
+        .benefits-photos li { aspect-ratio: 3 / 4; border-radius: 16px; overflow: hidden; background: #e8f0e5; box-shadow: 0 22px 40px -30px rgba(44, 44, 44, 0.6); }
+        .benefits-photos li:nth-child(2) { margin-top: 28px; }
+        .benefits-photos img { width: 100%; height: 100%; object-fit: cover; object-position: center 22%; display: block; }
+        .benefits-photos figcaption { margin-top: 44px; font-size: 14px; font-weight: 600; color: #4a5568; }
+        .benefits-list { list-style: none; display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 0 36px; padding: 0; margin: 0; border-top: 1px solid #e6dfd3; }
+        .benefits-list li { padding: 24px 0; border-bottom: 1px solid #e6dfd3; }
+        .benefits-list h3 { display: flex; align-items: center; gap: 12px; font-size: 1.25rem; margin-bottom: 8px; }
+        .benefits-list h3 svg { width: 24px; height: 24px; flex-shrink: 0; color: var(--sage-ink); }
+        .benefits-list p { font-size: 0.97rem; color: #4a5568; line-height: 1.6; margin: 0; }
+
+        /* Steps: numerals on a rule, no filled circles */
+        .how-it-works h2 { margin-bottom: 2.5rem; }
+        .step-connector { display: none !important; }
+        .steps-grid { max-width: 1200px; margin-left: auto; margin-right: auto; }
+        .step { text-align: left; opacity: 1; animation: none; position: relative; padding-top: 22px; border-top: 1px solid #ded6c8; }
+        .step::before { content: ""; position: absolute; top: -1px; left: 0; width: 44px; height: 2px; background: var(--sage-ink); }
+        .step-number { display: block; width: auto; height: auto; border-radius: 0; background: none; color: var(--sage-ink); font-size: 2.6rem; line-height: 1; margin-bottom: 0.75rem; }
+        .how-it-works-note { display: flex; align-items: center; justify-content: center; gap: 6px; }
+
+        /* Products: left-aligned, icon in a tile */
+        .product-item {
+            display: grid;
+            grid-template-columns: 44px minmax(0, 1fr);
+            column-gap: 16px;
+            align-content: start;
+            text-align: left;
+            border: 1px solid transparent;
+        }
+        .product-item > * { grid-column: 2; }
+        .product-icon { grid-column: 1; grid-row: 1 / span 2; width: 44px; height: 44px; margin: 0; display: grid; place-items: center; border-radius: 12px; background: #fff; }
+        .product-icon svg { width: 24px; height: 24px; stroke-width: 3; }
+        .product-item:hover { border-color: transparent; box-shadow: none; }
+
+        /* FAQ: real buttons, chevrons, readable open state */
+        .faq-heading { margin: 0; font-size: inherit; }
+        button.faq-question {
+            width: 100%;
+            border: 0;
+            text-align: left;
+            font: inherit;
+            font-size: 1.05rem;
+            font-weight: 800;
+            color: var(--text-dark);
+            gap: 16px;
+            min-height: 64px;
+        }
+        button.faq-question:hover { background-color: #ede8df; }
+        button.faq-question.active { background-color: #e8f0e5; color: var(--text-dark); border-radius: 8px 8px 0 0; }
+        .faq-chevron { width: 22px; height: 22px; flex-shrink: 0; color: var(--sage-ink); transition: transform 0.2s ease-out; }
+        button.faq-question.active .faq-chevron { transform: rotate(180deg); }
+        .faq-answer.show { padding: 0 1.5rem 1.5rem; background: #e8f0e5; border-radius: 0 0 8px 8px; }
+        .faq-answer.show p { padding-top: 0.25rem; }
+
+        /* Form controls match */
+        .form-group select { background-color: #fff; min-height: 46px; }
+        .form-submit { font-family: 'Nunito', system-ui, sans-serif; font-weight: 800; letter-spacing: 0; }
+
+        @media (max-width: 900px) {
+            .benefits-layout { grid-template-columns: minmax(0, 1fr); }
+            .benefits-photos figcaption { margin-top: 36px; }
+        }
+        @media (max-width: 640px) {
+            .benefits-list { grid-template-columns: minmax(0, 1fr); }
+            .step { padding-top: 18px; }
         }
 
     </style>
@@ -829,10 +910,10 @@
             <h1>Tu familia viene primero. Tu carrera también puede.</h1>
             <p class="subheadline">Construye un negocio de seguros flexible en tus propios términos. Trabaja alrededor del horario de tu familia, no al revés.</p>
             <div class="hero-buttons">
-                <button class="btn btn-primary" onclick="document.getElementById('application').scrollIntoView({ behavior: 'smooth' })">Aplica ahora</button>
-                <button class="btn btn-secondary" onclick="document.getElementById('opportunity').scrollIntoView({ behavior: 'smooth' })">Aprende más</button>
+                <a class="btn btn-primary" href="#application">Aplica ahora</a>
+                <a class="btn btn-secondary" href="#opportunity">Aprende más</a>
             </div>
-            <p class="secondary-text">✓ No se necesita experiencia, te enseñaremos todo</p>
+            <p class="secondary-text"><svg aria-hidden="true" focusable="false" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="m8 12.5 2.5 2.5L16 9.5"/></svg>No se necesita experiencia, te enseñaremos todo</p>
         </div>
     </section>
 
@@ -854,55 +935,44 @@
 
     <!-- Benefits -->
     <section id="benefits" class="benefits">
-        <h2>¿Por qué unirse a HealthPlan Moms?</h2>
-        <div class="benefits-grid">
-            <div class="benefit-card">
-                <div class="benefit-icon"><svg width="40" height="40" viewBox="0 0 48 48" fill="none" stroke="#5B8C6B" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="24" cy="24" r="18"/><path d="M24 12v12l8 5"/></svg></div>
-                <h3>Horario flexible</h3>
-                <p>Trabaja alrededor de las horas de escuela, tiempo de siesta y práctica de fútbol. Tómate las mañanas libres si lo necesitas. Tu negocio se adapta a tu vida, no al revés.</p>
+        <div class="benefits-layout">
+            <div class="benefits-intro">
+                <h2>¿Por qué unirse a HealthPlan Moms?</h2>
+                <figure class="benefits-photos">
+                    <ul>
+                        <li><img src="/ally.jpg" alt="Ally Valdez de HealthPlan Moms" width="800" height="644" loading="lazy" decoding="async"></li>
+                        <li><img src="/aidyl.jpg" alt="Aidyl Semidey de HealthPlan Moms" width="571" height="800" loading="lazy" decoding="async"></li>
+                        <li><img src="/erica.jpg" alt="Erica Harding de HealthPlan Moms" width="800" height="800" loading="lazy" decoding="async"></li>
+                    </ul>
+                    <figcaption>Ally, Aidyl y Erica, tres de las mamás de nuestro equipo.</figcaption>
+                </figure>
             </div>
-
-            <div class="benefit-card">
-                <div class="benefit-icon"><svg width="40" height="40" viewBox="0 0 48 48" fill="none" stroke="#5B8C6B" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="24" cy="24" r="20"/><path d="M24 10v28M10 24h28M16.97 16.97l15.56 15.56M31.03 16.97l-15.56 15.56"/></svg></div>
-                <h3>Trabaja desde cualquier lugar</h3>
-                <p>Tu mesa de la cocina. Una cafetería. La fila de la escuela. Todo lo que necesitas es una laptop e internet. Construye tu negocio desde donde te sientas más cómodo.</p>
-            </div>
-
-            <div class="benefit-card">
-                <div class="benefit-icon"><svg width="40" height="40" viewBox="0 0 48 48" fill="none" stroke="#5B8C6B" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M12 16c0-2.21 1.79-4 4-4h16c2.21 0 4 1.79 4 4v16c0 2.21-1.79 4-4 4H16c-2.21 0-4-1.79-4-4V16z"/><path d="M24 22v8M20 26h8"/></svg></div>
-                <h3>Ingreso adicional</h3>
-                <p>Agrega una corriente de ingresos flexible que se adapte a tu vida. Tus comisiones son tuyas para quedarte, y estableces tu propio ritmo.</p>
-            </div>
-
-            <div class="benefit-card">
-                <div class="benefit-icon"><svg width="40" height="40" viewBox="0 0 48 48" fill="none" stroke="#5B8C6B" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M16 30h2v4h-2v-4zM23 18h2v16h-2V18zM30 24h2v10h-2v-10z"/><path d="M12 38h24M14 14c0-2.21 1.79-4 4-4s4 1.79 4 4-1.79 4-4 4-4-1.79-4-4zM30 12c0-2.21 1.79-4 4-4s4 1.79 4 4-1.79 4-4 4-4-1.79-4-4z"/></svg></div>
-                <h3>No se requiere experiencia</h3>
-                <p>¿Cambiando de carrera? ¿Primer propietario de negocio? Está bien. Proporcionamos capacitación exhaustiva, apoyo de licencia y educación continua para ayudarte a tener éxito.</p>
-            </div>
-
-            <div class="benefit-card">
-                <div class="benefit-icon"><svg width="40" height="40" viewBox="0 0 48 48" fill="none" stroke="#5B8C6B" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="16" cy="14" r="3"/><path d="M12 20c0-1.1.9-2 2-2h4c1.1 0 2 .9 2 2v8h-8v-8z"/><circle cx="32" cy="14" r="3"/><path d="M28 20c0-1.1.9-2 2-2h4c1.1 0 2 .9 2 2v8h-8v-8z"/><path d="M12 28h24M14 32h4M30 32h4"/></svg></div>
-                <h3>Comunidad y mentoría</h3>
-                <p>Nunca estás solo. Tendrás un equipo de agentes experimentados que han estado donde tú estás. Capacitación regular, coaching grupal, y otras mamás a quienes puedes escribir cuando un caso se complica.</p>
-            </div>
-
-            <div class="benefit-card">
-                <div class="benefit-icon"><svg width="40" height="40" viewBox="0 0 48 48" fill="none" stroke="#5B8C6B" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M24 10l3.5 7h7.5l-6 4.5 2.5 7-6.5-5-6.5 5 2.5-7-6-4.5h7.5l3.5-7z"/></svg></div>
-                <h3>Sé tu propio jefe</h3>
-                <p>Construye TU negocio, no el de otro. Toma tus propias decisiones. Establece tus propias horas. Quédate con lo que ganes. Verdadero emprendimiento, respaldado por nuestro sistema de apoyo.</p>
-            </div>
-
-            <div class="benefit-card">
-                <div class="benefit-icon"><svg width="40" height="40" viewBox="0 0 48 48" fill="none" stroke="#5B8C6B" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="24" cy="24" r="14"/><path d="M24 16v8l-5 3"/></svg></div>
-                <h3>Ingresos residuales</h3>
-                <p>Gana renovaciones año tras año en cada póliza que escribas. Los clientes renuevan su seguro anualmente, lo que significa ingresos recurrentes incluso mientras construyes un nuevo negocio.</p>
-            </div>
-
-            <div class="benefit-card">
-                <div class="benefit-icon"><svg width="40" height="40" viewBox="0 0 48 48" fill="none" stroke="#5B8C6B" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="24" cy="24" r="16"/><path d="M24 12v24M12 24h24M16.97 16.97l16.06 16.06M31.03 16.97l-16.06 16.06"/></svg></div>
-                <h3>Múltiples líneas de productos</h3>
-                <p>Medicare. ACA. Medigap. Dental. Visión. Seguro de Vida. Diversifica tus corrientes de ingresos y ayuda a los clientes con todas sus necesidades de seguros en un lugar.</p>
-            </div>
+            <ul class="benefits-list">
+                <li>
+                    <h3><svg aria-hidden="true" focusable="false" viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="3.2" stroke-linecap="round" stroke-linejoin="round"><circle cx="24" cy="24" r="20"/><path d="M24 12v12l8 4"/></svg>Horario flexible</h3>
+                    <p>Trabaja alrededor de la salida de la escuela, la siesta y el fútbol. Tómate la mañana libre si lo necesitas. Tu negocio se adapta a tu vida, no al revés.</p>
+                </li>
+                <li>
+                    <h3><svg aria-hidden="true" focusable="false" viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="3.2" stroke-linecap="round" stroke-linejoin="round"><circle cx="24" cy="24" r="20"/><path d="M4 24h40"/><path d="M24 4a28 28 0 0 1 8 20 28 28 0 0 1-8 20"/><path d="M24 4a28 28 0 0 0-8 20 28 28 0 0 0 8 20"/></svg>Trabaja desde cualquier lugar</h3>
+                    <p>La mesa de tu cocina. Una cafetería. La fila para recoger a los niños. Solo necesitas una laptop e internet.</p>
+                </li>
+                <li>
+                    <h3><svg aria-hidden="true" focusable="false" viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="3.2" stroke-linecap="round" stroke-linejoin="round"><path d="M24 6 3 17l21 11 21-11L24 6z"/><path d="M11 23v11c0 4 5.8 8 13 8s13-4 13-8V23"/></svg>No se requiere experiencia</h3>
+                    <p>¿Cambias de carrera? ¿Es tu primer negocio? No pasa nada. Te damos capacitación completa, apoyo para obtener tu licencia y formación continua para que te vaya bien.</p>
+                </li>
+                <li>
+                    <h3><svg aria-hidden="true" focusable="false" viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="3.2" stroke-linecap="round" stroke-linejoin="round"><circle cx="17" cy="15" r="6"/><circle cx="33" cy="17" r="5"/><path d="M5 40v-3a12 12 0 0 1 24 0v3"/><path d="M31 28a10 10 0 0 1 12 9.8V40"/></svg>Comunidad y mentoría</h3>
+                    <p>Nunca estás sola. Tendrás un equipo de agentes con experiencia que ya pasaron por donde estás. Capacitación regular, coaching en grupo y otras mamás a quienes puedes escribirles cuando un caso se complica.</p>
+                </li>
+                <li>
+                    <h3><svg aria-hidden="true" focusable="false" viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="3.2" stroke-linecap="round" stroke-linejoin="round"><path d="M6 38 18 24l8 8 16-18"/><path d="M32 14h10v10"/></svg>Crecimiento con apoyo</h3>
+                    <p>También tenemos oportunidades para agentes en las que te apoyamos con leads pagados, te ayudamos a conseguir negocio estable y te damos la estructura que necesitas para crecer.</p>
+                </li>
+                <li>
+                    <h3><svg aria-hidden="true" focusable="false" viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="3.2" stroke-linecap="round" stroke-linejoin="round"><path d="M36 12A16 16 0 0 0 10 14"/><path d="M36 4v8h-8"/><path d="M12 36a16 16 0 0 0 26-2"/><path d="M12 44v-8h8"/></svg>Ingresos residuales</h3>
+                    <p>La mayoría de los productos pagan comisiones de renovación año tras año, así que tus ingresos crecen con tu cartera de clientes, incluso los días en que no estás vendiendo.</p>
+                </li>
+            </ul>
         </div>
     </section>
 
@@ -927,7 +997,7 @@
             <div class="product-item">
                 <div class="product-icon"><svg width="42" height="42" viewBox="0 0 48 48" fill="none" stroke="#5B8C6B" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="24" cy="12" r="5"/><path d="M14 40v-4a10 10 0 0 1 20 0v4"/><circle cx="10" cy="18" r="4"/><path d="M4 40v-3a7 7 0 0 1 9-6.7"/><circle cx="38" cy="18" r="4"/><path d="M44 40v-3a7 7 0 0 0-9-6.7"/></svg></div>
                 <h3>Salud individual y familiar</h3>
-                <p>Planes del Mercado ACA más seguros de salud privados y suscritos para individuos y familias menores de 65. La Inscripción Abierta va del 1 Nov – 15 Dic, más Inscripción Especial durante todo el año.</p>
+                <p>Planes del Mercado ACA más seguros de salud privados y suscritos para individuos y familias menores de 65. La Inscripción Abierta va del 1 de noviembre al 15 de enero, más Inscripción Especial durante todo el año.</p>
             </div>
 
             <div class="product-item">
@@ -1018,51 +1088,36 @@
         <h2>Preguntas frecuentes</h2>
         <div class="faq-container">
             <div class="faq-item">
-                <div class="faq-question" onclick="toggleFAQ(this)">
-                    <h3 class="hx4">¿Necesito experiencia en seguros?</h3>
-                    <span class="faq-toggle">▼</span>
-                </div>
-                <div class="faq-answer">
+                <h3 class="faq-heading"><button type="button" class="faq-question" aria-expanded="false" aria-controls="faq-a1" id="faq-q1" onclick="toggleFAQ(this)"><span>¿Necesito experiencia en seguros?</span><svg class="faq-chevron" aria-hidden="true" focusable="false" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="m6 9 6 6 6-6"/></svg></button></h3>
+                <div class="faq-answer" id="faq-a1" role="region" aria-labelledby="faq-q1">
                     <p>No, no necesitas ninguna experiencia. Proporcionamos capacitación completa que cubre Medicare, ACA, Medigap y todas nuestras líneas de productos. Muchos de nuestros mejores agentes comenzaron sin ningún antecedente en seguros. Te enseñamos todo lo que necesitas saber.</p>
                 </div>
             </div>
 
             <div class="faq-item">
-                <div class="faq-question" onclick="toggleFAQ(this)">
-                    <h3 class="hx4">¿Puedo hacer esto a tiempo parcial?</h3>
-                    <span class="faq-toggle">▼</span>
-                </div>
-                <div class="faq-answer">
+                <h3 class="faq-heading"><button type="button" class="faq-question" aria-expanded="false" aria-controls="faq-a2" id="faq-q2" onclick="toggleFAQ(this)"><span>¿Puedo hacer esto a tiempo parcial?</span><svg class="faq-chevron" aria-hidden="true" focusable="false" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="m6 9 6 6 6-6"/></svg></button></h3>
+                <div class="faq-answer" id="faq-a2" role="region" aria-labelledby="faq-q2">
                     <p>Absolutamente. Muchos de nuestros agentes comienzan a tiempo parcial y construyen a su propio ritmo. Esta es una excelente manera de agregar ingresos adicionales a tu hogar con un horario que se adapte a tu familia. Decides cuánto tiempo dedicar, no hay requisito de horas mínimas.</p>
                 </div>
             </div>
 
             <div class="faq-item">
-                <div class="faq-question" onclick="toggleFAQ(this)">
-                    <h3 class="hx4">¿Cuál es el costo para comenzar?</h3>
-                    <span class="faq-toggle">▼</span>
-                </div>
-                <div class="faq-answer">
+                <h3 class="faq-heading"><button type="button" class="faq-question" aria-expanded="false" aria-controls="faq-a3" id="faq-q3" onclick="toggleFAQ(this)"><span>¿Cuál es el costo para comenzar?</span><svg class="faq-chevron" aria-hidden="true" focusable="false" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="m6 9 6 6 6-6"/></svg></button></h3>
+                <div class="faq-answer" id="faq-a3" role="region" aria-labelledby="faq-q3">
                     <p>Tenemos programas en lugar para reembolsarte todos tus costos de licencia, por lo que no hay una verdadera barrera de gastos de bolsillo para comenzar. No cobramos cuotas de franquicia, cuotas de entrada o costos de software mensuales. Invertimos en ti porque creemos en ti.</p>
                 </div>
             </div>
 
             <div class="faq-item">
-                <div class="faq-question" onclick="toggleFAQ(this)">
-                    <h3 class="hx4">¿Realmente puedo hacer esto mientras crío a los niños?</h3>
-                    <span class="faq-toggle">▼</span>
-                </div>
-                <div class="faq-answer">
+                <h3 class="faq-heading"><button type="button" class="faq-question" aria-expanded="false" aria-controls="faq-a4" id="faq-q4" onclick="toggleFAQ(this)"><span>¿Realmente puedo hacer esto mientras crío a los niños?</span><svg class="faq-chevron" aria-hidden="true" focusable="false" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="m6 9 6 6 6-6"/></svg></button></h3>
+                <div class="faq-answer" id="faq-a4" role="region" aria-labelledby="faq-q4">
                     <p>Absolutamente. Por eso existe HealthPlan Moms. La mayoría de nuestros agentes son mamás que trabajan alrededor del horario de su familia. Controlas tus horas, trabaja durante el horario escolar, madrugadas, noches o fines de semana. Comienza a tiempo parcial y amplía según tus hijos crezcan. La flexibilidad está integrada en el modelo.</p>
                 </div>
             </div>
 
             <div class="faq-item">
-                <div class="faq-question" onclick="toggleFAQ(this)">
-                    <h3 class="hx4">¿Qué apoyo recibo?</h3>
-                    <span class="faq-toggle">▼</span>
-                </div>
-                <div class="faq-answer">
+                <h3 class="faq-heading"><button type="button" class="faq-question" aria-expanded="false" aria-controls="faq-a5" id="faq-q5" onclick="toggleFAQ(this)"><span>¿Qué apoyo recibo?</span><svg class="faq-chevron" aria-hidden="true" focusable="false" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="m6 9 6 6 6-6"/></svg></button></h3>
+                <div class="faq-answer" id="faq-a5" role="region" aria-labelledby="faq-q5">
                     <p>Recibes mentoría de agentes experimentados, capacitación inicial exhaustiva más educación continua, materiales de marketing diseñados profesionalmente, apoyo de clientes para ayudarte a construir tu base de clientes, y acceso a una comunidad de mujeres que entienden los desafíos de equilibrar la maternidad y el emprendimiento. Nunca estás solo en esto.</p>
                 </div>
             </div>
@@ -1199,21 +1254,21 @@
 
 
         // FAQ Toggle
-        function toggleFAQ(element) {
-            const question = element;
-            const answer = element.nextElementSibling;
+        function toggleFAQ(button) {
+            const answer = document.getElementById(button.getAttribute('aria-controls'));
+            const opening = button.getAttribute('aria-expanded') !== 'true';
 
-            // Close other open FAQs
-            document.querySelectorAll('.faq-question.active').forEach(activeQuestion => {
-                if (activeQuestion !== question) {
-                    activeQuestion.classList.remove('active');
-                    activeQuestion.nextElementSibling.classList.remove('show');
-                }
+            // Close the others
+            document.querySelectorAll('button.faq-question[aria-expanded="true"]').forEach(other => {
+                if (other === button) return;
+                other.setAttribute('aria-expanded', 'false');
+                other.classList.remove('active');
+                document.getElementById(other.getAttribute('aria-controls')).classList.remove('show');
             });
 
-            // Toggle current FAQ
-            question.classList.toggle('active');
-            answer.classList.toggle('show');
+            button.setAttribute('aria-expanded', opening ? 'true' : 'false');
+            button.classList.toggle('active', opening);
+            answer.classList.toggle('show', opening);
         }
 
         // Application form is handled by /lead-forms.js (data-hpm-lead on the form).

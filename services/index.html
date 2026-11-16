@@ -408,25 +408,6 @@
             color: #3D6B4A;
         }
 
-        /* ===== Service detail modal ===== */
-        .sm-overlay { position: fixed; inset: 0; background: rgba(44,44,44,0.55); display: none; align-items: center; justify-content: center; z-index: 4000; padding: 20px; }
-        .sm-overlay.active { display: flex; }
-        .sm-modal { background: #fff; border-radius: 16px; max-width: 520px; width: 100%; max-height: 90vh; overflow-y: auto; padding: 36px 34px 30px; box-shadow: 0 20px 60px rgba(0,0,0,0.25); position: relative; animation: smPop 0.25s ease; }
-        @keyframes smPop { from { opacity: 0; transform: translateY(14px); } to { opacity: 1; transform: translateY(0); } }
-        .sm-close { position: absolute; top: 14px; right: 16px; background: none; border: none; font-size: 30px; line-height: 1; color: #9aa5b1; cursor: pointer; }
-        .sm-close:hover { color: #2C2C2C; }
-        .sm-icon { display: flex; justify-content: center; margin-bottom: 12px; }
-        .sm-icon svg { width: 50px; height: 50px; }
-        .sm-modal h3 { font-family: 'DM Serif Display', serif; font-size: 26px; color: #2C2C2C; text-align: center; margin-bottom: 6px; }
-        .sm-who { text-align: center; color: var(--sage-ink); font-weight: 700; font-size: 14px; margin-bottom: 18px; }
-        .sm-overview { color: #4A5568; font-size: 15.5px; line-height: 1.7; margin-bottom: 20px; }
-        .sm-help { background: #F7F3ED; border: 1px solid #e6dfd3; border-radius: 10px; padding: 16px 20px; margin-bottom: 24px; }
-        .sm-help h4, .sm-help .hx4 { font-family: 'DM Serif Display', serif; color: #3D6B4A; font-size: 16px; margin-bottom: 6px; }
-        .sm-help p { color: #4A5568; font-size: 14.5px; line-height: 1.65; margin: 0; }
-        .sm-actions { display: flex; flex-direction: column; gap: 10px; }
-        .sm-actions .btn { width: 100%; }
-        @media (max-width: 600px) { .sm-modal { padding: 30px 22px 24px; } .sm-modal h3 { font-size: 22px; } }
-
         /* Who Box */
         .who-box {
             background-color: #E8F0E5;
@@ -526,6 +507,82 @@
             }
         }
 
+        /* Quick facts panel (replaces the old icon placeholder box) */
+        .service-facts {
+            background: #fff;
+            border: 1px solid var(--line, #e6dfd3);
+            border-radius: 18px;
+            padding: 26px 28px 6px;
+            box-shadow: 0 26px 48px -38px rgba(44, 44, 44, 0.45);
+        }
+        .service-detail:nth-child(odd) .service-facts {
+            background: var(--cream, #f7f3ed);
+            border-color: transparent;
+            box-shadow: none;
+        }
+        .service-facts__head {
+            display: flex;
+            align-items: center;
+            gap: 14px;
+            padding-bottom: 18px;
+            border-bottom: 1px solid var(--line, #e6dfd3);
+        }
+        .service-facts__icon {
+            display: grid;
+            place-items: center;
+            width: 44px;
+            height: 44px;
+            flex-shrink: 0;
+            border-radius: 12px;
+            background: var(--sage-mist, #e8f0e5);
+            color: var(--sage-ink, #3d6b4a);
+        }
+        .service-detail:nth-child(odd) .service-facts__icon { background: #fff; }
+        .service-facts__icon svg { width: 24px; height: 24px; }
+        .service-facts h3 { font-size: 21px; margin: 0; }
+        .service-facts dl { margin: 0; }
+        .service-facts dl > div {
+            display: grid;
+            grid-template-columns: minmax(0, 9.5em) minmax(0, 1fr);
+            gap: 18px;
+            padding: 15px 0;
+            border-bottom: 1px solid var(--line, #e6dfd3);
+        }
+        .service-facts dl > div:last-child { border-bottom: 0; }
+        .service-facts dt { font-size: 14px; font-weight: 800; color: var(--sage-ink, #3d6b4a); line-height: 1.5; }
+        .service-facts dd { margin: 0; font-size: 15.5px; color: #39414d; line-height: 1.55; }
+        @media (max-width: 768px) {
+            .service-facts { padding: 22px 20px 4px; }
+            .service-facts dl > div { grid-template-columns: minmax(0, 1fr); gap: 2px; padding: 13px 0; }
+        }
+
+        /* Overview cards are jump links to the sections below */
+        a.overview-card {
+            display: grid;
+            grid-template-columns: 44px minmax(0, 1fr);
+            column-gap: 16px;
+            align-content: start;
+            text-align: left;
+            color: inherit;
+            text-decoration: none;
+            border: 1px solid transparent;
+        }
+        a.overview-card > * { grid-column: 2; }
+        a.overview-card .overview-icon {
+            grid-column: 1;
+            grid-row: 1 / span 4;
+            display: grid;
+            place-items: center;
+            width: 44px;
+            height: 44px;
+            margin: 0;
+            border-radius: 12px;
+            background: #fff;
+        }
+        a.overview-card .overview-icon svg { width: 24px; height: 24px; stroke-width: 3; }
+        a.overview-card:hover { border-color: var(--sage, #5b8c6b); transform: none; box-shadow: none; }
+        a.overview-card .overview-link { margin-top: auto; }
+
     </style>
     <link rel="stylesheet" href="/site-shell.css">
 </head>
@@ -566,56 +623,56 @@
     <section class="coverage-overview section-padding" style="background-color: white; padding-bottom: 40px;">
         <div class="container">
             <h2 class="text-center">Coverage at a Glance</h2>
-            <p class="text-center" style="max-width: 650px; margin: 0 auto 40px; color: #4A5568;">Here's a quick look at what each plan type covers and who it's designed for. Click any plan to see the details and how we help.</p>
+            <p class="text-center" style="max-width: 650px; margin: 0 auto 40px; color: #4A5568;">Here's a quick look at what each plan type covers and who it's designed for. Tap any plan to jump to the details and how we help.</p>
 
             <div class="overview-grid">
-                <div class="overview-card" data-service="medicare-advantage" role="button" tabindex="0">
+                <a class="overview-card" href="#medicare-advantage">
                     <div class="overview-icon"><svg width="36" height="36" viewBox="0 0 48 48" fill="none" stroke="#5B8C6B" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><rect x="8" y="8" width="32" height="32" rx="4"/><line x1="24" y1="16" x2="24" y2="32"/><line x1="16" y1="24" x2="32" y2="24"/></svg></div>
                     <h3 class="hx4">Medicare Advantage</h3>
                     <p class="overview-who">For seniors 65+ or newly eligible</p>
                     <p class="overview-desc">All-in-one plan bundling hospital, medical, Rx, and often dental/vision. Many at $0 premium.</p>
-                    <span class="overview-link">More details &rarr;</span>
-                </div>
+                    <span class="overview-link">Jump to details &darr;</span>
+                </a>
 
-                <div class="overview-card" data-service="medigap" role="button" tabindex="0">
+                <a class="overview-card" href="#medigap">
                     <div class="overview-icon"><svg width="36" height="36" viewBox="0 0 48 48" fill="none" stroke="#5B8C6B" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M24 4L8 12v10c0 12 6.8 22 16 26 9.2-4 16-14 16-26V12L24 4z"/><polyline points="17,24 22,29 31,20"/></svg></div>
                     <h3 class="hx4">Medicare Supplements (Medigap)</h3>
                     <p class="overview-who">For Medicare enrollees wanting fewer surprises</p>
                     <p class="overview-desc">Fills the gaps Original Medicare leaves: copays, coinsurance, deductibles. See any doctor nationwide.</p>
-                    <span class="overview-link">More details &rarr;</span>
-                </div>
+                    <span class="overview-link">Jump to details &darr;</span>
+                </a>
 
-                <div class="overview-card" data-service="aca" role="button" tabindex="0">
+                <a class="overview-card" href="#aca">
                     <div class="overview-icon"><svg width="36" height="36" viewBox="0 0 48 48" fill="none" stroke="#5B8C6B" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="24" cy="12" r="5"/><path d="M14 40v-4a10 10 0 0 1 20 0v4"/><circle cx="10" cy="18" r="4"/><path d="M4 40v-3a7 7 0 0 1 9-6.7"/><circle cx="38" cy="18" r="4"/><path d="M44 40v-3a7 7 0 0 0-9-6.7"/></svg></div>
                     <h3 class="hx4">ACA / Marketplace</h3>
                     <p class="overview-who">For individuals & families under 65</p>
                     <p class="overview-desc">Comprehensive coverage with income-based subsidies. Includes maternity, mental health, and preventive care.</p>
-                    <span class="overview-link">More details &rarr;</span>
-                </div>
+                    <span class="overview-link">Jump to details &darr;</span>
+                </a>
 
-                <div class="overview-card" data-service="dental-vision" role="button" tabindex="0">
+                <a class="overview-card" href="#dental-vision">
                     <div class="overview-icon"><svg width="36" height="36" viewBox="0 0 48 48" fill="none" stroke="#5B8C6B" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M18 6c-3 0-5.5 1.5-7 4s-2 5-2 8c0 4 1.5 7 3 10.5s3 7 4 11.5c.4 1.5 2 1.5 2.4 0 .8-2 1.8-4.5 2.8-6.5.6-1 1.8-1 2.4 0 1 2 2 4.5 2.8 6.5.4 1.5 2 1.5 2.4 0 1-4.5 2.5-8 4-11.5s3-6.5 3-10.5c0-3-.5-5.5-2-8s-4-4-7-4c-2 0-3.5 1-6 3.5C21.5 7 20 6 18 6z"/></svg></div>
                     <h3 class="hx4">Dental & Vision</h3>
                     <p class="overview-who">For anyone, standalone or add-on</p>
                     <p class="overview-desc">Routine cleanings, fillings, eye exams, glasses. Available as standalone or bundled with Medicare.</p>
-                    <span class="overview-link">More details &rarr;</span>
-                </div>
+                    <span class="overview-link">Jump to details &darr;</span>
+                </a>
 
-                <div class="overview-card" data-service="life" role="button" tabindex="0">
+                <a class="overview-card" href="#life-insurance">
                     <div class="overview-icon"><svg width="36" height="36" viewBox="0 0 48 48" fill="none" stroke="#5B8C6B" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M24 42s-18-10-18-22a9.5 9.5 0 0 1 18-4 9.5 9.5 0 0 1 18 4c0 12-18 22-18 22z"/></svg></div>
                     <h3 class="hx4">Life Insurance & Long-Term Care</h3>
                     <p class="overview-who">For anyone protecting loved ones</p>
                     <p class="overview-desc">Term, whole life, final expense, and long-term care coverage. Many plans with no medical exam and fast approvals.</p>
-                    <span class="overview-link">More details &rarr;</span>
-                </div>
+                    <span class="overview-link">Jump to details &darr;</span>
+                </a>
 
-                <div class="overview-card" data-service="accident" role="button" tabindex="0">
+                <a class="overview-card" href="#accident">
                     <div class="overview-icon"><svg width="36" height="36" viewBox="0 0 48 48" fill="none" stroke="#5B8C6B" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><polygon points="26,4 10,28 22,28 20,44 38,18 26,18"/></svg></div>
                     <h3 class="hx4">Accident & Critical Illness</h3>
                     <p class="overview-who">For extra financial protection</p>
                     <p class="overview-desc">Cash benefits paid directly to you when the unexpected happens. Works alongside existing coverage.</p>
-                    <span class="overview-link">More details &rarr;</span>
-                </div>
+                    <span class="overview-link">Jump to details &darr;</span>
+                </a>
             </div>
         </div>
     </section>
@@ -640,11 +697,18 @@
                     <a href="/#contact" class="btn btn-primary btn-sm">Get a Free Consultation</a>
                     <a href="/resources/#advantage-vs-supplement" class="learn-link" style="display:inline-block; margin-left:18px; color: var(--sage-ink); font-weight:700; font-size:14px; text-decoration:none;">Learn how it works &rarr;</a>
                 </div>
-                <div class="service-visual">
-                    <div class="service-icon"><svg width="72" height="72" viewBox="0 0 48 48" fill="none" stroke="#5B8C6B" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><rect x="8" y="8" width="32" height="32" rx="4"/><line x1="24" y1="16" x2="24" y2="32"/><line x1="16" y1="24" x2="32" y2="24"/></svg></div>
-                    <div class="service-highlight">All-In-One Coverage</div>
-                    <div class="service-highlight-sub">Hospital + Medical + Rx + Extras</div>
-                </div>
+                <aside class="service-facts" aria-label="Quick facts">
+                    <div class="service-facts__head">
+                        <span class="service-facts__icon"><svg aria-hidden="true" focusable="false" viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><rect x="8" y="8" width="32" height="32" rx="4"/><line x1="24" y1="16" x2="24" y2="32"/><line x1="16" y1="24" x2="32" y2="24"/></svg></span>
+                        <h3>Quick facts</h3>
+                    </div>
+                    <dl>
+                            <div><dt>Who can enroll</dt><dd>People with Medicare Part A and Part B</dd></div>
+                            <div><dt>When</dt><dd>Around your 65th birthday, or each year from October 15 to December 7</dd></div>
+                            <div><dt>Cost</dt><dd>You keep paying your Part B premium. Many plans add $0 on top of it.</dd></div>
+                            <div><dt>Watch for</dt><dd>Provider networks, and prior authorization for some care</dd></div>
+                    </dl>
+                </aside>
             </div>
         </div>
     </section>
@@ -669,11 +733,18 @@
                     <a href="/#contact" class="btn btn-primary btn-sm">Find the Right Supplement</a>
                     <a href="/resources/#advantage-vs-supplement" class="learn-link" style="display:inline-block; margin-left:18px; color: var(--sage-ink); font-weight:700; font-size:14px; text-decoration:none;">Learn how it works &rarr;</a>
                 </div>
-                <div class="service-visual">
-                    <div class="service-icon"><svg width="72" height="72" viewBox="0 0 48 48" fill="none" stroke="#5B8C6B" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M24 4L8 12v10c0 12 6.8 22 16 26 9.2-4 16-14 16-26V12L24 4z"/><polyline points="17,24 22,29 31,20"/></svg></div>
-                    <div class="service-highlight">Fill the Gaps</div>
-                    <div class="service-highlight-sub">See Any Doctor, Anywhere</div>
-                </div>
+                <aside class="service-facts" aria-label="Quick facts">
+                    <div class="service-facts__head">
+                        <span class="service-facts__icon"><svg aria-hidden="true" focusable="false" viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M24 4L8 12v10c0 12 6.8 22 16 26 9.2-4 16-14 16-26V12L24 4z"/><polyline points="17,24 22,29 31,20"/></svg></span>
+                        <h3>Quick facts</h3>
+                    </div>
+                    <dl>
+                            <div><dt>Who can enroll</dt><dd>People on Original Medicare (Part A and Part B)</dd></div>
+                            <div><dt>Best time to buy</dt><dd>Your 6-month Medigap Open Enrollment Period, which starts the month you're 65 and enrolled in Part B</dd></div>
+                            <div><dt>Pairs with</dt><dd>A separate Part D prescription drug plan</dd></div>
+                            <div><dt>Doctors</dt><dd>Any provider in the U.S. that accepts Medicare</dd></div>
+                    </dl>
+                </aside>
             </div>
         </div>
     </section>
@@ -698,11 +769,18 @@
                     <a href="/#contact" class="btn btn-primary btn-sm">Explore Your Options</a>
                     <a href="/aca-resources/" class="learn-link" style="display:inline-block; margin-left:18px; color: var(--sage-ink); font-weight:700; font-size:14px; text-decoration:none;">Learn how it works &rarr;</a>
                 </div>
-                <div class="service-visual">
-                    <div class="service-icon"><svg width="72" height="72" viewBox="0 0 48 48" fill="none" stroke="#5B8C6B" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="24" cy="12" r="5"/><path d="M14 40v-4a10 10 0 0 1 20 0v4"/><circle cx="10" cy="18" r="4"/><path d="M4 40v-3a7 7 0 0 1 9-6.7"/><circle cx="38" cy="18" r="4"/><path d="M44 40v-3a7 7 0 0 0-9-6.7"/></svg></div>
-                    <div class="service-highlight">Affordable Family Coverage</div>
-                    <div class="service-highlight-sub">Subsidies & Financial Assistance Available</div>
-                </div>
+                <aside class="service-facts" aria-label="Quick facts">
+                    <div class="service-facts__head">
+                        <span class="service-facts__icon"><svg aria-hidden="true" focusable="false" viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><circle cx="24" cy="12" r="5"/><path d="M14 40v-4a10 10 0 0 1 20 0v4"/><circle cx="10" cy="18" r="4"/><path d="M4 40v-3a7 7 0 0 1 9-6.7"/><circle cx="38" cy="18" r="4"/><path d="M44 40v-3a7 7 0 0 0-9-6.7"/></svg></span>
+                        <h3>Quick facts</h3>
+                    </div>
+                    <dl>
+                            <div><dt>Who can enroll</dt><dd>People under 65 who aren't on Medicare</dd></div>
+                            <div><dt>When</dt><dd>Open Enrollment runs November 1 to January 15 on HealthCare.gov, or Special Enrollment after a qualifying life event</dd></div>
+                            <div><dt>Help with cost</dt><dd>Premium tax credits for household incomes from 100% to 400% of the federal poverty level</dd></div>
+                            <div><dt>Covers</dt><dd>Essential health benefits, including maternity and mental health care</dd></div>
+                    </dl>
+                </aside>
             </div>
         </div>
     </section>
@@ -727,11 +805,18 @@
                     <a href="/#contact" class="btn btn-primary btn-sm">Get Dental & Vision Quotes</a>
                     <a href="/resources/#ancillary" class="learn-link" style="display:inline-block; margin-left:18px; color: var(--sage-ink); font-weight:700; font-size:14px; text-decoration:none;">Learn how it works &rarr;</a>
                 </div>
-                <div class="service-visual">
-                    <div class="service-icon"><svg width="72" height="72" viewBox="0 0 48 48" fill="none" stroke="#5B8C6B" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M18 6c-3 0-5.5 1.5-7 4s-2 5-2 8c0 4 1.5 7 3 10.5s3 7 4 11.5c.4 1.5 2 1.5 2.4 0 .8-2 1.8-4.5 2.8-6.5.6-1 1.8-1 2.4 0 1 2 2 4.5 2.8 6.5.4 1.5 2 1.5 2.4 0 1-4.5 2.5-8 4-11.5s3-6.5 3-10.5c0-3-.5-5.5-2-8s-4-4-7-4c-2 0-3.5 1-6 3.5C21.5 7 20 6 18 6z"/></svg></div>
-                    <div class="service-highlight">Keep Smiling</div>
-                    <div class="service-highlight-sub">Dental + Vision for the Whole Family</div>
-                </div>
+                <aside class="service-facts" aria-label="Quick facts">
+                    <div class="service-facts__head">
+                        <span class="service-facts__icon"><svg aria-hidden="true" focusable="false" viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M18 6c-3 0-5.5 1.5-7 4s-2 5-2 8c0 4 1.5 7 3 10.5s3 7 4 11.5c.4 1.5 2 1.5 2.4 0 .8-2 1.8-4.5 2.8-6.5.6-1 1.8-1 2.4 0 1 2 2 4.5 2.8 6.5.4 1.5 2 1.5 2.4 0 1-4.5 2.5-8 4-11.5s3-6.5 3-10.5c0-3-.5-5.5-2-8s-4-4-7-4c-2 0-3.5 1-6 3.5C21.5 7 20 6 18 6z"/></svg></span>
+                        <h3>Quick facts</h3>
+                    </div>
+                    <dl>
+                            <div><dt>Who can enroll</dt><dd>Anyone, at any age</dd></div>
+                            <div><dt>Works with</dt><dd>Medicare, an ACA plan, or on its own</dd></div>
+                            <div><dt>Covers</dt><dd>Cleanings, fillings, crowns, dentures, eye exams, glasses and contacts</dd></div>
+                            <div><dt>Ask about</dt><dd>Waiting periods for major dental work</dd></div>
+                    </dl>
+                </aside>
             </div>
         </div>
     </section>
@@ -755,11 +840,18 @@
                     </div>
                     <a href="/#contact" class="btn btn-primary btn-sm">Get a Life Insurance Quote</a>
                 </div>
-                <div class="service-visual">
-                    <div class="service-icon"><svg width="72" height="72" viewBox="0 0 48 48" fill="none" stroke="#5B8C6B" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M24 42s-18-10-18-22a9.5 9.5 0 0 1 18-4 9.5 9.5 0 0 1 18 4c0 12-18 22-18 22z"/></svg></div>
-                    <div class="service-highlight">Protect What Matters</div>
-                    <div class="service-highlight-sub">Simple Plans, Fast Approvals</div>
-                </div>
+                <aside class="service-facts" aria-label="Quick facts">
+                    <div class="service-facts__head">
+                        <span class="service-facts__icon"><svg aria-hidden="true" focusable="false" viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M24 42s-18-10-18-22a9.5 9.5 0 0 1 18-4 9.5 9.5 0 0 1 18 4c0 12-18 22-18 22z"/></svg></span>
+                        <h3>Quick facts</h3>
+                    </div>
+                    <dl>
+                            <div><dt>Policy types</dt><dd>Term life, whole life and final expense</dd></div>
+                            <div><dt>Coverage</dt><dd>From $5,000 to $500,000+</dd></div>
+                            <div><dt>Approval</dt><dd>Many plans need no medical exam, and some approve in as little as 24 hours</dd></div>
+                            <div><dt>Long-term care</dt><dd>Nursing home, assisted living or in-home care</dd></div>
+                    </dl>
+                </aside>
             </div>
         </div>
     </section>
@@ -784,11 +876,18 @@
                     <a href="/#contact" class="btn btn-primary btn-sm">Learn About Extra Protection</a>
                     <a href="/resources/#ancillary" class="learn-link" style="display:inline-block; margin-left:18px; color: var(--sage-ink); font-weight:700; font-size:14px; text-decoration:none;">Learn how it works &rarr;</a>
                 </div>
-                <div class="service-visual">
-                    <div class="service-icon"><svg width="72" height="72" viewBox="0 0 48 48" fill="none" stroke="#5B8C6B" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><polygon points="26,4 10,28 22,28 20,44 38,18 26,18"/></svg></div>
-                    <div class="service-highlight">Extra Peace of Mind</div>
-                    <div class="service-highlight-sub">Cash Benefits When You Need Them</div>
-                </div>
+                <aside class="service-facts" aria-label="Quick facts">
+                    <div class="service-facts__head">
+                        <span class="service-facts__icon"><svg aria-hidden="true" focusable="false" viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polygon points="26,4 10,28 22,28 20,44 38,18 26,18"/></svg></span>
+                        <h3>Quick facts</h3>
+                    </div>
+                    <dl>
+                            <div><dt>Pays</dt><dd>Cash directly to you, not the hospital</dd></div>
+                            <div><dt>Covers</dt><dd>Accidents, heart attack, stroke, cancer and more</dd></div>
+                            <div><dt>Pairs with</dt><dd>Any health plan, especially high-deductible plans</dd></div>
+                            <div><dt>Use it for</dt><dd>Medical bills, the mortgage, groceries or anything else</dd></div>
+                    </dl>
+                </aside>
             </div>
         </div>
     </section>
@@ -887,123 +986,6 @@
     <!-- CHAT WIDGET (shared, see /chat-widget.js) -->
     <script src="/chat-widget.js" defer></script>
 
-<!-- Service detail modal -->
-    <div class="sm-overlay" id="smOverlay" aria-hidden="true">
-        <div class="sm-modal" role="dialog" aria-modal="true" aria-labelledby="smTitle">
-            <button class="sm-close" id="smClose" aria-label="Close">&times;</button>
-            <div class="sm-icon" id="smIcon"></div>
-            <h3 id="smTitle"></h3>
-            <p class="sm-who" id="smWho"></p>
-            <p class="sm-overview" id="smOverview"></p>
-            <div class="sm-help">
-                <h4>How we help you</h4>
-                <p id="smHelp"></p>
-            </div>
-            <div class="sm-actions">
-                <a class="btn btn-primary" id="smPrimary" href="/resources/">Read the full guide &rarr;</a>
-                <a class="btn btn-secondary" id="smSecondary" href="/#contact">Get a Free Consultation</a>
-            </div>
-        </div>
-    </div>
-
-    <script>
-    (function () {
-        const details = {
-            'medicare-advantage': {
-                title: 'Medicare Advantage (Part C)',
-                who: 'For seniors 65+ or newly eligible',
-                overview: 'Medicare Advantage bundles your hospital, medical, and usually prescription drug coverage into one plan from a private carrier. Many plans include extras like dental, vision, hearing, and fitness memberships, often at a $0 monthly premium. Plans are network-based, so your costs are lowest when you stay in network.',
-                help: 'We compare every Advantage carrier available in your ZIP code, confirm your doctors and prescriptions are covered, and walk you through the trade-offs so you choose with confidence, at no cost to you.',
-                linkText: 'Read the full Medicare guide &rarr;',
-                linkHref: '/resources/#advantage-vs-supplement'
-            },
-            'medigap': {
-                title: 'Medicare Supplements (Medigap)',
-                who: 'For Medicare enrollees wanting fewer surprises',
-                overview: 'Medigap plans pay the out-of-pocket gaps Original Medicare leaves behind, like the 20% coinsurance, copays, and deductibles. The big advantage: you can see any doctor or hospital nationwide that accepts Medicare, with no networks and no referrals.',
-                help: 'Because Medigap plans are standardized by law, the exact same Plan G is identical from carrier to carrier, so we shop purely on price and pair it with a standalone Part D drug plan to keep your total cost down.',
-                linkText: 'Compare Advantage vs. Supplement &rarr;',
-                linkHref: '/resources/#advantage-vs-supplement'
-            },
-            'aca': {
-                title: 'ACA / Marketplace Plans',
-                who: 'For individuals & families under 65',
-                overview: 'ACA marketplace plans provide comprehensive individual and family coverage for people under 65, including maternity, mental health, and preventive care. Most enrollees qualify for income-based subsidies that lower the monthly premium, sometimes to $0.',
-                help: 'We check exactly what subsidy you qualify for, compare plans on total annual cost (premium plus expected out-of-pocket), and handle the enrollment paperwork from start to finish.',
-                linkText: 'Explore ACA & individual plans &rarr;',
-                linkHref: '/aca-resources/'
-            },
-            'dental-vision': {
-                title: 'Dental & Vision',
-                who: 'For anyone, standalone or add-on',
-                overview: 'Standalone or add-on dental and vision plans cover routine care that Original Medicare does not, like cleanings, fillings, crowns, eye exams, and glasses. They can be purchased on their own or bundled with a Medicare plan.',
-                help: 'We match you to a plan that keeps your current dentist and eye doctor where possible, and weigh standalone versus bundled options against what you actually expect to use.',
-                linkText: 'See ancillary benefits &rarr;',
-                linkHref: '/resources/#ancillary'
-            },
-            'life': {
-                title: 'Life Insurance & Long-Term Care',
-                who: 'For anyone protecting loved ones',
-                overview: 'Life insurance and long-term care coverage protect the people who depend on you. Options range from term and whole life to final expense and long-term care plans, many with no medical exam and fast approval.',
-                help: 'We start with your goal, whether that is replacing income, covering final expenses, or leaving a legacy, then match you to the right product and find no-exam options when speed or health history matters.',
-                linkText: 'Get a Free Consultation',
-                linkHref: '/#contact',
-                noResources: true
-            },
-            'accident': {
-                title: 'Accident & Critical Illness',
-                who: 'For extra financial protection',
-                overview: 'Accident and critical illness plans pay a cash benefit directly to you when something unexpected happens, like a covered injury, heart attack, stroke, or cancer diagnosis. The money is yours to use for anything, and it works alongside your existing health coverage.',
-                help: 'We layer these affordable supplements on top of your main plan to cushion deductibles and out-of-pocket costs, sized to fill the gaps you are most exposed to.',
-                linkText: 'See ancillary benefits &rarr;',
-                linkHref: '/resources/#ancillary'
-            }
-        };
-
-        const overlay = document.getElementById('smOverlay');
-        const elIcon = document.getElementById('smIcon');
-        const elTitle = document.getElementById('smTitle');
-        const elWho = document.getElementById('smWho');
-        const elOverview = document.getElementById('smOverview');
-        const elHelp = document.getElementById('smHelp');
-        const elPrimary = document.getElementById('smPrimary');
-        const elSecondary = document.getElementById('smSecondary');
-
-        function openModal(card) {
-            const key = card.getAttribute('data-service');
-            const d = details[key];
-            if (!d) return;
-            const icon = card.querySelector('.overview-icon');
-            elIcon.innerHTML = icon ? icon.innerHTML : '';
-            elTitle.textContent = d.title;
-            elWho.textContent = d.who;
-            elOverview.textContent = d.overview;
-            elHelp.textContent = d.help;
-            elPrimary.innerHTML = d.linkText;
-            elPrimary.setAttribute('href', d.linkHref);
-            // For Life/LTC there is no Resources deep-dive, so primary IS the consultation
-            elSecondary.style.display = d.noResources ? 'none' : '';
-            overlay.classList.add('active');
-            overlay.setAttribute('aria-hidden', 'false');
-            document.body.style.overflow = 'hidden';
-        }
-        function closeModal() {
-            overlay.classList.remove('active');
-            overlay.setAttribute('aria-hidden', 'true');
-            document.body.style.overflow = '';
-        }
-
-        document.querySelectorAll('.overview-card[data-service]').forEach(card => {
-            card.addEventListener('click', () => openModal(card));
-            card.addEventListener('keydown', (e) => {
-                if (e.key === 'Enter' || e.key === ' ') { e.preventDefault(); openModal(card); }
-            });
-        });
-        document.getElementById('smClose').addEventListener('click', closeModal);
-        overlay.addEventListener('click', (e) => { if (e.target === overlay) closeModal(); });
-        document.addEventListener('keydown', (e) => { if (e.key === 'Escape') closeModal(); });
-    })();
-    </script>
 <script src="/contact-modal.js"></script>
 <script src="/site-shell.js" defer></script>
 </body>

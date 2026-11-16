@@ -5,8 +5,6 @@ User-agent: *
 Allow: /
 
 # Internal scratch / preview pages - not for indexing
-Disallow: /brand-preview/
-Disallow: /brand-preview.html
 Disallow: /agent-tools/
 Disallow: /go/
 
